@@ -4,6 +4,9 @@ on:
   push:
     tags: ["v*"]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -42,4 +45,3 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           files: migration-analyze-*
-          generate_release_notes: true
