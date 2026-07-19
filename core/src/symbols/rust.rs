@@ -3,8 +3,8 @@ use proc_macro2::Span;
 use quote::quote;
 use syn::spanned::Spanned;
 use syn::{
-    visit::Visit, File, FnArg, GenericParam, ItemConst, ItemEnum, ItemFn, ItemImpl, ItemStatic,
-    ItemStruct, ItemTrait, ItemType, Pat, ReturnType, Signature, Type, Visibility,
+    File, FnArg, GenericParam, ItemConst, ItemEnum, ItemFn, ItemImpl, ItemStatic, ItemStruct,
+    ItemTrait, ItemType, Pat, ReturnType, Signature, Type, Visibility, visit::Visit,
 };
 
 struct SymbolVisitor {
@@ -386,16 +386,14 @@ fn is_public(vis: &Visibility) -> bool {
 fn extract_doc_comment(attrs: &[syn::Attribute]) -> Option<String> {
     let mut lines = Vec::new();
     for attr in attrs {
-        if attr.path().is_ident("doc") {
-            if let syn::Meta::NameValue(meta) = &attr.meta {
-                if let syn::Expr::Lit(syn::ExprLit {
-                    lit: syn::Lit::Str(lit_str),
-                    ..
-                }) = &meta.value
-                {
-                    lines.push(lit_str.value().trim().to_string());
-                }
-            }
+        if attr.path().is_ident("doc")
+            && let syn::Meta::NameValue(meta) = &attr.meta
+            && let syn::Expr::Lit(syn::ExprLit {
+                lit: syn::Lit::Str(lit_str),
+                ..
+            }) = &meta.value
+        {
+            lines.push(lit_str.value().trim().to_string());
         }
     }
     if lines.is_empty() {
@@ -436,7 +434,9 @@ fn extract_return_type(return_type: &ReturnType) -> Option<String> {
     }
 }
 
-fn extract_generics(params: &syn::punctuated::Punctuated<GenericParam, syn::Token![,]>) -> Vec<String> {
+fn extract_generics(
+    params: &syn::punctuated::Punctuated<GenericParam, syn::Token![,]>,
+) -> Vec<String> {
     params.iter().map(|p| quote!(#p).to_string()).collect()
 }
 

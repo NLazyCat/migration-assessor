@@ -189,7 +189,10 @@ impl<'a> SymbolExtractor<'a> {
     fn emit_function(&mut self, name: String, func: &Function<'a>, exported: bool) {
         let line_range = self.line_range(func.span.start, func.span.end);
         let params = extract_params(self.source, func);
-        let return_type = func.return_type.as_ref().map(|ann| trim_type_annotation(self.source, ann.span));
+        let return_type = func
+            .return_type
+            .as_ref()
+            .map(|ann| trim_type_annotation(self.source, ann.span));
         let generics = extract_generics_option(&func.type_parameters);
         let sig = format_function_signature(self.source, &name, func);
 
@@ -230,8 +233,7 @@ impl<'a> SymbolExtractor<'a> {
             match element {
                 ClassElement::MethodDefinition(method) => {
                     let method_name = prop_key_to_string(&method.key);
-                    let method_range =
-                        self.line_range(method.span.start, method.span.end);
+                    let method_range = self.line_range(method.span.start, method.span.end);
                     children.push(Symbol {
                         id: format!("{}:{}", self.symbol_id(&name), method_name),
                         name: method_name.clone(),
@@ -242,13 +244,20 @@ impl<'a> SymbolExtractor<'a> {
                         partial_reason: None,
                     });
                     let ps = extract_params(self.source, &method.value);
-                    let rt = method.value.return_type.as_ref().map(|ann| trim_type_annotation(self.source, ann.span));
+                    let rt = method
+                        .value
+                        .return_type
+                        .as_ref()
+                        .map(|ann| trim_type_annotation(self.source, ann.span));
                     methods.push(ApiExport {
                         name: method_name,
                         kind: "method".to_string(),
                         generics: extract_generics_option(&method.value.type_parameters),
                         signature: format_method_signature(
-                            self.source, &name, &method.key, &method.value,
+                            self.source,
+                            &name,
+                            &method.key,
+                            &method.value,
                         ),
                         params: ps,
                         return_type: rt,
@@ -273,10 +282,10 @@ impl<'a> SymbolExtractor<'a> {
                 _ => {}
             }
 
-            if let ClassElement::MethodDefinition(method) = element {
-                if method.kind == MethodDefinitionKind::Constructor {
-                    constructor_params = extract_params(self.source, &method.value);
-                }
+            if let ClassElement::MethodDefinition(method) = element
+                && method.kind == MethodDefinitionKind::Constructor
+            {
+                constructor_params = extract_params(self.source, &method.value);
             }
         }
 
@@ -304,7 +313,11 @@ impl<'a> SymbolExtractor<'a> {
 
     // ── Variables ─────────────────────────────────────────────────
 
-    fn handle_var_declarator(&mut self, decl: &oxc_ast::ast::VariableDeclarator<'a>, exported: bool) {
+    fn handle_var_declarator(
+        &mut self,
+        decl: &oxc_ast::ast::VariableDeclarator<'a>,
+        exported: bool,
+    ) {
         let name = match &decl.id {
             BindingPattern::BindingIdentifier(id) => id.name.to_string(),
             _ => return,
@@ -319,10 +332,16 @@ impl<'a> SymbolExtractor<'a> {
         if let Some(init) = &decl.init {
             if let Expression::ArrowFunctionExpression(arrow) = init {
                 params = extract_from_arrow_params(self.source, arrow);
-                return_type = arrow.return_type.as_ref().map(|ann| trim_type_annotation(self.source, ann.span));
+                return_type = arrow
+                    .return_type
+                    .as_ref()
+                    .map(|ann| trim_type_annotation(self.source, ann.span));
             } else if let Expression::FunctionExpression(func) = init {
                 params = extract_params(self.source, func);
-                return_type = func.return_type.as_ref().map(|ann| trim_type_annotation(self.source, ann.span));
+                return_type = func
+                    .return_type
+                    .as_ref()
+                    .map(|ann| trim_type_annotation(self.source, ann.span));
             }
         }
 
@@ -366,11 +385,7 @@ impl<'a> SymbolExtractor<'a> {
             name,
             kind: "type_alias".to_string(),
             generics,
-            signature: format!(
-                "export type {} = {}",
-                alias.id.name,
-                type_text,
-            ),
+            signature: format!("export type {} = {}", alias.id.name, type_text,),
             params: vec![],
             return_type: None,
             description: None,
@@ -395,41 +410,37 @@ impl<'a> SymbolExtractor<'a> {
 
         for member in &interface.body.body {
             use oxc_ast::ast::TSSignature;
-            match member {
-                TSSignature::TSPropertySignature(prop) => {
-                    let prop_name = prop_key_to_string(&prop.key);
-                    let prop_range =
-                        self.line_range(prop.span.start, prop.span.end);
-                    let prop_ty = prop.type_annotation.as_ref().map(|ann| {
-                        self.source[ann.span.start as usize..ann.span.end as usize].to_string()
-                    });
-                    children.push(Symbol {
-                        id: format!("{}:{}", self.symbol_id(&name), prop_name),
-                        name: prop_name.clone(),
-                        kind: "property".to_string(),
-                        line_range: prop_range,
-                        children: vec![],
-                        partial_analysis: false,
-                        partial_reason: None,
-                    });
-                    members.push(ApiExport {
-                        name: prop_name.clone(),
-                        kind: "property".to_string(),
-                        generics: vec![],
-                        signature: format!(
-                            "{}{}: {}",
-                            prop_name,
-                            if prop.optional { "?" } else { "" },
-                            prop_ty.as_deref().unwrap_or("unknown"),
-                        ),
-                        params: vec![],
-                        return_type: prop_ty,
-                        description: None,
-                        line_range: prop_range,
-                        partial_analysis: false,
-                    });
-                }
-                _ => {}
+            if let TSSignature::TSPropertySignature(prop) = member {
+                let prop_name = prop_key_to_string(&prop.key);
+                let prop_range = self.line_range(prop.span.start, prop.span.end);
+                let prop_ty = prop.type_annotation.as_ref().map(|ann| {
+                    self.source[ann.span.start as usize..ann.span.end as usize].to_string()
+                });
+                children.push(Symbol {
+                    id: format!("{}:{}", self.symbol_id(&name), prop_name),
+                    name: prop_name.clone(),
+                    kind: "property".to_string(),
+                    line_range: prop_range,
+                    children: vec![],
+                    partial_analysis: false,
+                    partial_reason: None,
+                });
+                members.push(ApiExport {
+                    name: prop_name.clone(),
+                    kind: "property".to_string(),
+                    generics: vec![],
+                    signature: format!(
+                        "{}{}: {}",
+                        prop_name,
+                        if prop.optional { "?" } else { "" },
+                        prop_ty.as_deref().unwrap_or("unknown"),
+                    ),
+                    params: vec![],
+                    return_type: prop_ty,
+                    description: None,
+                    line_range: prop_range,
+                    partial_analysis: false,
+                });
             }
         }
 
@@ -579,7 +590,12 @@ fn format_function_signature(source: &str, name: &str, func: &Function) -> Strin
     format!("export function {}({}) -> {}", name, ps, rt)
 }
 
-fn format_method_signature(source: &str, class_name: &str, key: &PropertyKey, func: &Function) -> String {
+fn format_method_signature(
+    source: &str,
+    class_name: &str,
+    key: &PropertyKey,
+    func: &Function,
+) -> String {
     let method_name = prop_key_to_string(key);
     let ps = func
         .params

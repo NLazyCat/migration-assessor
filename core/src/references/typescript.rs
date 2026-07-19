@@ -1,14 +1,21 @@
-use super::{ForwardIndex, ImportBinding, Location, ReferenceKind, ReverseIndex, SymbolReference};
-use rayon::prelude::*;
+use super::{
+    FileBindings, ForwardIndex, ImportBinding, Location, ReferenceKind, ReverseIndex,
+    SymbolReference,
+};
+use crate::cache::{AnalysisCache, CacheKey, TOOL_VERSION};
 use oxc_allocator::Allocator;
-use oxc_ast::ast::{self, Function, Statement};
 use oxc_ast::AstKind;
+use oxc_ast::ast::{self, Function, Statement};
 use oxc_parser::Parser;
 use oxc_semantic::SemanticBuilder;
 use oxc_span::{GetSpan, SourceType};
+use rayon::prelude::*;
+use serde_json::json;
 use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
+
+const PARSER_VERSION: &str = "oxc-0.140.0";
 
 /// Detected path alias mapping: import prefix → target directory prefix.
 #[derive(Debug, Clone)]
@@ -25,7 +32,9 @@ pub struct PathAliasResolver {
 
 impl PathAliasResolver {
     pub fn empty() -> Self {
-        Self { aliases: Vec::new() }
+        Self {
+            aliases: Vec::new(),
+        }
     }
 
     pub fn with_aliases(aliases: Vec<PathAlias>) -> Self {
@@ -58,20 +67,18 @@ impl PathAliasResolver {
 
     fn scan_dir(dir: &Path, aliases: &mut Vec<PathAlias>) {
         let pkg_json = dir.join("package.json");
-        if pkg_json.exists() {
-            if let Ok(content) = fs::read_to_string(&pkg_json) {
-                if let Ok(pkg) = serde_json::from_str::<serde_json::Value>(&content) {
-                    Self::extract_package_imports(&pkg, dir, aliases);
-                }
-            }
+        if pkg_json.exists()
+            && let Ok(content) = fs::read_to_string(&pkg_json)
+            && let Ok(pkg) = serde_json::from_str::<serde_json::Value>(&content)
+        {
+            Self::extract_package_imports(&pkg, dir, aliases);
         }
         let tsconfig = dir.join("tsconfig.json");
-        if tsconfig.exists() {
-            if let Ok(content) = fs::read_to_string(&tsconfig) {
-                if let Ok(cfg) = serde_json::from_str::<serde_json::Value>(&content) {
-                    Self::extract_tsconfig_paths(&cfg, dir, aliases);
-                }
-            }
+        if tsconfig.exists()
+            && let Ok(content) = fs::read_to_string(&tsconfig)
+            && let Ok(cfg) = serde_json::from_str::<serde_json::Value>(&content)
+        {
+            Self::extract_tsconfig_paths(&cfg, dir, aliases);
         }
     }
 
@@ -87,7 +94,12 @@ impl PathAliasResolver {
                 }
                 let name = path.file_name().and_then(|n| n.to_str()).unwrap_or("");
                 // Skip common non-source directories
-                if name == "node_modules" || name == ".git" || name == "dist" || name == ".next" || name.starts_with('.') {
+                if name == "node_modules"
+                    || name == ".git"
+                    || name == "dist"
+                    || name == ".next"
+                    || name.starts_with('.')
+                {
                     continue;
                 }
                 Self::scan_dir(&path, aliases);
@@ -145,7 +157,11 @@ impl PathAliasResolver {
         }
     }
 
-    fn extract_tsconfig_paths(cfg: &serde_json::Value, tsconfig_dir: &Path, out: &mut Vec<PathAlias>) {
+    fn extract_tsconfig_paths(
+        cfg: &serde_json::Value,
+        tsconfig_dir: &Path,
+        out: &mut Vec<PathAlias>,
+    ) {
         let Some(paths) = cfg
             .get("compilerOptions")
             .and_then(|c| c.get("paths"))
@@ -155,7 +171,9 @@ impl PathAliasResolver {
         };
 
         for (pattern, targets) in paths {
-            let Some(arr) = targets.as_array() else { continue };
+            let Some(arr) = targets.as_array() else {
+                continue;
+            };
             let Some(first) = arr.first().and_then(|v| v.as_str()) else {
                 continue;
             };
@@ -255,7 +273,8 @@ pub fn parse_import_bindings(
             Statement::ExportNamedDeclaration(export) => {
                 if let Some(source) = &export.source {
                     let source_module = source.value.to_string();
-                    let is_relative = source_module.starts_with('.') || source_module.starts_with('/');
+                    let is_relative =
+                        source_module.starts_with('.') || source_module.starts_with('/');
                     let is_aliased = source_module.starts_with('#')
                         || self::non_relative_might_be_alias(&source_module);
                     if !is_relative && !is_aliased {
@@ -289,8 +308,6 @@ fn non_relative_might_be_alias(source: &str) -> bool {
     false
 }
 
-
-
 /// Get the name from a ModuleExportName.
 fn imported_name(name: &ast::ModuleExportName) -> String {
     match name {
@@ -317,12 +334,11 @@ fn resolve_import_with_resolver(
     }
 
     // Try alias resolution
-    if !resolver.is_empty() {
-        if let Some(alias_resolved) = resolver.resolve_alias(imp, project_root) {
-            if let Some(path) = probe_path(&alias_resolved, project_root) {
-                return Some(to_relative(&path, project_root));
-            }
-        }
+    if !resolver.is_empty()
+        && let Some(alias_resolved) = resolver.resolve_alias(imp, project_root)
+        && let Some(path) = probe_path(&alias_resolved, project_root)
+    {
+        return Some(to_relative(&path, project_root));
     }
 
     None
@@ -331,7 +347,7 @@ fn resolve_import_with_resolver(
 /// Convert an absolute path to be relative to project_root, using forward slashes.
 fn to_relative(abs: &Path, project_root: &Path) -> PathBuf {
     let stripped = abs.strip_prefix(project_root).unwrap_or(abs);
-    PathBuf::from(path_to_forward_slash(&stripped))
+    PathBuf::from(path_to_forward_slash(stripped))
 }
 
 fn probe_path(path: &Path, project_root: &Path) -> Option<PathBuf> {
@@ -390,11 +406,11 @@ fn trim_to_relative(abs_path: &Path, project_root: &Path) -> PathBuf {
 fn build_import_map(
     root: &Path,
     files: &[PathBuf],
-) -> anyhow::Result<HashMap<String, HashMap<String, (String, String)>>> {
+) -> anyhow::Result<HashMap<String, FileBindings>> {
     let resolver = PathAliasResolver::detect(root);
     let resolver_arc = std::sync::Arc::new(resolver);
 
-    let entries: Vec<(String, anyhow::Result<HashMap<String, (String, String)>>)> = files
+    let entries: Vec<(String, anyhow::Result<FileBindings>)> = files
         .par_iter()
         .map(|file| {
             let resolver = resolver_arc.clone();
@@ -403,23 +419,20 @@ fn build_import_map(
                 Err(e) => return (String::new(), Err(e.into())),
             };
             let relative = file.strip_prefix(root).unwrap_or(file);
-            let module = path_to_forward_slash(&relative);
+            let module = path_to_forward_slash(relative);
 
             let bindings = match parse_import_bindings(&source, Some(file)) {
                 Ok(b) => b,
                 Err(e) => return (module, Err(e)),
             };
-            let mut file_bindings: HashMap<String, (String, String)> = HashMap::new();
+            let mut file_bindings: FileBindings = HashMap::new();
 
             for binding in bindings {
                 if let Some(target_relative) =
                     resolve_import_with_resolver(&binding.source_module, file, root, &resolver)
                 {
                     let target_str = path_to_forward_slash(&target_relative);
-                    file_bindings.insert(
-                        binding.local_name,
-                        (target_str, binding.exported_name),
-                    );
+                    file_bindings.insert(binding.local_name, (target_str, binding.exported_name));
                 }
             }
 
@@ -427,7 +440,7 @@ fn build_import_map(
         })
         .collect();
 
-    let mut import_map: HashMap<String, HashMap<String, (String, String)>> = HashMap::new();
+    let mut import_map: HashMap<String, FileBindings> = HashMap::new();
     for (module, result) in entries {
         import_map.insert(module, result?);
     }
@@ -455,9 +468,7 @@ fn classify_reference_kind(
                         let impl_span = impl_clause.expression.span();
                         // Check if reference is inside the implements clause
                         let ref_span = ancestor.kind().span();
-                        if impl_span.start <= ref_span.start
-                            && ref_span.end <= impl_span.end
-                        {
+                        if impl_span.start <= ref_span.start && ref_span.end <= impl_span.end {
                             return ReferenceKind::Implements;
                         }
                     }
@@ -484,9 +495,7 @@ fn classify_reference_kind(
             AstKind::ExportNamedDeclaration(_)
             | AstKind::ExportDefaultDeclaration(_)
             | AstKind::VariableDeclaration(_)
-            | AstKind::Function(Function {
-                id: Some(_), ..
-            })
+            | AstKind::Function(Function { id: Some(_), .. })
             | AstKind::ArrowFunctionExpression(_) => {
                 return result;
             }
@@ -502,12 +511,13 @@ fn classify_reference_kind(
 pub fn extract_all(
     root: &Path,
     files: &[PathBuf],
+    cache: Option<&AnalysisCache>,
 ) -> anyhow::Result<(ForwardIndex, ReverseIndex)> {
     let import_map = build_import_map(root, files)?;
 
     let per_file: Vec<(ForwardIndex, ReverseIndex)> = files
         .par_iter()
-        .filter_map(|file| extract_file_refs(file, root, &import_map))
+        .filter_map(|file| extract_file_refs(file, root, &import_map, cache))
         .collect();
 
     let mut forward: ForwardIndex = HashMap::new();
@@ -527,8 +537,47 @@ pub fn extract_all(
 fn extract_file_refs(
     file: &Path,
     root: &Path,
-    import_map: &HashMap<String, HashMap<String, (String, String)>>,
+    import_map: &HashMap<String, FileBindings>,
+    cache: Option<&AnalysisCache>,
 ) -> Option<(ForwardIndex, ReverseIndex)> {
+    let cache_key = match CacheKey::for_file(file, PARSER_VERSION, TOOL_VERSION) {
+        Ok(k) => k,
+        Err(e) => {
+            eprintln!(
+                "Warning: failed to build cache key for {}: {}",
+                file.display(),
+                e
+            );
+            return None;
+        }
+    };
+
+    if let Some(cached) = cache.and_then(|c| c.get(&cache_key)) {
+        let forward: ForwardIndex = match serde_json::from_value(cached.get("forward")?.clone()) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!(
+                    "Warning: failed to deserialize cached forward refs for {}: {}",
+                    file.display(),
+                    e
+                );
+                return None;
+            }
+        };
+        let reverse: ReverseIndex = match serde_json::from_value(cached.get("reverse")?.clone()) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!(
+                    "Warning: failed to deserialize cached reverse refs for {}: {}",
+                    file.display(),
+                    e
+                );
+                return None;
+            }
+        };
+        return Some((forward, reverse));
+    }
+
     let source = fs::read_to_string(file).ok()?;
 
     let relative = file.strip_prefix(root).unwrap_or(file);
@@ -579,7 +628,7 @@ fn extract_file_refs(
                     .rfind('\n')
                     .map_or(0, |p| p + 1);
 
-            let kind = classify_reference_kind(ref_node_id, &ast_nodes);
+            let kind = classify_reference_kind(ref_node_id, ast_nodes);
 
             let reference_entry = SymbolReference {
                 symbol: target_symbol_id.clone(),
@@ -613,6 +662,20 @@ fn extract_file_refs(
         }
     }
 
+    if let Some(cache) = cache {
+        let value = json!({
+            "forward": forward,
+            "reverse": reverse,
+        });
+        if let Err(e) = cache.put(&cache_key, &value) {
+            eprintln!(
+                "Warning: failed to write reference cache for {}: {}",
+                file.display(),
+                e
+            );
+        }
+    }
+
     Some((forward, reverse))
 }
 
@@ -620,9 +683,9 @@ fn detect_source_type(file_path: Option<&Path>) -> SourceType {
     match file_path.and_then(|p| p.extension().and_then(|e| e.to_str())) {
         Some("tsx") => SourceType::tsx(),
         Some("ts") => SourceType::ts(),
-        Some("mts") | Some("cts") => {
-            SourceType::default().with_typescript(true).with_module(true)
-        }
+        Some("mts") | Some("cts") => SourceType::default()
+            .with_typescript(true)
+            .with_module(true),
         _ => SourceType::ts(),
     }
 }

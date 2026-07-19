@@ -1,14 +1,16 @@
-use super::{ForwardIndex, ImportBinding, Location, ReferenceKind, ReverseIndex, SymbolReference};
+use super::{
+    FileBindings, ForwardIndex, ImportBinding, Location, ReferenceKind, ReverseIndex,
+    SymbolReference,
+};
+use crate::cache::{AnalysisCache, CacheKey, TOOL_VERSION};
 use rayon::prelude::*;
+use serde_json::json;
 use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
-use syn::{
-    self,
-    spanned::Spanned,
-    visit::Visit,
-    ItemUse, UseTree, Expr, ExprCall, ExprPath, Type,
-};
+use syn::{self, Expr, ExprCall, ExprPath, ItemUse, Type, UseTree, spanned::Spanned, visit::Visit};
+
+const PARSER_VERSION: &str = "syn-2.0.119";
 
 /// Parse import bindings from a Rust source file.
 pub fn parse_import_bindings(source: &str) -> anyhow::Result<Vec<ImportBinding>> {
@@ -17,7 +19,7 @@ pub fn parse_import_bindings(source: &str) -> anyhow::Result<Vec<ImportBinding>>
 
     for item in &file.items {
         if let syn::Item::Use(use_item) = item {
-            extract_use_bindings(&use_item, &mut bindings);
+            extract_use_bindings(use_item, &mut bindings);
         }
     }
 
@@ -31,11 +33,7 @@ fn extract_use_bindings(use_item: &ItemUse, bindings: &mut Vec<ImportBinding>) {
 /// Recursively collect all import bindings from a use tree.
 /// For `use crate::models::{User, Order}`, this generates:
 ///   bindings: "User" → ("crate::models", "User"), "Order" → ("crate::models", "Order")
-fn collect_use_bindings(
-    tree: &UseTree,
-    prefix: &[String],
-    bindings: &mut Vec<ImportBinding>,
-) {
+fn collect_use_bindings(tree: &UseTree, prefix: &[String], bindings: &mut Vec<ImportBinding>) {
     match tree {
         UseTree::Path(path) => {
             let mut new_prefix = prefix.to_vec();
@@ -128,11 +126,9 @@ fn resolve_module_path(
         }
         // Now resolve `rest_path` relative to `dir`
         let candidate = dir.join(rest_path.replace("::", "/"));
-        for ext in &["rs"] {
-            let with_ext = candidate.with_extension(ext);
-            if with_ext.exists() {
-                return Some(with_ext);
-            }
+        let with_ext = candidate.with_extension("rs");
+        if with_ext.exists() {
+            return Some(with_ext);
         }
         // Try as directory with mod.rs
         let mod_rs = candidate.join("mod.rs");
@@ -146,11 +142,9 @@ fn resolve_module_path(
     };
 
     let candidate = dir.join(relative.replace("::", "/"));
-    for ext in &["rs"] {
-        let with_ext = candidate.with_extension(ext);
-        if with_ext.exists() {
-            return Some(with_ext);
-        }
+    let with_ext = candidate.with_extension("rs");
+    if with_ext.exists() {
+        return Some(with_ext);
     }
     // Try as directory with mod.rs
     let mod_rs = candidate.join("mod.rs");
@@ -163,15 +157,17 @@ fn resolve_module_path(
 
 /// Check if a module path is local to the crate (not an external dependency).
 fn is_crate_local(module_path: &str) -> bool {
-    module_path.starts_with("crate") || module_path.starts_with("self") || module_path.starts_with("super")
+    module_path.starts_with("crate")
+        || module_path.starts_with("self")
+        || module_path.starts_with("super")
 }
 
 /// Build import map: file_path -> (local_name -> (target_file, exported_name))
 fn build_import_map(
     root: &Path,
     files: &[PathBuf],
-) -> anyhow::Result<HashMap<String, HashMap<String, (String, String)>>> {
-    let entries: Vec<(String, anyhow::Result<HashMap<String, (String, String)>>)> = files
+) -> anyhow::Result<HashMap<String, FileBindings>> {
+    let entries: Vec<(String, anyhow::Result<FileBindings>)> = files
         .par_iter()
         .map(|file| {
             let source = match fs::read_to_string(file) {
@@ -185,7 +181,7 @@ fn build_import_map(
                 Ok(b) => b,
                 Err(e) => return (module, Err(e)),
             };
-            let mut file_bindings: HashMap<String, (String, String)> = HashMap::new();
+            let mut file_bindings: FileBindings = HashMap::new();
 
             for binding in bindings {
                 if let Some(target_path) = resolve_module_path(&binding.source_module, file, root) {
@@ -194,10 +190,8 @@ fn build_import_map(
                         .unwrap_or(&target_path)
                         .to_string_lossy()
                         .replace('\\', "/");
-                    file_bindings.insert(
-                        binding.local_name,
-                        (target_relative, binding.exported_name),
-                    );
+                    file_bindings
+                        .insert(binding.local_name, (target_relative, binding.exported_name));
                 }
             }
 
@@ -205,7 +199,7 @@ fn build_import_map(
         })
         .collect();
 
-    let mut import_map: HashMap<String, HashMap<String, (String, String)>> = HashMap::new();
+    let mut import_map: HashMap<String, FileBindings> = HashMap::new();
     for (module, result) in entries {
         import_map.insert(module, result?);
     }
@@ -223,8 +217,47 @@ struct FileRefs {
 fn extract_file_refs(
     file: &Path,
     root: &Path,
-    import_map: &HashMap<String, HashMap<String, (String, String)>>,
+    import_map: &HashMap<String, FileBindings>,
+    cache: Option<&AnalysisCache>,
 ) -> Option<FileRefs> {
+    let cache_key = match CacheKey::for_file(file, PARSER_VERSION, TOOL_VERSION) {
+        Ok(k) => k,
+        Err(e) => {
+            eprintln!(
+                "Warning: failed to build cache key for {}: {}",
+                file.display(),
+                e
+            );
+            return None;
+        }
+    };
+
+    if let Some(cached) = cache.and_then(|c| c.get(&cache_key)) {
+        let forward: ForwardIndex = match serde_json::from_value(cached.get("forward")?.clone()) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!(
+                    "Warning: failed to deserialize cached forward refs for {}: {}",
+                    file.display(),
+                    e
+                );
+                return None;
+            }
+        };
+        let reverse: ReverseIndex = match serde_json::from_value(cached.get("reverse")?.clone()) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!(
+                    "Warning: failed to deserialize cached reverse refs for {}: {}",
+                    file.display(),
+                    e
+                );
+                return None;
+            }
+        };
+        return Some(FileRefs { forward, reverse });
+    }
+
     let source = fs::read_to_string(file).ok()?;
 
     let relative = file.strip_prefix(root).unwrap_or(file);
@@ -246,12 +279,31 @@ fn extract_file_refs(
 
     visitor.visit_file(&syntax_tree);
 
-    Some(FileRefs { forward: visitor.forward, reverse: visitor.reverse })
+    let result = FileRefs {
+        forward: visitor.forward,
+        reverse: visitor.reverse,
+    };
+
+    if let Some(cache) = cache {
+        let value = json!({
+            "forward": result.forward,
+            "reverse": result.reverse,
+        });
+        if let Err(e) = cache.put(&cache_key, &value) {
+            eprintln!(
+                "Warning: failed to write reference cache for {}: {}",
+                file.display(),
+                e
+            );
+        }
+    }
+
+    Some(result)
 }
 
 /// A visitor that collects references to imported symbols.
 struct ReferenceVisitor<'a> {
-    file_bindings: &'a HashMap<String, (String, String)>,
+    file_bindings: &'a FileBindings,
     module: &'a str,
     forward: ForwardIndex,
     reverse: ReverseIndex,
@@ -259,19 +311,19 @@ struct ReferenceVisitor<'a> {
 
 impl<'ast> Visit<'ast> for ReferenceVisitor<'ast> {
     fn visit_expr_call(&mut self, node: &'ast ExprCall) {
-        if let Expr::Path(expr_path) = &*node.func {
-            if let Some(local_name) = expr_path.path.segments.first().map(|s| s.ident.to_string()) {
-                self.record_reference(&local_name, node.span(), ReferenceKind::Call);
-            }
+        if let Expr::Path(expr_path) = &*node.func
+            && let Some(local_name) = expr_path.path.segments.first().map(|s| s.ident.to_string())
+        {
+            self.record_reference(&local_name, node.span(), ReferenceKind::Call);
         }
         syn::visit::visit_expr_call(self, node);
     }
 
     fn visit_type(&mut self, node: &'ast Type) {
-        if let Type::Path(type_path) = node {
-            if let Some(local_name) = type_path.path.segments.first().map(|s| s.ident.to_string()) {
-                self.record_reference(&local_name, node.span(), ReferenceKind::TypeReference);
-            }
+        if let Type::Path(type_path) = node
+            && let Some(local_name) = type_path.path.segments.first().map(|s| s.ident.to_string())
+        {
+            self.record_reference(&local_name, node.span(), ReferenceKind::TypeReference);
         }
         syn::visit::visit_type(self, node);
     }
@@ -329,12 +381,13 @@ impl<'a> ReferenceVisitor<'a> {
 pub fn extract_all(
     root: &Path,
     files: &[PathBuf],
+    cache: Option<&AnalysisCache>,
 ) -> anyhow::Result<(ForwardIndex, ReverseIndex)> {
     let import_map = build_import_map(root, files)?;
 
     let per_file: Vec<FileRefs> = files
         .par_iter()
-        .filter_map(|file| extract_file_refs(file, root, &import_map))
+        .filter_map(|file| extract_file_refs(file, root, &import_map, cache))
         .collect();
 
     let mut forward: ForwardIndex = HashMap::new();

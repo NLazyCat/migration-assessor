@@ -63,7 +63,7 @@ pub fn calculate(
     let mut in_degree: HashMap<String, usize> = HashMap::new();
     for (target_symbol, refs) in reverse {
         // Extract module from target symbol like "src/utils.ts:formatDate"
-        if let Some(module) = target_symbol.rsplitn(2, ':').nth(1) {
+        if let Some(module) = target_symbol.rsplit_once(':').map(|x| x.0) {
             // Count unique referencing files
             let mut ref_files: HashSet<&str> = HashSet::new();
             for r in refs {
@@ -217,7 +217,8 @@ pub fn calculate(
                 breakdown: ScoreBreakdown {
                     in_degree_score: (in_degree_score * 100.0).round() / 100.0,
                     complexity_score: (complexity_score * 100.0).round() / 100.0,
-                    external_compatibility_score: (external_compatibility_score * 100.0).round() / 100.0,
+                    external_compatibility_score: (external_compatibility_score * 100.0).round()
+                        / 100.0,
                     cycle_score: (cycle_score * 100.0).round() / 100.0,
                     test_coverage_score: (test_coverage_score * 100.0).round() / 100.0,
                 },
@@ -226,7 +227,11 @@ pub fn calculate(
         .collect();
 
     // Sort by score descending (highest = migrate first)
-    readiness_scores.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap_or(std::cmp::Ordering::Equal));
+    readiness_scores.sort_by(|a, b| {
+        b.score
+            .partial_cmp(&a.score)
+            .unwrap_or(std::cmp::Ordering::Equal)
+    });
 
     // Assign ranks
     for (i, entry) in readiness_scores.iter_mut().enumerate() {

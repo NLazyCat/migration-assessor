@@ -50,10 +50,10 @@ fn try_parse_lock_file(root: &Path) -> Option<HashMap<String, LockEntry>> {
     let lock_paths = ["package-lock.json", "npm-shrinkwrap.json"];
     for name in &lock_paths {
         let path = root.join(name);
-        if path.exists() {
-            if let Ok(data) = parse_package_lock(&path) {
-                return Some(data);
-            }
+        if path.exists()
+            && let Ok(data) = parse_package_lock(&path)
+        {
+            return Some(data);
         }
     }
     None
@@ -176,21 +176,22 @@ fn fill_children(dep: &mut ResolvedDependency, all_entries: &HashMap<String, Loc
 
 fn extract_package_name(pkg_path: &str, info: &Value) -> String {
     // package-lock.json v3 uses "node_modules/pkg-name" paths
-    if pkg_path.is_empty() || pkg_path == "" {
+    if pkg_path.is_empty() {
         return String::new();
     }
     // Try name field first (for the root package)
-    if let Some(name) = info.get("name").and_then(|v| v.as_str()) {
-        if !name.is_empty() && pkg_path.is_empty() {
-            return name.to_string();
-        }
+    if let Some(name) = info.get("name").and_then(|v| v.as_str())
+        && !name.is_empty()
+        && pkg_path.is_empty()
+    {
+        return name.to_string();
     }
     // Extract from path: "node_modules/@scope/pkg" or "node_modules/pkg"
     let parts: Vec<&str> = pkg_path.split("node_modules/").collect();
-    if let Some(last) = parts.last() {
-        if !last.is_empty() {
-            return last.to_string();
-        }
+    if let Some(last) = parts.last()
+        && !last.is_empty()
+    {
+        return last.to_string();
     }
     String::new()
 }

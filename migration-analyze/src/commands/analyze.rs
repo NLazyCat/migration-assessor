@@ -1,6 +1,8 @@
 use clap::Args;
+use migration_core::output_paths;
 use migration_core::*;
-use std::collections::HashMap;
+use rayon::join;
+use std::collections::{BTreeMap, HashMap};
 use std::path::{Path, PathBuf};
 
 use crate::commands::resolve_project_path;
@@ -22,6 +24,10 @@ pub struct AnalyzeArgs {
     /// Override score weights: in_degree,complexity,compatibility,cycles,tests
     #[arg(long)]
     pub score_weights: Option<String>,
+
+    /// Output format for array-shaped artifacts
+    #[arg(long, default_value = "json")]
+    pub format: String,
 }
 
 pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
@@ -43,7 +49,9 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     if let Some(weights_str) = &args.score_weights {
         let parts: Vec<&str> = weights_str.split(',').collect();
         if parts.len() != 5 {
-            anyhow::bail!("--score-weights requires 5 comma-separated values: in_degree,complexity,compatibility,cycles,tests");
+            anyhow::bail!(
+                "--score-weights requires 5 comma-separated values: in_degree,complexity,compatibility,cycles,tests"
+            );
         }
         config.scoring.weights.in_degree = parts[0].parse()?;
         config.scoring.weights.complexity = parts[1].parse()?;
@@ -59,7 +67,11 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         .and_then(|n| n.to_str())
         .ok_or_else(|| anyhow::anyhow!("Invalid source repo directory name"))?;
 
-    println!("  Source repo: {} ({})", source_repo_name, source_repo_dir.display());
+    println!(
+        "  Source repo: {} ({})",
+        source_repo_name,
+        source_repo_dir.display()
+    );
 
     let source_language = config.project.source_lang.clone().unwrap_or_default();
     let target_language = &config.project.target_lang;
@@ -70,6 +82,13 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         target_language.clone(),
         Some(source_language.clone()),
     )?;
+
+    // Create incremental analysis caches. Symbols and references are namespaced so
+    // the two extraction stages can run in parallel without racing on cache entries.
+    let symbol_cache =
+        migration_core::cache::AnalysisCache::new_namespaced(&project_root, "symbols")?;
+    let reference_cache =
+        migration_core::cache::AnalysisCache::new_namespaced(&project_root, "references")?;
 
     // Discover files
     let discovery = discovery::FileDiscovery::new(
@@ -94,13 +113,32 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     let compatibility_matrix = compatibility.evaluate(&dependencies);
 
     // Dependency graph
-    let dependency_graph =
+    let mut dependency_graph =
         graph::GraphBuilder::build(&project.root, &files, project.source_language)?;
     let cycle_detection = dependency_graph.detect_cycles();
 
-    // Symbol extraction
-    let symbol_results =
-        symbols::SymbolExtractor::extract_all(&project.root, &files, project.source_language)?;
+    // Symbol extraction and reference extraction are independent CPU-bound stages;
+    // run them in parallel. Each stage uses its own namespaced cache to avoid races.
+    let (symbol_results, refs_result) = join(
+        || {
+            symbols::SymbolExtractor::extract_all(
+                &project.root,
+                &files,
+                project.source_language,
+                Some(&symbol_cache),
+            )
+        },
+        || match project.source_language {
+            project::SourceLanguage::TypeScript => {
+                references::typescript::extract_all(&project.root, &files, Some(&reference_cache))
+            }
+            project::SourceLanguage::Rust => {
+                references::rust::extract_all(&project.root, &files, Some(&reference_cache))
+            }
+        },
+    );
+    let symbol_results = symbol_results?;
+    let (forward, reverse) = refs_result?;
 
     // ── Create migration folder ─────────────────────────────────────────
     let migration_dir_name = format!("{}-migration", source_repo_name);
@@ -142,7 +180,8 @@ framework = {}
     std::fs::write(&config_path, root_config_content)?;
 
     // ── Output report ──────────────────────────────────────────────────
-    let output = output::OutputWriter::init(&report_dir)?;
+    let output_format = output::OutputFormat::from_cli(&args.format)?;
+    let output = output::OutputWriter::init(&report_dir, output_format)?;
 
     let chrono = chrono::Utc::now();
     use serde_json::json;
@@ -159,30 +198,36 @@ framework = {}
         "partialAnalysisCount": 0
     });
 
-    output.write_json(&report_dir, "project.json", &project_meta)?;
-    output.write_json(&report_dir, "errors.json", &json!([]))?;
-    output.write_json(
+    output.write(&report_dir, output_paths::PROJECT, &project_meta)?;
+    output.write(&report_dir, output_paths::ERRORS, &json!([]))?;
+    output.write(
         &report_dir,
-        "external-deps/resolved.json",
+        output_paths::external::PACKAGES,
         &json!({ "packages": dependencies }),
     )?;
-    output.write_json(
+    output.write(
         &report_dir,
-        "external-deps/compatibility.json",
+        output_paths::external::COMPATIBILITY,
         &compatibility_matrix,
     )?;
-    output.write_json(&report_dir, "internal-deps/dag.json", &dependency_graph)?;
-    output.write_json(&report_dir, "internal-deps/cycles.json", &cycle_detection)?;
+    output.write(
+        &report_dir,
+        output_paths::graph::NODES,
+        &dependency_graph.nodes,
+    )?;
+    output.write(
+        &report_dir,
+        output_paths::graph::EDGES,
+        &dependency_graph.edges,
+    )?;
+    output.write(&report_dir, output_paths::graph::CYCLES, &cycle_detection)?;
 
     let mut file_index = serde_json::Map::new();
     for (index, contract) in &symbol_results {
-        let symbols_path = format!("{}.index.json", symbols::output_path_for(&index.module, "symbols"));
-        let contracts_path = format!(
-            "{}.api.json",
-            symbols::output_path_for(&contract.module, "api-contracts")
-        );
-        output.write_json(&report_dir, &symbols_path, &index)?;
-        output.write_json(&report_dir, &contracts_path, &contract)?;
+        let symbols_path = output_paths::symbols::for_module(&index.module);
+        let contracts_path = output_paths::symbols::api_for_module(&contract.module);
+        output.write(&report_dir, &symbols_path, &index)?;
+        output.write(&report_dir, &contracts_path, &contract)?;
 
         file_index.insert(
             index.module.clone(),
@@ -193,34 +238,15 @@ framework = {}
             }),
         );
     }
-    output.write_json(&report_dir, "index.json", &json!(file_index))?;
-
-    // Cross-file references
-    let (forward, reverse): (references::ForwardIndex, references::ReverseIndex) =
-        match project.source_language {
-            project::SourceLanguage::TypeScript => {
-                references::typescript::extract_all(&project.root, &files)?
-            }
-            project::SourceLanguage::Rust => {
-                references::rust::extract_all(&project.root, &files)?
-            }
-        };
-    output.write_json(&report_dir, "references/forward.json", &forward)?;
-    output.write_json(&report_dir, "references/reverse.json", &reverse)?;
+    output.write(&report_dir, output_paths::OVERVIEW, &json!(file_index))?;
 
     // Per-file references
     let file_refs = group_references_by_file(&forward, &reverse);
     for (file, refs) in &file_refs {
-        let fwd_path = format!(
-            "references/by-dir/{}.forward.json",
-            file
-        );
-        let rev_path = format!(
-            "references/by-dir/{}.reverse.json",
-            file
-        );
-        output.write_json(&report_dir, &fwd_path, &refs.forward)?;
-        output.write_json(&report_dir, &rev_path, &refs.reverse)?;
+        let fwd_path = output_paths::references::forward_for(file);
+        let rev_path = output_paths::references::reverse_for(file);
+        output.write(&report_dir, &fwd_path, &refs.forward)?;
+        output.write(&report_dir, &rev_path, &refs.reverse)?;
     }
 
     println!(
@@ -239,7 +265,26 @@ framework = {}
         &cycle_detection,
     )?;
 
-    output.write_json(&report_dir, "scores.json", &readiness)?;
+    output.write(&report_dir, output_paths::SCORES, &readiness)?;
+
+    let manifest = json!({
+        "$schema": "https://migration-analyze.dev/schema/v1/manifest.json",
+        "schemaVersion": "1.0.0",
+        "generatedAt": chrono.to_rfc3339(),
+        "toolVersion": env!("CARGO_PKG_VERSION"),
+        "files": {
+            "project": output_paths::PROJECT,
+            "overview": output_paths::OVERVIEW,
+            "scores": output_paths::SCORES,
+            "errors": output_paths::ERRORS,
+            "externalPackages": output_paths::external::PACKAGES,
+            "externalCompatibility": output_paths::external::COMPATIBILITY,
+            "graphNodes": output_paths::graph::NODES,
+            "graphEdges": output_paths::graph::EDGES,
+            "graphCycles": output_paths::graph::CYCLES,
+        }
+    });
+    output.write(&report_dir, output_paths::MANIFEST, &manifest)?;
 
     println!("  Migration readiness scores: {} files", readiness.len());
     if let Some(top) = readiness.first() {
@@ -302,7 +347,11 @@ fn detect_source_repo(project_root: &Path) -> anyhow::Result<PathBuf> {
         _ => {
             anyhow::bail!(
                 "Multiple source repositories found: {}. Please specify one in migration.toml [project].source",
-                candidates.iter().map(|p| p.display().to_string()).collect::<Vec<_>>().join(", ")
+                candidates
+                    .iter()
+                    .map(|p| p.display().to_string())
+                    .collect::<Vec<_>>()
+                    .join(", ")
             );
         }
     }
@@ -331,9 +380,7 @@ fn mirror_source_structure(
     migration_root: &Path,
 ) -> anyhow::Result<()> {
     for file in files {
-        let relative = file
-            .strip_prefix(source_root)
-            .unwrap_or(file);
+        let relative = file.strip_prefix(source_root).unwrap_or(file);
         let target = migration_root.join(relative);
 
         if let Some(parent) = target.parent() {
@@ -344,10 +391,7 @@ fn mirror_source_structure(
         std::fs::write(&target, "")?;
     }
 
-    println!(
-        "  Mirrored {} files into migration folder",
-        files.len()
-    );
+    println!("  Mirrored {} files into migration folder", files.len());
     Ok(())
 }
 
@@ -360,8 +404,11 @@ fn detect_source_git_info(source_root: &Path) -> (Option<String>, Option<String>
 
     let remote = run_git_cmd(source_root, &["remote", "get-url", "origin"]);
     let branch = run_git_cmd(source_root, &["rev-parse", "--abbrev-ref", "HEAD"]);
-    let version = run_git_cmd(source_root, &["describe", "--tags", "--exact-match", "HEAD"])
-        .or_else(|| run_git_cmd(source_root, &["rev-parse", "--short", "HEAD"]));
+    let version = run_git_cmd(
+        source_root,
+        &["describe", "--tags", "--exact-match", "HEAD"],
+    )
+    .or_else(|| run_git_cmd(source_root, &["rev-parse", "--short", "HEAD"]));
 
     (remote, branch, version)
 }
@@ -376,24 +423,42 @@ fn group_references_by_file(
     reverse: &migration_core::references::ReverseIndex,
 ) -> HashMap<String, PerFileRefs> {
     use serde_json::json;
-    let mut grouped: HashMap<String, (serde_json::Map<String, serde_json::Value>, serde_json::Map<String, serde_json::Value>)> = HashMap::new();
+    // Use BTreeMap so the serialized JSON object keys are emitted in a stable,
+    // deterministic order regardless of parallel collection order.
+    type RefMap = BTreeMap<String, serde_json::Value>;
+    let mut grouped: HashMap<String, (RefMap, RefMap)> = HashMap::new();
 
     for (key, refs) in forward {
         if let Some((file, symbol)) = key.split_once(':') {
             let entry = grouped.entry(file.to_string()).or_default();
-            entry.0.insert(symbol.to_string(), serde_json::to_value(refs).unwrap_or(json!([])));
+            entry.0.insert(
+                symbol.to_string(),
+                serde_json::to_value(refs).unwrap_or(json!([])),
+            );
         }
     }
     for (key, refs) in reverse {
         if let Some((file, symbol)) = key.split_once(':') {
             let entry = grouped.entry(file.to_string()).or_default();
-            entry.1.insert(symbol.to_string(), serde_json::to_value(refs).unwrap_or(json!([])));
+            entry.1.insert(
+                symbol.to_string(),
+                serde_json::to_value(refs).unwrap_or(json!([])),
+            );
         }
     }
 
-    grouped.into_iter().map(|(file, (fwd, rev))| {
-        (file, PerFileRefs { forward: json!(fwd), reverse: json!(rev) })
-    }).collect()
+    grouped
+        .into_iter()
+        .map(|(file, (fwd, rev))| {
+            (
+                file,
+                PerFileRefs {
+                    forward: json!(fwd),
+                    reverse: json!(rev),
+                },
+            )
+        })
+        .collect()
 }
 
 fn run_git_cmd(cwd: &Path, args: &[&str]) -> Option<String> {

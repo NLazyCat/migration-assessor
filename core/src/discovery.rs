@@ -107,10 +107,10 @@ impl FileDiscovery {
 
         let default_skipped = ["node_modules", "target", ".git", "dist", "build"];
         for part in relative.components() {
-            if let Some(name) = part.as_os_str().to_str() {
-                if default_skipped.contains(&name) {
-                    return false;
-                }
+            if let Some(name) = part.as_os_str().to_str()
+                && default_skipped.contains(&name)
+            {
+                return false;
             }
         }
 

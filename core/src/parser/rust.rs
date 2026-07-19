@@ -1,7 +1,5 @@
 use super::ModuleReferences;
-use syn::{
-    visit::Visit, File, ItemUse, UseGlob, UseName, UsePath, UseRename,
-};
+use syn::{File, ItemUse, UseGlob, UseName, UsePath, UseRename, visit::Visit};
 
 struct ImportVisitor {
     relative_imports: Vec<String>,
@@ -24,9 +22,7 @@ impl<'ast> Visit<'ast> for ImportVisitor {
             path = format!("::{}", path);
         }
 
-        if path.starts_with("crate::")
-            || path.starts_with("super::")
-            || path.starts_with("self::")
+        if path.starts_with("crate::") || path.starts_with("super::") || path.starts_with("self::")
         {
             self.relative_imports.push(path);
         } else {
@@ -37,8 +33,7 @@ impl<'ast> Visit<'ast> for ImportVisitor {
     fn visit_item_mod(&mut self, node: &'ast syn::ItemMod) {
         if node.content.is_none() {
             // `mod foo;` references a sibling file (foo.rs or foo/mod.rs).
-            self.relative_imports
-                .push(format!("self::{}", node.ident));
+            self.relative_imports.push(format!("self::{}", node.ident));
         }
         syn::visit::visit_item_mod(self, node);
     }

@@ -8,8 +8,18 @@ use std::path::{Path, PathBuf};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DependencyGraph {
-    pub nodes: Vec<String>,
+    pub nodes: Vec<Node>,
     pub edges: Vec<Edge>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Node {
+    pub id: String,
+    pub in_degree: usize,
+    pub out_degree: usize,
+    pub top_dir: String,
+    pub dir_path: String,
+    pub in_cycle: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -43,7 +53,9 @@ impl GraphBuilder {
 
         for file in files {
             let relative = file.strip_prefix(root).unwrap_or(file);
-            let from = normalize_path_components(&relative).to_string_lossy().replace('\\', "/");
+            let from = normalize_path_components(relative)
+                .to_string_lossy()
+                .replace('\\', "/");
             nodes.insert(from.clone());
 
             let source = fs::read_to_string(file)?;
@@ -67,8 +79,35 @@ impl GraphBuilder {
             }
         }
 
-        let mut node_list: Vec<String> = nodes.into_iter().collect();
-        node_list.sort();
+        let mut in_degree: HashMap<String, usize> = HashMap::new();
+        let mut out_degree: HashMap<String, usize> = HashMap::new();
+        for edge in &edges {
+            *out_degree.entry(edge.from.clone()).or_default() += 1;
+            *in_degree.entry(edge.to.clone()).or_default() += 1;
+        }
+
+        let mut node_list: Vec<Node> = nodes
+            .into_iter()
+            .map(|id| {
+                let in_degree = in_degree.get(&id).copied().unwrap_or(0);
+                let out_degree = out_degree.get(&id).copied().unwrap_or(0);
+                let top_dir = id.split('/').next().unwrap_or("_root").to_string();
+                let dir_path = id
+                    .rsplit_once('/')
+                    .map(|(dir, _)| dir)
+                    .unwrap_or("")
+                    .to_string();
+                Node {
+                    id,
+                    in_degree,
+                    out_degree,
+                    top_dir,
+                    dir_path,
+                    in_cycle: false,
+                }
+            })
+            .collect();
+        node_list.sort_by(|a, b| a.id.cmp(&b.id));
 
         Ok(DependencyGraph {
             nodes: node_list,
@@ -78,7 +117,7 @@ impl GraphBuilder {
 }
 
 impl DependencyGraph {
-    pub fn detect_cycles(&self) -> CycleDetectionResult {
+    pub fn detect_cycles(&mut self) -> CycleDetectionResult {
         let mut adjacency: HashMap<&String, Vec<&String>> = HashMap::new();
         for edge in &self.edges {
             adjacency.entry(&edge.from).or_default().push(&edge.to);
@@ -97,9 +136,9 @@ impl DependencyGraph {
         let mut on_stack = HashSet::new();
 
         for node in &self.nodes {
-            if !visited.contains(node) {
+            if !visited.contains(&node.id) {
                 self.dfs_cycles(
-                    node,
+                    &node.id,
                     &adjacency,
                     &mut visited,
                     &mut stack,
@@ -107,6 +146,20 @@ impl DependencyGraph {
                     &mut cycles,
                 );
             }
+        }
+
+        let mut cycle_nodes: HashSet<String> = HashSet::new();
+        for cycle in &cycles {
+            for node in &cycle.nodes {
+                cycle_nodes.insert(node.clone());
+            }
+        }
+        for node in &self_loops {
+            cycle_nodes.insert(node.clone());
+        }
+
+        for node in &mut self.nodes {
+            node.in_cycle = cycle_nodes.contains(&node.id);
         }
 
         CycleDetectionResult {
@@ -140,13 +193,13 @@ impl DependencyGraph {
                 } else if on_stack.contains(*neighbor) {
                     // Found a cycle. Extract the cycle portion from the stack.
                     if let Some(pos) = stack.iter().position(|n| n == *neighbor) {
-                        let cycle_nodes: Vec<String> =
-                            stack[pos..].iter().cloned().chain(std::iter::once((*neighbor).clone()))
-                                .collect();
+                        let cycle_nodes: Vec<String> = stack[pos..]
+                            .iter()
+                            .cloned()
+                            .chain(std::iter::once((*neighbor).clone()))
+                            .collect();
                         if !cycles.iter().any(|c| c.nodes == cycle_nodes) {
-                            cycles.push(Cycle {
-                                nodes: cycle_nodes,
-                            });
+                            cycles.push(Cycle { nodes: cycle_nodes });
                         }
                     }
                 }
@@ -188,7 +241,11 @@ fn resolve_typescript_import(file: &Path, import: &str, root: &Path) -> Option<S
         if candidate.exists() {
             let relative = candidate.strip_prefix(root).unwrap_or(candidate);
             let module = relative.to_string_lossy().replace('\\', "/");
-            return Some(normalize_path_components(Path::new(&module)).to_string_lossy().replace('\\', "/"));
+            return Some(
+                normalize_path_components(Path::new(&module))
+                    .to_string_lossy()
+                    .replace('\\', "/"),
+            );
         }
     }
 

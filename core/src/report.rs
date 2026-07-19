@@ -1,8 +1,8 @@
 use std::path::Path;
 
 use crate::deps::ResolvedDependency;
-use crate::graph::DependencyGraph;
 use crate::graph::CycleDetectionResult;
+use crate::graph::DependencyGraph;
 use serde_json::Value;
 
 pub fn generate_html_report(
@@ -21,7 +21,7 @@ pub fn generate_html_report(
     let source_root = meta["sourceRoot"].as_str().unwrap_or("?");
 
     // Read compatibility data
-    let compat_path = output_dir.join("external-deps").join("compatibility.json");
+    let compat_path = output_dir.join("external").join("compatibility.json");
     let compat_json: Value = if compat_path.exists() {
         let text = std::fs::read_to_string(&compat_path)?;
         serde_json::from_str(&text).unwrap_or(Value::Null)
@@ -152,28 +152,23 @@ pub fn generate_html_report(
   const allNodes = {nodes_json};
   const allEdges = {edges_json};
 
-  // Compute link counts
-  const linkCount = new Map();
-  allNodes.forEach(n => linkCount.set(n, 0));
-  allEdges.forEach(e => {{ if (linkCount.has(e.from)) linkCount.set(e.from, linkCount.get(e.from) + 1); }});
-  const maxLinks = Math.max(...linkCount.values(), 1);
+  const maxLinks = Math.max(...allNodes.map(n => n.out_degree), 1);
+  const nodeById = new Map(allNodes.map(n => [n.id, n]));
 
-  // Extract top-level directory for coloring
-  function topDir(id) {{
-    const p = id.indexOf('/');
-    return p === -1 ? '_root' : id.slice(0, p);
-  }}
+  // Directory metadata is precomputed on each node.
+  function topDir(n) {{ return n.top_dir; }}
+  function linkCount(n) {{ return n.out_degree; }}
   const dirs = [...new Set(allNodes.map(topDir))].sort();
   const dirColors = d3.scaleOrdinal(d3.schemeTableau10).domain(dirs);
 
   // Build filtered graph
   function buildGraph(limit) {{
     // Rank nodes by connection count
-    const ranked = [...allNodes].sort((a, b) => (linkCount.get(b) || 0) - (linkCount.get(a) || 0));
-    const selected = limit > 0 ? new Set(ranked.slice(0, limit)) : new Set(allNodes);
+    const ranked = [...allNodes].sort((a, b) => b.out_degree - a.out_degree);
+    const selected = limit > 0 ? new Set(ranked.slice(0, limit).map(n => n.id)) : new Set(allNodes.map(n => n.id));
 
-    const nodes = allNodes.filter(n => selected.has(n));
-    const nodeSet = new Set(nodes);
+    const nodes = allNodes.filter(n => selected.has(n.id));
+    const nodeSet = new Set(nodes.map(n => n.id));
     const edges = allEdges.filter(e => nodeSet.has(e.from) && nodeSet.has(e.to));
 
     return {{ nodes, edges, nodeSet }};
@@ -193,11 +188,11 @@ pub fn generate_html_report(
     let visibleNodes = nodes;
     if (filterText) {{
       const lower = filterText.toLowerCase();
-      visibleNodes = nodes.filter(n => n.toLowerCase().includes(lower));
+      visibleNodes = nodes.filter(n => n.id.toLowerCase().includes(lower));
     }}
 
     // Filter edges to only visible nodes
-    const visibleSet = new Set(visibleNodes);
+    const visibleSet = new Set(visibleNodes.map(n => n.id));
     const visibleEdges = edges.filter(e => visibleSet.has(e.from) && visibleSet.has(e.to));
 
     currentData = {{ all: nodes, visible: visibleNodes, edges: visibleEdges }};
@@ -233,12 +228,12 @@ pub fn generate_html_report(
       .data(visibleEdges)
       .join('line')
       .attr('class', 'link')
-      .attr('stroke-width', d => Math.min(3, 0.5 + (linkCount.get(d.from) || 0) / maxLinks * 2));
+      .attr('stroke-width', d => Math.min(3, 0.5 + (nodeById.get(d.from)?.out_degree || 0) / maxLinks * 2));
 
     // Nodes
     node = gMain.append('g')
       .selectAll('g')
-      .data(visibleNodes.map(n => ({{ id: n }})))
+      .data(visibleNodes)
       .join('g')
       .attr('class', 'node');
 
@@ -248,9 +243,9 @@ pub fn generate_html_report(
       .range([4, Math.min(14, 4 + maxLinks * 0.3)]);
 
     node.append('circle')
-      .attr('r', d => Math.max(4, rScale(linkCount.get(d.id) || 0)))
-      .attr('fill', d => linkCount.get(d.id) > 0 ? dirColors(topDir(d.id)) : '#e5e7eb')
-      .attr('stroke', d => linkCount.get(d.id) > 0 ? d3.color(dirColors(topDir(d.id))).darker(0.5) : '#d1d5db');
+      .attr('r', d => Math.max(4, rScale(linkCount(d) || 0)))
+      .attr('fill', d => linkCount(d) > 0 ? dirColors(topDir(d)) : '#e5e7eb')
+      .attr('stroke', d => linkCount(d) > 0 ? d3.color(dirColors(topDir(d))).darker(0.5) : '#d1d5db');
 
     // Labels with background (only for important nodes or on hover)
     node.append('text')
@@ -259,7 +254,7 @@ pub fn generate_html_report(
         const parts = d.id.split('/');
         return parts[parts.length - 1];
       }})
-      .attr('x', d => Math.max(4, rScale(linkCount.get(d.id) || 0)) + 4)
+      .attr('x', d => Math.max(4, rScale(linkCount(d) || 0)) + 4)
       .attr('y', 4);
 
     node.append('text')
@@ -267,7 +262,7 @@ pub fn generate_html_report(
         const parts = d.id.split('/');
         return parts[parts.length - 1];
       }})
-      .attr('x', d => Math.max(4, rScale(linkCount.get(d.id) || 0)) + 4)
+      .attr('x', d => Math.max(4, rScale(linkCount(d) || 0)) + 4)
       .attr('y', 4)
       .attr('fill', '#333');
 
@@ -302,10 +297,10 @@ pub fn generate_html_report(
     const nodeCount = visibleNodes.length;
     const charge = nodeCount > 200 ? -80 : nodeCount > 100 ? -120 : -200;
 
-    simulation = d3.forceSimulation(visibleNodes.map(n => ({{ id: n }})))
+    simulation = d3.forceSimulation(visibleNodes)
       .force('link', d3.forceLink(visibleEdges.map(e => ({{ source: e.from, target: e.to }})))
         .id(d => d.id)
-        .distance(d => Math.min(180, 40 + (linkCount.get(d.source.id) || 0) * 3)))
+        .distance(d => Math.min(180, 40 + (linkCount(d.source) || 0) * 3)))
       .force('charge', d3.forceManyBody().strength(charge))
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collision', d3.forceCollide(10))
@@ -324,7 +319,7 @@ pub fn generate_html_report(
     const legend = d3.select('#graph-legend');
     legend.html('');
     dirs.forEach(dir => {{
-      const count = visibleNodes.filter(n => topDir(n) === dir).length;
+      const count = visibleNodes.filter(n => n.top_dir === dir).length;
       legend.append('span')
         .html(`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${{dirColors(dir)}};margin-right:4px;"></span> ${{dir}} (${{count}})`);
     }});

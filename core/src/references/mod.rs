@@ -51,6 +51,9 @@ pub type ForwardIndex = HashMap<String, Vec<SymbolReference>>;
 /// Reverse reference index: for each target symbol, list all symbols that reference it.
 pub type ReverseIndex = HashMap<String, Vec<SymbolReference>>;
 
+/// Per-file import bindings: local_name -> (target_file, exported_name).
+pub type FileBindings = HashMap<String, (String, String)>;
+
 /// An import binding within a single file: `import { exported_name as local_name } from "source_module"`.
 #[derive(Debug, Clone)]
 pub struct ImportBinding {
@@ -60,7 +63,10 @@ pub struct ImportBinding {
 }
 
 /// Parse import bindings from a TypeScript/Rust source file.
-pub fn parse_import_bindings(source: &str, file_path: Option<&Path>) -> anyhow::Result<Vec<ImportBinding>> {
+pub fn parse_import_bindings(
+    source: &str,
+    file_path: Option<&Path>,
+) -> anyhow::Result<Vec<ImportBinding>> {
     let ext = file_path
         .and_then(|p| p.extension())
         .and_then(|e| e.to_str())
