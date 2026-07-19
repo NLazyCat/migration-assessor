@@ -1,7 +1,9 @@
 use clap::Args;
 use console::style;
 use indicatif::{ProgressBar, ProgressStyle};
+use migration_core::deps::module_map;
 use migration_core::output_paths;
+use migration_core::recommendation;
 use migration_core::*;
 use rayon::join;
 use std::collections::{BTreeMap, HashMap};
@@ -262,6 +264,13 @@ framework = {}
         reverse.len()
     );
 
+    // Module-level external dependency map
+    let module_deps = module_map::module_external_deps(
+        &project.root,
+        &files,
+        project.source_language,
+    );
+
     // Migration readiness scores
     let readiness = scores::calculate(
         &project.root,
@@ -270,11 +279,21 @@ framework = {}
         &reverse,
         &compatibility_matrix,
         &cycle_detection,
+        Some(&module_deps),
     )?;
 
     output.write(&report_dir, output_paths::SCORES, &readiness)?;
+
+    // Dependency migration recommendations
+    let recommendations = recommendation::build_recommendations(
+        &dependencies,
+        &compatibility,
+        Some(&module_deps),
+    );
+    output.write(&report_dir, output_paths::external::RECOMMENDATIONS, &recommendations)?;
+
     pb.inc(1);
-    pb.set_message("calculating scores");
+    pb.set_message("calculating scores & recommendations");
     pb.finish_and_clear();
 
     let manifest = json!({
@@ -296,6 +315,7 @@ framework = {}
             "graphNodes": output_paths::graph::NODES,
             "graphEdges": output_paths::graph::EDGES,
             "graphCycles": output_paths::graph::CYCLES,
+            "externalRecommendations": output_paths::external::RECOMMENDATIONS,
         }
     });
     output.write(&report_dir, output_paths::MANIFEST, &manifest)?;

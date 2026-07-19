@@ -1,5 +1,6 @@
 use clap::Args;
 use migration_core::output_paths;
+use migration_core::recommendation::{DependencyRecommendation, RecommendationReport};
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::path::{Path, PathBuf};
@@ -42,6 +43,10 @@ struct FileChangeGroup {
     file: String,
     source_attached: bool,
     changes: Vec<SymbolChangeDetail>,
+    /// Dependency recommendations relevant to this file, loaded from the
+    /// stored `external/recommendations.json`.
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    recommendations: Vec<DependencyRecommendation>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -50,6 +55,12 @@ struct SymbolChangeDetail {
     kind: String,
     change_type: String,
     full_body: String,
+    /// First few lines before the symbol definition from the new file.
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    context_before: Vec<String>,
+    /// First few lines after the symbol definition from the new file.
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    context_after: Vec<String>,
     position: RelativePosition,
 }
 
@@ -217,6 +228,9 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     let mut all_files: Vec<String> = Vec::new();
     let mut all_triggered_symbols: Vec<String> = Vec::new();
 
+    // Load dependency recommendations for attaching to changed files
+    let file_recs = load_file_recommendations(&report_dir);
+
     for (status, file_path, diff_lines) in &file_diffs {
         all_files.push(file_path.clone());
 
@@ -244,6 +258,9 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
             std::fs::write(&changed_path, change_content)?;
 
             fc.source_attached = true;
+            if let Some(recs) = file_recs.get(file_path) {
+                fc.recommendations = recs.clone();
+            }
             for ch in &fc.changes {
                 let symbol_id = format!("{}:{}", file_path, ch.symbol);
                 all_triggered_symbols.push(symbol_id);
@@ -300,6 +317,9 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
 fn load_reverse_index(ctx: &ProjectContext) -> ReverseIndex {
     ctx.load_reverse_index().unwrap_or_default()
 }
+
+/// Up to this many lines of surrounding context to attach to each changed symbol.
+const CONTEXT_WINDOW: usize = 3;
 
 /// ── Analyze changes for one file ──────────────────────────────────────────
 fn analyze_file_changes(
@@ -387,9 +407,15 @@ fn analyze_file_changes(
             "modified"
         };
 
+        let source = new_content.as_deref().unwrap_or("");
         let full_body = match status {
             "D" => String::new(),
-            _ => extract_full_body(sym_name, &orig.kind, new_content.as_deref().unwrap_or("")),
+            _ => extract_full_body(sym_name, &orig.kind, source),
+        };
+
+        let (context_before, context_after) = match status {
+            "D" => (vec![], vec![]),
+            _ => extract_context(source, sym_name, &orig.kind, CONTEXT_WINDOW),
         };
 
         let position = compute_relative_position(sym_name, &ordered_names, index);
@@ -399,6 +425,8 @@ fn analyze_file_changes(
             kind: orig.kind.clone(),
             change_type: stable_change_type.to_string(),
             full_body,
+            context_before,
+            context_after,
             position,
         });
     }
@@ -411,6 +439,7 @@ fn analyze_file_changes(
         file: file_path.to_string(),
         source_attached: false,
         changes,
+        recommendations: vec![],
     })
 }
 
@@ -494,6 +523,77 @@ fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
     };
 
     source[start..end].to_string()
+}
+
+/// Extract a few lines of surrounding context for a changed symbol.
+///
+/// `source` is the reconstructed new-file content. The function re-uses the
+/// same keyword-matching heuristic as [`extract_full_body`] to locate the symbol
+/// start position, then returns up to `window` lines before and after it.
+fn extract_context(
+    source: &str,
+    symbol_name: &str,
+    kind: &str,
+    window: usize,
+) -> (Vec<String>, Vec<String>) {
+    // Determine the declaration keyword(s) for the given kind (mirrors extract_full_body)
+    let keywords: &[&str] = match kind {
+        "function" | "method" => &["function ", "fn "],
+        "class" => &["class "],
+        "interface" => &["interface "],
+        "struct" => &["struct "],
+        "enum" => &["enum "],
+        "trait" => &["trait "],
+        "type" | "type_alias" => &["type "],
+        "const" | "constant" => &["const "],
+        "arrow_function" | "variable" => &["const ", "let ", "var "],
+        _ => &[],
+    };
+
+    let mut start_pos = None;
+    for &kw in keywords {
+        let search: Vec<usize> = source
+            .match_indices(kw)
+            .filter_map(|(pos, _)| {
+                let after_kw = &source[pos + kw.len()..];
+                after_kw.trim_start().starts_with(symbol_name).then_some(pos)
+            })
+            .collect();
+        if let Some(&pos) = search.first() {
+            start_pos = Some(pos);
+            break;
+        }
+    }
+
+    if start_pos.is_none() {
+        start_pos = source
+            .find(&format!("{} ", symbol_name))
+            .or_else(|| source.find(&format!("{}({}", symbol_name, symbol_name)))
+            .or_else(|| source.find(&format!("{}.{}", symbol_name, symbol_name)));
+    }
+
+    let start = match start_pos {
+        Some(p) => p,
+        None => return (vec![], vec![]),
+    };
+
+    // Count newlines before start_pos to get 0-indexed line number
+    let line_idx = source[..start].matches('\n').count();
+    let lines: Vec<&str> = source.lines().collect();
+
+    let before_start = line_idx.saturating_sub(window);
+    let before: Vec<String> = lines[before_start..line_idx]
+        .iter()
+        .map(|l| l.to_string())
+        .collect();
+
+    let after_end = (line_idx + 1 + window).min(lines.len());
+    let after: Vec<String> = lines[line_idx + 1..after_end]
+        .iter()
+        .map(|l| l.to_string())
+        .collect();
+
+    (before, after)
 }
 
 fn find_matching_brace(text: &str) -> Option<usize> {
@@ -1015,4 +1115,30 @@ fn reconstruct_full_file(diff_lines: &[DiffLine]) -> Option<String> {
         // '@' lines (hunk headers) are skipped
     }
     if has_any { Some(content) } else { None }
+}
+
+/// Load the stored `recommendations.json` and build a file → recommendations map.
+fn load_file_recommendations(
+    report_dir: &Path,
+) -> HashMap<String, Vec<DependencyRecommendation>> {
+    let rec_path = report_dir.join(output_paths::external::RECOMMENDATIONS);
+    if !rec_path.exists() {
+        return HashMap::new();
+    }
+    let content = match std::fs::read_to_string(&rec_path) {
+        Ok(c) => c,
+        Err(_) => return HashMap::new(),
+    };
+    let report: RecommendationReport = match serde_json::from_str(&content) {
+        Ok(r) => r,
+        Err(_) => return HashMap::new(),
+    };
+
+    let mut map: HashMap<String, Vec<DependencyRecommendation>> = HashMap::new();
+    for dep in &report.dependencies {
+        for module in &dep.affected_modules {
+            map.entry(module.clone()).or_default().push(dep.clone());
+        }
+    }
+    map
 }

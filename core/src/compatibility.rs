@@ -8,8 +8,9 @@ use std::path::Path;
 ///
 /// The ordering reflects desirability:
 /// - `Full` > `Partial` > `None` > `Unknown`
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum CompatibilityLevel {
+    #[default]
     Unknown,
     None,
     Partial,
@@ -45,6 +46,72 @@ impl CompatibilityLevel {
             Self::Unknown => 0.3,
         }
     }
+
+    /// Default migration effort implied by a compatibility level, used when a
+    /// mapping does not specify `effort` explicitly.
+    ///
+    /// - Full    → Trivial
+    /// - Partial → Moderate
+    /// - None    → Rewrite
+    /// - Unknown → Unknown
+    pub fn default_effort(&self) -> MigrationEffort {
+        match self {
+            Self::Full => MigrationEffort::Trivial,
+            Self::Partial => MigrationEffort::Moderate,
+            Self::None => MigrationEffort::Rewrite,
+            Self::Unknown => MigrationEffort::Unknown,
+        }
+    }
+}
+
+/// Derive risk tags from effort, compatibility, and provided tags/guidance.
+/// These tags are surfaced in scores and recommendation reports so AI porting
+/// agents can prioritize or special-case risky dependencies.
+fn derive_risk_tags(
+    effort: MigrationEffort,
+    compat: CompatibilityLevel,
+    tags: Option<&[String]>,
+    guidance: Option<&str>,
+) -> Vec<String> {
+    let mut risk: Vec<String> = Vec::new();
+
+    match effort {
+        MigrationEffort::Rewrite => risk.push("rewrite".to_string()),
+        MigrationEffort::Heavy => risk.push("heavy".to_string()),
+        _ => {}
+    }
+    if matches!(compat, CompatibilityLevel::None) {
+        risk.push("no-equivalent".to_string());
+    }
+    if matches!(compat, CompatibilityLevel::Unknown) {
+        risk.push("unverified".to_string());
+    }
+
+    if let Some(tags) = tags {
+        for t in tags {
+            let tl = t.to_lowercase();
+            if matches!(
+                tl.as_str(),
+                "async" | "ffi" | "concurrency" | "unsafe" | "crypto" | "realtime" | "ssr"
+            ) {
+                risk.push(tl);
+            }
+        }
+    }
+
+    if let Some(g) = guidance
+        && (g.to_lowercase().contains("unsafe")
+            || g.to_lowercase().contains("ffi")
+            || g.to_lowercase().contains("no direct"))
+        && !risk.iter().any(|r| r == "ffi")
+    {
+        risk.push("ffi".to_string());
+    }
+
+    // Deduplicate while preserving order.
+    let mut seen = std::collections::HashSet::new();
+    risk.retain(|r| seen.insert(r.clone()));
+    risk
 }
 
 impl std::fmt::Display for CompatibilityLevel {
@@ -55,12 +122,6 @@ impl std::fmt::Display for CompatibilityLevel {
             Self::None => write!(f, "none"),
             Self::Unknown => write!(f, "unknown"),
         }
-    }
-}
-
-impl Default for CompatibilityLevel {
-    fn default() -> Self {
-        Self::Unknown
     }
 }
 
@@ -88,6 +149,88 @@ impl Serialize for CompatibilityLevel {
     }
 }
 
+/// Relative migration effort to port a dependency to the target language.
+///
+/// Ordered from least to most effort: `Trivial` < `Moderate` < `Heavy` < `Rewrite`.
+/// Used by the scoring and recommendation modules to surface how much work a
+/// given dependency represents when porting the source project to Rust.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum MigrationEffort {
+    #[default]
+    Unknown,
+    Trivial,
+    Moderate,
+    Heavy,
+    Rewrite,
+}
+
+impl MigrationEffort {
+    /// Numeric score in [0.0, 1.0]; higher = more effort.
+    ///
+    /// - Trivial → 0.15
+    /// - Moderate → 0.45
+    /// - Heavy    → 0.75
+    /// - Rewrite  → 1.0
+    /// - Unknown  → 0.5 (neutral baseline)
+    pub fn numeric_score(&self) -> f64 {
+        match self {
+            Self::Trivial => 0.15,
+            Self::Moderate => 0.45,
+            Self::Heavy => 0.75,
+            Self::Rewrite => 1.0,
+            Self::Unknown => 0.5,
+        }
+    }
+
+    /// Returns `true` if this effort level is considered high-impact
+    /// and likely warrants explicit attention (Heavy or Rewrite).
+    pub fn is_high_impact(&self) -> bool {
+        matches!(self, Self::Heavy | Self::Rewrite)
+    }
+}
+
+impl std::fmt::Display for MigrationEffort {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let s = match self {
+            Self::Trivial => "trivial",
+            Self::Moderate => "moderate",
+            Self::Heavy => "heavy",
+            Self::Rewrite => "rewrite",
+            Self::Unknown => "unknown",
+        };
+        write!(f, "{}", s)
+    }
+}
+
+impl<'de> serde::Deserialize<'de> for MigrationEffort {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        let s = String::deserialize(deserializer)?;
+        Ok(parse_effort_str(&s))
+    }
+}
+
+impl Serialize for MigrationEffort {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        serializer.serialize_str(self.to_string().as_str())
+    }
+}
+
+fn parse_effort_str(s: &str) -> MigrationEffort {
+    match s.trim().to_lowercase().as_str() {
+        "trivial" => MigrationEffort::Trivial,
+        "moderate" => MigrationEffort::Moderate,
+        "heavy" => MigrationEffort::Heavy,
+        "rewrite" => MigrationEffort::Rewrite,
+        _ => MigrationEffort::Unknown,
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CompatibilityEntry {
     pub source_language: String,
@@ -95,10 +238,18 @@ pub struct CompatibilityEntry {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub equivalent: Option<String>,
     pub compatibility: CompatibilityLevel,
+    #[serde(default)]
+    pub effort: MigrationEffort,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub guidance: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub note: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<String>>,
+    /// Risk tags that aggregate into scoring and reports, e.g. `async`, `ffi`,
+    /// `no-equivalent`. Derived from `tags` plus effort heuristics.
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    pub risk_tags: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -111,10 +262,16 @@ pub struct DepChangeInfo {
     pub compatibility_now: Option<CompatibilityLevel>,
     pub equivalent: Option<String>,
     pub needs_review: bool,
+    #[serde(default)]
+    pub effort: MigrationEffort,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub guidance: Option<String>,
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    pub risk_tags: Vec<String>,
 }
 
 /// Describes the impact of a dependency change on the source codebase.
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct DependencyImpact {
     /// The package name that changed.
     pub package: String,
@@ -124,17 +281,6 @@ pub struct DependencyImpact {
     pub affected_modules: Vec<String>,
     /// Whether the impact is considered high (many files affected + low compatibility).
     pub is_high_impact: bool,
-}
-
-impl Default for DependencyImpact {
-    fn default() -> Self {
-        Self {
-            package: String::new(),
-            affected_module_count: 0,
-            affected_modules: vec![],
-            is_high_impact: false,
-        }
-    }
 }
 
 /// Parse "source->target.package" TOML key into components.
@@ -166,6 +312,8 @@ pub struct CompatibilityMatrix {
 struct RawEntry {
     equivalent: Option<String>,
     compatibility: Option<String>,
+    effort: Option<String>,
+    guidance: Option<String>,
     note: Option<String>,
     tags: Option<Vec<String>>,
 }
@@ -187,26 +335,43 @@ impl CompatibilityMatrix {
                 };
 
                 // Parse the language-pair key format: "source->target.package"
-                if let Some((src, tgt, pkg_name)) = parse_language_pair_key(&key) {
-                    if src == source_language && tgt == target_language {
-                        let compat_level = raw
-                            .compatibility
-                            .as_deref()
-                            .map(parse_compatibility_str)
-                            .unwrap_or(CompatibilityLevel::Unknown);
+                if let Some((src, tgt, pkg_name)) = parse_language_pair_key(&key)
+                    && src == source_language
+                    && tgt == target_language
+                {
+                    let compat_level = raw
+                        .compatibility
+                        .as_deref()
+                        .map(parse_compatibility_str)
+                        .unwrap_or(CompatibilityLevel::Unknown);
 
-                        built_in.insert(
-                            pkg_name.to_string(),
-                            CompatibilityEntry {
-                                source_language: source_language.clone(),
-                                target_language: target_language.clone(),
-                                equivalent: raw.equivalent,
-                                compatibility: compat_level,
-                                note: raw.note,
-                                tags: raw.tags,
-                            },
-                        );
-                    }
+                    let effort = raw
+                        .effort
+                        .as_deref()
+                        .map(parse_effort_str)
+                        .unwrap_or_else(|| compat_level.default_effort());
+
+                    let risk_tags = derive_risk_tags(
+                        effort,
+                        compat_level,
+                        raw.tags.as_deref(),
+                        raw.guidance.as_deref(),
+                    );
+
+                    built_in.insert(
+                        pkg_name.to_string(),
+                        CompatibilityEntry {
+                            source_language: source_language.clone(),
+                            target_language: target_language.clone(),
+                            equivalent: raw.equivalent.clone(),
+                            compatibility: compat_level,
+                            effort,
+                            guidance: raw.guidance.clone(),
+                            note: raw.note.clone(),
+                            tags: raw.tags.clone(),
+                            risk_tags,
+                        },
+                    );
                 }
             }
         }
@@ -217,6 +382,14 @@ impl CompatibilityMatrix {
             built_in,
             overrides: HashMap::new(),
         }
+    }
+
+    pub fn source_language(&self) -> &str {
+        &self.source_language
+    }
+
+    pub fn target_language(&self) -> &str {
+        &self.target_language
     }
 
     pub fn load_overrides(&mut self, path: &Path) -> anyhow::Result<()> {
@@ -233,6 +406,19 @@ impl CompatibilityMatrix {
                 .map(parse_compatibility_str)
                 .unwrap_or(CompatibilityLevel::Unknown);
 
+            let effort = entry
+                .effort
+                .as_deref()
+                .map(parse_effort_str)
+                .unwrap_or_else(|| compat_level.default_effort());
+
+            let risk_tags = derive_risk_tags(
+                effort,
+                compat_level,
+                entry.tags.as_deref(),
+                entry.guidance.as_deref(),
+            );
+
             self.overrides.insert(
                 name,
                 CompatibilityEntry {
@@ -240,8 +426,11 @@ impl CompatibilityMatrix {
                     target_language: self.target_language.clone(),
                     equivalent: entry.equivalent,
                     compatibility: compat_level,
+                    effort,
+                    guidance: entry.guidance,
                     note: entry.note,
-                    tags: None,
+                    tags: entry.tags,
+                    risk_tags,
                 },
             );
         }
@@ -269,8 +458,11 @@ impl CompatibilityMatrix {
                         target_language: self.target_language.clone(),
                         equivalent: None,
                         compatibility: CompatibilityLevel::Unknown,
+                        effort: MigrationEffort::Unknown,
+                        guidance: None,
                         note: Some("No compatibility mapping available.".to_string()),
                         tags: None,
+                        risk_tags: vec!["unmapped".to_string()],
                     },
                 );
             }
@@ -357,6 +549,7 @@ impl CompatibilityMatrix {
                     .unwrap_or(true),
             };
 
+            let entry = new_entry.or(old_entry);
             changes.push(DepChangeInfo {
                 package: name.to_string(),
                 old_version: old_dep.map(|d| d.version.clone()),
@@ -366,6 +559,9 @@ impl CompatibilityMatrix {
                 compatibility_now: new_entry.map(|e| e.compatibility),
                 equivalent: new_entry.and_then(|e| e.equivalent.clone()),
                 needs_review,
+                effort: entry.map(|e| e.effort).unwrap_or(MigrationEffort::Unknown),
+                guidance: entry.and_then(|e| e.guidance.clone()),
+                risk_tags: entry.map(|e| e.risk_tags.clone()).unwrap_or_default(),
             });
         }
 
@@ -417,7 +613,10 @@ struct CompatibilityOverrideFile {
 struct OverrideEntry {
     equivalent: Option<String>,
     compatibility: Option<String>,
+    effort: Option<String>,
+    guidance: Option<String>,
     note: Option<String>,
+    tags: Option<Vec<String>>,
 }
 
 fn parse_compatibility_str(s: &str) -> CompatibilityLevel {
@@ -508,8 +707,11 @@ mod tests {
             target_language: "rust".to_string(),
             equivalent: None,
             compatibility: CompatibilityLevel::Unknown,
+            effort: MigrationEffort::Unknown,
+            guidance: None,
             note: None,
             tags: None,
+            risk_tags: vec![],
         };
         // Serialize and deserialize preserves unknown
         let json = serde_json::to_string(&entry).unwrap();
@@ -620,6 +822,9 @@ mod tests {
             compatibility_now: Some(CompatibilityLevel::Partial),
             equivalent: Some("reqwest".to_string()),
             needs_review: true,
+            effort: MigrationEffort::Moderate,
+            guidance: Some("Replace axios calls with reqwest".to_string()),
+            risk_tags: vec!["http-client".to_string()],
         }];
 
         let mut package_modules = HashMap::new();

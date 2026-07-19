@@ -10,53 +10,53 @@
 # ============================================================================
 
 # ── Web Framework ──────────────────────────────────────────────────────────────
-"typescript->rust.express" = { equivalent = "axum", compatibility = "partial", note = "Middleware pattern differs; routing model is similar.", tags = ["http", "server", "framework"] }
+"typescript->rust.express" = { equivalent = "axum", compatibility = "partial", effort = "moderate", guidance = "Port route handlers to axum; replace Express middleware with tower layers. Async runtime (tokio) differs from Node's event loop.", tags = ["http", "server", "framework", "async"] }
 
-"typescript->rust.koa" = { equivalent = "axum", compatibility = "partial", note = "Koa's async middleware model maps well to axum's tower layer.", tags = ["http", "server", "framework"] }
+"typescript->rust.koa" = { equivalent = "axum", compatibility = "partial", effort = "moderate", guidance = "Koa's async middleware maps well to axum's tower layer; port ctx helpers to extractors.", tags = ["http", "server", "framework", "async"] }
 
-"typescript->rust.fastify" = { equivalent = "axum", compatibility = "partial", note = "Fastify plugin system differs; route handler patterns similar.", tags = ["http", "server", "framework"] }
+"typescript->rust.fastify" = { equivalent = "axum", compatibility = "partial", effort = "moderate", guidance = "Fastify plugin system has no 1:1 Rust equivalent; reimplement plugins as axum state/extensions.", tags = ["http", "server", "framework"] }
 
-"typescript->rust.next" = { compatibility = "none", note = "Next.js is a full React framework with no direct Rust equivalent. Consider using a separate Rust backend (axum/actix) + frontend framework.", tags = ["framework", "ssr", "fullstack"] }
+"typescript->rust.next" = { compatibility = "none", effort = "rewrite", guidance = "Next.js is a full React framework with no direct Rust equivalent. Use a separate Rust backend (axum/actix) and keep the frontend in a JS framework.", tags = ["framework", "ssr", "fullstack"] }
 
-"typescript->rust.nest" = { equivalent = "axum", compatibility = "partial", note = "NestJS decorator-based DI doesn't map directly; architecture patterns differ.", tags = ["http", "server", "framework", "di"] }
+"typescript->rust.nest" = { equivalent = "axum", compatibility = "partial", effort = "heavy", guidance = "NestJS decorator-based DI doesn't map directly; reimplement modules with axum Router + manual DI container.", tags = ["http", "server", "framework", "di"] }
 
-"typescript->rust.hono" = { equivalent = "axum", compatibility = "partial", note = "Hono's lightweight handler model maps well to axum's handler pattern.", tags = ["http", "server", "framework"] }
+"typescript->rust.hono" = { equivalent = "axum", compatibility = "partial", effort = "moderate", guidance = "Hono's lightweight handler model maps well to axum; port middleware to tower layers.", tags = ["http", "server", "framework", "async"] }
 
-"typescript->rust.socket.io" = { equivalent = "tungstenite", compatibility = "partial", note = "WebSocket concept equivalent; event-based API differs significantly.", tags = ["websocket", "realtime"] }
+"typescript->rust.socket.io" = { equivalent = "tungstenite", compatibility = "partial", effort = "heavy", guidance = "WebSocket concept equivalent; Socket.IO's event rooms API must be reimplemented on top of tungstenite.", tags = ["websocket", "realtime"] }
 
 # ── HTTP Client ────────────────────────────────────────────────────────────────
-"typescript->rust.axios" = { equivalent = "reqwest", compatibility = "partial", note = "Async API differs; error handling models differ.", tags = ["http", "network"] }
+"typescript->rust.axios" = { equivalent = "reqwest", compatibility = "partial", effort = "moderate", guidance = "Replace axios with reqwest::Client; port interceptors to reqwest middleware, and map Promise-based error handling to Result.", tags = ["http", "network", "async"] }
 
-"typescript->rust.got" = { equivalent = "reqwest", compatibility = "partial", note = "Both are HTTP clients; streaming and API patterns differ.", tags = ["http", "network"] }
+"typescript->rust.got" = { equivalent = "reqwest", compatibility = "partial", effort = "moderate", guidance = "Both are HTTP clients; streaming and retry APIs differ. Map to reqwest::Client with custom middleware.", tags = ["http", "network", "async"] }
 
-"typescript->rust.node-fetch" = { equivalent = "reqwest", compatibility = "partial", note = "Fetch API maps to reqwest; error handling model differs.", tags = ["http", "network"] }
+"typescript->rust.node-fetch" = { equivalent = "reqwest", compatibility = "partial", effort = "trivial", guidance = "Fetch API maps to reqwest::get; await/Response model becomes Result<Response>.", tags = ["http", "network", "async"] }
 
-"typescript->rust.undici" = { equivalent = "reqwest", compatibility = "partial", note = "Low-level HTTP client; reqwest higher-level but functionally covers.", tags = ["http", "network"] }
+"typescript->rust.undici" = { equivalent = "reqwest", compatibility = "partial", effort = "moderate", guidance = "Low-level HTTP client; reqwest is higher-level but covers most use cases.", tags = ["http", "network", "async"] }
 
 # ── Date & Time ───────────────────────────────────────────────────────────────
-"typescript->rust.date-fns" = { equivalent = "chrono", compatibility = "partial", note = "Most date operations map; timezone handling differs.", tags = ["date", "time"] }
+"typescript->rust.date-fns" = { equivalent = "chrono", compatibility = "partial", effort = "moderate", guidance = "Most date operations map to chrono; timezone handling uses chrono-tz.", tags = ["date", "time"] }
 
-"typescript->rust.moment" = { equivalent = "chrono", compatibility = "partial", note = "Use chrono for date/time operations.", tags = ["date", "time"] }
+"typescript->rust.moment" = { equivalent = "chrono", compatibility = "partial", effort = "moderate", guidance = "Use chrono for date/time operations; mutable Moment API becomes immutable chrono types.", tags = ["date", "time"] }
 
-"typescript->rust.dayjs" = { equivalent = "chrono", compatibility = "partial", note = "Lightweight date library; chrono provides equivalent functionality.", tags = ["date", "time"] }
+"typescript->rust.dayjs" = { equivalent = "chrono", compatibility = "partial", effort = "moderate", guidance = "Lightweight date library; chrono provides equivalent functionality.", tags = ["date", "time"] }
 
-"typescript->rust.luxon" = { equivalent = "chrono", compatibility = "partial", note = "DateTime and Duration concepts map well to chrono.", tags = ["date", "time"] }
+"typescript->rust.luxon" = { equivalent = "chrono", compatibility = "partial", effort = "moderate", guidance = "DateTime and Duration concepts map well to chrono.", tags = ["date", "time"] }
 
 # ── Validation ─────────────────────────────────────────────────────────────────
-"typescript->rust.joi" = { equivalent = "validator", compatibility = "partial", note = "Validation concept similar; API design differs.", tags = ["validation"] }
+"typescript->rust.joi" = { equivalent = "validator", compatibility = "partial", effort = "moderate", guidance = "Validation concept similar; API design differs. Map schemas to validator crate builders.", tags = ["validation"] }
 
-"typescript->rust.zod" = { equivalent = "validator", compatibility = "partial", note = "Schema validation concept equivalent; API differs significantly.", tags = ["validation", "schema"] }
+"typescript->rust.zod" = { equivalent = "validator", compatibility = "partial", effort = "moderate", guidance = "Schema validation concept equivalent; API differs significantly. Consider typed-validator or manual struct validators.", tags = ["validation", "schema"] }
 
-"typescript->rust.yup" = { equivalent = "validator", compatibility = "partial", note = "Schema validation similar to zod/joi; maps to validator.", tags = ["validation", "schema"] }
+"typescript->rust.yup" = { equivalent = "validator", compatibility = "partial", effort = "moderate", guidance = "Schema validation similar to zod/joi; maps to validator.", tags = ["validation", "schema"] }
 
-"typescript->rust.ajv" = { equivalent = "jsonschema", compatibility = "partial", note = "JSON Schema validation; rs-json-schema provides similar functionality.", tags = ["validation", "schema", "json"] }
+"typescript->rust.ajv" = { equivalent = "jsonschema", compatibility = "partial", effort = "moderate", guidance = "JSON Schema validation; jsonschema crate provides similar functionality.", tags = ["validation", "schema", "json"] }
 
-"typescript->rust.class-validator" = { equivalent = "validator", compatibility = "partial", note = "Decorator-based validation in TypeScript; struct validation in Rust.", tags = ["validation", "decorator"] }
+"typescript->rust.class-validator" = { equivalent = "validator", compatibility = "partial", effort = "moderate", guidance = "Decorator-based validation in TypeScript; struct validation in Rust.", tags = ["validation", "decorator"] }
 
 # ── Serialization ──────────────────────────────────────────────────────────────
-"typescript->rust.class-transformer" = { equivalent = "serde", compatibility = "partial", note = "Object serialization/deserialization; serde is more type-system oriented.", tags = ["serialization", "transformer"] }
+"typescript->rust.class-transformer" = { equivalent = "serde", compatibility = "partial", effort = "trivial", guidance = "Object (de)serialization maps directly to serde derive macros.", tags = ["serialization", "transformer"] }
 
-"typescript->rust.protobuf" = { equivalent = "prost", compatibility = "full", note = "Protocol Buffers support; prost is the standard Rust implementation.", tags = ["serialization", "protobuf", "grpc"] }
+"typescript->rust.protobuf" = { equivalent = "prost", compatibility = "full", effort = "trivial", guidance = "Protocol Buffers support; prost is the standard Rust implementation.", tags = ["serialization", "protobuf", "grpc"] }
 
 "typescript->rust.grpc" = { equivalent = "tonic", compatibility = "partial", note = "gRPC framework; tonic provides similar server/client model.", tags = ["rpc", "grpc", "network"] }
 

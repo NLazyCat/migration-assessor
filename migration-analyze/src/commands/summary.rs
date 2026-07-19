@@ -82,7 +82,7 @@ fn collect_symbols(ctx: &ProjectContext) -> Vec<(String, Value)> {
         if path.is_empty() {
             continue;
         }
-        if let Some(val) = ctx.load_json::<Value>(path).ok() {
+        if let Ok(val) = ctx.load_json::<Value>(path) {
             results.push((module.clone(), val));
         }
     }

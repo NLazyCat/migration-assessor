@@ -2,6 +2,7 @@ pub mod compatibility;
 pub mod config;
 pub mod deps;
 pub mod discovery;
+pub mod recommendation;
 pub mod error;
 pub mod graph;
 pub mod output;

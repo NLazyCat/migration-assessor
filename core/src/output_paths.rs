@@ -8,6 +8,7 @@ pub const INDEX_HTML: &str = "index.html";
 pub mod external {
     pub const PACKAGES: &str = "external/packages.json";
     pub const COMPATIBILITY: &str = "external/compatibility.json";
+    pub const RECOMMENDATIONS: &str = "external/recommendations.json";
 }
 
 pub mod graph {
