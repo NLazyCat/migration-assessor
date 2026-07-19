@@ -1,8 +1,11 @@
 use clap::Args;
+use migration_core::graph::Node;
+use migration_core::output_paths;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
-use std::path::{Path, PathBuf};
+use std::path::Path;
 
+use crate::commands::context::ProjectContext;
 use crate::commands::resolve_project_path;
 
 #[derive(Args)]
@@ -59,7 +62,7 @@ struct BoundariesReport {
 #[derive(Debug, Deserialize, Default)]
 struct DagNode {
     #[serde(default)]
-    nodes: Vec<String>,
+    nodes: Vec<Node>,
     #[serde(default)]
     edges: Vec<DagEdge>,
 }
@@ -74,6 +77,7 @@ struct DagEdge {
 struct ScoreEntry {
     module: String,
     score: f64,
+    #[allow(dead_code)]
     rank: u32,
     #[serde(default)]
     in_degree: u32,
@@ -88,6 +92,7 @@ struct ApiContractModule {
 #[derive(Debug, Deserialize)]
 struct ApiExport {
     name: String,
+    #[allow(dead_code)]
     kind: String,
 }
 
@@ -103,6 +108,7 @@ type ReverseIndex = HashMap<String, Vec<ReverseRef>>;
 
 #[derive(Debug, Deserialize)]
 struct ReverseRef {
+    #[allow(dead_code)]
     symbol: String,
     #[serde(default)]
     location: Option<ReverseLocation>,
@@ -124,8 +130,8 @@ pub fn run(args: &BoundariesArgs) -> anyhow::Result<()> {
         );
     }
 
-    let migration_dir = detect_migration_folder(&project_root)?;
-    let report_dir = migration_dir.join("report");
+    let ctx = ProjectContext::load(&project_root)?;
+    let report_dir = ctx.report_dir.clone();
 
     if !report_dir.exists() {
         anyhow::bail!(
@@ -135,11 +141,14 @@ pub fn run(args: &BoundariesArgs) -> anyhow::Result<()> {
     }
 
     // Load all report data
-    let meta: ProjectMeta = read_json_or_default(&report_dir.join("project.json"));
-    let dag: DagNode = read_json_or_default(&report_dir.join("internal-deps/dag.json"));
-    let scores: Vec<ScoreEntry> = read_json_or_default(&report_dir.join("scores.json"));
-    let reverse_index: ReverseIndex =
-        read_json_or_default(&report_dir.join("references/reverse.json"));
+    let meta: ProjectMeta = read_json_or_default(&ctx.report_path(output_paths::PROJECT));
+    let dag: DagNode = ctx
+        .dag()
+        .ok()
+        .and_then(|v| serde_json::from_value(v).ok())
+        .unwrap_or_default();
+    let scores: Vec<ScoreEntry> = read_json_or_default(&ctx.report_path(output_paths::SCORES));
+    let reverse_index: ReverseIndex = ctx.load_reverse_index().unwrap_or_default();
     let api_contracts = load_all_api_contracts(&report_dir)?;
 
     let layer_map = compute_layers(&dag);
@@ -157,9 +166,22 @@ pub fn run(args: &BoundariesArgs) -> anyhow::Result<()> {
 
     // Output
     if args.format == "json" || args.format == "all" {
-        let out_path = report_dir.join("interface-boundaries.json");
-        std::fs::write(&out_path, serde_json::to_string_pretty(&report)?)?;
-        println!("  Interface boundaries: {}", out_path.display());
+        let layers_report = serde_json::json!({
+            "generated_at": report.generated_at,
+            "source_language": report.source_language,
+            "target_language": report.target_language,
+            "total_layers": report.total_layers,
+            "layers": report.layers,
+        });
+        let uncut_report = serde_json::json!({
+            "generated_at": report.generated_at,
+            "uncut_surface": report.uncut_surface,
+        });
+        let layers_path = report_dir.join(output_paths::boundaries::LAYERS);
+        let uncut_path = report_dir.join(output_paths::boundaries::UNCUT_SURFACES);
+        std::fs::write(&layers_path, serde_json::to_string_pretty(&layers_report)?)?;
+        std::fs::write(&uncut_path, serde_json::to_string_pretty(&uncut_report)?)?;
+        println!("  Interface boundaries: {}", layers_path.display());
     }
 
     if args.format == "text" || args.format == "all" {
@@ -190,8 +212,8 @@ fn compute_layers(dag: &DagNode) -> HashMap<String, usize> {
     let mut out_edges: HashMap<String, Vec<String>> = HashMap::new();
 
     for node in &dag.nodes {
-        predecessors.entry(node.clone()).or_default();
-        out_edges.entry(node.clone()).or_default();
+        predecessors.entry(node.id.clone()).or_default();
+        out_edges.entry(node.id.clone()).or_default();
     }
 
     for edge in &dag.edges {
@@ -242,7 +264,7 @@ fn compute_layers(dag: &DagNode) -> HashMap<String, usize> {
     }
 
     for node in &dag.nodes {
-        dfs(node, &predecessors, &mut depth, &mut visiting);
+        dfs(&node.id, &predecessors, &mut depth, &mut visiting);
     }
 
     // Invert: deepest → layer 0
@@ -289,11 +311,10 @@ fn build_layer_groups(
                 continue;
             }
 
-            let (public_syms, internal_syms) =
-                match contract_map.get(module.as_str()) {
-                    Some(c) => classify_exports(&c.exports, module, reverse_index),
-                    None => (vec![], vec![]),
-                };
+            let (public_syms, internal_syms) = match contract_map.get(module.as_str()) {
+                Some(c) => classify_exports(&c.exports, module, reverse_index),
+                None => (vec![], vec![]),
+            };
 
             modules.push(LayerModule {
                 module: module.clone(),
@@ -302,14 +323,11 @@ fn build_layer_groups(
                 out_degree: out_degree.get(module.as_str()).copied().unwrap_or(0),
                 public_symbols: public_syms,
                 internal_symbols: internal_syms,
-                score: score_val_map
-                    .get(module.as_str())
-                    .copied()
-                    .unwrap_or(0.0),
+                score: score_val_map.get(module.as_str()).copied().unwrap_or(0.0),
             });
         }
 
-        modules.sort_by(|a, b| b.in_degree.cmp(&a.in_degree));
+        modules.sort_by_key(|b| std::cmp::Reverse(b.in_degree));
         let total_public: usize = modules.iter().map(|m| m.public_symbols.len()).sum();
 
         let description = match level {
@@ -344,7 +362,7 @@ fn classify_exports(
             .get(&symbol_key)
             .map(|refs| {
                 refs.iter()
-                    .any(|r| r.location.as_ref().map_or(false, |loc| loc.file != module))
+                    .any(|r| r.location.as_ref().is_some_and(|loc| loc.file != module))
             })
             .unwrap_or(false);
 
@@ -527,29 +545,11 @@ fn print_text_report(report: &BoundariesReport) {
 
 // ── Helpers ─────────────────────────────────────────────────────────────
 
-fn detect_migration_folder(project_root: &Path) -> anyhow::Result<PathBuf> {
-    for entry in std::fs::read_dir(project_root)? {
-        let entry = entry?;
-        let path = entry.path();
-        if !path.is_dir() {
-            continue;
-        }
-        let name = path.file_name().and_then(|n| n.to_str()).unwrap_or("");
-        if name.ends_with("-migration") && path.join("report").exists() {
-            return Ok(path);
-        }
-    }
-    anyhow::bail!(
-        "No migration folder (*-migration/) found in {}",
-        project_root.display()
-    )
-}
-
 fn load_all_api_contracts(report_dir: &Path) -> anyhow::Result<Vec<ApiContractModule>> {
-    let contracts_dir = report_dir.join("api-contracts").join("by-dir");
+    let symbols_dir = report_dir.join("symbols");
     let mut contracts = Vec::new();
 
-    if !contracts_dir.exists() {
+    if !symbols_dir.exists() {
         return Ok(contracts);
     }
 
@@ -559,18 +559,17 @@ fn load_all_api_contracts(report_dir: &Path) -> anyhow::Result<Vec<ApiContractMo
                 let path = entry.path();
                 if path.is_dir() {
                     visit(&path, contracts);
-                } else if path.extension().and_then(|e| e.to_str()) == Some("json") {
-                    if let Ok(content) = std::fs::read_to_string(&path) {
-                        if let Ok(c) = serde_json::from_str::<ApiContractModule>(&content) {
-                            contracts.push(c);
-                        }
-                    }
+                } else if path.file_name().and_then(|n| n.to_str()) == Some("api.json")
+                    && let Ok(content) = std::fs::read_to_string(&path)
+                    && let Ok(c) = serde_json::from_str::<ApiContractModule>(&content)
+                {
+                    contracts.push(c);
                 }
             }
         }
     }
 
-    visit(&contracts_dir, &mut contracts);
+    visit(&symbols_dir, &mut contracts);
     Ok(contracts)
 }
 

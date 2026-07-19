@@ -1,10 +1,11 @@
 use axum::Router;
 use clap::Args;
 use std::net::SocketAddr;
-use std::path::PathBuf;
+
 use std::sync::Arc;
 use tower_http::services::ServeDir;
 
+use crate::commands::context::ProjectContext;
 use crate::commands::resolve_project_path;
 use crate::web;
 
@@ -26,17 +27,16 @@ pub struct ServeArgs {
 pub async fn run(args: &ServeArgs) -> anyhow::Result<()> {
     let project_root = resolve_project_path(&args.path);
 
-    let migration_dir = detect_migration_folder(&project_root)?;
-    let report_dir = migration_dir.join("report");
+    let ctx = ProjectContext::load(&project_root)?;
 
-    if !report_dir.exists() {
+    if !ctx.report_dir.exists() {
         anyhow::bail!(
             "Report directory not found at {}. Run 'migration-analyze analyze' first.",
-            report_dir.display()
+            ctx.report_dir.display()
         );
     }
 
-    let state = web::routes::AppState { report_dir };
+    let state = web::routes::AppState { ctx: Arc::new(ctx) };
 
     let state = Arc::new(state);
 
@@ -48,17 +48,32 @@ pub async fn run(args: &ServeArgs) -> anyhow::Result<()> {
         .route("/deps", axum::routing::get(web::routes::page_deps))
         .route("/scores", axum::routing::get(web::routes::page_scores))
         .route("/graph", axum::routing::get(web::routes::page_graph))
-        .route("/report-ref", axum::routing::get(web::routes::page_report_ref))
+        .route(
+            "/report-ref",
+            axum::routing::get(web::routes::page_report_ref),
+        )
         .route("/api/project", axum::routing::get(web::routes::api_project))
         .route("/api/files", axum::routing::get(web::routes::api_files))
         .route("/api/deps", axum::routing::get(web::routes::api_deps))
         .route("/api/compat", axum::routing::get(web::routes::api_compat))
         .route("/api/graph", axum::routing::get(web::routes::api_graph))
         .route("/api/scores", axum::routing::get(web::routes::api_scores))
-        .route("/api/references", axum::routing::get(web::routes::api_references))
-        .route("/api/references/*file", axum::routing::get(web::routes::api_file_references))
-        .route("/boundaries", axum::routing::get(web::routes::page_boundaries))
-        .route("/api/boundaries", axum::routing::get(web::routes::api_boundaries))
+        .route(
+            "/api/references",
+            axum::routing::get(web::routes::api_references),
+        )
+        .route(
+            "/api/references/*file",
+            axum::routing::get(web::routes::api_file_references),
+        )
+        .route(
+            "/boundaries",
+            axum::routing::get(web::routes::page_boundaries),
+        )
+        .route(
+            "/api/boundaries",
+            axum::routing::get(web::routes::api_boundaries),
+        )
         .with_state(state);
 
     let addr = SocketAddr::from(([0, 0, 0, 0], args.port));
@@ -73,23 +88,4 @@ pub async fn run(args: &ServeArgs) -> anyhow::Result<()> {
     axum::serve(listener, app).await?;
 
     Ok(())
-}
-
-fn detect_migration_folder(project_root: &std::path::Path) -> anyhow::Result<PathBuf> {
-    if let Ok(entries) = std::fs::read_dir(project_root) {
-        for entry in entries.flatten() {
-            let path = entry.path();
-            if !path.is_dir() {
-                continue;
-            }
-            let name = path.file_name().and_then(|n| n.to_str()).unwrap_or("");
-            if name.ends_with("-migration") && path.join("report").exists() {
-                return Ok(path);
-            }
-        }
-    }
-    anyhow::bail!(
-        "No migration folder (*-migration/) found in {}. Run 'migration-analyze analyze' first.",
-        project_root.display()
-    );
 }

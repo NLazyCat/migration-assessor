@@ -1,5 +1,6 @@
 pub mod analyze;
 pub mod boundaries;
+pub mod context;
 pub mod diff;
 pub mod init;
 pub mod serve;
@@ -40,5 +41,3 @@ fn normalize_path_components(path: &std::path::Path) -> PathBuf {
     }
     result
 }
-
-

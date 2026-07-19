@@ -1,8 +1,10 @@
 use clap::Args;
+use migration_core::output_paths;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::path::{Path, PathBuf};
 
+use crate::commands::context::ProjectContext;
 use crate::commands::resolve_project_path;
 
 /// ── CLI args ──────────────────────────────────────────────────────────────
@@ -125,45 +127,55 @@ struct DiffLine {
 }
 
 /// ── Main entry ────────────────────────────────────────────────────────────
-
 pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     let project_root = resolve_project_path(&args.path);
     let config_path = project_root.join("migration.toml");
 
     if !config_path.exists() {
-        anyhow::bail!("migration.toml not found in {}. Run 'migration-analyze init' first.", project_root.display());
+        anyhow::bail!(
+            "migration.toml not found in {}. Run 'migration-analyze init' first.",
+            project_root.display()
+        );
     }
 
-    let config = migration_core::config::Config::load(&config_path)?;
+    let ctx = ProjectContext::load(&project_root)?;
+    let config = &ctx.config;
 
     // Detect migration folder: find <repo>-migration/ in project root
-    let migration_dir = detect_migration_folder(&project_root)?;
-    let report_dir = migration_dir.join("report");
+    let migration_dir = ctx.migration_folder.clone();
+    let report_dir = ctx.report_dir.clone();
 
     if !report_dir.exists() {
-        anyhow::bail!("Report folder not found at {}. Run 'migration-analyze analyze' first.", report_dir.display());
+        anyhow::bail!(
+            "Report folder not found at {}. Run 'migration-analyze analyze' first.",
+            report_dir.display()
+        );
     }
 
     let source_repo = config.project.source_repo.clone();
     let from_version = config.project.source_version.clone();
     // Determine target version
     let new_version = if args.auto {
-        let repo = source_repo.as_deref().ok_or_else(|| {
-            anyhow::anyhow!("--auto requires source_repo in migration.toml")
-        })?;
+        let repo = source_repo
+            .as_deref()
+            .ok_or_else(|| anyhow::anyhow!("--auto requires source_repo in migration.toml"))?;
         let latest = fetch_latest_version(repo)?;
         println!("  Auto-detected latest version: {}", latest);
         latest
     } else {
-        args.new_version.clone().ok_or_else(|| {
-            anyhow::anyhow!("Either --new-version or --auto is required")
-        })?
+        args.new_version
+            .clone()
+            .ok_or_else(|| anyhow::anyhow!("Either --new-version or --auto is required"))?
     };
     let source_path = config.project.source.clone();
 
     println!("Running incremental diff analysis...");
-    if let Some(r) = &source_repo { println!("  Source repo: {}", r); }
-    if let Some(f) = &from_version { println!("  From: {}", f); }
+    if let Some(r) = &source_repo {
+        println!("  Source repo: {}", r);
+    }
+    if let Some(f) = &from_version {
+        println!("  From: {}", f);
+    }
     println!("  To:   {}", new_version);
 
     // Step 1: Fetch the raw diff
@@ -193,8 +205,8 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     }
 
     // Step 3: Load symbol indexes and reverse index from report
-    let symbols_dir = report_dir.join("symbols").join("by-dir");
-    let reverse_index = load_reverse_index(&report_dir);
+    let symbols_dir = ctx.report_path("symbols");
+    let reverse_index = load_reverse_index(&ctx);
 
     // Step 4: Analyze each file for symbol changes with full body extraction
     let diff_dir = migration_dir.join("diffs");
@@ -217,31 +229,26 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
 
         // Get symbol changes with full body extraction
         let symbol_index = load_symbol_index(file_path, &symbols_dir);
-        let file_changes = analyze_file_changes(
-            status,
-            file_path,
-            diff_lines,
-            &new_content,
-            &symbol_index,
-        );
+        let file_changes =
+            analyze_file_changes(status, file_path, diff_lines, &new_content, &symbol_index);
 
-        if let Some(mut fc) = file_changes {
-            if !fc.changes.is_empty() {
-                // Write aggregated change file
-                let changed_path = changed_dir.join(file_path);
-                if let Some(parent) = changed_path.parent() {
-                    std::fs::create_dir_all(parent)?;
-                }
-                let change_content = serde_json::to_string_pretty(&fc.changes)?;
-                std::fs::write(&changed_path, change_content)?;
-
-                fc.source_attached = true;
-                for ch in &fc.changes {
-                    let symbol_id = format!("{}:{}", file_path, ch.symbol);
-                    all_triggered_symbols.push(symbol_id);
-                }
-                all_file_changes.push(fc);
+        if let Some(mut fc) = file_changes
+            && !fc.changes.is_empty()
+        {
+            // Write aggregated change file
+            let changed_path = changed_dir.join(file_path);
+            if let Some(parent) = changed_path.parent() {
+                std::fs::create_dir_all(parent)?;
             }
+            let change_content = serde_json::to_string_pretty(&fc.changes)?;
+            std::fs::write(&changed_path, change_content)?;
+
+            fc.source_attached = true;
+            for ch in &fc.changes {
+                let symbol_id = format!("{}:{}", file_path, ch.symbol);
+                all_triggered_symbols.push(symbol_id);
+            }
+            all_file_changes.push(fc);
         }
     }
 
@@ -260,8 +267,14 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     };
 
     let timestamp = chrono::Utc::now().format("%Y-%m-%d");
-    let report_path = diff_dir.join(format!("diff-{}.json", timestamp));
-    std::fs::write(&report_path, serde_json::to_string_pretty(&report)?)?;
+    let dated_name = format!("diff-{}.json", timestamp);
+    let report_path = diff_dir.join(&dated_name);
+    let report_json = serde_json::to_string_pretty(&report)?;
+    std::fs::write(&report_path, &report_json)?;
+
+    // Keep a stable "latest" copy for consumers.
+    let latest_path = diff_dir.join(output_paths::diffs::LATEST.trim_start_matches("diffs/"));
+    std::fs::write(&latest_path, report_json)?;
 
     // Write affected files summary
     let affected_path = diff_dir.join("affected-files.json");
@@ -270,29 +283,25 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         "affected_files": report.propagation.affected_files,
         "total_affected": report.propagation.affected_files.len(),
     });
-    std::fs::write(&affected_path, serde_json::to_string_pretty(&affected_summary)?)?;
+    std::fs::write(
+        &affected_path,
+        serde_json::to_string_pretty(&affected_summary)?,
+    )?;
 
-    println!("  Affected files: {}", report.propagation.affected_files.len());
+    println!(
+        "  Affected files: {}",
+        report.propagation.affected_files.len()
+    );
 
     Ok(())
 }
 
 /// ── Step 3 helper: Load reverse index ─────────────────────────────────────
-
-fn load_reverse_index(migration_dir: &Path) -> ReverseIndex {
-    let path = migration_dir.join("references").join("reverse.json");
-    if path.exists() {
-        std::fs::read_to_string(&path)
-            .ok()
-            .and_then(|s| serde_json::from_str(&s).ok())
-            .unwrap_or_default()
-    } else {
-        HashMap::new()
-    }
+fn load_reverse_index(ctx: &ProjectContext) -> ReverseIndex {
+    ctx.load_reverse_index().unwrap_or_default()
 }
 
 /// ── Analyze changes for one file ──────────────────────────────────────────
-
 fn analyze_file_changes(
     status: &str,
     file_path: &str,
@@ -300,10 +309,7 @@ fn analyze_file_changes(
     new_content: &Option<String>,
     symbol_index: &Option<SymbolIndexFile>,
 ) -> Option<FileChangeGroup> {
-    let index = match symbol_index {
-        Some(i) => i,
-        None => return None,
-    };
+    let index = symbol_index.as_ref()?;
 
     let all_symbols = flatten_symbols(&index.symbols);
     if all_symbols.is_empty() {
@@ -313,16 +319,18 @@ fn analyze_file_changes(
     // Build old-line-number to symbol mapping
     let line_to_symbol: HashMap<usize, &StoredSymbol> = all_symbols
         .iter()
-        .flat_map(|sym| {
-            (sym.line_range[0]..=sym.line_range[1]).map(move |l| (l, sym))
-        })
+        .flat_map(|sym| (sym.line_range[0]..=sym.line_range[1]).map(move |l| (l, sym)))
         .collect();
 
     // Find changed symbol names by tracking old line numbers through diff
     let mut changed_names: Vec<String> = Vec::new();
     let mut old_lineno: usize = 1;
     let mut inside_symbol: Option<String> = None;
-    let max_old_line = all_symbols.iter().map(|s| s.line_range[1]).max().unwrap_or(0);
+    let max_old_line = all_symbols
+        .iter()
+        .map(|s| s.line_range[1])
+        .max()
+        .unwrap_or(0);
 
     for dl in diff_lines {
         match dl.kind {
@@ -331,23 +339,23 @@ fn analyze_file_changes(
                 inside_symbol = line_to_symbol.get(&old_lineno).map(|s| s.name.clone());
             }
             ' ' | '-' => {
-                if dl.kind == '-' {
-                    if let Some(sym) = line_to_symbol.get(&old_lineno) {
-                        if !changed_names.contains(&sym.name) {
-                            changed_names.push(sym.name.clone());
-                        }
-                    }
+                if dl.kind == '-'
+                    && let Some(sym) = line_to_symbol.get(&old_lineno)
+                    && !changed_names.contains(&sym.name)
+                {
+                    changed_names.push(sym.name.clone());
                 }
                 inside_symbol = line_to_symbol.get(&old_lineno).map(|s| s.name.clone());
                 old_lineno += 1;
             }
             '+' => {
-                if let Some(ref sym_name) = inside_symbol {
-                    if let Some(sym) = all_symbols.iter().find(|s| s.name == *sym_name) {
-                        if !changed_names.contains(sym_name) && old_lineno <= max_old_line && old_lineno <= sym.line_range[1] {
-                            changed_names.push(sym_name.clone());
-                        }
-                    }
+                if let Some(ref sym_name) = inside_symbol
+                    && let Some(sym) = all_symbols.iter().find(|s| s.name == *sym_name)
+                    && !changed_names.contains(sym_name)
+                    && old_lineno <= max_old_line
+                    && old_lineno <= sym.line_range[1]
+                {
+                    changed_names.push(sym_name.clone());
                 }
             }
             _ => {}
@@ -371,14 +379,20 @@ fn analyze_file_changes(
 
     for sym_name in &changed_names {
         let orig = all_symbols.iter().find(|s| s.name == *sym_name)?;
-        let stable_change_type = if status == "A" { "added" } else if status == "D" { "removed" } else { "modified" };
+        let stable_change_type = if status == "A" {
+            "added"
+        } else if status == "D" {
+            "removed"
+        } else {
+            "modified"
+        };
 
         let full_body = match status {
             "D" => String::new(),
             _ => extract_full_body(sym_name, &orig.kind, new_content.as_deref().unwrap_or("")),
         };
 
-        let position = compute_relative_position(sym_name, &ordered_names, &index);
+        let position = compute_relative_position(sym_name, &ordered_names, index);
 
         changes.push(SymbolChangeDetail {
             symbol: sym_name.clone(),
@@ -401,7 +415,6 @@ fn analyze_file_changes(
 }
 
 /// ── Full body extraction ──────────────────────────────────────────────────
-
 fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
     // Determine the declaration keyword(s) for the given kind
     let keywords: &[&str] = match kind {
@@ -420,11 +433,15 @@ fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
     // Find the start of the symbol definition
     let mut start_pos = None;
     for &kw in keywords {
-        let search: Vec<usize> = source.match_indices(kw)
+        let search: Vec<usize> = source
+            .match_indices(kw)
             .filter_map(|(pos, _)| {
                 let after_kw = &source[pos + kw.len()..];
                 // Check if symbol name follows the keyword
-                after_kw.trim_start().starts_with(symbol_name).then_some(pos)
+                after_kw
+                    .trim_start()
+                    .starts_with(symbol_name)
+                    .then_some(pos)
             })
             .collect();
 
@@ -436,7 +453,8 @@ fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
 
     // Fallback: search for symbol name directly (arrow functions, exports)
     if start_pos.is_none() {
-        start_pos = source.find(&format!("{} ", symbol_name))
+        start_pos = source
+            .find(&format!("{} ", symbol_name))
             .or_else(|| source.find(&format!("{}({}", symbol_name, symbol_name)))
             .or_else(|| source.find(&format!("{}.{}", symbol_name, symbol_name)));
     }
@@ -469,7 +487,9 @@ fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
         None => {
             // No braces: type alias, const, etc. — find end of line
             let rest = &source[start..];
-            rest.find('\n').map(|n| start + n + 1).unwrap_or(source.len())
+            rest.find('\n')
+                .map(|n| start + n + 1)
+                .unwrap_or(source.len())
         }
     };
 
@@ -486,28 +506,51 @@ fn find_matching_brace(text: &str) -> Option<usize> {
 
     for (i, ch) in text.char_indices() {
         if in_line_comment {
-            if ch == '\n' { in_line_comment = false; }
+            if ch == '\n' {
+                in_line_comment = false;
+            }
             continue;
         }
         if in_block_comment {
-            if ch == '*' && text[i+1..].starts_with('/') { in_block_comment = false; }
+            if ch == '*' && text[i + 1..].starts_with('/') {
+                in_block_comment = false;
+            }
             continue;
         }
         if in_string {
-            if escaped { escaped = false; continue; }
-            if ch == '\\' { escaped = true; continue; }
-            if ch == string_char { in_string = false; }
+            if escaped {
+                escaped = false;
+                continue;
+            }
+            if ch == '\\' {
+                escaped = true;
+                continue;
+            }
+            if ch == string_char {
+                in_string = false;
+            }
             continue;
         }
         match ch {
-            '/' if text[i+1..].starts_with('/') => { in_line_comment = true; }
-            '/' if text[i+1..].starts_with('*') => { in_block_comment = true; }
-            '"' | '\'' | '`' => { in_string = true; string_char = ch; }
+            '/' if text[i + 1..].starts_with('/') => {
+                in_line_comment = true;
+            }
+            '/' if text[i + 1..].starts_with('*') => {
+                in_block_comment = true;
+            }
+            '"' | '\'' | '`' => {
+                in_string = true;
+                string_char = ch;
+            }
             '{' => depth += 1,
             '}' => {
-                if depth == 0 { return None; }
+                if depth == 0 {
+                    return None;
+                }
                 depth -= 1;
-                if depth == 0 { return Some(i + 1); }
+                if depth == 0 {
+                    return Some(i + 1);
+                }
             }
             _ => {}
         }
@@ -516,7 +559,6 @@ fn find_matching_brace(text: &str) -> Option<usize> {
 }
 
 /// ── Relative position computation ─────────────────────────────────────────
-
 fn compute_relative_position(
     symbol_name: &str,
     ordered_names: &[&str],
@@ -528,10 +570,18 @@ fn compute_relative_position(
     // Find adjacent siblings from the ordered flat list
     let pos = ordered_names.iter().position(|n| *n == symbol_name);
     let above = pos.and_then(|p| {
-        if p > 0 { Some(ordered_names[p - 1].to_string()) } else { None }
+        if p > 0 {
+            Some(ordered_names[p - 1].to_string())
+        } else {
+            None
+        }
     });
     let below = pos.and_then(|p| {
-        if p + 1 < ordered_names.len() { Some(ordered_names[p + 1].to_string()) } else { None }
+        if p + 1 < ordered_names.len() {
+            Some(ordered_names[p + 1].to_string())
+        } else {
+            None
+        }
     });
 
     RelativePosition {
@@ -548,7 +598,9 @@ fn find_parent(name: &str, symbols: &[StoredSymbol]) -> Option<String> {
                 return Some(format!("{} {}", sym.kind, sym.name));
             }
             // Check deeper nesting
-            if let Some(grandparent) = find_parent_recursive(name, &sym.children, &sym.name, &sym.kind) {
+            if let Some(grandparent) =
+                find_parent_recursive(name, &sym.children, &sym.name, &sym.kind)
+            {
                 return Some(grandparent);
             }
         }
@@ -566,17 +618,17 @@ fn find_parent_recursive(
         if child.name == name {
             return Some(format!("{} {}", parent_kind, parent_name));
         }
-        if !child.children.is_empty() {
-            if let Some(result) = find_parent_recursive(name, &child.children, &child.name, &child.kind) {
-                return Some(result);
-            }
+        if !child.children.is_empty()
+            && let Some(result) =
+                find_parent_recursive(name, &child.children, &child.name, &child.kind)
+        {
+            return Some(result);
         }
     }
     None
 }
 
 /// ── Propagation analysis ──────────────────────────────────────────────────
-
 fn propagate_changes(
     triggered_symbols: &[String],
     reverse_index: &ReverseIndex,
@@ -602,7 +654,7 @@ fn propagate_changes(
                     queue.push_back(dependent_symbol.clone());
 
                     // Record the dependent's file
-                    if let Some(file) = dependent_symbol.rsplitn(2, ':').nth(1) {
+                    if let Some(file) = dependent_symbol.rsplit_once(':').map(|x| x.0) {
                         affected_files.insert(file.to_string());
                     }
 
@@ -628,10 +680,13 @@ fn propagate_changes(
 }
 
 /// ── Step 1: Fetch diff between old and new versions ───────────────────────
-
 fn resolve_source_path(src: &str, project_root: &Path) -> PathBuf {
     let p = Path::new(src);
-    if p.is_absolute() { p.to_path_buf() } else { project_root.join(p) }
+    if p.is_absolute() {
+        p.to_path_buf()
+    } else {
+        project_root.join(p)
+    }
 }
 
 fn fetch_diff(
@@ -652,18 +707,28 @@ fn fetch_diff(
                     return Ok(diff);
                 }
                 Err(e) => {
-                    eprintln!("  Local diff failed ({}), falling back to remote fetch...", e);
+                    eprintln!(
+                        "  Local diff failed ({}), falling back to remote fetch...",
+                        e
+                    );
                 }
             }
         }
     }
 
-    let repo = source_repo
-        .ok_or_else(|| anyhow::anyhow!("No source_repo in migration.toml and no local source found."))?;
-    let from = from_version
-        .ok_or_else(|| anyhow::anyhow!("No source_version in migration.toml. Cannot diff without a known base version."))?;
+    let repo = source_repo.ok_or_else(|| {
+        anyhow::anyhow!("No source_repo in migration.toml and no local source found.")
+    })?;
+    let from = from_version.ok_or_else(|| {
+        anyhow::anyhow!(
+            "No source_version in migration.toml. Cannot diff without a known base version."
+        )
+    })?;
 
-    println!("  Fetching diff from remote: {} {}..{}", repo, from, to_version);
+    println!(
+        "  Fetching diff from remote: {} {}..{}",
+        repo, from, to_version
+    );
     fetch_remote_diff(repo, from, to_version)
 }
 
@@ -686,13 +751,17 @@ fn fetch_latest_version(repo: &str) -> anyhow::Result<String> {
     let mut tags: Vec<String> = Vec::new();
     for line in &lines {
         let parts: Vec<&str> = line.split_whitespace().collect();
-        if parts.len() < 2 { continue; }
+        if parts.len() < 2 {
+            continue;
+        }
         let ref_str = parts[1];
 
         // Extract tag name from refs/tags/<name>
         if let Some(tag) = ref_str.strip_prefix("refs/tags/") {
             // Skip ^{} peeled tags
-            if tag.ends_with("^{}") { continue; }
+            if tag.ends_with("^{}") {
+                continue;
+            }
             tags.push(tag.to_string());
         }
     }
@@ -714,21 +783,31 @@ fn fetch_latest_version(repo: &str) -> anyhow::Result<String> {
     });
 
     // Return latest tag (last after ascending sort), or fallback to HEAD commit
-    let latest = tags.last().cloned().or_else(|| {
-        // Fallback: get HEAD commit hash
-        let head_output = std::process::Command::new("git")
-            .args(["ls-remote", repo, "HEAD"])
-            .output()
-            .ok()?;
-        if !head_output.status.success() { return None; }
-        let stdout = String::from_utf8_lossy(&head_output.stdout);
-        stdout.split_whitespace().next().map(|s| s.to_string())
-    }).ok_or_else(|| anyhow::anyhow!("No tags or refs found in remote {}", repo))?;
+    let latest = tags
+        .last()
+        .cloned()
+        .or_else(|| {
+            // Fallback: get HEAD commit hash
+            let head_output = std::process::Command::new("git")
+                .args(["ls-remote", repo, "HEAD"])
+                .output()
+                .ok()?;
+            if !head_output.status.success() {
+                return None;
+            }
+            let stdout = String::from_utf8_lossy(&head_output.stdout);
+            stdout.split_whitespace().next().map(|s| s.to_string())
+        })
+        .ok_or_else(|| anyhow::anyhow!("No tags or refs found in remote {}", repo))?;
 
     Ok(latest)
 }
 
-fn run_local_diff(src_path: &Path, from_version: Option<&str>, to_version: &str) -> anyhow::Result<String> {
+fn run_local_diff(
+    src_path: &Path,
+    from_version: Option<&str>,
+    to_version: &str,
+) -> anyhow::Result<String> {
     let from = from_version.unwrap_or("HEAD");
     let range = format!("{}..{}", from, to_version);
     let output = std::process::Command::new("git")
@@ -751,11 +830,17 @@ fn fetch_remote_diff(repo: &str, from: &str, to: &str) -> anyhow::Result<String>
 
 fn fetch_diff_internal(tmp_dir: &Path, repo: &str, from: &str, to: &str) -> anyhow::Result<String> {
     let init = std::process::Command::new("git")
-        .args(["init"]).current_dir(tmp_dir).output()?;
-    if !init.status.success() { anyhow::bail!("git init failed in temp dir"); }
+        .args(["init"])
+        .current_dir(tmp_dir)
+        .output()?;
+    if !init.status.success() {
+        anyhow::bail!("git init failed in temp dir");
+    }
 
     let add_remote = std::process::Command::new("git")
-        .args(["remote", "add", "origin", repo]).current_dir(tmp_dir).output()?;
+        .args(["remote", "add", "origin", repo])
+        .current_dir(tmp_dir)
+        .output()?;
     if !add_remote.status.success() {
         let stderr = String::from_utf8_lossy(&add_remote.stderr);
         anyhow::bail!("git remote add failed: {}", stderr);
@@ -764,12 +849,16 @@ fn fetch_diff_internal(tmp_dir: &Path, repo: &str, from: &str, to: &str) -> anyh
     // Fetch the branch that contains both commits (default: main)
     let branch = "main";
     let fetch = std::process::Command::new("git")
-        .args(["fetch", "origin", branch, "--depth", "10"]).current_dir(tmp_dir).output()?;
+        .args(["fetch", "origin", branch, "--depth", "10"])
+        .current_dir(tmp_dir)
+        .output()?;
     if !fetch.status.success() {
         let stderr = String::from_utf8_lossy(&fetch.stderr);
         // Try HEAD as fallback
         let fetch2 = std::process::Command::new("git")
-            .args(["fetch", "origin", "HEAD", "--depth", "10"]).current_dir(tmp_dir).output()?;
+            .args(["fetch", "origin", "HEAD", "--depth", "10"])
+            .current_dir(tmp_dir)
+            .output()?;
         if !fetch2.status.success() {
             let stderr2 = String::from_utf8_lossy(&fetch2.stderr);
             anyhow::bail!("git fetch failed: {} / {}", stderr, stderr2);
@@ -779,7 +868,9 @@ fn fetch_diff_internal(tmp_dir: &Path, repo: &str, from: &str, to: &str) -> anyh
     // Now both commits should be in the local history
     let range = format!("{}..{}", from, to);
     let diff = std::process::Command::new("git")
-        .args(["diff", "-U9999", &range]).current_dir(tmp_dir).output()?;
+        .args(["diff", "-U9999", &range])
+        .current_dir(tmp_dir)
+        .output()?;
     if !diff.status.success() {
         let stderr = String::from_utf8_lossy(&diff.stderr);
         anyhow::bail!("git diff failed: {}", stderr);
@@ -791,7 +882,7 @@ fn create_temp_dir() -> anyhow::Result<PathBuf> {
     let base = std::env::temp_dir().join("_mig_diff");
     let mut i = 0u64;
     loop {
-        let dir = base.join(&i.to_string());
+        let dir = base.join(i.to_string());
         if !dir.exists() {
             std::fs::create_dir_all(&dir)?;
             return Ok(dir);
@@ -801,7 +892,6 @@ fn create_temp_dir() -> anyhow::Result<PathBuf> {
 }
 
 /// ── Step 2: Parse raw unified diff into per-file sections ─────────────────
-
 fn parse_file_diffs(raw: &str) -> Vec<(String, String, Vec<DiffLine>)> {
     let lines: Vec<&str> = raw.lines().collect();
     let mut sections: Vec<Vec<&str>> = Vec::new();
@@ -813,7 +903,9 @@ fn parse_file_diffs(raw: &str) -> Vec<(String, String, Vec<DiffLine>)> {
         }
         current.push(line);
     }
-    if !current.is_empty() { sections.push(current); }
+    if !current.is_empty() {
+        sections.push(current);
+    }
 
     let mut results: Vec<(String, String, Vec<DiffLine>)> = Vec::new();
     for section in &sections {
@@ -844,30 +936,44 @@ fn parse_one_file_diff(lines: &[&str]) -> Option<(String, String, Vec<DiffLine>)
 
     let mut diff_lines: Vec<DiffLine> = Vec::new();
     for line in &lines[hunk_start..] {
-        if line.starts_with("diff --git") { break; }
+        if line.starts_with("diff --git") {
+            break;
+        }
         if let Some(hdr) = line.strip_prefix("@@") {
             // Parse old-file starting line number from @@ -M,N +P,Q @@
-            let old_start = hdr.split_whitespace().next().and_then(|s| {
-                let s = s.trim_start_matches('-');
-                s.split(',').next().and_then(|n| n.parse::<usize>().ok())
-            }).unwrap_or(1);
-            diff_lines.push(DiffLine { kind: '@', content: old_start.to_string() });
+            let old_start = hdr
+                .split_whitespace()
+                .next()
+                .and_then(|s| {
+                    let s = s.trim_start_matches('-');
+                    s.split(',').next().and_then(|n| n.parse::<usize>().ok())
+                })
+                .unwrap_or(1);
+            diff_lines.push(DiffLine {
+                kind: '@',
+                content: old_start.to_string(),
+            });
             continue;
         }
         if line.is_empty() {
-            diff_lines.push(DiffLine { kind: ' ', content: String::new() });
+            diff_lines.push(DiffLine {
+                kind: ' ',
+                content: String::new(),
+            });
             continue;
         }
         let kind = line.chars().next().unwrap_or(' ');
         let content = &line[1..];
-        diff_lines.push(DiffLine { kind, content: content.to_string() });
+        diff_lines.push(DiffLine {
+            kind,
+            content: content.to_string(),
+        });
     }
 
     Some((status.to_string(), file_path, diff_lines))
 }
 
 /// ── Helpers ───────────────────────────────────────────────────────────────
-
 fn is_analyzable_file(path: &str) -> bool {
     let ext = Path::new(path)
         .extension()
@@ -877,8 +983,10 @@ fn is_analyzable_file(path: &str) -> bool {
 }
 
 fn load_symbol_index(file_path: &str, symbols_dir: &Path) -> Option<SymbolIndexFile> {
-    let index_path = symbols_dir.join(format!("{}.index.json", file_path));
-    if !index_path.exists() { return None; }
+    let index_path = symbols_dir.join(file_path).join("symbols.json");
+    if !index_path.exists() {
+        return None;
+    }
     let content = std::fs::read_to_string(&index_path).ok()?;
     serde_json::from_str(&content).ok()
 }
@@ -908,25 +1016,3 @@ fn reconstruct_full_file(diff_lines: &[DiffLine]) -> Option<String> {
     }
     if has_any { Some(content) } else { None }
 }
-
-/// Find the migration folder (<repo>-migration/) in the project root.
-fn detect_migration_folder(project_root: &Path) -> anyhow::Result<PathBuf> {
-    if let Ok(entries) = std::fs::read_dir(project_root) {
-        for entry in entries.flatten() {
-            let path = entry.path();
-            if !path.is_dir() {
-                continue;
-            }
-            let name = path.file_name().and_then(|n| n.to_str()).unwrap_or("");
-            if name.ends_with("-migration") && path.join("report").exists() {
-                return Ok(path);
-            }
-        }
-    }
-    anyhow::bail!(
-        "No migration folder (*-migration/) found in {}. Run 'migration-analyze analyze' first.",
-        project_root.display()
-    );
-}
-
-
