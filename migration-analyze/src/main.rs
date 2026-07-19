@@ -4,7 +4,11 @@ mod commands;
 mod web;
 
 #[derive(Parser)]
-#[command(name = "migration-analyze", version, about = "Migration assessment and analysis tool")]
+#[command(
+    name = "migration-analyze",
+    version,
+    about = "Migration assessment and analysis tool"
+)]
 struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
@@ -68,5 +72,3 @@ fn print_usage_guide() {
     println!("  For help on a specific command:");
     println!("    migration-analyze <COMMAND> --help");
 }
-
-
