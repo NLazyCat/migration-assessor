@@ -1,0 +1,34 @@
+[library.zod]
+type = "library"
+description = "TypeScript-first schema validation with static type inference"
+tags = ["validation", "schema", "type-safe", "runtime", "parsing"]
+
+[library.yup]
+type = "library"
+description = "Schema builder for runtime value parsing and validation"
+tags = ["validation", "schema", "parsing", "form-validation"]
+
+[library.joi]
+type = "library"
+description = "Powerful schema description language and data validator for JavaScript"
+tags = ["validation", "schema", "parsing", "declarative"]
+
+[library."class-validator"]
+type = "library"
+description = "Decorator-based property validation for classes"
+tags = ["validation", "decorators", "class", "schema"]
+
+[library."class-transformer"]
+type = "library"
+description = "Transform plain objects to class instances"
+tags = ["serialization", "transformation", "class", "decorators"]
+
+[library."js-yaml"]
+type = "library"
+description = "YAML parser and serializer for JavaScript"
+tags = ["serialization", "yaml", "parsing", "config"]
+
+[library.toml]
+type = "library"
+description = "TOML parser for JavaScript and Node.js"
+tags = ["serialization", "toml", "parsing", "config"]

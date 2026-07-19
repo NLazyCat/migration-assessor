@@ -1,0 +1,19 @@
+[library.tracing]
+type = "library"
+description = "Structured, async-aware diagnostic instrumentation framework"
+tags = ["logging", "instrumentation", "async", "structured", "diagnostics", "spans"]
+
+[library.log]
+type = "library"
+description = "Lightweight logging facade for Rust"
+tags = ["logging", "facade", "lightweight", "levels", "adapter"]
+
+[library.env_logger]
+type = "library"
+description = "Simple logging implementation configured via environment variable"
+tags = ["logging", "env-var", "simple", "stderr", "filter"]
+
+[library.slog]
+type = "library"
+description = "Structured, composable logging for Rust"
+tags = ["logging", "structured", "composable", "performance", "async"]

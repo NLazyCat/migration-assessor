@@ -1,5 +1,6 @@
 use migration_core::config::Config;
 use migration_core::output_paths;
+use migration_core::util;
 use std::path::{Path, PathBuf};
 use std::sync::Mutex;
 
@@ -18,7 +19,11 @@ pub struct ProjectContext {
 
 impl ProjectContext {
     pub fn load(project_root: impl AsRef<Path>) -> anyhow::Result<Self> {
-        let project_root = project_root.as_ref().canonicalize()?;
+        // IMPORTANT: canonicalize() yields \\?\ extended paths on Windows
+        // that break TOML reading and path-prefix logic.
+        // The path is already resolved by the caller via resolve_project_path(),
+        // so just normalize path components without hitting the filesystem.
+        let project_root = util::normalize_path(project_root.as_ref());
         let migration_folder = Self::detect_migration_folder(&project_root)?;
         let report_dir = migration_folder.join("report");
         let config = if let Some(p) = Self::find_config(&project_root) {
@@ -174,3 +179,5 @@ impl ProjectContext {
         Ok(value)
     }
 }
+
+

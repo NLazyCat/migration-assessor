@@ -1,0 +1,29 @@
+[library.axum]
+type = "framework"
+description = "Ergonomic and modular web framework built with Tokio, Tower, and Hyper"
+tags = ["http", "server", "async", "tokio", "middleware", "routing", "rest"]
+
+[library.actix-web]
+type = "framework"
+description = "Powerful, pragmatic, and extremely fast web framework for Rust"
+tags = ["http", "server", "actor", "high-performance", "middleware", "routing"]
+
+[library.rocket]
+type = "framework"
+description = "Web framework with a focus on usability, security, and performance"
+tags = ["http", "server", "routing", "type-safe", "async", "macros"]
+
+[library.warp]
+type = "framework"
+description = "Super-simple, composable web framework built on Tokio and Hyper"
+tags = ["http", "server", "async", "filters", "composable", "middleware"]
+
+[library.tide]
+type = "framework"
+description = "Minimal and pragmatic Rust web application framework"
+tags = ["http", "server", "async", "middleware", "routing", "minimal"]
+
+[library.salvo]
+type = "framework"
+description = "Simple and powerful web framework for Rust with middleware chaining"
+tags = ["http", "server", "async", "middleware", "routing", "handler"]

@@ -11,7 +11,7 @@ use std::path::Path;
 use std::process::Command;
 
 use crate::commands::context::ProjectContext;
-use crate::commands::resolve_project_path;
+use crate::commands::{resolve_project_path, run_git_cmd};
 
 #[derive(Args)]
 pub struct CheckUpdatesArgs {
@@ -78,7 +78,10 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         .map(|s| s.to_string());
 
     let analyzed_commit = analyzed_commit.ok_or_else(|| {
-        anyhow::anyhow!("No analyzedCommit found in manifest. Re-run 'migration-analyze analyze'.")
+        anyhow::anyhow!(
+            "No analyzedCommit found in report manifest.\n\
+             Run 'migration-analyze analyze' first to establish a baseline analysis."
+        )
     })?;
 
     // ── 2. Locate the source repo ────────────────────────────────────────
@@ -546,18 +549,6 @@ fn is_git_repo(path: &Path) -> bool {
     path.join(".git").exists() || path.join("HEAD").exists()
 }
 
-fn run_git_cmd(dir: &Path, args: &[&str]) -> Option<String> {
-    let output = Command::new("git")
-        .args(args)
-        .current_dir(dir)
-        .output()
-        .ok()?;
-    if !output.status.success() {
-        return None;
-    }
-    Some(String::from_utf8_lossy(&output.stdout).trim().to_string())
-}
-
 fn resolve_source_path(src: &str, project_root: &Path) -> std::path::PathBuf {
     let p = std::path::Path::new(src);
     if p.is_absolute() {
@@ -573,16 +564,16 @@ fn detect_dependency_changes(
     _project_root: &Path,
     ctx: &ProjectContext,
 ) -> anyhow::Result<(
-      Vec<DepChangeInfo>,
-      Vec<ResolvedDependency>,
-      Vec<ResolvedDependency>,
-    )> {
-        let report_dir = &ctx.report_dir;
+    Vec<DepChangeInfo>,
+    Vec<ResolvedDependency>,
+    Vec<ResolvedDependency>,
+)> {
+    let report_dir = &ctx.report_dir;
 
-        // Load stored recommendations for enrichment
-        let rec_map = load_recommendation_map(report_dir);
+    // Load stored recommendations for enrichment
+    let rec_map = load_recommendation_map(report_dir);
 
-        // Load old dependencies from stored report
+    // Load old dependencies from stored report
     let old_deps: Vec<ResolvedDependency> = match ctx
         .load_json::<serde_json::Value>(output_paths::external::PACKAGES)
     {

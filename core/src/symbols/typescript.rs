@@ -1,4 +1,5 @@
 use super::{ApiContract, ApiExport, Param, Symbol, SymbolIndex};
+use crate::util;
 use std::path::Path;
 
 use oxc_allocator::Allocator;
@@ -8,7 +9,6 @@ use oxc_ast::ast::{
     MethodDefinitionKind, PropertyKey, Statement,
 };
 use oxc_parser::Parser;
-use oxc_span::SourceType;
 
 /// Extract symbols and API contracts from a TypeScript file.
 pub fn extract(
@@ -16,7 +16,7 @@ pub fn extract(
     source: &str,
     file_path: Option<&Path>,
 ) -> anyhow::Result<(SymbolIndex, ApiContract)> {
-    let source_type = detect_source_type(file_path);
+    let source_type = util::detect_source_type(file_path);
 
     let allocator = Allocator::default();
     let ret = Parser::new(&allocator, source, source_type).parse();
@@ -26,7 +26,42 @@ pub fn extract(
         source,
         symbols: Vec::new(),
         exports: Vec::new(),
+        has_errors: false,
     };
+
+    // Report parser errors but still use the partial AST
+    if !ret.diagnostics.is_empty() {
+        extractor.has_errors = true;
+        let err_count = ret.diagnostics.errors().count();
+        let warn_count = ret.diagnostics.warnings().count();
+        let mut details: Vec<String> = Vec::new();
+        for d in ret.diagnostics.iter() {
+            let pos = d.labels.first().and_then(|l| {
+                let offset = l.offset() as usize;
+                if offset < source.len() {
+                    let line = source[..offset].matches('\n').count() + 1;
+                    let col = offset.saturating_sub(source[..offset].rfind('\n').map_or(0, |p| p + 1));
+                    Some(format!("line {}:{}", line, col + 1))
+                } else {
+                    None
+                }
+            });
+            let msg = if let Some(p) = pos {
+                format!("{} ({})", d.message, p)
+            } else {
+                format!("{}", d.message)
+            };
+            if !details.contains(&msg) {
+                details.push(msg);
+            }
+        }
+        let label = match (err_count, warn_count) {
+            (0, w) => format!("{w} parser warning(s)"),
+            (e, 0) => format!("{e} parser error(s)"),
+            (e, w) => format!("{e} error(s), {w} warning(s)"),
+        };
+        eprintln!("  Warning: {} in {}: {}", label, module, details.join("; "));
+    }
 
     for stmt in &ret.program.body {
         extractor.handle_statement(stmt);
@@ -49,6 +84,7 @@ struct SymbolExtractor<'a> {
     source: &'a str,
     symbols: Vec<Symbol>,
     exports: Vec<ApiExport>,
+    has_errors: bool,
 }
 
 impl<'a> SymbolExtractor<'a> {
@@ -633,13 +669,3 @@ fn extract_type_source(source: &str, alias_span: oxc_span::Span) -> String {
     }
 }
 
-fn detect_source_type(file_path: Option<&Path>) -> SourceType {
-    match file_path.and_then(|p| p.extension().and_then(|e| e.to_str())) {
-        Some("tsx") => SourceType::tsx(),
-        Some("ts") => SourceType::ts(),
-        Some("mts") | Some("cts") => SourceType::default()
-            .with_typescript(true)
-            .with_module(true),
-        _ => SourceType::ts(),
-    }
-}

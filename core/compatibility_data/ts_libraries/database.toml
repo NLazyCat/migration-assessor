@@ -1,0 +1,34 @@
+[library.prisma]
+type = "orm"
+description = "Next-generation ORM for Node.js and TypeScript with auto-generated queries"
+tags = ["database", "orm", "sql", "migration", "schema", "query-builder", "type-safe"]
+
+[library.typeorm]
+type = "orm"
+description = "ORM for TypeScript and JavaScript that supports both Active Record and Data Mapper patterns"
+tags = ["database", "orm", "sql", "decorators", "migration", "query-builder"]
+
+[library.drizzle-orm]
+type = "orm"
+description = "TypeScript ORM with SQL-like query building and type safety"
+tags = ["database", "orm", "sql", "query-builder", "type-safe", "lightweight"]
+
+[library.sequelize]
+type = "orm"
+description = "Promise-based Node.js ORM supporting PostgreSQL, MySQL, SQLite"
+tags = ["database", "orm", "sql", "migration", "query-builder", "promise"]
+
+[library.mongoose]
+type = "orm"
+description = "MongoDB object modeling tool designed to work in an asynchronous environment"
+tags = ["database", "orm", "mongodb", "nosql", "schema", "validation"]
+
+[library.knex]
+type = "library"
+description = "SQL query builder for PostgreSQL, MySQL, SQLite, and more"
+tags = ["database", "sql", "query-builder", "raw-sql", "migration"]
+
+[library.redis]
+type = "library"
+description = "Redis client for Node.js with support for all Redis commands"
+tags = ["database", "redis", "cache", "pubsub", "key-value"]

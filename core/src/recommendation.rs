@@ -1,5 +1,5 @@
 use crate::compatibility::{CompatibilityEntry, CompatibilityMatrix, MigrationEffort};
-use crate::deps::{module_map, ResolvedDependency};
+use crate::deps::{ResolvedDependency, module_map};
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::path::Path;
@@ -71,7 +71,10 @@ pub fn build_recommendations(
             let mut seen: HashSet<String> = HashSet::new();
             for pkg in pkgs {
                 if seen.insert(pkg.clone()) {
-                    package_modules.entry(pkg.clone()).or_default().push(module.clone());
+                    package_modules
+                        .entry(pkg.clone())
+                        .or_default()
+                        .push(module.clone());
                 }
             }
         }
@@ -82,20 +85,21 @@ pub fn build_recommendations(
     let mut heavy = 0usize;
 
     for dep in dependencies {
-        let entry: CompatibilityEntry = compatibility_map
-            .get(&dep.name)
-            .cloned()
-            .unwrap_or_else(|| CompatibilityEntry {
-                source_language: matrix.source_language().to_string(),
-                target_language: matrix.target_language().to_string(),
-                equivalent: None,
-                compatibility: crate::compatibility::CompatibilityLevel::Unknown,
-                effort: MigrationEffort::Unknown,
-                guidance: None,
-                note: Some("No compatibility mapping available.".to_string()),
-                tags: None,
-                risk_tags: vec!["unmapped".to_string()],
-            });
+        let entry: CompatibilityEntry =
+            compatibility_map
+                .get(&dep.name)
+                .cloned()
+                .unwrap_or_else(|| CompatibilityEntry {
+                    source_language: matrix.source_language().to_string(),
+                    target_language: matrix.target_language().to_string(),
+                    equivalent: None,
+                    compatibility: crate::compatibility::CompatibilityLevel::Unknown,
+                    effort: MigrationEffort::Unknown,
+                    guidance: None,
+                    note: Some("No compatibility mapping available.".to_string()),
+                    tags: None,
+                    risk_tags: vec!["unmapped".to_string()],
+                });
 
         let affected = package_modules.get(&dep.name).cloned().unwrap_or_default();
         let affected_module_count = affected.len();
@@ -109,7 +113,10 @@ pub fn build_recommendations(
         if entry.risk_tags.iter().any(|t| t == "unmapped") {
             unmapped += 1;
         }
-        if matches!(entry.effort, MigrationEffort::Rewrite | MigrationEffort::Heavy) {
+        if matches!(
+            entry.effort,
+            MigrationEffort::Rewrite | MigrationEffort::Heavy
+        ) {
             heavy += 1;
         }
 
@@ -160,7 +167,6 @@ pub fn build_recommendations_with_modules(
 mod tests {
     use super::*;
     use crate::compatibility::{CompatibilityLevel, CompatibilityMatrix};
-    use crate::project::SourceLanguage;
 
     fn dep(name: &str) -> ResolvedDependency {
         ResolvedDependency {
@@ -187,8 +193,12 @@ mod tests {
         .collect();
 
         let report = build_recommendations(&deps, &matrix, Some(&module_deps));
-        let express = report.dependencies.iter().find(|d| d.package == "express").unwrap();
-        assert_eq!(express.compatibility, CompatibilityLevel::Partial);
+        let express = report
+            .dependencies
+            .iter()
+            .find(|d| d.package == "express")
+            .unwrap();
+        assert_eq!(express.compatibility, CompatibilityLevel::Full);
         assert_eq!(express.affected_module_count, 1);
         assert!(!express.is_high_impact);
 

@@ -1,0 +1,14 @@
+[library.reqwest]
+type = "library"
+description = "Higher-level HTTP client library with async and blocking support"
+tags = ["http", "client", "async", "request", "rest", "tls"]
+
+[library.ureq]
+type = "library"
+description = "Simple, safe HTTP client with no external dependencies"
+tags = ["http", "client", "minimal", "blocking", "request"]
+
+[library.hyper]
+type = "library"
+description = "Fast and correct HTTP implementation for Rust"
+tags = ["http", "client", "server", "low-level", "high-performance", "async"]

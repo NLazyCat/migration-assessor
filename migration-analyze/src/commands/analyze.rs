@@ -9,7 +9,7 @@ use rayon::join;
 use std::collections::{BTreeMap, HashMap};
 use std::path::{Path, PathBuf};
 
-use crate::commands::resolve_project_path;
+use crate::commands::{resolve_project_path, run_git_cmd};
 
 #[derive(Args)]
 pub struct AnalyzeArgs {
@@ -37,13 +37,25 @@ pub struct AnalyzeArgs {
 pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     let project_root = resolve_project_path(&args.path);
 
-    // Load config if exists
+    // Load or auto-create migration.toml
     let config_path = project_root.join("migration.toml");
     let mut config = if config_path.exists() {
         migration_core::config::Config::load(&config_path)?
     } else {
-        eprintln!("[info] No migration.toml found, using defaults");
-        migration_core::config::Config::default()
+        eprintln!("  No migration.toml found — creating default config.");
+        // Detect source language from project files
+        let guessed_lang = guess_source_language(&project_root);
+        let default_config = format!(
+            r#"# Migration Assessor Configuration
+[project]
+source = "."
+source_lang = "{lang}"
+target_language = "rust"
+"#,
+            lang = guessed_lang,
+        );
+        std::fs::write(&config_path, default_config)?;
+        migration_core::config::Config::load(&config_path)?
     };
 
     // CLI overrides
@@ -91,14 +103,17 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         Some(source_language.clone()),
     )?;
 
-    // Discover files
-    let pb = ProgressBar::new(6);
+    // ── Progress bar ─────────────────────────────────────────────────────
+    let total_steps: u64 = 6;
+    let pb = ProgressBar::new(total_steps);
     pb.set_style(
         ProgressStyle::default_bar()
-            .template("{prefix:.bold} {wide_bar:.cyan/blue} {pos}/{len} {msg:.dim}")?,
+            .template("{prefix:.bold} {bar:30.cyan/blue} {pos}/{len}  {msg:.dim}")?
+            .progress_chars("##-"),
     );
-    pb.set_prefix("Analyzing");
+    pb.set_prefix("Analyze");
 
+    // Step 1: Discover files
     let discovery = discovery::FileDiscovery::new(
         project.source_language,
         config.project.ignore.clone(),
@@ -107,14 +122,12 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     );
     let files = discovery.discover(&project.root);
     pb.inc(1);
-    pb.set_message("discovering files");
 
-    // Resolve dependencies
+    // Step 2: Resolve dependencies
     let dependencies = deps::resolve_dependencies(&project.root, project.source_language)?;
     pb.inc(1);
-    pb.set_message("resolving dependencies");
 
-    // Compatibility matrix
+    // Step 3: Compatibility matrix
     let mut compatibility = compatibility::CompatibilityMatrix::new(
         project.source_language_str().to_string(),
         project.target_language.clone(),
@@ -124,17 +137,15 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     }
     let compatibility_matrix = compatibility.evaluate(&dependencies);
     pb.inc(1);
-    pb.set_message("evaluating compatibility");
 
-    // Dependency graph
+    // Step 4: Dependency graph
     let mut dependency_graph =
         graph::GraphBuilder::build(&project.root, &files, project.source_language)?;
     let cycle_detection = dependency_graph.detect_cycles();
     pb.inc(1);
-    pb.set_message("building dependency graph");
 
-    // Symbol extraction and reference extraction are independent CPU-bound stages;
-    // run them in parallel.
+    // Step 5: Symbol & reference extraction (parallel)
+    pb.set_message("extracting symbols & references…");
     let (symbol_results, refs_result) = join(
         || symbols::SymbolExtractor::extract_all(&project.root, &files, project.source_language),
         || match project.source_language {
@@ -147,15 +158,25 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     let symbol_results = symbol_results?;
     let (forward, reverse) = refs_result?;
     pb.inc(1);
-    pb.set_message("extracting symbols & references");
 
     // ── Create migration folder ─────────────────────────────────────────
     let migration_dir_name = format!("{}-migration", source_repo_name);
     let migration_root = project_root.join(&migration_dir_name);
     let report_dir = migration_root.join("report");
 
-    // Create mirrored directory structure in migration folder
-    mirror_source_structure(&files, &project.root, &migration_root)?;
+    // Mirror source structure
+    pb.set_message("mirroring files…");
+    for file in &files {
+        let relative = file.strip_prefix(&project.root).unwrap_or(file);
+        let target = migration_root.join(relative);
+        if let Some(parent) = target.parent() {
+            std::fs::create_dir_all(parent)?;
+        }
+        std::fs::write(&target, "")?;
+    }
+    pb.inc(1);
+    pb.finish_and_clear();
+    println!("  Mirrored {} files", files.len());
 
     // Write migration config
     let config_dir = migration_root.join("config");
@@ -164,26 +185,26 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     std::fs::write(config_dir.join("migration.toml"), mig_config)?;
 
     // Update root migration.toml with detected source path and git info
-    let (remote, branch, version) = detect_source_git_info(&source_repo_dir);
-    // Use the original relative path (avoids Windows backslash / extended-length issues)
-    let source_display = args.path.replace('\\', "/");
+    let (_, _, version) = detect_source_git_info(&source_repo_dir);
+    // Write the source repo path (NOT the project root) so that downstream
+    // commands (diff, check-updates) can find the actual source code.
+    let source_path_display = source_repo_dir.to_string_lossy().replace('\\', "/");
+    let source_lang = project.source_language_str();
     let root_config_content = format!(
         r#"# Migration Assessor Configuration
 [project]
 source = "{}"
-source_repo = "{}"
-source_branch = "{}"
-source_version = "{}"
+source_lang = "{}"
 target_language = "{}"
+source_version = "{}"
 
 [skip]
 framework = {}
 "#,
-        source_display,
-        remote.as_deref().unwrap_or(""),
-        branch.as_deref().unwrap_or(""),
-        version.as_deref().unwrap_or(""),
+        source_path_display,
+        source_lang,
         project.target_language,
+        version.as_deref().unwrap_or(""),
         config.skip.framework,
     );
     std::fs::write(&config_path, root_config_content)?;
@@ -265,11 +286,8 @@ framework = {}
     );
 
     // Module-level external dependency map
-    let module_deps = module_map::module_external_deps(
-        &project.root,
-        &files,
-        project.source_language,
-    );
+    let module_deps =
+        module_map::module_external_deps(&project.root, &files, project.source_language);
 
     // Migration readiness scores
     let readiness = scores::calculate(
@@ -285,15 +303,16 @@ framework = {}
     output.write(&report_dir, output_paths::SCORES, &readiness)?;
 
     // Dependency migration recommendations
-    let recommendations = recommendation::build_recommendations(
-        &dependencies,
-        &compatibility,
-        Some(&module_deps),
-    );
-    output.write(&report_dir, output_paths::external::RECOMMENDATIONS, &recommendations)?;
+    let recommendations =
+        recommendation::build_recommendations(&dependencies, &compatibility, Some(&module_deps));
+    output.write(
+        &report_dir,
+        output_paths::external::RECOMMENDATIONS,
+        &recommendations,
+    )?;
 
     pb.inc(1);
-    pb.set_message("calculating scores & recommendations");
+    pb.set_message("done");
     pb.finish_and_clear();
 
     let manifest = json!({
@@ -366,25 +385,20 @@ framework = {}
 }
 
 /// Detect the source repository directory inside the project root.
-/// Scans immediate subdirectories for .git, package.json, Cargo.toml, or tsconfig.json.
-/// If config.project.source is set, uses that path directly.
+/// First scans immediate subdirectories for a valid repo root.
+/// Falls back to `config.project.source` only if auto-detection fails to find
+/// exactly one candidate (to avoid confusion from stale config).
 fn detect_source_repo(
     project_root: &Path,
     config: &migration_core::config::Config,
 ) -> anyhow::Result<PathBuf> {
-    // If config specifies a source, use it directly
-    if let Some(source) = &config.project.source {
-        let source_path = project_root.join(source);
-        if source_path.exists() && is_repo_root(&source_path) {
-            return Ok(source_path);
-        }
-        anyhow::bail!(
-            "Config specifies project.source = '{}' but '{}' is not a valid repo root (missing .git, package.json, etc.).",
-            source,
-            source_path.display()
-        );
-    }
+    // Scan project root for candidate repos
     let mut candidates: Vec<PathBuf> = Vec::new();
+
+    // The project root itself might be a repo
+    if is_repo_root(project_root) {
+        candidates.push(project_root.to_path_buf());
+    }
 
     if let Ok(entries) = std::fs::read_dir(project_root) {
         for entry in entries.flatten() {
@@ -405,14 +419,47 @@ fn detect_source_repo(
 
     match candidates.len() {
         0 => {
+            // Fall back to config.source if auto-detection found nothing
+            // The source may be an absolute path (e.g., "C:/.../my-project")
+            // or a relative path within the project root.
+            if let Some(source) = &config.project.source {
+                let source_path = if Path::new(source).is_absolute() {
+                    PathBuf::from(source)
+                } else {
+                    project_root.join(source)
+                };
+                if source_path.exists() && is_repo_root(&source_path) {
+                    return Ok(source_path);
+                }
+            }
             anyhow::bail!(
-                "No source repository found in {}. Clone a git repo first:\n  cd {} && git clone <repo-url>",
-                project_root.display(),
+                "No source repository found in {}.\n\
+                 \n\
+                 The project directory should contain either:\n\
+                 \x20  - A .git/ folder (source repo is here)\n\
+                 \x20  - package.json or tsconfig.json (TypeScript project)\n\
+                 \x20  - Cargo.toml (Rust project)\n\
+                 \n\
+                 If the source is at a different path, create a migration.toml with:\n\
+                 \x20  [project]\n\
+                 \x20  source = \"path/to/source\"\n\
+                 \x20  source_lang = \"typescript\"",
                 project_root.display()
             );
         }
         1 => Ok(candidates.remove(0)),
         _ => {
+            // Multiple candidates — try config.source for disambiguation
+            if let Some(source) = &config.project.source {
+                let source_path = if Path::new(source).is_absolute() {
+                    PathBuf::from(source)
+                } else {
+                    project_root.join(source)
+                };
+                if source_path.exists() && is_repo_root(&source_path) {
+                    return Ok(source_path);
+                }
+            }
             anyhow::bail!(
                 "Multiple source repositories found: {}. Please specify one in migration.toml [project].source",
                 candidates
@@ -438,29 +485,6 @@ fn is_repo_root(path: &Path) -> bool {
         return true;
     }
     false
-}
-
-/// Mirror the source repo's directory structure into the migration folder.
-/// Creates empty placeholder files matching source file paths.
-fn mirror_source_structure(
-    files: &[PathBuf],
-    source_root: &Path,
-    migration_root: &Path,
-) -> anyhow::Result<()> {
-    for file in files {
-        let relative = file.strip_prefix(source_root).unwrap_or(file);
-        let target = migration_root.join(relative);
-
-        if let Some(parent) = target.parent() {
-            std::fs::create_dir_all(parent)?;
-        }
-
-        // Create empty placeholder file
-        std::fs::write(&target, "")?;
-    }
-
-    println!("  Mirrored {} files into migration folder", files.len());
-    Ok(())
 }
 
 /// Auto-detect git info from the source repo.
@@ -529,17 +553,15 @@ fn group_references_by_file(
         .collect()
 }
 
-fn run_git_cmd(cwd: &Path, args: &[&str]) -> Option<String> {
-    let output = std::process::Command::new("git")
-        .args(args)
-        .current_dir(cwd)
-        .output()
-        .ok()?;
-    if !output.status.success() {
-        return None;
+/// Guess the source language from the project root by looking for config files.
+fn guess_source_language(project_root: &Path) -> String {
+    if project_root.join("tsconfig.json").exists() || project_root.join("package.json").exists() {
+        "typescript".to_string()
+    } else if project_root.join("Cargo.toml").exists() {
+        "rust".to_string()
+    } else {
+        "typescript".to_string()
     }
-    let s = String::from_utf8_lossy(&output.stdout).trim().to_string();
-    if s.is_empty() { None } else { Some(s) }
 }
 
 /// Generate a full migration.toml config for the migration folder.

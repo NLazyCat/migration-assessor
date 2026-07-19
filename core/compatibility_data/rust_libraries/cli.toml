@@ -1,0 +1,29 @@
+[library.clap]
+type = "library"
+description = "Command line argument parser with derive macro support"
+tags = ["cli", "parser", "arguments", "derive", "help", "completions"]
+
+[library.argh]
+type = "library"
+description = "Minimalist command-line argument parser with derive macros"
+tags = ["cli", "parser", "arguments", "derive", "minimal", "zero-cost"]
+
+[library.termion]
+type = "library"
+description = "Pure Rust terminal manipulation library for Unix"
+tags = ["cli", "terminal", "raw-mode", "input", "color", "unix"]
+
+[library.crossterm]
+type = "library"
+description = "Cross-platform terminal manipulation library for Rust"
+tags = ["cli", "terminal", "cross-platform", "input", "color", "event"]
+
+[library.colored]
+type = "library"
+description = "Easiest way to colorize text in terminal and stdout"
+tags = ["cli", "terminal", "color", "styling", "output"]
+
+[library.indicatif]
+type = "library"
+description = "Progress bar and spinners for Rust CLI applications"
+tags = ["cli", "terminal", "progress", "spinner", "output"]

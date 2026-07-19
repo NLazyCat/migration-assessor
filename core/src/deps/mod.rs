@@ -1,6 +1,6 @@
+pub mod module_map;
 pub mod rust;
 pub mod typescript;
-pub mod module_map;
 
 use serde::{Deserialize, Serialize};
 use std::path::Path;

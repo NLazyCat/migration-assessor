@@ -2,12 +2,13 @@ use super::{
     FileBindings, ForwardIndex, ImportBinding, Location, ReferenceKind, ReverseIndex,
     SymbolReference,
 };
+use crate::util;
 use oxc_allocator::Allocator;
 use oxc_ast::AstKind;
 use oxc_ast::ast::{self, Function, Statement};
 use oxc_parser::Parser;
 use oxc_semantic::SemanticBuilder;
-use oxc_span::{GetSpan, SourceType};
+use oxc_span::GetSpan;
 use rayon::prelude::*;
 use std::collections::HashMap;
 use std::fs;
@@ -143,7 +144,7 @@ impl PathAliasResolver {
                     &target_str
                 };
                 let joined = pkg_dir.join(target_prefix);
-                let normalized = normalize_path(&joined);
+                let normalized = util::normalize_path(&joined);
                 let target_str = path_to_forward_slash(&normalized);
                 out.push(PathAlias {
                     import_prefix: prefix.to_string(),
@@ -182,7 +183,7 @@ impl PathAliasResolver {
                     first
                 };
                 let joined = tsconfig_dir.join(target_dir);
-                let normalized = normalize_path(&joined);
+                let normalized = util::normalize_path(&joined);
                 let target_str = path_to_forward_slash(&normalized);
                 out.push(PathAlias {
                     import_prefix: import_prefix.to_string(),
@@ -209,7 +210,7 @@ impl PathAliasResolver {
                 let rest = Self::strip_js_ext(rest);
                 let base = Path::new(&alias.target_prefix);
                 let full = base.join(rest);
-                return Some(normalize_path(&full));
+                return Some(util::normalize_path(&full));
             }
         }
         None
@@ -225,7 +226,7 @@ pub fn parse_import_bindings(
     source: &str,
     file_path: Option<&Path>,
 ) -> anyhow::Result<Vec<ImportBinding>> {
-    let source_type = detect_source_type(file_path);
+    let source_type = util::detect_source_type(file_path);
     let allocator = Allocator::default();
     let ret = Parser::new(&allocator, source, source_type).parse();
     let mut bindings = Vec::new();
@@ -323,7 +324,7 @@ fn resolve_import_with_resolver(
     // Handle relative paths
     let dir = current_file.parent()?;
     let resolved = dir.join(imp);
-    let normalized = normalize_path(&resolved);
+    let normalized = util::normalize_path(&resolved);
 
     if let Some(path) = probe_path(&normalized, project_root) {
         return Some(to_relative(&path, project_root));
@@ -371,24 +372,6 @@ fn probe_path(path: &Path, project_root: &Path) -> Option<PathBuf> {
 /// Convert path to forward slashes (used for cross-platform report keys).
 fn path_to_forward_slash(path: &Path) -> String {
     path.to_string_lossy().replace('\\', "/")
-}
-
-fn normalize_path(path: &Path) -> PathBuf {
-    let mut components = Vec::new();
-    for component in path.components() {
-        match component {
-            std::path::Component::CurDir => {}
-            std::path::Component::ParentDir => {
-                components.pop();
-            }
-            other => components.push(other.as_os_str().to_os_string()),
-        }
-    }
-    let mut result = PathBuf::new();
-    for c in components {
-        result.push(c);
-    }
-    result
 }
 
 fn trim_to_relative(abs_path: &Path, project_root: &Path) -> PathBuf {
@@ -541,7 +524,7 @@ fn extract_file_refs(
         return None;
     }
 
-    let source_type = detect_source_type(Some(file));
+    let source_type = util::detect_source_type(Some(file));
     let allocator = Allocator::default();
     let ret = Parser::new(&allocator, &source, source_type).parse();
     let program = ret.program;
@@ -618,13 +601,4 @@ fn extract_file_refs(
     Some((forward, reverse))
 }
 
-fn detect_source_type(file_path: Option<&Path>) -> SourceType {
-    match file_path.and_then(|p| p.extension().and_then(|e| e.to_str())) {
-        Some("tsx") => SourceType::tsx(),
-        Some("ts") => SourceType::ts(),
-        Some("mts") | Some("cts") => SourceType::default()
-            .with_typescript(true)
-            .with_module(true),
-        _ => SourceType::ts(),
-    }
-}
+

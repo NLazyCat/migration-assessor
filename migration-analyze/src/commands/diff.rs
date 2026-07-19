@@ -144,7 +144,8 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
 
     if !config_path.exists() {
         anyhow::bail!(
-            "migration.toml not found in {}. Run 'migration-analyze init' first.",
+            "No migration.toml found in {}.\n\
+             Run 'migration-analyze analyze' to analyze the project first.",
             project_root.display()
         );
     }
@@ -342,7 +343,7 @@ fn analyze_file_changes(
         .flat_map(|sym| (sym.line_range[0]..=sym.line_range[1]).map(move |l| (l, sym)))
         .collect();
 
-    // Find changed symbol names by tracking old line numbers through diff
+    // ── Pass 1: Find changed EXISTING symbols ──────────────────────────────
     let mut changed_names: Vec<String> = Vec::new();
     let mut old_lineno: usize = 1;
     let mut inside_symbol: Option<String> = None;
@@ -387,16 +388,16 @@ fn analyze_file_changes(
         changed_names = all_symbols.iter().map(|s| s.name.clone()).collect();
     }
 
-    if changed_names.is_empty() {
-        return None;
-    }
+    // ── Pass 2: Detect new symbols added post-analysis ─────────────────────
+    let source = new_content.as_deref().unwrap_or("");
+    let existing_names: HashSet<&str> = all_symbols.iter().map(|s| s.name.as_str()).collect();
+    let new_symbols = detect_new_symbols(diff_lines, source, &existing_names);
 
-    // For each changed symbol, extract full body and relative position
+    // ── Build change list ──────────────────────────────────────────────────
     let mut changes: Vec<SymbolChangeDetail> = Vec::new();
-
-    // Build adjacency map from symbol index ordering
     let ordered_names: Vec<&str> = index.symbols.iter().map(|s| s.name.as_str()).collect();
 
+    // Existing symbols that changed
     for sym_name in &changed_names {
         let orig = all_symbols.iter().find(|s| s.name == *sym_name)?;
         let stable_change_type = if status == "A" {
@@ -407,7 +408,6 @@ fn analyze_file_changes(
             "modified"
         };
 
-        let source = new_content.as_deref().unwrap_or("");
         let full_body = match status {
             "D" => String::new(),
             _ => extract_full_body(sym_name, &orig.kind, source),
@@ -431,6 +431,26 @@ fn analyze_file_changes(
         });
     }
 
+    // New symbols added post-analysis
+    for (new_name, new_kind) in &new_symbols {
+        let full_body = extract_full_body(new_name, new_kind, source);
+        let (context_before, context_after) =
+            extract_context(source, new_name, new_kind, CONTEXT_WINDOW);
+        changes.push(SymbolChangeDetail {
+            symbol: new_name.clone(),
+            kind: new_kind.clone(),
+            change_type: "added".to_string(),
+            full_body,
+            context_before,
+            context_after,
+            position: RelativePosition {
+                parent: None,
+                above: None,
+                below: None,
+            },
+        });
+    }
+
     if changes.is_empty() {
         return None;
     }
@@ -441,6 +461,142 @@ fn analyze_file_changes(
         changes,
         recommendations: vec![],
     })
+}
+
+/// Scan diff lines for newly added symbol declarations that do NOT exist in the
+/// stored symbol index (i.e., were added post-analysis).
+fn detect_new_symbols(
+    diff_lines: &[DiffLine],
+    _source: &str,
+    existing_names: &HashSet<&str>,
+) -> Vec<(String, String)> {
+    let mut found: Vec<(String, String)> = Vec::new();
+    for dl in diff_lines {
+        if dl.kind != '+' {
+            continue;
+        }
+        if let Some((name, kind)) = extract_declaration_from_line(&dl.content)
+            && !existing_names.contains(name.as_str())
+            && !found.iter().any(|(n, _)| n == &name)
+        {
+            found.push((name, kind));
+        }
+    }
+    found
+}
+
+/// Try to extract a symbol declaration from a single source line.
+/// Returns `(name, kind)` if the line contains a known declaration pattern.
+fn extract_declaration_from_line(line: &str) -> Option<(String, String)> {
+    let trimmed = line.trim();
+
+    // Strip export / export default / pub prefixes
+    let body = trimmed
+        .strip_prefix("export default ")
+        .or_else(|| trimmed.strip_prefix("export "))
+        .or_else(|| trimmed.strip_prefix("pub("))
+        .and_then(|s| {
+            // For `pub(crate) fn` etc, strip the visibility part
+            if s.starts_with("crate) ") || s.starts_with("super) ") || s.starts_with("self) ") {
+                s.split_once(' ').map(|(_, rest)| rest)
+            } else {
+                Some(s)
+            }
+        })
+        .or_else(|| trimmed.strip_prefix("pub "))
+        .unwrap_or(trimmed);
+
+    let body = body.trim();
+
+    // function name / async function name
+    if let Some(rest) = body.strip_prefix("async function ") {
+        let name = rest.trim_start().split([' ', '(', '<']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "function".to_string()));
+        }
+    }
+    if let Some(rest) = body.strip_prefix("function ") {
+        let name = rest.trim_start().split([' ', '(', '<']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "function".to_string()));
+        }
+    }
+    // Rust: fn name
+    if let Some(rest) = body.strip_prefix("fn ") {
+        let name = rest.trim_start().split([' ', '(', '<']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "function".to_string()));
+        }
+    }
+
+    // class name
+    if let Some(rest) = body.strip_prefix("class ") {
+        let name = rest.trim_start().split([' ', '{', '<', '(', ':']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "class".to_string()));
+        }
+    }
+
+    // interface name
+    if let Some(rest) = body.strip_prefix("interface ") {
+        let name = rest.trim_start().split([' ', '{', '<']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "interface".to_string()));
+        }
+    }
+
+    // type name
+    if let Some(rest) = body.strip_prefix("type ") {
+        let name = rest.trim_start().split([' ', '=']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "type_alias".to_string()));
+        }
+    }
+
+    // enum name
+    if let Some(rest) = body.strip_prefix("enum ") {
+        let name = rest.trim_start().split([' ', '{']).next()?;
+        if !name.is_empty() {
+            return Some((name.to_string(), "enum".to_string()));
+        }
+    }
+
+    // const/let/var name = …  (arrow function or variable)
+    for prefix in &["const ", "let ", "var "] {
+        if let Some(rest) = body.strip_prefix(prefix) {
+            // Extract the identifier — split on any of ' ', '=', ':', '<', '(', '`'
+            let name = rest
+                .trim_start()
+                .split([' ', '=', ':', '<', '(', '`'])
+                .next()?;
+            if name.is_empty() || name == "=" {
+                continue;
+            }
+            // Determine kind: if value contains => or function(, it's an arrow_function
+            let after_name = rest[name.len()..].trim();
+            if let Some(val) = after_name.strip_prefix('=') {
+                let val = val.trim();
+                let kind = if val.starts_with("=>")
+                    || val.starts_with('(')
+                    || val.starts_with("async")
+                    || val.starts_with("function")
+                {
+                    "arrow_function"
+                } else if val.starts_with("class") {
+                    "class"
+                } else {
+                    "variable"
+                };
+                return Some((name.to_string(), kind.to_string()));
+            }
+            // TypeScript type annotation without assignment — const name: Type;
+            if after_name.starts_with(':') || after_name.starts_with(' ') {
+                return Some((name.to_string(), "variable".to_string()));
+            }
+        }
+    }
+
+    None
 }
 
 /// ── Full body extraction ──────────────────────────────────────────────────
@@ -493,9 +649,10 @@ fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
         None => return String::new(),
     };
 
-    // Find end by brace matching
+    // Find the first top-level brace (skip braces inside parens/angle brackets
+    // — e.g. `function f(param: { type }) { body }` should find the body brace)
     let from_start = &source[start..];
-    let brace_start = from_start.find('{');
+    let brace_start = find_first_top_level_brace(from_start);
 
     let end = match brace_start {
         Some(brace_pos) => {
@@ -523,6 +680,25 @@ fn extract_full_body(symbol_name: &str, kind: &str, source: &str) -> String {
     };
 
     source[start..end].to_string()
+}
+
+/// Find the first `{` that is not nested inside parentheses `(...)` or angle brackets
+/// `<...>`. This avoids matching type annotation braces like `{ body: string }`
+/// inside function parameters.
+fn find_first_top_level_brace(text: &str) -> Option<usize> {
+    let mut paren_depth: u32 = 0;
+    let mut angle_depth: u32 = 0;
+    for (i, ch) in text.char_indices() {
+        match ch {
+            '(' => paren_depth += 1,
+            ')' => paren_depth = paren_depth.saturating_sub(1),
+            '<' => angle_depth += 1,
+            '>' => angle_depth = angle_depth.saturating_sub(1),
+            '{' if paren_depth == 0 && angle_depth == 0 => return Some(i),
+            _ => {}
+        }
+    }
+    None
 }
 
 /// Extract a few lines of surrounding context for a changed symbol.
@@ -556,7 +732,10 @@ fn extract_context(
             .match_indices(kw)
             .filter_map(|(pos, _)| {
                 let after_kw = &source[pos + kw.len()..];
-                after_kw.trim_start().starts_with(symbol_name).then_some(pos)
+                after_kw
+                    .trim_start()
+                    .starts_with(symbol_name)
+                    .then_some(pos)
             })
             .collect();
         if let Some(&pos) = search.first() {
@@ -789,6 +968,10 @@ fn resolve_source_path(src: &str, project_root: &Path) -> PathBuf {
     }
 }
 
+/// Fetch diff between two versions. Priority:
+///   1. Remote fetch if `source_repo` is configured in migration.toml
+///   2. Local git strategies with graceful degradation
+///   3. Clear error if all fail
 fn fetch_diff(
     source_repo: Option<&str>,
     from_version: Option<&str>,
@@ -796,40 +979,210 @@ fn fetch_diff(
     source_path: Option<&str>,
     project_root: &Path,
 ) -> anyhow::Result<String> {
-    // Try local source first if available
-    if let Some(src) = source_path {
-        let candidate = resolve_source_path(src, project_root);
-        let has_git = candidate.join(".git").exists() || candidate.join("HEAD").exists();
-        if has_git {
-            match run_local_diff(&candidate, from_version, to_version) {
-                Ok(diff) => {
-                    println!("  Using local source at: {}", candidate.display());
-                    return Ok(diff);
-                }
-                Err(e) => {
-                    eprintln!(
-                        "  Local diff failed ({}), falling back to remote fetch...",
-                        e
-                    );
-                }
+    let from = from_version.unwrap_or("HEAD");
+
+    // Strategy 1: remote fetch (if source_repo is configured)
+    if let Some(repo) = source_repo
+        && !repo.is_empty()
+    {
+        println!(
+            "  Fetching diff from remote: {} {}..{}",
+            repo, from, to_version
+        );
+        match fetch_remote_diff(repo, from, to_version) {
+            Ok(diff) => return Ok(diff),
+            Err(e) => {
+                eprintln!("  Remote fetch failed: {}", e);
+                // fall through to local strategies
             }
         }
     }
 
-    let repo = source_repo.ok_or_else(|| {
-        anyhow::anyhow!("No source_repo in migration.toml and no local source found.")
-    })?;
-    let from = from_version.ok_or_else(|| {
+    // Strategy 2+: local strategies
+    let src = source_path.ok_or_else(|| {
         anyhow::anyhow!(
-            "No source_version in migration.toml. Cannot diff without a known base version."
+            "No project.source in migration.toml and remote fetch unavailable.\n\
+             Set source = \"path/to/local/repo\" or source_repo = \"https://...\" in migration.toml."
         )
     })?;
+    let candidate = resolve_source_path(src, project_root);
+    let has_git = candidate.join(".git").exists() || candidate.join("HEAD").exists();
+    if !has_git {
+        anyhow::bail!(
+            "Not a git repository: {}\n\
+             Set project.source in migration.toml to the local clone of the source repo.",
+            candidate.display()
+        );
+    }
 
-    println!(
-        "  Fetching diff from remote: {} {}..{}",
-        repo, from, to_version
+    println!("  Using local source at: {}", candidate.display());
+
+    // Strategy 2a: normal range diff `from..to`
+    let range = format!("{}..{}", from, to_version);
+    let output = std::process::Command::new("git")
+        .args(["diff", "-U9999", &range])
+        .current_dir(&candidate)
+        .output()
+        .map_err(|e| anyhow::anyhow!("Failed to run git: {}", e))?;
+
+    if output.status.success() {
+        let diff = String::from_utf8_lossy(&output.stdout).to_string();
+        if !diff.trim().is_empty() {
+            return Ok(diff);
+        }
+    }
+
+    // Strategy 2b: check which version is missing
+    let from_exists = std::process::Command::new("git")
+        .args(["cat-file", "-e", from])
+        .current_dir(&candidate)
+        .output()
+        .map(|o| o.status.success())
+        .unwrap_or(false);
+    let to_exists = std::process::Command::new("git")
+        .args(["cat-file", "-e", to_version])
+        .current_dir(&candidate)
+        .output()
+        .map(|o| o.status.success())
+        .unwrap_or(false);
+
+    // Strategy 2c: if only `to` exists, show just that commit
+    if to_exists && !from_exists {
+        eprintln!(
+            "  Warning: base version {} not found in local history, showing only the {} commit.",
+            from, to_version
+        );
+        let output = std::process::Command::new("git")
+            .args([
+                "diff",
+                "-U9999",
+                &format!("{}^..{}", to_version, to_version),
+            ])
+            .current_dir(&candidate)
+            .output()?;
+        if output.status.success() {
+            let diff = String::from_utf8_lossy(&output.stdout).to_string();
+            if !diff.trim().is_empty() {
+                return Ok(diff);
+            }
+        }
+    }
+
+    // Strategy 2d: if only `from` exists, show what changed since `from` vs working tree
+    if from_exists && !to_exists {
+        let output = std::process::Command::new("git")
+            .args(["diff", "-U9999", from, "--"])
+            .current_dir(&candidate)
+            .output()?;
+        if output.status.success() {
+            let diff = String::from_utf8_lossy(&output.stdout).to_string();
+            if !diff.trim().is_empty() {
+                eprintln!(
+                    "  Warning: target version {} not found, showing changes since {}.",
+                    to_version, from
+                );
+                return Ok(diff);
+            }
+        }
+    }
+
+    // Strategy 2e: show all changes in the working tree relative to `to`
+    if to_exists {
+        let output = std::process::Command::new("git")
+            .args(["diff", "-U9999", to_version, "--stat"])
+            .current_dir(&candidate)
+            .output()?;
+        if output.status.success() {
+            let stat = String::from_utf8_lossy(&output.stdout).to_string();
+            return Ok(stat);
+        }
+    }
+
+    anyhow::bail!(
+        "Cannot compute diff for {}..{} in {}.\n\
+         Nonexistent versions: {}\n\
+         Hint: ensure both versions exist in local git history, or use a branch/tag name.\n\
+         If you have configured source_repo, check that the remote is reachable.",
+        from,
+        to_version,
+        candidate.display(),
+        match (from_exists, to_exists) {
+            (false, false) => format!("both {} and {}", from, to_version),
+            (false, true) => format!("base version {}", from),
+            (true, false) => format!("target version {}", to_version),
+            (true, true) => "neither (unexpected)".to_string(),
+        },
     );
-    fetch_remote_diff(repo, from, to_version)
+}
+
+fn fetch_remote_diff(repo: &str, from: &str, to: &str) -> anyhow::Result<String> {
+    let tmp_dir = create_temp_dir()?;
+    let result = fetch_diff_internal(&tmp_dir, repo, from, to);
+    let _ = std::fs::remove_dir_all(&tmp_dir);
+    result
+}
+
+fn fetch_diff_internal(tmp_dir: &Path, repo: &str, from: &str, to: &str) -> anyhow::Result<String> {
+    let init = std::process::Command::new("git")
+        .args(["init"])
+        .current_dir(tmp_dir)
+        .output()?;
+    if !init.status.success() {
+        anyhow::bail!("git init failed in temp dir");
+    }
+
+    let add_remote = std::process::Command::new("git")
+        .args(["remote", "add", "origin", repo])
+        .current_dir(tmp_dir)
+        .output()?;
+    if !add_remote.status.success() {
+        let stderr = String::from_utf8_lossy(&add_remote.stderr);
+        anyhow::bail!("git remote add failed: {}", stderr);
+    }
+
+    // Fetch the branch that contains both commits (default: main)
+    let branch = "main";
+    let fetch = std::process::Command::new("git")
+        .args(["fetch", "origin", branch, "--depth", "10"])
+        .current_dir(tmp_dir)
+        .output()?;
+    if !fetch.status.success() {
+        let stderr = String::from_utf8_lossy(&fetch.stderr);
+        // Try HEAD as fallback
+        let fetch2 = std::process::Command::new("git")
+            .args(["fetch", "origin", "HEAD", "--depth", "10"])
+            .current_dir(tmp_dir)
+            .output()?;
+        if !fetch2.status.success() {
+            let stderr2 = String::from_utf8_lossy(&fetch2.stderr);
+            anyhow::bail!("git fetch failed: {} / {}", stderr, stderr2);
+        }
+    }
+
+    // Now both commits should be in the local history
+    let range = format!("{}..{}", from, to);
+    let diff = std::process::Command::new("git")
+        .args(["diff", "-U9999", &range])
+        .current_dir(tmp_dir)
+        .output()?;
+    if !diff.status.success() {
+        let stderr = String::from_utf8_lossy(&diff.stderr);
+        anyhow::bail!("git diff failed: {}", stderr);
+    }
+    Ok(String::from_utf8_lossy(&diff.stdout).to_string())
+}
+
+fn create_temp_dir() -> anyhow::Result<PathBuf> {
+    let base = std::env::temp_dir().join("_mig_diff");
+    let mut i = 0u64;
+    loop {
+        let dir = base.join(i.to_string());
+        if !dir.exists() {
+            std::fs::create_dir_all(&dir)?;
+            return Ok(dir);
+        }
+        i += 1;
+    }
 }
 
 /// Fetch the latest version tag from a remote repository.
@@ -901,94 +1254,6 @@ fn fetch_latest_version(repo: &str) -> anyhow::Result<String> {
         .ok_or_else(|| anyhow::anyhow!("No tags or refs found in remote {}", repo))?;
 
     Ok(latest)
-}
-
-fn run_local_diff(
-    src_path: &Path,
-    from_version: Option<&str>,
-    to_version: &str,
-) -> anyhow::Result<String> {
-    let from = from_version.unwrap_or("HEAD");
-    let range = format!("{}..{}", from, to_version);
-    let output = std::process::Command::new("git")
-        .args(["diff", "-U9999", &range])
-        .current_dir(src_path)
-        .output()?;
-    if !output.status.success() {
-        let stderr = String::from_utf8_lossy(&output.stderr);
-        anyhow::bail!("git diff failed in {}: {}", src_path.display(), stderr);
-    }
-    Ok(String::from_utf8_lossy(&output.stdout).to_string())
-}
-
-fn fetch_remote_diff(repo: &str, from: &str, to: &str) -> anyhow::Result<String> {
-    let tmp_dir = create_temp_dir()?;
-    let result = fetch_diff_internal(&tmp_dir, repo, from, to);
-    let _ = std::fs::remove_dir_all(&tmp_dir);
-    result
-}
-
-fn fetch_diff_internal(tmp_dir: &Path, repo: &str, from: &str, to: &str) -> anyhow::Result<String> {
-    let init = std::process::Command::new("git")
-        .args(["init"])
-        .current_dir(tmp_dir)
-        .output()?;
-    if !init.status.success() {
-        anyhow::bail!("git init failed in temp dir");
-    }
-
-    let add_remote = std::process::Command::new("git")
-        .args(["remote", "add", "origin", repo])
-        .current_dir(tmp_dir)
-        .output()?;
-    if !add_remote.status.success() {
-        let stderr = String::from_utf8_lossy(&add_remote.stderr);
-        anyhow::bail!("git remote add failed: {}", stderr);
-    }
-
-    // Fetch the branch that contains both commits (default: main)
-    let branch = "main";
-    let fetch = std::process::Command::new("git")
-        .args(["fetch", "origin", branch, "--depth", "10"])
-        .current_dir(tmp_dir)
-        .output()?;
-    if !fetch.status.success() {
-        let stderr = String::from_utf8_lossy(&fetch.stderr);
-        // Try HEAD as fallback
-        let fetch2 = std::process::Command::new("git")
-            .args(["fetch", "origin", "HEAD", "--depth", "10"])
-            .current_dir(tmp_dir)
-            .output()?;
-        if !fetch2.status.success() {
-            let stderr2 = String::from_utf8_lossy(&fetch2.stderr);
-            anyhow::bail!("git fetch failed: {} / {}", stderr, stderr2);
-        }
-    }
-
-    // Now both commits should be in the local history
-    let range = format!("{}..{}", from, to);
-    let diff = std::process::Command::new("git")
-        .args(["diff", "-U9999", &range])
-        .current_dir(tmp_dir)
-        .output()?;
-    if !diff.status.success() {
-        let stderr = String::from_utf8_lossy(&diff.stderr);
-        anyhow::bail!("git diff failed: {}", stderr);
-    }
-    Ok(String::from_utf8_lossy(&diff.stdout).to_string())
-}
-
-fn create_temp_dir() -> anyhow::Result<PathBuf> {
-    let base = std::env::temp_dir().join("_mig_diff");
-    let mut i = 0u64;
-    loop {
-        let dir = base.join(i.to_string());
-        if !dir.exists() {
-            std::fs::create_dir_all(&dir)?;
-            return Ok(dir);
-        }
-        i += 1;
-    }
 }
 
 /// ── Step 2: Parse raw unified diff into per-file sections ─────────────────
@@ -1118,9 +1383,7 @@ fn reconstruct_full_file(diff_lines: &[DiffLine]) -> Option<String> {
 }
 
 /// Load the stored `recommendations.json` and build a file → recommendations map.
-fn load_file_recommendations(
-    report_dir: &Path,
-) -> HashMap<String, Vec<DependencyRecommendation>> {
+fn load_file_recommendations(report_dir: &Path) -> HashMap<String, Vec<DependencyRecommendation>> {
     let rec_path = report_dir.join(output_paths::external::RECOMMENDATIONS);
     if !rec_path.exists() {
         return HashMap::new();

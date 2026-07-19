@@ -7,7 +7,8 @@ pub mod init;
 pub mod report;
 pub mod summary;
 
-use std::path::PathBuf;
+use migration_core::util;
+use std::path::{Path, PathBuf};
 
 /// Resolve a user-supplied path to an absolute path WITHOUT using
 /// `canonicalize()` (which on Windows produces `\\?\` extended-length
@@ -22,24 +23,19 @@ fn resolve_project_path(input: &str) -> PathBuf {
             .unwrap_or_else(|_| p.to_path_buf())
     };
     // Normalize `.` and `..` segments without hitting the filesystem
-    normalize_path_components(&resolved)
+    util::normalize_path(&resolved)
 }
 
-/// Normalize `.` and `..` segments in a path without using canonicalize.
-fn normalize_path_components(path: &std::path::Path) -> PathBuf {
-    let mut result = PathBuf::new();
-    for component in path.components() {
-        match component {
-            std::path::Component::CurDir => {}
-            std::path::Component::ParentDir => {
-                if result.file_name().is_some() {
-                    result.pop();
-                } else {
-                    result.push("..");
-                }
-            }
-            other => result.push(other),
-        }
+/// Run a `git` command in `cwd` and return trimmed stdout on success.
+fn run_git_cmd(cwd: &Path, args: &[&str]) -> Option<String> {
+    let output = std::process::Command::new("git")
+        .args(args)
+        .current_dir(cwd)
+        .output()
+        .ok()?;
+    if !output.status.success() {
+        return None;
     }
-    result
+    let s = String::from_utf8_lossy(&output.stdout).trim().to_string();
+    if s.is_empty() { None } else { Some(s) }
 }

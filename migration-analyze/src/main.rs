@@ -53,22 +53,31 @@ fn print_usage_guide() {
     println!("╚══════════════════════════════════════════════════════════╝");
     println!();
     println!("USAGE:");
-    println!("  migration-analyze <COMMAND>");
+    println!("  migration-analyze <COMMAND> [OPTIONS] [PATH]");
+    println!();
+    println!("QUICK START (in your source repo):");
+    println!("  migration-analyze analyze         Analyze current project");
+    println!("  migration-analyze summary         See results in terminal");
+    println!("  migration-analyze diff --auto     Check what changed since analysis");
     println!();
     println!("COMMANDS:");
-    println!("  init           Create a new migration project directory");
-    println!("  analyze        Analyze source repo and create migration folder");
-    println!("  diff           Run incremental git diff analysis");
+    println!("  analyze        Analyze source repo and generate migration report");
+    println!("  summary        Show analysis results as a terminal summary");
+    println!("  diff           Incremental diff analysis against a newer version");
     println!("  boundaries     Generate interface boundary report (layering + cut planes)");
     println!("  check-updates  Check source repo for updates since last analysis");
-    println!("  summary        Show a summary of the latest analysis results");
+    println!("  init           Create a new migration project scaffold");
     println!();
-    println!("QUICK START:");
-    println!("  1. migration-analyze init <project-name>");
-    println!("  2. cd <project-name> && git clone <source-repo>");
-    println!("  3. migration-analyze analyze");
-    println!("  4. migration-analyze summary  (view results in terminal)");
+    println!("EXAMPLES:");
+    println!("  migration-analyze analyze                            # analyze current directory");
+    println!("  migration-analyze analyze ../my-project               # analyze a project");
+    println!("  migration-analyze summary --format json               # output as JSON");
+    println!("  migration-analyze diff --new-version v2.0.0           # diff against a tag");
+    println!(
+        "  migration-analyze diff --auto                         # auto-detect latest version"
+    );
+    println!("  migration-analyze check-updates                       # check for source changes");
     println!();
-    println!("  For help on a specific command:");
-    println!("    migration-analyze <COMMAND> --help");
+    println!("ALL COMMANDS accept a path argument (default = current directory).");
+    println!("Run: migration-analyze <COMMAND> --help  for detailed options.");
 }

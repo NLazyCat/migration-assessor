@@ -1,22 +1,11 @@
 use crate::project::SourceLanguage;
-use std::path::{Component, Path, PathBuf};
+use crate::util;
+use std::path::{Path, PathBuf};
 use walkdir::{DirEntry, WalkDir};
 
 /// Normalize `.` and `..` segments without touching the filesystem.
 pub(crate) fn normalize_path_components(path: &Path) -> PathBuf {
-    let mut result = PathBuf::new();
-    for component in path.components() {
-        match component {
-            Component::CurDir => {}
-            Component::ParentDir => {
-                if !result.pop() {
-                    result.push("..");
-                }
-            }
-            other => result.push(other),
-        }
-    }
-    result
+    util::normalize_path(path)
 }
 
 /// Built-in framework boilerplate glob patterns.
@@ -107,10 +96,14 @@ impl FileDiscovery {
 
         let default_skipped = ["node_modules", "target", ".git", "dist", "build"];
         for part in relative.components() {
-            if let Some(name) = part.as_os_str().to_str()
-                && default_skipped.contains(&name)
-            {
-                return false;
+            if let Some(name) = part.as_os_str().to_str() {
+                if default_skipped.contains(&name) {
+                    return false;
+                }
+                // Skip migration output directories created by a previous run
+                if name.ends_with("-migration") {
+                    return false;
+                }
             }
         }
 

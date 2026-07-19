@@ -1,0 +1,24 @@
+[library.criterion]
+type = "framework"
+description = "Statistics-driven micro-benchmarking framework for Rust"
+tags = ["testing", "benchmark", "statistics", "performance", "regression"]
+
+[library.rstest]
+type = "library"
+description = "Fixture-based test framework for Rust with parametrized cases"
+tags = ["testing", "fixture", "parametrized", "integration"]
+
+[library.mockall]
+type = "library"
+description = "Mock object library for Rust with automock attribute macro"
+tags = ["testing", "mock", "trait", "isolation", "unit"]
+
+[library.proptest]
+type = "library"
+description = "Property-based testing framework for Rust"
+tags = ["testing", "property", "fuzzing", "generative", "shrink"]
+
+[library.quickcheck]
+type = "library"
+description = "QuickCheck-style property-based testing for Rust"
+tags = ["testing", "property", "generative", "random", "shrink"]

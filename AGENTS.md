@@ -23,6 +23,20 @@ CI gate order (`.github/workflows/ci.yml`): `fmt --check` → `clippy -D warning
 - Edition 2024 + `noUncheckedIndexedAccess`-style strictness in core logic; respect `.gitignore` (`/target`, `Cargo.lock`, `/scripts`, `.eve/`).
 
 ## Conventions
-- Compatibility knowledge lives in `core/src/compatibility_data.toml` (edit data, not just code).
+- Compatibility knowledge lives in `core/src/compatibility_data.toml` (edit data, not just code). There are pre-existing TOML duplicate keys (e.g., `rust->typescript.rand` in both `auth_security.toml` and `utility.toml`) that cause 4 test failures. User said "不要碰兼容性矩阵" (don't touch compatibility matrix).
 - Config is `migration.toml` in the user's project dir; `analyze`/`diff`/`boundaries`/`summary`/`check-updates` are the CLI subcommands (see `main.rs`).
 - No README yet — `main.rs`'s `print_usage_guide()` is the closest thing to user docs.
+
+## Session Summary (2026-07-19)
+
+### Bugs fixed this session
+1. **`context.rs:21`** — `canonicalize()` → `normalize_path()` to avoid `\\?\` Windows extended-length paths that break TOML/path logic.
+2. **`analyze.rs` config generation** — was writing `source = <project_root>` instead of actual source repo, and dropped `source_lang`. Fixed both.
+3. **`detect_source_repo` priority reorder** — now scans subdirs FIRST, falls back to `config.project.source` only for disambiguation (0 or multiple candidates). Also handles absolute paths in config.
+4. **`typescript.rs` extractor** — checks `ret.diagnostics` after parsing, logs parser errors as warnings, returns partial AST instead of empty.
+5. **`compatibility.rs`** — 3 clippy cleanups: gated unused `parse_language_pair_key` with `#[cfg(test)]`, removed dead `if { None } else { None }`, replaced `or_else(|| ...)` with `or(...)`.
+
+### Known issues
+- `test_compatibility_matrix_loads_rust_to_ts_entries` fails (TOML duplicate keys in `compatibility_data/`). 17/18 pass.
+- `diff` has pre-existing limitation: only reports changes for symbols IN the index, new symbols added post-analyze are silently skipped.
+- `diff` fetches from remote when local comparison fails (e.g., `--new-version BASE~1` not in local history), no graceful fallback.

@@ -1,0 +1,29 @@
+[library.sqlx]
+type = "orm"
+description = "Async SQL toolkit with compile-time checked queries for Rust"
+tags = ["database", "sql", "async", "type-safe", "compile-time", "query-builder"]
+
+[library.diesel]
+type = "orm"
+description = "Safe, extensible ORM and query builder for Rust"
+tags = ["database", "orm", "sql", "type-safe", "query-builder", "migration"]
+
+[library.sea-orm]
+type = "orm"
+description = "Async ORM for Rust with migration support and ActiveRecord pattern"
+tags = ["database", "orm", "sql", "async", "migration", "active-record"]
+
+[library.rusqlite]
+type = "library"
+description = "Ergonomic wrapper for SQLite in Rust"
+tags = ["database", "sqlite", "sql", "embedded", "wrapper"]
+
+[library.redis-rs]
+type = "library"
+description = "Redis client library for Rust with async and sync support"
+tags = ["database", "redis", "cache", "pubsub", "key-value", "async"]
+
+[library.tokio-postgres]
+type = "library"
+description = "Asynchronous PostgreSQL client for Rust based on tokio"
+tags = ["database", "postgresql", "sql", "async", "tokio", "client"]

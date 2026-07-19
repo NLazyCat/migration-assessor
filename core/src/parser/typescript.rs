@@ -1,16 +1,16 @@
 use super::ModuleReferences;
+use crate::util;
 use std::path::Path;
 
 use oxc_allocator::Allocator;
 use oxc_ast::ast::Statement;
 use oxc_parser::{ParseOptions, Parser};
-use oxc_span::SourceType;
 
 pub fn parse_references(
     source: &str,
     file_path: Option<&Path>,
 ) -> anyhow::Result<ModuleReferences> {
-    let source_type = detect_source_type(file_path);
+    let source_type = util::detect_source_type(file_path);
 
     let allocator = Allocator::default();
     let ret = Parser::new(&allocator, source, source_type)
@@ -66,13 +66,3 @@ fn classify_import(src: &str, relative: &mut Vec<String>, external: &mut Vec<Str
     }
 }
 
-fn detect_source_type(file_path: Option<&Path>) -> SourceType {
-    match file_path.and_then(|p| p.extension().and_then(|e| e.to_str())) {
-        Some("tsx") => SourceType::tsx(),
-        Some("ts") => SourceType::ts(),
-        Some("mts") | Some("cts") => SourceType::default()
-            .with_typescript(true)
-            .with_module(true),
-        _ => SourceType::ts(),
-    }
-}

@@ -373,8 +373,7 @@ mod tests {
             vec!["axum".to_string(), "lodash".to_string()],
         );
 
-        let score =
-            module_compatibility("src/server.ts", &cm, Some(&md), 0.5);
+        let score = module_compatibility("src/server.ts", &cm, Some(&md), 0.5);
         // axum=1.0 + lodash=0.0 → avg=0.5
         assert!((score - 0.5).abs() < 1e-6);
 

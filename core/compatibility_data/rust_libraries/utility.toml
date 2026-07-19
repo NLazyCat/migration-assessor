@@ -1,0 +1,60 @@
+[library.chrono]
+type = "library"
+description = "Date and time library for Rust with timezone support"
+tags = ["date", "time", "timezone", "parsing", "duration"]
+
+[library.regex]
+type = "library"
+description = "Regular expression engine for Rust with automatic optimizations"
+tags = ["pattern", "matching", "text", "search", "replace"]
+
+[library.uuid]
+type = "library"
+description = "UUID generation and comparison library for Rust"
+tags = ["uuid", "identifier", "generation", "rfc4122"]
+
+[library.rayon]
+type = "library"
+description = "Simple work-stealing parallelism for Rust data processing"
+tags = ["parallel", "thread", "work-stealing", "data-parallel", "iterators"]
+
+[library.tokio]
+type = "library"
+description = "Asynchronous runtime for Rust for building reliable network applications"
+tags = ["async", "runtime", "io", "network", "timer", "task"]
+
+[library.futures]
+type = "library"
+description = "Async primitives, streams, and combinators for Rust"
+tags = ["async", "stream", "combinator", "future", "executor"]
+
+[library.itertools]
+type = "library"
+description = "Extra iterator adaptors, functions, and macros for Rust"
+tags = ["iterator", "combinator", "functional", "collection", "adapter"]
+
+[library.indexmap]
+type = "library"
+description = "Hash map with insertion-order preservation and fast lookup"
+tags = ["data", "map", "ordered", "collection", "hash"]
+
+[library.parking_lot]
+type = "library"
+description = "Faster, more compact synchronization primitives for Rust"
+tags = ["concurrency", "mutex", "rwlock", "sync", "high-performance"]
+
+[library.crossbeam]
+type = "library"
+description = "Tools for concurrent programming in Rust"
+tags = ["concurrency", "channel", "epoch", "thread", "lock-free"]
+
+[library.lazy_static]
+type = "library"
+description = "Lazy evaluated static initialization for Rust"
+tags = ["static", "lazy", "global", "initialization"]
+
+[library.once_cell]
+type = "library"
+description = "Lazy initialization with OnceCell and OnceLock"
+tags = ["static", "lazy", "once", "initialization", "sync"]
+

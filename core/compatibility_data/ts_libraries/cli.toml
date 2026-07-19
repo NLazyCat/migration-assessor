@@ -1,0 +1,29 @@
+[library.commander]
+type = "library"
+description = "Complete solution for Node.js command-line interfaces"
+tags = ["cli", "parser", "arguments", "commands", "help"]
+
+[library.yargs]
+type = "library"
+description = "Interactive arguments parser for Node.js with auto-generated help"
+tags = ["cli", "parser", "arguments", "commands", "help"]
+
+[library.chalk]
+type = "library"
+description = "Terminal string styling with an expressive API"
+tags = ["cli", "terminal", "color", "styling", "output"]
+
+[library.ora]
+type = "library"
+description = "Elegant terminal spinner for Node.js"
+tags = ["cli", "terminal", "spinner", "progress", "interactive"]
+
+[library.ink]
+type = "framework"
+description = "React for CLIs — build interactive CLI apps"
+tags = ["cli", "react", "component", "interactive", "terminal"]
+
+[library."listr2"]
+type = "library"
+description = "Task list for CLIs with progress and subtasks"
+tags = ["cli", "task", "progress", "list", "interactive"]

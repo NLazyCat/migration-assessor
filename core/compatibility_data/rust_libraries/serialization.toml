@@ -1,0 +1,29 @@
+[library.serde]
+type = "library"
+description = "Generic serialization/deserialization framework for Rust data structures"
+tags = ["serialization", "deserialization", "json", "framework", "derive"]
+
+[library.serde_json]
+type = "library"
+description = "JSON serialization and deserialization library for Rust"
+tags = ["serialization", "json", "parsing", "serde"]
+
+[library.serde_yaml]
+type = "library"
+description = "YAML serialization and deserialization for Rust"
+tags = ["serialization", "yaml", "parsing", "serde", "config"]
+
+[library.toml]
+type = "library"
+description = "TOML serialization and deserialization for Rust"
+tags = ["serialization", "toml", "parsing", "config", "serde"]
+
+[library.ron]
+type = "library"
+description = "Rusty Object Notation — compact data format for configuration"
+tags = ["serialization", "config", "format", "rust-specific"]
+
+[library.bincode]
+type = "library"
+description = "Binary serialization and deserialization for Rust with Serde support"
+tags = ["serialization", "binary", "compact", "high-performance", "serde"]
