@@ -2,15 +2,11 @@ use super::{
     FileBindings, ForwardIndex, ImportBinding, Location, ReferenceKind, ReverseIndex,
     SymbolReference,
 };
-use crate::cache::{AnalysisCache, CacheKey, TOOL_VERSION};
 use rayon::prelude::*;
-use serde_json::json;
 use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
 use syn::{self, Expr, ExprCall, ExprPath, ItemUse, Type, UseTree, spanned::Spanned, visit::Visit};
-
-const PARSER_VERSION: &str = "syn-2.0.119";
 
 /// Parse import bindings from a Rust source file.
 pub fn parse_import_bindings(source: &str) -> anyhow::Result<Vec<ImportBinding>> {
@@ -218,46 +214,7 @@ fn extract_file_refs(
     file: &Path,
     root: &Path,
     import_map: &HashMap<String, FileBindings>,
-    cache: Option<&AnalysisCache>,
 ) -> Option<FileRefs> {
-    let cache_key = match CacheKey::for_file(file, PARSER_VERSION, TOOL_VERSION) {
-        Ok(k) => k,
-        Err(e) => {
-            eprintln!(
-                "Warning: failed to build cache key for {}: {}",
-                file.display(),
-                e
-            );
-            return None;
-        }
-    };
-
-    if let Some(cached) = cache.and_then(|c| c.get(&cache_key)) {
-        let forward: ForwardIndex = match serde_json::from_value(cached.get("forward")?.clone()) {
-            Ok(v) => v,
-            Err(e) => {
-                eprintln!(
-                    "Warning: failed to deserialize cached forward refs for {}: {}",
-                    file.display(),
-                    e
-                );
-                return None;
-            }
-        };
-        let reverse: ReverseIndex = match serde_json::from_value(cached.get("reverse")?.clone()) {
-            Ok(v) => v,
-            Err(e) => {
-                eprintln!(
-                    "Warning: failed to deserialize cached reverse refs for {}: {}",
-                    file.display(),
-                    e
-                );
-                return None;
-            }
-        };
-        return Some(FileRefs { forward, reverse });
-    }
-
     let source = fs::read_to_string(file).ok()?;
 
     let relative = file.strip_prefix(root).unwrap_or(file);
@@ -279,26 +236,10 @@ fn extract_file_refs(
 
     visitor.visit_file(&syntax_tree);
 
-    let result = FileRefs {
+    Some(FileRefs {
         forward: visitor.forward,
         reverse: visitor.reverse,
-    };
-
-    if let Some(cache) = cache {
-        let value = json!({
-            "forward": result.forward,
-            "reverse": result.reverse,
-        });
-        if let Err(e) = cache.put(&cache_key, &value) {
-            eprintln!(
-                "Warning: failed to write reference cache for {}: {}",
-                file.display(),
-                e
-            );
-        }
-    }
-
-    Some(result)
+    })
 }
 
 /// A visitor that collects references to imported symbols.
@@ -381,13 +322,12 @@ impl<'a> ReferenceVisitor<'a> {
 pub fn extract_all(
     root: &Path,
     files: &[PathBuf],
-    cache: Option<&AnalysisCache>,
 ) -> anyhow::Result<(ForwardIndex, ReverseIndex)> {
     let import_map = build_import_map(root, files)?;
 
     let per_file: Vec<FileRefs> = files
         .par_iter()
-        .filter_map(|file| extract_file_refs(file, root, &import_map, cache))
+        .filter_map(|file| extract_file_refs(file, root, &import_map))
         .collect();
 
     let mut forward: ForwardIndex = HashMap::new();

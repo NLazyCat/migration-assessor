@@ -1,9 +1,11 @@
 pub mod analyze;
 pub mod boundaries;
+pub mod check_updates;
 pub mod context;
 pub mod diff;
 pub mod init;
-pub mod serve;
+pub mod report;
+pub mod summary;
 
 use std::path::PathBuf;
 

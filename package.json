@@ -1,0 +1,14 @@
+{
+  "name": "migration-assessor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eve dev",
+    "build": "eve build",
+    "info": "eve info"
+  },
+  "dependencies": {
+    "eve": "link:../eve/packages/eve",
+    "zod": "^4.4.3"
+  }
+}

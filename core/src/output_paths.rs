@@ -45,3 +45,9 @@ pub mod diffs {
     }
     pub const LATEST: &str = "diffs/latest.json";
 }
+
+pub mod updates {
+    pub const DIFF_OVERVIEW: &str = "updates/diff_overview.json";
+    pub const CHANGED_FILES: &str = "updates/changed_files.json";
+    pub const DEP_CHANGES: &str = "updates/dep_changes.json";
+}

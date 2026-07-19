@@ -1,0 +1,269 @@
+# Built-in compatibility mappings for cross-language migration
+# Format: [<source_language>-><target_language>.<package_name>]
+#   equivalent = "<rust-crate>"       # The equivalent package in target language
+#   compatibility = "full" | "partial" | "none" | "unknown"
+#   note = "<optional description>"
+#   tags = ["<optional tags for filtering>"]
+
+# ============================================================================
+# TypeScript → Rust
+# ============================================================================
+
+# ── Web Framework ──────────────────────────────────────────────────────────────
+"typescript->rust.express" = { equivalent = "axum", compatibility = "partial", note = "Middleware pattern differs; routing model is similar.", tags = ["http", "server", "framework"] }
+
+"typescript->rust.koa" = { equivalent = "axum", compatibility = "partial", note = "Koa's async middleware model maps well to axum's tower layer.", tags = ["http", "server", "framework"] }
+
+"typescript->rust.fastify" = { equivalent = "axum", compatibility = "partial", note = "Fastify plugin system differs; route handler patterns similar.", tags = ["http", "server", "framework"] }
+
+"typescript->rust.next" = { compatibility = "none", note = "Next.js is a full React framework with no direct Rust equivalent. Consider using a separate Rust backend (axum/actix) + frontend framework.", tags = ["framework", "ssr", "fullstack"] }
+
+"typescript->rust.nest" = { equivalent = "axum", compatibility = "partial", note = "NestJS decorator-based DI doesn't map directly; architecture patterns differ.", tags = ["http", "server", "framework", "di"] }
+
+"typescript->rust.hono" = { equivalent = "axum", compatibility = "partial", note = "Hono's lightweight handler model maps well to axum's handler pattern.", tags = ["http", "server", "framework"] }
+
+"typescript->rust.socket.io" = { equivalent = "tungstenite", compatibility = "partial", note = "WebSocket concept equivalent; event-based API differs significantly.", tags = ["websocket", "realtime"] }
+
+# ── HTTP Client ────────────────────────────────────────────────────────────────
+"typescript->rust.axios" = { equivalent = "reqwest", compatibility = "partial", note = "Async API differs; error handling models differ.", tags = ["http", "network"] }
+
+"typescript->rust.got" = { equivalent = "reqwest", compatibility = "partial", note = "Both are HTTP clients; streaming and API patterns differ.", tags = ["http", "network"] }
+
+"typescript->rust.node-fetch" = { equivalent = "reqwest", compatibility = "partial", note = "Fetch API maps to reqwest; error handling model differs.", tags = ["http", "network"] }
+
+"typescript->rust.undici" = { equivalent = "reqwest", compatibility = "partial", note = "Low-level HTTP client; reqwest higher-level but functionally covers.", tags = ["http", "network"] }
+
+# ── Date & Time ───────────────────────────────────────────────────────────────
+"typescript->rust.date-fns" = { equivalent = "chrono", compatibility = "partial", note = "Most date operations map; timezone handling differs.", tags = ["date", "time"] }
+
+"typescript->rust.moment" = { equivalent = "chrono", compatibility = "partial", note = "Use chrono for date/time operations.", tags = ["date", "time"] }
+
+"typescript->rust.dayjs" = { equivalent = "chrono", compatibility = "partial", note = "Lightweight date library; chrono provides equivalent functionality.", tags = ["date", "time"] }
+
+"typescript->rust.luxon" = { equivalent = "chrono", compatibility = "partial", note = "DateTime and Duration concepts map well to chrono.", tags = ["date", "time"] }
+
+# ── Validation ─────────────────────────────────────────────────────────────────
+"typescript->rust.joi" = { equivalent = "validator", compatibility = "partial", note = "Validation concept similar; API design differs.", tags = ["validation"] }
+
+"typescript->rust.zod" = { equivalent = "validator", compatibility = "partial", note = "Schema validation concept equivalent; API differs significantly.", tags = ["validation", "schema"] }
+
+"typescript->rust.yup" = { equivalent = "validator", compatibility = "partial", note = "Schema validation similar to zod/joi; maps to validator.", tags = ["validation", "schema"] }
+
+"typescript->rust.ajv" = { equivalent = "jsonschema", compatibility = "partial", note = "JSON Schema validation; rs-json-schema provides similar functionality.", tags = ["validation", "schema", "json"] }
+
+"typescript->rust.class-validator" = { equivalent = "validator", compatibility = "partial", note = "Decorator-based validation in TypeScript; struct validation in Rust.", tags = ["validation", "decorator"] }
+
+# ── Serialization ──────────────────────────────────────────────────────────────
+"typescript->rust.class-transformer" = { equivalent = "serde", compatibility = "partial", note = "Object serialization/deserialization; serde is more type-system oriented.", tags = ["serialization", "transformer"] }
+
+"typescript->rust.protobuf" = { equivalent = "prost", compatibility = "full", note = "Protocol Buffers support; prost is the standard Rust implementation.", tags = ["serialization", "protobuf", "grpc"] }
+
+"typescript->rust.grpc" = { equivalent = "tonic", compatibility = "partial", note = "gRPC framework; tonic provides similar server/client model.", tags = ["rpc", "grpc", "network"] }
+
+# ── Database / ORM ─────────────────────────────────────────────────────────────
+"typescript->rust.prisma" = { equivalent = "diesel", compatibility = "partial", note = "ORM concept equivalent; schema definition and query API differ significantly.", tags = ["database", "orm", "sql"] }
+
+"typescript->rust.typeorm" = { equivalent = "diesel", compatibility = "partial", note = "Active Record/Data Mapper pattern; diesel uses schema-first approach.", tags = ["database", "orm", "sql"] }
+
+"typescript->rust.mongoose" = { equivalent = "mongodb", compatibility = "partial", note = "MongoDB ODM; official mongodb driver for Rust.", tags = ["database", "mongodb", "odm"] }
+
+"typescript->rust.sequelize" = { equivalent = "diesel", compatibility = "partial", note = "Promise-based ORM; diesel provides compile-time checked queries.", tags = ["database", "orm", "sql"] }
+
+"typescript->rust.knex" = { equivalent = "sqlx", compatibility = "partial", note = "Query builder; sqlx provides compile-time checked SQL with similar flexibility.", tags = ["database", "sql", "query-builder"] }
+
+"typescript->rust.redis" = { equivalent = "redis", compatibility = "full", note = "Redis client; direct equivalent with similar API.", tags = ["database", "cache", "redis"] }
+
+"typescript->rust.ioredis" = { equivalent = "redis", compatibility = "full", note = "Redis client; similar API patterns.", tags = ["database", "cache", "redis"] }
+
+# ── Authentication / Security ──────────────────────────────────────────────────
+"typescript->rust.jsonwebtoken" = { equivalent = "jsonwebtoken", compatibility = "full", note = "Direct equivalent with compatible API.", tags = ["auth", "jwt"] }
+
+"typescript->rust.bcrypt" = { equivalent = "bcrypt", compatibility = "full", note = "Direct equivalent with compatible API.", tags = ["auth", "crypto"] }
+
+"typescript->rust.bcryptjs" = { equivalent = "bcrypt", compatibility = "full", note = "bcryptjs → bcrypt crate.", tags = ["auth", "crypto"] }
+
+"typescript->rust.argon2" = { equivalent = "argon2", compatibility = "full", note = "Password hashing; argon2 crate for Rust.", tags = ["auth", "crypto", "password"] }
+
+"typescript->rust.passport" = { equivalent = "tower-http", compatibility = "partial", note = "Authentication middleware; tower-http provides auth layer, but strategy pattern differs.", tags = ["auth", "middleware"] }
+
+"typescript->rust.crypto" = { equivalent = "sha2", compatibility = "partial", note = "Node crypto module; Rust's crypto ecosystem is more granular.", tags = ["crypto", "hash", "encryption"] }
+
+# ── Utility ────────────────────────────────────────────────────────────────────
+"typescript->rust.lodash" = { compatibility = "none", note = "Must be reimplemented or replaced with idiomatic Rust.", tags = ["utility", "collection"] }
+
+"typescript->rust.underscore" = { compatibility = "none", note = "Must be reimplemented or replaced with idiomatic Rust.", tags = ["utility", "collection"] }
+
+"typescript->rust.ramda" = { compatibility = "none", note = "Functional utility library; Rust's iterator chain covers most use cases.", tags = ["utility", "functional"] }
+
+"typescript->rust.async" = { equivalent = "tokio", compatibility = "partial", note = "Node.js async model vs Rust's async/await with tokio; fundamental differences in execution model.", tags = ["async", "runtime"] }
+
+"typescript->rust.chalk" = { equivalent = "console", compatibility = "full", note = "Terminal styling; 'console' crate provides equivalent functionality.", tags = ["cli", "terminal", "styling"] }
+
+"typescript->rust.yargs" = { equivalent = "clap", compatibility = "full", note = "CLI argument parser; clap is the standard Rust equivalent.", tags = ["cli", "parser"] }
+
+"typescript->rust.commander" = { equivalent = "clap", compatibility = "full", note = "Both are CLI argument parsers with similar patterns.", tags = ["cli"] }
+
+"typescript->rust.inquirer" = { equivalent = "dialoguer", compatibility = "partial", note = "Interactive CLI prompts; dialoguer provides similar functionality.", tags = ["cli", "interactive"] }
+
+"typescript->rust.colors" = { equivalent = "colored", compatibility = "full", note = "Terminal colors; direct equivalent.", tags = ["cli", "terminal", "styling"] }
+
+"typescript->rust.uuid" = { equivalent = "uuid", compatibility = "full", note = "Direct equivalent with similar API.", tags = ["id", "unique"] }
+
+"typescript->rust.nanoid" = { equivalent = "nanoid", compatibility = "full", note = "Unique ID generation; equivalent API available in Rust.", tags = ["id", "unique"] }
+
+"typescript->rust.dotenv" = { equivalent = "dotenvy", compatibility = "full", note = "Environment variable loading; direct equivalent.", tags = ["config", "env"] }
+
+"typescript->rust.config" = { equivalent = "config", compatibility = "full", note = "Configuration management; config crate in Rust.", tags = ["config", "settings"] }
+
+"typescript->rust.pino" = { equivalent = "tracing", compatibility = "partial", note = "Structured logging; tracing provides spans, events, and structured output.", tags = ["logging", "observability"] }
+
+"typescript->rust.winston" = { equivalent = "tracing", compatibility = "partial", note = "Logging library; tracing provides structured logging with levels.", tags = ["logging", "observability"] }
+
+"typescript->rust.morgan" = { equivalent = "tower-http", compatibility = "partial", note = "HTTP request logging middleware; tower-http Trace layer.", tags = ["logging", "http", "middleware"] }
+
+"typescript->rust.events" = { equivalent = "event-listener", compatibility = "partial", note = "Node EventEmitter; event-listener crate for Rust async.", tags = ["events", "async"] }
+
+"typescript->rust.ejs" = { equivalent = "askama", compatibility = "partial", note = "Template engine; askama provides compile-time checked templates.", tags = ["template", "html"] }
+
+"typescript->rust.pug" = { equivalent = "askama", compatibility = "partial", note = "Template engine; askama for compile-time templates.", tags = ["template", "html"] }
+
+"typescript->rust.handlebars" = { equivalent = "handlebars", compatibility = "full", note = "Template engine; handlebars crate provides equivalent runtime template engine.", tags = ["template", "html"] }
+
+"typescript->rust.fs-extra" = { equivalent = "std::fs", compatibility = "partial", note = "File system operations; Rust std::fs covers most use cases.", tags = ["fs", "file"] }
+
+"typescript->rust.glob" = { equivalent = "glob", compatibility = "full", note = "File globbing; glob crate provides equivalent functionality.", tags = ["fs", "file", "glob"] }
+
+"typescript->rust.chokidar" = { equivalent = "notify", compatibility = "partial", note = "File watcher; notify crate for file system events.", tags = ["fs", "watcher"] }
+
+# ── Testing ────────────────────────────────────────────────────────────────────
+"typescript->rust.jest" = { equivalent = "rstest", compatibility = "partial", note = "Testing framework; rstest provides attribute-based tests, but lacks built-in assertions.", tags = ["testing", "framework"] }
+
+"typescript->rust.mocha" = { equivalent = "rstest", compatibility = "partial", note = "Testing framework; similar describe/it patterns.", tags = ["testing", "framework"] }
+
+"typescript->rust.chai" = { equivalent = "pretty_assertions", compatibility = "partial", note = "Assertion library; Rust's built-in assert macros with pretty_assertions.", tags = ["testing", "assertion"] }
+
+"typescript->rust.sinon" = { equivalent = "mockito", compatibility = "partial", note = "Mocking/stubbing; mockito for HTTP mocking, manual mocking for modules.", tags = ["testing", "mock"] }
+
+"typescript->rust.cypress" = { compatibility = "none", note = "E2E testing framework; no direct Rust equivalent. Use headless browser testing or Playwright.", tags = ["testing", "e2e"] }
+
+"typescript->rust.playwright" = { compatibility = "none", note = "Browser automation; consider headless_chrome crate or use Playwright separately.", tags = ["testing", "browser", "e2e"] }
+
+"typescript->rust.supertest" = { equivalent = "axum-test", compatibility = "partial", note = "HTTP integration testing; axum-test for axum-based servers.", tags = ["testing", "http", "integration"] }
+
+# ── State Management ───────────────────────────────────────────────────────────
+"typescript->rust.redux" = { equivalent = "tokio", compatibility = "none", note = "State management pattern differs fundamentally; no direct equivalent.", tags = ["state", "store", "frontend"] }
+
+"typescript->rust.mobx" = { compatibility = "none", note = "Reactive state management; no direct Rust equivalent.", tags = ["state", "reactive", "frontend"] }
+
+"typescript->rust.zustand" = { compatibility = "none", note = "Lightweight state management; no direct Rust equivalent for frontend.", tags = ["state", "store", "frontend"] }
+
+# ── Frontend / UI ──────────────────────────────────────────────────────────────
+"typescript->rust.react" = { compatibility = "none", note = "React is a frontend UI library; no direct Rust equivalent. Consider Yew or Dioxus for Rust WASM.", tags = ["frontend", "ui", "framework"] }
+
+"typescript->rust.vue" = { compatibility = "none", note = "Vue is a frontend UI framework; no direct Rust equivalent.", tags = ["frontend", "ui", "framework"] }
+
+"typescript->rust.angular" = { compatibility = "none", note = "Angular is a full frontend framework; no direct Rust equivalent.", tags = ["frontend", "ui", "framework"] }
+
+"typescript->rust.svelte" = { compatibility = "none", note = "Svelte is a frontend compiler; no direct Rust equivalent.", tags = ["frontend", "ui", "framework"] }
+
+"typescript->rust.emotion" = { compatibility = "none", note = "CSS-in-JS library; no direct Rust equivalent.", tags = ["frontend", "css", "styling"] }
+
+"typescript->rust.tailwindcss" = { compatibility = "none", note = "CSS utility framework; no direct Rust equivalent.", tags = ["frontend", "css", "styling"] }
+
+"typescript->rust.mui" = { compatibility = "none", note = "Material UI component library; no direct Rust equivalent.", tags = ["frontend", "ui", "components"] }
+
+# ── Build Tools ────────────────────────────────────────────────────────────────
+"typescript->rust.webpack" = { compatibility = "none", note = "Module bundler; Rust doesn't use bundlers in the same way. Use Cargo for builds.", tags = ["build", "bundler"] }
+
+"typescript->rust.esbuild" = { compatibility = "none", note = "JavaScript bundler/minifier; no Rust equivalent needed.", tags = ["build", "bundler"] }
+
+"typescript->rust.typescript" = { compatibility = "none", note = "TypeScript compiler; no equivalent. Rust has built-in type system.", tags = ["build", "compiler", "types"] }
+
+"typescript->rust.babel" = { compatibility = "none", note = "JavaScript transpiler; no equivalent needed in Rust ecosystem.", tags = ["build", "transpiler"] }
+
+"typescript->rust.prettier" = { equivalent = "rustfmt", compatibility = "full", note = "Code formatter; rustfmt is the standard Rust formatter.", tags = ["build", "formatter"] }
+
+"typescript->rust.eslint" = { equivalent = "clippy", compatibility = "full", note = "Linter; clippy provides equivalent linting capabilities.", tags = ["build", "linter"] }
+
+# ============================================================================
+# Rust → TypeScript
+# ============================================================================
+
+# ── Web Framework ──────────────────────────────────────────────────────────────
+"rust->typescript.axum" = { equivalent = "express", compatibility = "partial", note = "Async handler model differs; routing is similar.", tags = ["http", "server", "framework"] }
+
+"rust->typescript.actix-web" = { equivalent = "express", compatibility = "partial", note = "Actor-based web framework; express-like handler patterns.", tags = ["http", "server", "framework"] }
+
+"rust->typescript.tide" = { equivalent = "express", compatibility = "partial", note = "Async web framework; express-like routing.", tags = ["http", "server", "framework"] }
+
+"rust->typescript.warp" = { equivalent = "express", compatibility = "partial", note = "Filter-based composition; express middleware pattern covers most use cases.", tags = ["http", "server", "framework"] }
+
+"rust->typescript.rocket" = { equivalent = "express", compatibility = "partial", note = "Attribute-based routing; NestJS decorators are closest.", tags = ["http", "server", "framework"] }
+
+# ── Async Runtime ──────────────────────────────────────────────────────────────
+"rust->typescript.tokio" = { equivalent = "async/await", compatibility = "partial", note = "Async runtime; TypeScript's native async/await covers basic use cases.", tags = ["async", "runtime"] }
+
+"rust->typescript.async-std" = { equivalent = "async/await", compatibility = "partial", note = "Async runtime; similar to tokio → native async/await.", tags = ["async", "runtime"] }
+
+# ── Serialization ──────────────────────────────────────────────────────────────
+"rust->typescript.serde" = { equivalent = "class-transformer", compatibility = "partial", note = "Serialization framework; class-transformer plus class-validator for similar functionality.", tags = ["serialization", "json"] }
+
+"rust->typescript.prost" = { equivalent = "protobuf", compatibility = "full", note = "Protocol Buffers; protobufjs for TypeScript.", tags = ["serialization", "protobuf", "grpc"] }
+
+"rust->typescript.tonic" = { equivalent = "@grpc/grpc-js", compatibility = "partial", note = "gRPC framework; @grpc/grpc-js for Node.js.", tags = ["rpc", "grpc", "network"] }
+
+# ── Database / ORM ─────────────────────────────────────────────────────────────
+"rust->typescript.diesel" = { equivalent = "prisma", compatibility = "partial", note = "ORM; prisma provides schema-first approach with type safety.", tags = ["database", "orm", "sql"] }
+
+"rust->typescript.sqlx" = { equivalent = "knex", compatibility = "partial", note = "SQL toolkit; knex provides query building with similar flexibility.", tags = ["database", "sql", "query-builder"] }
+
+"rust->typescript.rusqlite" = { equivalent = "better-sqlite3", compatibility = "full", note = "SQLite binding; direct equivalent.", tags = ["database", "sqlite"] }
+
+"rust->typescript.mongodb" = { equivalent = "mongoose", compatibility = "partial", note = "MongoDB driver; mongoose for ODM functionality.", tags = ["database", "mongodb"] }
+
+# ── Auth / Security ────────────────────────────────────────────────────────────
+"rust->typescript.jsonwebtoken" = { equivalent = "jsonwebtoken", compatibility = "full", note = "JWT library; direct equivalent.", tags = ["auth", "jwt"] }
+
+"rust->typescript.bcrypt" = { equivalent = "bcrypt", compatibility = "full", note = "Password hashing; direct equivalent.", tags = ["auth", "crypto"] }
+
+"rust->typescript.argon2" = { equivalent = "argon2", compatibility = "full", note = "Password hashing; argon2 npm package.", tags = ["auth", "crypto", "password"] }
+
+# ── HTTP Client ────────────────────────────────────────────────────────────────
+"rust->typescript.reqwest" = { equivalent = "axios", compatibility = "partial", note = "HTTP client; axios for browser/Node.js HTTP requests.", tags = ["http", "network"] }
+
+"rust->typescript.hyper" = { equivalent = "axios", compatibility = "partial", note = "Low-level HTTP; axios for higher-level HTTP client.", tags = ["http", "network"] }
+
+# ── CLI ────────────────────────────────────────────────────────────────────────
+"rust->typescript.clap" = { equivalent = "commander", compatibility = "full", note = "CLI argument parser; direct equivalent.", tags = ["cli", "parser"] }
+
+"rust->typescript.serde_json" = { equivalent = "JSON", compatibility = "full", note = "JSON handling; built-in JSON in TypeScript.", tags = ["json", "serialization"] }
+
+"rust->typescript.regex" = { equivalent = "regex", compatibility = "full", note = "Regular expressions; built-in RegExp in TypeScript.", tags = ["text", "regex"] }
+
+"rust->typescript.chrono" = { equivalent = "date-fns", compatibility = "partial", note = "Date/time library; date-fns or dayjs for lightweight alternative.", tags = ["date", "time"] }
+
+"rust->typescript.tracing" = { equivalent = "pino", compatibility = "partial", note = "Structured logging; pino for Node.js structured logging.", tags = ["logging", "observability"] }
+
+"rust->typescript.log" = { equivalent = "winston", compatibility = "partial", note = "Logging facade; winston for Node.js logging.", tags = ["logging"] }
+
+"rust->typescript.rand" = { equivalent = "chance", compatibility = "partial", note = "Random number generation; chance for random value generation.", tags = ["random", "utility"] }
+
+"rust->typescript.parking_lot" = { compatibility = "none", note = "Mutex/RwLock; JavaScript is single-threaded, no equivalent needed.", tags = ["concurrency", "sync"] }
+
+"rust->typescript.crossbeam" = { compatibility = "none", note = "Concurrency utilities; JavaScript is single-threaded, no equivalent needed.", tags = ["concurrency", "thread"] }
+
+"rust->typescript.rayon" = { compatibility = "none", note = "Parallel iteration; JavaScript is single-threaded, use Web Workers for parallelism.", tags = ["concurrency", "parallel"] }
+
+# ── Testing ────────────────────────────────────────────────────────────────────
+"rust->typescript.rstest" = { equivalent = "jest", compatibility = "partial", note = "Testing framework; jest for testing with similar attribute patterns.", tags = ["testing", "framework"] }
+
+"rust->typescript.mockito" = { equivalent = "sinon", compatibility = "partial", note = "Mocking library; sinon for stubs/mocks/spies.", tags = ["testing", "mock"] }
+
+"rust->typescript.proptest" = { equivalent = "fast-check", compatibility = "partial", note = "Property-based testing; fast-check provides similar property testing.", tags = ["testing", "property-based"] }
+
+# ── Build Tools ────────────────────────────────────────────────────────────────
+"rust->typescript.clippy" = { equivalent = "eslint", compatibility = "partial", note = "Linter; eslint for code quality checks.", tags = ["build", "linter"] }
+
+"rust->typescript.rustfmt" = { equivalent = "prettier", compatibility = "full", note = "Code formatter; prettier for automatic formatting.", tags = ["build", "formatter"] }
+
+"rust->typescript.cargo" = { equivalent = "npm", compatibility = "partial", note = "Package manager/build tool; npm for package management and scripts.", tags = ["build", "package-manager"] }

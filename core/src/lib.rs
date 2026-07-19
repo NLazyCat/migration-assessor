@@ -1,4 +1,3 @@
-pub mod cache;
 pub mod compatibility;
 pub mod config;
 pub mod deps;
@@ -10,7 +9,6 @@ pub mod output_paths;
 pub mod parser;
 pub mod project;
 pub mod references;
-pub mod report;
 pub mod scores;
 pub mod symbols;
 

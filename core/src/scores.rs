@@ -241,17 +241,42 @@ pub fn calculate(
     Ok(readiness_scores)
 }
 
-/// Compute a module's external compatibility score in [0, 1].
-/// Looks at the module's imports, maps them against the compatibility matrix.
+/// Compute a per-module external compatibility score in [0, 1].
+///
+/// Maps each dependency's `CompatibilityLevel` to a numeric score using
+/// [`CompatibilityLevel::numeric_score`] and averages them across all known
+/// dependencies. A project that uses mostly "partial" or "none" dependencies
+/// will score lower, guiding the migration team to focus on those modules.
+///
+/// When per-file import information is available in the future, this should
+/// look up only the dependencies that a specific module imports.
 fn compute_module_compatibility(
-    _module: &str,
-    _compatibility_matrix: &HashMap<String, CompatibilityEntry>,
+    module: &str,
+    compatibility_matrix: &HashMap<String, CompatibilityEntry>,
 ) -> f64 {
-    // For v1, we use a simplified heuristic:
-    // - If the module file references known external packages, check compatibility.
-    // - Default to 1.0 (neutral) since we lack per-file import-to-dependency mapping at this stage.
-    // Future: parse the module's imports, look up each dependency in the matrix, and average scores.
-    1.0
+    if compatibility_matrix.is_empty() {
+        return 0.5; // neutral baseline
+    }
+
+    // Try to find module-specific score via filename hints:
+    // Modules whose name suggests they deal with a specific category might
+    // benefit from looking up relevant entries. For now, use project-level
+    // average as a meaningful baseline.
+    let total: f64 = compatibility_matrix
+        .values()
+        .map(|entry| entry.compatibility.numeric_score())
+        .sum();
+
+    let avg = total / compatibility_matrix.len() as f64;
+
+    // Slight boost for modules with "test" or "spec" in the name — they
+    // often have better compatibility with Rust's testing ecosystem.
+    let lower = module.to_lowercase();
+    if lower.contains("test") || lower.contains("spec") {
+        return (avg + 0.15).min(1.0);
+    }
+
+    avg
 }
 
 #[cfg(test)]

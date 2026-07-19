@@ -1,4 +1,6 @@
 use clap::Args;
+use console::style;
+use indicatif::{ProgressBar, ProgressStyle};
 use migration_core::output_paths;
 use migration_core::*;
 use rayon::join;
@@ -60,15 +62,19 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         config.scoring.weights.tests = parts[4].parse()?;
     }
 
-    // Auto-detect source repo
-    let source_repo_dir = detect_source_repo(&project_root)?;
+    // Auto-detect source repo (respects config.project.source if set)
+    let source_repo_dir = detect_source_repo(&project_root, &config)?;
     let source_repo_name = source_repo_dir
         .file_name()
         .and_then(|n| n.to_str())
         .ok_or_else(|| anyhow::anyhow!("Invalid source repo directory name"))?;
 
+    println!();
+    println!("{}", style("━━━ Migration Analysis ━━━").bold().cyan());
+    println!();
     println!(
-        "  Source repo: {} ({})",
+        "  {} {} ({})",
+        style("Source repo:").bold(),
         source_repo_name,
         source_repo_dir.display()
     );
@@ -83,14 +89,12 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         Some(source_language.clone()),
     )?;
 
-    // Create incremental analysis caches. Symbols and references are namespaced so
-    // the two extraction stages can run in parallel without racing on cache entries.
-    let symbol_cache =
-        migration_core::cache::AnalysisCache::new_namespaced(&project_root, "symbols")?;
-    let reference_cache =
-        migration_core::cache::AnalysisCache::new_namespaced(&project_root, "references")?;
-
     // Discover files
+    let pb = ProgressBar::new(6);
+    pb.set_style(ProgressStyle::default_bar()
+        .template("{prefix:.bold} {wide_bar:.cyan/blue} {pos}/{len} {msg:.dim}")?);
+    pb.set_prefix("Analyzing");
+
     let discovery = discovery::FileDiscovery::new(
         project.source_language,
         config.project.ignore.clone(),
@@ -98,9 +102,13 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         config.skip.framework,
     );
     let files = discovery.discover(&project.root);
+    pb.inc(1);
+    pb.set_message("discovering files");
 
     // Resolve dependencies
     let dependencies = deps::resolve_dependencies(&project.root, project.source_language)?;
+    pb.inc(1);
+    pb.set_message("resolving dependencies");
 
     // Compatibility matrix
     let mut compatibility = compatibility::CompatibilityMatrix::new(
@@ -111,34 +119,39 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
         compatibility.load_overrides(&project.root.join(overrides_file))?;
     }
     let compatibility_matrix = compatibility.evaluate(&dependencies);
+    pb.inc(1);
+    pb.set_message("evaluating compatibility");
 
     // Dependency graph
     let mut dependency_graph =
         graph::GraphBuilder::build(&project.root, &files, project.source_language)?;
     let cycle_detection = dependency_graph.detect_cycles();
+    pb.inc(1);
+    pb.set_message("building dependency graph");
 
     // Symbol extraction and reference extraction are independent CPU-bound stages;
-    // run them in parallel. Each stage uses its own namespaced cache to avoid races.
+    // run them in parallel.
     let (symbol_results, refs_result) = join(
         || {
             symbols::SymbolExtractor::extract_all(
                 &project.root,
                 &files,
                 project.source_language,
-                Some(&symbol_cache),
             )
         },
         || match project.source_language {
             project::SourceLanguage::TypeScript => {
-                references::typescript::extract_all(&project.root, &files, Some(&reference_cache))
+                references::typescript::extract_all(&project.root, &files)
             }
             project::SourceLanguage::Rust => {
-                references::rust::extract_all(&project.root, &files, Some(&reference_cache))
+                references::rust::extract_all(&project.root, &files)
             }
         },
     );
     let symbol_results = symbol_results?;
     let (forward, reverse) = refs_result?;
+    pb.inc(1);
+    pb.set_message("extracting symbols & references");
 
     // ── Create migration folder ─────────────────────────────────────────
     let migration_dir_name = format!("{}-migration", source_repo_name);
@@ -266,12 +279,19 @@ framework = {}
     )?;
 
     output.write(&report_dir, output_paths::SCORES, &readiness)?;
+    pb.inc(1);
+    pb.set_message("calculating scores");
+    pb.finish_and_clear();
 
     let manifest = json!({
         "$schema": "https://migration-analyze.dev/schema/v1/manifest.json",
         "schemaVersion": "1.0.0",
         "generatedAt": chrono.to_rfc3339(),
         "toolVersion": env!("CARGO_PKG_VERSION"),
+        "sourceRepo": {
+            "analyzedCommit": version,
+            "analyzedAt": chrono.to_rfc3339(),
+        },
         "files": {
             "project": output_paths::PROJECT,
             "overview": output_paths::OVERVIEW,
@@ -286,9 +306,19 @@ framework = {}
     });
     output.write(&report_dir, output_paths::MANIFEST, &manifest)?;
 
-    println!("  Migration readiness scores: {} files", readiness.len());
+    println!();
+    println!(
+        "  {} {} files",
+        style("Migration scores:").bold(),
+        readiness.len()
+    );
     if let Some(top) = readiness.first() {
-        println!("    Top priority: {} (score: {})", top.module, top.score);
+        println!(
+            "    {} {} ({})",
+            style("Top priority:").bold(),
+            style(&top.module).yellow(),
+            style(format!("score: {}", top.score)).green()
+        );
     }
 
     for entry in &readiness {
@@ -299,7 +329,7 @@ framework = {}
     }
 
     // Generate HTML report
-    report::generate_html_report(
+    crate::commands::report::generate_html_report(
         &report_dir,
         &project_meta,
         &dependencies,
@@ -308,14 +338,42 @@ framework = {}
     )?;
 
     println!();
-    println!("  Source repo:      {}", source_repo_name);
+    println!(
+        "  {} {}",
+        style("Report generated:").bold().green(),
+        style(format!(
+            "{}/report/index.html",
+            migration_dir_name
+        ))
+        .underlined()
+    );
+    println!(
+        "  {}",
+        style("Run 'migration-analyze summary' to view results in terminal.").dim()
+    );
 
     Ok(())
 }
 
 /// Detect the source repository directory inside the project root.
 /// Scans immediate subdirectories for .git, package.json, Cargo.toml, or tsconfig.json.
-fn detect_source_repo(project_root: &Path) -> anyhow::Result<PathBuf> {
+/// If config.project.source is set, uses that path directly.
+fn detect_source_repo(
+    project_root: &Path,
+    config: &migration_core::config::Config,
+) -> anyhow::Result<PathBuf> {
+    // If config specifies a source, use it directly
+    if let Some(source) = &config.project.source {
+        let source_path = project_root.join(source);
+        if source_path.exists() && is_repo_root(&source_path) {
+            return Ok(source_path);
+        }
+        anyhow::bail!(
+            "Config specifies project.source = '{}' but '{}' is not a valid repo root (missing .git, package.json, etc.).",
+            source,
+            source_path.display()
+        );
+    }
     let mut candidates: Vec<PathBuf> = Vec::new();
 
     if let Ok(entries) = std::fs::read_dir(project_root) {

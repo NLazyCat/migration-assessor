@@ -1,8 +1,8 @@
 use std::path::Path;
 
-use crate::deps::ResolvedDependency;
-use crate::graph::CycleDetectionResult;
-use crate::graph::DependencyGraph;
+use migration_core::deps::ResolvedDependency;
+use migration_core::graph::CycleDetectionResult;
+use migration_core::graph::DependencyGraph;
 use serde_json::Value;
 
 pub fn generate_html_report(

@@ -15,7 +15,7 @@ fn test_e2e_analyze_full_pipeline() {
         .success()
         .stdout(predicate::str::contains("Mirrored"))
         .stdout(predicate::str::contains("References extracted"))
-        .stdout(predicate::str::contains("readiness scores"));
+        .stdout(predicate::str::contains("Migration scores"));
 
     // Verify migration folder was created
     let migration_dir = project_root.join("test-migration");
