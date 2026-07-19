@@ -91,8 +91,10 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
 
     // Discover files
     let pb = ProgressBar::new(6);
-    pb.set_style(ProgressStyle::default_bar()
-        .template("{prefix:.bold} {wide_bar:.cyan/blue} {pos}/{len} {msg:.dim}")?);
+    pb.set_style(
+        ProgressStyle::default_bar()
+            .template("{prefix:.bold} {wide_bar:.cyan/blue} {pos}/{len} {msg:.dim}")?,
+    );
     pb.set_prefix("Analyzing");
 
     let discovery = discovery::FileDiscovery::new(
@@ -132,20 +134,12 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
     // Symbol extraction and reference extraction are independent CPU-bound stages;
     // run them in parallel.
     let (symbol_results, refs_result) = join(
-        || {
-            symbols::SymbolExtractor::extract_all(
-                &project.root,
-                &files,
-                project.source_language,
-            )
-        },
+        || symbols::SymbolExtractor::extract_all(&project.root, &files, project.source_language),
         || match project.source_language {
             project::SourceLanguage::TypeScript => {
                 references::typescript::extract_all(&project.root, &files)
             }
-            project::SourceLanguage::Rust => {
-                references::rust::extract_all(&project.root, &files)
-            }
+            project::SourceLanguage::Rust => references::rust::extract_all(&project.root, &files),
         },
     );
     let symbol_results = symbol_results?;
@@ -341,11 +335,7 @@ framework = {}
     println!(
         "  {} {}",
         style("Report generated:").bold().green(),
-        style(format!(
-            "{}/report/index.html",
-            migration_dir_name
-        ))
-        .underlined()
+        style(format!("{}/report/index.html", migration_dir_name)).underlined()
     );
     println!(
         "  {}",

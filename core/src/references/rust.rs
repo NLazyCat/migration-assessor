@@ -319,10 +319,7 @@ impl<'a> ReferenceVisitor<'a> {
 }
 
 /// Extract cross-file references from Rust files.
-pub fn extract_all(
-    root: &Path,
-    files: &[PathBuf],
-) -> anyhow::Result<(ForwardIndex, ReverseIndex)> {
+pub fn extract_all(root: &Path, files: &[PathBuf]) -> anyhow::Result<(ForwardIndex, ReverseIndex)> {
     let import_map = build_import_map(root, files)?;
 
     let per_file: Vec<FileRefs> = files

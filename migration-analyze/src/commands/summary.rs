@@ -29,7 +29,9 @@ pub fn run(args: &SummaryArgs) -> anyhow::Result<()> {
 
     let project_meta = ctx.project_meta().ok();
     let scores = load_scores(&ctx);
-    let deps = ctx.load_json::<Value>(output_paths::external::PACKAGES).ok();
+    let deps = ctx
+        .load_json::<Value>(output_paths::external::PACKAGES)
+        .ok();
     let compat = ctx
         .load_json::<Value>(output_paths::external::COMPATIBILITY)
         .ok();
@@ -41,7 +43,15 @@ pub fn run(args: &SummaryArgs) -> anyhow::Result<()> {
 
     match args.format.as_str() {
         "json" => print_json_summary(&project_meta, &scores, &deps, &symbols, &dag),
-        _ => print_text_summary(&project_meta, &scores, &deps, &compat, &symbols, &dag, &boundaries_layers),
+        _ => print_text_summary(
+            &project_meta,
+            &scores,
+            &deps,
+            &compat,
+            &symbols,
+            &dag,
+            &boundaries_layers,
+        ),
     }
 
     Ok(())
@@ -89,7 +99,7 @@ fn print_text_summary(
     dag: &Option<Value>,
     boundaries: &Option<Value>,
 ) {
-    use console::{style, Emoji};
+    use console::{Emoji, style};
 
     let check = Emoji("✓", "+");
     let cross = Emoji("✗", "x");
@@ -122,7 +132,10 @@ fn print_text_summary(
             "  {} {} ({} with symbols)",
             style("Source files:").bold(),
             symbols.len(),
-            symbols.iter().filter(|(_, v)| v["symbols"].as_array().is_some()).count()
+            symbols
+                .iter()
+                .filter(|(_, v)| v["symbols"].as_array().is_some())
+                .count()
         );
         println!("  {} {}", style("Dependencies:").bold(), dep_count);
     }
@@ -132,9 +145,7 @@ fn print_text_summary(
     // Scores
     if let Some(last_score) = scores.last() {
         let score_val = last_score["score"].as_f64().unwrap_or(0.0);
-        let migrated = last_score["files_migrated"]
-            .as_u64()
-            .unwrap_or(0);
+        let migrated = last_score["files_migrated"].as_u64().unwrap_or(0);
         let total = last_score["files_total"].as_u64().unwrap_or(0);
         let pct = score_val * 100.0;
 
@@ -184,14 +195,13 @@ fn print_text_summary(
     }
 
     // Dependencies
-    let dep_arr = deps.as_ref().and_then(|d| d.get("packages")).and_then(|p| p.as_array());
+    let dep_arr = deps
+        .as_ref()
+        .and_then(|d| d.get("packages"))
+        .and_then(|p| p.as_array());
     if let Some(arr) = dep_arr {
         println!();
-        println!(
-            "  {} {} packages",
-            style("Dependencies:").bold(),
-            arr.len()
-        );
+        println!("  {} {} packages", style("Dependencies:").bold(), arr.len());
 
         let compat_map = compat.as_ref().and_then(|c| c.as_object());
         let mut available = 0;
@@ -239,10 +249,7 @@ fn print_text_summary(
     // Boundaries info
     if let Some(b) = boundaries {
         let total_layers = b["total_layers"].as_u64().unwrap_or(0);
-        let uncut = b["uncut_surface"]
-            .as_array()
-            .map(|a| a.len())
-            .unwrap_or(0);
+        let uncut = b["uncut_surface"].as_array().map(|a| a.len()).unwrap_or(0);
         println!();
         println!(
             "  {} {} layers, {} uncut interfaces",
@@ -292,5 +299,8 @@ fn print_json_summary(
         })),
     });
 
-    println!("{}", serde_json::to_string_pretty(&summary).unwrap_or_default());
+    println!(
+        "{}",
+        serde_json::to_string_pretty(&summary).unwrap_or_default()
+    );
 }

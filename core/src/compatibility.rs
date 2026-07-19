@@ -394,8 +394,7 @@ impl CompatibilityMatrix {
                 .compatibility_now
                 .unwrap_or(CompatibilityLevel::Unknown);
             let is_high_impact = affected_module_count > 5
-                && (compat == CompatibilityLevel::Unknown
-                    || compat == CompatibilityLevel::None);
+                && (compat == CompatibilityLevel::Unknown || compat == CompatibilityLevel::None);
 
             impacts.push(DependencyImpact {
                 package: change.package.clone(),

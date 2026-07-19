@@ -76,9 +76,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         .map(|s| s.to_string());
 
     let analyzed_commit = analyzed_commit.ok_or_else(|| {
-        anyhow::anyhow!(
-            "No analyzedCommit found in manifest. Re-run 'migration-analyze analyze'."
-        )
+        anyhow::anyhow!("No analyzedCommit found in manifest. Re-run 'migration-analyze analyze'.")
     })?;
 
     // ── 2. Locate the source repo ────────────────────────────────────────
@@ -233,10 +231,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         });
     }
 
-    let source_files_changed = changed_files
-        .iter()
-        .filter(|f| !f.is_dep_file)
-        .count();
+    let source_files_changed = changed_files.iter().filter(|f| !f.is_dep_file).count();
     let dep_files_changed = changed_files.iter().filter(|f| f.is_dep_file).count();
 
     // ── 8. Re-resolve dependencies from latest source ────────────────────
@@ -246,7 +241,10 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         (vec![], vec![], vec![])
     };
 
-    let deps_added = dep_changes.iter().filter(|d| d.change_type == "added").count();
+    let deps_added = dep_changes
+        .iter()
+        .filter(|d| d.change_type == "added")
+        .count();
     let deps_removed = dep_changes
         .iter()
         .filter(|d| d.change_type == "removed")
@@ -331,10 +329,7 @@ fn print_text_report(report: &UpdateReport, source_dir: &Path) {
     println!(
         "  {} {}",
         style("Analyzed commit:").bold(),
-        report
-            .analyzed_commit
-            .as_deref()
-            .unwrap_or("unknown")
+        report.analyzed_commit.as_deref().unwrap_or("unknown")
     );
     println!(
         "  {} {}",
@@ -392,11 +387,7 @@ fn print_text_report(report: &UpdateReport, source_dir: &Path) {
         };
         println!(
             "    {} {:40} +{:<4} -{:<4}{}",
-            status_style,
-            fc.file,
-            fc.additions,
-            fc.deletions,
-            dep_tag
+            status_style, fc.file, fc.additions, fc.deletions, dep_tag
         );
     }
 
@@ -434,11 +425,7 @@ fn print_text_report(report: &UpdateReport, source_dir: &Path) {
 
             println!(
                 "    {} {:30} {}{}{}",
-                change_style,
-                dc.package,
-                version_info,
-                compat_info,
-                review_tag
+                change_style, dc.package, version_info, compat_info, review_tag
             );
         }
 
@@ -461,10 +448,7 @@ fn print_text_report(report: &UpdateReport, source_dir: &Path) {
         "  {}",
         style(format!(
             "Details: {}",
-            report
-                .head_commit
-                .as_deref()
-                .unwrap_or("unknown")
+            report.head_commit.as_deref().unwrap_or("unknown")
         ))
         .dim()
     );
@@ -535,8 +519,7 @@ fn detect_dependency_changes(
         Ok(val) => {
             // The stored packages may be a JSON object with "packages" key or an array
             if let Some(arr) = val.as_array() {
-                serde_json::from_value(serde_json::Value::Array(arr.clone()))
-                    .unwrap_or_default()
+                serde_json::from_value(serde_json::Value::Array(arr.clone())).unwrap_or_default()
             } else if let Some(packages) = val.get("packages").and_then(|v| v.as_array()) {
                 serde_json::from_value(serde_json::Value::Array(packages.clone()))
                     .unwrap_or_default()
