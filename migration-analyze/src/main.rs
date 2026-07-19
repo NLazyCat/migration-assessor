@@ -18,6 +18,8 @@ enum Commands {
     Analyze(commands::analyze::AnalyzeArgs),
     /// Run incremental git diff analysis
     Diff(commands::diff::DiffArgs),
+    /// Generate interface boundary report for incremental migration
+    Boundaries(commands::boundaries::BoundariesArgs),
     /// Start web UI server to browse analysis results
     Serve(commands::serve::ServeArgs),
 }
@@ -29,6 +31,7 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Init(args)) => commands::init::run(args)?,
         Some(Commands::Analyze(args)) => commands::analyze::run(args)?,
         Some(Commands::Diff(args)) => commands::diff::run(args)?,
+        Some(Commands::Boundaries(args)) => commands::boundaries::run(args)?,
         Some(Commands::Serve(args)) => {
             let rt = tokio::runtime::Runtime::new()?;
             rt.block_on(commands::serve::run(args))?;
@@ -53,6 +56,7 @@ fn print_usage_guide() {
     println!("  init       Create a new migration project directory");
     println!("  analyze    Analyze source repo and create migration folder");
     println!("  diff       Run incremental git diff analysis");
+    println!("  boundaries Generate interface boundary report (layering + cut planes)");
     println!("  serve      Start web UI to browse analysis results");
     println!();
     println!("QUICK START:");

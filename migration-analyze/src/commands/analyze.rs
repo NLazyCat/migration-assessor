@@ -3,6 +3,8 @@ use migration_core::*;
 use std::collections::HashMap;
 use std::path::{Path, PathBuf};
 
+use crate::commands::resolve_project_path;
+
 #[derive(Args)]
 pub struct AnalyzeArgs {
     /// Project root directory (defaults to current directory)
@@ -23,8 +25,7 @@ pub struct AnalyzeArgs {
 }
 
 pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
-    let project_root = std::path::Path::new(&args.path);
-    let project_root = project_root.canonicalize()?;
+    let project_root = resolve_project_path(&args.path);
 
     // Load config if exists
     let config_path = project_root.join("migration.toml");
@@ -117,6 +118,8 @@ pub fn run(args: &AnalyzeArgs) -> anyhow::Result<()> {
 
     // Update root migration.toml with detected source path and git info
     let (remote, branch, version) = detect_source_git_info(&source_repo_dir);
+    // Use the original relative path (avoids Windows backslash / extended-length issues)
+    let source_display = args.path.replace('\\', "/");
     let root_config_content = format!(
         r#"# Migration Assessor Configuration
 [project]
@@ -129,7 +132,7 @@ target_language = "{}"
 [skip]
 framework = {}
 "#,
-        source_repo_dir.display(),
+        source_display,
         remote.as_deref().unwrap_or(""),
         branch.as_deref().unwrap_or(""),
         version.as_deref().unwrap_or(""),
@@ -417,6 +420,7 @@ fn generate_migration_config(
     let source_branch = branch.as_deref().unwrap_or("");
     let source_version = version.as_deref().unwrap_or("");
 
+    let source_str = project.root.to_string_lossy().replace('\\', "/");
     format!(
         r##"[project]
 source = "{}"
@@ -449,7 +453,7 @@ tests = {}
 #     {{ from = "src/utils.ts", to = "new/src/utils.rs" }},
 # ]
 "##,
-        project.root.display(),
+        source_str,
         source_repo,
         source_branch,
         source_version,

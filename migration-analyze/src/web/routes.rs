@@ -133,3 +133,12 @@ pub async fn page_report_ref(State(state): State<Arc<AppState>>) -> Html<String>
     let file_list: Vec<String> = files.into_keys().collect();
     Html(templates::report_ref(&file_list))
 }
+
+pub async fn page_boundaries(State(state): State<Arc<AppState>>) -> Html<String> {
+    let boundaries = read_json(&state.report_dir, "interface-boundaries.json");
+    Html(templates::boundaries(&boundaries))
+}
+
+pub async fn api_boundaries(State(state): State<Arc<AppState>>) -> Json<Option<Value>> {
+    Json(read_json(&state.report_dir, "interface-boundaries.json"))
+}

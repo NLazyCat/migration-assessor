@@ -1,3 +1,4 @@
+use crate::discovery::normalize_path_components;
 use crate::parser::parse_file_references;
 use crate::project::SourceLanguage;
 use serde::{Deserialize, Serialize};
@@ -42,7 +43,7 @@ impl GraphBuilder {
 
         for file in files {
             let relative = file.strip_prefix(root).unwrap_or(file);
-            let from = relative.to_string_lossy().replace('\\', "/");
+            let from = normalize_path_components(&relative).to_string_lossy().replace('\\', "/");
             nodes.insert(from.clone());
 
             let source = fs::read_to_string(file)?;
@@ -186,7 +187,8 @@ fn resolve_typescript_import(file: &Path, import: &str, root: &Path) -> Option<S
     for candidate in &candidates {
         if candidate.exists() {
             let relative = candidate.strip_prefix(root).unwrap_or(candidate);
-            return Some(relative.to_string_lossy().replace('\\', "/"));
+            let module = relative.to_string_lossy().replace('\\', "/");
+            return Some(normalize_path_components(Path::new(&module)).to_string_lossy().replace('\\', "/"));
         }
     }
 

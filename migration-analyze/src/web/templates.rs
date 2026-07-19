@@ -41,6 +41,7 @@ pub fn shell() -> String {
     push(&mut h, "<a href=\"/scores\" hx-get=\"/scores\" hx-target=\"#content\" hx-push-url=\"true\">Scores</a>");
     push(&mut h, "<a href=\"/graph\" hx-get=\"/graph\" hx-target=\"#content\" hx-push-url=\"true\">Dep Graph</a>");
     push(&mut h, "<a href=\"/report-ref\" hx-get=\"/report-ref\" hx-target=\"#content\" hx-push-url=\"true\">References</a>");
+    push(&mut h, "<a href=\"/boundaries\" hx-get=\"/boundaries\" hx-target=\"#content\" hx-push-url=\"true\">Boundaries</a>");
     push(&mut h, "</nav><main id=\"content\"></main></body></html>");
     h
 }
@@ -249,4 +250,127 @@ fn array_len(data: &Value, key: &str) -> String {
         .and_then(|v| v.as_array())
         .map(|a| a.len().to_string())
         .unwrap_or_else(|| "0".to_string())
+}
+
+// ── Boundaries page ─────────────────────────────────────────────────
+
+pub fn boundaries(data: &Option<Value>) -> String {
+    let mut h = String::new();
+
+    push(&mut h, "<h2>Interface Boundaries</h2>");
+
+    let report = match data {
+        Some(Value::Object(m)) => m,
+        _ => {
+            push(&mut h, "<div class=\"card\"><p>No interface boundary data. Run <code>migration-analyze boundaries</code> first.</p></div>");
+            return h;
+        }
+    };
+
+    let layers = report.get("layers").and_then(|v| v.as_array());
+    let uncut = report.get("uncut_surface").and_then(|v| v.as_array());
+    let total_layers = report.get("total_layers").and_then(|v| v.as_u64()).unwrap_or(0);
+
+    // Summary stats
+    push(&mut h, "<div class=\"grid\">");
+    stat_card(&mut h, "Total Layers", &total_layers.to_string());
+    stat_card(
+        &mut h,
+        "Uncut Interfaces",
+        &uncut.map(|a| a.len()).unwrap_or(0).to_string(),
+    );
+    push(&mut h, "</div>");
+
+    // Layers
+    if let Some(layers) = layers {
+        for layer in layers.iter().rev() {
+            let level = layer.get("level").and_then(|v| v.as_u64()).unwrap_or(0);
+            let desc = layer.get("description").and_then(|v| v.as_str()).unwrap_or("");
+            let total_pub = layer.get("total_public_symbols").and_then(|v| v.as_u64()).unwrap_or(0);
+            let modules = layer.get("modules").and_then(|v| v.as_array());
+
+            push(&mut h, "<div class=\"card\" style=\"margin-top:1.5rem\">");
+            push(
+                &mut h,
+                &format!(
+                    "<h3>Layer {}: {} <span class=\"badge badge-ok\">{} public</span></h3>",
+                    level, desc, total_pub
+                ),
+            );
+
+            if let Some(modules) = modules {
+                push(&mut h, "<table><tr><th>Module</th><th>In</th><th>Out</th><th>Public</th><th>Internal</th><th>Score</th></tr>");
+                for m in modules {
+                    let name = m.get("module").and_then(|v| v.as_str()).unwrap_or("");
+                    let in_d = m.get("in_degree").and_then(|v| v.as_u64()).unwrap_or(0);
+                    let out_d = m.get("out_degree").and_then(|v| v.as_u64()).unwrap_or(0);
+                    let score = m.get("score").and_then(|v| v.as_f64()).unwrap_or(0.0);
+                    let pub_syms: Vec<String> = m
+                        .get("public_symbols")
+                        .and_then(|v| v.as_array())
+                        .map(|a| a.iter().filter_map(|v| v.as_str()).map(String::from).collect())
+                        .unwrap_or_default();
+                    let int_syms: Vec<String> = m
+                        .get("internal_symbols")
+                        .and_then(|v| v.as_array())
+                        .map(|a| a.iter().filter_map(|v| v.as_str()).map(String::from).collect())
+                        .unwrap_or_default();
+
+                    let pub_display = if pub_syms.len() <= 3 {
+                        pub_syms.join(", ")
+                    } else {
+                        format!("{} ({} total)", pub_syms[..3].join(", "), pub_syms.len())
+                    };
+                    let int_display = if int_syms.len() <= 2 {
+                        int_syms.join(", ")
+                    } else {
+                        format!("{} ({} total)", int_syms[..2].join(", "), int_syms.len())
+                    };
+
+                    push(&mut h, &format!(
+                        "<tr><td><strong>{}</strong></td><td>{}</td><td>{}</td><td style=\"color:#4ecdc4\">{}</td><td style=\"color:#888\">{}</td><td>{:.1}</td></tr>",
+                        name, in_d, out_d, pub_display, int_display, score
+                    ));
+                }
+                push(&mut h, "</table>");
+            }
+
+            push(&mut h, "</div>");
+        }
+    }
+
+    // Uncut surfaces
+    if let Some(uncut) = uncut {
+        if !uncut.is_empty() {
+            push(&mut h, "<div class=\"card\" style=\"margin-top:2rem;border-left:3px solid #e94560\">");
+            push(&mut h, "<h3>Uncut Cross-Layer Interfaces</h3>");
+            push(&mut h, "<p style=\"color:#888;font-size:0.85rem\">These symbols cross layer boundaries and define the cut plane for incremental migration.</p>");
+            push(&mut h, "<table><tr><th>Direction</th><th>Consumer</th><th>Provider</th><th>Symbol</th><th>Kind</th></tr>");
+
+            // Show first 60 entries to avoid huge pages
+            let limit = 60.min(uncut.len());
+            for entry in uncut.iter().take(limit) {
+                let dir = entry.get("direction").and_then(|v| v.as_str()).unwrap_or("");
+                let consumer = entry.get("consumer_module").and_then(|v| v.as_str()).unwrap_or("");
+                let provider = entry.get("provider_module").and_then(|v| v.as_str()).unwrap_or("");
+                let symbol = entry.get("symbol").and_then(|v| v.as_str()).unwrap_or("");
+                let kind = entry.get("kind").and_then(|v| v.as_str()).unwrap_or("");
+                push(&mut h, &format!(
+                    "<tr><td><code>{}</code></td><td>{}</td><td>{}</td><td><code>{}</code></td><td>{}</td></tr>",
+                    dir, consumer, provider, symbol, kind
+                ));
+            }
+
+            if uncut.len() > limit {
+                push(&mut h, &format!(
+                    "<tr><td colspan=\"5\" style=\"color:#888\">... and {} more</td></tr>",
+                    uncut.len() - limit
+                ));
+            }
+
+            push(&mut h, "</table></div>");
+        }
+    }
+
+    h
 }

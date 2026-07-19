@@ -1,6 +1,23 @@
 use crate::project::SourceLanguage;
-use std::path::{Path, PathBuf};
+use std::path::{Component, Path, PathBuf};
 use walkdir::{DirEntry, WalkDir};
+
+/// Normalize `.` and `..` segments without touching the filesystem.
+pub(crate) fn normalize_path_components(path: &Path) -> PathBuf {
+    let mut result = PathBuf::new();
+    for component in path.components() {
+        match component {
+            Component::CurDir => {}
+            Component::ParentDir => {
+                if !result.pop() {
+                    result.push("..");
+                }
+            }
+            other => result.push(other),
+        }
+    }
+    result
+}
 
 /// Built-in framework boilerplate glob patterns.
 /// Activated by `--skip-framework`.
@@ -56,13 +73,31 @@ impl FileDiscovery {
     }
 
     pub fn discover(&self, root: &Path) -> Vec<PathBuf> {
-        WalkDir::new(root)
+        let files: Vec<PathBuf> = WalkDir::new(root)
+            .follow_links(false)
             .into_iter()
             .filter_entry(|e| self.should_traverse(e, root))
             .filter_map(|e| e.ok())
             .filter(|e| e.file_type().is_file())
             .filter(|e| self.should_include(e.path(), root))
             .map(|e| e.path().to_path_buf())
+            .collect();
+        // Normalize `.`/`..` segments that WalkDir may emit when traversing
+        // Windows junctions. This ensures module names in reports are clean.
+        files
+            .iter()
+            .filter_map(|f| {
+                let rel = f.strip_prefix(root).unwrap_or(f);
+                let cleaned = normalize_path_components(rel);
+                // Skip files that would escape the root via `..`
+                if cleaned
+                    .components()
+                    .any(|c| matches!(c, std::path::Component::ParentDir))
+                {
+                    return None;
+                }
+                Some(root.join(cleaned))
+            })
             .collect()
     }
 

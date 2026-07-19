@@ -5,6 +5,7 @@ use std::path::PathBuf;
 use std::sync::Arc;
 use tower_http::services::ServeDir;
 
+use crate::commands::resolve_project_path;
 use crate::web;
 
 #[derive(Args)]
@@ -23,8 +24,7 @@ pub struct ServeArgs {
 }
 
 pub async fn run(args: &ServeArgs) -> anyhow::Result<()> {
-    let project_root = std::path::Path::new(&args.path);
-    let project_root = project_root.canonicalize()?;
+    let project_root = resolve_project_path(&args.path);
 
     let migration_dir = detect_migration_folder(&project_root)?;
     let report_dir = migration_dir.join("report");
@@ -57,6 +57,8 @@ pub async fn run(args: &ServeArgs) -> anyhow::Result<()> {
         .route("/api/scores", axum::routing::get(web::routes::api_scores))
         .route("/api/references", axum::routing::get(web::routes::api_references))
         .route("/api/references/*file", axum::routing::get(web::routes::api_file_references))
+        .route("/boundaries", axum::routing::get(web::routes::page_boundaries))
+        .route("/api/boundaries", axum::routing::get(web::routes::api_boundaries))
         .with_state(state);
 
     let addr = SocketAddr::from(([0, 0, 0, 0], args.port));

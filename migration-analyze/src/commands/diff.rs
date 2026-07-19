@@ -3,6 +3,8 @@ use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::path::{Path, PathBuf};
 
+use crate::commands::resolve_project_path;
+
 /// ── CLI args ──────────────────────────────────────────────────────────────
 
 #[derive(Args)]
@@ -125,7 +127,7 @@ struct DiffLine {
 /// ── Main entry ────────────────────────────────────────────────────────────
 
 pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
-    let project_root = Path::new(&args.path).canonicalize()?;
+    let project_root = resolve_project_path(&args.path);
     let config_path = project_root.join("migration.toml");
 
     if !config_path.exists() {
@@ -628,8 +630,7 @@ fn propagate_changes(
 /// ── Step 1: Fetch diff between old and new versions ───────────────────────
 
 fn resolve_source_path(src: &str, project_root: &Path) -> PathBuf {
-    let trimmed = src.trim_start_matches("//?/");
-    let p = Path::new(trimmed);
+    let p = Path::new(src);
     if p.is_absolute() { p.to_path_buf() } else { project_root.join(p) }
 }
 

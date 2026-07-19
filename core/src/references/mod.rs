@@ -1,6 +1,8 @@
 pub mod rust;
 pub mod typescript;
 
+pub use typescript::PathAliasResolver;
+
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::path::Path;
