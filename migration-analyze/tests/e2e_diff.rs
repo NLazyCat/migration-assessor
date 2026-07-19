@@ -55,10 +55,8 @@ fn test_e2e_diff_detects_changes_between_commits() {
     );
 
     // Get the commit hashes
-    let from_hash = run_git(&source_dir, &["rev-parse", "HEAD~1"])
-        .expect("get from commit hash");
-    let to_hash = run_git(&source_dir, &["rev-parse", "HEAD"])
-        .expect("get to commit hash");
+    let from_hash = run_git(&source_dir, &["rev-parse", "HEAD~1"]).expect("get from commit hash");
+    let to_hash = run_git(&source_dir, &["rev-parse", "HEAD"]).expect("get to commit hash");
 
     // Update migration.toml with source path (use forward slashes to avoid TOML escape issues)
     let source_path = source_dir.to_string_lossy().replace('\\', "/");
@@ -113,6 +111,10 @@ framework = false
         !diff_files.is_empty(),
         "At least one diff report JSON should be created"
     );
+
+    // Verify latest.json exists and mirrors the dated report
+    let latest_path = diff_dir.join("latest.json");
+    assert!(latest_path.exists(), "latest.json must exist");
 
     // Verify affected-files.json exists and has structure
     let affected_path = diff_dir.join("affected-files.json");

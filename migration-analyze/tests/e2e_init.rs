@@ -39,9 +39,7 @@ fn test_e2e_init_rejects_existing_directory() {
 
     let bin = common::binary_path();
     let mut cmd = Command::new(&bin);
-    cmd.current_dir(&project_root)
-        .arg("init")
-        .arg("existing");
+    cmd.current_dir(&project_root).arg("init").arg("existing");
 
     cmd.assert()
         .failure()

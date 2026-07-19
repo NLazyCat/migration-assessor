@@ -76,12 +76,18 @@ fn test_e2e_serve_api_endpoints() {
         .expect("GET /api/graph");
     assert_eq!(resp.status(), 200);
 
-    // /api/references
+    // /api/references now returns a manifest of available shard files
     let resp = client
         .get(format!("{}/api/references", base_url))
         .send()
         .expect("GET /api/references");
     assert_eq!(resp.status(), 200);
+    let refs_manifest: serde_json::Value = resp.json().expect("parse references manifest");
+    let files_arr = refs_manifest
+        .get("files")
+        .and_then(|v| v.as_array())
+        .expect("references manifest should have files array");
+    assert!(!files_arr.is_empty(), "files list should not be empty");
 
     // /api/references/:file
     let resp = client
@@ -89,15 +95,18 @@ fn test_e2e_serve_api_endpoints() {
         .send()
         .expect("GET /api/references/src/types.ts");
     assert_eq!(resp.status(), 200);
+    let file_refs: serde_json::Value = resp.json().expect("parse file references");
+    assert!(file_refs.get("forward").is_some());
+    assert!(file_refs.get("reverse").is_some());
 
     // / (HTML shell page)
-    let resp = client
-        .get(&base_url)
-        .send()
-        .expect("GET /");
+    let resp = client.get(&base_url).send().expect("GET /");
     assert_eq!(resp.status(), 200);
     let body = resp.text().expect("read HTML body");
-    assert!(body.contains("migration") || body.contains("<html"), "root page should return HTML");
+    assert!(
+        body.contains("migration") || body.contains("<html"),
+        "root page should return HTML"
+    );
 
     // Clean up: kill the server
     let _ = serve_handle.kill();

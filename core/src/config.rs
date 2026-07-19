@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct Config {
     #[serde(default)]
     pub project: ProjectConfig,
@@ -47,7 +47,7 @@ pub struct ProjectConfig {
     pub exclude: Vec<String>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct SkipConfig {
     #[serde(default)]
     pub framework: bool,
@@ -61,7 +61,7 @@ pub struct OutputConfig {
     pub split_by_directory: bool,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct ScoringConfig {
     #[serde(default)]
     pub weights: ScoreWeights,
@@ -83,7 +83,7 @@ pub struct CompatibilityConfig {
 
 /// File path mapping from source to target.
 /// Used when source files don't map 1:1 to target paths.
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct MappingConfig {
     #[serde(default)]
     pub override_list: Vec<MappingEntry>,
@@ -93,25 +93,6 @@ pub struct MappingConfig {
 pub struct MappingEntry {
     pub from: String,
     pub to: String,
-}
-
-impl Default for Config {
-    fn default() -> Self {
-        Self {
-            project: ProjectConfig::default(),
-            output: OutputConfig::default(),
-            scoring: ScoringConfig::default(),
-            compatibility: CompatibilityConfig::default(),
-            skip: SkipConfig::default(),
-            mapping: MappingConfig::default(),
-        }
-    }
-}
-
-impl Default for SkipConfig {
-    fn default() -> Self {
-        Self { framework: false }
-    }
 }
 
 impl Default for ProjectConfig {
@@ -140,14 +121,6 @@ impl Default for OutputConfig {
     }
 }
 
-impl Default for ScoringConfig {
-    fn default() -> Self {
-        Self {
-            weights: ScoreWeights::default(),
-        }
-    }
-}
-
 impl Default for ScoreWeights {
     fn default() -> Self {
         Self {
@@ -168,14 +141,6 @@ impl Default for CompatibilityConfig {
     }
 }
 
-impl Default for MappingConfig {
-    fn default() -> Self {
-        Self {
-            override_list: vec![],
-        }
-    }
-}
-
 fn default_target_lang() -> String {
     "rust".to_string()
 }
@@ -188,7 +153,7 @@ fn default_true() -> bool {
     true
 }
 
-const VALID_LANGUAGES: &[&str] = &["typescript", "rust", "python", "go", "java", "kotlin"];
+const VALID_LANGUAGES: &[&str] = &["typescript", "rust"];
 
 impl Config {
     pub fn load(path: &PathBuf) -> anyhow::Result<Self> {
@@ -206,14 +171,14 @@ impl Config {
 
     /// Validate configuration fields, returning errors for invalid values.
     pub fn validate(&self) -> anyhow::Result<()> {
-        if let Some(ref lang) = self.project.source_lang {
-            if !VALID_LANGUAGES.contains(&lang.as_str()) {
-                anyhow::bail!(
-                    "Invalid source_language '{}'. Valid values: {}",
-                    lang,
-                    VALID_LANGUAGES.join(", ")
-                );
-            }
+        if let Some(ref lang) = self.project.source_lang
+            && !VALID_LANGUAGES.contains(&lang.as_str())
+        {
+            anyhow::bail!(
+                "Invalid source_language '{}'. Valid values: {}",
+                lang,
+                VALID_LANGUAGES.join(", ")
+            );
         }
         if !VALID_LANGUAGES.contains(&self.project.target_lang.as_str()) {
             anyhow::bail!(
@@ -223,5 +188,45 @@ impl Config {
             );
         }
         Ok(())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn valid_languages_pass_validation() {
+        let config = Config {
+            project: ProjectConfig {
+                source_lang: Some("typescript".to_string()),
+                target_lang: "rust".to_string(),
+                ..Default::default()
+            },
+            ..Default::default()
+        };
+        assert!(config.validate().is_ok());
+    }
+
+    #[test]
+    fn invalid_source_lang_fails_validation() {
+        let config = Config {
+            project: ProjectConfig {
+                source_lang: Some("python".to_string()),
+                target_lang: "rust".to_string(),
+                ..Default::default()
+            },
+            ..Default::default()
+        };
+        let err = config.validate().expect_err("expected validation to fail");
+        let msg = err.to_string();
+        assert!(
+            msg.contains("Invalid source_language 'python'"),
+            "unexpected error: {msg}"
+        );
+        assert!(
+            msg.contains("Valid values: typescript, rust"),
+            "unexpected error: {msg}"
+        );
     }
 }
