@@ -1,9 +1,11 @@
 pub mod compatibility;
 pub mod config;
 pub mod deps;
+pub mod diff;
 pub mod discovery;
 pub mod error;
 pub mod graph;
+pub mod language;
 pub mod output;
 pub mod output_paths;
 pub mod parser;

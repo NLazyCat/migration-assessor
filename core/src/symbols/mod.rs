@@ -13,6 +13,48 @@ pub struct SymbolIndex {
     pub symbols: Vec<Symbol>,
 }
 
+impl SymbolIndex {
+    pub fn all_symbols(&self) -> Vec<&Symbol> {
+        let mut result = Vec::new();
+        for sym in &self.symbols {
+            result.push(sym);
+            result.extend(sym.all_symbols());
+        }
+        result
+    }
+}
+
+impl Symbol {
+    pub fn all_symbols(&self) -> Vec<&Symbol> {
+        let mut result = Vec::new();
+        for child in &self.children {
+            result.push(child);
+            result.extend(child.all_symbols());
+        }
+        result
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum Visibility {
+    Public,
+    Private,
+    Protected,
+    Default,
+    Crate,
+    Super,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SymbolParam {
+    pub name: String,
+    #[serde(rename = "type")]
+    pub ty: String,
+    pub optional: bool,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub default_value: Option<String>,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Symbol {
     pub id: String,
@@ -23,6 +65,22 @@ pub struct Symbol {
     pub partial_analysis: bool,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub partial_reason: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub visibility: Option<Visibility>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub value: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub signature: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub doc_comment: Option<String>,
+    #[serde(skip_serializing_if = "Vec::is_empty", default)]
+    pub attributes: Vec<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub is_async: Option<bool>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub return_type: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub params: Option<Vec<SymbolParam>>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

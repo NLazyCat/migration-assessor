@@ -1,4 +1,5 @@
-use super::{ApiContract, ApiExport, Param, Symbol, SymbolIndex};
+use super::{ApiContract, ApiExport, Param, Symbol, SymbolIndex, SymbolParam};
+use super::Visibility as SymbolVisibility;
 use proc_macro2::Span;
 use quote::quote;
 use syn::spanned::Spanned;
@@ -57,6 +58,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children: Vec::new(),
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: Some(signature.clone()),
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: Some(node.sig.asyncness.is_some()),
+            return_type: extract_return_type(&node.sig.output),
+            params: Some(extract_symbol_params(&node.sig)),
         });
 
         self.exports.push(ApiExport {
@@ -96,6 +105,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
                     children: Vec::new(),
                     partial_analysis: false,
                     partial_reason: None,
+                    visibility: Some(SymbolVisibility::Public),
+                    value: None,
+                    signature: None,
+                    doc_comment: None,
+                    attributes: Vec::new(),
+                    is_async: None,
+                    return_type: extract_type_from_field(field),
+                    params: None,
                 });
             }
         }
@@ -108,6 +125,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children,
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: None,
+            return_type: None,
+            params: None,
         });
 
         self.exports.push(ApiExport {
@@ -139,14 +164,22 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
         let mut children = Vec::new();
         for variant in &node.variants {
             children.push(Symbol {
-                id: format!("{}::{}", id, variant.ident),
-                name: variant.ident.to_string(),
-                kind: "variant".to_string(),
-                line_range: self.line_range(variant.span()),
-                children: Vec::new(),
-                partial_analysis: false,
-                partial_reason: None,
-            });
+            id: format!("{}::{}", id, variant.ident),
+            name: variant.ident.to_string(),
+            kind: "variant".to_string(),
+            line_range: self.line_range(variant.span()),
+            children: Vec::new(),
+            partial_analysis: false,
+            partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: None,
+            attributes: Vec::new(),
+            is_async: None,
+            return_type: None,
+            params: None,
+        });
         }
 
         self.symbols.push(Symbol {
@@ -157,6 +190,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children,
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: None,
+            return_type: None,
+            params: None,
         });
 
         self.exports.push(ApiExport {
@@ -193,6 +234,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children: Vec::new(),
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: None,
+            return_type: None,
+            params: None,
         });
 
         self.exports.push(ApiExport {
@@ -229,6 +278,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children: Vec::new(),
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: None,
+            return_type: None,
+            params: None,
         });
 
         self.exports.push(ApiExport {
@@ -264,6 +321,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children: Vec::new(),
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: Some(format!("pub const {}: {}", node.ident, type_to_string(&node.ty))),
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: None,
+            return_type: Some(type_to_string(&node.ty)),
+            params: None,
         });
 
         self.exports.push(ApiExport {
@@ -299,6 +364,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
             children: Vec::new(),
             partial_analysis: false,
             partial_reason: None,
+            visibility: Some(SymbolVisibility::Public),
+            value: None,
+            signature: Some(format!("pub static {}: {}", node.ident, type_to_string(&node.ty))),
+            doc_comment: extract_doc_comment(&node.attrs),
+            attributes: extract_attributes(&node.attrs),
+            is_async: None,
+            return_type: Some(type_to_string(&node.ty)),
+            params: None,
         });
 
         self.exports.push(ApiExport {
@@ -341,6 +414,14 @@ impl<'ast> Visit<'ast> for SymbolVisitor {
                     children: Vec::new(),
                     partial_analysis: false,
                     partial_reason: None,
+                    visibility: Some(SymbolVisibility::Public),
+                    value: None,
+                    signature: Some(signature.clone()),
+                    doc_comment: extract_doc_comment(&method.attrs),
+                    attributes: extract_attributes(&method.attrs),
+                    is_async: Some(method.sig.asyncness.is_some()),
+                    return_type: extract_return_type(&method.sig.output),
+                    params: Some(extract_symbol_params(&method.sig)),
                 });
 
                 self.exports.push(ApiExport {
@@ -552,4 +633,37 @@ fn format_type_alias_signature(node: &ItemType) -> String {
         generics,
         type_to_string(&node.ty)
     )
+}
+
+fn extract_attributes(attrs: &[syn::Attribute]) -> Vec<String> {
+    attrs
+        .iter()
+        .filter(|attr| !attr.path().is_ident("doc"))
+        .map(|attr| quote!(#attr).to_string())
+        .collect()
+}
+
+fn extract_symbol_params(sig: &Signature) -> Vec<SymbolParam> {
+    sig.inputs
+        .iter()
+        .filter_map(|arg| match arg {
+            FnArg::Receiver(_) => None,
+            FnArg::Typed(pat_type) => {
+                let name = match &*pat_type.pat {
+                    Pat::Ident(ident) => ident.ident.to_string(),
+                    _ => "_".to_string(),
+                };
+                Some(SymbolParam {
+                    name,
+                    ty: type_to_string(&pat_type.ty),
+                    optional: false,
+                    default_value: None,
+                })
+            }
+        })
+        .collect()
+}
+
+fn extract_type_from_field(field: &syn::Field) -> Option<String> {
+    Some(type_to_string(&field.ty))
 }

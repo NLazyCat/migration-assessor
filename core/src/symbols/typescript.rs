@@ -1,4 +1,4 @@
-use super::{ApiContract, ApiExport, Param, Symbol, SymbolIndex};
+use super::{ApiContract, ApiExport, Param, Symbol, SymbolIndex, SymbolParam, Visibility};
 use crate::util;
 use std::path::Path;
 
@@ -29,39 +29,7 @@ pub fn extract(
         has_errors: false,
     };
 
-    // Report parser errors but still use the partial AST
-    if !ret.diagnostics.is_empty() {
-        extractor.has_errors = true;
-        let err_count = ret.diagnostics.errors().count();
-        let warn_count = ret.diagnostics.warnings().count();
-        let mut details: Vec<String> = Vec::new();
-        for d in ret.diagnostics.iter() {
-            let pos = d.labels.first().and_then(|l| {
-                let offset = l.offset() as usize;
-                if offset < source.len() {
-                    let line = source[..offset].matches('\n').count() + 1;
-                    let col = offset.saturating_sub(source[..offset].rfind('\n').map_or(0, |p| p + 1));
-                    Some(format!("line {}:{}", line, col + 1))
-                } else {
-                    None
-                }
-            });
-            let msg = if let Some(p) = pos {
-                format!("{} ({})", d.message, p)
-            } else {
-                format!("{}", d.message)
-            };
-            if !details.contains(&msg) {
-                details.push(msg);
-            }
-        }
-        let label = match (err_count, warn_count) {
-            (0, w) => format!("{w} parser warning(s)"),
-            (e, 0) => format!("{e} parser error(s)"),
-            (e, w) => format!("{e} error(s), {w} warning(s)"),
-        };
-        eprintln!("  Warning: {} in {}: {}", label, module, details.join("; "));
-    }
+    
 
     for stmt in &ret.program.body {
         extractor.handle_statement(stmt);
@@ -104,6 +72,14 @@ impl<'a> SymbolExtractor<'a> {
         kind: &str,
         line_range: [usize; 2],
         children: Vec<Symbol>,
+        visibility: Option<Visibility>,
+        value: Option<String>,
+        signature: Option<String>,
+        doc_comment: Option<String>,
+        attributes: Vec<String>,
+        is_async: Option<bool>,
+        return_type: Option<String>,
+        params: Option<Vec<SymbolParam>>,
     ) {
         let id = self.symbol_id(&name);
         self.symbols.push(Symbol {
@@ -114,6 +90,14 @@ impl<'a> SymbolExtractor<'a> {
             children,
             partial_analysis: false,
             partial_reason: None,
+            visibility,
+            value,
+            signature,
+            doc_comment,
+            attributes,
+            is_async,
+            return_type,
+            params,
         });
     }
 
@@ -231,8 +215,28 @@ impl<'a> SymbolExtractor<'a> {
             .map(|ann| trim_type_annotation(self.source, ann.span));
         let generics = extract_generics_option(&func.type_parameters);
         let sig = format_function_signature(self.source, &name, func);
+        
+        let symbol_params: Vec<SymbolParam> = params.iter().map(|p| SymbolParam {
+            name: p.name.clone(),
+            ty: p.ty.clone(),
+            optional: p.optional,
+            default_value: None,
+        }).collect();
 
-        self.add_symbol(name.clone(), "function", line_range, vec![]);
+        self.add_symbol(
+            name.clone(),
+            "function",
+            line_range,
+            vec![],
+            Some(if exported { Visibility::Public } else { Visibility::Private }),
+            None,
+            Some(sig.clone()),
+            None,
+            Vec::new(),
+            Some(func.r#async),
+            return_type.clone(),
+            Some(symbol_params),
+        );
         if !exported {
             return;
         }
@@ -270,6 +274,18 @@ impl<'a> SymbolExtractor<'a> {
                 ClassElement::MethodDefinition(method) => {
                     let method_name = prop_key_to_string(&method.key);
                     let method_range = self.line_range(method.span.start, method.span.end);
+                    let ps = extract_params(self.source, &method.value);
+                    let rt = method
+                        .value
+                        .return_type
+                        .as_ref()
+                        .map(|ann| trim_type_annotation(self.source, ann.span));
+                    let symbol_params: Vec<SymbolParam> = ps.iter().map(|p| SymbolParam {
+                        name: p.name.clone(),
+                        ty: p.ty.clone(),
+                        optional: p.optional,
+                        default_value: None,
+                    }).collect();
                     children.push(Symbol {
                         id: format!("{}:{}", self.symbol_id(&name), method_name),
                         name: method_name.clone(),
@@ -278,13 +294,15 @@ impl<'a> SymbolExtractor<'a> {
                         children: vec![],
                         partial_analysis: false,
                         partial_reason: None,
+                        visibility: Some(Visibility::Public),
+                        value: None,
+                        signature: None,
+                        doc_comment: None,
+                        attributes: Vec::new(),
+                        is_async: Some(method.value.r#async),
+                        return_type: rt.clone(),
+                        params: Some(symbol_params),
                     });
-                    let ps = extract_params(self.source, &method.value);
-                    let rt = method
-                        .value
-                        .return_type
-                        .as_ref()
-                        .map(|ann| trim_type_annotation(self.source, ann.span));
                     methods.push(ApiExport {
                         name: method_name,
                         kind: "method".to_string(),
@@ -304,6 +322,7 @@ impl<'a> SymbolExtractor<'a> {
                 }
                 ClassElement::PropertyDefinition(prop) => {
                     let prop_name = prop_key_to_string(&prop.key);
+                    let value = prop.value.as_ref().map(|e| "".to_string());
                     children.push(Symbol {
                         id: format!("{}:{}", self.symbol_id(&name), prop_name),
                         name: prop_name,
@@ -312,6 +331,14 @@ impl<'a> SymbolExtractor<'a> {
                         children: vec![],
                         partial_analysis: false,
                         partial_reason: None,
+                        visibility: Some(Visibility::Public),
+                        value,
+                        signature: None,
+                        doc_comment: None,
+                        attributes: Vec::new(),
+                        is_async: None,
+                        return_type: None,
+                        params: None,
                     });
                 }
                 ClassElement::StaticBlock(_) | ClassElement::TSIndexSignature(_) => {}
@@ -325,7 +352,20 @@ impl<'a> SymbolExtractor<'a> {
             }
         }
 
-        self.add_symbol(name.clone(), "class", line_range, children);
+        self.add_symbol(
+            name.clone(),
+            "class",
+            line_range,
+            children,
+            Some(if exported { Visibility::Public } else { Visibility::Private }),
+            None,
+            None,
+            None,
+            Vec::new(),
+            None,
+            None,
+            None,
+        );
 
         if !exported {
             return;
@@ -363,8 +403,13 @@ impl<'a> SymbolExtractor<'a> {
         let ty = "unknown".to_string();
         let sig = format!("export const {}: {}", name, ty);
 
+        let value = decl.init.as_ref().map(|e| "".to_string());
+
         let mut params = vec![];
         let mut return_type = None;
+        let mut is_async = None;
+        let mut symbol_params: Option<Vec<SymbolParam>> = None;
+        
         if let Some(init) = &decl.init {
             if let Expression::ArrowFunctionExpression(arrow) = init {
                 params = extract_from_arrow_params(self.source, arrow);
@@ -372,16 +417,43 @@ impl<'a> SymbolExtractor<'a> {
                     .return_type
                     .as_ref()
                     .map(|ann| trim_type_annotation(self.source, ann.span));
+                is_async = Some(arrow.r#async);
+                symbol_params = Some(params.iter().map(|p| SymbolParam {
+                    name: p.name.clone(),
+                    ty: p.ty.clone(),
+                    optional: p.optional,
+                    default_value: None,
+                }).collect());
             } else if let Expression::FunctionExpression(func) = init {
                 params = extract_params(self.source, func);
                 return_type = func
                     .return_type
                     .as_ref()
                     .map(|ann| trim_type_annotation(self.source, ann.span));
+                is_async = Some(func.r#async);
+                symbol_params = Some(params.iter().map(|p| SymbolParam {
+                    name: p.name.clone(),
+                    ty: p.ty.clone(),
+                    optional: p.optional,
+                    default_value: None,
+                }).collect());
             }
         }
 
-        self.add_symbol(name.clone(), "variable", line_range, vec![]);
+        self.add_symbol(
+            name.clone(),
+            "variable",
+            line_range,
+            vec![],
+            Some(if exported { Visibility::Public } else { Visibility::Private }),
+            value,
+            None,
+            None,
+            Vec::new(),
+            is_async,
+            return_type.clone(),
+            symbol_params,
+        );
         if !exported {
             return;
         }
@@ -412,7 +484,20 @@ impl<'a> SymbolExtractor<'a> {
 
         let type_text = extract_type_source(self.source, alias.span);
 
-        self.add_symbol(name.clone(), "type_alias", line_range, vec![]);
+        self.add_symbol(
+            name.clone(),
+            "type_alias",
+            line_range,
+            vec![],
+            Some(if exported { Visibility::Public } else { Visibility::Private }),
+            Some(type_text.clone()),
+            None,
+            None,
+            Vec::new(),
+            None,
+            None,
+            None,
+        );
         if !exported {
             return;
         }
@@ -460,6 +545,14 @@ impl<'a> SymbolExtractor<'a> {
                     children: vec![],
                     partial_analysis: false,
                     partial_reason: None,
+                    visibility: Some(Visibility::Public),
+                    value: None,
+                    signature: None,
+                    doc_comment: None,
+                    attributes: Vec::new(),
+                    is_async: None,
+                    return_type: prop_ty.clone(),
+                    params: None,
                 });
                 members.push(ApiExport {
                     name: prop_name.clone(),
@@ -480,7 +573,20 @@ impl<'a> SymbolExtractor<'a> {
             }
         }
 
-        self.add_symbol(name.clone(), "interface", line_range, children);
+        self.add_symbol(
+            name.clone(),
+            "interface",
+            line_range,
+            children,
+            Some(if exported { Visibility::Public } else { Visibility::Private }),
+            None,
+            None,
+            None,
+            Vec::new(),
+            None,
+            None,
+            None,
+        );
         if !exported {
             return;
         }
@@ -507,7 +613,20 @@ impl<'a> SymbolExtractor<'a> {
         let name = enum_decl.id.name.to_string();
         let line_range = self.line_range(enum_decl.span.start, enum_decl.span.end);
 
-        self.add_symbol(name.clone(), "enum", line_range, vec![]);
+        self.add_symbol(
+            name.clone(),
+            "enum",
+            line_range,
+            vec![],
+            Some(if exported { Visibility::Public } else { Visibility::Private }),
+            None,
+            None,
+            None,
+            Vec::new(),
+            None,
+            None,
+            None,
+        );
         if !exported {
             return;
         }

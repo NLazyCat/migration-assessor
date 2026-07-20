@@ -2,6 +2,7 @@ use clap::Args;
 use console::style;
 use indicatif::{ProgressBar, ProgressStyle};
 use migration_core::deps::module_map;
+use migration_core::language::LanguageRegistry;
 use migration_core::output_paths;
 use migration_core::recommendation;
 use migration_core::*;
@@ -553,15 +554,18 @@ fn group_references_by_file(
         .collect()
 }
 
-/// Guess the source language from the project root by looking for config files.
 fn guess_source_language(project_root: &Path) -> String {
-    if project_root.join("tsconfig.json").exists() || project_root.join("package.json").exists() {
-        "typescript".to_string()
-    } else if project_root.join("Cargo.toml").exists() {
-        "rust".to_string()
-    } else {
-        "typescript".to_string()
-    }
+    LanguageRegistry::get()
+        .detect_language(project_root)
+        .unwrap_or_else(|| {
+            if project_root.join("tsconfig.json").exists() || project_root.join("package.json").exists() {
+                "typescript".to_string()
+            } else if project_root.join("Cargo.toml").exists() {
+                "rust".to_string()
+            } else {
+                "typescript".to_string()
+            }
+        })
 }
 
 /// Generate a full migration.toml config for the migration folder.

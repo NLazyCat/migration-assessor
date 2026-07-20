@@ -530,7 +530,6 @@ fn extract_file_refs(
     let program = ret.program;
 
     let semantic_ret = SemanticBuilder::new()
-        .with_build_nodes(true)
         .build(&program);
     let scoping = semantic_ret.semantic.scoping();
     let ast_nodes = semantic_ret.semantic.nodes();
