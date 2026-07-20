@@ -192,8 +192,7 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     println!("  To:   {}", new_version);
 
     let lang_registry = LanguageRegistry::get();
-    let lang_name = lang_registry
-        .detect_language(&project_root)
+    let lang_name = detect_project_language(lang_registry, &project_root, source_path.as_deref())
         .ok_or_else(|| anyhow::anyhow!("Cannot detect project language"))?;
     let language = lang_registry.get_language(&lang_name).unwrap();
 
@@ -822,4 +821,24 @@ fn load_file_recommendations(report_dir: &Path) -> HashMap<String, Vec<Dependenc
         }
     }
     map
+}
+
+fn detect_project_language(
+    lang_registry: &'static LanguageRegistry,
+    project_root: &Path,
+    source_path: Option<&str>,
+) -> Option<String> {
+    if let Some(src) = source_path {
+        let candidate = if Path::new(src).is_absolute() {
+            PathBuf::from(src)
+        } else {
+            project_root.join(src)
+        };
+        if candidate.exists() {
+            if let Some(lang) = lang_registry.detect_language(&candidate) {
+                return Some(lang);
+            }
+        }
+    }
+    lang_registry.detect_language(project_root)
 }
