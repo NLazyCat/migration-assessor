@@ -5,7 +5,7 @@ use migration_core::graph::CycleDetectionResult;
 use migration_core::graph::DependencyGraph;
 use serde_json::Value;
 
-use self::html::{build_html, format_cycles_detail, get_bilingual_js, html_escape};
+use self::html::{build_html, format_cycles_detail, get_bilingual_js, html_escape, HtmlReportConfig};
 
 mod html;
 
@@ -81,7 +81,7 @@ pub fn generate_html_report(
 
     let bilingual_js = get_bilingual_js();
 
-    let html = build_html(
+    let html = build_html(&HtmlReportConfig {
         source_repo,
         source_lang,
         target_lang,
@@ -89,31 +89,31 @@ pub fn generate_html_report(
         generated_at,
         files_analyzed,
         dep_count,
-        dag.edges.len(),
+        edge_count: dag.edges.len(),
         total_symbols,
-        dag.nodes.len(),
-        if cycles.has_cycles { "#dc2626" } else { "#16a34a" },
-        if cycles.has_cycles { "red" } else { "green" },
-        cycles.cycles.len() + cycles.self_loops.len(),
-        &format_cycles_detail(cycles),
-        if has_boundaries { "#7c3aed" } else { "#9ca3af" },
-        if has_boundaries { "purple" } else { "" },
-        &if has_boundaries {
+        unique_nodes: dag.nodes.len(),
+        cycle_color: if cycles.has_cycles { "#dc2626" } else { "#16a34a" },
+        cycle_class: if cycles.has_cycles { "red" } else { "green" },
+        cycle_count: cycles.cycles.len() + cycles.self_loops.len(),
+        cycles_detail: &format_cycles_detail(cycles),
+        boundaries_color: if has_boundaries { "#7c3aed" } else { "#9ca3af" },
+        boundaries_class: if has_boundaries { "purple" } else { "" },
+        boundaries_detail: &if has_boundaries {
             format!("{} layers in architecture", layers_count)
         } else {
             "Not analyzed (run `boundaries`)".to_string()
         },
         layers_count,
-        &build_deps_table(dependencies, &compat_json),
-        &build_recs_section(&recs_json),
-        &build_cycles_section(cycles),
-        &build_boundary_section(&layers_json, &uncut_json),
-        &build_refs_overview(&overview_json),
-        &build_api_section(output_dir, &overview_json),
+        deps_table: &build_deps_table(dependencies, &compat_json),
+        recs_section: &build_recs_section(&recs_json),
+        cycle_html: &build_cycles_section(cycles),
+        boundary_section: &build_boundary_section(&layers_json, &uncut_json),
+        refs_overview: &build_refs_overview(&overview_json),
+        api_section: &build_api_section(output_dir, &overview_json),
         bilingual_js,
-        &nodes_json,
-        &edges_json,
-    );
+        nodes_json: &nodes_json,
+        edges_json: &edges_json,
+    });
 
     std::fs::write(output_dir.join("index.html"), html)?;
     Ok(())
