@@ -667,3 +667,125 @@ fn extract_symbol_params(sig: &Signature) -> Vec<SymbolParam> {
 fn extract_type_from_field(field: &syn::Field) -> Option<String> {
     Some(type_to_string(&field.ty))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_extract_pub_fn() {
+        let source = "pub fn add(x: i32, y: i32) -> i32 { x + y }";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "add");
+        assert_eq!(index.symbols[0].kind, "function");
+        assert_eq!(contract.exports.len(), 1);
+    }
+
+    #[test]
+    fn test_extract_private_fn_skipped() {
+        let source = "fn hidden() -> u32 { 42 }";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert!(index.symbols.is_empty());
+        assert!(contract.exports.is_empty());
+    }
+
+    #[test]
+    fn test_extract_pub_struct() {
+        let source = "pub struct User { pub name: String, pub age: u32 }";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "User");
+        assert_eq!(index.symbols[0].kind, "struct");
+        assert_eq!(contract.exports.len(), 1);
+    }
+
+    #[test]
+    fn test_extract_pub_enum() {
+        let source = "pub enum Color { Red, Green, Blue }";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "Color");
+        assert_eq!(index.symbols[0].kind, "enum");
+        assert_eq!(contract.exports.len(), 1);
+    }
+
+    #[test]
+    fn test_extract_pub_trait() {
+        let source = "pub trait Runnable { fn run(&self); }";
+        let (index, _contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "Runnable");
+        assert_eq!(index.symbols[0].kind, "trait");
+    }
+
+    #[test]
+    fn test_extract_pub_type_alias() {
+        let source = "pub type Callback = Box<dyn Fn()>;";
+        let (index, _contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "Callback");
+        assert_eq!(index.symbols[0].kind, "type_alias");
+    }
+
+    #[test]
+    fn test_extract_pub_const() {
+        let source = "pub const MAX_SIZE: usize = 1024;";
+        let (index, _contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "MAX_SIZE");
+        assert_eq!(index.symbols[0].kind, "const");
+    }
+
+    #[test]
+    fn test_extract_pub_static() {
+        let source = "pub static GREETING: &str = \"hello\";";
+        let (index, _contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "GREETING");
+        assert_eq!(index.symbols[0].kind, "static");
+    }
+
+    #[test]
+    fn test_extract_empty_source() {
+        let source = "";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert!(index.symbols.is_empty());
+        assert!(contract.exports.is_empty());
+    }
+
+    #[test]
+    fn test_extract_multiple_items() {
+        let source = "pub fn a() {} pub struct B {} pub enum C { X }";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 3);
+        assert_eq!(contract.exports.len(), 3);
+    }
+
+    #[test]
+    fn test_extract_impl_method() {
+        let source = "pub struct Counter { count: i32 }
+impl Counter {
+    pub fn increment(&mut self) { self.count += 1; }
+    fn private_helper(&self) -> i32 { self.count }
+}";
+        let (index, contract) = extract("lib.rs", source).unwrap();
+        assert_eq!(index.symbols.len(), 2);
+        let method = &index.symbols[1];
+        assert_eq!(method.name, "increment");
+        assert_eq!(method.kind, "method");
+        assert_eq!(contract.exports.len(), 2);
+    }
+
+    #[test]
+    fn test_is_public_true() {
+        let vis: syn::Visibility = syn::parse2(quote::quote! { pub }).unwrap();
+        assert!(is_public(&vis));
+    }
+
+    #[test]
+    fn test_is_public_false() {
+        let vis: syn::Visibility = syn::Visibility::Inherited;
+        assert!(!is_public(&vis));
+    }
+}

@@ -340,3 +340,113 @@ pub fn extract_all(root: &Path, files: &[PathBuf]) -> anyhow::Result<(ForwardInd
 
     Ok((forward, reverse))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_simple_use() {
+        let source = "use crate::models::User;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "User");
+        assert_eq!(bindings[0].source_module, "crate::models");
+        assert_eq!(bindings[0].exported_name, "User");
+    }
+
+    #[test]
+    fn test_parse_group_use() {
+        let source = "use crate::models::{User, Order};";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 2);
+        assert_eq!(bindings[0].local_name, "User");
+        assert_eq!(bindings[1].local_name, "Order");
+    }
+
+    #[test]
+    fn test_parse_renamed_use() {
+        let source = "use crate::models::User as MyUser;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "MyUser");
+        assert_eq!(bindings[0].exported_name, "User");
+    }
+
+    #[test]
+    fn test_parse_nested_group_use() {
+        let source = "use crate::models::{self, User};";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "User");
+    }
+
+    #[test]
+    fn test_parse_self_use_skipped() {
+        let source = "use crate::module::{self, Helper};";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "Helper");
+    }
+
+    #[test]
+    fn test_parse_deep_crate_path() {
+        let source = "use crate::a::b::c::StructName;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].source_module, "crate::a::b::c");
+    }
+
+    #[test]
+    fn test_parse_super_use() {
+        let source = "use super::parent_mod::Item;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].source_module, "super::parent_mod");
+    }
+
+    #[test]
+    fn test_parse_external_crate_skipped() {
+        let source = "use serde_json::Value;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert!(bindings.is_empty());
+    }
+
+    #[test]
+    fn test_parse_glob_import_skipped() {
+        let source = "use crate::prelude::*;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert!(bindings.is_empty());
+    }
+
+    #[test]
+    fn test_parse_empty_source() {
+        let source = "";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert!(bindings.is_empty());
+    }
+
+    #[test]
+    fn test_parse_non_use_items_ignored() {
+        let source = "fn foo() {} struct Bar;";
+        let bindings = parse_import_bindings(source).unwrap();
+        assert!(bindings.is_empty());
+    }
+
+    #[test]
+    fn test_is_crate_local() {
+        assert!(is_crate_local("crate::models"));
+        assert!(is_crate_local("self::inner"));
+        assert!(is_crate_local("super::parent"));
+        assert!(!is_crate_local("serde"));
+        assert!(!is_crate_local("std::collections"));
+    }
+
+    #[test]
+    fn test_extract_all_empty_files() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let result = extract_all(dir.path(), &[]).unwrap();
+        assert!(result.0.is_empty());
+        assert!(result.1.is_empty());
+    }
+}

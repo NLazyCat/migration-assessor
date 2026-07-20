@@ -600,4 +600,155 @@ fn extract_file_refs(
     Some((forward, reverse))
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::path::Path;
 
+    #[test]
+    fn test_path_alias_resolver_empty() {
+        let r = PathAliasResolver::empty();
+        assert!(r.is_empty());
+    }
+
+    #[test]
+    fn test_path_alias_resolver_with_aliases() {
+        let aliases = vec![PathAlias {
+            import_prefix: "@".into(),
+            target_prefix: "src".into(),
+        }];
+        let r = PathAliasResolver::with_aliases(aliases);
+        assert!(!r.is_empty());
+    }
+
+    #[test]
+    fn test_path_alias_resolve_alias_hit() {
+        let aliases = vec![PathAlias {
+            import_prefix: "@".into(),
+            target_prefix: "C:/project/src".into(),
+        }];
+        let r = PathAliasResolver::with_aliases(aliases);
+        let result = r.resolve_alias("@/utils/helpers", Path::new("C:/project"));
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_path_alias_resolve_alias_miss() {
+        let r = PathAliasResolver::empty();
+        let result = r.resolve_alias("lodash", Path::new("/project"));
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_parse_named_imports() {
+        let source = r#"import { Component, useEffect } from "./hooks";"#;
+        let bindings = parse_import_bindings(source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(bindings.len(), 2);
+        assert_eq!(bindings[0].local_name, "Component");
+        assert_eq!(bindings[1].local_name, "useEffect");
+    }
+
+    #[test]
+    fn test_parse_default_import() {
+        let source = r#"import React from "./react";"#;
+        let bindings = parse_import_bindings(source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "React");
+        assert_eq!(bindings[0].exported_name, "default");
+    }
+
+    #[test]
+    fn test_parse_default_and_named_imports() {
+        let source = r#"import React, { useState } from "./react";"#;
+        let bindings = parse_import_bindings(source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(bindings.len(), 2);
+    }
+
+    #[test]
+    fn test_parse_relative_import_only() {
+        let source = r#"import { foo } from "./bar"; import { baz } from "./utils";"#;
+        let bindings = parse_import_bindings(source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(bindings.len(), 2);
+        assert_eq!(bindings[0].source_module, "./bar");
+        assert_eq!(bindings[1].source_module, "./utils");
+    }
+
+    #[test]
+    fn test_parse_export_from() {
+        let source = r#"export { helper } from "./utils";"#;
+        let bindings = parse_import_bindings(source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "helper");
+        assert_eq!(bindings[0].source_module, "./utils");
+    }
+
+    #[test]
+    fn test_parse_aliased_import() {
+        let source = r#"import { Component as Cmp } from "./react";"#;
+        let bindings = parse_import_bindings(source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(bindings.len(), 1);
+        assert_eq!(bindings[0].local_name, "Cmp");
+        assert_eq!(bindings[0].exported_name, "Component");
+    }
+
+    #[test]
+    fn test_strip_js_ext() {
+        assert_eq!(PathAliasResolver::strip_js_ext("foo.js"), "foo");
+        assert_eq!(PathAliasResolver::strip_js_ext("foo/bar.js"), "foo/bar");
+        assert_eq!(PathAliasResolver::strip_js_ext("foo.json"), "foo.json");
+        assert_eq!(PathAliasResolver::strip_js_ext("foo.ts"), "foo.ts");
+    }
+
+    #[test]
+    fn test_probe_path_with_extension() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let file_path = dir.path().join("exists.ts");
+        std::fs::write(&file_path, "const x = 1;").unwrap();
+
+        let result = probe_path(&file_path, dir.path());
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_probe_path_without_extension() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let file_path = dir.path().join("foo.ts");
+        std::fs::write(&file_path, "const x = 1;").unwrap();
+
+        let no_ext = dir.path().join("foo");
+        let result = probe_path(&no_ext, dir.path());
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_to_relative() {
+        let abs = Path::new("/project/src/file.ts");
+        let root = Path::new("/project");
+        let rel = to_relative(abs, root);
+        assert_eq!(rel, PathBuf::from("src/file.ts"));
+    }
+
+    #[test]
+    fn test_non_relative_might_be_alias() {
+        assert!(non_relative_might_be_alias("#foo"));
+        assert!(non_relative_might_be_alias("@utils/helper"));
+        assert!(!non_relative_might_be_alias("./foo"));
+        assert!(!non_relative_might_be_alias("lodash"));
+    }
+
+    #[test]
+    fn test_path_to_forward_slash() {
+        let p = Path::new("foo\\bar\\baz.ts");
+        let s = path_to_forward_slash(p);
+        assert!(!s.contains('\\'));
+        assert_eq!(s, "foo/bar/baz.ts");
+    }
+
+    #[test]
+    fn test_extract_all_empty_files() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let result = extract_all(dir.path(), &[]).unwrap();
+        assert!(result.0.is_empty());
+        assert!(result.1.is_empty());
+    }
+}

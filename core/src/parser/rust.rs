@@ -67,3 +67,50 @@ pub fn parse_references(source: &str) -> anyhow::Result<ModuleReferences> {
         external_imports: visitor.external_imports,
     })
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_rust_parse_references_external() {
+        let source = "use std::collections::HashMap;\nuse serde_json::Value;";
+        let refs = parse_references(source).unwrap();
+        assert!(refs.external_imports.iter().any(|i| i.contains("HashMap")));
+        assert!(refs.external_imports.iter().any(|i| i.contains("serde_json")));
+        assert!(refs.relative_imports.is_empty());
+    }
+
+    #[test]
+    fn test_rust_parse_references_relative() {
+        let source = "use crate::helper::foo;\nuse super::bar;\nuse self::baz;";
+        let refs = parse_references(source).unwrap();
+        assert!(refs.relative_imports.iter().any(|i| i.contains("crate::helper")));
+        assert!(refs.relative_imports.iter().any(|i| i.contains("super::bar")));
+        assert!(refs.relative_imports.iter().any(|i| i.contains("self::baz")));
+    }
+
+    #[test]
+    fn test_rust_parse_references_mod_decl() {
+        let source = "mod foo;\nmod bar;";
+        let refs = parse_references(source).unwrap();
+        assert!(refs.relative_imports.contains(&"self::foo".to_string()));
+        assert!(refs.relative_imports.contains(&"self::bar".to_string()));
+    }
+
+    #[test]
+    fn test_rust_parse_references_group_import() {
+        let source = "use std::{fs::File, io::Read};";
+        let refs = parse_references(source).unwrap();
+        assert!(refs.external_imports.iter().any(|i| i.contains("fs")));
+        assert!(refs.external_imports.iter().any(|i| i.contains("io")));
+    }
+
+    #[test]
+    fn test_rust_parse_references_no_imports() {
+        let source = "fn main() { println!(\"hi\"); }";
+        let refs = parse_references(source).unwrap();
+        assert!(refs.relative_imports.is_empty());
+        assert!(refs.external_imports.is_empty());
+    }
+}

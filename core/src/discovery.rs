@@ -162,3 +162,142 @@ impl FileDiscovery {
         true
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::fs;
+    use tempfile::TempDir;
+
+    fn setup_ts_project() -> TempDir {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join("src")).unwrap();
+        fs::write(dir.path().join("src/index.ts"), "export const x = 1;").unwrap();
+        fs::write(dir.path().join("src/app.tsx"), "export const App = () => null;").unwrap();
+        fs::write(dir.path().join("README.md"), "docs").unwrap();
+        fs::create_dir_all(dir.path().join("node_modules/pkg")).unwrap();
+        fs::write(dir.path().join("node_modules/pkg/index.ts"), "").unwrap();
+        dir
+    }
+
+    fn setup_rust_project() -> TempDir {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join("src")).unwrap();
+        fs::write(dir.path().join("src/main.rs"), "fn main() {}").unwrap();
+        fs::write(dir.path().join("src/lib.rs"), "pub fn foo() {}").unwrap();
+        fs::create_dir_all(dir.path().join("target/debug")).unwrap();
+        fs::write(dir.path().join("target/debug/test.rs"), "").unwrap();
+        dir
+    }
+
+    #[test]
+    fn test_discover_ts_files() {
+        let dir = setup_ts_project();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        let names: Vec<String> = files.iter().map(|f| f.to_string_lossy().to_string()).collect();
+        assert!(names.iter().any(|n| n.replace('\\', "/").contains("index.ts")));
+        assert!(names.iter().any(|n| n.replace('\\', "/").contains("app.tsx")));
+    }
+
+    #[test]
+    fn test_discover_ignores_node_modules() {
+        let dir = setup_ts_project();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("node_modules")));
+    }
+
+    #[test]
+    fn test_discover_ignores_non_source() {
+        let dir = setup_ts_project();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("README")));
+    }
+
+    #[test]
+    fn test_discover_rust_files() {
+        let dir = setup_rust_project();
+        let discovery = FileDiscovery::new(SourceLanguage::Rust, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("main.rs")));
+        assert!(files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("lib.rs")));
+    }
+
+    #[test]
+    fn test_discover_ignores_target() {
+        let dir = setup_rust_project();
+        let discovery = FileDiscovery::new(SourceLanguage::Rust, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("target")));
+    }
+
+    #[test]
+    fn test_discover_ignore_pattern() {
+        let dir = setup_ts_project();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec!["src/app*".into()], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("app.tsx")));
+        assert!(files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("index.ts")));
+    }
+
+    #[test]
+    fn test_discover_exclude_pattern() {
+        let dir = setup_ts_project();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec!["**/index.ts".into()], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().replace('\\', "/").contains("index.ts")));
+    }
+
+    #[test]
+    fn test_discover_skip_framework() {
+        let tmp = TempDir::new().unwrap();
+        let root = tmp.path().join("p");
+        fs::create_dir_all(&root).unwrap();
+        fs::create_dir_all(root.join("packages/react")).unwrap();
+        fs::write(root.join("packages/react/index.ts"), "").unwrap();
+        fs::create_dir_all(root.join("components/ui")).unwrap();
+        fs::write(root.join("components/ui/button.ts"), "").unwrap();
+        fs::create_dir_all(root.join("src")).unwrap();
+        fs::write(root.join("src/index.ts"), "export const x = 1;").unwrap();
+
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], true);
+        let files = discovery.discover(&root);
+        let paths: Vec<String> = files.iter().map(|f| f.to_string_lossy().replace('\\', "/")).collect();
+        assert!(!paths.iter().any(|p| p.contains("packages/react")), "should exclude framework: got {paths:?}");
+        assert!(!paths.iter().any(|p| p.contains("components/ui")), "should exclude shadcn: got {paths:?}");
+        assert!(paths.iter().any(|p| p.contains("src/index.ts")), "should include src/index.ts: got {paths:?}");
+    }
+
+    #[test]
+    fn test_discover_empty_directory() {
+        let dir = TempDir::new().unwrap();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(files.is_empty());
+    }
+
+    #[test]
+    fn test_discover_skips_migration_dirs() {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join("some-migration")).unwrap();
+        fs::write(dir.path().join("some-migration/foo.ts"), "").unwrap();
+        fs::create_dir_all(dir.path().join("src")).unwrap();
+        fs::write(dir.path().join("src/index.ts"), "export const x = 1;").unwrap();
+
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().contains("some-migration")));
+    }
+
+    #[test]
+    fn test_should_traverse_rejects_git() {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join(".git")).unwrap();
+        fs::write(dir.path().join(".git/config"), "").unwrap();
+        let discovery = FileDiscovery::new(SourceLanguage::TypeScript, vec![], vec![], false);
+        let files = discovery.discover(dir.path());
+        assert!(!files.iter().any(|f| f.to_string_lossy().contains(".git")));
+    }
+}

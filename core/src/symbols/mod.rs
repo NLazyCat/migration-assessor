@@ -166,3 +166,81 @@ impl SymbolExtractor {
         Ok(results)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::project::SourceLanguage;
+
+    fn make_symbol(name: &str, children: Vec<Symbol>) -> Symbol {
+        Symbol {
+            id: format!("mod:{}", name),
+            name: name.to_string(),
+            kind: "function".into(),
+            line_range: [1, 5],
+            children,
+            partial_analysis: false,
+            partial_reason: None,
+            visibility: None,
+            value: None,
+            signature: None,
+            doc_comment: None,
+            attributes: vec![],
+            is_async: None,
+            return_type: None,
+            params: None,
+        }
+    }
+
+    #[test]
+    fn test_symbol_index_all_symbols_no_children() {
+        let si = SymbolIndex {
+            module: "test".into(),
+            symbols: vec![make_symbol("foo", vec![]), make_symbol("bar", vec![])],
+        };
+        let all = si.all_symbols();
+        assert_eq!(all.len(), 2);
+        assert_eq!(all[0].name, "foo");
+        assert_eq!(all[1].name, "bar");
+    }
+
+    #[test]
+    fn test_symbol_index_all_symbols_with_children() {
+        let child = make_symbol("inner", vec![]);
+        let parent = make_symbol("outer", vec![child]);
+        let si = SymbolIndex {
+            module: "test".into(),
+            symbols: vec![parent],
+        };
+        let all = si.all_symbols();
+        assert_eq!(all.len(), 2);
+    }
+
+    #[test]
+    fn test_symbol_all_symbols_nested() {
+        let grandchild = make_symbol("gc", vec![]);
+        let child = make_symbol("child", vec![grandchild]);
+        let parent = make_symbol("parent", vec![child]);
+        let results = parent.all_symbols();
+        assert_eq!(results.len(), 2);
+        assert_eq!(results[0].name, "child");
+        assert_eq!(results[1].name, "gc");
+    }
+
+    #[test]
+    fn test_symbol_all_symbols_no_children() {
+        let sym = make_symbol("solo", vec![]);
+        let results = sym.all_symbols();
+        assert!(results.is_empty());
+    }
+
+    #[test]
+    fn test_extract_all_empty_files() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let result = SymbolExtractor::extract_all(dir.path(), &[], SourceLanguage::TypeScript).unwrap();
+        assert!(result.is_empty());
+
+        let result = SymbolExtractor::extract_all(dir.path(), &[], SourceLanguage::Rust).unwrap();
+        assert!(result.is_empty());
+    }
+}

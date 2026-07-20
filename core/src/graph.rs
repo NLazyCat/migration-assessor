@@ -307,3 +307,170 @@ fn resolve_rust_module_path(base: &Path, module_path: &str) -> Option<String> {
     let relative = candidate.strip_prefix(root).unwrap_or(&candidate);
     Some(relative.to_string_lossy().replace('\\', "/"))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::fs;
+    use tempfile::TempDir;
+
+    fn ts_project() -> TempDir {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join("src")).unwrap();
+        fs::write(
+            dir.path().join("src/index.ts"),
+            "import { helper } from './helper';\nexport const x = 1;",
+        )
+        .unwrap();
+        fs::write(
+            dir.path().join("src/helper.ts"),
+            "export const helper = () => 42;",
+        )
+        .unwrap();
+        dir
+    }
+
+    fn rust_project() -> TempDir {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join("src")).unwrap();
+        fs::write(
+            dir.path().join("src/main.rs"),
+            "mod lib;\nfn main() { lib::foo(); }",
+        )
+        .unwrap();
+        fs::write(dir.path().join("src/lib.rs"), "pub fn foo() -> i32 { 1 }").unwrap();
+        dir
+    }
+
+    #[test]
+    fn test_build_ts_graph() {
+        let dir = ts_project();
+        let files: Vec<PathBuf> = vec![
+            dir.path().join("src/index.ts"),
+            dir.path().join("src/helper.ts"),
+        ];
+        let graph = GraphBuilder::build(dir.path(), &files, SourceLanguage::TypeScript).unwrap();
+        assert_eq!(graph.nodes.len(), 2);
+        assert_eq!(graph.edges.len(), 1);
+        assert_eq!(graph.edges[0].from, "src/index.ts");
+        assert!(graph.edges[0].to.contains("src/helper.ts"));
+    }
+
+    #[test]
+    fn test_build_rust_graph() {
+        let dir = rust_project();
+        let files: Vec<PathBuf> = vec![
+            dir.path().join("src/main.rs"),
+            dir.path().join("src/lib.rs"),
+        ];
+        let graph = GraphBuilder::build(dir.path(), &files, SourceLanguage::Rust).unwrap();
+        assert_eq!(graph.nodes.len(), 3);
+    }
+
+    #[test]
+    fn test_build_empty_files() {
+        let dir = TempDir::new().unwrap();
+        let graph = GraphBuilder::build(dir.path(), &[], SourceLanguage::TypeScript).unwrap();
+        assert!(graph.nodes.is_empty());
+        assert!(graph.edges.is_empty());
+    }
+
+    #[test]
+    fn test_detect_no_cycles() {
+        let dir = ts_project();
+        let files: Vec<PathBuf> = vec![
+            dir.path().join("src/index.ts"),
+            dir.path().join("src/helper.ts"),
+        ];
+        let mut graph = GraphBuilder::build(dir.path(), &files, SourceLanguage::TypeScript).unwrap();
+        let result = graph.detect_cycles();
+        assert!(!result.has_cycles);
+        assert!(result.cycles.is_empty());
+        assert!(result.self_loops.is_empty());
+    }
+
+    #[test]
+    fn test_detect_self_loop() {
+        let mut graph = DependencyGraph {
+            nodes: vec![Node {
+                id: "a".into(),
+                in_degree: 1,
+                out_degree: 1,
+                top_dir: "".into(),
+                dir_path: "".into(),
+                in_cycle: false,
+            }],
+            edges: vec![Edge {
+                from: "a".into(),
+                to: "a".into(),
+            }],
+        };
+        let result = graph.detect_cycles();
+        assert!(result.has_cycles);
+        assert!(!result.self_loops.is_empty());
+        assert_eq!(result.self_loops[0], "a");
+        assert!(graph.nodes[0].in_cycle);
+    }
+
+    #[test]
+    fn test_detect_cycle_two_nodes() {
+        let mut graph = DependencyGraph {
+            nodes: vec![
+                Node {
+                    id: "a".into(),
+                    in_degree: 1,
+                    out_degree: 1,
+                    top_dir: "".into(),
+                    dir_path: "".into(),
+                    in_cycle: false,
+                },
+                Node {
+                    id: "b".into(),
+                    in_degree: 1,
+                    out_degree: 1,
+                    top_dir: "".into(),
+                    dir_path: "".into(),
+                    in_cycle: false,
+                },
+            ],
+            edges: vec![
+                Edge { from: "a".into(), to: "b".into() },
+                Edge { from: "b".into(), to: "a".into() },
+            ],
+        };
+        let result = graph.detect_cycles();
+        assert!(result.has_cycles);
+        assert_eq!(result.cycles.len(), 1);
+        assert_eq!(result.cycles[0].nodes.len(), 3); // a -> b -> a (3 entries: a, b, a)
+    }
+
+    #[test]
+    fn test_node_degrees() {
+        let dir = ts_project();
+        let files: Vec<PathBuf> = vec![
+            dir.path().join("src/index.ts"),
+            dir.path().join("src/helper.ts"),
+        ];
+        let graph = GraphBuilder::build(dir.path(), &files, SourceLanguage::TypeScript).unwrap();
+        let idx_node = graph.nodes.iter().find(|n| n.id.contains("index")).unwrap();
+        let helper_node = graph.nodes.iter().find(|n| n.id.contains("helper")).unwrap();
+        assert_eq!(idx_node.out_degree, 1);
+        assert_eq!(helper_node.in_degree, 1);
+    }
+
+    #[test]
+    fn test_rust_crate_import_resolution() {
+        let dir = TempDir::new().unwrap();
+        fs::create_dir_all(dir.path().join("src")).unwrap();
+        fs::write(
+            dir.path().join("src/main.rs"),
+            "use crate::foo;\nfn main() { foo::bar(); }",
+        )
+        .unwrap();
+        // Don't create foo.rs — test that no edge is created for unresolvable crate import
+        let files = vec![dir.path().join("src/main.rs")];
+        let graph = GraphBuilder::build(dir.path(), &files, SourceLanguage::Rust).unwrap();
+        // Bare crate:: imports are external and not resolved
+        assert_eq!(graph.nodes.len(), 1);
+    }
+}
