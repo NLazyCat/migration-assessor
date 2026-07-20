@@ -1,4 +1,5 @@
 use crate::diff::{DiffReport, DiffSummary, FileDiffResult, PropagationResult};
+use crate::git;
 use crate::language::{Language, LanguageRegistry};
 use std::path::Path;
 
@@ -30,16 +31,16 @@ impl DiffEngine {
             .get_language(&lang_name)
             .ok_or_else(|| anyhow::anyhow!("Language {} not supported", lang_name))?;
 
-        let changed_files = get_changed_files(project_root, from_version, to_version)?;
+        let changed_files = git::get_changed_files(project_root, from_version, to_version)?;
 
         let mut file_changes = Vec::new();
         for file in &changed_files {
-            match (get_file_at_version(project_root, from_version, file), get_file_at_version(project_root, to_version, file)) {
+            match (git::get_file_at_version(project_root, from_version, file), git::get_file_at_version(project_root, to_version, file)) {
                 (Ok(old_source), Ok(new_source)) => {
                     let diff = Self::diff_files(&old_source, &new_source, file, language)?;
                     file_changes.push(diff);
                 }
-                (Err(_), Ok(new_source)) => {
+                (Err(_), Ok(_new_source)) => {
                     file_changes.push(FileDiffResult {
                         file: file.clone(),
                         status: "added".to_string(),
@@ -75,34 +76,6 @@ impl DiffEngine {
             },
         })
     }
-}
-
-fn get_changed_files(project_root: &Path, from_version: &str, to_version: &str) -> anyhow::Result<Vec<String>> {
-    let output = std::process::Command::new("git")
-        .args(["diff", "--name-only", from_version, to_version])
-        .current_dir(project_root)
-        .output()?;
-
-    let files: Vec<String> = String::from_utf8_lossy(&output.stdout)
-        .lines()
-        .map(|s| s.to_string())
-        .filter(|s| !s.is_empty())
-        .collect();
-
-    Ok(files)
-}
-
-fn get_file_at_version(project_root: &Path, version: &str, file_path: &str) -> anyhow::Result<String> {
-    let output = std::process::Command::new("git")
-        .args(["show", &format!("{}:{}", version, file_path)])
-        .current_dir(project_root)
-        .output()?;
-
-    if !output.status.success() {
-        return Err(anyhow::anyhow!("Failed to get file {} at version {}", file_path, version));
-    }
-
-    Ok(String::from_utf8_lossy(&output.stdout).to_string())
 }
 
 fn compute_summary(file_changes: &[FileDiffResult]) -> DiffSummary {

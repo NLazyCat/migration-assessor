@@ -1,5 +1,5 @@
 use crate::diff::{ChangeDetail, SymbolChange};
-use crate::symbols::{Symbol, SymbolParam};
+use crate::symbols::Symbol;
 
 pub fn diff(old: &Symbol, new: &Symbol) -> Option<Vec<SymbolChange>> {
     let mut changes = Vec::new();
@@ -152,4 +152,52 @@ pub fn diff(old: &Symbol, new: &Symbol) -> Option<Vec<SymbolChange>> {
     }
 
     if changes.is_empty() { None } else { Some(changes) }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::symbols::{SymbolParam, Visibility};
+
+    fn make_sym(name: &str, params: Option<Vec<SymbolParam>>, return_type: Option<String>) -> Symbol {
+        Symbol {
+            id: name.to_string(),
+            name: name.to_string(),
+            kind: "function".to_string(),
+            line_range: [1, 10],
+            children: vec![],
+            partial_analysis: false,
+            partial_reason: None,
+            visibility: Some(Visibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: None,
+            attributes: vec![],
+            is_async: None,
+            return_type,
+            params,
+        }
+    }
+
+    #[test]
+    fn test_identical_symbols() {
+        let s = make_sym("foo", None, None);
+        assert!(diff(&s, &s).is_none());
+    }
+
+    #[test]
+    fn test_params_changed() {
+        let old = make_sym("foo", Some(vec![SymbolParam { name: "x".into(), ty: "u32".into(), optional: false, default_value: None }]), None);
+        let new = make_sym("foo", Some(vec![SymbolParam { name: "y".into(), ty: "String".into(), optional: false, default_value: None }]), None);
+        let result = diff(&old, &new);
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_return_type_changed() {
+        let old = make_sym("foo", None, Some("u32".into()));
+        let new = make_sym("foo", None, Some("String".into()));
+        let result = diff(&old, &new);
+        assert!(result.is_some());
+    }
 }

@@ -107,3 +107,75 @@ fn lcs<T: PartialEq>(a: &[T], b: &[T]) -> usize {
     }
     dp[a.len()][b.len()]
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::symbols::Visibility;
+
+    fn make_symbol(id: &str, name: &str) -> Symbol {
+        Symbol {
+            id: id.to_string(),
+            name: name.to_string(),
+            kind: "function".to_string(),
+            line_range: [1, 10],
+            children: vec![],
+            partial_analysis: false,
+            partial_reason: None,
+            visibility: Some(Visibility::Public),
+            value: None,
+            signature: None,
+            doc_comment: None,
+            attributes: vec![],
+            is_async: None,
+            return_type: None,
+            params: None,
+        }
+    }
+
+    #[test]
+    fn test_identical_symbols() {
+        let mut old_idx = SymbolIndex { module: String::new(), symbols: vec![] };
+        let mut new_idx = SymbolIndex { module: String::new(), symbols: vec![] };
+        old_idx.symbols.push(make_symbol("a", "foo"));
+        new_idx.symbols.push(make_symbol("a", "foo"));
+        let result = build_symbol_mapping(&old_idx, &new_idx);
+        assert_eq!(result.stable.len(), 1);
+        assert_eq!(result.stable[0].0.name, "foo");
+        assert!(result.added.is_empty());
+        assert!(result.removed.is_empty());
+        assert!(result.renamed.is_empty());
+    }
+
+    #[test]
+    fn test_added_symbol() {
+        let mut old_idx = SymbolIndex { module: String::new(), symbols: vec![] };
+        let mut new_idx = SymbolIndex { module: String::new(), symbols: vec![] };
+        old_idx.symbols.push(make_symbol("a", "foo"));
+        new_idx.symbols.push(make_symbol("a", "foo"));
+        new_idx.symbols.push(make_symbol("b", "bar"));
+        let result = build_symbol_mapping(&old_idx, &new_idx);
+        assert_eq!(result.added.len(), 1);
+        assert_eq!(result.added[0].name, "bar");
+    }
+
+    #[test]
+    fn test_removed_symbol() {
+        let mut old_idx = SymbolIndex { module: String::new(), symbols: vec![] };
+        let mut new_idx = SymbolIndex { module: String::new(), symbols: vec![] };
+        old_idx.symbols.push(make_symbol("a", "foo"));
+        old_idx.symbols.push(make_symbol("b", "bar"));
+        new_idx.symbols.push(make_symbol("a", "foo"));
+        let result = build_symbol_mapping(&old_idx, &new_idx);
+        assert_eq!(result.removed.len(), 1);
+        assert_eq!(result.removed[0].name, "bar");
+    }
+
+    #[test]
+    fn test_structural_similarity() {
+        let a = make_symbol("a", "foo");
+        let b = make_symbol("b", "foo");
+        let score = structural_similarity(&a, &b);
+        assert!((score - 1.0).abs() < f64::EPSILON);
+    }
+}

@@ -183,11 +183,11 @@ pub(crate) struct LibraryEntry {
     pub(crate) tags: Vec<String>,
 }
 
-pub(crate) struct LanguageRegistry {
+pub(crate) struct MatrixRegistry {
     pub(crate) libraries: std::collections::HashMap<String, LibraryEntry>,
 }
 
-impl LanguageRegistry {
+impl MatrixRegistry {
     pub(crate) fn load(language: &str) -> Self {
         let data = match language {
             "typescript" => include_str!(concat!(env!("OUT_DIR"), "/ts_libraries.toml")),

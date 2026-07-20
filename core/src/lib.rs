@@ -3,6 +3,7 @@ pub mod config;
 pub mod deps;
 pub mod diff;
 pub mod discovery;
+pub mod git;
 pub mod error;
 pub mod graph;
 pub mod language;

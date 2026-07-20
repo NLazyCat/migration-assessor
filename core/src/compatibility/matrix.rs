@@ -7,7 +7,7 @@ use crate::deps::ResolvedDependency;
 use super::matching::{find_best_match, score_to_compatibility};
 use super::types::{
     CompatibilityEntry, CompatibilityLevel, DepChangeInfo, DependencyImpact, GuidanceOverride,
-    LanguageRegistry, MigrationEffort, OverrideEntry, derive_risk_tags, parse_effort_str,
+    MatrixRegistry, MigrationEffort, derive_risk_tags, parse_effort_str,
     parse_compatibility_str,
 };
 
@@ -20,8 +20,8 @@ pub struct CompatibilityMatrix {
 
 impl CompatibilityMatrix {
     pub fn new(source_language: String, target_language: String) -> Self {
-        let source_registry: LanguageRegistry = LanguageRegistry::load(&source_language);
-        let target_registry: LanguageRegistry = LanguageRegistry::load(&target_language);
+        let source_registry: MatrixRegistry = MatrixRegistry::load(&source_language);
+        let target_registry: MatrixRegistry = MatrixRegistry::load(&target_language);
 
         let mut built_in: HashMap<String, CompatibilityEntry> = HashMap::new();
 

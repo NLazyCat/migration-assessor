@@ -2,7 +2,6 @@ pub mod matching;
 pub mod matrix;
 pub mod types;
 
-pub use matching::*;
 pub use matrix::*;
 pub use types::*;
 
