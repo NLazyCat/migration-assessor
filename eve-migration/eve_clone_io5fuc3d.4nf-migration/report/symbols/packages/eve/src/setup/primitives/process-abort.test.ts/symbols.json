@@ -1,0 +1,21 @@
+{
+  "module": "packages/eve/src/setup/primitives/process-abort.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/process-abort.test.ts:childProcessDouble",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        16
+      ],
+      "name": "childProcessDouble",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ChildProcess & {\r\n  kill: ReturnType<typeof vi.fn<(signal?: NodeJS.Signals | number) => boolean>>;\r\n}",
+      "signature": "export function childProcessDouble() -> ChildProcess & {\r\n  kill: ReturnType<typeof vi.fn<(signal?: NodeJS.Signals | number) => boolean>>;\r\n}",
+      "visibility": "Private"
+    }
+  ]
+}

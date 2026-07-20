@@ -1,0 +1,73 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        35
+      ],
+      "name": "ParseFrontmatterOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ParseFrontmatterOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "allowCodeEngines",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "allowCodeEngines?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        47,
+        52
+      ],
+      "name": "parseFrontmatter",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ParseFrontmatterOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GrayMatterFile<string>",
+      "signature": "export function parseFrontmatter(source: string, options: ParseFrontmatterOptions) -> GrayMatterFile<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        57
+      ],
+      "name": "hasFrontmatter",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasFrontmatter(source: string) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/internal/helpers/gray-matter.ts"
+}

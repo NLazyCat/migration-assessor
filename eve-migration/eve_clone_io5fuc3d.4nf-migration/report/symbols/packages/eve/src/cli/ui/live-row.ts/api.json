@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        152
+      ],
+      "name": "startCliLiveRow",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliLiveRowLogger"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "CliLiveRowOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CliLiveRow",
+      "signature": "export function startCliLiveRow(logger: CliLiveRowLogger, options: CliLiveRowOptions) -> CliLiveRow"
+    }
+  ],
+  "module": "packages/eve/src/cli/ui/live-row.ts"
+}

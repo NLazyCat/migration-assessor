@@ -1,0 +1,139 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        38
+      ],
+      "name": "MockSkillInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockSkillInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "references",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "references?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "scripts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "scripts?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "assets",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "assets?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        43,
+        58
+      ],
+      "name": "MockSkill",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockSkill { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "source",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledSkillDefinition",
+      "signature": "source: : CompiledSkillDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        152
+      ],
+      "name": "mockSkill",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockSkillInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MockSkill>",
+      "signature": "export function mockSkill(input: MockSkillInput) -> Promise<MockSkill>"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/mocks/mock-skill.ts"
+}

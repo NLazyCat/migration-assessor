@@ -1,0 +1,611 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        62,
+        78
+      ],
+      "name": "ChatSdkChannelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkChannelState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "thread",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SerializedThread | null",
+      "signature": "thread: : SerializedThread | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "anchorMessageId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "anchorMessageId?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "editSupported",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "editSupported?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "lastEditAtMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "lastEditAtMs?: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "pendingToolCallMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "pendingToolCallMessage?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "streamStepIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "streamStepIndex?: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        85,
+        89
+      ],
+      "name": "ChatSdkReceiveTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkReceiveTarget { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "adapterName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "adapterName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "thread",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SerializedThread",
+      "signature": "thread?: : SerializedThread"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "threadId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "threadId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        94,
+        99
+      ],
+      "name": "ChatSdkInstrumentationMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkInstrumentationMetadata { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "adapterName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "adapterName: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "channelId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "isDM",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean | null",
+      "signature": "isDM: : boolean | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "threadId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "threadId: : string | null"
+    },
+    {
+      "generics": [
+        "TAdapters"
+      ],
+      "kind": "interface",
+      "line_range": [
+        106,
+        114
+      ],
+      "name": "ChatSdkChannelContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkChannelContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        107,
+        107
+      ],
+      "name": "bot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Chat<TAdapters>",
+      "signature": "bot: : Chat<TAdapters>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        108,
+        108
+      ],
+      "name": "thread",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Thread | null",
+      "signature": "thread: : Thread | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        109,
+        109
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChatSdkChannelState",
+      "signature": "state: : ChatSdkChannelState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        111,
+        111
+      ],
+      "name": "streaming",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "streaming: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        113,
+        113
+      ],
+      "name": "streamingEditIntervalMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "streamingEditIntervalMs: : number"
+    },
+    {
+      "generics": [
+        "TAdapters"
+      ],
+      "kind": "interface",
+      "line_range": [
+        117,
+        118
+      ],
+      "name": "ChatSdkEventContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkEventContext { ... }"
+    },
+    {
+      "generics": [
+        "TAdapters"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        124,
+        125
+      ],
+      "name": "ChatSdkChannelEvents",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChatSdkChannelEvents = ChatSdkAdapters> =\r\n  ChannelEvents<ChatSdkChannelContext<TAdapters>>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        131,
+        143
+      ],
+      "name": "ChatSdkSendOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkSendOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        132,
+        132
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionAuthContext | null",
+      "signature": "auth?: : SessionAuthContext | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        133,
+        133
+      ],
+      "name": "callback",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SendOptions<ChatSdkChannelState>[\"callback\"]",
+      "signature": "callback?: : SendOptions<ChatSdkChannelState>[\"callback\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        134,
+        134
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SendOptions<ChatSdkChannelState>[\"mode\"]",
+      "signature": "mode?: : SendOptions<ChatSdkChannelState>[\"mode\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        135,
+        135
+      ],
+      "name": "thread",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SerializedThread | Thread | string",
+      "signature": "thread: : SerializedThread | Thread | string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        136,
+        136
+      ],
+      "name": "title",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "title?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        142,
+        142
+      ],
+      "name": "adapterName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "adapterName?: : string"
+    },
+    {
+      "generics": [
+        "TAdapters"
+      ],
+      "kind": "interface",
+      "line_range": [
+        149,
+        193
+      ],
+      "name": "ChatSdkChannelConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkChannelConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        153,
+        153
+      ],
+      "name": "adapters",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TAdapters",
+      "signature": "adapters: : TAdapters"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        158,
+        158
+      ],
+      "name": "route",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "route?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "routes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Partial<Record<Extract<keyof TAdapters, string>, string>>",
+      "signature": "routes?: : Partial<Record<Extract<keyof TAdapters, string>, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "webhook",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Omit<WebhookOptions, \"waitUntil\">",
+      "signature": "webhook?: : Omit<WebhookOptions, \"waitUntil\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChatSdkChannelEvents<TAdapters>",
+      "signature": "events?: : ChatSdkChannelEvents<TAdapters>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "inputActionPrefix",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "inputActionPrefix?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        178,
+        180
+      ],
+      "name": "resolveInputAuth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (\r\n    event: ActionEvent,\r\n  ) => SessionAuthContext | null | Promise<SessionAuthContext | null>",
+      "signature": "resolveInputAuth?: : (\r\n    event: ActionEvent,\r\n  ) => SessionAuthContext | null | Promise<SessionAuthContext | null>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        187,
+        187
+      ],
+      "name": "streaming",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "streaming?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        192,
+        192
+      ],
+      "name": "streamingEditIntervalMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "streamingEditIntervalMs?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        196,
+        200
+      ],
+      "name": "ChatSdkChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkChannel { ... }"
+    },
+    {
+      "generics": [
+        "TAdapters"
+      ],
+      "kind": "interface",
+      "line_range": [
+        207,
+        216
+      ],
+      "name": "ChatSdkChannelBridge",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSdkChannelBridge { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        208,
+        208
+      ],
+      "name": "bot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Chat<TAdapters>",
+      "signature": "bot: : Chat<TAdapters>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        209,
+        209
+      ],
+      "name": "channel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChatSdkChannel",
+      "signature": "channel: : ChatSdkChannel"
+    },
+    {
+      "generics": [
+        "TAdapters"
+      ],
+      "kind": "function",
+      "line_range": [
+        238,
+        328
+      ],
+      "name": "chatSdkChannel",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "ChatSdkChannelConfig<TAdapters>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChatSdkChannelBridge<TAdapters>",
+      "signature": "export function chatSdkChannel(config: ChatSdkChannelConfig<TAdapters>) -> ChatSdkChannelBridge<TAdapters>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts"
+}

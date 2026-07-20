@@ -1,0 +1,223 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "FileBackedSandbox",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FileBackedSandbox { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        26,
+        48
+      ],
+      "name": "createFileBackedInternalSandboxSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly id: string;\r\n  readonly sandbox: FileBackedSandbox;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InternalSandboxSession",
+      "signature": "export function createFileBackedInternalSandboxSession(input: {\r\n  readonly id: string;\r\n  readonly sandbox: FileBackedSandbox;\r\n}) -> InternalSandboxSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        55
+      ],
+      "name": "resolveWorkspacePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkspacePath(path: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        64
+      ],
+      "name": "pathExists",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function pathExists(path: string) -> Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        66,
+        84
+      ],
+      "name": "copyDirectoryAtomically",
+      "params": [
+        {
+          "name": "sourcePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyDirectoryAtomically(sourcePath: string, targetPath: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        89
+      ],
+      "name": "touchDirectory",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function touchDirectory(path: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        91,
+        97
+      ],
+      "name": "resolveLocalBackendTemplateRootPath",
+      "params": [
+        {
+          "name": "cacheDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "backendCacheName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "templateKey",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveLocalBackendTemplateRootPath(cacheDirectory: string, backendCacheName: string, templateKey: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        99,
+        104
+      ],
+      "name": "resolveLocalBackendTemplatesDirectory",
+      "params": [
+        {
+          "name": "cacheDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "backendCacheName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveLocalBackendTemplatesDirectory(cacheDirectory: string, backendCacheName: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        106,
+        112
+      ],
+      "name": "resolveLocalBackendSessionRootPath",
+      "params": [
+        {
+          "name": "cacheDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "backendCacheName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "sessionKey",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveLocalBackendSessionRootPath(cacheDirectory: string, backendCacheName: string, sessionKey: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        114,
+        130
+      ],
+      "name": "writeSandboxSeedFiles",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "seedFiles",
+          "optional": false,
+          "type": "ReadonlyArray<SandboxSeedFile>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeSandboxSeedFiles(session: SandboxSession, seedFiles: ReadonlyArray<SandboxSeedFile>) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/local-backend-utils.ts"
+}

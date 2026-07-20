@@ -1,0 +1,77 @@
+{
+  "ConnectionRegistryKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/context/providers/connection-key.ts:ConnectionRegistryKey"
+    }
+  ],
+  "DynamicSkillManifestKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 40,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 55
+      },
+      "symbol": "packages/eve/src/context/keys.ts:DynamicSkillManifestKey"
+    }
+  ],
+  "ResolvedToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 70
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedToolDefinition"
+    }
+  ],
+  "SandboxKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/context/keys.ts:SandboxKey"
+    }
+  ],
+  "loadContext": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 52,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 54
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 21
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    }
+  ],
+  "loadSkillFromSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/runtime/framework-tools/skill.ts",
+        "line": 34
+      },
+      "symbol": "packages/eve/src/runtime/skills/sandbox-access.ts:loadSkillFromSandbox"
+    }
+  ]
+}

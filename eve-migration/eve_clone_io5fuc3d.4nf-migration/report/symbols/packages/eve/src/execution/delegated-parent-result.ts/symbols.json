@@ -1,0 +1,59 @@
+{
+  "module": "packages/eve/src/execution/delegated-parent-result.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/delegated-parent-result.ts:createDelegatedSubagentSuccessResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        17,
+        35
+      ],
+      "name": "createDelegatedSubagentSuccessResult",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "output",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSubagentResultActionResult | undefined",
+      "signature": "export function createDelegatedSubagentSuccessResult(serializedContext: Record<string, unknown>, output: unknown) -> RuntimeSubagentResultActionResult | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/delegated-parent-result.ts:createDelegatedSubagentErrorResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        56
+      ],
+      "name": "createDelegatedSubagentErrorResult",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSubagentResultActionResult | undefined",
+      "signature": "export function createDelegatedSubagentErrorResult(serializedContext: Record<string, unknown>, error: unknown) -> RuntimeSubagentResultActionResult | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        21
+      ],
+      "name": "RowColors",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RowColors { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        37
+      ],
+      "name": "RowGlyphs",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RowGlyphs { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "pointer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "pointer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "selectedPointer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "selectedPointer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "success",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "success: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "placeholder",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "placeholder: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "dot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "dot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "warning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "warning: : string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        40,
+        47
+      ],
+      "name": "UNICODE_ROW_GLYPHS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const UNICODE_ROW_GLYPHS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        53
+      ],
+      "name": "OptionRowState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type OptionRowState = | { kind: \"available\"; checked: boolean }\r\n  | { kind: \"completed\" }\r\n  | { kind: \"disabled\"; reason?: string; reasonTone?: \"warning\" }\r\n  | { kind: \"locked\"; reason?: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        82,
+        113
+      ],
+      "name": "resolveOptionRowState",
+      "params": [
+        {
+          "name": "option",
+          "optional": false,
+          "type": "{\r\n    disabled?: boolean;\r\n    disabledReason?: string;\r\n    disabledReasonTone?: \"warning\";\r\n    completed?: boolean;\r\n    locked?: boolean;\r\n    lockedReason?: string;\r\n  }"
+        },
+        {
+          "name": "checked",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OptionRowState",
+      "signature": "export function resolveOptionRowState(option: {\r\n    disabled?: boolean;\r\n    disabledReason?: string;\r\n    disabledReasonTone?: \"warning\";\r\n    completed?: boolean;\r\n    locked?: boolean;\r\n    lockedReason?: string;\r\n  }, checked: boolean) -> OptionRowState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        179,
+        188
+      ],
+      "name": "renderCursorRow",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "Pick<RowColors, \"blue\" | \"inverse\" | \"yellow\">"
+        },
+        {
+          "name": "accent",
+          "optional": true,
+          "type": "\"warning\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderCursorRow(text: string, selected: boolean, colors: Pick<RowColors, \"blue\" | \"inverse\" | \"yellow\">, accent: \"warning\") -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        191,
+        193
+      ],
+      "name": "renderOptionRowContinuation",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderOptionRowContinuation(text: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        202,
+        217
+      ],
+      "name": "renderOptionRow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "OptionRowInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderOptionRow(input: OptionRowInput) -> string"
+    }
+  ],
+  "module": "packages/eve/src/setup/cli/option-row.ts"
+}

@@ -1,0 +1,71 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "ThreadContextSince",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ThreadContextSince = | \"thread-root\"\r\n  | \"last-agent-reply\"\r\n  | ((message: SlackThreadMessage) => boolean);"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        25
+      ],
+      "name": "LoadThreadContextMessagesOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LoadThreadContextMessagesOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "since",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ThreadContextSince",
+      "signature": "since?: : ThreadContextSince"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        57
+      ],
+      "name": "loadThreadContextMessages",
+      "params": [
+        {
+          "name": "thread",
+          "optional": false,
+          "type": "Pick<SlackThread, \"recentMessages\" | \"refresh\">"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "{\r\n    readonly threadTs: string;\r\n    readonly ts: string;\r\n  }"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "LoadThreadContextMessagesOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackThreadMessage[]>",
+      "signature": "export function loadThreadContextMessages(thread: Pick<SlackThread, \"recentMessages\" | \"refresh\">, message: {\r\n    readonly threadTs: string;\r\n    readonly ts: string;\r\n  }, options: LoadThreadContextMessagesOptions) -> Promise<SlackThreadMessage[]>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/thread.ts"
+}

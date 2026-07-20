@@ -1,0 +1,212 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/index.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:EVE_DOCS_URL",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "EVE_DOCS_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:DEPLOYMENT_URL_PLACEHOLDER",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DEPLOYMENT_URL_PLACEHOLDER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:AGENT_NAME_PLACEHOLDER",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "AGENT_NAME_PLACEHOLDER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:EVE_LOGO_SVG",
+      "kind": "variable",
+      "line_range": [
+        13,
+        16
+      ],
+      "name": "EVE_LOGO_SVG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:HOME_PAGE_HTML_TEMPLATE",
+      "kind": "variable",
+      "line_range": [
+        35,
+        212
+      ],
+      "name": "HOME_PAGE_HTML_TEMPLATE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:escapeHtml",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        214,
+        221
+      ],
+      "name": "escapeHtml",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function escapeHtml(value: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:pickFirstForwardedValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        223,
+        232
+      ],
+      "name": "pickFirstForwardedValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function pickFirstForwardedValue(value: string | null) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:resolveDeploymentUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        245,
+        253
+      ],
+      "name": "resolveDeploymentUrl",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveDeploymentUrl(request: Request) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:buildHomePageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        260,
+        277
+      ],
+      "name": "buildHomePageResponse",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly agentName: string;\r\n  }"
+        },
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function buildHomePageResponse(input: {\r\n    readonly agentName: string;\r\n  }, request: Request) -> Response",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:handleHomePageRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        283,
+        290
+      ],
+      "name": "handleHomePageRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly agentName: string;\r\n  }"
+        },
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function handleHomePageRequest(input: {\r\n    readonly agentName: string;\r\n  }, request: Request) -> Response",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/index.ts:handleStaticHomePageRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        292,
+        294
+      ],
+      "name": "handleStaticHomePageRequest",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "H3Event"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function handleStaticHomePageRequest(event: H3Event) -> Response",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "module": "packages/eve/src/public/channels/discord/defaults.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/defaults.ts:defaultDiscordAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        42
+      ],
+      "name": "defaultDiscordAuth",
+      "params": [
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "DiscordCommandInteraction"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext",
+      "signature": "export function defaultDiscordAuth(interaction: DiscordCommandInteraction) -> SessionAuthContext",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/defaults.ts:defaultOnCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        50
+      ],
+      "name": "defaultOnCommand",
+      "params": [
+        {
+          "name": "_ctx",
+          "optional": false,
+          "type": "DiscordContext"
+        },
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "DiscordCommandInteraction"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordCommandResult",
+      "signature": "export function defaultOnCommand(_ctx: DiscordContext, interaction: DiscordCommandInteraction) -> DiscordCommandResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/defaults.ts:defaultEvents",
+      "kind": "variable",
+      "line_range": [
+        53,
+        102
+      ],
+      "name": "defaultEvents",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

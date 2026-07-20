@@ -1,0 +1,46 @@
+{
+  "EVE_INTERNAL_BUILD_OUTPUT_DIRECTORY_ENV": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 74,
+        "file": "packages/eve/src/public/next/vercel-output-config.ts",
+        "line": 172
+      },
+      "symbol": "packages/eve/src/internal/application/paths.ts:EVE_INTERNAL_BUILD_OUTPUT_DIRECTORY_ENV"
+    }
+  ],
+  "EVE_INTERNAL_HOST_BUILD_OUTPUT_DIRECTORY_ENV": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 176,
+        "file": "packages/eve/src/public/next/vercel-output-config.ts",
+        "line": 172
+      },
+      "symbol": "packages/eve/src/internal/application/paths.ts:EVE_INTERNAL_HOST_BUILD_OUTPUT_DIRECTORY_ENV"
+    }
+  ],
+  "findClosestLinkedVercelDirectory": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/public/next/vercel-output-config.ts",
+        "line": 183
+      },
+      "symbol": "packages/eve/src/shared/vercel-output-directory.ts:findClosestLinkedVercelDirectory"
+    }
+  ],
+  "findClosestVercelOutputDirectory": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/public/next/vercel-output-config.ts",
+        "line": 185
+      },
+      "symbol": "packages/eve/src/shared/vercel-output-directory.ts:findClosestVercelOutputDirectory"
+    }
+  ]
+}

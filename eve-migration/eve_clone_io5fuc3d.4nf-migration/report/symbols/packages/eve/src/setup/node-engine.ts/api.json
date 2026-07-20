@@ -1,0 +1,117 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "NodeEngineOverride",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface NodeEngineOverride { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "previous",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "previous: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "next",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "next: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "NodeEngineReconciliation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type NodeEngineReconciliation = | { kind: \"added\"; next: string }\r\n  | ({ kind: \"overridden\" } & NodeEngineOverride)\r\n  | { kind: \"unchanged\" };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        74
+      ],
+      "name": "pinnedNodeEngineMajor",
+      "params": [
+        {
+          "name": "requiredRange",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function pinnedNodeEngineMajor(requiredRange: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        97
+      ],
+      "name": "reconcileNodeEngine",
+      "params": [
+        {
+          "name": "existingValue",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "requiredRange",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NodeEngineReconciliation",
+      "signature": "export function reconcileNodeEngine(existingValue: unknown, requiredRange: string) -> NodeEngineReconciliation"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        104,
+        109
+      ],
+      "name": "formatNodeEngineOverrideWarning",
+      "params": [
+        {
+          "name": "override",
+          "optional": false,
+          "type": "NodeEngineOverride"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatNodeEngineOverrideWarning(override: NodeEngineOverride) -> string"
+    }
+  ],
+  "module": "packages/eve/src/setup/node-engine.ts"
+}

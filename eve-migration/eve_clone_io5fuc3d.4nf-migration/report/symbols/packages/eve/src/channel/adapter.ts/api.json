@@ -1,0 +1,177 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "interface",
+      "line_range": [
+        30,
+        47
+      ],
+      "name": "ChannelAdapterContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChannelAdapterContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TState",
+      "signature": "state: : TState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "ctx",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ContextAccessor",
+      "signature": "ctx: : ContextAccessor"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionHandle",
+      "signature": "session: : SessionHandle"
+    },
+    {
+      "generics": [
+        "TCtx"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        81,
+        84
+      ],
+      "name": "ChannelEventHandlers",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelEventHandlers = ChannelAdapterContext> =\r\n  {\r\n    [K in HandleMessageStreamEvent[\"type\"]]?: EventHandler<K, TCtx>;\r\n  };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "ChannelInstrumentationMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelInstrumentationMetadata = Readonly<Record<string, unknown>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        103,
+        105
+      ],
+      "name": "ChannelInstrumentationMetadataProjector",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelInstrumentationMetadataProjector = (\r\n  state: Record<string, unknown> | undefined,\r\n) => ChannelInstrumentationMetadata;"
+    },
+    {
+      "generics": [
+        "TCtx"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        115,
+        174
+      ],
+      "name": "ChannelAdapter",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelAdapter = ChannelAdapterContext> = {\r\n  /**\r\n   * Stable durable identifier for serialization across step boundaries.\r\n   * Must be unique across all adapters visible to one runtime bundle.\r\n   *\r\n   * Defaults to {@link HTTP_ADAPTER_KIND} (`\"http\"`) for the canonical\r\n   * session channel and every behaviorless authored channel, or is derived\r\n   * from the route file path as `channel:<name>` once\r\n   * `runtime/resolve-channel.ts` rewrites authored adapters that carry\r\n   * behavior.\r\n   */\r\n  readonly kind: string;\r\n\r\n  /**\r\n   * Initial state shape. Auto-serialized at step boundaries via JSON\r\n   * snapshot. On rehydration, the runtime restores the serialized state\r\n   * and re-attaches the adapter's behavior functions from the registry.\r\n   */\r\n  readonly state?: Record<string, unknown>;\r\n\r\n  /**\r\n   * Inbound hook: fires once per delivery before the harness starts.\r\n   *\r\n   * Return a {@link StepInput} to override the input the harness sees, or\r\n   * return void to use the default payload projection.\r\n   */\r\n  deliver?(payload: DeliverPayload, ctx: TCtx): StepInput | void | Promise<StepInput | void>;\r\n\r\n  /**\r\n   * Optional factory that builds the adapter context for this adapter.\r\n   *\r\n   * @internal\r\n   */\r\n  createAdapterContext?(base: ChannelAdapterContext<StateOf<TCtx>>): TCtx;\r\n\r\n  /**\r\n   * Fetches bytes for a URL encountered in `FilePart.data`.\r\n   *\r\n   * Called by the staging pipeline when it encounters a `URL` object\r\n   * on a `FilePart`. Return `null` to let the URL pass through to the\r\n   * model provider (e.g. public images). Return bytes or\r\n   * {@link FetchFileResult} to stage the file to the sandbox.\r\n   *\r\n   * Credentials should be captured in the closure at channel\r\n   * construction time.\r\n   */\r\n  readonly fetchFile?: FetchFileFunction;\r\n\r\n  /**\r\n   * Framework-owned observability projection for the active channel.\r\n   *\r\n   * Channel implementations decide which state fields are safe and\r\n   * meaningful to expose to instrumentation callbacks. The harness reads\r\n   * the resulting projection through a seed context key rather than\r\n   * inspecting adapter state directly.\r\n   */\r\n  readonly instrumentation?: {\r\n    readonly metadata?: ChannelInstrumentationMetadataProjector;\r\n  };\r\n} & ChannelEventHandlers<TCtx>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        188,
+        215
+      ],
+      "name": "defaultDeliverResult",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "DeliverPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepInput | undefined",
+      "signature": "export function defaultDeliverResult(payload: DeliverPayload) -> StepInput | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        220,
+        222
+      ],
+      "name": "getAdapterKind",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function getAdapterKind(adapter: ChannelAdapter) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        233,
+        265
+      ],
+      "name": "callAdapterEventHandler",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ChannelAdapterContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<HandleMessageStreamEvent>",
+      "signature": "export function callAdapterEventHandler(adapter: ChannelAdapter, event: HandleMessageStreamEvent, ctx: ChannelAdapterContext) -> Promise<HandleMessageStreamEvent>"
+    }
+  ],
+  "module": "packages/eve/src/channel/adapter.ts"
+}

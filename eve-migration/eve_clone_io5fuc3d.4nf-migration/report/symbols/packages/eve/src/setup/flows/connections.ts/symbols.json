@@ -1,0 +1,252 @@
+{
+  "module": "packages/eve/src/setup/flows/connections.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/connections.ts:CONNECTIONS_PROMPT_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        33,
+        34
+      ],
+      "name": "CONNECTIONS_PROMPT_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/connections.ts:CONNECT_CONNECTIONS",
+      "kind": "variable",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "CONNECT_CONNECTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:detectDeployment",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "detectDeployment",
+          "partial_analysis": false,
+          "return_type": ": typeof detectDeployment",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:detectPackageManager",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "detectPackageManager",
+          "partial_analysis": false,
+          "return_type": ": typeof detectPackageManager",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:getVercelAuthStatus",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "getVercelAuthStatus",
+          "partial_analysis": false,
+          "return_type": ": typeof getVercelAuthStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:runLinkFlow",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "runLinkFlow",
+          "partial_analysis": false,
+          "return_type": ": typeof runLinkFlow",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:ensureConnectionDependencies",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "ensureConnectionDependencies",
+          "partial_analysis": false,
+          "return_type": ": typeof ensureConnectionDependencies",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:listAuthoredConnections",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "listAuthoredConnections",
+          "partial_analysis": false,
+          "return_type": ": typeof listAuthoredConnections",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:runPackageManagerInstall",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "runPackageManagerInstall",
+          "partial_analysis": false,
+          "return_type": ": typeof runPackageManagerInstall",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps:addConnections",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "addConnections",
+          "partial_analysis": false,
+          "return_type": ": AddConnectionsDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowDeps",
+      "kind": "interface",
+      "line_range": [
+        38,
+        47
+      ],
+      "name": "ConnectionsFlowDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/connections.ts:ConnectionsFlowResult",
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "ConnectionsFlowResult",
+      "partial_analysis": false,
+      "value": "| { kind: \"done\"; addedConnections: readonly string[] }\r\n  | { kind: \"cancelled\" }\r\n  | { kind: \"failed\"; addedConnections: readonly string[]; message: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/connections.ts:connectionRows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        86
+      ],
+      "name": "connectionRows",
+      "params": [
+        {
+          "name": "authored",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        },
+        {
+          "name": "authStatus",
+          "optional": false,
+          "type": "VercelAuthStatus"
+        },
+        {
+          "name": "disabledConnectionReasons",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOption<string>[]",
+      "signature": "export function connectionRows(authored: ReadonlySet<string>, authStatus: VercelAuthStatus, disabledConnectionReasons: Readonly<Record<string, string>>) -> SelectOption<string>[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/connections.ts:pickConnection",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        115
+      ],
+      "name": "pickConnection",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "authored",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        },
+        {
+          "name": "authStatus",
+          "optional": false,
+          "type": "VercelAuthStatus"
+        },
+        {
+          "name": "disabledConnectionReasons",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function pickConnection(prompter: Prompter, authored: ReadonlySet<string>, authStatus: VercelAuthStatus, disabledConnectionReasons: Readonly<Record<string, string>>) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/connections.ts:runConnectionsFlow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        118,
+        221
+      ],
+      "name": "runConnectionsFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  disabledConnectionReasons?: Readonly<Record<string, string>>;\r\n  deps?: Partial<ConnectionsFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionsFlowResult>",
+      "signature": "export function runConnectionsFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  disabledConnectionReasons?: Readonly<Record<string, string>>;\r\n  deps?: Partial<ConnectionsFlowDeps>;\r\n}) -> Promise<ConnectionsFlowResult>",
+      "visibility": "Public"
+    }
+  ]
+}

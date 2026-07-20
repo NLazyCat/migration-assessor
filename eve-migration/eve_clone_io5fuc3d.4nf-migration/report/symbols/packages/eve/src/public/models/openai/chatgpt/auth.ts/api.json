@@ -1,0 +1,510 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "CodexAuthMode",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodexAuthMode = \"api-key\" | \"chatgpt\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        31
+      ],
+      "name": "CodexAuthState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodexAuthState = | {\r\n      readonly kind: \"authenticated\";\r\n      readonly accountId?: string;\r\n      readonly authMode: CodexAuthMode;\r\n      readonly authPath: string;\r\n      readonly codexHome: string;\r\n      readonly lastRefresh?: string;\r\n    }\r\n  | {\r\n      readonly kind: \"missing\";\r\n      readonly authPath: string;\r\n      readonly codexHome: string;\r\n    }\r\n  | {\r\n      readonly kind: \"invalid\";\r\n      readonly authPath: string;\r\n      readonly codexHome: string;\r\n      readonly reason: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        33,
+        35
+      ],
+      "name": "ReadCodexAuthStateOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ReadCodexAuthStateOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "codexHome",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "codexHome?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        37,
+        42
+      ],
+      "name": "CodexApiKeyCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CodexApiKeyCredentials { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "apiKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "apiKey: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "authPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "authPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "codexHome",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "codexHome: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"api-key\"",
+      "signature": "kind: : \"api-key\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        44,
+        53
+      ],
+      "name": "CodexChatGptCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CodexChatGptCredentials { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "accessToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "accessToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "accountId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "accountId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "authPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "authPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "codexHome",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "codexHome: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "idToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "idToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"chatgpt\"",
+      "signature": "kind: : \"chatgpt\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "lastRefresh",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "lastRefresh?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "refreshToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "refreshToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "CodexAuthCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodexAuthCredentials = CodexApiKeyCredentials | CodexChatGptCredentials;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        62,
+        66
+      ],
+      "name": "CodexAuthSnapshot",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CodexAuthSnapshot { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CodexAuthState",
+      "signature": "state: : CodexAuthState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CodexAuthCredentials",
+      "signature": "credentials?: : CodexAuthCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        68,
+        73
+      ],
+      "name": "CodexRefreshedTokens",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CodexRefreshedTokens { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "accessToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "accessToken: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "accountId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "accountId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "idToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "idToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "refreshToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "refreshToken: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        100,
+        119
+      ],
+      "name": "readCodexAuth",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ReadCodexAuthStateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CodexAuthSnapshot>",
+      "signature": "export function readCodexAuth(options: ReadCodexAuthStateOptions) -> Promise<CodexAuthSnapshot>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        121,
+        133
+      ],
+      "name": "readCodexAuthCredentials",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ReadCodexAuthStateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CodexAuthCredentials>",
+      "signature": "export function readCodexAuthCredentials(options: ReadCodexAuthStateOptions) -> Promise<CodexAuthCredentials>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        198
+      ],
+      "name": "parseCodexAuth",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly authPath: string;\r\n    readonly codexHome: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CodexAuthSnapshot",
+      "signature": "export function parseCodexAuth(raw: string, input: {\r\n    readonly authPath: string;\r\n    readonly codexHome: string;\r\n  }) -> CodexAuthSnapshot"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        267,
+        313
+      ],
+      "name": "writeCodexAuthCredentials",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly credentials: CodexChatGptCredentials;\r\n  readonly now?: () => Date;\r\n  readonly tokens: CodexRefreshedTokens;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CodexChatGptCredentials>",
+      "signature": "export function writeCodexAuthCredentials(input: {\r\n  readonly credentials: CodexChatGptCredentials;\r\n  readonly now?: () => Date;\r\n  readonly tokens: CodexRefreshedTokens;\r\n}) -> Promise<CodexChatGptCredentials>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        315,
+        329
+      ],
+      "name": "assertCodexAuthStateAuthenticated",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CodexAuthState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertCodexAuthStateAuthenticated(state: CodexAuthState) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        339,
+        343
+      ],
+      "name": "readCodexJwtExpirationMs",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readCodexJwtExpirationMs(token: string | undefined) -> number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        345,
+        349
+      ],
+      "name": "isFreshCodexAccessToken",
+      "params": [
+        {
+          "name": "accessToken",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "now",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isFreshCodexAccessToken(accessToken: string | undefined, now: number) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        351,
+        363
+      ],
+      "name": "extractCodexAccountIdFromToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractCodexAccountIdFromToken(token: string | undefined) -> string | undefined"
+    }
+  ],
+  "module": "packages/eve/src/public/models/openai/chatgpt/auth.ts"
+}

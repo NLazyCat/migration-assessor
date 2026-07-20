@@ -1,0 +1,34 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        101
+      ],
+      "name": "resolveChannelDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledChannelDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedChannelDefinition>",
+      "signature": "export function resolveChannelDefinition(definition: CompiledChannelDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedChannelDefinition>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/resolve-channel.ts"
+}

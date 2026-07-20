@@ -1,0 +1,278 @@
+{
+  "module": "packages/eve/src/internal/bundler/extension-scope-plugin.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:ExtensionScope:sourceRoot",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "sourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:ExtensionScope:packageNamespace",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "packageNamespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:ExtensionScope",
+      "kind": "interface",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "ExtensionScope",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:VIRTUAL_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "VIRTUAL_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:ScopedFrameworkModule",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "ScopedFrameworkModule",
+      "partial_analysis": false,
+      "value": "\"eve/context\" | \"eve/extension\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:SCOPED_FRAMEWORK_MODULES",
+      "kind": "variable",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "SCOPED_FRAMEWORK_MODULES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:ExtensionScopeBundlerPlugin:name",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:ExtensionScopeBundlerPlugin",
+      "kind": "interface",
+      "line_range": [
+        26,
+        30
+      ],
+      "name": "ExtensionScopeBundlerPlugin",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:canonicalize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        38
+      ],
+      "name": "canonicalize",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function canonicalize(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:importerPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        44
+      ],
+      "name": "importerPath",
+      "params": [
+        {
+          "name": "importer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function importerPath(importer: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:isUnder",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        48
+      ],
+      "name": "isUnder",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "root",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isUnder(path: string, root: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:shimSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        74
+      ],
+      "name": "shimSource",
+      "params": [
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "\"context\" | \"extension\""
+        },
+        {
+          "name": "namespace",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function shimSource(kind: \"context\" | \"extension\", namespace: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:scopeHooks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        109
+      ],
+      "name": "scopeHooks",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "namespaceFor",
+          "optional": false,
+          "type": "(importer: string) => string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionScopeBundlerPlugin",
+      "signature": "export function scopeHooks(name: string, namespaceFor: (importer: string) => string | undefined) -> ExtensionScopeBundlerPlugin",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:createExtensionScopePlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        120,
+        139
+      ],
+      "name": "createExtensionScopePlugin",
+      "params": [
+        {
+          "name": "scopes",
+          "optional": false,
+          "type": "readonly ExtensionScope[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionScopeBundlerPlugin | null",
+      "signature": "export function createExtensionScopePlugin(scopes: readonly ExtensionScope[]) -> ExtensionScopeBundlerPlugin | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/extension-scope-plugin.ts:createFixedNamespaceScopePlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        148,
+        150
+      ],
+      "name": "createFixedNamespaceScopePlugin",
+      "params": [
+        {
+          "name": "namespace",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionScopeBundlerPlugin",
+      "signature": "export function createFixedNamespaceScopePlugin(namespace: string) -> ExtensionScopeBundlerPlugin",
+      "visibility": "Public"
+    }
+  ]
+}

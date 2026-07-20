@@ -1,0 +1,53 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        25
+      ],
+      "name": "dispatchScheduleTask",
+      "params": [
+        {
+          "name": "taskName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ scheduleId: string; sessionIds: readonly string[] }>",
+      "signature": "export function dispatchScheduleTask(taskName: string, config: NitroArtifactsConfig) -> Promise<{ scheduleId: string; sessionIds: readonly string[] }>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        31,
+        68
+      ],
+      "name": "dispatchScheduleTaskFromArtifacts",
+      "params": [
+        {
+          "name": "taskName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "compiledArtifactsSource",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ scheduleId: string; sessionIds: readonly string[] }>",
+      "signature": "export function dispatchScheduleTaskFromArtifacts(taskName: string, compiledArtifactsSource: RuntimeCompiledArtifactsSource) -> Promise<{ scheduleId: string; sessionIds: readonly string[] }>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/schedule-task.ts"
+}

@@ -1,0 +1,75 @@
+{
+  "module": "packages/eve/src/compiler/normalize-manifest.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-manifest.ts:compileAgentManifest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        35,
+        72
+      ],
+      "name": "compileAgentManifest",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledAgentManifest>",
+      "signature": "export function compileAgentManifest(manifest: AgentSourceManifest) -> Promise<CompiledAgentManifest>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-manifest.ts:compileAgentNodeManifest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        74,
+        272
+      ],
+      "name": "compileAgentNodeManifest",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "ManifestCompileContext"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly externalDependencies?: readonly string[];\r\n    readonly allowWorkflowConfig?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledAgentNodeManifest>",
+      "signature": "export function compileAgentNodeManifest(manifest: AgentSourceManifest, context: ManifestCompileContext, options: {\r\n    readonly externalDependencies?: readonly string[];\r\n    readonly allowWorkflowConfig?: boolean;\r\n  }) -> Promise<CompiledAgentNodeManifest>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-manifest.ts:mergeExternalDependencies",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        274,
+        286
+      ],
+      "name": "mergeExternalDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function mergeExternalDependencies() -> string[]",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        59,
+        98
+      ],
+      "name": "applySessionLimitContinuation",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SessionLimitPolicyInput & {\r\n    readonly limitContinuation: { readonly granted: boolean } | undefined;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly result: StepResult | null; readonly session: HarnessSession }>",
+      "signature": "export function applySessionLimitContinuation(input: SessionLimitPolicyInput & {\r\n    readonly limitContinuation: { readonly granted: boolean } | undefined;\r\n  }) -> Promise<{ readonly result: StepResult | null; readonly session: HarnessSession }>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        108,
+        125
+      ],
+      "name": "enforceSessionTokenLimit",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SessionLimitPolicyInput & { readonly messages: readonly ModelMessage[] }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<StepResult | null>",
+      "signature": "export function enforceSessionTokenLimit(input: SessionLimitPolicyInput & { readonly messages: readonly ModelMessage[] }) -> Promise<StepResult | null>"
+    }
+  ],
+  "module": "packages/eve/src/harness/session-limit-enforcement.ts"
+}

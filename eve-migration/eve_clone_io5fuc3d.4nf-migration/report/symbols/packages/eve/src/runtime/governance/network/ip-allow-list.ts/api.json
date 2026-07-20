@@ -1,0 +1,86 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "RuntimeIpAllowList",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeIpAllowList { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "blockList",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": BlockList",
+      "signature": "blockList: : BlockList"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "entries",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "entries: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        54
+      ],
+      "name": "createRuntimeIpAllowList",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeIpAllowList",
+      "signature": "export function createRuntimeIpAllowList(entries: readonly string[]) -> RuntimeIpAllowList"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        60,
+        65
+      ],
+      "name": "isRuntimeIpAllowed",
+      "params": [
+        {
+          "name": "address",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "allowList",
+          "optional": false,
+          "type": "RuntimeIpAllowList"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRuntimeIpAllowed(address: string, allowList: RuntimeIpAllowList) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/runtime/governance/network/ip-allow-list.ts"
+}

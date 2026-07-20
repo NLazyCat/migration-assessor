@@ -1,0 +1,140 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        11
+      ],
+      "name": "TwilioRoutes",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TwilioRoutes { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "messages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "messages: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "transcription",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "transcription: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "voice",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "voice: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        16
+      ],
+      "name": "TwilioVerifyResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TwilioVerifyResult = {\r\n  readonly body: string;\r\n  readonly params: URLSearchParams;\r\n} | null;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        18,
+        25
+      ],
+      "name": "buildTwilioRoutes",
+      "params": [
+        {
+          "name": "baseRoute",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioRoutes",
+      "signature": "export function buildTwilioRoutes(baseRoute: string) -> TwilioRoutes"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        27,
+        40
+      ],
+      "name": "verifyTwilioInbound",
+      "params": [
+        {
+          "name": "req",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "TwilioChannelConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TwilioVerifyResult>",
+      "signature": "export function verifyTwilioInbound(req: Request, config: TwilioChannelConfig) -> Promise<TwilioVerifyResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        57
+      ],
+      "name": "buildTwilioActionUrl",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "TwilioChannelConfig"
+        },
+        {
+          "name": "route",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function buildTwilioActionUrl(request: Request, config: TwilioChannelConfig, route: string) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/twilio/routing.ts"
+}

@@ -1,0 +1,136 @@
+{
+  "module": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts:HOME_PROBE_COMMAND",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "HOME_PROBE_COMMAND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts:createMockBundle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        34
+      ],
+      "name": "createMockBundle",
+      "params": [
+        {
+          "name": "authoredSkillNames",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledBundle",
+      "signature": "export function createMockBundle(authoredSkillNames: readonly string[]) -> CompiledBundle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts:createCtx",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        47
+      ],
+      "name": "createCtx",
+      "params": [
+        {
+          "name": "authoredSkillNames",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createCtx(authoredSkillNames: readonly string[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts:createResolver",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        70
+      ],
+      "name": "createResolver",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "() =>\r\n    | SkillPackageDefinition\r\n    | Record<string, SkillPackageDefinition>\r\n    | null\r\n    | Promise<SkillPackageDefinition | Record<string, SkillPackageDefinition> | null>"
+        },
+        {
+          "name": "extensionNamespace",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedDynamicSkillResolver",
+      "signature": "export function createResolver(slug: string, handler: () =>\r\n    | SkillPackageDefinition\r\n    | Record<string, SkillPackageDefinition>\r\n    | null\r\n    | Promise<SkillPackageDefinition | Record<string, SkillPackageDefinition> | null>, extensionNamespace: string) -> ResolvedDynamicSkillResolver",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts:makeEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        74
+      ],
+      "name": "makeEvent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function makeEvent() -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-skill-lifecycle.test.ts:makeSkill",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        81
+      ],
+      "name": "makeSkill",
+      "params": [
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "markdown",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SkillPackageDefinition",
+      "signature": "export function makeSkill(description: string, markdown: unknown) -> SkillPackageDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

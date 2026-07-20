@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/harness/workflow-lifecycle.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-lifecycle.ts:log",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-lifecycle.ts:EmitWorkflowLifecycleEvent",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "EmitWorkflowLifecycleEvent",
+      "partial_analysis": false,
+      "value": "(event: HandleMessageStreamEvent) => Promise<void>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-lifecycle.ts:createWorkflowLifecycle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        74
+      ],
+      "name": "createWorkflowLifecycle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly emit: EmitWorkflowLifecycleEvent;\r\n  readonly emissionState: HarnessEmissionState;\r\n  readonly skipReplayed?: boolean;\r\n  readonly tools: HarnessToolMap;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSandboxLifecycle",
+      "signature": "export function createWorkflowLifecycle(input: {\r\n  readonly emit: EmitWorkflowLifecycleEvent;\r\n  readonly emissionState: HarnessEmissionState;\r\n  readonly skipReplayed?: boolean;\r\n  readonly tools: HarnessToolMap;\r\n}) -> WorkflowSandboxLifecycle",
+      "visibility": "Public"
+    }
+  ]
+}

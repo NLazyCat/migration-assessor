@@ -1,0 +1,158 @@
+{
+  "module": "packages/eve/src/public/nuxt/module.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/module.ts:DEFAULT_EVE_BUILD_COMMAND",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "DEFAULT_EVE_BUILD_COMMAND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/module.ts:EveNuxtModuleOptions:eveRoot",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "eveRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/module.ts:EveNuxtModuleOptions:eveBuildCommand",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "eveBuildCommand",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/module.ts:EveNuxtModuleOptions:configureVercelJson",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "configureVercelJson",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/module.ts:EveNuxtModuleOptions:servicePrefix",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "servicePrefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/nuxt/module.ts:EveNuxtModuleOptions",
+      "kind": "interface",
+      "line_range": [
+        26,
+        52
+      ],
+      "name": "EveNuxtModuleOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/module.ts:resolveApplicationRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        59
+      ],
+      "name": "resolveApplicationRoot",
+      "params": [
+        {
+          "name": "nuxtRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "appPath",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveApplicationRoot(nuxtRoot: string, appPath: string | undefined) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/module.ts:NitroVercelConfigHost:vercel",
+          "kind": "property",
+          "line_range": [
+            67,
+            74
+          ],
+          "name": "vercel",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    config?: {\r\n      version?: number;\r\n      routes?: unknown[];\r\n      [key: string]: unknown;\r\n    };\r\n    [key: string]: unknown;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/nuxt/module.ts:NitroVercelConfigHost",
+      "kind": "interface",
+      "line_range": [
+        66,
+        75
+      ],
+      "name": "NitroVercelConfigHost",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/module.ts:resolveEveProxyTarget",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        85,
+        106
+      ],
+      "name": "resolveEveProxyTarget",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly dev: boolean;\r\n  readonly servicePrefix: string;\r\n  readonly onDevServerSpawned?: (child: ChildProcess) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveEveProxyTarget(input: {\r\n  readonly appRoot: string;\r\n  readonly dev: boolean;\r\n  readonly servicePrefix: string;\r\n  readonly onDevServerSpawned?: (child: ChildProcess) => void;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

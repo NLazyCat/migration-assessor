@@ -1,0 +1,35 @@
+{
+  "SecurityPlacement": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/runtime/connections/openapi-operations.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/runtime/connections/openapi-operations.ts:SecurityPlacement"
+    }
+  ],
+  "applySecurity": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/runtime/connections/openapi-client.ts",
+        "line": 443
+      },
+      "symbol": "packages/eve/src/runtime/connections/openapi-client.ts:applySecurity"
+    }
+  ],
+  "resolveSecurity": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/runtime/connections/openapi-client.ts",
+        "line": 307
+      },
+      "symbol": "packages/eve/src/runtime/connections/openapi-client.ts:resolveSecurity"
+    }
+  ]
+}

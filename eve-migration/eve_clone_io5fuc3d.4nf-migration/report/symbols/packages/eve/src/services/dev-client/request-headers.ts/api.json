@@ -1,0 +1,130 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        22
+      ],
+      "name": "DevelopmentOidcTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentOidcTarget { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "ownerId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ownerId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "projectId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "forceRefresh",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "forceRefresh?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        41
+      ],
+      "name": "DevelopmentOidcTokenFailure",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevelopmentOidcTokenFailure = | { readonly kind: \"resolution-failed\"; readonly message: string }\r\n  | {\r\n      readonly kind: \"malformed-token\";\r\n      readonly reason: \"missing-payload\" | \"invalid-json-payload\";\r\n    }\r\n  | {\r\n      readonly kind: \"invalid-claims\";\r\n      readonly invalidClaims: readonly InvalidVercelOidcClaim[];\r\n    }\r\n  | {\r\n      readonly kind: \"target-mismatch\";\r\n      readonly mismatchedClaims: readonly VercelOidcClaimName[];\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        44,
+        46
+      ],
+      "name": "DevelopmentOidcTokenResolution",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevelopmentOidcTokenResolution = | { readonly kind: \"resolved\"; readonly token: string }\r\n  | DevelopmentOidcTokenFailure;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        67
+      ],
+      "name": "resolveDevelopmentOidcToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DevelopmentOidcTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentOidcTokenResolution>",
+      "signature": "export function resolveDevelopmentOidcToken(input: DevelopmentOidcTarget) -> Promise<DevelopmentOidcTokenResolution>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        95
+      ],
+      "name": "resolveLinkedDevelopmentOidcToken",
+      "params": [
+        {
+          "name": "workspaceRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveLinkedDevelopmentOidcToken(workspaceRoot: string) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        148,
+        148
+      ],
+      "name": "VERCEL_PROTECTION_BYPASS_HEADER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const VERCEL_PROTECTION_BYPASS_HEADER: unknown"
+    }
+  ],
+  "module": "packages/eve/src/services/dev-client/request-headers.ts"
+}

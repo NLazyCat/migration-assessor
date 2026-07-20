@@ -1,0 +1,83 @@
+{
+  "module": "packages/eve/src/cli/commands/extension-init.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.integration.test.ts:BASE_VERSIONS",
+      "kind": "variable",
+      "line_range": [
+        22,
+        26
+      ],
+      "name": "BASE_VERSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.integration.test.ts:logger",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        37
+      ],
+      "name": "logger",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ExtensionInitCliLogger & { messages: string[]; errors: string[] }",
+      "signature": "export function logger() -> ExtensionInitCliLogger & { messages: string[]; errors: string[] }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.integration.test.ts:dependencies",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        72
+      ],
+      "name": "dependencies",
+      "params": [
+        {
+          "name": "gitResult",
+          "optional": false,
+          "type": "GitInitResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionInitCommandDependencies & {\r\n  detectInvokingPackageManager: ReturnType<\r\n    typeof vi.fn<ExtensionInitCommandDependencies[\"detectInvokingPackageManager\"]>\r\n  >;\r\n  isCodingAgentLaunch: ReturnType<\r\n    typeof vi.fn<ExtensionInitCommandDependencies[\"isCodingAgentLaunch\"]>\r\n  >;\r\n  now: ReturnType<typeof vi.fn<ExtensionInitCommandDependencies[\"now\"]>>;\r\n  runPackageManagerInstall: ReturnType<\r\n    typeof vi.fn<ExtensionInitCommandDependencies[\"runPackageManagerInstall\"]>\r\n  >;\r\n  tryInitializeGit: ReturnType<typeof vi.fn<ExtensionInitCommandDependencies[\"tryInitializeGit\"]>>;\r\n}",
+      "signature": "export function dependencies(gitResult: GitInitResult) -> ExtensionInitCommandDependencies & {\r\n  detectInvokingPackageManager: ReturnType<\r\n    typeof vi.fn<ExtensionInitCommandDependencies[\"detectInvokingPackageManager\"]>\r\n  >;\r\n  isCodingAgentLaunch: ReturnType<\r\n    typeof vi.fn<ExtensionInitCommandDependencies[\"isCodingAgentLaunch\"]>\r\n  >;\r\n  now: ReturnType<typeof vi.fn<ExtensionInitCommandDependencies[\"now\"]>>;\r\n  runPackageManagerInstall: ReturnType<\r\n    typeof vi.fn<ExtensionInitCommandDependencies[\"runPackageManagerInstall\"]>\r\n  >;\r\n  tryInitializeGit: ReturnType<typeof vi.fn<ExtensionInitCommandDependencies[\"tryInitializeGit\"]>>;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.integration.test.ts:createHostProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        74,
+        87
+      ],
+      "name": "createHostProject",
+      "params": [
+        {
+          "name": "parentDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "packageJson",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createHostProject(parentDirectory: string, packageJson: Record<string, unknown>) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

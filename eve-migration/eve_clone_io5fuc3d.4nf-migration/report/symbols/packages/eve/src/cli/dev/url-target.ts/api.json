@@ -1,0 +1,180 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "DevelopmentRequestHeaders",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevelopmentRequestHeaders = Readonly<Record<string, string>>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        6,
+        12
+      ],
+      "name": "DevelopmentUrlTargetOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentUrlTargetOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "header",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevelopmentRequestHeaders",
+      "signature": "header?: : DevelopmentRequestHeaders"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "host",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "host?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "port",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "port?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "ui",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "ui?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        14,
+        17
+      ],
+      "name": "DevelopmentUrlTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentUrlTarget { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "headers",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevelopmentRequestHeaders",
+      "signature": "headers?: : DevelopmentRequestHeaders"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "serverUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "serverUrl: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        36
+      ],
+      "name": "parseDevelopmentHeaderOption",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "previous",
+          "optional": false,
+          "type": "DevelopmentRequestHeaders"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRequestHeaders",
+      "signature": "export function parseDevelopmentHeaderOption(value: string, previous: DevelopmentRequestHeaders) -> DevelopmentRequestHeaders"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        38,
+        74
+      ],
+      "name": "resolveDevelopmentUrlTarget",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DevelopmentUrlTargetOptions"
+        },
+        {
+          "name": "positionalUrl",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentUrlTarget | undefined",
+      "signature": "export function resolveDevelopmentUrlTarget(options: DevelopmentUrlTargetOptions, positionalUrl: string | undefined) -> DevelopmentUrlTarget | undefined"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/url-target.ts"
+}

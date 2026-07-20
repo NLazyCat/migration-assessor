@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        29,
+        155
+      ],
+      "name": "authenticateOidcStrategy",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly token: string;\r\n  readonly strategy: ResolvedOidcAuthStrategy;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RouteStrategyAuthenticationResult>",
+      "signature": "export function authenticateOidcStrategy(input: {\r\n  readonly token: string;\r\n  readonly strategy: ResolvedOidcAuthStrategy;\r\n}) -> Promise<RouteStrategyAuthenticationResult>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/governance/auth/oidc.ts"
+}

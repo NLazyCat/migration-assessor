@@ -1,0 +1,836 @@
+{
+  "module": "packages/eve/src/setup/cli/prompt-ui.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptState",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "PromptState",
+      "partial_analysis": false,
+      "value": "\"initial\" | \"active\" | \"submit\" | \"cancel\" | \"error\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptValue",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "PromptValue",
+      "partial_analysis": false,
+      "value": "string | number | boolean;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptColors",
+      "kind": "interface",
+      "line_range": [
+        19,
+        31
+      ],
+      "name": "PromptColors",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:value",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": T",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:label",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:trailingAction",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "trailingAction",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:hint",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "hint",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:focusHint",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "focusHint",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:description",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:accent",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "accent",
+          "partial_analysis": false,
+          "return_type": ": \"warning\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:disabled",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "disabled",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:disabledReason",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "disabledReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:disabledReasonTone",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "disabledReasonTone",
+          "partial_analysis": false,
+          "return_type": ": \"warning\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:completed",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "completed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:locked",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "locked",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:lockedReason",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "lockedReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption:featured",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "featured",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:PromptOption",
+      "kind": "interface",
+      "line_range": [
+        34,
+        78
+      ],
+      "name": "PromptOption",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:RAIL",
+      "kind": "variable",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "RAIL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:CORNER",
+      "kind": "variable",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "CORNER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:BULLET_OPEN",
+      "kind": "variable",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "BULLET_OPEN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:BULLET_FILLED",
+      "kind": "variable",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "BULLET_FILLED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:bulletFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        101
+      ],
+      "name": "bulletFor",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "PromptState"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function bulletFor(state: PromptState, colors: PromptColors) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:railFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        116
+      ],
+      "name": "railFor",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "PromptState"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function railFor(state: PromptState, colors: PromptColors) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:cornerFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        119,
+        131
+      ],
+      "name": "cornerFor",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "PromptState"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function cornerFor(state: PromptState, colors: PromptColors) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:formatPromptHeader",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        134,
+        145
+      ],
+      "name": "formatPromptHeader",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "PromptState"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    colors: PromptColors;\r\n    leadingRail?: \"white\" | \"green\";\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptHeader(state: PromptState, message: string, options: {\r\n    colors: PromptColors;\r\n    leadingRail?: \"white\" | \"green\";\r\n  }) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:formatPromptSubmission",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        155,
+        168
+      ],
+      "name": "formatPromptSubmission",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "PromptState"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "answer",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    colors: PromptColors;\r\n    leadingRail?: \"white\" | \"green\";\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptSubmission(state: PromptState, message: string, answer: string, options: {\r\n    colors: PromptColors;\r\n    leadingRail?: \"white\" | \"green\";\r\n  }) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:formatPromptOpener",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        174
+      ],
+      "name": "formatPromptOpener",
+      "params": [
+        {
+          "name": "title",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "subtitle",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptOpener(title: string, subtitle: string, colors: PromptColors) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:formatPromptOutro",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        180
+      ],
+      "name": "formatPromptOutro",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptOutro(message: string, colors: PromptColors) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:formatPromptCancellation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        183,
+        186
+      ],
+      "name": "formatPromptCancellation",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptCancellation(message: string, colors: PromptColors) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:formatRailLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        189,
+        202
+      ],
+      "name": "formatRailLine",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        },
+        {
+          "name": "output",
+          "optional": false,
+          "type": "Writable | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatRailLine(text: string, colors: PromptColors, output: Writable | undefined) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:renderMultiselectPrompt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        205,
+        258
+      ],
+      "name": "renderMultiselectPrompt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  colors: PromptColors;\r\n  cursor: number;\r\n  error?: string;\r\n  /** Status note tucked onto the corner line while active (e.g. a quit hint). */\r\n  footerNote?: string;\r\n  leadingRail?: \"white\" | \"green\";\r\n  message: string;\r\n  options: readonly PromptOption<T>[];\r\n  selectedValues: readonly T[];\r\n  state: PromptState;\r\n  /** Submit-row label, e.g. \"Skip\" while an optional checklist is empty. */\r\n  submitLabel?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderMultiselectPrompt(input: {\r\n  colors: PromptColors;\r\n  cursor: number;\r\n  error?: string;\r\n  /** Status note tucked onto the corner line while active (e.g. a quit hint). */\r\n  footerNote?: string;\r\n  leadingRail?: \"white\" | \"green\";\r\n  message: string;\r\n  options: readonly PromptOption<T>[];\r\n  selectedValues: readonly T[];\r\n  state: PromptState;\r\n  /** Submit-row label, e.g. \"Skip\" while an optional checklist is empty. */\r\n  submitLabel?: string;\r\n}) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:cornerWithNote",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        261,
+        263
+      ],
+      "name": "cornerWithNote",
+      "params": [
+        {
+          "name": "corner",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "note",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function cornerWithNote(corner: string, note: string | undefined) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:renderSelectPrompt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        266,
+        316
+      ],
+      "name": "renderSelectPrompt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  colors: PromptColors;\r\n  cursor: number;\r\n  /** Status note tucked onto the corner line while active (e.g. a quit hint). */\r\n  footerNote?: string;\r\n  leadingRail?: \"white\" | \"green\";\r\n  message: string;\r\n  options: readonly PromptOption<T>[];\r\n  state: PromptState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderSelectPrompt(input: {\r\n  colors: PromptColors;\r\n  cursor: number;\r\n  /** Status note tucked onto the corner line while active (e.g. a quit hint). */\r\n  footerNote?: string;\r\n  leadingRail?: \"white\" | \"green\";\r\n  message: string;\r\n  options: readonly PromptOption<T>[];\r\n  state: PromptState;\r\n}) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:labelColumnWidth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        319,
+        321
+      ],
+      "name": "labelColumnWidth",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<T>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function labelColumnWidth(options: readonly PromptOption<T>[]) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:optionRow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        324,
+        346
+      ],
+      "name": "optionRow",
+      "params": [
+        {
+          "name": "option",
+          "optional": false,
+          "type": "PromptOption<T>"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    colors: PromptColors;\r\n    isCursor: boolean;\r\n    isChecked: boolean;\r\n    placeholder: boolean;\r\n    hintPadding: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function optionRow(option: PromptOption<T>, input: {\r\n    colors: PromptColors;\r\n    isCursor: boolean;\r\n    isChecked: boolean;\r\n    placeholder: boolean;\r\n    hintPadding: number;\r\n  }) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:descriptionLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        349,
+        358
+      ],
+      "name": "descriptionLine",
+      "params": [
+        {
+          "name": "option",
+          "optional": false,
+          "type": "PromptOption<T>"
+        },
+        {
+          "name": "isCursor",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "rail",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function descriptionLine(option: PromptOption<T>, isCursor: boolean, rail: string, colors: PromptColors) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:renderSubmitRow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        369,
+        380
+      ],
+      "name": "renderSubmitRow",
+      "params": [
+        {
+          "name": "isCursor",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderSubmitRow(isCursor: boolean, colors: PromptColors, label: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:renderMultiselectRows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        382,
+        411
+      ],
+      "name": "renderMultiselectRows",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  colors: PromptColors;\r\n  cursor: number;\r\n  options: readonly PromptOption<T>[];\r\n  rail: string;\r\n  selectedValues: readonly T[];\r\n  submitLabel?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderMultiselectRows(input: {\r\n  colors: PromptColors;\r\n  cursor: number;\r\n  options: readonly PromptOption<T>[];\r\n  rail: string;\r\n  selectedValues: readonly T[];\r\n  submitLabel?: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:SEARCHABLE_VIEW_SIZE",
+      "kind": "variable",
+      "line_range": [
+        414,
+        414
+      ],
+      "name": "SEARCHABLE_VIEW_SIZE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:searchableHelpLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        421,
+        432
+      ],
+      "name": "searchableHelpLine",
+      "params": [
+        {
+          "name": "rail",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "colors",
+          "optional": false,
+          "type": "PromptColors"
+        },
+        {
+          "name": "multiple",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function searchableHelpLine(rail: string, colors: PromptColors, multiple: boolean) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/prompt-ui.ts:renderSearchableSelect",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        443,
+        545
+      ],
+      "name": "renderSearchableSelect",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  colors: PromptColors;\r\n  state: PromptState;\r\n  leadingRail?: \"white\" | \"green\";\r\n  message: string;\r\n  multiple: boolean;\r\n  filter: string;\r\n  placeholder?: string;\r\n  options: readonly PromptOption<T>[];\r\n  cursor: number;\r\n  selectedValues: readonly T[];\r\n  submitDisplay: string;\r\n  footerNote?: string;\r\n  error?: string;\r\n  viewSize?: number;\r\n  /** Submit-row label, e.g. \"Skip\" while an optional checklist is empty. */\r\n  submitLabel?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderSearchableSelect(input: {\r\n  colors: PromptColors;\r\n  state: PromptState;\r\n  leadingRail?: \"white\" | \"green\";\r\n  message: string;\r\n  multiple: boolean;\r\n  filter: string;\r\n  placeholder?: string;\r\n  options: readonly PromptOption<T>[];\r\n  cursor: number;\r\n  selectedValues: readonly T[];\r\n  submitDisplay: string;\r\n  footerNote?: string;\r\n  error?: string;\r\n  viewSize?: number;\r\n  /** Submit-row label, e.g. \"Skip\" while an optional checklist is empty. */\r\n  submitLabel?: string;\r\n}) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "module": "src/models/product.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "src/models/product.ts:Product:id",
+          "kind": "property",
+          "line_range": [
+            2,
+            2
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:Product:name",
+          "kind": "property",
+          "line_range": [
+            3,
+            3
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:Product:price",
+          "kind": "property",
+          "line_range": [
+            4,
+            4
+          ],
+          "name": "price",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:Product:category",
+          "kind": "property",
+          "line_range": [
+            5,
+            5
+          ],
+          "name": "category",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:Product:inStock",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "inStock",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:Product:tags",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "tags",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "src/models/product.ts:Product",
+      "kind": "interface",
+      "line_range": [
+        1,
+        8
+      ],
+      "name": "Product",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "src/models/product.ts:ProductStatus",
+      "kind": "enum",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "ProductStatus",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "src/models/product.ts:IProductFilters:category",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "category",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:IProductFilters:minPrice",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "minPrice",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:IProductFilters:maxPrice",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "maxPrice",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "src/models/product.ts:IProductFilters:inStockOnly",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "inStockOnly",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "src/models/product.ts:IProductFilters",
+      "kind": "interface",
+      "line_range": [
+        16,
+        21
+      ],
+      "name": "IProductFilters",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

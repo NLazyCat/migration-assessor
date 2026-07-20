@@ -1,0 +1,519 @@
+{
+  "module": "packages/eve/src/harness/attachment-staging.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:ATTACHMENTS_ROOT",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "ATTACHMENTS_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:log",
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:UNSAFE_FILENAME_CHARS",
+      "kind": "variable",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "UNSAFE_FILENAME_CHARS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:SHA_PREFIX_LENGTH",
+      "kind": "variable",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "SHA_PREFIX_LENGTH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:DEFAULT_MEDIA_TYPE",
+      "kind": "variable",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "DEFAULT_MEDIA_TYPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:HYDRATE_IMAGE_INLINE_MAX_BYTES",
+      "kind": "variable",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "HYDRATE_IMAGE_INLINE_MAX_BYTES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:HYDRATE_PDF_INLINE_MAX_BYTES",
+      "kind": "variable",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "HYDRATE_PDF_INLINE_MAX_BYTES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:PDF_MEDIA_TYPE",
+      "kind": "variable",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "PDF_MEDIA_TYPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:IMAGE_MEDIA_TYPE_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "IMAGE_MEDIA_TYPE_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:stageAttachmentsForAdapter",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        63,
+        82
+      ],
+      "name": "stageAttachmentsForAdapter",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string | UserContent"
+        },
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "adapterCtx",
+          "optional": false,
+          "type": "ChannelAdapterContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | UserContent>",
+      "signature": "export function stageAttachmentsForAdapter(content: string | UserContent, sandbox: SandboxSession, adapterCtx: ChannelAdapterContext) -> Promise<string | UserContent>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:stageAttachmentsToSandbox",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        128
+      ],
+      "name": "stageAttachmentsToSandbox",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string | UserContent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | UserContent>",
+      "signature": "export function stageAttachmentsToSandbox(message: string | UserContent) -> Promise<string | UserContent>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:hydrateSandboxAttachments",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        137,
+        168
+      ],
+      "name": "hydrateSandboxAttachments",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ModelMessage[]>",
+      "signature": "export function hydrateSandboxAttachments(messages: readonly ModelMessage[]) -> Promise<ModelMessage[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:hasFileParts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        177
+      ],
+      "name": "hasFileParts",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "Exclude<UserContent, string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasFileParts(content: Exclude<UserContent, string>) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:messagesContainSandboxRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        179,
+        186
+      ],
+      "name": "messagesContainSandboxRef",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function messagesContainSandboxRef(messages: readonly ModelMessage[]) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:messageContainsSandboxRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        188,
+        199
+      ],
+      "name": "messageContainsSandboxRef",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "ModelMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function messageContainsSandboxRef(message: ModelMessage) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:isSandboxRefFilePart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        210,
+        217
+      ],
+      "name": "isSandboxRefFilePart",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "part is FilePart",
+      "signature": "export function isSandboxRefFilePart(part: unknown) -> part is FilePart",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:hydrateMessageContent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        219,
+        253
+      ],
+      "name": "hydrateMessageContent",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function hydrateMessageContent(content: unknown, sandbox: SandboxSession) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:shouldInlineSandboxRefAsBytes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        266,
+        274
+      ],
+      "name": "shouldInlineSandboxRefAsBytes",
+      "params": [
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "SandboxRef"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldInlineSandboxRefAsBytes(ref: SandboxRef) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:renderSandboxRefAsTextPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        285,
+        287
+      ],
+      "name": "renderSandboxRefAsTextPart",
+      "params": [
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "SandboxRef"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TextPart",
+      "signature": "export function renderSandboxRefAsTextPart(ref: SandboxRef) -> TextPart",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:stageFilePart",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        289,
+        313
+      ],
+      "name": "stageFilePart",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "FilePart"
+        },
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "adapterCtx",
+          "optional": false,
+          "type": "ChannelAdapterContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<FilePart>",
+      "signature": "export function stageFilePart(part: FilePart, sandbox: SandboxSession, adapterCtx: ChannelAdapterContext) -> Promise<FilePart>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:stageResolvedBytes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        315,
+        334
+      ],
+      "name": "stageResolvedBytes",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "FilePart"
+        },
+        {
+          "name": "resolved",
+          "optional": false,
+          "type": "FetchFileResult"
+        },
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<FilePart>",
+      "signature": "export function stageResolvedBytes(part: FilePart, resolved: FetchFileResult, sandbox: SandboxSession) -> Promise<FilePart>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:tryFetchFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        336,
+        364
+      ],
+      "name": "tryFetchFile",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "adapterCtx",
+          "optional": false,
+          "type": "ChannelAdapterContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<FetchFileResult | null>",
+      "signature": "export function tryFetchFile(url: string, adapterCtx: ChannelAdapterContext) -> Promise<FetchFileResult | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:reconstitueFilePartUrls",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        372,
+        384
+      ],
+      "name": "reconstitueFilePartUrls",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "Exclude<UserContent, string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Exclude<UserContent, string>",
+      "signature": "export function reconstitueFilePartUrls(content: Exclude<UserContent, string>) -> Exclude<UserContent, string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:sha256Prefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        386,
+        388
+      ],
+      "name": "sha256Prefix",
+      "params": [
+        {
+          "name": "bytes",
+          "optional": false,
+          "type": "Buffer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sha256Prefix(bytes: Buffer) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.ts:safeFilename",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        390,
+        396
+      ],
+      "name": "safeFilename",
+      "params": [
+        {
+          "name": "provided",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "sha",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function safeFilename(provided: string | undefined, sha: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

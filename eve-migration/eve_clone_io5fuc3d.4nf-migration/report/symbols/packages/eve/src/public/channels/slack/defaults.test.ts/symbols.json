@@ -1,0 +1,82 @@
+{
+  "module": "packages/eve/src/public/channels/slack/defaults.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/defaults.test.ts:sessionContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        19
+      ],
+      "name": "sessionContext",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "SessionContext[\"session\"][\"auth\"][\"current\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionContext",
+      "signature": "export function sessionContext(current: SessionContext[\"session\"][\"auth\"][\"current\"]) -> SessionContext",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/defaults.test.ts:sessionCtx",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "sessionCtx",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/defaults.test.ts:buildChannelStub",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        38
+      ],
+      "name": "buildChannelStub",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Partial<SlackChannelState>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function buildChannelStub(state: Partial<SlackChannelState>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/defaults.test.ts:authRequiredEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        51
+      ],
+      "name": "authRequiredEvent",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "{ url?: string; userCode?: string; displayName?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function authRequiredEvent(overrides: { url?: string; userCode?: string; displayName?: string }) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

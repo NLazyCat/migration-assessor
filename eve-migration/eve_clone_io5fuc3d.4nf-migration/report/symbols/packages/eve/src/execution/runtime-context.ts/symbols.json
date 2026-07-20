@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/execution/runtime-context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/runtime-context.ts:buildRunContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        70
+      ],
+      "name": "buildRunContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly bundle: CompiledBundle;\r\n  readonly run: RunInput;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function buildRunContext(input: {\r\n  readonly bundle: CompiledBundle;\r\n  readonly run: RunInput;\r\n}) -> ContextContainer",
+      "visibility": "Public"
+    }
+  ]
+}

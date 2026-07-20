@@ -1,0 +1,58 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        375,
+        415
+      ],
+      "name": "configureDevelopmentNitroRoutes",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function configureDevelopmentNitroRoutes(nitro: Nitro, preparedHost: PreparedApplicationHost) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        421,
+        459
+      ],
+      "name": "configureProductionNitroRoutes",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function configureProductionNitroRoutes(nitro: Nitro, preparedHost: PreparedApplicationHost, surface: NitroBuildSurface) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts"
+}

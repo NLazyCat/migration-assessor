@@ -1,0 +1,162 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "RuntimeModelResolutionScope",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeModelResolutionScope { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "moduleMap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledModuleMap",
+      "signature": "moduleMap: : CompiledModuleMap"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "nodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "nodeId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        33,
+        37
+      ],
+      "name": "ResolvedRuntimeModelSelection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedRuntimeModelSelection { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "model",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LanguageModel",
+      "signature": "model?: : LanguageModel"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "reference",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeModelReference",
+      "signature": "reference: : RuntimeModelReference"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        63
+      ],
+      "name": "resolveRuntimeModelReference",
+      "params": [
+        {
+          "name": "reference",
+          "optional": false,
+          "type": "RuntimeModelReference"
+        },
+        {
+          "name": "scope",
+          "optional": true,
+          "type": "RuntimeModelResolutionScope"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<LanguageModel>",
+      "signature": "export function resolveRuntimeModelReference(reference: RuntimeModelReference, scope: RuntimeModelResolutionScope) -> Promise<LanguageModel>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        110,
+        133
+      ],
+      "name": "loadDynamicRuntimeModelDefinition",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly dynamicModel: RuntimeDynamicModelReference;\r\n  readonly scope: RuntimeModelResolutionScope;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PublicAgentDynamicModelDefinition>",
+      "signature": "export function loadDynamicRuntimeModelDefinition(input: {\r\n  readonly dynamicModel: RuntimeDynamicModelReference;\r\n  readonly scope: RuntimeModelResolutionScope;\r\n}) -> Promise<PublicAgentDynamicModelDefinition>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        169
+      ],
+      "name": "normalizeDynamicRuntimeModelResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly fallback: RuntimeModelReference;\r\n  readonly result: NonNullable<PublicAgentDynamicModelResult>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedRuntimeModelSelection",
+      "signature": "export function normalizeDynamicRuntimeModelResult(input: {\r\n  readonly fallback: RuntimeModelReference;\r\n  readonly result: NonNullable<PublicAgentDynamicModelResult>;\r\n}) -> ResolvedRuntimeModelSelection"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        221,
+        243
+      ],
+      "name": "isRuntimeLanguageModel",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is LanguageModel",
+      "signature": "export function isRuntimeLanguageModel(value: unknown) -> value is LanguageModel"
+    }
+  ],
+  "module": "packages/eve/src/runtime/agent/resolve-model.ts"
+}

@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "OPTIONAL_ENGINE_PACKAGES_BY_BACKEND_NAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const OPTIONAL_ENGINE_PACKAGES_BY_BACKEND_NAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        51
+      ],
+      "name": "createOptionalEngineDependencyPlugin",
+      "params": [
+        {
+          "name": "unconfiguredPackages",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BundlerPluginShape | null",
+      "signature": "export function createOptionalEngineDependencyPlugin(unconfiguredPackages: readonly string[]) -> BundlerPluginShape | null"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.ts"
+}

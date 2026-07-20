@@ -1,0 +1,114 @@
+{
+  "module": "packages/eve/test/client.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/client.test.ts:createControlledStreamResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        52
+      ],
+      "name": "createControlledStreamResponse",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  close(): void;\r\n  error(error: Error): void;\r\n  pushEvent(event: unknown): void;\r\n  response: Response;\r\n}",
+      "signature": "export function createControlledStreamResponse() -> {\r\n  close(): void;\r\n  error(error: Error): void;\r\n  pushEvent(event: unknown): void;\r\n  response: Response;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/client.test.ts:createStartedMessageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        62
+      ],
+      "name": "createStartedMessageResponse",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createStartedMessageResponse(sessionId: string, continuationToken: string) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/client.test.ts:createResumedMessageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        69
+      ],
+      "name": "createResumedMessageResponse",
+      "params": [
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createResumedMessageResponse(continuationToken: string) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/client.test.ts:createEagerStreamResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        84
+      ],
+      "name": "createEagerStreamResponse",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createEagerStreamResponse(events: readonly unknown[]) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/client.test.ts:singleTurnEvents",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        108
+      ],
+      "name": "singleTurnEvents",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  continuationToken?: string;\r\n  message: string;\r\n  sequence: number;\r\n  turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent[]",
+      "signature": "export function singleTurnEvents(input: {\r\n  continuationToken?: string;\r\n  message: string;\r\n  sequence: number;\r\n  turnId: string;\r\n}) -> HandleMessageStreamEvent[]",
+      "visibility": "Private"
+    }
+  ]
+}

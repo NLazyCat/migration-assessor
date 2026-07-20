@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        11,
+        27
+      ],
+      "name": "renameWithTransientBusyRetry",
+      "params": [
+        {
+          "name": "sourcePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "destinationPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function renameWithTransientBusyRetry(sourcePath: string, destinationPath: string) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/shared/rename-with-retry.ts"
+}

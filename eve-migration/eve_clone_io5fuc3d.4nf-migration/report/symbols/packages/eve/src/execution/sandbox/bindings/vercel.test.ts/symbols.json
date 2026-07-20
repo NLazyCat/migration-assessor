@@ -1,0 +1,114 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts:createMockCommandResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        15
+      ],
+      "name": "createMockCommandResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createMockCommandResult() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts:createMockDetachedCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        33
+      ],
+      "name": "createMockDetachedCommand",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createMockDetachedCommand() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts:createMockSandbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        65
+      ],
+      "name": "createMockSandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  name: string;\r\n  snapshotId?: string;\r\n  status?: string;\r\n  tags?: Record<string, string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createMockSandbox(input: {\r\n  name: string;\r\n  snapshotId?: string;\r\n  status?: string;\r\n  tags?: Record<string, string>;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts:createTestVercelSandbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        73
+      ],
+      "name": "createTestVercelSandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Parameters<typeof createVercelSandbox>[0]"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createTestVercelSandbox(input: Parameters<typeof createVercelSandbox>[0]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts:createTestVercelSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        75,
+        100
+      ],
+      "name": "createTestVercelSession",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createTestVercelSession() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts:consumeWebStream",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        102,
+        112
+      ],
+      "name": "consumeWebStream",
+      "params": [
+        {
+          "name": "stream",
+          "optional": false,
+          "type": "ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function consumeWebStream(stream: ReadableStream<Uint8Array>) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

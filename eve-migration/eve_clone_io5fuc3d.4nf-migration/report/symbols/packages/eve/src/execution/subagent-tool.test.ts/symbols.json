@@ -1,0 +1,72 @@
+{
+  "module": "packages/eve/src/execution/subagent-tool.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.test.ts:BuildSubagentRunInput",
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "BuildSubagentRunInput",
+      "partial_analysis": false,
+      "value": "Parameters<typeof buildSubagentRunInput>[0];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.test.ts:makeSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        22
+      ],
+      "name": "makeSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function makeSession() -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.test.ts:makeAction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        34
+      ],
+      "name": "makeAction",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeSubagentCallActionRequest",
+      "signature": "export function makeAction() -> RuntimeSubagentCallActionRequest",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.test.ts:buildRuntimeSubagentRunInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        40
+      ],
+      "name": "buildRuntimeSubagentRunInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Omit<BuildSubagentRunInput, \"source\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReturnType<typeof buildSubagentRunInput>",
+      "signature": "export function buildRuntimeSubagentRunInput(input: Omit<BuildSubagentRunInput, \"source\">) -> ReturnType<typeof buildSubagentRunInput>",
+      "visibility": "Private"
+    }
+  ]
+}

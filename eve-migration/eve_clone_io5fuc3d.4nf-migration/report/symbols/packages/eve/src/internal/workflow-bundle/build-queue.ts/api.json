@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        3,
+        18
+      ],
+      "name": "runQueuedWorkflowBuild",
+      "params": [
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "build",
+          "optional": false,
+          "type": "() => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runQueuedWorkflowBuild(outputDirectory: string, build: () => Promise<void>) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/build-queue.ts"
+}

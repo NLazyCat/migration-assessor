@@ -1,0 +1,233 @@
+{
+  "module": "packages/eve/test/scenarios/eve-init.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:EVE_BIN_PATH",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "EVE_BIN_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:runFile",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "runFile",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:BinResult:exitCode",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "exitCode",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:BinResult:stdout",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:BinResult:stderr",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:BinResult",
+      "kind": "interface",
+      "line_range": [
+        19,
+        23
+      ],
+      "name": "BinResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:runEveBin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        43
+      ],
+      "name": "runEveBin",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "env",
+          "optional": false,
+          "type": "NodeJS.ProcessEnv"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<BinResult>",
+      "signature": "export function runEveBin(cwd: string, args: string[], env: NodeJS.ProcessEnv) -> Promise<BinResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:PackageManagerCall:args",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "args",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:PackageManagerCall:cwd",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "cwd",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:PackageManagerCall",
+      "kind": "interface",
+      "line_range": [
+        45,
+        48
+      ],
+      "name": "PackageManagerCall",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:withoutCodingAgentMarkers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        62
+      ],
+      "name": "withoutCodingAgentMarkers",
+      "params": [
+        {
+          "name": "env",
+          "optional": false,
+          "type": "NodeJS.ProcessEnv"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NodeJS.ProcessEnv",
+      "signature": "export function withoutCodingAgentMarkers(env: NodeJS.ProcessEnv) -> NodeJS.ProcessEnv",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:createFakePnpmEnvironment",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        64,
+        108
+      ],
+      "name": "createFakePnpmEnvironment",
+      "params": [
+        {
+          "name": "scratch",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  env: NodeJS.ProcessEnv;\r\n  readCalls(): Promise<PackageManagerCall[]>;\r\n}>",
+      "signature": "export function createFakePnpmEnvironment(scratch: string) -> Promise<{\r\n  env: NodeJS.ProcessEnv;\r\n  readCalls(): Promise<PackageManagerCall[]>;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/eve-init.scenario.test.ts:createFakeNpmEnvironment",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        110,
+        155
+      ],
+      "name": "createFakeNpmEnvironment",
+      "params": [
+        {
+          "name": "scratch",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  env: NodeJS.ProcessEnv;\r\n  readCalls(): Promise<PackageManagerCall[]>;\r\n}>",
+      "signature": "export function createFakeNpmEnvironment(scratch: string) -> Promise<{\r\n  env: NodeJS.ProcessEnv;\r\n  readCalls(): Promise<PackageManagerCall[]>;\r\n}>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/test/tui-client/tui-log-modes.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-log-modes.ts:UNREACHABLE_HOST",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "UNREACHABLE_HOST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-log-modes.ts:STDOUT_MARK",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "STDOUT_MARK",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-log-modes.ts:STDERR_MARK",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "STDERR_MARK",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-log-modes.ts:SANDBOX_MARK",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "SANDBOX_MARK",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-log-modes.ts:snapshotForMode",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        30,
+        64
+      ],
+      "name": "snapshotForMode",
+      "params": [
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "\"all\" | \"stderr\" | \"sandbox\" | \"none\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function snapshotForMode(mode: \"all\" | \"stderr\" | \"sandbox\" | \"none\") -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

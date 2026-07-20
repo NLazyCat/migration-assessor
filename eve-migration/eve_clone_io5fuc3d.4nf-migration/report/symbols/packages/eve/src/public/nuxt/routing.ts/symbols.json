@@ -1,0 +1,240 @@
+{
+  "module": "packages/eve/src/public/nuxt/routing.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:EVE_NUXT_SERVICE_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "EVE_NUXT_SERVICE_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:EVE_NUXT_PRODUCTION_ORIGIN_ENV",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "EVE_NUXT_PRODUCTION_ORIGIN_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:EVE_NUXT_PRODUCTION_PORT_ENV",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "EVE_NUXT_PRODUCTION_PORT_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:DEFAULT_EVE_NUXT_PRODUCTION_PORT",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "DEFAULT_EVE_NUXT_PRODUCTION_PORT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:normalizeRoutePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        25
+      ],
+      "name": "normalizeRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeRoutePrefix(prefix: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:joinRoutePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "joinRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function joinRoutePrefix(prefix: string, path: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:normalizeOrigin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        39
+      ],
+      "name": "normalizeOrigin",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeOrigin(origin: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:readLocalProductionPort",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        56
+      ],
+      "name": "readLocalProductionPort",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function readLocalProductionPort() -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/routing.ts:EveVercelRewriteRoute:src",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "src",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/routing.ts:EveVercelRewriteRoute:dest",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "dest",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/routing.ts:EveVercelRewriteRoute:check",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "check",
+          "partial_analysis": false,
+          "return_type": ": true",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/nuxt/routing.ts:EveVercelRewriteRoute",
+      "kind": "interface",
+      "line_range": [
+        61,
+        70
+      ],
+      "name": "EveVercelRewriteRoute",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:createEveVercelRewriteRoute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        88
+      ],
+      "name": "createEveVercelRewriteRoute",
+      "params": [
+        {
+          "name": "servicePrefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveVercelRewriteRoute",
+      "signature": "export function createEveVercelRewriteRoute(servicePrefix: string) -> EveVercelRewriteRoute",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/routing.ts:resolveProductionTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        108
+      ],
+      "name": "resolveProductionTarget",
+      "params": [
+        {
+          "name": "servicePrefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveProductionTarget(servicePrefix: string) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

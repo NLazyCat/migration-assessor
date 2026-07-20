@@ -1,0 +1,112 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "DEFAULT_SANDBOX_SOURCE_ID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_SANDBOX_SOURCE_ID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "RuntimeRegisteredSandbox",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeRegisteredSandbox { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "definition",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolvedSandboxDefinition",
+      "signature": "definition: : ResolvedSandboxDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "workspaceResourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledWorkspaceResourceRoot",
+      "signature": "workspaceResourceRoot: : CompiledWorkspaceResourceRoot"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        42,
+        44
+      ],
+      "name": "RuntimeSandboxRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeSandboxRegistry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "sandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeRegisteredSandbox",
+      "signature": "sandbox: : RuntimeRegisteredSandbox"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        51,
+        62
+      ],
+      "name": "createRuntimeSandboxRegistry",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authoredSandbox: ResolvedSandboxDefinition | null;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSandboxRegistry",
+      "signature": "export function createRuntimeSandboxRegistry(input: {\r\n  readonly authoredSandbox: ResolvedSandboxDefinition | null;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}) -> RuntimeSandboxRegistry"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        75,
+        82
+      ],
+      "name": "createFrameworkSandboxDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ResolvedSandboxDefinition",
+      "signature": "export function createFrameworkSandboxDefinition() -> ResolvedSandboxDefinition"
+    }
+  ],
+  "module": "packages/eve/src/runtime/sandbox/registry.ts"
+}

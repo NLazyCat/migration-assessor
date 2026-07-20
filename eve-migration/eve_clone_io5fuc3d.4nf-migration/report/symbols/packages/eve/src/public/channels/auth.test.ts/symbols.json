@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/public/channels/auth.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/auth.test.ts:TEST_ROUTE_URL",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "TEST_ROUTE_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/auth.test.ts:installMockedVercelIssuer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        1125,
+        1182
+      ],
+      "name": "installMockedVercelIssuer",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly issuer: string;\r\n  readonly signToken: (\r\n    claims: Record<string, unknown>,\r\n    options?: { readonly audience?: string },\r\n  ) => Promise<string>;\r\n  readonly restore: () => void;\r\n}>",
+      "signature": "export function installMockedVercelIssuer(slug: string) -> Promise<{\r\n  readonly issuer: string;\r\n  readonly signToken: (\r\n    claims: Record<string, unknown>,\r\n    options?: { readonly audience?: string },\r\n  ) => Promise<string>;\r\n  readonly restore: () => void;\r\n}>",
+      "visibility": "Private"
+    }
+  ]
+}

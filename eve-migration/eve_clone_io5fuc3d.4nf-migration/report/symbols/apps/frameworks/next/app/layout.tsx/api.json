@@ -1,0 +1,35 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const metadata: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        29
+      ],
+      "name": "RootLayout",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "Readonly<{\r\n  children: React.ReactNode;\r\n}>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function RootLayout(_: Readonly<{\r\n  children: React.ReactNode;\r\n}>) -> void"
+    }
+  ],
+  "module": "apps/frameworks/next/app/layout.tsx"
+}

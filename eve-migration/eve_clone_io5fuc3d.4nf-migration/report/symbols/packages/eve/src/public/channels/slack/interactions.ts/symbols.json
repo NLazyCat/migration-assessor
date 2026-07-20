@@ -1,0 +1,699 @@
+{
+  "module": "packages/eve/src/public/channels/slack/interactions.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:log",
+      "kind": "variable",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/slack/interactions.ts:ParsedBlockActionsPayload:actions",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "actions",
+          "partial_analysis": false,
+          "return_type": ": SlackInteractionAction[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/slack/interactions.ts:ParsedBlockActionsPayload:channelId",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "channelId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/slack/interactions.ts:ParsedBlockActionsPayload:threadTs",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "threadTs",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/slack/interactions.ts:ParsedBlockActionsPayload:teamId",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "teamId",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/slack/interactions.ts:ParsedBlockActionsPayload:messageBlocks",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "messageBlocks",
+          "partial_analysis": false,
+          "return_type": ": readonly unknown[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:ParsedBlockActionsPayload",
+      "kind": "interface",
+      "line_range": [
+        64,
+        75
+      ],
+      "name": "ParsedBlockActionsPayload",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:parseBlockActionsPayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        135
+      ],
+      "name": "parseBlockActionsPayload",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown> | SlackBlockActionsPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParsedBlockActionsPayload | null",
+      "signature": "export function parseBlockActionsPayload(body: Record<string, unknown> | SlackBlockActionsPayload) -> ParsedBlockActionsPayload | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:isSharedBlockActionsPayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        141
+      ],
+      "name": "isSharedBlockActionsPayload",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown> | SlackBlockActionsPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "body is SlackBlockActionsPayload",
+      "signature": "export function isSharedBlockActionsPayload(body: Record<string, unknown> | SlackBlockActionsPayload) -> body is SlackBlockActionsPayload",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:parseSharedBlockActionsPayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        143,
+        167
+      ],
+      "name": "parseSharedBlockActionsPayload",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "SlackBlockActionsPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParsedBlockActionsPayload | null",
+      "signature": "export function parseSharedBlockActionsPayload(body: SlackBlockActionsPayload) -> ParsedBlockActionsPayload | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:extractSelectedOptionValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        169,
+        172
+      ],
+      "name": "extractSelectedOptionValue",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractSelectedOptionValue(action: Record<string, unknown>) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:extractActionLabel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        174,
+        181
+      ],
+      "name": "extractActionLabel",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractActionLabel(action: Record<string, unknown>) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:findPromptBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        183,
+        185
+      ],
+      "name": "findPromptBlock",
+      "params": [
+        {
+          "name": "blocks",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function findPromptBlock(blocks: readonly unknown[]) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:findPromptBlocks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        187,
+        202
+      ],
+      "name": "findPromptBlocks",
+      "params": [
+        {
+          "name": "blocks",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[]",
+      "signature": "export function findPromptBlocks(blocks: readonly unknown[]) -> unknown[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:readPromptTextFromBlocks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        204,
+        208
+      ],
+      "name": "readPromptTextFromBlocks",
+      "params": [
+        {
+          "name": "blocks",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readPromptTextFromBlocks(blocks: readonly unknown[]) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:buildAnsweredHitlMessageBlocks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        210,
+        242
+      ],
+      "name": "buildAnsweredHitlMessageBlocks",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly actionId: string;\r\n  readonly answerLabel: string;\r\n  readonly messageBlocks: readonly unknown[];\r\n  readonly userId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[]",
+      "signature": "export function buildAnsweredHitlMessageBlocks(input: {\r\n  readonly actionId: string;\r\n  readonly answerLabel: string;\r\n  readonly messageBlocks: readonly unknown[];\r\n  readonly userId: string;\r\n}) -> unknown[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:findActionBlockIndex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        244,
+        246
+      ],
+      "name": "findActionBlockIndex",
+      "params": [
+        {
+          "name": "blocks",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "actionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function findActionBlockIndex(blocks: readonly unknown[], actionId: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:blockContainsActionId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        248,
+        254
+      ],
+      "name": "blockContainsActionId",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "actionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function blockContainsActionId(block: unknown, actionId: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:actionsContainActionId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        256,
+        259
+      ],
+      "name": "actionsContainActionId",
+      "params": [
+        {
+          "name": "actions",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "actionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function actionsContainActionId(actions: unknown, actionId: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:isObjectRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        261,
+        263
+      ],
+      "name": "isObjectRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isObjectRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:answeredBlocksFromActionBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        265,
+        282
+      ],
+      "name": "answeredBlocksFromActionBlock",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly answerLabel: string;\r\n  readonly block: unknown;\r\n  readonly userId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[] | undefined",
+      "signature": "export function answeredBlocksFromActionBlock(input: {\r\n  readonly answerLabel: string;\r\n  readonly block: unknown;\r\n  readonly userId: string;\r\n}) -> unknown[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:ANSWERED_CARD_SUBTEXT_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        284,
+        284
+      ],
+      "name": "ANSWERED_CARD_SUBTEXT_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:ANSWERED_CARD_SUBTEXT_SUFFIX",
+      "kind": "variable",
+      "line_range": [
+        285,
+        285
+      ],
+      "name": "ANSWERED_CARD_SUBTEXT_SUFFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:formatAnsweredCardSubtext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        287,
+        301
+      ],
+      "name": "formatAnsweredCardSubtext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly answerLabel: string;\r\n  readonly userId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatAnsweredCardSubtext(input: {\r\n  readonly answerLabel: string;\r\n  readonly userId: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:truncateWithEllipsis",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        303,
+        308
+      ],
+      "name": "truncateWithEllipsis",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "maxLength",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function truncateWithEllipsis(value: string, maxLength: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:promptBlocksFromActionBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        310,
+        315
+      ],
+      "name": "promptBlocksFromActionBlock",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[]",
+      "signature": "export function promptBlocksFromActionBlock(block: unknown) -> unknown[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:hasCardContent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        317,
+        319
+      ],
+      "name": "hasCardContent",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasCardContent(block: Record<string, unknown>) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/slack/interactions.ts:InteractionHandlerDeps:config",
+          "kind": "property",
+          "line_range": [
+            329,
+            329
+          ],
+          "name": "config",
+          "partial_analysis": false,
+          "return_type": ": SlackChannelConfig",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:InteractionHandlerDeps",
+      "kind": "interface",
+      "line_range": [
+        328,
+        330
+      ],
+      "name": "InteractionHandlerDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:handleInteractionPost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        339,
+        438
+      ],
+      "name": "handleInteractionPost",
+      "params": [
+        {
+          "name": "rawBody",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{\r\n    send: SendFn<SlackChannelState>;\r\n    waitUntil: (task: Promise<unknown>) => void;\r\n  }"
+        },
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "InteractionHandlerDeps"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function handleInteractionPost(rawBody: string, ctx: {\r\n    send: SendFn<SlackChannelState>;\r\n    waitUntil: (task: Promise<unknown>) => void;\r\n  }, deps: InteractionHandlerDeps) -> Promise<Response>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:openFreeformModal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        440,
+        491
+      ],
+      "name": "openFreeformModal",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly payload: Record<string, unknown>;\r\n  readonly interaction: ParsedBlockActionsPayload;\r\n  readonly freeformAction: SlackInteractionAction;\r\n  readonly deps: InteractionHandlerDeps;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function openFreeformModal(input: {\r\n  readonly payload: Record<string, unknown>;\r\n  readonly interaction: ParsedBlockActionsPayload;\r\n  readonly freeformAction: SlackInteractionAction;\r\n  readonly deps: InteractionHandlerDeps;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:handleViewSubmission",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        493,
+        575
+      ],
+      "name": "handleViewSubmission",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "SlackViewSubmissionPayload"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{\r\n    send: SendFn<SlackChannelState>;\r\n    waitUntil: (task: Promise<unknown>) => void;\r\n  }"
+        },
+        {
+          "name": "_deps",
+          "optional": false,
+          "type": "InteractionHandlerDeps"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function handleViewSubmission(payload: SlackViewSubmissionPayload, ctx: {\r\n    send: SendFn<SlackChannelState>;\r\n    waitUntil: (task: Promise<unknown>) => void;\r\n  }, _deps: InteractionHandlerDeps) -> Promise<Response>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:updateAnsweredHitlCard",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        577,
+        611
+      ],
+      "name": "updateAnsweredHitlCard",
+      "params": [
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "ParsedBlockActionsPayload"
+        },
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "InteractionHandlerDeps"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function updateAnsweredHitlCard(interaction: ParsedBlockActionsPayload, deps: InteractionHandlerDeps) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/interactions.ts:updateAnsweredFreeformCard",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        613,
+        642
+      ],
+      "name": "updateAnsweredFreeformCard",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly channelId: string;\r\n  readonly messageTs: string;\r\n  readonly answerLabel: string;\r\n  readonly userId?: string;\r\n  readonly deps: InteractionHandlerDeps;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function updateAnsweredFreeformCard(input: {\r\n  readonly channelId: string;\r\n  readonly messageTs: string;\r\n  readonly answerLabel: string;\r\n  readonly userId?: string;\r\n  readonly deps: InteractionHandlerDeps;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

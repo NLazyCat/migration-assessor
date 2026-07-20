@@ -1,0 +1,134 @@
+{
+  "module": "packages/eve/src/runtime/hooks/registry.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeStreamEventHookEntry:slug",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeStreamEventHookEntry:handler",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "handler",
+          "partial_analysis": false,
+          "return_type": ": StreamEventHook<HandleMessageStreamEvent>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeStreamEventHookEntry:eventType",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "eventType",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeStreamEventHookEntry",
+      "kind": "interface",
+      "line_range": [
+        11,
+        15
+      ],
+      "name": "RuntimeStreamEventHookEntry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeHookRegistry:streamEventsByType",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "streamEventsByType",
+          "partial_analysis": false,
+          "return_type": ": ReadonlyMap<string, readonly RuntimeStreamEventHookEntry[]>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeHookRegistry:streamEventsWildcard",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "streamEventsWildcard",
+          "partial_analysis": false,
+          "return_type": ": readonly RuntimeStreamEventHookEntry[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/hooks/registry.ts:RuntimeHookRegistry",
+      "kind": "interface",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "RuntimeHookRegistry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/hooks/registry.ts:createEmptyHookRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        39
+      ],
+      "name": "createEmptyHookRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeHookRegistry",
+      "signature": "export function createEmptyHookRegistry() -> RuntimeHookRegistry",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/hooks/registry.ts:createRuntimeHookRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        72
+      ],
+      "name": "createRuntimeHookRegistry",
+      "params": [
+        {
+          "name": "resolvedHooks",
+          "optional": false,
+          "type": "readonly ResolvedHookDefinition[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeHookRegistry",
+      "signature": "export function createRuntimeHookRegistry(resolvedHooks: readonly ResolvedHookDefinition[]) -> RuntimeHookRegistry",
+      "visibility": "Public"
+    }
+  ]
+}

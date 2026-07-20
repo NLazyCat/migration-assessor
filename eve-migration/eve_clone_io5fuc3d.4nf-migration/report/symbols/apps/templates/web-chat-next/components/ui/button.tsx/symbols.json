@@ -1,0 +1,39 @@
+{
+  "module": "apps/templates/web-chat-next/components/ui/button.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/button.tsx:buttonVariants",
+      "kind": "variable",
+      "line_range": [
+        7,
+        37
+      ],
+      "name": "buttonVariants",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/button.tsx:Button",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        60
+      ],
+      "name": "Button",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"button\"> &\r\n  VariantProps<typeof buttonVariants> & {\r\n    asChild?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function Button(_: React.ComponentProps<\"button\"> &\r\n  VariantProps<typeof buttonVariants> & {\r\n    asChild?: boolean;\r\n  }) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

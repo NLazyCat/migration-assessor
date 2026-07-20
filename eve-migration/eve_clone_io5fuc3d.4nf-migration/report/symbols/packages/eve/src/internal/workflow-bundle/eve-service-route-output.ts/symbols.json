@@ -1,0 +1,203 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:EVE_SHARED_SERVER_FUNCTION_PATH",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "EVE_SHARED_SERVER_FUNCTION_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:EVE_SHARED_SERVER_ROUTE_DESTINATION",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "EVE_SHARED_SERVER_ROUTE_DESTINATION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:EVE_VERCEL_FUNCTION_PREFIXES",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "EVE_VERCEL_FUNCTION_PREFIXES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        8
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:isEveVercelFunctionPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "isEveVercelFunctionPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isEveVercelFunctionPath(path: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:normalizeEveVercelRoutes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        19
+      ],
+      "name": "normalizeEveVercelRoutes",
+      "params": [
+        {
+          "name": "routes",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "_servicePrefix",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[]",
+      "signature": "export function normalizeEveVercelRoutes(routes: readonly unknown[], _servicePrefix: string | undefined) -> unknown[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:isEveVercelRoute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        34
+      ],
+      "name": "isEveVercelRoute",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isEveVercelRoute(route: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:isEveVercelRoutePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        38
+      ],
+      "name": "isEveVercelRoutePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isEveVercelRoutePath(path: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:isEveProtocolRoutePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        42
+      ],
+      "name": "isEveProtocolRoutePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isEveProtocolRoutePath(path: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts:normalizeEveVercelRoute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        61
+      ],
+      "name": "normalizeEveVercelRoute",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function normalizeEveVercelRoute(route: unknown) -> unknown",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        51,
+        498
+      ],
+      "name": "WorkflowBundleBuilder",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "WorkflowBundleBuilderOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class WorkflowBundleBuilder { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        59,
+        78
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "WorkflowBundleBuilderOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "WorkflowBundleBuilder::constructor(options: WorkflowBundleBuilderOptions) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        80,
+        84
+      ],
+      "name": "build",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ nitroStepOutfile?: string; nitroWorkflowOutfile?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "WorkflowBundleBuilder::build(options: { nitroStepOutfile?: string; nitroWorkflowOutfile?: string }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        86,
+        175
+      ],
+      "name": "#performBuild",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    nitroStepOutfile?: string;\r\n    nitroWorkflowOutfile?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "WorkflowBundleBuilder::#performBuild(options: {\r\n    nitroStepOutfile?: string;\r\n    nitroWorkflowOutfile?: string;\r\n  }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        177,
+        179
+      ],
+      "name": "transformProjectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "WorkflowBundleBuilder::transformProjectRoot() -> string"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        181,
+        206
+      ],
+      "name": "findTsConfigPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "WorkflowBundleBuilder::findTsConfigPath() -> Promise<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        208,
+        212
+      ],
+      "name": "getInputFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "WorkflowBundleBuilder::getInputFiles() -> Promise<string[]>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        214,
+        250
+      ],
+      "name": "discoverEntries",
+      "params": [
+        {
+          "name": "inputs",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "_outdir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "_tsconfigPath",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkflowBundleDiscoveredEntries>",
+      "signature": "WorkflowBundleBuilder::discoverEntries(inputs: readonly string[], _outdir: string, _tsconfigPath: string) -> Promise<WorkflowBundleDiscoveredEntries>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        252,
+        335
+      ],
+      "name": "createWorkflowsBundle",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "WorkflowBundleCreateWorkflowsBundleOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkflowBundleCreateWorkflowsBundleResult>",
+      "signature": "WorkflowBundleBuilder::createWorkflowsBundle(_: WorkflowBundleCreateWorkflowsBundleOptions) -> Promise<WorkflowBundleCreateWorkflowsBundleResult>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        337,
+        356
+      ],
+      "name": "createManifest",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n    manifest: WorkflowManifest;\r\n    manifestDir: string;\r\n    workflowBundlePath: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "WorkflowBundleBuilder::createManifest(_: {\r\n    manifest: WorkflowManifest;\r\n    manifestDir: string;\r\n    workflowBundlePath: string;\r\n  }) -> Promise<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        358,
+        440
+      ],
+      "name": "buildVercelOutput",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    flowNitroOutputDir: string;\r\n    outputDir: string;\r\n    runtime?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "WorkflowBundleBuilder::buildVercelOutput(options: {\r\n    flowNitroOutputDir: string;\r\n    outputDir: string;\r\n    runtime?: string;\r\n  }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        442,
+        444
+      ],
+      "name": "#getBuildInputFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "WorkflowBundleBuilder::#getBuildInputFiles() -> Promise<string[]>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        446,
+        484
+      ],
+      "name": "#patchVercelFunctionConfig",
+      "params": [
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "patch",
+          "optional": false,
+          "type": "{\r\n      experimentalTriggers?: readonly unknown[];\r\n      maxDuration?: number | \"max\";\r\n      runtime?: string | null;\r\n      shouldAddHelpers?: boolean;\r\n      shouldAddSourcemapSupport?: boolean;\r\n    }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "WorkflowBundleBuilder::#patchVercelFunctionConfig(directoryPath: string, patch: {\r\n      experimentalTriggers?: readonly unknown[];\r\n      maxDuration?: number | \"max\";\r\n      runtime?: string | null;\r\n      shouldAddHelpers?: boolean;\r\n      shouldAddSourcemapSupport?: boolean;\r\n    }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        486,
+        497
+      ],
+      "name": "#readVercelFunctionConfig",
+      "params": [
+        {
+          "name": "configPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, unknown>>",
+      "signature": "WorkflowBundleBuilder::#readVercelFunctionConfig(configPath: string) -> Promise<Record<string, unknown>>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/builder.ts"
+}

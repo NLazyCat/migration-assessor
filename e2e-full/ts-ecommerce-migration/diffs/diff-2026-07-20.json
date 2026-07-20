@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-07-20T08:59:47.581065900+00:00",
+  "source_repo": null,
+  "from_version": "c5ff909",
+  "to_version": "86805d5",
+  "files": [
+    "src/models/user.ts"
+  ],
+  "file_changes": [
+    {
+      "file": "src/models/user.ts",
+      "source_attached": true,
+      "changes": [
+        {
+          "symbol": "createUser",
+          "kind": "function",
+          "change_type": "added",
+          "severity": "compatible",
+          "new_line_range": [
+            19,
+            25
+          ],
+          "target_file": "src/models/user.rs"
+        },
+        {
+          "symbol": "IUser",
+          "kind": "interface",
+          "change_type": "modified",
+          "severity": "compatible",
+          "details": [
+            {
+              "aspect": "property",
+              "change_type": "added",
+              "description": "property 'updatedAt' added",
+              "new_value": "updatedAt"
+            }
+          ],
+          "old_line_range": [
+            8,
+            14
+          ],
+          "new_line_range": [
+            8,
+            15
+          ],
+          "target_file": "src/models/user.rs",
+          "target_symbol": "User",
+          "target_child": "updated_at",
+          "target_line_range": [
+            8,
+            8
+          ]
+        }
+      ],
+      "import_changes": [],
+      "doc_changes": []
+    }
+  ],
+  "propagation": {
+    "triggered_by": [
+      "src/models/user.ts:createUser",
+      "src/models/user.ts:IUser"
+    ],
+    "affected_files": [],
+    "chain": []
+  },
+  "summary": {
+    "total_files_changed": 1,
+    "symbols_added": 1,
+    "symbols_removed": 0,
+    "symbols_renamed": 0,
+    "symbols_modified": 1,
+    "breaking_changes": 0
+  }
+}

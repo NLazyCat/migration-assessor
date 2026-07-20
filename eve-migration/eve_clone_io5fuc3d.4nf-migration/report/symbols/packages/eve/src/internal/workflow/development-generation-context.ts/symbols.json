@@ -1,0 +1,100 @@
+{
+  "module": "packages/eve/src/internal/workflow/development-generation-context.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-generation-context.ts:DevelopmentGenerationContext:generationId",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "generationId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-generation-context.ts:DevelopmentGenerationContext:source",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": RuntimeDiskCompiledArtifactsSource",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow/development-generation-context.ts:DevelopmentGenerationContext",
+      "kind": "interface",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "DevelopmentGenerationContext",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-generation-context.ts:DevelopmentGenerationKey",
+      "kind": "variable",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "DevelopmentGenerationKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-generation-context.ts:getDevelopmentWorkflowGeneration",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "getDevelopmentWorkflowGeneration",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "DevelopmentGenerationContext | undefined",
+      "signature": "export function getDevelopmentWorkflowGeneration() -> DevelopmentGenerationContext | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-generation-context.ts:withDevelopmentWorkflowGeneration",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        18,
+        25
+      ],
+      "name": "withDevelopmentWorkflowGeneration",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "DevelopmentGenerationContext"
+        },
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "() => Promise<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withDevelopmentWorkflowGeneration(context: DevelopmentGenerationContext, operation: () => Promise<T>) -> Promise<T>",
+      "visibility": "Public"
+    }
+  ]
+}

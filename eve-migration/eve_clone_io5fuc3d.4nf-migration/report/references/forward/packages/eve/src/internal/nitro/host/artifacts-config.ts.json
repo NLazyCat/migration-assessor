@@ -1,0 +1,68 @@
+{
+  "AgentWorkflowWorldDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/internal/nitro/host/artifacts-config.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/shared/agent-definition.ts:AgentWorkflowWorldDefinition"
+    }
+  ],
+  "DevelopmentNitroArtifactsConfig": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/internal/nitro/host/artifacts-config.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/internal/nitro/routes/runtime-artifacts.ts:DevelopmentNitroArtifactsConfig"
+    }
+  ],
+  "ProductionNitroArtifactsConfig": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 56,
+        "file": "packages/eve/src/internal/nitro/host/artifacts-config.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/internal/nitro/routes/runtime-artifacts.ts:ProductionNitroArtifactsConfig"
+    }
+  ],
+  "resolveDevelopmentRuntimeArtifactsPointerPath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/internal/nitro/host/artifacts-config.ts",
+        "line": 21
+      },
+      "symbol": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:resolveDevelopmentRuntimeArtifactsPointerPath"
+    }
+  ],
+  "resolvePackageSourceFilePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/internal/nitro/host/artifacts-config.ts",
+        "line": 29
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceFilePath"
+    }
+  ],
+  "usesParentDevelopmentWorkflowWorld": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/internal/nitro/host/artifacts-config.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/internal/workflow/development-world-protocol.ts:usesParentDevelopmentWorkflowWorld"
+    }
+  ]
+}

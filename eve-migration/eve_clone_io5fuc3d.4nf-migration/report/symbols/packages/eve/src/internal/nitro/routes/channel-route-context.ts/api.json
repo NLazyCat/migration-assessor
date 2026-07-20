@@ -1,0 +1,95 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TArgs"
+      ],
+      "kind": "function",
+      "line_range": [
+        14,
+        21
+      ],
+      "name": "attachAgentInfoRouteResponse",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "TArgs"
+        },
+        {
+          "name": "respond",
+          "optional": false,
+          "type": "AgentInfoRouteResponse"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TArgs",
+      "signature": "export function attachAgentInfoRouteResponse(args: TArgs, respond: AgentInfoRouteResponse) -> TArgs"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        23,
+        28
+      ],
+      "name": "readAgentInfoRouteResponse",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "RouteHandlerArgs"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentInfoRouteResponse | undefined",
+      "signature": "export function readAgentInfoRouteResponse(args: RouteHandlerArgs) -> AgentInfoRouteResponse | undefined"
+    },
+    {
+      "generics": [
+        "TArgs"
+      ],
+      "kind": "function",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "attachRouteAgent",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "TArgs"
+        },
+        {
+          "name": "agent",
+          "optional": false,
+          "type": "Agent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TArgs",
+      "signature": "export function attachRouteAgent(args: TArgs, agent: Agent) -> TArgs"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        39
+      ],
+      "name": "readRouteAgent",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "RouteHandlerArgs"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Agent | undefined",
+      "signature": "export function readRouteAgent(args: RouteHandlerArgs) -> Agent | undefined"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/channel-route-context.ts"
+}

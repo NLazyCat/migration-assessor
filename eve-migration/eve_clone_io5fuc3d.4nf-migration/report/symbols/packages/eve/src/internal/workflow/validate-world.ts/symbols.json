@@ -1,0 +1,110 @@
+{
+  "module": "packages/eve/src/internal/workflow/validate-world.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/validate-world.ts:ValidateWorkflowWorldInput:packageName",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/validate-world.ts:ValidateWorkflowWorldInput:world",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "world",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow/validate-world.ts:ValidateWorkflowWorldInput",
+      "kind": "interface",
+      "line_range": [
+        11,
+        18
+      ],
+      "name": "ValidateWorkflowWorldInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/validate-world.ts:validateWorkflowWorld",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        32
+      ],
+      "name": "validateWorkflowWorld",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ValidateWorkflowWorldInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "asserts input is {\r\n  readonly packageName?: string;\r\n  readonly world: World;\r\n}",
+      "signature": "export function validateWorkflowWorld(input: ValidateWorkflowWorldInput) -> asserts input is {\r\n  readonly packageName?: string;\r\n  readonly world: World;\r\n}",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/validate-world.ts:assertConfiguredWorldCompatibility",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        59
+      ],
+      "name": "assertConfiguredWorldCompatibility",
+      "params": [
+        {
+          "name": "packageName",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertConfiguredWorldCompatibility(packageName: string | undefined) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/validate-world.ts:isWorkflowWorld",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        73
+      ],
+      "name": "isWorkflowWorld",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is World",
+      "signature": "export function isWorkflowWorld(value: unknown) -> value is World",
+      "visibility": "Private"
+    }
+  ]
+}

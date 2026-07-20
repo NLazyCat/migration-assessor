@@ -1,0 +1,75 @@
+{
+  "module": "packages/eve/src/harness/workflow-subagent-limit.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-subagent-limit.ts:DEFAULT_WORKFLOW_MAX_SUBAGENTS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "DEFAULT_WORKFLOW_MAX_SUBAGENTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-subagent-limit.ts:WorkflowSubagentDispatchPlan",
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        20
+      ],
+      "name": "WorkflowSubagentDispatchPlan",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly allowed: readonly RuntimeActionRequest[];\r\n  readonly blocked: readonly RuntimeActionRequest[];\r\n  readonly maxSubagents: number;\r\n  readonly usedCalls: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-subagent-limit.ts:countResolvedWorkflowSubagentCalls",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        38
+      ],
+      "name": "countResolvedWorkflowSubagentCalls",
+      "params": [
+        {
+          "name": "interrupt",
+          "optional": false,
+          "type": "WorkflowSandboxInterrupt"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function countResolvedWorkflowSubagentCalls(interrupt: WorkflowSandboxInterrupt) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-subagent-limit.ts:planWorkflowSubagentDispatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        61
+      ],
+      "name": "planWorkflowSubagentDispatch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly actions: readonly RuntimeActionRequest[];\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly maxSubagents?: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSubagentDispatchPlan",
+      "signature": "export function planWorkflowSubagentDispatch(input: {\r\n  readonly actions: readonly RuntimeActionRequest[];\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly maxSubagents?: number;\r\n}) -> WorkflowSubagentDispatchPlan",
+      "visibility": "Public"
+    }
+  ]
+}

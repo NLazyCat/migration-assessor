@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/test/runtime-sandbox-registry.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/runtime-sandbox-registry.test.ts:EMPTY_RESOURCE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "EMPTY_RESOURCE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/runtime-sandbox-registry.test.ts:createResolvedSandboxDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        85,
+        95
+      ],
+      "name": "createResolvedSandboxDefinition",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly logicalPath: string;\r\n  readonly sourceId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedSandboxDefinition",
+      "signature": "export function createResolvedSandboxDefinition(input: {\r\n  readonly logicalPath: string;\r\n  readonly sourceId: string;\r\n}) -> ResolvedSandboxDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

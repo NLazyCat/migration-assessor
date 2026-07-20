@@ -1,0 +1,121 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        66,
+        74
+      ],
+      "name": "CreatedProjectFrameworkOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreatedProjectFrameworkOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        71
+      ],
+      "name": "detectFrameworkIntegrationImport",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (\r\n    projectRoot: string,\r\n    importSpecifier: string,\r\n  ) => Promise<boolean>",
+      "signature": "detectFrameworkIntegrationImport?: : (\r\n    projectRoot: string,\r\n    importSpecifier: string,\r\n  ) => Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        245,
+        296
+      ],
+      "name": "syncHostFrameworkPreset",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "{ log: Pick<ChannelSetupLog, \"info\" | \"warning\"> }"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ReturnType<typeof createPromptCommandOutput>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function syncHostFrameworkPreset(prompter: { log: Pick<ChannelSetupLog, \"info\" | \"warning\"> }, projectRoot: string, onOutput: ReturnType<typeof createPromptCommandOutput>, options: VercelProjectOperationOptions) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        298,
+        322
+      ],
+      "name": "ensureCreatedProjectFramework",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ReturnType<typeof createPromptCommandOutput>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "CreatedProjectFrameworkOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function ensureCreatedProjectFramework(prompter: Prompter, projectRoot: string, team: string, projectId: string, onOutput: ReturnType<typeof createPromptCommandOutput>, options: CreatedProjectFrameworkOptions) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/setup/vercel-project-framework.ts"
+}

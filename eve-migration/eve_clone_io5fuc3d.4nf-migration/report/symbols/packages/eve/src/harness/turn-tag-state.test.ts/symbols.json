@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/harness/turn-tag-state.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.test.ts:ZERO_SESSION_USAGE",
+      "kind": "variable",
+      "line_range": [
+        14,
+        21
+      ],
+      "name": "ZERO_SESSION_USAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.test.ts:makeSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        36
+      ],
+      "name": "makeSession",
+      "params": [
+        {
+          "name": "state",
+          "optional": true,
+          "type": "HarnessSession[\"state\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function makeSession(state: HarnessSession[\"state\"]) -> HarnessSession",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        39
+      ],
+      "name": "toPublicToolDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ResolvedToolDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolDefinition",
+      "signature": "export function toPublicToolDefinition(definition: ResolvedToolDefinition) -> ToolDefinition"
+    }
+  ],
+  "module": "packages/eve/src/public/tools/internal.ts"
+}

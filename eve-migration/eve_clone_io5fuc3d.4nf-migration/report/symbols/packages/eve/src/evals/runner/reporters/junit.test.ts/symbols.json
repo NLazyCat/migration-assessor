@@ -1,0 +1,72 @@
+{
+  "module": "packages/eve/src/evals/runner/reporters/junit.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/junit.test.ts:fsMocks",
+      "kind": "variable",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "fsMocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/junit.test.ts:makeSummary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        91
+      ],
+      "name": "makeSummary",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveEvalRunSummary",
+      "signature": "export function makeSummary() -> EveEvalRunSummary",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/junit.test.ts:makeEvalResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        109
+      ],
+      "name": "makeEvalResult",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<EveEvalResult>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalResult",
+      "signature": "export function makeEvalResult(overrides: Partial<EveEvalResult>) -> EveEvalResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/junit.test.ts:makeTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        111,
+        117
+      ],
+      "name": "makeTarget",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveEvalTarget",
+      "signature": "export function makeTarget() -> EveEvalTarget",
+      "visibility": "Private"
+    }
+  ]
+}

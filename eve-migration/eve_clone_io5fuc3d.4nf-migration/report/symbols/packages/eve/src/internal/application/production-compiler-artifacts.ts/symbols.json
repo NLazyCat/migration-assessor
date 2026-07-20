@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/internal/application/production-compiler-artifacts.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/production-compiler-artifacts.ts:stageProductionCompilerArtifacts",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        4,
+        12
+      ],
+      "name": "stageProductionCompilerArtifacts",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compilerArtifactsRoot: string;\r\n  readonly outputDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function stageProductionCompilerArtifacts(input: {\r\n  readonly compilerArtifactsRoot: string;\r\n  readonly outputDir: string;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

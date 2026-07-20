@@ -1,0 +1,1038 @@
+{
+  "module": "packages/eve/src/public/channels/discord/inbound.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DISCORD_INTERACTION_TYPE",
+      "kind": "variable",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "DISCORD_INTERACTION_TYPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DISCORD_INTERACTION_RESPONSE_TYPE",
+      "kind": "variable",
+      "line_range": [
+        19,
+        25
+      ],
+      "name": "DISCORD_INTERACTION_RESPONSE_TYPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DISCORD_EPHEMERAL_MESSAGE_FLAG",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "DISCORD_EPHEMERAL_MESSAGE_FLAG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser:avatar",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "avatar",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser:discriminator",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "discriminator",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser:globalName",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "globalName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser:id",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser:isBot",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "isBot",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser:username",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "username",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordUser",
+      "kind": "interface",
+      "line_range": [
+        31,
+        38
+      ],
+      "name": "DiscordUser",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordMember:nick",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "nick",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordMember:roles",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "roles",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordMember:user",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "user",
+          "partial_analysis": false,
+          "return_type": ": DiscordUser",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordMember",
+      "kind": "interface",
+      "line_range": [
+        41,
+        45
+      ],
+      "name": "DiscordMember",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:applicationId",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "applicationId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:channelId",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "channelId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:guildId",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "guildId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:id",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:member",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "member",
+          "partial_analysis": false,
+          "return_type": ": DiscordMember",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:token",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:user",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "user",
+          "partial_analysis": false,
+          "return_type": ": DiscordUser",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase:raw",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteractionBase",
+      "kind": "interface",
+      "line_range": [
+        48,
+        57
+      ],
+      "name": "DiscordInteractionBase",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandOption:name",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandOption:value",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": string | number | boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandOption:options",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": readonly DiscordCommandOption[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandOption",
+      "kind": "interface",
+      "line_range": [
+        64,
+        68
+      ],
+      "name": "DiscordCommandOption",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandInteraction:commandId",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "commandId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandInteraction:commandName",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "commandName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandInteraction:options",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": readonly DiscordCommandOption[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandInteraction:type",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": typeof DISCORD_INTERACTION_TYPE.APPLICATION_COMMAND",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordCommandInteraction",
+      "kind": "interface",
+      "line_range": [
+        71,
+        76
+      ],
+      "name": "DiscordCommandInteraction",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordComponentInteraction:componentType",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "componentType",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordComponentInteraction:customId",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "customId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordComponentInteraction:messageId",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "messageId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordComponentInteraction:type",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": typeof DISCORD_INTERACTION_TYPE.MESSAGE_COMPONENT",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordComponentInteraction:values",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "values",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordComponentInteraction",
+      "kind": "interface",
+      "line_range": [
+        83,
+        89
+      ],
+      "name": "DiscordComponentInteraction",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordModalSubmitInteraction:customId",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "customId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordModalSubmitInteraction:messageId",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "messageId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordModalSubmitInteraction:textInputs",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "textInputs",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordModalSubmitInteraction:type",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": typeof DISCORD_INTERACTION_TYPE.MODAL_SUBMIT",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordModalSubmitInteraction",
+      "kind": "interface",
+      "line_range": [
+        92,
+        97
+      ],
+      "name": "DiscordModalSubmitInteraction",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInteraction",
+      "kind": "type_alias",
+      "line_range": [
+        100,
+        103
+      ],
+      "name": "DiscordInteraction",
+      "partial_analysis": false,
+      "value": "| DiscordCommandInteraction\r\n  | DiscordComponentInteraction\r\n  | DiscordModalSubmitInteraction;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DISCORD_RESPONSE_INSTRUCTIONS",
+      "kind": "variable",
+      "line_range": [
+        105,
+        107
+      ],
+      "name": "DISCORD_RESPONSE_INSTRUCTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext:channelId",
+          "kind": "property",
+          "line_range": [
+            115,
+            115
+          ],
+          "name": "channelId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext:commandName",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "commandName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext:guildId",
+          "kind": "property",
+          "line_range": [
+            117,
+            117
+          ],
+          "name": "guildId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext:interactionId",
+          "kind": "property",
+          "line_range": [
+            118,
+            118
+          ],
+          "name": "interactionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext:userId",
+          "kind": "property",
+          "line_range": [
+            119,
+            119
+          ],
+          "name": "userId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext:username",
+          "kind": "property",
+          "line_range": [
+            120,
+            120
+          ],
+          "name": "username",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:DiscordInboundContext",
+      "kind": "interface",
+      "line_range": [
+        114,
+        121
+      ],
+      "name": "DiscordInboundContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseDiscordInteraction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        124,
+        137
+      ],
+      "name": "parseDiscordInteraction",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordInteraction | null",
+      "signature": "export function parseDiscordInteraction(value: unknown) -> DiscordInteraction | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:commandInteractionMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        140,
+        146
+      ],
+      "name": "commandInteractionMessage",
+      "params": [
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "DiscordCommandInteraction"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function commandInteractionMessage(interaction: DiscordCommandInteraction) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:formatDiscordContextBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        149,
+        163
+      ],
+      "name": "formatDiscordContextBlock",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "DiscordInboundContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDiscordContextBlock(context: DiscordInboundContext) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseCommandInteraction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        165,
+        176
+      ],
+      "name": "parseCommandInteraction",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordCommandInteraction | null",
+      "signature": "export function parseCommandInteraction(raw: Record<string, unknown>) -> DiscordCommandInteraction | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseComponentInteraction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        178,
+        197
+      ],
+      "name": "parseComponentInteraction",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordComponentInteraction | null",
+      "signature": "export function parseComponentInteraction(raw: Record<string, unknown>) -> DiscordComponentInteraction | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseModalSubmitInteraction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        199,
+        213
+      ],
+      "name": "parseModalSubmitInteraction",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordModalSubmitInteraction | null",
+      "signature": "export function parseModalSubmitInteraction(raw: Record<string, unknown>) -> DiscordModalSubmitInteraction | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseInteractionBase",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        215,
+        236
+      ],
+      "name": "parseInteractionBase",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordInteractionBase | null",
+      "signature": "export function parseInteractionBase(raw: Record<string, unknown>) -> DiscordInteractionBase | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseInteractionUser",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        238,
+        243
+      ],
+      "name": "parseInteractionUser",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordUser | null",
+      "signature": "export function parseInteractionUser(raw: Record<string, unknown>) -> DiscordUser | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseMember",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        245,
+        256
+      ],
+      "name": "parseMember",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordMember | undefined",
+      "signature": "export function parseMember(value: unknown) -> DiscordMember | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseUser",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        258,
+        270
+      ],
+      "name": "parseUser",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordUser | null",
+      "signature": "export function parseUser(value: unknown) -> DiscordUser | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        272,
+        285
+      ],
+      "name": "parseOptions",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordCommandOption[]",
+      "signature": "export function parseOptions(value: unknown) -> DiscordCommandOption[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseOptionValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        287,
+        292
+      ],
+      "name": "parseOptionValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | number | boolean | undefined",
+      "signature": "export function parseOptionValue(value: unknown) -> string | number | boolean | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:parseTextInputs",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        294,
+        307
+      ],
+      "name": "parseTextInputs",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, string>",
+      "signature": "export function parseTextInputs(value: unknown) -> Record<string, string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:findOptionValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        309,
+        319
+      ],
+      "name": "findOptionValue",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly DiscordCommandOption[]"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | number | boolean | undefined",
+      "signature": "export function findOptionValue(options: readonly DiscordCommandOption[], name: string) -> string | number | boolean | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:formatCommandOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        321,
+        326
+      ],
+      "name": "formatCommandOptions",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly DiscordCommandOption[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatCommandOptions(options: readonly DiscordCommandOption[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/inbound.ts:formatOption",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        328,
+        332
+      ],
+      "name": "formatOption",
+      "params": [
+        {
+          "name": "option",
+          "optional": false,
+          "type": "DiscordCommandOption"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatOption(option: DiscordCommandOption) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

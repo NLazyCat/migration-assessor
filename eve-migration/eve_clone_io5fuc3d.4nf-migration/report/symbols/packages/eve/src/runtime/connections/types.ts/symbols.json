@@ -1,0 +1,528 @@
+{
+  "module": "packages/eve/src/runtime/connections/types.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:TokenResult:token",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:TokenResult:expiresAt",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "expiresAt",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:TokenResult",
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "TokenResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionProtocol",
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "ConnectionProtocol",
+      "partial_analysis": false,
+      "value": "\"mcp\" | \"openapi\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:HeaderValue",
+      "kind": "type_alias",
+      "line_range": [
+        44,
+        47
+      ],
+      "name": "HeaderValue",
+      "partial_analysis": false,
+      "value": "| string\r\n  | Promise<string>\r\n  | ((ctx: SessionContext) => string | Promise<string>);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:HeadersDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        58,
+        62
+      ],
+      "name": "HeadersDefinition",
+      "partial_analysis": false,
+      "value": "| Readonly<Record<string, HeaderValue>>\r\n  | ((\r\n      ctx: SessionContext,\r\n    ) => Readonly<Record<string, string>> | Promise<Readonly<Record<string, string>>>);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ToolFilterDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "ToolFilterDefinition",
+      "partial_analysis": false,
+      "value": "| { readonly allow: readonly string[] }\r\n  | { readonly block: readonly string[] };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionPrincipal",
+      "kind": "type_alias",
+      "line_range": [
+        90,
+        97
+      ],
+      "name": "ConnectionPrincipal",
+      "partial_analysis": false,
+      "value": "| { readonly type: \"app\" }\r\n  | {\r\n      readonly type: \"user\";\r\n      readonly id: string;\r\n      readonly issuer?: string;\r\n      readonly attributes?: Readonly<Record<string, string | readonly string[]>>;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationCallback:params",
+          "kind": "property",
+          "line_range": [
+            110,
+            110
+          ],
+          "name": "params",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationCallback:method",
+          "kind": "property",
+          "line_range": [
+            111,
+            111
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationCallback:body",
+          "kind": "property",
+          "line_range": [
+            113,
+            113
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationCallback",
+      "kind": "interface",
+      "line_range": [
+        108,
+        114
+      ],
+      "name": "AuthorizationCallback",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionAuthorizationContext:url",
+          "kind": "property",
+          "line_range": [
+            134,
+            134
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionAuthorizationContext",
+      "kind": "interface",
+      "line_range": [
+        128,
+        135
+      ],
+      "name": "ConnectionAuthorizationContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        163,
+        165
+      ],
+      "name": "AuthorizationDefinition",
+      "partial_analysis": false,
+      "value": "JsonValue> =\r\n  | NonInteractiveAuthorizationDefinition\r\n  | InteractiveAuthorizationDefinition<Resume>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionAuthProvider",
+      "kind": "type_alias",
+      "line_range": [
+        176,
+        180
+      ],
+      "name": "ConnectionAuthProvider",
+      "partial_analysis": false,
+      "value": "| (Omit<NonInteractiveAuthorizationDefinition, \"principalType\"> & {\r\n      readonly principalType?: NonInteractiveAuthorizationDefinition[\"principalType\"];\r\n    })\r\n  | AuthorizationDefinition;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionAuthResolver",
+      "kind": "type_alias",
+      "line_range": [
+        189,
+        191
+      ],
+      "name": "ConnectionAuthResolver",
+      "partial_analysis": false,
+      "value": "(\r\n  ctx: SessionContext,\r\n) => ConnectionAuthProvider | Promise<ConnectionAuthProvider>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionAuthDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        198,
+        198
+      ],
+      "name": "ConnectionAuthDefinition",
+      "partial_analysis": false,
+      "value": "ConnectionAuthProvider | ConnectionAuthResolver;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationDefinitionBase:principalType",
+          "kind": "property",
+          "line_range": [
+            220,
+            220
+          ],
+          "name": "principalType",
+          "partial_analysis": false,
+          "return_type": ": \"app\" | \"user\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationDefinitionBase:vercelConnect",
+          "kind": "property",
+          "line_range": [
+            240,
+            242
+          ],
+          "name": "vercelConnect",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly connector: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationDefinitionBase:displayName",
+          "kind": "property",
+          "line_range": [
+            252,
+            252
+          ],
+          "name": "displayName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:AuthorizationDefinitionBase",
+      "kind": "interface",
+      "line_range": [
+        203,
+        278
+      ],
+      "name": "AuthorizationDefinitionBase",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:NonInteractiveAuthorizationDefinition:startAuthorization",
+          "kind": "property",
+          "line_range": [
+            300,
+            300
+          ],
+          "name": "startAuthorization",
+          "partial_analysis": false,
+          "return_type": ": undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:NonInteractiveAuthorizationDefinition:completeAuthorization",
+          "kind": "property",
+          "line_range": [
+            301,
+            301
+          ],
+          "name": "completeAuthorization",
+          "partial_analysis": false,
+          "return_type": ": undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:NonInteractiveAuthorizationDefinition",
+      "kind": "interface",
+      "line_range": [
+        286,
+        302
+      ],
+      "name": "NonInteractiveAuthorizationDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:InteractiveAuthorizationDefinition:principalType",
+          "kind": "property",
+          "line_range": [
+            317,
+            317
+          ],
+          "name": "principalType",
+          "partial_analysis": false,
+          "return_type": ": \"user\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:InteractiveAuthorizationDefinition",
+      "kind": "interface",
+      "line_range": [
+        314,
+        379
+      ],
+      "name": "InteractiveAuthorizationDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:defineInteractiveAuthorization",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        409,
+        413
+      ],
+      "name": "defineInteractiveAuthorization",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "Omit<InteractiveAuthorizationDefinition<Resume>, \"principalType\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InteractiveAuthorizationDefinition<Resume>",
+      "signature": "export function defineInteractiveAuthorization(definition: Omit<InteractiveAuthorizationDefinition<Resume>, \"principalType\">) -> InteractiveAuthorizationDefinition<Resume>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:supportsInteractiveAuthorization",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        419,
+        423
+      ],
+      "name": "supportsInteractiveAuthorization",
+      "params": [
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "Readonly<AuthorizationDefinition> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function supportsInteractiveAuthorization(authorization: Readonly<AuthorizationDefinition> | undefined) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolMetadata:annotations",
+          "kind": "property",
+          "line_range": [
+            427,
+            427
+          ],
+          "name": "annotations",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolMetadata:description",
+          "kind": "property",
+          "line_range": [
+            428,
+            428
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolMetadata:inputSchema",
+          "kind": "property",
+          "line_range": [
+            429,
+            429
+          ],
+          "name": "inputSchema",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolMetadata:name",
+          "kind": "property",
+          "line_range": [
+            430,
+            430
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolMetadata:outputSchema",
+          "kind": "property",
+          "line_range": [
+            431,
+            431
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolMetadata",
+      "kind": "interface",
+      "line_range": [
+        426,
+        432
+      ],
+      "name": "ConnectionToolMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolExecuteOptions:abortSignal",
+          "kind": "property",
+          "line_range": [
+            437,
+            437
+          ],
+          "name": "abortSignal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionToolExecuteOptions",
+      "kind": "interface",
+      "line_range": [
+        435,
+        438
+      ],
+      "name": "ConnectionToolExecuteOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionClient",
+      "kind": "interface",
+      "line_range": [
+        441,
+        451
+      ],
+      "name": "ConnectionClient",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/types.ts:ConnectionRegistry",
+      "kind": "interface",
+      "line_range": [
+        454,
+        460
+      ],
+      "name": "ConnectionRegistry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

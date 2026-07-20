@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        244
+      ],
+      "name": "dispatchRuntimeActionsStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callbackBaseUrl?: string;\r\n  /** Internal hook that receives child completion and HITL payloads. */\r\n  readonly parentContinuationToken?: string;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly sessionState: DurableSessionState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly results: readonly RuntimeSubagentResultActionResult[];\r\n  readonly sessionState: DurableSessionState;\r\n}>",
+      "signature": "export function dispatchRuntimeActionsStep(input: {\r\n  readonly callbackBaseUrl?: string;\r\n  /** Internal hook that receives child completion and HITL payloads. */\r\n  readonly parentContinuationToken?: string;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly sessionState: DurableSessionState;\r\n}) -> Promise<{\r\n  readonly results: readonly RuntimeSubagentResultActionResult[];\r\n  readonly sessionState: DurableSessionState;\r\n}>"
+    }
+  ],
+  "module": "packages/eve/src/execution/dispatch-runtime-actions-step.ts"
+}

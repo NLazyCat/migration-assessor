@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/setup/primitives/coding-agent-env.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/coding-agent-env.ts:CODING_AGENT_ENV_MARKERS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        34
+      ],
+      "name": "CODING_AGENT_ENV_MARKERS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/coding-agent-env.ts:withoutCodingAgentMarkers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        41
+      ],
+      "name": "withoutCodingAgentMarkers",
+      "params": [
+        {
+          "name": "env",
+          "optional": false,
+          "type": "NodeJS.ProcessEnv"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NodeJS.ProcessEnv",
+      "signature": "export function withoutCodingAgentMarkers(env: NodeJS.ProcessEnv) -> NodeJS.ProcessEnv",
+      "visibility": "Public"
+    }
+  ]
+}

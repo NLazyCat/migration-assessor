@@ -1,0 +1,181 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "EVE_NUXT_SERVICE_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_NUXT_SERVICE_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        18,
+        25
+      ],
+      "name": "normalizeRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeRoutePrefix(prefix: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "joinRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function joinRoutePrefix(prefix: string, path: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        37,
+        39
+      ],
+      "name": "normalizeOrigin",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeOrigin(origin: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        46,
+        56
+      ],
+      "name": "readLocalProductionPort",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function readLocalProductionPort() -> number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        61,
+        70
+      ],
+      "name": "EveVercelRewriteRoute",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveVercelRewriteRoute { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "src",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "src: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "dest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "dest: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "check",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "check: : true"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        88
+      ],
+      "name": "createEveVercelRewriteRoute",
+      "params": [
+        {
+          "name": "servicePrefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveVercelRewriteRoute",
+      "signature": "export function createEveVercelRewriteRoute(servicePrefix: string) -> EveVercelRewriteRoute"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        96,
+        108
+      ],
+      "name": "resolveProductionTarget",
+      "params": [
+        {
+          "name": "servicePrefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveProductionTarget(servicePrefix: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/nuxt/routing.ts"
+}

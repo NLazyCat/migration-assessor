@@ -1,0 +1,135 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:mockedWatcher",
+      "kind": "variable",
+      "line_range": [
+        11,
+        64
+      ],
+      "name": "mockedWatcher",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:DEFAULT_APP_ROOT",
+      "kind": "variable",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "DEFAULT_APP_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:temporaryDirectories",
+      "kind": "variable",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "temporaryDirectories",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:createPreparedHost",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        352,
+        396
+      ],
+      "name": "createPreparedHost",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PreparedDevelopmentApplicationHost",
+      "signature": "export function createPreparedHost(appRoot: string) -> PreparedDevelopmentApplicationHost",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:createCoordinator",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        398,
+        404
+      ],
+      "name": "createCoordinator",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentAuthoredRebuildCoordinator",
+      "signature": "export function createCoordinator(host: PreparedDevelopmentApplicationHost) -> DevelopmentAuthoredRebuildCoordinator",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:getInitialWatchPaths",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        406,
+        412
+      ],
+      "name": "getInitialWatchPaths",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function getInitialWatchPaths() -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:getIgnoredPredicate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        414,
+        420
+      ],
+      "name": "getIgnoredPredicate",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "(path: string) => boolean",
+      "signature": "export function getIgnoredPredicate() -> (path: string) => boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts:createDeferred",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        422,
+        433
+      ],
+      "name": "createDeferred",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createDeferred() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

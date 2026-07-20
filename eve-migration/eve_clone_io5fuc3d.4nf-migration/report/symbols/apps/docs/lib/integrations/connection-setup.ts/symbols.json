@@ -1,0 +1,285 @@
+{
+  "module": "apps/docs/lib/integrations/connection-setup.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/connection-setup.ts:ConnectionSetup:protocols",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "protocols",
+          "partial_analysis": false,
+          "return_type": ": ConnectionProtocol[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/connection-setup.ts:ConnectionSetup:authModes",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "authModes",
+          "partial_analysis": false,
+          "return_type": ": AuthMode[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/connection-setup.ts:ConnectionSetup:variants",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "variants",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:ConnectionSetup",
+      "kind": "interface",
+      "line_range": [
+        13,
+        18
+      ],
+      "name": "ConnectionSetup",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:setupKey",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        20,
+        21
+      ],
+      "name": "setupKey",
+      "params": [
+        {
+          "name": "protocol",
+          "optional": false,
+          "type": "ConnectionProtocol"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:connectorOf",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "connectorOf",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "spec",
+          "optional": false,
+          "type": "ConnectionSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:buildSnippet",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        26,
+        86
+      ],
+      "name": "buildSnippet",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        },
+        {
+          "name": "protocol",
+          "optional": false,
+          "type": "ConnectionProtocol"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:authNote",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        88,
+        96
+      ],
+      "name": "authNote",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:buildVariant",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        99,
+        117
+      ],
+      "name": "buildVariant",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        },
+        {
+          "name": "protocol",
+          "optional": false,
+          "type": "ConnectionProtocol"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:buildConnectionSetup",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        120,
+        131
+      ],
+      "name": "buildConnectionSetup",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSetup",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:buildConnectionInstall",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        134,
+        146
+      ],
+      "name": "buildConnectionInstall",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:buildConnectionConfigure",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        149,
+        181
+      ],
+      "name": "buildConnectionConfigure",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/connection-setup.ts:authModeButtonLabel",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "authModeButtonLabel",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

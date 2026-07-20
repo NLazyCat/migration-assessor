@@ -1,0 +1,44 @@
+{
+  "HarnessEmitFn": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/harness/stream-actions.ts",
+        "line": 19
+      },
+      "symbol": "packages/eve/src/harness/types.ts:HarnessEmitFn"
+    }
+  ],
+  "RuntimeToolCallActionRequest": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/harness/stream-actions.ts",
+        "line": 14
+      },
+      "symbol": "packages/eve/src/runtime/actions/types.ts:RuntimeToolCallActionRequest"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 41,
+        "file": "packages/eve/src/harness/stream-actions.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/runtime/actions/types.ts:RuntimeToolCallActionRequest"
+    }
+  ],
+  "createActionsRequestedEvent": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/harness/stream-actions.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/protocol/message.ts:createActionsRequestedEvent"
+    }
+  ]
+}

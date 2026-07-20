@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        8,
+        40
+      ],
+      "name": "createGpuMesh",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GpuMesh",
+      "signature": "export function createGpuMesh(device: Device, mesh: MeshData) -> GpuMesh"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        59
+      ],
+      "name": "normalizedMeshBounds",
+      "params": [
+        {
+          "name": "bounds",
+          "optional": false,
+          "type": "Bounds"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Bounds",
+      "signature": "export function normalizedMeshBounds(bounds: Bounds) -> Bounds"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts"
+}

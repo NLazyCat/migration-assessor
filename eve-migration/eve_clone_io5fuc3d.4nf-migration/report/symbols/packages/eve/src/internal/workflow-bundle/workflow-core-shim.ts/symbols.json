@@ -1,0 +1,332 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:WORKFLOW_CONTEXT_SYMBOL",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "WORKFLOW_CONTEXT_SYMBOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:WORKFLOW_CREATE_HOOK",
+      "kind": "variable",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": "WORKFLOW_CREATE_HOOK",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:WORKFLOW_GET_STREAM_ID",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "WORKFLOW_GET_STREAM_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:WORKFLOW_USE_STEP",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "WORKFLOW_USE_STEP",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:STREAM_NAME_SYMBOL",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "STREAM_NAME_SYMBOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:workflowGlobal",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "workflowGlobal",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:RetryableError",
+      "kind": "class",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "RetryableError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:FatalError",
+      "kind": "class",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "FatalError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:WorkflowHook:token",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:WorkflowHook",
+      "kind": "interface",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "WorkflowHook",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:createHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        30
+      ],
+      "name": "createHook",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowHook<T>",
+      "signature": "export function createHook(options: unknown) -> WorkflowHook<T>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:getWorkflowMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        45
+      ],
+      "name": "getWorkflowMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function getWorkflowMetadata() -> Record<string, unknown>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:getWritable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        67
+      ],
+      "name": "getWritable",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ namespace?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WritableStream<T>",
+      "signature": "export function getWritable(options: { namespace?: string }) -> WritableStream<T>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:createWebhook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "createWebhook",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowHook<T> & { url?: string }",
+      "signature": "export function createWebhook(options: unknown) -> WorkflowHook<T> & { url?: string }",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:defineHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        84,
+        94
+      ],
+      "name": "defineHook",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly create: (options?: unknown) => WorkflowHook<T>;\r\n  readonly resume: () => never;\r\n}",
+      "signature": "export function defineHook() -> {\r\n  readonly create: (options?: unknown) => WorkflowHook<T>;\r\n  readonly resume: () => never;\r\n}",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:sleep",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "sleep",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function sleep() -> never",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:resumeHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        108
+      ],
+      "name": "resumeHook",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function resumeHook() -> never",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:getStepMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        115
+      ],
+      "name": "getStepMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function getStepMetadata() -> never",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:ExperimentalSetAttributesOptions:allowReservedAttributes",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "allowReservedAttributes",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:ExperimentalSetAttributesOptions",
+      "kind": "interface",
+      "line_range": [
+        123,
+        130
+      ],
+      "name": "ExperimentalSetAttributesOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts:experimental_setAttributes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        151,
+        181
+      ],
+      "name": "experimental_setAttributes",
+      "params": [
+        {
+          "name": "attrs",
+          "optional": false,
+          "type": "Record<string, string | undefined>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ExperimentalSetAttributesOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function experimental_setAttributes(attrs: Record<string, string | undefined>, options: ExperimentalSetAttributesOptions) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

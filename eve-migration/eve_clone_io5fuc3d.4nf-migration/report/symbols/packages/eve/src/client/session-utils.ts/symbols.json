@@ -1,0 +1,153 @@
+{
+  "module": "packages/eve/src/client/session-utils.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:createInitialSessionState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        11
+      ],
+      "name": "createInitialSessionState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SessionState",
+      "signature": "export function createInitialSessionState() -> SessionState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:advanceSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        45
+      ],
+      "name": "advanceSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly continuationToken?: string;\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly preserveCompletedSessions?: boolean;\r\n  readonly sessionId: string;\r\n  readonly session: SessionState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionState",
+      "signature": "export function advanceSession(input: {\r\n  readonly continuationToken?: string;\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly preserveCompletedSessions?: boolean;\r\n  readonly sessionId: string;\r\n  readonly session: SessionState;\r\n}) -> SessionState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:extractCompletedMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        64
+      ],
+      "name": "extractCompletedMessage",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractCompletedMessage(events: readonly HandleMessageStreamEvent[]) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:deriveResultStatus",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        77
+      ],
+      "name": "deriveResultStatus",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"completed\" | \"failed\" | \"waiting\"",
+      "signature": "export function deriveResultStatus(events: readonly HandleMessageStreamEvent[]) -> \"completed\" | \"failed\" | \"waiting\"",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:extractInputRequests",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        94
+      ],
+      "name": "extractInputRequests",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly InputRequest[]",
+      "signature": "export function extractInputRequests(events: readonly HandleMessageStreamEvent[]) -> readonly InputRequest[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:findBoundaryEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        104
+      ],
+      "name": "findBoundaryEvent",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent | undefined",
+      "signature": "export function findBoundaryEvent(events: readonly HandleMessageStreamEvent[]) -> HandleMessageStreamEvent | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/session-utils.ts:isFinalMessageCompleted",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        110
+      ],
+      "name": "isFinalMessageCompleted",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "event is MessageCompletedStreamEvent",
+      "signature": "export function isFinalMessageCompleted(event: HandleMessageStreamEvent) -> event is MessageCompletedStreamEvent",
+      "visibility": "Private"
+    }
+  ]
+}

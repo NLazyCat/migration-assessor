@@ -1,0 +1,128 @@
+{
+  "AlsContext": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 59
+      },
+      "symbol": "packages/eve/src/context/container.ts:AlsContext"
+    }
+  ],
+  "AuthorizationDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 38,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 9
+      },
+      "symbol": "packages/eve/src/runtime/connections/types.ts:AuthorizationDefinition"
+    }
+  ],
+  "ContextContainer": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 64
+      },
+      "symbol": "packages/eve/src/context/container.ts:ContextContainer"
+    }
+  ],
+  "ContextKey": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 48,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 12
+      },
+      "symbol": "packages/eve/src/context/key.ts:ContextKey"
+    }
+  ],
+  "ResolvedConnectionDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedConnectionDefinition"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 45
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedConnectionDefinition"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 38,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 10
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedConnectionDefinition"
+    }
+  ],
+  "SessionContext": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 23
+      },
+      "symbol": "packages/eve/src/public/definitions/callback-context.ts:SessionContext"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 46
+      },
+      "symbol": "packages/eve/src/public/definitions/callback-context.ts:SessionContext"
+    }
+  ],
+  "buildCallbackContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 46,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/context/build-callback-context.ts:buildCallbackContext"
+    }
+  ],
+  "contextStorage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/context/container.ts:contextStorage"
+    }
+  ],
+  "normalizeAuthorizationSpec": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+        "line": 53
+      },
+      "symbol": "packages/eve/src/runtime/connections/validate-authorization.ts:normalizeAuthorizationSpec"
+    }
+  ]
+}

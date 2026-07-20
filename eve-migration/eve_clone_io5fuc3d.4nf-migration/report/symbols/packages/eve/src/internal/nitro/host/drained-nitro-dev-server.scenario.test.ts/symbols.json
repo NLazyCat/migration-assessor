@@ -1,0 +1,159 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:TEST_DEADLINE_MS",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "TEST_DEADLINE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:LOGGER",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "LOGGER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:TestRunner:closeMock",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "closeMock",
+          "partial_analysis": false,
+          "return_type": ": ReturnType<typeof vi.fn>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:TestRunner",
+      "kind": "interface",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "TestRunner",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:createRunnerFactory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        72
+      ],
+      "name": "createRunnerFactory",
+      "params": [
+        {
+          "name": "fetchHandler",
+          "optional": false,
+          "type": "(request: Request, runnerIndex: number, init?: RequestInit) => Promise<Response>"
+        },
+        {
+          "name": "readiness",
+          "optional": false,
+          "type": "(runnerIndex: number) => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly createRunner: DevelopmentRunnerFactory; readonly runners: TestRunner[] }",
+      "signature": "export function createRunnerFactory(fetchHandler: (request: Request, runnerIndex: number, init?: RequestInit) => Promise<Response>, readiness: (runnerIndex: number) => Promise<void>) -> { readonly createRunner: DevelopmentRunnerFactory; readonly runners: TestRunner[] }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:replacement",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        76
+      ],
+      "name": "replacement",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dispose",
+          "optional": true,
+          "type": "() => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function replacement(entry: string, dispose: () => Promise<void>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:listen",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        78,
+        85
+      ],
+      "name": "listen",
+      "params": [
+        {
+          "name": "server",
+          "optional": false,
+          "type": "DrainedNitroDevServer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DrainedDevServerListener>",
+      "signature": "export function listen(server: DrainedNitroDevServer) -> Promise<DrainedDevServerListener>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts:withinDeadline",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        87,
+        99
+      ],
+      "name": "withinDeadline",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "Promise<T>"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withinDeadline(operation: Promise<T>, message: string) -> Promise<T>",
+      "visibility": "Private"
+    }
+  ]
+}

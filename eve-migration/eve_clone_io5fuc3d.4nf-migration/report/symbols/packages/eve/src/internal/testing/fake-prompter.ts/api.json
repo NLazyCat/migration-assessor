@@ -1,0 +1,126 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "FakePrompterConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FakePrompterConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (opts: Parameters<Prompter[\"text\"]>[0]) => string",
+      "signature": "text?: : (opts: Parameters<Prompter[\"text\"]>[0]) => string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "password",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (opts: { message: string }) => string",
+      "signature": "password?: : (opts: { message: string }) => string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "single",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (opts: SingleSelectOptions<PrompterValue>) => PrompterValue | Promise<PrompterValue>",
+      "signature": "single?: : (opts: SingleSelectOptions<PrompterValue>) => PrompterValue | Promise<PrompterValue>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        23
+      ],
+      "name": "multiple",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (\r\n    opts: MultiSelectOptions<PrompterValue>,\r\n  ) => PrompterValue[] | Promise<PrompterValue[]>",
+      "signature": "multiple?: : (\r\n    opts: MultiSelectOptions<PrompterValue>,\r\n  ) => PrompterValue[] | Promise<PrompterValue[]>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        30
+      ],
+      "name": "FakePrompter",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FakePrompter { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "prompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Prompter",
+      "signature": "prompter: : Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "selectMessages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "selectMessages: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        37,
+        74
+      ],
+      "name": "createFakePrompter",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "FakePrompterConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "FakePrompter",
+      "signature": "export function createFakePrompter(config: FakePrompterConfig) -> FakePrompter"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/fake-prompter.ts"
+}

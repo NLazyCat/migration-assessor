@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/setup/cli/select-state.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.test.ts:OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        19
+      ],
+      "name": "OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.test.ts:initial",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "initial",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.test.ts:context",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "context",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<SelectContext>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectContext",
+      "signature": "export function context(overrides: Partial<SelectContext>) -> SelectContext",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/todo.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TodoItem",
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "TodoItem",
+      "partial_analysis": false,
+      "value": "z.infer<typeof TODO_ITEM_SCHEMA>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/todo.ts:TodoState:items",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "items",
+          "partial_analysis": false,
+          "return_type": ": readonly TodoItem[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TodoState",
+      "kind": "interface",
+      "line_range": [
+        20,
+        22
+      ],
+      "name": "TodoState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TodoStateKey",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "TodoStateKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TodoToolInput",
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "TodoToolInput",
+      "partial_analysis": false,
+      "value": "z.infer<typeof TODO_INPUT_SCHEMA>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:formatTodoSummary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        43
+      ],
+      "name": "formatTodoSummary",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "TodoState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatTodoSummary(state: TodoState) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:getTodoCompactionMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        56
+      ],
+      "name": "getTodoCompactionMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ModelMessage | undefined",
+      "signature": "export function getTodoCompactionMessage() -> ModelMessage | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:formatTodoResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        77
+      ],
+      "name": "formatTodoResult",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "TodoState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "object",
+      "signature": "export function formatTodoResult(state: TodoState) -> object",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:executeTodoTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        88,
+        100
+      ],
+      "name": "executeTodoTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TodoToolInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function executeTodoTool(input: TodoToolInput) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TODO_ITEM_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        106,
+        112
+      ],
+      "name": "TODO_ITEM_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TODO_INPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        114,
+        119
+      ],
+      "name": "TODO_INPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:countSchema",
+      "kind": "variable",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "countSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TODO_OUTPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        122,
+        131
+      ],
+      "name": "TODO_OUTPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/todo.ts:TODO_TOOL_DEFINITION",
+      "kind": "variable",
+      "line_range": [
+        133,
+        162
+      ],
+      "name": "TODO_TOOL_DEFINITION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

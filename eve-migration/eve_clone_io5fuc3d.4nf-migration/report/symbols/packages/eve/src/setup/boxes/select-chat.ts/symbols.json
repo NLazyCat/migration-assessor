@@ -1,0 +1,162 @@
+{
+  "module": "packages/eve/src/setup/boxes/select-chat.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-chat.ts:CHAT_PROMPT_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "CHAT_PROMPT_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-chat.ts:ChatPreferenceContext:availableChannels",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "availableChannels",
+          "partial_analysis": false,
+          "return_type": ": ChannelKind[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-chat.ts:ChatPreferenceContext:slackbotAttached",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "slackbotAttached",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/select-chat.ts:ChatPreferenceContext",
+      "kind": "interface",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "ChatPreferenceContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-chat.ts:buildChatPreferenceOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        40
+      ],
+      "name": "buildChatPreferenceOptions",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "ChatPreferenceContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOption<ChatPreference>[]",
+      "signature": "export function buildChatPreferenceOptions(args: ChatPreferenceContext) -> SelectOption<ChatPreference>[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-chat.ts:pickInitialPreference",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        52
+      ],
+      "name": "pickInitialPreference",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "ChatPreferenceContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChatPreference | undefined",
+      "signature": "export function pickInitialPreference(args: ChatPreferenceContext) -> ChatPreference | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-chat.ts:SelectChatOptions:asker",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "asker",
+          "partial_analysis": false,
+          "return_type": ": Asker",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-chat.ts:SelectChatOptions:presetPreference",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "presetPreference",
+          "partial_analysis": false,
+          "return_type": ": ChatPreference",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/select-chat.ts:SelectChatOptions",
+      "kind": "interface",
+      "line_range": [
+        54,
+        65
+      ],
+      "name": "SelectChatOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-chat.ts:selectChat",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        110
+      ],
+      "name": "selectChat",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SelectChatOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ChatPreference, ChatPreference>",
+      "signature": "export function selectChat(options: SelectChatOptions) -> SetupBox<SetupState, ChatPreference, ChatPreference>",
+      "visibility": "Public"
+    }
+  ]
+}

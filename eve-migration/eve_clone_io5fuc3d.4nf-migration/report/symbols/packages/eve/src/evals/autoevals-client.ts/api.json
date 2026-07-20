@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        64
+      ],
+      "name": "createAutoevalsClient",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "AutoevalsClientConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AutoevalsClient",
+      "signature": "export function createAutoevalsClient(config: AutoevalsClientConfig) -> AutoevalsClient"
+    }
+  ],
+  "module": "packages/eve/src/evals/autoevals-client.ts"
+}

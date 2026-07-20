@@ -1,0 +1,105 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "DEVELOPMENT_ENV_FILE_NAMES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_ENV_FILE_NAMES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "DevelopmentEnvironmentReload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentEnvironmentReload { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        43
+      ],
+      "name": "getDevelopmentEnvironmentFilePaths",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function getDevelopmentEnvironmentFilePaths(appRoot: string) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        55
+      ],
+      "name": "loadDevelopmentEnvironmentFiles",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function loadDevelopmentEnvironmentFiles(appRoot: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        59
+      ],
+      "name": "stageDevelopmentEnvironmentFiles",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentEnvironmentReload",
+      "signature": "export function stageDevelopmentEnvironmentFiles(appRoot: string) -> DevelopmentEnvironmentReload"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        61,
+        72
+      ],
+      "name": "readDevelopmentEnvironmentHostValues",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Readonly<Record<string, string | null>>",
+      "signature": "export function readDevelopmentEnvironmentHostValues(appRoot: string) -> Readonly<Record<string, string | null>>"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/environment.ts"
+}

@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        8,
+        43
+      ],
+      "name": "computeDevelopmentHostFingerprint",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function computeDevelopmentHostFingerprint(host: PreparedDevelopmentApplicationHost) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.ts"
+}

@@ -1,0 +1,115 @@
+{
+  "module": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:TOOL_NAME",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "TOOL_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:MessageResponse:ok",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "ok",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:MessageResponse:sessionId",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:MessageResponse",
+      "kind": "interface",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "MessageResponse",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:StopResponse:status",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": \"accepted\" | \"no_active_turn\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:StopResponse",
+      "kind": "interface",
+      "line_range": [
+        11,
+        13
+      ],
+      "name": "StopResponse",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-cancellation/evals/cancellation/cancel-channel-route.eval.ts:postJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        15,
+        26
+      ],
+      "name": "postJson",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTargetHandle"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function postJson(target: EveEvalTargetHandle, path: string, body: unknown) -> Promise<T>",
+      "visibility": "Private"
+    }
+  ]
+}

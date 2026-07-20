@@ -1,0 +1,860 @@
+{
+  "module": "packages/eve/src/channel/routes.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketHeaders",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "WebSocketHeaders",
+      "partial_analysis": false,
+      "value": "Headers | readonly (readonly [string, string])[] | Record<string, string>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:send",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "send",
+          "partial_analysis": false,
+          "return_type": ": SendFn<TState>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:cancel",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "cancel",
+          "partial_analysis": false,
+          "return_type": ": CancelFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:getSession",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "getSession",
+          "partial_analysis": false,
+          "return_type": ": GetSessionFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:receive",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "receive",
+          "partial_analysis": false,
+          "return_type": ": CrossChannelReceiveFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:params",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "params",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:waitUntil",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "waitUntil",
+          "partial_analysis": false,
+          "return_type": ": (task: Promise<unknown>) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs:requestIp",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "requestIp",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:RouteHandlerArgs",
+      "kind": "interface",
+      "line_range": [
+        21,
+        35
+      ],
+      "name": "RouteHandlerArgs",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:SendPayload:message",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string | UserContent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:SendPayload:inputResponses",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "inputResponses",
+          "partial_analysis": false,
+          "return_type": ": readonly InputResponse[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:SendPayload:context",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "context",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:SendPayload:outputSchema",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:SendPayload",
+      "kind": "interface",
+      "line_range": [
+        37,
+        53
+      ],
+      "name": "SendPayload",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:SendFn",
+      "kind": "type_alias",
+      "line_range": [
+        61,
+        64
+      ],
+      "name": "SendFn",
+      "partial_analysis": false,
+      "value": "undefined> = (\r\n  input: string | UserContent | SendPayload,\r\n  options: SendOptions<TState>,\r\n) => Promise<Session>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:BaseSendOptions",
+      "kind": "type_alias",
+      "line_range": [
+        66,
+        76
+      ],
+      "name": "BaseSendOptions",
+      "partial_analysis": false,
+      "value": "{\r\n  auth: SessionAuthContext | null;\r\n  callback?: SessionCallback;\r\n  continuationToken: string;\r\n  mode?: RunMode;\r\n  /**\r\n   * Human-readable title for a newly started workflow session. Defaults to\r\n   * the first user message and is ignored when resuming an existing session.\r\n   */\r\n  title?: string;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:SendOptions",
+      "kind": "type_alias",
+      "line_range": [
+        85,
+        87
+      ],
+      "name": "SendOptions",
+      "partial_analysis": false,
+      "value": "undefined> = [TState] extends [undefined]\r\n  ? BaseSendOptions\r\n  : BaseSendOptions & { state: TState };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:GetSessionFn",
+      "kind": "type_alias",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "GetSessionFn",
+      "partial_analysis": false,
+      "value": "(sessionId: string) => Session;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:CancelOptions:continuationToken",
+          "kind": "property",
+          "line_range": [
+            101,
+            101
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:CancelOptions:turnId",
+          "kind": "property",
+          "line_range": [
+            102,
+            102
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:CancelOptions",
+      "kind": "interface",
+      "line_range": [
+        100,
+        103
+      ],
+      "name": "CancelOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:CancelFn",
+      "kind": "type_alias",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "CancelFn",
+      "partial_analysis": false,
+      "value": "(options: CancelOptions) => Promise<CancelTurnResult>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:RouteHandler",
+      "kind": "type_alias",
+      "line_range": [
+        116,
+        119
+      ],
+      "name": "RouteHandler",
+      "partial_analysis": false,
+      "value": "undefined> = (\r\n  req: Request,\r\n  args: RouteHandlerArgs<TState>,\r\n) => Promise<Response>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketPeer:id",
+          "kind": "property",
+          "line_range": [
+            128,
+            128
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketPeer:context",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "context",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketPeer:namespace",
+          "kind": "property",
+          "line_range": [
+            130,
+            130
+          ],
+          "name": "namespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketPeer:request",
+          "kind": "property",
+          "line_range": [
+            131,
+            131
+          ],
+          "name": "request",
+          "partial_analysis": false,
+          "return_type": ": Request",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketPeer:remoteAddress",
+          "kind": "property",
+          "line_range": [
+            132,
+            132
+          ],
+          "name": "remoteAddress",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketPeer:topics",
+          "kind": "property",
+          "line_range": [
+            133,
+            133
+          ],
+          "name": "topics",
+          "partial_analysis": false,
+          "return_type": ": Set<string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketPeer",
+      "kind": "interface",
+      "line_range": [
+        127,
+        140
+      ],
+      "name": "WebSocketPeer",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketMessage:data",
+          "kind": "property",
+          "line_range": [
+            148,
+            148
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketMessage:id",
+          "kind": "property",
+          "line_range": [
+            149,
+            149
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketMessage:rawData",
+          "kind": "property",
+          "line_range": [
+            150,
+            150
+          ],
+          "name": "rawData",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketMessage",
+      "kind": "interface",
+      "line_range": [
+        147,
+        156
+      ],
+      "name": "WebSocketMessage",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketUpgradeRequest:context",
+          "kind": "property",
+          "line_range": [
+            163,
+            163
+          ],
+          "name": "context",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketUpgradeRequest",
+      "kind": "interface",
+      "line_range": [
+        162,
+        164
+      ],
+      "name": "WebSocketUpgradeRequest",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketUpgradeResult",
+      "kind": "type_alias",
+      "line_range": [
+        171,
+        179
+      ],
+      "name": "WebSocketUpgradeResult",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly context?: Record<string, unknown>;\r\n      readonly handled?: boolean;\r\n      readonly headers?: WebSocketHeaders;\r\n      readonly namespace?: string;\r\n    }\r\n  | Response\r\n  | void;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketRouteHooks",
+      "kind": "interface",
+      "line_range": [
+        186,
+        194
+      ],
+      "name": "WebSocketRouteHooks",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketRouteHandler",
+      "kind": "type_alias",
+      "line_range": [
+        200,
+        203
+      ],
+      "name": "WebSocketRouteHandler",
+      "partial_analysis": false,
+      "value": "undefined> = (\r\n  req: Request,\r\n  args: RouteHandlerArgs<TState>,\r\n) => Promise<WebSocketRouteHooks> | WebSocketRouteHooks;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:HttpRouteDefinition:transport",
+          "kind": "property",
+          "line_range": [
+            211,
+            211
+          ],
+          "name": "transport",
+          "partial_analysis": false,
+          "return_type": ": \"http\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:HttpRouteDefinition:method",
+          "kind": "property",
+          "line_range": [
+            212,
+            212
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": ChannelMethod",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:HttpRouteDefinition:path",
+          "kind": "property",
+          "line_range": [
+            213,
+            213
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:HttpRouteDefinition:handler",
+          "kind": "property",
+          "line_range": [
+            214,
+            214
+          ],
+          "name": "handler",
+          "partial_analysis": false,
+          "return_type": ": RouteHandler<TState>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:HttpRouteDefinition",
+      "kind": "interface",
+      "line_range": [
+        210,
+        215
+      ],
+      "name": "HttpRouteDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketRouteDefinition:transport",
+          "kind": "property",
+          "line_range": [
+            222,
+            222
+          ],
+          "name": "transport",
+          "partial_analysis": false,
+          "return_type": ": \"websocket\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketRouteDefinition:method",
+          "kind": "property",
+          "line_range": [
+            223,
+            223
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": \"WEBSOCKET\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketRouteDefinition:path",
+          "kind": "property",
+          "line_range": [
+            224,
+            224
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/routes.ts:WebSocketRouteDefinition:handler",
+          "kind": "property",
+          "line_range": [
+            225,
+            225
+          ],
+          "name": "handler",
+          "partial_analysis": false,
+          "return_type": ": WebSocketRouteHandler<TState>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/routes.ts:WebSocketRouteDefinition",
+      "kind": "interface",
+      "line_range": [
+        221,
+        226
+      ],
+      "name": "WebSocketRouteDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:RouteDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        234,
+        236
+      ],
+      "name": "RouteDefinition",
+      "partial_analysis": false,
+      "value": "undefined> =\r\n  | HttpRouteDefinition<TState>\r\n  | WebSocketRouteDefinition<TState>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:GET",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        242,
+        247
+      ],
+      "name": "GET",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function GET(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:POST",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        253,
+        258
+      ],
+      "name": "POST",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function POST(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:PUT",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        264,
+        269
+      ],
+      "name": "PUT",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function PUT(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:PATCH",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        275,
+        280
+      ],
+      "name": "PATCH",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function PATCH(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:DELETE",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        286,
+        291
+      ],
+      "name": "DELETE",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function DELETE(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:WS",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        300,
+        305
+      ],
+      "name": "WS",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "WebSocketRouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WebSocketRouteDefinition<TState>",
+      "signature": "export function WS(path: string, handler: WebSocketRouteHandler<TState>) -> WebSocketRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:isHttpRouteDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        307,
+        311
+      ],
+      "name": "isHttpRouteDefinition",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "RouteDefinition<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "route is HttpRouteDefinition<TState>",
+      "signature": "export function isHttpRouteDefinition(route: RouteDefinition<TState>) -> route is HttpRouteDefinition<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/routes.ts:isWebSocketRouteDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        313,
+        317
+      ],
+      "name": "isWebSocketRouteDefinition",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "RouteDefinition<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "route is WebSocketRouteDefinition<TState>",
+      "signature": "export function isWebSocketRouteDefinition(route: RouteDefinition<TState>) -> route is WebSocketRouteDefinition<TState>",
+      "visibility": "Public"
+    }
+  ]
+}

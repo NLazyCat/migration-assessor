@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        32
+      ],
+      "name": "resolveRemainingSessionTokenLimits",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "Pick<HarnessSession, \"limits\" | \"state\">"
+        },
+        {
+          "name": "fanoutSize",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RunSessionLimits",
+      "signature": "export function resolveRemainingSessionTokenLimits(session: Pick<HarnessSession, \"limits\" | \"state\">, fanoutSize: unknown) -> RunSessionLimits"
+    }
+  ],
+  "module": "packages/eve/src/harness/subagent-token-budget.ts"
+}

@@ -1,0 +1,84 @@
+{
+  "module": "packages/eve/src/shared/json-schemas.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json-schemas.ts:JSON_VALUE_ERROR_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "JSON_VALUE_ERROR_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json-schemas.ts:JSON_OBJECT_ERROR_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "JSON_OBJECT_ERROR_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json-schemas.ts:jsonValueSchema",
+      "kind": "variable",
+      "line_range": [
+        11,
+        23
+      ],
+      "name": "jsonValueSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json-schemas.ts:jsonObjectSchema",
+      "kind": "variable",
+      "line_range": [
+        28,
+        40
+      ],
+      "name": "jsonObjectSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json-schemas.ts:formatJsonParseError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        44
+      ],
+      "name": "formatJsonParseError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "fallback",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatJsonParseError(error: unknown, fallback: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

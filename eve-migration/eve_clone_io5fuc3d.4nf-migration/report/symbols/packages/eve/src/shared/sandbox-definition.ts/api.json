@@ -1,0 +1,196 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "O"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        13
+      ],
+      "name": "SandboxBootstrapUseFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxBootstrapUseFn = Record<string, never>> = (\r\n  options?: O,\r\n) => Promise<SandboxSession>;"
+    },
+    {
+      "generics": [
+        "O"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        23
+      ],
+      "name": "SandboxSessionUseFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxSessionUseFn = Record<string, never>> = (\r\n  options?: O,\r\n) => Promise<SandboxSession>;"
+    },
+    {
+      "generics": [
+        "O"
+      ],
+      "kind": "interface",
+      "line_range": [
+        31,
+        33
+      ],
+      "name": "SandboxBootstrapContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBootstrapContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "use",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxBootstrapUseFn<O>",
+      "signature": "use: : SandboxBootstrapUseFn<O>"
+    },
+    {
+      "generics": [
+        "O"
+      ],
+      "kind": "interface",
+      "line_range": [
+        41,
+        44
+      ],
+      "name": "SandboxSessionContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxSessionContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "ctx",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionContext",
+      "signature": "ctx: : SessionContext"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "use",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSessionUseFn<O>",
+      "signature": "use: : SandboxSessionUseFn<O>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "SandboxRevalidationKeyFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxRevalidationKeyFn = () => Promise<string> | string;"
+    },
+    {
+      "generics": [
+        "BO",
+        "SO"
+      ],
+      "kind": "interface",
+      "line_range": [
+        104,
+        119
+      ],
+      "name": "SandboxDefinitionWithBootstrap",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxDefinitionWithBootstrap { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        118,
+        118
+      ],
+      "name": "revalidationKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxRevalidationKeyFn",
+      "signature": "revalidationKey?: : SandboxRevalidationKeyFn"
+    },
+    {
+      "generics": [
+        "BO",
+        "SO"
+      ],
+      "kind": "interface",
+      "line_range": [
+        121,
+        127
+      ],
+      "name": "SandboxDefinitionWithoutBootstrap",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxDefinitionWithoutBootstrap { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "bootstrap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": undefined",
+      "signature": "bootstrap?: : undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        126,
+        126
+      ],
+      "name": "revalidationKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": never",
+      "signature": "revalidationKey?: : never"
+    },
+    {
+      "generics": [
+        "BO",
+        "SO"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        129,
+        131
+      ],
+      "name": "SandboxDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxDefinition = Record<string, never>, SO = Record<string, never>> =\r\n  | SandboxDefinitionWithBootstrap<BO, SO>\r\n  | SandboxDefinitionWithoutBootstrap<BO, SO>;"
+    }
+  ],
+  "module": "packages/eve/src/shared/sandbox-definition.ts"
+}

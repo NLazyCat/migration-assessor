@@ -1,0 +1,118 @@
+{
+  "module": "packages/eve/src/setup/flows/link.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps:detectProjectIdentity",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "detectProjectIdentity",
+          "partial_analysis": false,
+          "return_type": ": typeof detectProjectIdentity",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps:findEnvFileWithKey",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "findEnvFileWithKey",
+          "partial_analysis": false,
+          "return_type": ": typeof findEnvFileWithKey",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps:resolveProvisioning",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "resolveProvisioning",
+          "partial_analysis": false,
+          "return_type": ": ResolveProvisioningDeps",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps:linkProject",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "linkProject",
+          "partial_analysis": false,
+          "return_type": ": LinkProjectDeps",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps:applyAiGatewayCredential",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "applyAiGatewayCredential",
+          "partial_analysis": false,
+          "return_type": ": ApplyAiGatewayCredentialDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps",
+      "kind": "interface",
+      "line_range": [
+        24,
+        30
+      ],
+      "name": "LinkFlowDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/link.ts:LinkFlowResult",
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        38
+      ],
+      "name": "LinkFlowResult",
+      "partial_analysis": false,
+      "value": "| {\r\n      kind: \"done\";\r\n      /** The model credential verified in an env file, when one landed. */\r\n      credential?: \"VERCEL_OIDC_TOKEN\" | typeof AI_GATEWAY_API_KEY_ENV_VAR;\r\n    }\r\n  | { kind: \"cancelled\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/link.ts:runLinkFlow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        57,
+        174
+      ],
+      "name": "runLinkFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /**\r\n   * Whether the caller may only link an existing project (`eve link`, the\r\n   * default) or may also create one (the `/model` \"Connect via a project\"\r\n   * branch, where a fresh agent has no project yet).\r\n   */\r\n  projectSelection?: \"create-or-link\" | \"existing-only\";\r\n  teamSelectMessage?: (currentTeam: string) => string;\r\n  deps?: Partial<LinkFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<LinkFlowResult>",
+      "signature": "export function runLinkFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /**\r\n   * Whether the caller may only link an existing project (`eve link`, the\r\n   * default) or may also create one (the `/model` \"Connect via a project\"\r\n   * branch, where a fresh agent has no project yet).\r\n   */\r\n  projectSelection?: \"create-or-link\" | \"existing-only\";\r\n  teamSelectMessage?: (currentTeam: string) => string;\r\n  deps?: Partial<LinkFlowDeps>;\r\n}) -> Promise<LinkFlowResult>",
+      "visibility": "Public"
+    }
+  ]
+}

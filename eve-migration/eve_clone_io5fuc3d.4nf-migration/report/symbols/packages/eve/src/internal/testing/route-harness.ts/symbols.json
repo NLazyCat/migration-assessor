@@ -1,0 +1,156 @@
+{
+  "module": "packages/eve/src/internal/testing/route-harness.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/route-harness.ts:MockAgent:cancelTurn",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "cancelTurn",
+          "partial_analysis": false,
+          "return_type": ": Mock",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/route-harness.ts:MockAgent:run",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "run",
+          "partial_analysis": false,
+          "return_type": ": Mock",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/route-harness.ts:MockAgent:deliver",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "deliver",
+          "partial_analysis": false,
+          "return_type": ": Mock",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/route-harness.ts:MockAgent:getEventStream",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "getEventStream",
+          "partial_analysis": false,
+          "return_type": ": Mock",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/route-harness.ts:MockAgent",
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "MockAgent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/route-harness.ts:createMockAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        48
+      ],
+      "name": "createMockAgent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "MockAgent",
+      "signature": "export function createMockAgent() -> MockAgent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/route-harness.ts:createRouteContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        66
+      ],
+      "name": "createRouteContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agent: Agent;\r\n  readonly params?: Readonly<Record<string, string>>;\r\n  readonly requestIp?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RouteContext",
+      "signature": "export function createRouteContext(input: {\r\n  readonly agent: Agent;\r\n  readonly params?: Readonly<Record<string, string>>;\r\n  readonly requestIp?: string;\r\n}) -> RouteContext",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/route-harness.ts:HTTP_CREATE_ROUTE_URL",
+      "kind": "variable",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "HTTP_CREATE_ROUTE_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/route-harness.ts:HTTP_CONTINUE_ROUTE_URL",
+      "kind": "variable",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "HTTP_CONTINUE_ROUTE_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/route-harness.ts:createJsonMessageRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        78,
+        84
+      ],
+      "name": "createJsonMessageRequest",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function createJsonMessageRequest(body: unknown) -> Request",
+      "visibility": "Public"
+    }
+  ]
+}

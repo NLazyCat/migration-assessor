@@ -1,0 +1,93 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel-lookup.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-lookup.ts:getNamedVercelSandbox",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        12,
+        31
+      ],
+      "name": "getNamedVercelSandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly createOptions: VercelCreateOptions;\r\n  readonly sandboxModule: VercelModule;\r\n  readonly sandboxName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelSandbox | null>",
+      "signature": "export function getNamedVercelSandbox(input: {\r\n  readonly createOptions: VercelCreateOptions;\r\n  readonly sandboxModule: VercelModule;\r\n  readonly sandboxName: string;\r\n}) -> Promise<VercelSandbox | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-lookup.ts:getVercelSandboxGetOptions",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        33,
+        53
+      ],
+      "name": "getVercelSandboxGetOptions",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly createOptions: VercelCreateOptions;\r\n  readonly sandboxName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelGetOptions>",
+      "signature": "export function getVercelSandboxGetOptions(input: {\r\n  readonly createOptions: VercelCreateOptions;\r\n  readonly sandboxName: string;\r\n}) -> Promise<VercelGetOptions>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-lookup.ts:isSandboxMissingError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        65
+      ],
+      "name": "isSandboxMissingError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isSandboxMissingError(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-lookup.ts:errorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        83
+      ],
+      "name": "errorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function errorMessage(error: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

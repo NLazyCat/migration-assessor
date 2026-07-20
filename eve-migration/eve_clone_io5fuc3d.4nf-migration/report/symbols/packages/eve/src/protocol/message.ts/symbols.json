@@ -1,0 +1,2565 @@
+{
+  "module": "packages/eve/src/protocol/message.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:EVE_SESSION_ID_HEADER",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "EVE_SESSION_ID_HEADER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:EVE_STREAM_FORMAT_HEADER",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "EVE_STREAM_FORMAT_HEADER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:EVE_STREAM_VERSION_HEADER",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "EVE_STREAM_VERSION_HEADER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:EVE_MESSAGE_STREAM_CONTENT_TYPE",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "EVE_MESSAGE_STREAM_CONTENT_TYPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:EVE_MESSAGE_STREAM_FORMAT",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "EVE_MESSAGE_STREAM_FORMAT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:EVE_MESSAGE_STREAM_VERSION",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "EVE_MESSAGE_STREAM_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:AssistantStepFinishReason",
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        35
+      ],
+      "name": "AssistantStepFinishReason",
+      "partial_analysis": false,
+      "value": "| \"content-filter\"\r\n  | \"error\"\r\n  | \"length\"\r\n  | \"other\"\r\n  | \"stop\"\r\n  | \"tool-calls\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:ProviderMetadataEntry",
+      "kind": "type_alias",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "ProviderMetadataEntry",
+      "partial_analysis": false,
+      "value": "NonNullable<ProviderMetadata[string]>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:GatewayGenerationId",
+      "kind": "type_alias",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "GatewayGenerationId",
+      "partial_analysis": false,
+      "value": "Extract<ProviderMetadataEntry[\"generationId\"], string>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepCompletedProviderMetadata:gateway",
+          "kind": "property",
+          "line_range": [
+            41,
+            43
+          ],
+          "name": "gateway",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly generationId: GatewayGenerationId;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:StepCompletedProviderMetadata",
+      "kind": "interface",
+      "line_range": [
+        40,
+        44
+      ],
+      "name": "StepCompletedProviderMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:HandleMessageStreamEventMeta:at",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "at",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:HandleMessageStreamEventMeta",
+      "kind": "interface",
+      "line_range": [
+        52,
+        54
+      ],
+      "name": "HandleMessageStreamEventMeta",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:ActionResultStatus",
+      "kind": "type_alias",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "ActionResultStatus",
+      "partial_analysis": false,
+      "value": "\"completed\" | \"failed\" | \"rejected\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ActionResultError:code",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ActionResultError:message",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:ActionResultError",
+      "kind": "interface",
+      "line_range": [
+        71,
+        74
+      ],
+      "name": "ActionResultError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentSessionInvocationMetadata:kind",
+          "kind": "property",
+          "line_range": [
+            81,
+            81
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"subagent\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentSessionInvocationMetadata:parentCallId",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "parentCallId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentSessionInvocationMetadata:parentSessionId",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "parentSessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentSessionInvocationMetadata:parentTurnId",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "parentTurnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentSessionInvocationMetadata:name",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SubagentSessionInvocationMetadata",
+      "kind": "interface",
+      "line_range": [
+        80,
+        86
+      ],
+      "name": "SubagentSessionInvocationMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:RuntimeIdentity:agentId",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "agentId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:RuntimeIdentity:agentName",
+          "kind": "property",
+          "line_range": [
+            97,
+            97
+          ],
+          "name": "agentName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:RuntimeIdentity:eveVersion",
+          "kind": "property",
+          "line_range": [
+            98,
+            98
+          ],
+          "name": "eveVersion",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:RuntimeIdentity:build",
+          "kind": "property",
+          "line_range": [
+            99,
+            103
+          ],
+          "name": "build",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly deployedAt?: string;\r\n    readonly gitBranch?: string;\r\n    readonly gitSha?: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:RuntimeIdentity:modelId",
+          "kind": "property",
+          "line_range": [
+            105,
+            105
+          ],
+          "name": "modelId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:RuntimeIdentity",
+      "kind": "interface",
+      "line_range": [
+        95,
+        106
+      ],
+      "name": "RuntimeIdentity",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:HandleMessageRequestBody",
+      "kind": "type_alias",
+      "line_range": [
+        117,
+        141
+      ],
+      "name": "HandleMessageRequestBody",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly message: string | UserContent;\r\n      readonly clientContext?: string | readonly string[] | JsonObject;\r\n      readonly outputSchema?: JsonObject;\r\n    }\r\n  | {\r\n      readonly continuationToken: string;\r\n      readonly message: string | UserContent;\r\n      readonly clientContext?: string | readonly string[] | JsonObject;\r\n      readonly outputSchema?: JsonObject;\r\n    }\r\n  | {\r\n      readonly continuationToken: string;\r\n      readonly inputResponses: readonly InputResponse[];\r\n      readonly clientContext?: string | readonly string[] | JsonObject;\r\n      readonly outputSchema?: JsonObject;\r\n    }\r\n  | {\r\n      readonly continuationToken: string;\r\n      readonly inputResponses: readonly InputResponse[];\r\n      readonly message: string | UserContent;\r\n      readonly clientContext?: string | readonly string[] | JsonObject;\r\n      readonly outputSchema?: JsonObject;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionStartedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            147,
+            150
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    invocation?: SubagentSessionInvocationMetadata;\r\n    runtime?: RuntimeIdentity;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionStartedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            151,
+            151
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"session.started\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SessionStartedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        146,
+        152
+      ],
+      "name": "SessionStartedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnStartedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            158,
+            161
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    sequence: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnStartedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            162,
+            162
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"turn.started\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:TurnStartedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        157,
+        163
+      ],
+      "name": "TurnStartedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:MessageReceivedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            173,
+            178
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    message: string;\r\n    parts?: readonly MessageReceivedPart[];\r\n    sequence: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:MessageReceivedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            179,
+            179
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"message.received\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:MessageReceivedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        172,
+        180
+      ],
+      "name": "MessageReceivedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:MessageReceivedPart",
+      "kind": "type_alias",
+      "line_range": [
+        190,
+        195
+      ],
+      "name": "MessageReceivedPart",
+      "partial_analysis": false,
+      "value": "| Readonly<Pick<TextUIPart, \"text\" | \"type\">>\r\n  | (Readonly<Pick<FileUIPart, \"filename\" | \"mediaType\" | \"type\">> & {\r\n      readonly size?: number;\r\n      readonly url?: FileUIPart[\"url\"];\r\n    });",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ActionsRequestedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            206,
+            211
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    actions: readonly RuntimeActionRequest[];\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ActionsRequestedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            212,
+            212
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"actions.requested\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:ActionsRequestedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        205,
+        213
+      ],
+      "name": "ActionsRequestedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:InputRequestedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            220,
+            225
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    requests: readonly InputRequest[];\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:InputRequestedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            226,
+            226
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"input.requested\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:InputRequestedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        219,
+        227
+      ],
+      "name": "InputRequestedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ActionResultStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            234,
+            241
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    error?: ActionResultError;\r\n    result: RuntimeActionResult;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    status: ActionResultStatus;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ActionResultStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            242,
+            242
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"action.result\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:ActionResultStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        233,
+        243
+      ],
+      "name": "ActionResultStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentCalledStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            249,
+            261
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    callId: string;\r\n    childSessionId: string;\r\n    sessionId: string;\r\n    sequence: number;\r\n    name: string;\r\n    remote?: {\r\n      url: string;\r\n    };\r\n    toolName: string;\r\n    turnId: string;\r\n    workflowId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentCalledStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            262,
+            262
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"subagent.called\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SubagentCalledStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        248,
+        263
+      ],
+      "name": "SubagentCalledStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentStartedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            269,
+            272
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    callId: string;\r\n    subagentName: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentStartedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            273,
+            273
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"subagent.started\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SubagentStartedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        268,
+        274
+      ],
+      "name": "SubagentStartedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentChildEventStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            282,
+            286
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    callId: string;\r\n    event: HandleMessageStreamEvent;\r\n    subagentName: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentChildEventStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            287,
+            287
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"subagent.event\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SubagentChildEventStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        281,
+        288
+      ],
+      "name": "SubagentChildEventStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            294,
+            298
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    callId: string;\r\n    output: string;\r\n    subagentName: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SubagentCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            299,
+            299
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"subagent.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SubagentCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        293,
+        300
+      ],
+      "name": "SubagentCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:MessageAppendedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            307,
+            313
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    messageDelta: string;\r\n    messageSoFar: string;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:MessageAppendedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            314,
+            314
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"message.appended\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:MessageAppendedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        306,
+        315
+      ],
+      "name": "MessageAppendedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ReasoningAppendedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            322,
+            328
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    reasoningDelta: string;\r\n    reasoningSoFar: string;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ReasoningAppendedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            329,
+            329
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"reasoning.appended\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:ReasoningAppendedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        321,
+        330
+      ],
+      "name": "ReasoningAppendedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:MessageCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            341,
+            347
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    finishReason: AssistantStepFinishReason;\r\n    message: string | null;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:MessageCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            348,
+            348
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"message.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:MessageCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        340,
+        349
+      ],
+      "name": "MessageCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ReasoningCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            356,
+            361
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    reasoning: string;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ReasoningCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            362,
+            362
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"reasoning.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:ReasoningCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        355,
+        363
+      ],
+      "name": "ReasoningCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ResultCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            370,
+            375
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    result: JsonValue;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:ResultCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            376,
+            376
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"result.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:ResultCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        369,
+        377
+      ],
+      "name": "ResultCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepStartedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            383,
+            387
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepStartedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            388,
+            388
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"step.started\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:StepStartedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        382,
+        389
+      ],
+      "name": "StepStartedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            395,
+            408
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    finishReason: AssistantStepFinishReason;\r\n    providerMetadata?: StepCompletedProviderMetadata;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n    usage?: {\r\n      readonly costUsd?: number;\r\n      readonly inputTokens?: number;\r\n      readonly outputTokens?: number;\r\n      readonly cacheReadTokens?: number;\r\n      readonly cacheWriteTokens?: number;\r\n    };\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            409,
+            409
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"step.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:StepCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        394,
+        410
+      ],
+      "name": "StepCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepFailedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            416,
+            423
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    code: string;\r\n    details?: JsonObject;\r\n    message: string;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:StepFailedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            424,
+            424
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"step.failed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:StepFailedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        415,
+        425
+      ],
+      "name": "StepFailedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            431,
+            434
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    sequence: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            435,
+            435
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"turn.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:TurnCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        430,
+        436
+      ],
+      "name": "TurnCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnFailedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            442,
+            448
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    code: string;\r\n    details?: JsonObject;\r\n    message: string;\r\n    sequence: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnFailedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            449,
+            449
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"turn.failed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:TurnFailedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        441,
+        450
+      ],
+      "name": "TurnFailedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnCancelledStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            459,
+            462
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    sequence: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:TurnCancelledStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            463,
+            463
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"turn.cancelled\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:TurnCancelledStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        458,
+        464
+      ],
+      "name": "TurnCancelledStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:CompactionRequestedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            471,
+            477
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    modelId: string;\r\n    sequence: number;\r\n    sessionId: string;\r\n    turnId: string;\r\n    usageInputTokens: number | null;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:CompactionRequestedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            478,
+            478
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"compaction.requested\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:CompactionRequestedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        470,
+        479
+      ],
+      "name": "CompactionRequestedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:CompactionCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            486,
+            491
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    modelId: string;\r\n    sequence: number;\r\n    sessionId: string;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:CompactionCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            492,
+            492
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"compaction.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:CompactionCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        485,
+        493
+      ],
+      "name": "CompactionCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:AuthorizationRequiredStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            500,
+            508
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    authorization?: ConnectionAuthorizationChallenge;\r\n    description: string;\r\n    name: string;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n    webhookUrl?: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:AuthorizationRequiredStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            509,
+            509
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"authorization.required\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:AuthorizationRequiredStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        499,
+        510
+      ],
+      "name": "AuthorizationRequiredStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:AuthorizationOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        516,
+        516
+      ],
+      "name": "AuthorizationOutcome",
+      "partial_analysis": false,
+      "value": "\"authorized\" | \"declined\" | \"failed\" | \"timed-out\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:ConnectionAuthorizationOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        521,
+        521
+      ],
+      "name": "ConnectionAuthorizationOutcome",
+      "partial_analysis": false,
+      "value": "AuthorizationOutcome;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:AuthorizationCompletedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            532,
+            545
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    /**\r\n     * The challenge from the matching `authorization.required` event,\r\n     * journaled across the park. Lets channels keep rendering the\r\n     * challenge's `displayName` in completion status text.\r\n     */\r\n    authorization?: ConnectionAuthorizationChallenge;\r\n    name: string;\r\n    outcome: AuthorizationOutcome;\r\n    reason?: string;\r\n    sequence: number;\r\n    stepIndex: number;\r\n    turnId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:AuthorizationCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            546,
+            546
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"authorization.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:AuthorizationCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        531,
+        547
+      ],
+      "name": "AuthorizationCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionWaitingStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            554,
+            558
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    /** Channel-owned resume handle for the next user turn. */\r\n    continuationToken: string;\r\n    wait: \"next-user-message\";\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionWaitingStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            559,
+            559
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"session.waiting\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SessionWaitingStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        553,
+        560
+      ],
+      "name": "SessionWaitingStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionFailedStreamEvent:data",
+          "kind": "property",
+          "line_range": [
+            566,
+            571
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    code: string;\r\n    details?: JsonObject;\r\n    message: string;\r\n    sessionId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionFailedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            572,
+            572
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"session.failed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SessionFailedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        565,
+        573
+      ],
+      "name": "SessionFailedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/protocol/message.ts:SessionCompletedStreamEvent:type",
+          "kind": "property",
+          "line_range": [
+            579,
+            579
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"session.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/protocol/message.ts:SessionCompletedStreamEvent",
+      "kind": "interface",
+      "line_range": [
+        578,
+        580
+      ],
+      "name": "SessionCompletedStreamEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:HandleMessageStreamEvent",
+      "kind": "type_alias",
+      "line_range": [
+        585,
+        616
+      ],
+      "name": "HandleMessageStreamEvent",
+      "partial_analysis": false,
+      "value": "(\r\n  | CompactionCompletedStreamEvent\r\n  | CompactionRequestedStreamEvent\r\n  | AuthorizationCompletedStreamEvent\r\n  | AuthorizationRequiredStreamEvent\r\n  | MessageAppendedStreamEvent\r\n  | MessageCompletedStreamEvent\r\n  | MessageReceivedStreamEvent\r\n  | ReasoningAppendedStreamEvent\r\n  | SessionCompletedStreamEvent\r\n  | SessionFailedStreamEvent\r\n  | SessionStartedStreamEvent\r\n  | SessionWaitingStreamEvent\r\n  | ResultCompletedStreamEvent\r\n  | SubagentCalledStreamEvent\r\n  | SubagentChildEventStreamEvent\r\n  | SubagentCompletedStreamEvent\r\n  | SubagentStartedStreamEvent\r\n  | ActionsRequestedStreamEvent\r\n  | InputRequestedStreamEvent\r\n  | ActionResultStreamEvent\r\n  | ReasoningCompletedStreamEvent\r\n  | StepCompletedStreamEvent\r\n  | StepFailedStreamEvent\r\n  | StepStartedStreamEvent\r\n  | TurnCancelledStreamEvent\r\n  | TurnCompletedStreamEvent\r\n  | TurnFailedStreamEvent\r\n  | TurnStartedStreamEvent\r\n) & {\r\n  readonly meta?: HandleMessageStreamEventMeta;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:TurnFailureStreamEvent",
+      "kind": "type_alias",
+      "line_range": [
+        621,
+        624
+      ],
+      "name": "TurnFailureStreamEvent",
+      "partial_analysis": false,
+      "value": "| SessionFailedStreamEvent\r\n  | StepFailedStreamEvent\r\n  | TurnFailedStreamEvent;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:TimedHandleMessageStreamEvent",
+      "kind": "type_alias",
+      "line_range": [
+        632,
+        634
+      ],
+      "name": "TimedHandleMessageStreamEvent",
+      "partial_analysis": false,
+      "value": "HandleMessageStreamEvent & {\r\n  readonly meta: HandleMessageStreamEventMeta;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:textEncoder",
+      "kind": "variable",
+      "line_range": [
+        636,
+        636
+      ],
+      "name": "textEncoder",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:isCurrentTurnBoundaryEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        642,
+        648
+      ],
+      "name": "isCurrentTurnBoundaryEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isCurrentTurnBoundaryEvent(event: HandleMessageStreamEvent) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:isTurnFailureEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        653,
+        659
+      ],
+      "name": "isTurnFailureEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "event is TurnFailureStreamEvent",
+      "signature": "export function isTurnFailureEvent(event: HandleMessageStreamEvent) -> event is TurnFailureStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createSessionStartedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        664,
+        682
+      ],
+      "name": "createSessionStartedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": true,
+          "type": "{\r\n  readonly invocation?: SubagentSessionInvocationMetadata;\r\n  readonly runtime?: RuntimeIdentity;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionStartedStreamEvent",
+      "signature": "export function createSessionStartedEvent(input: {\r\n  readonly invocation?: SubagentSessionInvocationMetadata;\r\n  readonly runtime?: RuntimeIdentity;\r\n}) -> SessionStartedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createTurnStartedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        687,
+        698
+      ],
+      "name": "createTurnStartedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnStartedStreamEvent",
+      "signature": "export function createTurnStartedEvent(input: {\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}) -> TurnStartedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createMessageReceivedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        709,
+        723
+      ],
+      "name": "createMessageReceivedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly message: string | UserContent;\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MessageReceivedStreamEvent",
+      "signature": "export function createMessageReceivedEvent(input: {\r\n  readonly message: string | UserContent;\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}) -> MessageReceivedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:summarizeUserContent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        725,
+        742
+      ],
+      "name": "summarizeUserContent",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string | UserContent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function summarizeUserContent(message: string | UserContent) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:PROJECTED_PART_FALLBACK_MEDIA_TYPE",
+      "kind": "variable",
+      "line_range": [
+        744,
+        744
+      ],
+      "name": "PROJECTED_PART_FALLBACK_MEDIA_TYPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:projectUserContentParts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        746,
+        768
+      ],
+      "name": "projectUserContentParts",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string | UserContent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly MessageReceivedPart[]",
+      "signature": "export function projectUserContentParts(message: string | UserContent) -> readonly MessageReceivedPart[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:projectFileLikePart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        770,
+        795
+      ],
+      "name": "projectFileLikePart",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "mediaType",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MessageReceivedPart",
+      "signature": "export function projectFileLikePart(data: unknown, mediaType: string, filename: string | undefined) -> MessageReceivedPart",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:projectTaggedFileData",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        797,
+        819
+      ],
+      "name": "projectTaggedFileData",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "mediaType",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MessageReceivedPart | undefined",
+      "signature": "export function projectTaggedFileData(data: unknown, mediaType: string, filename: string | undefined) -> MessageReceivedPart | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createProjectedFilePart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        821,
+        847
+      ],
+      "name": "createProjectedFilePart",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly filename?: string;\r\n  readonly mediaType: string;\r\n  readonly size?: number;\r\n  readonly url?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MessageReceivedPart",
+      "signature": "export function createProjectedFilePart(input: {\r\n  readonly filename?: string;\r\n  readonly mediaType: string;\r\n  readonly size?: number;\r\n  readonly url?: string;\r\n}) -> MessageReceivedPart",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:isTaggedFileData",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        849,
+        861
+      ],
+      "name": "isTaggedFileData",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "data is\r\n  | { readonly type: \"data\"; readonly data: unknown }\r\n  | { readonly type: \"reference\"; readonly reference: unknown }\r\n  | { readonly type: \"text\"; readonly text: unknown }\r\n  | { readonly type: \"url\"; readonly url: unknown }",
+      "signature": "export function isTaggedFileData(data: unknown) -> data is\r\n  | { readonly type: \"data\"; readonly data: unknown }\r\n  | { readonly type: \"reference\"; readonly reference: unknown }\r\n  | { readonly type: \"text\"; readonly text: unknown }\r\n  | { readonly type: \"url\"; readonly url: unknown }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:byteLengthOf",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        863,
+        868
+      ],
+      "name": "byteLengthOf",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function byteLengthOf(data: unknown) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:clientUrlFragment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        870,
+        898
+      ],
+      "name": "clientUrlFragment",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly url?: string }",
+      "signature": "export function clientUrlFragment(data: unknown) -> { readonly url?: string }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:isClientResolvableUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        900,
+        902
+      ],
+      "name": "isClientResolvableUrl",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "URL"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isClientResolvableUrl(url: URL) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:basenameOf",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        904,
+        908
+      ],
+      "name": "basenameOf",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function basenameOf(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createActionsRequestedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        914,
+        929
+      ],
+      "name": "createActionsRequestedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly actions: readonly RuntimeActionRequest[];\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActionsRequestedStreamEvent",
+      "signature": "export function createActionsRequestedEvent(input: {\r\n  readonly actions: readonly RuntimeActionRequest[];\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> ActionsRequestedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createAuthorizationRequiredEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        939,
+        965
+      ],
+      "name": "createAuthorizationRequiredEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authorization?: ConnectionAuthorizationChallenge;\r\n  readonly description: string;\r\n  readonly name: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n  readonly webhookUrl?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthorizationRequiredStreamEvent",
+      "signature": "export function createAuthorizationRequiredEvent(input: {\r\n  readonly authorization?: ConnectionAuthorizationChallenge;\r\n  readonly description: string;\r\n  readonly name: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n  readonly webhookUrl?: string;\r\n}) -> AuthorizationRequiredStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createAuthorizationCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        972,
+        998
+      ],
+      "name": "createAuthorizationCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authorization?: ConnectionAuthorizationChallenge;\r\n  readonly name: string;\r\n  readonly outcome: AuthorizationOutcome;\r\n  readonly reason?: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthorizationCompletedStreamEvent",
+      "signature": "export function createAuthorizationCompletedEvent(input: {\r\n  readonly authorization?: ConnectionAuthorizationChallenge;\r\n  readonly name: string;\r\n  readonly outcome: AuthorizationOutcome;\r\n  readonly reason?: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> AuthorizationCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createInputRequestedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1003,
+        1018
+      ],
+      "name": "createInputRequestedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly requests: readonly InputRequest[];\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InputRequestedStreamEvent",
+      "signature": "export function createInputRequestedEvent(input: {\r\n  readonly requests: readonly InputRequest[];\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> InputRequestedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createActionResultEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1027,
+        1050
+      ],
+      "name": "createActionResultEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly rejected?: boolean;\r\n  readonly result: RuntimeActionResult;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActionResultStreamEvent",
+      "signature": "export function createActionResultEvent(input: {\r\n  readonly rejected?: boolean;\r\n  readonly result: RuntimeActionResult;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> ActionResultStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createSubagentCalledEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1055,
+        1082
+      ],
+      "name": "createSubagentCalledEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callId: string;\r\n  readonly childSessionId: string;\r\n  readonly sessionId: string;\r\n  readonly sequence: number;\r\n  readonly name: string;\r\n  readonly remote?: {\r\n    readonly url: string;\r\n  };\r\n  readonly toolName: string;\r\n  readonly turnId: string;\r\n  readonly workflowId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SubagentCalledStreamEvent",
+      "signature": "export function createSubagentCalledEvent(input: {\r\n  readonly callId: string;\r\n  readonly childSessionId: string;\r\n  readonly sessionId: string;\r\n  readonly sequence: number;\r\n  readonly name: string;\r\n  readonly remote?: {\r\n    readonly url: string;\r\n  };\r\n  readonly toolName: string;\r\n  readonly turnId: string;\r\n  readonly workflowId: string;\r\n}) -> SubagentCalledStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createMessageAppendedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1087,
+        1104
+      ],
+      "name": "createMessageAppendedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly messageDelta: string;\r\n  readonly messageSoFar: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MessageAppendedStreamEvent",
+      "signature": "export function createMessageAppendedEvent(input: {\r\n  readonly messageDelta: string;\r\n  readonly messageSoFar: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> MessageAppendedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createReasoningAppendedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1109,
+        1126
+      ],
+      "name": "createReasoningAppendedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly reasoningDelta: string;\r\n  readonly reasoningSoFar: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReasoningAppendedStreamEvent",
+      "signature": "export function createReasoningAppendedEvent(input: {\r\n  readonly reasoningDelta: string;\r\n  readonly reasoningSoFar: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> ReasoningAppendedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createMessageCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1131,
+        1148
+      ],
+      "name": "createMessageCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly finishReason?: AssistantStepFinishReason;\r\n  readonly message: string | null;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MessageCompletedStreamEvent",
+      "signature": "export function createMessageCompletedEvent(input: {\r\n  readonly finishReason?: AssistantStepFinishReason;\r\n  readonly message: string | null;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> MessageCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createReasoningCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1153,
+        1168
+      ],
+      "name": "createReasoningCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly reasoning: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReasoningCompletedStreamEvent",
+      "signature": "export function createReasoningCompletedEvent(input: {\r\n  readonly reasoning: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> ReasoningCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createResultCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1173,
+        1188
+      ],
+      "name": "createResultCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly result: JsonValue;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResultCompletedStreamEvent",
+      "signature": "export function createResultCompletedEvent(input: {\r\n  readonly result: JsonValue;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> ResultCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createStepStartedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1193,
+        1206
+      ],
+      "name": "createStepStartedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepStartedStreamEvent",
+      "signature": "export function createStepStartedEvent(input: {\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> StepStartedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createStepCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1211,
+        1243
+      ],
+      "name": "createStepCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly finishReason: AssistantStepFinishReason;\r\n  readonly providerMetadata?: StepCompletedProviderMetadata;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n  readonly usage?: {\r\n    readonly costUsd?: number;\r\n    readonly inputTokens?: number;\r\n    readonly outputTokens?: number;\r\n    readonly cacheReadTokens?: number;\r\n    readonly cacheWriteTokens?: number;\r\n  };\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepCompletedStreamEvent",
+      "signature": "export function createStepCompletedEvent(input: {\r\n  readonly finishReason: AssistantStepFinishReason;\r\n  readonly providerMetadata?: StepCompletedProviderMetadata;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n  readonly usage?: {\r\n    readonly costUsd?: number;\r\n    readonly inputTokens?: number;\r\n    readonly outputTokens?: number;\r\n    readonly cacheReadTokens?: number;\r\n    readonly cacheWriteTokens?: number;\r\n  };\r\n}) -> StepCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createStepFailedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1248,
+        1267
+      ],
+      "name": "createStepFailedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly code: string;\r\n  readonly details?: JsonObject;\r\n  readonly message: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepFailedStreamEvent",
+      "signature": "export function createStepFailedEvent(input: {\r\n  readonly code: string;\r\n  readonly details?: JsonObject;\r\n  readonly message: string;\r\n  readonly sequence: number;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n}) -> StepFailedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createTurnCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1272,
+        1283
+      ],
+      "name": "createTurnCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnCompletedStreamEvent",
+      "signature": "export function createTurnCompletedEvent(input: {\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}) -> TurnCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createTurnFailedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1288,
+        1305
+      ],
+      "name": "createTurnFailedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly code: string;\r\n  readonly details?: JsonObject;\r\n  readonly message: string;\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnFailedStreamEvent",
+      "signature": "export function createTurnFailedEvent(input: {\r\n  readonly code: string;\r\n  readonly details?: JsonObject;\r\n  readonly message: string;\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}) -> TurnFailedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createTurnCancelledEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1308,
+        1319
+      ],
+      "name": "createTurnCancelledEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnCancelledStreamEvent",
+      "signature": "export function createTurnCancelledEvent(input: {\r\n  readonly sequence: number;\r\n  readonly turnId: string;\r\n}) -> TurnCancelledStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createCompactionRequestedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1324,
+        1341
+      ],
+      "name": "createCompactionRequestedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly modelId: string;\r\n  readonly sequence: number;\r\n  readonly sessionId: string;\r\n  readonly turnId: string;\r\n  readonly usageInputTokens: number | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompactionRequestedStreamEvent",
+      "signature": "export function createCompactionRequestedEvent(input: {\r\n  readonly modelId: string;\r\n  readonly sequence: number;\r\n  readonly sessionId: string;\r\n  readonly turnId: string;\r\n  readonly usageInputTokens: number | undefined;\r\n}) -> CompactionRequestedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createCompactionCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1346,
+        1361
+      ],
+      "name": "createCompactionCompletedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly modelId: string;\r\n  readonly sequence: number;\r\n  readonly sessionId: string;\r\n  readonly turnId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompactionCompletedStreamEvent",
+      "signature": "export function createCompactionCompletedEvent(input: {\r\n  readonly modelId: string;\r\n  readonly sequence: number;\r\n  readonly sessionId: string;\r\n  readonly turnId: string;\r\n}) -> CompactionCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createSessionWaitingEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1367,
+        1377
+      ],
+      "name": "createSessionWaitingEvent",
+      "params": [
+        {
+          "name": "namespacedContinuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionWaitingStreamEvent",
+      "signature": "export function createSessionWaitingEvent(namespacedContinuationToken: string) -> SessionWaitingStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createSessionFailedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1382,
+        1397
+      ],
+      "name": "createSessionFailedEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly code: string;\r\n  readonly details?: JsonObject;\r\n  readonly message: string;\r\n  readonly sessionId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionFailedStreamEvent",
+      "signature": "export function createSessionFailedEvent(input: {\r\n  readonly code: string;\r\n  readonly details?: JsonObject;\r\n  readonly message: string;\r\n  readonly sessionId: string;\r\n}) -> SessionFailedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:createSessionCompletedEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1402,
+        1404
+      ],
+      "name": "createSessionCompletedEvent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SessionCompletedStreamEvent",
+      "signature": "export function createSessionCompletedEvent() -> SessionCompletedStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:timestampHandleMessageStreamEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1414,
+        1424
+      ],
+      "name": "timestampHandleMessageStreamEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "at",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TimedHandleMessageStreamEvent",
+      "signature": "export function timestampHandleMessageStreamEvent(event: HandleMessageStreamEvent, at: unknown) -> TimedHandleMessageStreamEvent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:encodeMessageStreamEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1429,
+        1431
+      ],
+      "name": "encodeMessageStreamEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "TimedHandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Uint8Array",
+      "signature": "export function encodeMessageStreamEvent(event: TimedHandleMessageStreamEvent) -> Uint8Array",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:normalizeActionResultOutcome",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1433,
+        1455
+      ],
+      "name": "normalizeActionResultOutcome",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "RuntimeActionResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly error?: ActionResultError;\r\n  readonly status: ActionResultStatus;\r\n}",
+      "signature": "export function normalizeActionResultOutcome(result: RuntimeActionResult) -> {\r\n  readonly error?: ActionResultError;\r\n  readonly status: ActionResultStatus;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:buildActionResultError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1457,
+        1467
+      ],
+      "name": "buildActionResultError",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "RuntimeActionResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActionResultError",
+      "signature": "export function buildActionResultError(result: RuntimeActionResult) -> ActionResultError",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:readActionResultOutputError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1469,
+        1487
+      ],
+      "name": "readActionResultOutputError",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActionResultError | undefined",
+      "signature": "export function readActionResultOutputError(output: unknown) -> ActionResultError | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:parseActionResultOutputRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1489,
+        1513
+      ],
+      "name": "parseActionResultOutputRecord",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown> | undefined",
+      "signature": "export function parseActionResultOutputRecord(output: unknown) -> Record<string, unknown> | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/protocol/message.ts:formatActionResultOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1515,
+        1526
+      ],
+      "name": "formatActionResultOutput",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatActionResultOutput(output: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "module": "packages/eve/src/runtime/session-callback-route.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:HTTP_SESSION_CALLBACK_CHANNEL_NAME_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "HTTP_SESSION_CALLBACK_CHANNEL_NAME_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:HANDLED_METHODS",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "HANDLED_METHODS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:SessionTerminalCallbackPayload",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        28
+      ],
+      "name": "SessionTerminalCallbackPayload",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly callId: string;\r\n      readonly kind: \"session.completed\";\r\n      readonly output: string;\r\n      readonly sessionId: string;\r\n      readonly subagentName: string;\r\n      readonly usage?: TokenUsage;\r\n    }\r\n  | {\r\n      readonly callId: string;\r\n      readonly error: JsonValue;\r\n      readonly kind: \"session.failed\";\r\n      readonly sessionId: string;\r\n      readonly subagentName: string;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:getSessionCallbackChannelDefinitions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "getSessionCallbackChannelDefinitions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "readonly ResolvedChannelDefinition[]",
+      "signature": "export function getSessionCallbackChannelDefinitions() -> readonly ResolvedChannelDefinition[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:getSessionCallbackChannelNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        36
+      ],
+      "name": "getSessionCallbackChannelNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getSessionCallbackChannelNames() -> ReadonlySet<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:buildCallbackChannelDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        49
+      ],
+      "name": "buildCallbackChannelDefinition",
+      "params": [
+        {
+          "name": "method",
+          "optional": false,
+          "type": "ChannelMethod"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedChannelDefinition",
+      "signature": "export function buildCallbackChannelDefinition(method: ChannelMethod) -> ResolvedChannelDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:channelNameForMethod",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        53
+      ],
+      "name": "channelNameForMethod",
+      "params": [
+        {
+          "name": "method",
+          "optional": false,
+          "type": "ChannelMethod"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function channelNameForMethod(method: ChannelMethod) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:handleSessionCallbackRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        55,
+        86
+      ],
+      "name": "handleSessionCallbackRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "RouteContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function handleSessionCallbackRequest(request: Request, ctx: RouteContext) -> Promise<Response>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:projectSessionCallbackResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        88,
+        131
+      ],
+      "name": "projectSessionCallbackResult",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSubagentResultActionResult | Response",
+      "signature": "export function projectSessionCallbackResult(value: unknown) -> RuntimeSubagentResultActionResult | Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/session-callback-route.ts:parseCallbackUsage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        138,
+        144
+      ],
+      "name": "parseCallbackUsage",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsage | undefined",
+      "signature": "export function parseCallbackUsage(value: unknown) -> TokenUsage | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

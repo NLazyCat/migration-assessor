@@ -1,0 +1,267 @@
+{
+  "module": "packages/eve/src/channel/compiled-channel.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:CHANNEL_SENTINEL",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "CHANNEL_SENTINEL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:CHANNEL_INSTRUMENTATION_KIND",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "CHANNEL_INSTRUMENTATION_KIND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:CHANNEL_INSTRUMENTATION_KINDS",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "CHANNEL_INSTRUMENTATION_KINDS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:ChannelInstrumentationKindGlobal",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        15
+      ],
+      "name": "ChannelInstrumentationKindGlobal",
+      "partial_analysis": false,
+      "value": "typeof globalThis & {\r\n  [CHANNEL_INSTRUMENTATION_KINDS]?: Map<string, string>;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:channelInstrumentationKindGlobal",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "channelInstrumentationKindGlobal",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:channelInstrumentationKinds",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "channelInstrumentationKinds",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel:__kind",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "__kind",
+          "partial_analysis": false,
+          "return_type": ": typeof CHANNEL_SENTINEL",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel:routes",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "routes",
+          "partial_analysis": false,
+          "return_type": ": readonly RouteDefinition<TState>[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel:adapter",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "adapter",
+          "partial_analysis": false,
+          "return_type": ": ChannelAdapter<any>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel:cors",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "cors",
+          "partial_analysis": false,
+          "return_type": ": NormalizedChannelCorsOptions",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel:__metadata",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "__metadata",
+          "partial_analysis": false,
+          "return_type": ": TMetadata",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel:receive",
+          "kind": "property",
+          "line_range": [
+            31,
+            38
+          ],
+          "name": "receive",
+          "partial_analysis": false,
+          "return_type": ": (\r\n    input: {\r\n      readonly message: string;\r\n      readonly target: Readonly<TReceiveTarget>;\r\n      readonly auth: SessionAuthContext | null;\r\n    },\r\n    args: { send: SendFn<TState> },\r\n  ) => Promise<Session>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/compiled-channel.ts:CompiledChannel",
+      "kind": "interface",
+      "line_range": [
+        21,
+        39
+      ],
+      "name": "CompiledChannel",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:isCompiledChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        47
+      ],
+      "name": "isCompiledChannel",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is CompiledChannel",
+      "signature": "export function isCompiledChannel(value: unknown) -> value is CompiledChannel",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:getChannelInstrumentationKind",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        66
+      ],
+      "name": "getChannelInstrumentationKind",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getChannelInstrumentationKind(value: unknown) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:setChannelInstrumentationKind",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        68,
+        78
+      ],
+      "name": "setChannelInstrumentationKind",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "CompiledChannel"
+        },
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setChannelInstrumentationKind(channel: CompiledChannel, kind: string) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/compiled-channel.ts:channelRouteSignature",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        86
+      ],
+      "name": "channelRouteSignature",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "CompiledChannel"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function channelRouteSignature(channel: CompiledChannel) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

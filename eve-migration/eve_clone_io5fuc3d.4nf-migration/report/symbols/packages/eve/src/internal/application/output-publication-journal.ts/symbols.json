@@ -1,0 +1,452 @@
+{
+  "module": "packages/eve/src/internal/application/output-publication-journal.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationPhase",
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "OutputPublicationPhase",
+      "partial_analysis": false,
+      "value": "\"acquired\" | \"prepared\" | \"backed-up\" | \"committed\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:finalOutputDir",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "finalOutputDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:finalSummaryPath",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "finalSummaryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:hadOutput",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "hadOutput",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:hadSummary",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "hadSummary",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:liveness",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "liveness",
+          "partial_analysis": false,
+          "return_type": ": \"active\" | \"recoverable\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:outputBackupPath",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "outputBackupPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:phase",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "phase",
+          "partial_analysis": false,
+          "return_type": ": OutputPublicationPhase",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:pid",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "pid",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:scratchDir",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "scratchDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:stagedOutputDir",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "stagedOutputDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:stagedSummaryPath",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "stagedSummaryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:summaryBackupPath",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "summaryBackupPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal:token",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:OutputPublicationJournal",
+      "kind": "interface",
+      "line_range": [
+        9,
+        23
+      ],
+      "name": "OutputPublicationJournal",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:RecoveryLeaseJournal:pid",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "pid",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/output-publication-journal.ts:RecoveryLeaseJournal:token",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:RecoveryLeaseJournal",
+      "kind": "interface",
+      "line_range": [
+        25,
+        28
+      ],
+      "name": "RecoveryLeaseJournal",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:writeOutputPublicationJournal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        30,
+        35
+      ],
+      "name": "writeOutputPublicationJournal",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "OutputPublicationJournal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeOutputPublicationJournal(lockPath: string, journal: OutputPublicationJournal) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:readOutputPublicationJournal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        37,
+        42
+      ],
+      "name": "readOutputPublicationJournal",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<OutputPublicationJournal | undefined>",
+      "signature": "export function readOutputPublicationJournal(lockPath: string) -> Promise<OutputPublicationJournal | undefined>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:writeRecoveryLeaseJournal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        44,
+        49
+      ],
+      "name": "writeRecoveryLeaseJournal",
+      "params": [
+        {
+          "name": "leasePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "RecoveryLeaseJournal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeRecoveryLeaseJournal(leasePath: string, journal: RecoveryLeaseJournal) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:readRecoveryLeaseJournal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        51,
+        56
+      ],
+      "name": "readRecoveryLeaseJournal",
+      "params": [
+        {
+          "name": "leasePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RecoveryLeaseJournal | undefined>",
+      "signature": "export function readRecoveryLeaseJournal(leasePath: string) -> Promise<RecoveryLeaseJournal | undefined>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:resolveJournalFilePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        63,
+        65
+      ],
+      "name": "resolveJournalFilePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveJournalFilePath(path: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:writeJournal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        67,
+        69
+      ],
+      "name": "writeJournal",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeJournal(path: string, journal: unknown) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:readJournal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        71,
+        80
+      ],
+      "name": "readJournal",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function readJournal(path: string) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:isOutputPublicationJournal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        102
+      ],
+      "name": "isOutputPublicationJournal",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is OutputPublicationJournal",
+      "signature": "export function isOutputPublicationJournal(value: unknown) -> value is OutputPublicationJournal",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-journal.ts:isRecoveryLeaseJournal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        110
+      ],
+      "name": "isRecoveryLeaseJournal",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is RecoveryLeaseJournal",
+      "signature": "export function isRecoveryLeaseJournal(value: unknown) -> value is RecoveryLeaseJournal",
+      "visibility": "Private"
+    }
+  ]
+}

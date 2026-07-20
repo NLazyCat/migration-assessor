@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/public/definitions/channel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/channel.test.ts:IsEqual",
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        22
+      ],
+      "name": "IsEqual",
+      "partial_analysis": false,
+      "value": "(<T>() => T extends TLeft ? 1 : 2) extends <T>() => T extends TRight ? 1 : 2\r\n    ? (<T>() => T extends TRight ? 1 : 2) extends <T>() => T extends TLeft ? 1 : 2\r\n      ? true\r\n      : false\r\n    : false;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/channel.test.ts:Assert",
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "Assert",
+      "partial_analysis": false,
+      "value": "T;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/channel.test.ts:getAdapter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        35
+      ],
+      "name": "getAdapter",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelAdapter<any>",
+      "signature": "export function getAdapter(channel: unknown) -> ChannelAdapter<any>",
+      "visibility": "Private"
+    }
+  ]
+}

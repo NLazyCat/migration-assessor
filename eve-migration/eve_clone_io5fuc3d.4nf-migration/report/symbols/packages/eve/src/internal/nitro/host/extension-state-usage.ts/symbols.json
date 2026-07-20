@@ -1,0 +1,531 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/extension-state-usage.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:STATE_MODULE",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "STATE_MODULE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:STATE_EXPORT",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "STATE_EXPORT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:extensionUsesState",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        16,
+        63
+      ],
+      "name": "extensionUsesState",
+      "params": [
+        {
+          "name": "sourceRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function extensionUsesState(sourceRoot: string) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:type",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:source",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:specifiers",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "specifiers",
+          "partial_analysis": false,
+          "return_type": ": readonly StateAstNode[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:imported",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "imported",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:exported",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "exported",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:local",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "local",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:callee",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "callee",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:object",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "object",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:property",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "property",
+          "partial_analysis": false,
+          "return_type": ": StateAstNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:name",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode:value",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:StateAstNode",
+      "kind": "interface",
+      "line_range": [
+        65,
+        78
+      ],
+      "name": "StateAstNode",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:imports",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "imports",
+          "partial_analysis": false,
+          "return_type": ": Map<string, { specifier: string; importedName: string }>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:namespaceImports",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "namespaceImports",
+          "partial_analysis": false,
+          "return_type": ": Map<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:reexports",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "reexports",
+          "partial_analysis": false,
+          "return_type": ": Map<string, { specifier: string; importedName: string }>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:starReexportSpecifiers",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "starReexportSpecifiers",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:localReexports",
+          "kind": "property",
+          "line_range": [
+            90,
+            90
+          ],
+          "name": "localReexports",
+          "partial_analysis": false,
+          "return_type": ": Map<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:calledIdentifiers",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "calledIdentifiers",
+          "partial_analysis": false,
+          "return_type": ": Set<string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape:calledMembers",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "calledMembers",
+          "partial_analysis": false,
+          "return_type": ": Map<string, Set<string>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:ModuleStateShape",
+      "kind": "interface",
+      "line_range": [
+        80,
+        94
+      ],
+      "name": "ModuleStateShape",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:collectAuthoredModules",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        96,
+        111
+      ],
+      "name": "collectAuthoredModules",
+      "params": [
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function collectAuthoredModules(directory: string) -> Promise<string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:analyzeModule",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        172
+      ],
+      "name": "analyzeModule",
+      "params": [
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "StateAstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModuleStateShape",
+      "signature": "export function analyzeModule(ast: StateAstNode) -> ModuleStateShape",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:computeStateExports",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        178,
+        223
+      ],
+      "name": "computeStateExports",
+      "params": [
+        {
+          "name": "shapes",
+          "optional": false,
+          "type": "ReadonlyMap<string, ModuleStateShape>"
+        },
+        {
+          "name": "moduleSet",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Map<string, Set<string>>",
+      "signature": "export function computeStateExports(shapes: ReadonlyMap<string, ModuleStateShape>, moduleSet: ReadonlySet<string>) -> Map<string, Set<string>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:specifierExportsState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        225,
+        235
+      ],
+      "name": "specifierExportsState",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly specifier: string;\r\n  readonly importedName: string;\r\n  readonly fromModulePath: string;\r\n  readonly stateExports: ReadonlyMap<string, ReadonlySet<string>>;\r\n  readonly moduleSet: ReadonlySet<string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function specifierExportsState(input: {\r\n  readonly specifier: string;\r\n  readonly importedName: string;\r\n  readonly fromModulePath: string;\r\n  readonly stateExports: ReadonlyMap<string, ReadonlySet<string>>;\r\n  readonly moduleSet: ReadonlySet<string>;\r\n}) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:resolveLocalSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        237,
+        249
+      ],
+      "name": "resolveLocalSpecifier",
+      "params": [
+        {
+          "name": "fromModulePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "specifier",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "moduleSet",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function resolveLocalSpecifier(fromModulePath: string, specifier: string, moduleSet: ReadonlySet<string>) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:emittedExtensionVariants",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        252,
+        262
+      ],
+      "name": "emittedExtensionVariants",
+      "params": [
+        {
+          "name": "base",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function emittedExtensionVariants(base: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:moduleName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        264,
+        269
+      ],
+      "name": "moduleName",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "StateAstNode | null | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function moduleName(node: StateAstNode | null | undefined) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:stringValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        271,
+        273
+      ],
+      "name": "stringValue",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "StateAstNode | null | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function stringValue(node: StateAstNode | null | undefined) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-state-usage.ts:walkAst",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        275,
+        288
+      ],
+      "name": "walkAst",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "StateAstNode"
+        },
+        {
+          "name": "visitor",
+          "optional": false,
+          "type": "(node: StateAstNode) => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function walkAst(node: StateAstNode, visitor: (node: StateAstNode) => void) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

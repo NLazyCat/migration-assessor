@@ -1,0 +1,231 @@
+{
+  "module": "packages/eve/src/discover/project-source.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project-source.ts:ProjectSourceEntry:name",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/project-source.ts:ProjectSourceEntry",
+      "kind": "interface",
+      "line_range": [
+        13,
+        17
+      ],
+      "name": "ProjectSourceEntry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project-source.ts:ProjectSourceEntryKind",
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "ProjectSourceEntryKind",
+      "partial_analysis": false,
+      "value": "\"directory\" | \"file\" | \"missing\" | \"other\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project-source.ts:ProjectSource:kind",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"disk\" | \"memory\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/project-source.ts:ProjectSource",
+      "kind": "interface",
+      "line_range": [
+        43,
+        66
+      ],
+      "name": "ProjectSource",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project-source.ts:createDiskProjectSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        99
+      ],
+      "name": "createDiskProjectSource",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ProjectSource",
+      "signature": "export function createDiskProjectSource() -> ProjectSource",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project-source.ts:MemoryProjectSourceInput:rootDir",
+          "kind": "property",
+          "line_range": [
+            113,
+            113
+          ],
+          "name": "rootDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project-source.ts:MemoryProjectSourceInput:files",
+          "kind": "property",
+          "line_range": [
+            117,
+            117
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string | { readonly content: string }>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project-source.ts:MemoryProjectSourceInput:directories",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "directories",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/project-source.ts:MemoryProjectSourceInput",
+      "kind": "interface",
+      "line_range": [
+        107,
+        130
+      ],
+      "name": "MemoryProjectSourceInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project-source.ts:createMemoryProjectSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        140,
+        269
+      ],
+      "name": "createMemoryProjectSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MemoryProjectSourceInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectSource",
+      "signature": "export function createMemoryProjectSource(input: MemoryProjectSourceInput) -> ProjectSource",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project-source.ts:createMemoryEntry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        271,
+        281
+      ],
+      "name": "createMemoryEntry",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "\"file\" | \"directory\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectSourceEntry",
+      "signature": "export function createMemoryEntry(name: string, kind: \"file\" | \"directory\") -> ProjectSourceEntry",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project-source.ts:normalizeToPosix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        283,
+        296
+      ],
+      "name": "normalizeToPosix",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeToPosix(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project-source.ts:splitPosixPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        298,
+        300
+      ],
+      "name": "splitPosixPath",
+      "params": [
+        {
+          "name": "normalizedPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function splitPosixPath(normalizedPath: string) -> string[]",
+      "visibility": "Private"
+    }
+  ]
+}

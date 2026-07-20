@@ -1,0 +1,26 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TOutput"
+      ],
+      "kind": "function",
+      "line_range": [
+        6,
+        18
+      ],
+      "name": "extractCompletedResult",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TOutput | undefined",
+      "signature": "export function extractCompletedResult(events: readonly HandleMessageStreamEvent[]) -> TOutput | undefined"
+    }
+  ],
+  "module": "packages/eve/src/client/output-schema.ts"
+}

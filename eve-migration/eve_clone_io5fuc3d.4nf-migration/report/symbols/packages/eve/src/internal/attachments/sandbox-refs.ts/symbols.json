@@ -1,0 +1,197 @@
+{
+  "module": "packages/eve/src/internal/attachments/sandbox-refs.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:SANDBOX_URL_SCHEME",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "SANDBOX_URL_SCHEME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:PATH_QUERY_KEY",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "PATH_QUERY_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:SIZE_QUERY_KEY",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "SIZE_QUERY_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:TYPE_QUERY_KEY",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "TYPE_QUERY_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:SandboxRef:path",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:SandboxRef:size",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "size",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:SandboxRef:mediaType",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "mediaType",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:SandboxRef",
+      "kind": "interface",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "SandboxRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:isValidSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        38
+      ],
+      "name": "isValidSize",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isValidSize(value: number) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:encodeSandboxRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        62
+      ],
+      "name": "encodeSandboxRef",
+      "params": [
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "SandboxRef"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "URL",
+      "signature": "export function encodeSandboxRef(ref: SandboxRef) -> URL",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:decodeSandboxRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        98
+      ],
+      "name": "decodeSandboxRef",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "URL | string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxRef",
+      "signature": "export function decodeSandboxRef(value: URL | string) -> SandboxRef",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/sandbox-refs.ts:isSandboxRefUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        108,
+        110
+      ],
+      "name": "isSandboxRefUrl",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is URL",
+      "signature": "export function isSandboxRefUrl(value: unknown) -> value is URL",
+      "visibility": "Public"
+    }
+  ]
+}

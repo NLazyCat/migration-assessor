@@ -1,0 +1,78 @@
+{
+  "module": "packages/eve/src/harness/ordered-stream-emitter.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.test.ts:deferred",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "deferred",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ readonly promise: Promise<void>; resolve(): void }",
+      "signature": "export function deferred() -> { readonly promise: Promise<void>; resolve(): void }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.test.ts:message",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        27
+      ],
+      "name": "message",
+      "params": [
+        {
+          "name": "delta",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "soFar",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "stepIndex",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function message(delta: string, soFar: string, stepIndex: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.test.ts:reasoning",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        37
+      ],
+      "name": "reasoning",
+      "params": [
+        {
+          "name": "delta",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "soFar",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function reasoning(delta: string, soFar: string) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

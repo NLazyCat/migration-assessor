@@ -19,16 +19,24 @@ pub fn normalize_path(path: &Path) -> PathBuf {
     result
 }
 
+/// Extract a source code snippet from a file using 1-indexed line range (inclusive on both ends).
+pub fn extract_source_snippet(source: &str, line_range: [usize; 2]) -> String {
+    let [start, end] = line_range;
+    if start == 0 || start > end {
+        return String::new();
+    }
+    source
+        .lines()
+        .skip(start - 1)
+        .take(end - start + 1)
+        .collect::<Vec<&str>>()
+        .join("\n")
+}
+
 /// Detect the oxc SourceType from a file path extension.
 pub fn detect_source_type(file_path: Option<&Path>) -> SourceType {
-    match file_path.and_then(|p| p.extension().and_then(|e| e.to_str())) {
-        Some("tsx") => SourceType::tsx(),
-        Some("ts") => SourceType::ts(),
-        Some("mts") | Some("cts") => SourceType::default()
-            .with_typescript(true)
-            .with_module(true),
-        _ => SourceType::ts(),
-    }
+    file_path
+        .map_or(SourceType::ts(), |p| SourceType::from_path(p).unwrap_or(SourceType::ts()))
 }
 
 #[cfg(test)]
@@ -78,6 +86,25 @@ mod tests {
     fn test_detect_source_type_mts() {
         let st = detect_source_type(Some(Path::new("foo.mts")));
         assert!(st.is_typescript());
+        assert!(st.is_module());
+    }
+
+    #[test]
+    fn test_detect_source_type_js() {
+        let st = detect_source_type(Some(Path::new("foo.js")));
+        assert!(!st.is_typescript());
+    }
+
+    #[test]
+    fn test_detect_source_type_jsx() {
+        let st = detect_source_type(Some(Path::new("foo.jsx")));
+        assert!(!st.is_typescript());
+        assert!(st.is_jsx());
+    }
+
+    #[test]
+    fn test_detect_source_type_mjs() {
+        let st = detect_source_type(Some(Path::new("foo.mjs")));
         assert!(st.is_module());
     }
 

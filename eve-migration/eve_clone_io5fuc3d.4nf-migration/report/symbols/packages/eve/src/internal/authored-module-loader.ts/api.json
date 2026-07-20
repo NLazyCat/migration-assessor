@@ -1,0 +1,191 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        42,
+        50
+      ],
+      "name": "AuthoredModuleLoadOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AuthoredModuleLoadOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "externalDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "externalDependencies?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "extensionScopeNamespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "extensionScopeNamespace?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        109
+      ],
+      "name": "loadAuthoredModuleNamespace",
+      "params": [
+        {
+          "name": "modulePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AuthoredModuleLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, unknown>>",
+      "signature": "export function loadAuthoredModuleNamespace(modulePath: string, options: AuthoredModuleLoadOptions) -> Promise<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        143,
+        156
+      ],
+      "name": "bundleAuthoredModuleCode",
+      "params": [
+        {
+          "name": "modulePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AuthoredModuleLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function bundleAuthoredModuleCode(modulePath: string, options: AuthoredModuleLoadOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        164,
+        182
+      ],
+      "name": "bundleAuthoredModuleForGeneration",
+      "params": [
+        {
+          "name": "modulePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AuthoredModuleLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function bundleAuthoredModuleForGeneration(modulePath: string, options: AuthoredModuleLoadOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        185,
+        190
+      ],
+      "name": "ExtensionDistributionGraphEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionDistributionGraphEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        187,
+        187
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        189,
+        189
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        197,
+        248
+      ],
+      "name": "bundleExtensionDistributionGraph",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly entries: readonly ExtensionDistributionGraphEntry[];\r\n  readonly packageRoot: string;\r\n  readonly runtimeDependencies: readonly string[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ReadonlyMap<string, string>>",
+      "signature": "export function bundleExtensionDistributionGraph(input: {\r\n  readonly entries: readonly ExtensionDistributionGraphEntry[];\r\n  readonly packageRoot: string;\r\n  readonly runtimeDependencies: readonly string[];\r\n}) -> Promise<ReadonlyMap<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        255,
+        312
+      ],
+      "name": "bundleAuthoredModuleMapForGeneration",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly manifest: CompiledAgentManifest;\r\n  readonly moduleMapPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function bundleAuthoredModuleMapForGeneration(input: {\r\n  readonly manifest: CompiledAgentManifest;\r\n  readonly moduleMapPath: string;\r\n}) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/internal/authored-module-loader.ts"
+}

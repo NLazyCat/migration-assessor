@@ -1,0 +1,87 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/load-mesh.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/load-mesh.ts:MODEL_URL",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "MODEL_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/load-mesh.ts:DEV_FETCH_OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "DEV_FETCH_OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/load-mesh.ts:meshFetchOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        13
+      ],
+      "name": "meshFetchOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function meshFetchOptions() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/load-mesh.ts:loadMesh",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        15,
+        19
+      ],
+      "name": "loadMesh",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function loadMesh() -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/load-mesh.ts:loadGltfBuffer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        21,
+        30
+      ],
+      "name": "loadGltfBuffer",
+      "params": [
+        {
+          "name": "uri",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "modelUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function loadGltfBuffer(uri: string, modelUrl: string) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

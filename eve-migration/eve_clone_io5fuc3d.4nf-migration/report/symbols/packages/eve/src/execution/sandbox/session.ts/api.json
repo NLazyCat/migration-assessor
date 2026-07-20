@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        33,
+        116
+      ],
+      "name": "buildSandboxSession",
+      "params": [
+        {
+          "name": "primitives",
+          "optional": false,
+          "type": "InternalSandboxSession"
+        },
+        {
+          "name": "setNetworkPolicy",
+          "optional": false,
+          "type": "(policy: SandboxNetworkPolicy) => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxSession",
+      "signature": "export function buildSandboxSession(primitives: InternalSandboxSession, setNetworkPolicy: (policy: SandboxNetworkPolicy) => Promise<void>) -> SandboxSession"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/session.ts"
+}

@@ -1,0 +1,307 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/architecture.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Mode",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "Mode",
+      "partial_analysis": false,
+      "value": "\"managed\" | \"self-hosted\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:LogoComponent",
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "LogoComponent",
+      "partial_analysis": false,
+      "value": "ComponentType<{\r\n  size?: number;\r\n  color?: string;\r\n  className?: string;\r\n}>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Backend:label",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Backend:Logo",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "Logo",
+          "partial_analysis": false,
+          "return_type": ": LogoComponent",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Backend",
+      "kind": "interface",
+      "line_range": [
+        31,
+        34
+      ],
+      "name": "Backend",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:icon",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "icon",
+          "partial_analysis": false,
+          "return_type": ": ReactNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:title",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "title",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:titleByMode",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "titleByMode",
+          "partial_analysis": false,
+          "return_type": ": Record<Mode, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:description",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:href",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "href",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:managedOnlyHref",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "managedOnlyHref",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive:backend",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "backend",
+          "partial_analysis": false,
+          "return_type": ": Record<Mode, Backend>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:Primitive",
+      "kind": "interface",
+      "line_range": [
+        36,
+        47
+      ],
+      "name": "Primitive",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:RUNTIME_ITEMS",
+      "kind": "variable",
+      "line_range": [
+        49,
+        92
+      ],
+      "name": "RUNTIME_ITEMS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:WORKFLOW_BACKEND",
+      "kind": "variable",
+      "line_range": [
+        94,
+        100
+      ],
+      "name": "WORKFLOW_BACKEND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:CHANNELS",
+      "kind": "variable",
+      "line_range": [
+        102,
+        115
+      ],
+      "name": "CHANNELS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:CAPTIONS",
+      "kind": "variable",
+      "line_range": [
+        117,
+        122
+      ],
+      "name": "CAPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:SectionLabel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        124,
+        130
+      ],
+      "name": "SectionLabel",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ children: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JSX.Element",
+      "signature": "export function SectionLabel(_: { children: string }) -> JSX.Element",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:BackendChip",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        132,
+        139
+      ],
+      "name": "BackendChip",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ backend: Backend }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JSX.Element",
+      "signature": "export function BackendChip(_: { backend: Backend }) -> JSX.Element",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:PrimitiveCard",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        181
+      ],
+      "name": "PrimitiveCard",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  icon: ReactNode;\r\n  title: string;\r\n  description: string;\r\n  href?: string;\r\n  backend?: Backend;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JSX.Element",
+      "signature": "export function PrimitiveCard(_: {\r\n  icon: ReactNode;\r\n  title: string;\r\n  description: string;\r\n  href?: string;\r\n  backend?: Backend;\r\n}) -> JSX.Element",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/architecture.tsx:ArchitectureDiagram",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        183,
+        325
+      ],
+      "name": "ArchitectureDiagram",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function ArchitectureDiagram() -> void",
+      "visibility": "Public"
+    }
+  ]
+}

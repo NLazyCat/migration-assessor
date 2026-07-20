@@ -1,0 +1,144 @@
+{
+  "module": "packages/eve/src/public/definitions/connections/openapi.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPISpecSource",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "OpenAPISpecSource",
+      "partial_analysis": false,
+      "value": "string | Record<string, unknown>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:spec",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "spec",
+          "partial_analysis": false,
+          "return_type": ": OpenAPISpecSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:baseUrl",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "baseUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:description",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:auth",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "auth",
+          "partial_analysis": false,
+          "return_type": ": ConnectionAuthDefinition",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:approval",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "approval",
+          "partial_analysis": false,
+          "return_type": ": Approval",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:headers",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "headers",
+          "partial_analysis": false,
+          "return_type": ": HeadersDefinition",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition:operations",
+          "kind": "property",
+          "line_range": [
+            102,
+            102
+          ],
+          "name": "operations",
+          "partial_analysis": false,
+          "return_type": ": ToolFilterDefinition",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/connections/openapi.ts:OpenAPIConnectionDefinition",
+      "kind": "interface",
+      "line_range": [
+        36,
+        103
+      ],
+      "name": "OpenAPIConnectionDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/connections/openapi.ts:defineOpenAPIConnection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        125
+      ],
+      "name": "defineOpenAPIConnection",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "OpenAPIConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenAPIConnectionDefinition",
+      "signature": "export function defineOpenAPIConnection(definition: OpenAPIConnectionDefinition) -> OpenAPIConnectionDefinition",
+      "visibility": "Public"
+    }
+  ]
+}

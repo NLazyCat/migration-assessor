@@ -1,0 +1,826 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "interface",
+      "line_range": [
+        21,
+        35
+      ],
+      "name": "RouteHandlerArgs",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RouteHandlerArgs { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "send",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SendFn<TState>",
+      "signature": "send: : SendFn<TState>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "cancel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CancelFn",
+      "signature": "cancel: : CancelFn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "getSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GetSessionFn",
+      "signature": "getSession: : GetSessionFn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "receive",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CrossChannelReceiveFn",
+      "signature": "receive: : CrossChannelReceiveFn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "params",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "params: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "waitUntil",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (task: Promise<unknown>) => void",
+      "signature": "waitUntil: : (task: Promise<unknown>) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "requestIp",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "requestIp: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        37,
+        53
+      ],
+      "name": "SendPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SendPayload { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | UserContent",
+      "signature": "message?: : string | UserContent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "inputResponses",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly InputResponse[]",
+      "signature": "inputResponses?: : readonly InputResponse[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "context",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "context?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "outputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "outputSchema?: : JsonObject"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        61,
+        64
+      ],
+      "name": "SendFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SendFn = undefined> = (\r\n  input: string | UserContent | SendPayload,\r\n  options: SendOptions<TState>,\r\n) => Promise<Session>;"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        85,
+        87
+      ],
+      "name": "SendOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SendOptions = undefined> = [TState] extends [undefined]\r\n  ? BaseSendOptions\r\n  : BaseSendOptions & { state: TState };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "GetSessionFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GetSessionFn = (sessionId: string) => Session;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        100,
+        103
+      ],
+      "name": "CancelOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CancelOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "turnId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "turnId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "CancelFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CancelFn = (options: CancelOptions) => Promise<CancelTurnResult>;"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        116,
+        119
+      ],
+      "name": "RouteHandler",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RouteHandler = undefined> = (\r\n  req: Request,\r\n  args: RouteHandlerArgs<TState>,\r\n) => Promise<Response>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        127,
+        140
+      ],
+      "name": "WebSocketPeer",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebSocketPeer { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        128,
+        128
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        129,
+        129
+      ],
+      "name": "context",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "context: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "namespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "namespace: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        131,
+        131
+      ],
+      "name": "request",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Request",
+      "signature": "request: : Request"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        132,
+        132
+      ],
+      "name": "remoteAddress",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "remoteAddress?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        133,
+        133
+      ],
+      "name": "topics",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Set<string>",
+      "signature": "topics: : Set<string>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        147,
+        156
+      ],
+      "name": "WebSocketMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebSocketMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        148,
+        148
+      ],
+      "name": "data",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "data: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "rawData",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "rawData: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        162,
+        164
+      ],
+      "name": "WebSocketUpgradeRequest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebSocketUpgradeRequest { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        163,
+        163
+      ],
+      "name": "context",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "context?: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        171,
+        179
+      ],
+      "name": "WebSocketUpgradeResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WebSocketUpgradeResult = | {\r\n      readonly context?: Record<string, unknown>;\r\n      readonly handled?: boolean;\r\n      readonly headers?: WebSocketHeaders;\r\n      readonly namespace?: string;\r\n    }\r\n  | Response\r\n  | void;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        186,
+        194
+      ],
+      "name": "WebSocketRouteHooks",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebSocketRouteHooks { ... }"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        200,
+        203
+      ],
+      "name": "WebSocketRouteHandler",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WebSocketRouteHandler = undefined> = (\r\n  req: Request,\r\n  args: RouteHandlerArgs<TState>,\r\n) => Promise<WebSocketRouteHooks> | WebSocketRouteHooks;"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "interface",
+      "line_range": [
+        210,
+        215
+      ],
+      "name": "HttpRouteDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HttpRouteDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        211,
+        211
+      ],
+      "name": "transport",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"http\"",
+      "signature": "transport?: : \"http\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        212,
+        212
+      ],
+      "name": "method",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelMethod",
+      "signature": "method: : ChannelMethod"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        213,
+        213
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        214,
+        214
+      ],
+      "name": "handler",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RouteHandler<TState>",
+      "signature": "handler: : RouteHandler<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "interface",
+      "line_range": [
+        221,
+        226
+      ],
+      "name": "WebSocketRouteDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebSocketRouteDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        222,
+        222
+      ],
+      "name": "transport",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"websocket\"",
+      "signature": "transport: : \"websocket\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        223,
+        223
+      ],
+      "name": "method",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"WEBSOCKET\"",
+      "signature": "method: : \"WEBSOCKET\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        224,
+        224
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        225,
+        225
+      ],
+      "name": "handler",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WebSocketRouteHandler<TState>",
+      "signature": "handler: : WebSocketRouteHandler<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        234,
+        236
+      ],
+      "name": "RouteDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RouteDefinition = undefined> =\r\n  | HttpRouteDefinition<TState>\r\n  | WebSocketRouteDefinition<TState>;"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        242,
+        247
+      ],
+      "name": "GET",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function GET(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        253,
+        258
+      ],
+      "name": "POST",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function POST(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        264,
+        269
+      ],
+      "name": "PUT",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function PUT(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        275,
+        280
+      ],
+      "name": "PATCH",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function PATCH(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        286,
+        291
+      ],
+      "name": "DELETE",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "RouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HttpRouteDefinition<TState>",
+      "signature": "export function DELETE(path: string, handler: RouteHandler<TState>) -> HttpRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        300,
+        305
+      ],
+      "name": "WS",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "WebSocketRouteHandler<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WebSocketRouteDefinition<TState>",
+      "signature": "export function WS(path: string, handler: WebSocketRouteHandler<TState>) -> WebSocketRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        307,
+        311
+      ],
+      "name": "isHttpRouteDefinition",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "RouteDefinition<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "route is HttpRouteDefinition<TState>",
+      "signature": "export function isHttpRouteDefinition(route: RouteDefinition<TState>) -> route is HttpRouteDefinition<TState>"
+    },
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        313,
+        317
+      ],
+      "name": "isWebSocketRouteDefinition",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "RouteDefinition<TState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "route is WebSocketRouteDefinition<TState>",
+      "signature": "export function isWebSocketRouteDefinition(route: RouteDefinition<TState>) -> route is WebSocketRouteDefinition<TState>"
+    }
+  ],
+  "module": "packages/eve/src/channel/routes.ts"
+}

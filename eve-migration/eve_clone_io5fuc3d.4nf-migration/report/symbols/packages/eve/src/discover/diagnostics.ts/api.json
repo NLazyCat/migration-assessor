@@ -1,0 +1,165 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "DiscoverDiagnosticSeverity",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscoverDiagnosticSeverity = z.infer<typeof discoverDiagnosticSeveritySchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "discoverDiagnosticSeveritySchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const discoverDiagnosticSeveritySchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "DiscoverDiagnostic",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscoverDiagnostic = z.infer<typeof discoverDiagnosticSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        21,
+        40
+      ],
+      "name": "discoverDiagnosticSchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const discoverDiagnosticSchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "DiscoverDiagnosticsSummary",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscoverDiagnosticsSummary = z.infer<typeof discoverDiagnosticsSummarySchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        50,
+        55
+      ],
+      "name": "discoverDiagnosticsSummarySchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const discoverDiagnosticsSummarySchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "DISCOVER_PROJECT_NOT_FOUND",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_PROJECT_NOT_FOUND: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        65,
+        72
+      ],
+      "name": "createDiscoverErrorDiagnostic",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Omit<DiscoverDiagnostic, \"severity\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscoverDiagnostic",
+      "signature": "export function createDiscoverErrorDiagnostic(input: Omit<DiscoverDiagnostic, \"severity\">) -> DiscoverDiagnostic"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        77,
+        84
+      ],
+      "name": "createDiscoverWarningDiagnostic",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Omit<DiscoverDiagnostic, \"severity\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscoverDiagnostic",
+      "signature": "export function createDiscoverWarningDiagnostic(input: Omit<DiscoverDiagnostic, \"severity\">) -> DiscoverDiagnostic"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        89,
+        107
+      ],
+      "name": "summarizeDiscoverDiagnostics",
+      "params": [
+        {
+          "name": "diagnostics",
+          "optional": false,
+          "type": "readonly DiscoverDiagnostic[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscoverDiagnosticsSummary",
+      "signature": "export function summarizeDiscoverDiagnostics(diagnostics: readonly DiscoverDiagnostic[]) -> DiscoverDiagnosticsSummary"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        112,
+        114
+      ],
+      "name": "hasDiscoverErrors",
+      "params": [
+        {
+          "name": "diagnostics",
+          "optional": false,
+          "type": "readonly DiscoverDiagnostic[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasDiscoverErrors(diagnostics: readonly DiscoverDiagnostic[]) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/discover/diagnostics.ts"
+}

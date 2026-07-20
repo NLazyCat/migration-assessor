@@ -1,0 +1,301 @@
+{
+  "module": "packages/eve/src/evals/runner/execute-task.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskOptions:client",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "client",
+          "partial_analysis": false,
+          "return_type": ": Client",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskOptions:evaluation",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "evaluation",
+          "partial_analysis": false,
+          "return_type": ": EveEval",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskOptions:onLog",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "onLog",
+          "partial_analysis": false,
+          "return_type": ": (message: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskOptions:target",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTargetHandle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskOptions:timeoutMs",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "timeoutMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskOptions",
+      "kind": "interface",
+      "line_range": [
+        23,
+        30
+      ],
+      "name": "ExecuteTaskOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskResult:result",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTaskResult",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskResult:assertions",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "assertions",
+          "partial_analysis": false,
+          "return_type": ": readonly AssertionResult[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskResult:error",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "error",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskResult:skipReason",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "skipReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:ExecuteTaskResult",
+      "kind": "interface",
+      "line_range": [
+        37,
+        42
+      ],
+      "name": "ExecuteTaskResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:executeTask",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        49,
+        91
+      ],
+      "name": "executeTask",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ExecuteTaskOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExecuteTaskResult>",
+      "signature": "export function executeTask(options: ExecuteTaskOptions) -> Promise<ExecuteTaskResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:buildTaskResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        111
+      ],
+      "name": "buildTaskResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly logs: readonly string[];\r\n  readonly sessions: readonly EveEvalSessionResult[];\r\n  readonly turn: EveEvalTurn | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTaskResult",
+      "signature": "export function buildTaskResult(input: {\r\n  readonly logs: readonly string[];\r\n  readonly sessions: readonly EveEvalSessionResult[];\r\n  readonly turn: EveEvalTurn | undefined;\r\n}) -> EveEvalTaskResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:combineDerivedFacts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        133
+      ],
+      "name": "combineDerivedFacts",
+      "params": [
+        {
+          "name": "sessions",
+          "optional": false,
+          "type": "readonly EveEvalSessionResult[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalDerivedFacts",
+      "signature": "export function combineDerivedFacts(sessions: readonly EveEvalSessionResult[]) -> EveEvalDerivedFacts",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:selectPrimarySessionId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        135,
+        137
+      ],
+      "name": "selectPrimarySessionId",
+      "params": [
+        {
+          "name": "sessions",
+          "optional": false,
+          "type": "readonly EveEvalSessionResult[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function selectPrimarySessionId(sessions: readonly EveEvalSessionResult[]) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:extractRuntimeIdentity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        143,
+        153
+      ],
+      "name": "extractRuntimeIdentity",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeIdentity | undefined",
+      "signature": "export function extractRuntimeIdentity(events: readonly HandleMessageStreamEvent[]) -> RuntimeIdentity | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:sum",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        155,
+        157
+      ],
+      "name": "sum",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "readonly T[]"
+        },
+        {
+          "name": "read",
+          "optional": false,
+          "type": "(entry: T) => number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function sum(entries: readonly T[], read: (entry: T) => number) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/execute-task.ts:neverAbortSignal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        159,
+        161
+      ],
+      "name": "neverAbortSignal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AbortSignal",
+      "signature": "export function neverAbortSignal() -> AbortSignal",
+      "visibility": "Private"
+    }
+  ]
+}

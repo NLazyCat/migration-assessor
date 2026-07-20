@@ -1,0 +1,53 @@
+{
+  "createMockAuthoredRuntimeModel": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/runtime/agent/mock-model-adapter.test.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/runtime/agent/mock-model-adapter.test.ts:createMockAuthoredRuntimeModel"
+    }
+  ],
+  "resolveMockAuthoredRuntimeModel": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/runtime/agent/resolve-model.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/runtime/agent/resolve-model.ts:resolveMockAuthoredRuntimeModel"
+    }
+  ],
+  "shouldMockAuthoredRuntimeModels": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/internal/testing/mocks/mock-model.ts",
+        "line": 40
+      },
+      "symbol": "packages/eve/src/internal/testing/mocks/mock-model.ts:shouldMockAuthoredRuntimeModels"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/runtime/agent/mock-model-adapter.test.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/runtime/agent/mock-model-adapter.test.ts:shouldMockAuthoredRuntimeModels"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/runtime/agent/resolve-model.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/runtime/agent/resolve-model.ts:shouldMockAuthoredRuntimeModels"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "HandleMessageStreamEvent": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 42,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/protocol/message.ts:HandleMessageStreamEvent"
+    }
+  ],
+  "HarnessEmissionState": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 23
+      },
+      "symbol": "packages/eve/src/harness/emission.ts:HarnessEmissionState"
+    }
+  ],
+  "HarnessToolMap": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/harness/types.ts:HarnessToolMap"
+    }
+  ],
+  "WorkflowSandboxLifecycle": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/shared/workflow-sandbox.ts:WorkflowSandboxLifecycle"
+    }
+  ],
+  "createActionResultEvent": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 65
+      },
+      "symbol": "packages/eve/src/protocol/message.ts:createActionResultEvent"
+    }
+  ],
+  "createActionsRequestedEvent": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 45
+      },
+      "symbol": "packages/eve/src/protocol/message.ts:createActionsRequestedEvent"
+    }
+  ],
+  "createLogger": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/internal/logging.ts:createLogger"
+    }
+  ],
+  "createRuntimeActionRequestFromToolCall": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 46
+      },
+      "symbol": "packages/eve/src/harness/runtime-actions.ts:createRuntimeActionRequestFromToolCall"
+    }
+  ],
+  "createRuntimeToolResultFromValue": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/harness/action-result-helpers.ts:createRuntimeToolResultFromValue"
+    }
+  ],
+  "toErrorMessage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 46,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 59
+      },
+      "symbol": "packages/eve/src/shared/errors.ts:toErrorMessage"
+    }
+  ]
+}

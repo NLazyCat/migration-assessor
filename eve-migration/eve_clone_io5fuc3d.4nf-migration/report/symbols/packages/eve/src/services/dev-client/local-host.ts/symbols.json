@@ -1,0 +1,62 @@
+{
+  "module": "packages/eve/src/services/dev-client/local-host.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/local-host.ts:LOCAL_HOSTNAMES",
+      "kind": "variable",
+      "line_range": [
+        1,
+        7
+      ],
+      "name": "LOCAL_HOSTNAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/local-host.ts:isLocalEveServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "isLocalEveServerUrl",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "URL"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLocalEveServerUrl(url: URL) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/local-host.ts:isLocalDevelopmentServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        21
+      ],
+      "name": "isLocalDevelopmentServerUrl",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLocalDevelopmentServerUrl(serverUrl: string) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

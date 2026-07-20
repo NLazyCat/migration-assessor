@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        27
+      ],
+      "name": "SessionDeliveryHook",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionDeliveryHook { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "SessionDeliveryHookHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionDeliveryHookHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        224
+      ],
+      "name": "createSessionDeliveryHook",
+      "params": [
+        {
+          "name": "bufferedDeliveries",
+          "optional": false,
+          "type": "DeliverHookPayload[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionDeliveryHookHandle",
+      "signature": "export function createSessionDeliveryHook(bufferedDeliveries: DeliverHookPayload[]) -> SessionDeliveryHookHandle"
+    }
+  ],
+  "module": "packages/eve/src/execution/session-delivery-hook.ts"
+}

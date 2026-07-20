@@ -1,0 +1,11 @@
+[type_mapping]
+"String" = "string"
+"i32" = "number"
+"i64" = "bigint"
+"bool" = "boolean"
+"()" = "void"
+"Option<{T}>" = "{T} | null"
+"Result<{T}>" = "Promise<{T}>"
+"Vec<{T}>" = "Array<{T}>"
+"HashMap<String, {T}>" = "Record<string, {T}>"
+"HashSet<{T}>" = "Set<{T}>"

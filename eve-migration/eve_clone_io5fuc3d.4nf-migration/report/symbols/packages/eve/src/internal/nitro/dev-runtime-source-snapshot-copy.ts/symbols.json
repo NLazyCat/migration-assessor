@@ -1,0 +1,433 @@
+{
+  "module": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:SNAPSHOT_SKIP_NAMES",
+      "kind": "variable",
+      "line_range": [
+        19,
+        28
+      ],
+      "name": "SNAPSHOT_SKIP_NAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:SNAPSHOT_APP_ROOT_SKIP_NAMES",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "SNAPSHOT_APP_ROOT_SKIP_NAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:SNAPSHOT_COPY_MODE",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "SNAPSHOT_COPY_MODE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:copyDevelopmentSourceSnapshot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        32,
+        61
+      ],
+      "name": "copyDevelopmentSourceSnapshot",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyDevelopmentSourceSnapshot(plan: DevelopmentSourceSnapshotPlan) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:copySnapshotPath",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        63,
+        86
+      ],
+      "name": "copySnapshotPath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly plan: DevelopmentSourceSnapshotPlan;\r\n  readonly sourcePath: string;\r\n  readonly targetPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copySnapshotPath(input: {\r\n  readonly plan: DevelopmentSourceSnapshotPlan;\r\n  readonly sourcePath: string;\r\n  readonly targetPath: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:copySnapshotDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        108
+      ],
+      "name": "copySnapshotDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly plan: DevelopmentSourceSnapshotPlan;\r\n  readonly sourcePath: string;\r\n  readonly targetPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copySnapshotDirectory(input: {\r\n  readonly plan: DevelopmentSourceSnapshotPlan;\r\n  readonly sourcePath: string;\r\n  readonly targetPath: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:shouldSkipSnapshotSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        135
+      ],
+      "name": "shouldSkipSnapshotSource",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        },
+        {
+          "name": "sourcePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldSkipSnapshotSource(plan: DevelopmentSourceSnapshotPlan, sourcePath: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:isDirectAppRootSkipPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        152
+      ],
+      "name": "isDirectAppRootSkipPath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly sourcePath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isDirectAppRootSkipPath(input: {\r\n  readonly appRoot: string;\r\n  readonly sourcePath: string;\r\n}) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:rewriteSnapshotTsConfigAbsoluteExtends",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        154,
+        178
+      ],
+      "name": "rewriteSnapshotTsConfigAbsoluteExtends",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function rewriteSnapshotTsConfigAbsoluteExtends(plan: DevelopmentSourceSnapshotPlan) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:rewriteTsConfigAbsoluteExtends",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        180,
+        213
+      ],
+      "name": "rewriteTsConfigAbsoluteExtends",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly configPath: string;\r\n  readonly snapshotConfigPath: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly source: string;\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function rewriteTsConfigAbsoluteExtends(input: {\r\n  readonly configPath: string;\r\n  readonly snapshotConfigPath: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly source: string;\r\n  readonly sourceRoot: string;\r\n}) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:rewriteTsConfigExtendsValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        215,
+        266
+      ],
+      "name": "rewriteTsConfigExtendsValue",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly configPath: string;\r\n  readonly snapshotConfigPath: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n  readonly value: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly changed: boolean; readonly value: unknown }",
+      "signature": "export function rewriteTsConfigExtendsValue(input: {\r\n  readonly configPath: string;\r\n  readonly snapshotConfigPath: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n  readonly value: unknown;\r\n}) -> { readonly changed: boolean; readonly value: unknown }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:rewriteTsConfigExtendsSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        268,
+        293
+      ],
+      "name": "rewriteTsConfigExtendsSpecifier",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly configPath: string;\r\n  readonly snapshotConfigPath: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n  readonly value: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function rewriteTsConfigExtendsSpecifier(input: {\r\n  readonly configPath: string;\r\n  readonly snapshotConfigPath: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n  readonly value: string;\r\n}) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:createSnapshotSymlinks",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        295,
+        310
+      ],
+      "name": "createSnapshotSymlinks",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function createSnapshotSymlinks(plan: DevelopmentSourceSnapshotPlan) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:ensureRuntimePackageJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        312,
+        331
+      ],
+      "name": "ensureRuntimePackageJson",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function ensureRuntimePackageJson(plan: DevelopmentSourceSnapshotPlan) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:validateDevelopmentSourceSnapshot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        333,
+        355
+      ],
+      "name": "validateDevelopmentSourceSnapshot",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function validateDevelopmentSourceSnapshot(plan: DevelopmentSourceSnapshotPlan) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:validateSnapshotTsConfigExtends",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        357,
+        379
+      ],
+      "name": "validateSnapshotTsConfigExtends",
+      "params": [
+        {
+          "name": "configPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function validateSnapshotTsConfigExtends(configPath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:toSnapshotPathForPlan",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        381,
+        387
+      ],
+      "name": "toSnapshotPathForPlan",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        },
+        {
+          "name": "sourcePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toSnapshotPathForPlan(plan: DevelopmentSourceSnapshotPlan, sourcePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:isPathInsideOrEqual",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        389,
+        396
+      ],
+      "name": "isPathInsideOrEqual",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathInsideOrEqual(path: string, directory: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:isAbsoluteFilePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        398,
+        400
+      ],
+      "name": "isAbsoluteFilePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAbsoluteFilePath(path: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts:formatErrorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        402,
+        404
+      ],
+      "name": "formatErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatErrorMessage(error: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

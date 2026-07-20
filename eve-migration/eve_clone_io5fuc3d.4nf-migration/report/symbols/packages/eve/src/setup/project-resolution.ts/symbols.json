@@ -1,0 +1,615 @@
+{
+  "module": "packages/eve/src/setup/project-resolution.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:DeploymentState",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DeploymentState",
+      "partial_analysis": false,
+      "value": "\"unlinked\" | \"linked\" | \"deployed\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:DeploymentInfo:state",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "state",
+          "partial_analysis": false,
+          "return_type": ": DeploymentState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:DeploymentInfo:projectId",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:DeploymentInfo:orgId",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "orgId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:DeploymentInfo:productionUrl",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "productionUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/project-resolution.ts:DeploymentInfo",
+      "kind": "interface",
+      "line_range": [
+        16,
+        21
+      ],
+      "name": "DeploymentInfo",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:VercelProjectEnvironmentSchema",
+      "kind": "variable",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "VercelProjectEnvironmentSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:VercelProjectReference",
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "VercelProjectReference",
+      "partial_analysis": false,
+      "value": "VercelProjectLink;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:projectReferenceFromEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "projectReferenceFromEnvironment",
+      "params": [
+        {
+          "name": "environment",
+          "optional": false,
+          "type": "Readonly<Record<string, string | undefined>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelProjectReference | undefined",
+      "signature": "export function projectReferenceFromEnvironment(environment: Readonly<Record<string, string | undefined>>) -> VercelProjectReference | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:assertNoLegacyProjectLinkDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        44,
+        55
+      ],
+      "name": "assertNoLegacyProjectLinkDirectory",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function assertNoLegacyProjectLinkDirectory(projectRoot: string) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:readProjectLink",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        58,
+        63
+      ],
+      "name": "readProjectLink",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectReference | undefined>",
+      "signature": "export function readProjectLink(projectPath: string) -> Promise<VercelProjectReference | undefined>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:VercelApiProject:targets",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "targets",
+          "partial_analysis": false,
+          "return_type": ": { production?: { alias?: unknown } }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/project-resolution.ts:VercelApiProject",
+      "kind": "interface",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "VercelApiProject",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:VercelProjectOperationOptions:signal",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/project-resolution.ts:VercelProjectOperationOptions",
+      "kind": "interface",
+      "line_range": [
+        70,
+        72
+      ],
+      "name": "VercelProjectOperationOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:pickShortestAlias",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        84
+      ],
+      "name": "pickShortestAlias",
+      "params": [
+        {
+          "name": "aliases",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function pickShortestAlias(aliases: unknown) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:fetchProductionAlias",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        86,
+        105
+      ],
+      "name": "fetchProductionAlias",
+      "params": [
+        {
+          "name": "projectId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "orgId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function fetchProductionAlias(projectId: string, orgId: string, projectPath: string, options: VercelProjectOperationOptions) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:detectDeployment",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        110,
+        131
+      ],
+      "name": "detectDeployment",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DeploymentInfo>",
+      "signature": "export function detectDeployment(projectPath: string, options: VercelProjectOperationOptions) -> Promise<DeploymentInfo>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:ProjectIdentity:projectName",
+          "kind": "property",
+          "line_range": [
+            135,
+            135
+          ],
+          "name": "projectName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:ProjectIdentity:teamName",
+          "kind": "property",
+          "line_range": [
+            137,
+            137
+          ],
+          "name": "teamName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/project-resolution.ts:ProjectIdentity",
+      "kind": "interface",
+      "line_range": [
+        134,
+        138
+      ],
+      "name": "ProjectIdentity",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:VercelApiNamed:name",
+          "kind": "property",
+          "line_range": [
+            141,
+            141
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/project-resolution.ts:VercelApiNamed:slug",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/project-resolution.ts:VercelApiNamed",
+      "kind": "interface",
+      "line_range": [
+        140,
+        143
+      ],
+      "name": "VercelApiNamed",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:fetchVercelName",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        146,
+        165
+      ],
+      "name": "fetchVercelName",
+      "params": [
+        {
+          "name": "apiPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "orgId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function fetchVercelName(apiPath: string, orgId: string, projectPath: string, options: VercelProjectOperationOptions) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:detectProjectIdentity",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        178,
+        201
+      ],
+      "name": "detectProjectIdentity",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProjectIdentity | undefined>",
+      "signature": "export function detectProjectIdentity(projectPath: string, options: VercelProjectOperationOptions) -> Promise<ProjectIdentity | undefined>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:ProjectResolution",
+      "kind": "type_alias",
+      "line_range": [
+        203,
+        206
+      ],
+      "name": "ProjectResolution",
+      "partial_analysis": false,
+      "value": "| { kind: \"unresolved\" }\r\n  | { kind: \"linked\"; projectId: string }\r\n  | { kind: \"deployed\"; projectId: string; productionUrl: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:projectResolutionFromDeployment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        208,
+        220
+      ],
+      "name": "projectResolutionFromDeployment",
+      "params": [
+        {
+          "name": "deployment",
+          "optional": false,
+          "type": "DeploymentInfo"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function projectResolutionFromDeployment(deployment: DeploymentInfo) -> ProjectResolution",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:detectProjectResolution",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        226,
+        231
+      ],
+      "name": "detectProjectResolution",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProjectResolution>",
+      "signature": "export function detectProjectResolution(projectRoot: string, options: VercelProjectOperationOptions) -> Promise<ProjectResolution>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:mergeProjectResolution",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        233,
+        240
+      ],
+      "name": "mergeProjectResolution",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "ProjectResolution"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function mergeProjectResolution(current: ProjectResolution, next: ProjectResolution) -> ProjectResolution",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:projectResolutionFromDeployResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        242,
+        253
+      ],
+      "name": "projectResolutionFromDeployResult",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        },
+        {
+          "name": "deploy",
+          "optional": false,
+          "type": "{ deployed: boolean; productionUrl?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function projectResolutionFromDeployResult(project: ProjectResolution, deploy: { deployed: boolean; productionUrl?: string }) -> ProjectResolution",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:isProjectResolved",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        255,
+        257
+      ],
+      "name": "isProjectResolved",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isProjectResolved(project: ProjectResolution) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/project-resolution.ts:projectProductionUrlFromResolution",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        259,
+        261
+      ],
+      "name": "projectProductionUrlFromResolution",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function projectProductionUrlFromResolution(project: ProjectResolution) -> string | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "deriveEveWorkflowQueuePrefix": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/internal/workflow/queue-namespace.ts:deriveEveWorkflowQueuePrefix"
+    }
+  ],
+  "installEveWorkflowQueueNamespace": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 0,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 21
+      },
+      "symbol": "packages/eve/src/internal/workflow/queue-namespace.ts:installEveWorkflowQueueNamespace"
+    }
+  ],
+  "resolveLocalWorkflowWorldDataDirectory": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 23
+      },
+      "symbol": "packages/eve/src/internal/workflow/local-world-data-directory.ts:resolveLocalWorkflowWorldDataDirectory"
+    }
+  ],
+  "resolvePackageRoot": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageRoot"
+    }
+  ],
+  "resolveWorkflowTestOutputDirectory": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 19
+      },
+      "symbol": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:resolveWorkflowTestOutputDirectory"
+    }
+  ],
+  "setWorld": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 0,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 33
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:setWorld"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/test/setup/workflow-setup.ts",
+        "line": 36
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:setWorld"
+    }
+  ]
+}

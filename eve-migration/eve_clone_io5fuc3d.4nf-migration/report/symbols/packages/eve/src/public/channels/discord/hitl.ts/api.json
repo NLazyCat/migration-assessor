@@ -1,0 +1,148 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        16,
+        21
+      ],
+      "name": "DISCORD_COMPONENT_TYPE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_COMPONENT_TYPE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "DISCORD_HITL_CUSTOM_ID_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_HITL_CUSTOM_ID_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "DISCORD_HITL_FREEFORM_CUSTOM_ID_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_HITL_FREEFORM_CUSTOM_ID_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "DISCORD_HITL_FREEFORM_TEXT_INPUT_ID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_HITL_FREEFORM_TEXT_INPUT_ID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        122
+      ],
+      "name": "renderInputRequestComponents",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly Readonly<Record<string, unknown>>[]",
+      "signature": "export function renderInputRequestComponents(request: InputRequest) -> readonly Readonly<Record<string, unknown>>[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        125,
+        160
+      ],
+      "name": "buildFreeformModalResponse",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly customId: string;\r\n  readonly prompt: string | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function buildFreeformModalResponse(input: {\r\n  readonly customId: string;\r\n  readonly prompt: string | undefined;\r\n}) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        163,
+        165
+      ],
+      "name": "isDiscordFreeformComponent",
+      "params": [
+        {
+          "name": "customId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isDiscordFreeformComponent(customId: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        172,
+        188
+      ],
+      "name": "deriveComponentInputResponses",
+      "params": [
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "DiscordComponentInteraction"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly InputResponse[]",
+      "signature": "export function deriveComponentInputResponses(interaction: DiscordComponentInteraction) -> readonly InputResponse[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        195,
+        202
+      ],
+      "name": "deriveModalInputResponses",
+      "params": [
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "DiscordModalSubmitInteraction"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly InputResponse[]",
+      "signature": "export function deriveModalInputResponses(interaction: DiscordModalSubmitInteraction) -> readonly InputResponse[]"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/discord/hitl.ts"
+}

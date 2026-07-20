@@ -1,0 +1,62 @@
+{
+  "SandboxTemplateNotProvisionedError": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "line": 818
+      },
+      "symbol": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxTemplateNotProvisionedError"
+    }
+  ],
+  "createVercelSandbox": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 58,
+        "file": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "line": 67
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/vercel.ts:createVercelSandbox"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "line": 68
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/vercel.ts:createVercelSandbox"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "line": 137
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/vercel.ts:createVercelSandbox"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "line": 183
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/vercel.ts:createVercelSandbox"
+    }
+  ],
+  "vercel": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "line": 1689
+      },
+      "symbol": "packages/eve/src/public/sandbox/backends/vercel.ts:vercel"
+    }
+  ]
+}

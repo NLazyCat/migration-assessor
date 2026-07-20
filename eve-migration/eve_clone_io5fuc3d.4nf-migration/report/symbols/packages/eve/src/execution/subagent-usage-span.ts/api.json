@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        15,
+        40
+      ],
+      "name": "recordSubagentUsageSpans",
+      "params": [
+        {
+          "name": "results",
+          "optional": false,
+          "type": "readonly RuntimeActionResult[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function recordSubagentUsageSpans(results: readonly RuntimeActionResult[]) -> void"
+    }
+  ],
+  "module": "packages/eve/src/execution/subagent-usage-span.ts"
+}

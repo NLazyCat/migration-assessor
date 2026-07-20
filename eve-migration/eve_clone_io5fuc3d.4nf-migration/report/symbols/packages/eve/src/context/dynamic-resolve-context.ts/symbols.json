@@ -1,0 +1,45 @@
+{
+  "module": "packages/eve/src/context/dynamic-resolve-context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-resolve-context.ts:ReadableContext",
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "ReadableContext",
+      "partial_analysis": false,
+      "value": "Pick<AlsContext, \"get\">;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-resolve-context.ts:buildResolveContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        49
+      ],
+      "name": "buildResolveContext",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ReadableContext"
+        },
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DynamicResolveContext",
+      "signature": "export function buildResolveContext(ctx: ReadableContext, messages: readonly ModelMessage[]) -> DynamicResolveContext",
+      "visibility": "Public"
+    }
+  ]
+}

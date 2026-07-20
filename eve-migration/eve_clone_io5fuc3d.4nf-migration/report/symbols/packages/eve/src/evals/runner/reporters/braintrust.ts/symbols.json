@@ -1,0 +1,453 @@
+{
+  "module": "packages/eve/src/evals/runner/reporters/braintrust.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig:projectId",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig:projectName",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "projectName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig:experimentName",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "experimentName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig:baseExperimentName",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "baseExperimentName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig:baseExperimentId",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "baseExperimentId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig:update",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "update",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporterConfig",
+      "kind": "interface",
+      "line_range": [
+        9,
+        22
+      ],
+      "name": "BraintrustReporterConfig",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustSdk",
+      "kind": "interface",
+      "line_range": [
+        30,
+        48
+      ],
+      "name": "BraintrustSdk",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperiment",
+      "kind": "interface",
+      "line_range": [
+        50,
+        64
+      ],
+      "name": "BraintrustExperiment",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperimentSummary:experimentName",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "experimentName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperimentSummary:experimentUrl",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "experimentUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperimentSummary:projectName",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "projectName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperimentSummary:projectUrl",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "projectUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperimentSummary:scores",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "scores",
+          "partial_analysis": false,
+          "return_type": ": Record<string, { name: string; score: number; diff?: number }>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustExperimentSummary",
+      "kind": "interface",
+      "line_range": [
+        66,
+        72
+      ],
+      "name": "BraintrustExperimentSummary",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:Braintrust",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "Braintrust",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "BraintrustReporterConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EvalReporter",
+      "signature": "export function Braintrust(config: BraintrustReporterConfig) -> EvalReporter",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:#config",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "#config",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:#sdk",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "#sdk",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:#experiment",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "#experiment",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:#evaluations",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "#evaluations",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            96,
+            98
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "config",
+              "optional": false,
+              "type": "BraintrustReporterConfig"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:onRunStart",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            100,
+            126
+          ],
+          "name": "onRunStart",
+          "params": [
+            {
+              "name": "evaluations",
+              "optional": false,
+              "type": "readonly EveEval[]"
+            },
+            {
+              "name": "target",
+              "optional": false,
+              "type": "EveEvalTarget"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:onEvalComplete",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            128,
+            181
+          ],
+          "name": "onEvalComplete",
+          "params": [
+            {
+              "name": "result",
+              "optional": false,
+              "type": "EveEvalResult"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter:onRunComplete",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            183,
+            202
+          ],
+          "name": "onRunComplete",
+          "params": [
+            {
+              "name": "_summary",
+              "optional": false,
+              "type": "EveEvalRunSummary"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BraintrustReporter",
+      "kind": "class",
+      "line_range": [
+        90,
+        203
+      ],
+      "name": "BraintrustReporter",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:BRAINTRUST_PACKAGE",
+      "kind": "variable",
+      "line_range": [
+        214,
+        214
+      ],
+      "name": "BRAINTRUST_PACKAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:loadBraintrustSdk",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        216,
+        229
+      ],
+      "name": "loadBraintrustSdk",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<BraintrustSdk>",
+      "signature": "export function loadBraintrustSdk() -> Promise<BraintrustSdk>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:resolveTags",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        231,
+        242
+      ],
+      "name": "resolveTags",
+      "params": [
+        {
+          "name": "evaluations",
+          "optional": false,
+          "type": "readonly EveEval[]"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function resolveTags(evaluations: readonly EveEval[], target: EveEvalTarget) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.ts:resolveExperimentMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        244,
+        254
+      ],
+      "name": "resolveExperimentMetadata",
+      "params": [
+        {
+          "name": "evaluations",
+          "optional": false,
+          "type": "readonly EveEval[]"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function resolveExperimentMetadata(evaluations: readonly EveEval[], target: EveEvalTarget) -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

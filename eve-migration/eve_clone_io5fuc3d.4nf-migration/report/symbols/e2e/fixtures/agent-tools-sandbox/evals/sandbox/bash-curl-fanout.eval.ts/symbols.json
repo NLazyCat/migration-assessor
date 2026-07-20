@@ -1,0 +1,344 @@
+{
+  "module": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:BASH_TOOL",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "BASH_TOOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:MINIMUM_CURL_CALLS",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "MINIMUM_CURL_CALLS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:REQUESTS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        19
+      ],
+      "name": "REQUESTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:CurlMeasurement:label",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:CurlMeasurement:query",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "query",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:CurlMeasurement:serverCompletedAtMs",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "serverCompletedAtMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:CurlMeasurement:serverReceivedAtMs",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "serverReceivedAtMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:CurlMeasurement",
+      "kind": "interface",
+      "line_range": [
+        21,
+        26
+      ],
+      "name": "CurlMeasurement",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:commandFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        63
+      ],
+      "name": "commandFor",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "(typeof REQUESTS)[number]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function commandFor(request: (typeof REQUESTS)[number]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:consecutiveCurlStartsOverlap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        90
+      ],
+      "name": "consecutiveCurlStartsOverlap",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly expectedRequests: readonly { readonly label: string; readonly query: string }[];\r\n  readonly minimumCalls: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function consecutiveCurlStartsOverlap(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly expectedRequests: readonly { readonly label: string; readonly query: string }[];\r\n  readonly minimumCalls: number;\r\n}) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:consecutiveStartsOverlap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        111
+      ],
+      "name": "consecutiveStartsOverlap",
+      "params": [
+        {
+          "name": "measurements",
+          "optional": false,
+          "type": "readonly CurlMeasurement[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function consecutiveStartsOverlap(measurements: readonly CurlMeasurement[]) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:curlMeasurements",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        120
+      ],
+      "name": "curlMeasurements",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly CurlMeasurement[]",
+      "signature": "export function curlMeasurements(events: readonly HandleMessageStreamEvent[]) -> readonly CurlMeasurement[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:parseCurlMeasurement",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        122,
+        150
+      ],
+      "name": "parseCurlMeasurement",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly CurlMeasurement[]",
+      "signature": "export function parseCurlMeasurement(value: unknown) -> readonly CurlMeasurement[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:formatCurlFanoutTrace",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        152,
+        159
+      ],
+      "name": "formatCurlFanoutTrace",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatCurlFanoutTrace(events: readonly HandleMessageStreamEvent[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:parseJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        161,
+        167
+      ],
+      "name": "parseJson",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function parseJson(value: string) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:readField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        169,
+        172
+      ],
+      "name": "readField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "field",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function readField(value: unknown, field: string) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:readFiniteNumberField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        174,
+        177
+      ],
+      "name": "readFiniteNumberField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "field",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readFiniteNumberField(value: unknown, field: string) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools-sandbox/evals/sandbox/bash-curl-fanout.eval.ts:readStringField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        179,
+        182
+      ],
+      "name": "readStringField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "field",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readStringField(value: unknown, field: string) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

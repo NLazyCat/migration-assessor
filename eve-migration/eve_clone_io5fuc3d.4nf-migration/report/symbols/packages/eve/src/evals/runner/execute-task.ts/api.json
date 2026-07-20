@@ -1,0 +1,88 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        37,
+        42
+      ],
+      "name": "ExecuteTaskResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExecuteTaskResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "result",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalTaskResult",
+      "signature": "result: : EveEvalTaskResult"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "assertions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly AssertionResult[]",
+      "signature": "assertions: : readonly AssertionResult[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "error",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "error?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "skipReason",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "skipReason?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        91
+      ],
+      "name": "executeTask",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ExecuteTaskOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExecuteTaskResult>",
+      "signature": "export function executeTask(options: ExecuteTaskOptions) -> Promise<ExecuteTaskResult>"
+    }
+  ],
+  "module": "packages/eve/src/evals/runner/execute-task.ts"
+}

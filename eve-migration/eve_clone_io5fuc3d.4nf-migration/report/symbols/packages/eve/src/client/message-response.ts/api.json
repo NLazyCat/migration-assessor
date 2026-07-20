@@ -1,0 +1,69 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TOutput"
+      ],
+      "kind": "class",
+      "line_range": [
+        26,
+        81
+      ],
+      "name": "MessageResponse",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MessageResponseInput"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class MessageResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        41,
+        45
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MessageResponseInput"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MessageResponse::constructor(input: MessageResponseInput) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        51,
+        66
+      ],
+      "name": "result",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<MessageResult<TOutput>>",
+      "signature": "MessageResponse::result() -> Promise<MessageResult<TOutput>>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        73,
+        80
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AsyncIterator<HandleMessageStreamEvent>",
+      "signature": "MessageResponse::[expr]() -> AsyncIterator<HandleMessageStreamEvent>"
+    }
+  ],
+  "module": "packages/eve/src/client/message-response.ts"
+}

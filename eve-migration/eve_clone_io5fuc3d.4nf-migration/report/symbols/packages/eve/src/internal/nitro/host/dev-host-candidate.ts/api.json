@@ -1,0 +1,62 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "DevelopmentWorkerPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentWorkerPayload { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "entry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "entry: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "workerData",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, unknown>>",
+      "signature": "workerData: : Readonly<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        21,
+        74
+      ],
+      "name": "buildDevelopmentHostCandidate",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly host: PreparedDevelopmentApplicationHost;\r\n  readonly nitro: Nitro;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentWorkerPayload>",
+      "signature": "export function buildDevelopmentHostCandidate(input: {\r\n  readonly host: PreparedDevelopmentApplicationHost;\r\n  readonly nitro: Nitro;\r\n}) -> Promise<DevelopmentWorkerPayload>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts"
+}

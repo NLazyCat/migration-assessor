@@ -1,0 +1,343 @@
+{
+  "module": "packages/eve/src/public/channels/github/githubChannel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:SECRET",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "SECRET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:prContextFetch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        47
+      ],
+      "name": "prContextFetch",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function prContextFetch() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:asCompiled",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "asCompiled",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledChannel<T>",
+      "signature": "export function asCompiled(channel: unknown) -> CompiledChannel<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:getAdapter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        56
+      ],
+      "name": "getAdapter",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelAdapter<any>",
+      "signature": "export function getAdapter(channel: unknown) -> ChannelAdapter<any>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:withState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        63
+      ],
+      "name": "withState",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter<any>"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Partial<GitHubChannelState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelAdapter<any>",
+      "signature": "export function withState(adapter: ChannelAdapter<any>, state: Partial<GitHubChannelState>) -> ChannelAdapter<any>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:stubAccessor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "stubAccessor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function stubAccessor() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:createAlsContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        78
+      ],
+      "name": "createAlsContext",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": true,
+          "type": "MockSandbox"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function createAlsContext(sandbox: MockSandbox) -> ContextContainer",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:stubAlsContext",
+      "kind": "variable",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "stubAlsContext",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:callEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        92
+      ],
+      "name": "callEvent",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "any"
+        },
+        {
+          "name": "sandbox",
+          "optional": true,
+          "type": "MockSandbox"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<HandleMessageStreamEvent>",
+      "signature": "export function callEvent(adapter: ChannelAdapter, event: HandleMessageStreamEvent, ctx: any, sandbox: MockSandbox) -> Promise<HandleMessageStreamEvent>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:makeEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        99
+      ],
+      "name": "makeEvent",
+      "params": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": "T"
+        },
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function makeEvent(type: T, data: unknown) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:signedRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        113
+      ],
+      "name": "signedRequest",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function signedRequest(event: string, payload: Record<string, unknown>) -> Request",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:signedRequestWithoutGitHubHeaders",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        125
+      ],
+      "name": "signedRequestWithoutGitHubHeaders",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function signedRequestWithoutGitHubHeaders(payload: Record<string, unknown>) -> Request",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:badlySignedRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        128,
+        140
+      ],
+      "name": "badlySignedRequest",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function badlySignedRequest(event: string, payload: Record<string, unknown>) -> Request",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:basePayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        142,
+        155
+      ],
+      "name": "basePayload",
+      "params": [
+        {
+          "name": "extra",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function basePayload(extra: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/githubChannel.test.ts:firePost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        157,
+        191
+      ],
+      "name": "firePost",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly response: Response;\r\n  readonly send: ReturnType<typeof vi.fn>;\r\n  readonly waitUntil: ReturnType<typeof vi.fn>;\r\n}>",
+      "signature": "export function firePost(channel: unknown, request: Request) -> Promise<{\r\n  readonly response: Response;\r\n  readonly send: ReturnType<typeof vi.fn>;\r\n  readonly waitUntil: ReturnType<typeof vi.fn>;\r\n}>",
+      "visibility": "Private"
+    }
+  ]
+}

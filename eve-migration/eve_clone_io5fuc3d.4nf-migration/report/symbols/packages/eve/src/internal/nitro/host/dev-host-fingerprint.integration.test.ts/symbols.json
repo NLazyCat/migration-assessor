@@ -1,0 +1,105 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:temporaryDirectories",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "temporaryDirectories",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:HostVariant:channels",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "channels",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest[\"channels\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:HostVariant:instrumentationSource",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "instrumentationSource",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:HostVariant:schedules",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest[\"schedules\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:HostVariant:workflowWorld",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "workflowWorld",
+          "partial_analysis": false,
+          "return_type": ": \"local\" | \"vercel\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:HostVariant",
+      "kind": "interface",
+      "line_range": [
+        21,
+        26
+      ],
+      "name": "HostVariant",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts:createHost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        28,
+        63
+      ],
+      "name": "createHost",
+      "params": [
+        {
+          "name": "variant",
+          "optional": false,
+          "type": "HostVariant"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PreparedDevelopmentApplicationHost>",
+      "signature": "export function createHost(variant: HostVariant) -> Promise<PreparedDevelopmentApplicationHost>",
+      "visibility": "Private"
+    }
+  ]
+}

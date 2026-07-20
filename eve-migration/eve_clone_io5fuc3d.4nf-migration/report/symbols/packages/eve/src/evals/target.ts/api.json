@@ -1,0 +1,67 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        44
+      ],
+      "name": "resolveEvalTargetHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly client: Client;\r\n  readonly expectedAgentName?: string;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveEvalTargetHandle>",
+      "signature": "export function resolveEvalTargetHandle(input: {\r\n  readonly client: Client;\r\n  readonly expectedAgentName?: string;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}) -> Promise<EveEvalTargetHandle>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        46,
+        59
+      ],
+      "name": "createEvalTargetHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly capabilities: EveEvalTargetCapabilities;\r\n  readonly client: Client;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTargetHandle",
+      "signature": "export function createEvalTargetHandle(input: {\r\n  readonly capabilities: EveEvalTargetCapabilities;\r\n  readonly client: Client;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}) -> EveEvalTargetHandle"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        61,
+        75
+      ],
+      "name": "scopeEvalTargetHandle",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTargetHandle"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly sessions?: EvalSessionManager;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTargetHandle",
+      "signature": "export function scopeEvalTargetHandle(target: EveEvalTargetHandle, input: {\r\n    readonly sessions?: EvalSessionManager;\r\n  }) -> EveEvalTargetHandle"
+    }
+  ],
+  "module": "packages/eve/src/evals/target.ts"
+}

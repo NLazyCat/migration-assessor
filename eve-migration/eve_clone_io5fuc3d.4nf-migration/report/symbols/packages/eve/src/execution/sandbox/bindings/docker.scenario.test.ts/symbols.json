@@ -1,0 +1,66 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/docker.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.scenario.test.ts:runDockerScenarios",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "runDockerScenarios",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.scenario.test.ts:TEST_IMAGE",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "TEST_IMAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.scenario.test.ts:collectStream",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        285,
+        300
+      ],
+      "name": "collectStream",
+      "params": [
+        {
+          "name": "stream",
+          "optional": false,
+          "type": "ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function collectStream(stream: ReadableStream<Uint8Array>) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

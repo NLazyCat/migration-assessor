@@ -1,0 +1,145 @@
+{
+  "module": "packages/eve/src/evals/judge.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/judge.ts:JudgeDeps:collector",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "collector",
+          "partial_analysis": false,
+          "return_type": ": AssertionCollector",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/judge.ts:JudgeDeps:getReply",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "getReply",
+          "partial_analysis": false,
+          "return_type": ": () => unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/judge.ts:JudgeDeps:getInput",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "getInput",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/judge.ts:JudgeDeps:judge",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "judge",
+          "partial_analysis": false,
+          "return_type": ": EveEvalJudgeConfig | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/judge.ts:JudgeDeps",
+      "kind": "interface",
+      "line_range": [
+        15,
+        20
+      ],
+      "name": "JudgeDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/judge.ts:GraderCall",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "GraderCall",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly model: LanguageModel;\r\n  readonly modelOptions: AgentModelOptionsDefinition | undefined;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/judge.ts:buildJudgeContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        87
+      ],
+      "name": "buildJudgeContext",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "JudgeDeps"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JudgeContext",
+      "signature": "export function buildJudgeContext(deps: JudgeDeps) -> JudgeContext",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/judge.ts:AutoevalsClientFields",
+      "kind": "type_alias",
+      "line_range": [
+        89,
+        92
+      ],
+      "name": "AutoevalsClientFields",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly model: string;\r\n  readonly client: ReturnType<typeof createAutoevalsClient>;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/judge.ts:client",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        95,
+        108
+      ],
+      "name": "client",
+      "params": [
+        {
+          "name": "model",
+          "optional": false,
+          "type": "LanguageModel"
+        },
+        {
+          "name": "modelOptions",
+          "optional": false,
+          "type": "AgentModelOptionsDefinition | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AutoevalsClientFields",
+      "signature": "export function client(model: LanguageModel, modelOptions: AgentModelOptionsDefinition | undefined) -> AutoevalsClientFields",
+      "visibility": "Private"
+    }
+  ]
+}

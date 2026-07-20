@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/execution/skills/instructions.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/skills/instructions.test.ts:createTestSkill",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        20
+      ],
+      "name": "createTestSkill",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<CompiledSkillDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledSkillDefinition",
+      "signature": "export function createTestSkill(overrides: Partial<CompiledSkillDefinition>) -> CompiledSkillDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

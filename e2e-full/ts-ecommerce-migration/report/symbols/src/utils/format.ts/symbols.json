@@ -1,0 +1,81 @@
+{
+  "module": "src/utils/format.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "src/utils/format.ts:formatPrice",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1,
+        3
+      ],
+      "name": "formatPrice",
+      "params": [
+        {
+          "name": "amount",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "currency",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPrice(amount: number, currency: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "src/utils/format.ts:formatDate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "formatDate",
+      "params": [
+        {
+          "name": "date",
+          "optional": false,
+          "type": "Date | string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDate(date: Date | string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "src/utils/format.ts:truncateString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "truncateString",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "maxLength",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function truncateString(value: string, maxLength: number) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

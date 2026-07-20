@@ -1,0 +1,196 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        31
+      ],
+      "name": "GrepInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GrepInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "context",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "context?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "glob",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "glob?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "ignoreCase",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "ignoreCase?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "limit",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "limit?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "literal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "literal?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "pattern",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "pattern: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        36,
+        41
+      ],
+      "name": "GrepResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GrepResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "content: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "matchCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "matchCount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "truncated",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "truncated: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        107
+      ],
+      "name": "executeGrepOnSandbox",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "GrepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GrepResult>",
+      "signature": "export function executeGrepOnSandbox(sandbox: SandboxSession, args: GrepInput) -> Promise<GrepResult>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/grep-tool.ts"
+}

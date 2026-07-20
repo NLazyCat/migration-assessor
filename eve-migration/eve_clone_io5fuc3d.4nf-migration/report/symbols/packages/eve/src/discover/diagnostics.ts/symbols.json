@@ -1,0 +1,184 @@
+{
+  "module": "packages/eve/src/discover/diagnostics.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:DiscoverDiagnosticSeverity",
+      "kind": "type_alias",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "DiscoverDiagnosticSeverity",
+      "partial_analysis": false,
+      "value": "z.infer<typeof discoverDiagnosticSeveritySchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:discoverDiagnosticSeveritySchema",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "discoverDiagnosticSeveritySchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:DiscoverDiagnostic",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "DiscoverDiagnostic",
+      "partial_analysis": false,
+      "value": "z.infer<typeof discoverDiagnosticSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:discoverDiagnosticSchema",
+      "kind": "variable",
+      "line_range": [
+        21,
+        40
+      ],
+      "name": "discoverDiagnosticSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:DiscoverDiagnosticsSummary",
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "DiscoverDiagnosticsSummary",
+      "partial_analysis": false,
+      "value": "z.infer<typeof discoverDiagnosticsSummarySchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:discoverDiagnosticsSummarySchema",
+      "kind": "variable",
+      "line_range": [
+        50,
+        55
+      ],
+      "name": "discoverDiagnosticsSummarySchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:DISCOVER_PROJECT_NOT_FOUND",
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "DISCOVER_PROJECT_NOT_FOUND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:createDiscoverErrorDiagnostic",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        72
+      ],
+      "name": "createDiscoverErrorDiagnostic",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Omit<DiscoverDiagnostic, \"severity\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscoverDiagnostic",
+      "signature": "export function createDiscoverErrorDiagnostic(input: Omit<DiscoverDiagnostic, \"severity\">) -> DiscoverDiagnostic",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:createDiscoverWarningDiagnostic",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        77,
+        84
+      ],
+      "name": "createDiscoverWarningDiagnostic",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Omit<DiscoverDiagnostic, \"severity\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscoverDiagnostic",
+      "signature": "export function createDiscoverWarningDiagnostic(input: Omit<DiscoverDiagnostic, \"severity\">) -> DiscoverDiagnostic",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:summarizeDiscoverDiagnostics",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        107
+      ],
+      "name": "summarizeDiscoverDiagnostics",
+      "params": [
+        {
+          "name": "diagnostics",
+          "optional": false,
+          "type": "readonly DiscoverDiagnostic[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscoverDiagnosticsSummary",
+      "signature": "export function summarizeDiscoverDiagnostics(diagnostics: readonly DiscoverDiagnostic[]) -> DiscoverDiagnosticsSummary",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/diagnostics.ts:hasDiscoverErrors",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        114
+      ],
+      "name": "hasDiscoverErrors",
+      "params": [
+        {
+          "name": "diagnostics",
+          "optional": false,
+          "type": "readonly DiscoverDiagnostic[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasDiscoverErrors(diagnostics: readonly DiscoverDiagnostic[]) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

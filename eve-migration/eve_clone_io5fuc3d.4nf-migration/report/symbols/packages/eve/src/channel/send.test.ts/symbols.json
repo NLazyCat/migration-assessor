@@ -1,0 +1,56 @@
+{
+  "module": "packages/eve/src/channel/send.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.test.ts:createMockRunHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        15
+      ],
+      "name": "createMockRunHandle",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RunHandle",
+      "signature": "export function createMockRunHandle() -> RunHandle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.test.ts:createRuntime",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        17,
+        25
+      ],
+      "name": "createRuntime",
+      "params": [
+        {
+          "name": "deliverError",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Runtime",
+      "signature": "export function createRuntime(deliverError: unknown) -> Runtime",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.test.ts:ADAPTER",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "ADAPTER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    }
+  ]
+}

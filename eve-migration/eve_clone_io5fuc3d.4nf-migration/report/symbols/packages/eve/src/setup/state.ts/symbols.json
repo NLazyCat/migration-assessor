@@ -1,0 +1,698 @@
+{
+  "module": "packages/eve/src/setup/state.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ChatPreference",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "ChatPreference",
+      "partial_analysis": false,
+      "value": "\"web\" | \"slack\" | \"repl\" | \"api\" | \"skip\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:AiGatewayEnvFile",
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "AiGatewayEnvFile",
+      "partial_analysis": false,
+      "value": "\".env.local\" | \".env\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ResolvedAiGatewayCredentials",
+      "kind": "type_alias",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "ResolvedAiGatewayCredentials",
+      "partial_analysis": false,
+      "value": "| { kind: \"unresolved\" }\r\n  | { kind: \"api-key\"; envFile: AiGatewayEnvFile };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ResolvedProjectPath",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "ResolvedProjectPath",
+      "partial_analysis": false,
+      "value": "| { kind: \"unresolved\"; inPlace: boolean }\r\n  | { kind: \"resolved\"; inPlace: boolean; path: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ArgsHeadlessProject:skipVercel",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "skipVercel",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ArgsHeadlessProject:team",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "team",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ArgsHeadlessProject:project",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/state.ts:ArgsHeadlessProject",
+      "kind": "interface",
+      "line_range": [
+        35,
+        42
+      ],
+      "name": "ArgsHeadlessProject",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ArgsHeadlessAiGateway:apiKey",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "apiKey",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/state.ts:ArgsHeadlessAiGateway",
+      "kind": "interface",
+      "line_range": [
+        48,
+        51
+      ],
+      "name": "ArgsHeadlessAiGateway",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ProvisioningMode",
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        61
+      ],
+      "name": "ProvisioningMode",
+      "partial_analysis": false,
+      "value": "| { headless: true; project: ArgsHeadlessProject; aiGateway: ArgsHeadlessAiGateway }\r\n  | { headless: false };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:VercelProjectIdentity:projectId",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:VercelProjectIdentity:projectName",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "projectName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/state.ts:VercelProjectIdentity",
+      "kind": "interface",
+      "line_range": [
+        64,
+        67
+      ],
+      "name": "VercelProjectIdentity",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ResolvedVercelProject",
+      "kind": "type_alias",
+      "line_range": [
+        74,
+        77
+      ],
+      "name": "ResolvedVercelProject",
+      "partial_analysis": false,
+      "value": "| { kind: \"none\" }\r\n  | { kind: \"new\"; project: string; team: string }\r\n  | { kind: \"existing\"; project: VercelProjectIdentity; team: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ResolvedVercelProjectSpec",
+      "kind": "type_alias",
+      "line_range": [
+        80,
+        83
+      ],
+      "name": "ResolvedVercelProjectSpec",
+      "partial_analysis": false,
+      "value": "Extract<\r\n  ResolvedVercelProject,\r\n  { kind: \"new\" | \"existing\" }\r\n>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:ResolvedAiGateway",
+      "kind": "type_alias",
+      "line_range": [
+        90,
+        93
+      ],
+      "name": "ResolvedAiGateway",
+      "partial_analysis": false,
+      "value": "| { kind: \"inherit\" }\r\n  | { kind: \"byok\"; apiGatewayKey: string }\r\n  | { kind: \"byop\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:WiringMode",
+      "kind": "type_alias",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "WiringMode",
+      "partial_analysis": false,
+      "value": "\"gateway\" | \"self\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:SetupMode",
+      "kind": "type_alias",
+      "line_range": [
+        110,
+        110
+      ],
+      "name": "SetupMode",
+      "partial_analysis": false,
+      "value": "\"complete\" | \"one-shot\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ConnectionPlan:slug",
+          "kind": "property",
+          "line_range": [
+            119,
+            119
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ConnectionPlan:protocol",
+          "kind": "property",
+          "line_range": [
+            120,
+            120
+          ],
+          "name": "protocol",
+          "partial_analysis": false,
+          "return_type": ": ConnectionProtocol",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ConnectionPlan:entry",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "entry",
+          "partial_analysis": false,
+          "return_type": ": ConnectionInput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:ConnectionPlan:provision",
+          "kind": "property",
+          "line_range": [
+            122,
+            126
+          ],
+          "name": "provision",
+          "partial_analysis": false,
+          "return_type": ":\r\n    | { kind: \"connect\"; service: string }\r\n    | { kind: \"connect-manual\" }\r\n    | { kind: \"command-hint\"; service: string }\r\n    | { kind: \"none\" }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/state.ts:ConnectionPlan",
+      "kind": "interface",
+      "line_range": [
+        118,
+        127
+      ],
+      "name": "ConnectionPlan",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:agentName",
+          "kind": "property",
+          "line_range": [
+            135,
+            135
+          ],
+          "name": "agentName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:setupMode",
+          "kind": "property",
+          "line_range": [
+            137,
+            137
+          ],
+          "name": "setupMode",
+          "partial_analysis": false,
+          "return_type": ": SetupMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:modelId",
+          "kind": "property",
+          "line_range": [
+            138,
+            138
+          ],
+          "name": "modelId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:modelWiring",
+          "kind": "property",
+          "line_range": [
+            139,
+            139
+          ],
+          "name": "modelWiring",
+          "partial_analysis": false,
+          "return_type": ": WiringMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:channelSelection",
+          "kind": "property",
+          "line_range": [
+            141,
+            141
+          ],
+          "name": "channelSelection",
+          "partial_analysis": false,
+          "return_type": ": ChannelKind[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:connectionSelection",
+          "kind": "property",
+          "line_range": [
+            143,
+            143
+          ],
+          "name": "connectionSelection",
+          "partial_analysis": false,
+          "return_type": ": ConnectionPlan[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:vercelProject",
+          "kind": "property",
+          "line_range": [
+            145,
+            145
+          ],
+          "name": "vercelProject",
+          "partial_analysis": false,
+          "return_type": ": ResolvedVercelProject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:aiGateway",
+          "kind": "property",
+          "line_range": [
+            147,
+            147
+          ],
+          "name": "aiGateway",
+          "partial_analysis": false,
+          "return_type": ": ResolvedAiGateway",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:projectPath",
+          "kind": "property",
+          "line_range": [
+            148,
+            148
+          ],
+          "name": "projectPath",
+          "partial_analysis": false,
+          "return_type": ": ResolvedProjectPath",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:aiGatewayCredentials",
+          "kind": "property",
+          "line_range": [
+            149,
+            149
+          ],
+          "name": "aiGatewayCredentials",
+          "partial_analysis": false,
+          "return_type": ": ResolvedAiGatewayCredentials",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:chat",
+          "kind": "property",
+          "line_range": [
+            150,
+            150
+          ],
+          "name": "chat",
+          "partial_analysis": false,
+          "return_type": ": ChatPreference | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:channels",
+          "kind": "property",
+          "line_range": [
+            155,
+            155
+          ],
+          "name": "channels",
+          "partial_analysis": false,
+          "return_type": ": ChannelKind[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:webScaffolded",
+          "kind": "property",
+          "line_range": [
+            156,
+            156
+          ],
+          "name": "webScaffolded",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:slackScaffolded",
+          "kind": "property",
+          "line_range": [
+            157,
+            157
+          ],
+          "name": "slackScaffolded",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:deploymentDependenciesInstalled",
+          "kind": "property",
+          "line_range": [
+            158,
+            158
+          ],
+          "name": "deploymentDependenciesInstalled",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:project",
+          "kind": "property",
+          "line_range": [
+            160,
+            160
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": ProjectResolution",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:deploymentPending",
+          "kind": "property",
+          "line_range": [
+            161,
+            161
+          ],
+          "name": "deploymentPending",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:slackbotCreated",
+          "kind": "property",
+          "line_range": [
+            162,
+            162
+          ],
+          "name": "slackbotCreated",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:slackbotAttached",
+          "kind": "property",
+          "line_range": [
+            163,
+            163
+          ],
+          "name": "slackbotAttached",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:slackConnectorUid",
+          "kind": "property",
+          "line_range": [
+            164,
+            164
+          ],
+          "name": "slackConnectorUid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:slackChatUrl",
+          "kind": "property",
+          "line_range": [
+            166,
+            166
+          ],
+          "name": "slackChatUrl",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/state.ts:SetupState:slackWorkspaceName",
+          "kind": "property",
+          "line_range": [
+            167,
+            167
+          ],
+          "name": "slackWorkspaceName",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/state.ts:SetupState",
+      "kind": "interface",
+      "line_range": [
+        134,
+        168
+      ],
+      "name": "SetupState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:createDefaultSetupState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        195
+      ],
+      "name": "createDefaultSetupState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function createDefaultSetupState() -> SetupState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:hasVercelProject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        207,
+        209
+      ],
+      "name": "hasVercelProject",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Pick<SetupState, \"vercelProject\" | \"project\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasVercelProject(state: Pick<SetupState, \"vercelProject\" | \"project\">) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:requireProjectPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        211,
+        216
+      ],
+      "name": "requireProjectPath",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Pick<SetupState, \"projectPath\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function requireProjectPath(state: Pick<SetupState, \"projectPath\">) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/state.ts:snapshotSetupState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        224,
+        236
+      ],
+      "name": "snapshotSetupState",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SetupState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function snapshotSetupState(state: SetupState) -> SetupState",
+      "visibility": "Public"
+    }
+  ]
+}

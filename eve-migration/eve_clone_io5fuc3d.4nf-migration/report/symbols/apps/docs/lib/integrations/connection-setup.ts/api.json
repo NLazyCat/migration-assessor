@@ -1,0 +1,156 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        13,
+        18
+      ],
+      "name": "ConnectionSetup",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionSetup { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "protocols",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionProtocol[]",
+      "signature": "protocols: : ConnectionProtocol[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "authModes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AuthMode[]",
+      "signature": "authModes: : AuthMode[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "variants",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "variants: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        20,
+        21
+      ],
+      "name": "setupKey",
+      "params": [
+        {
+          "name": "protocol",
+          "optional": false,
+          "type": "ConnectionProtocol"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export const setupKey: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        120,
+        131
+      ],
+      "name": "buildConnectionSetup",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSetup",
+      "signature": "export const buildConnectionSetup: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        134,
+        146
+      ],
+      "name": "buildConnectionInstall",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export const buildConnectionInstall: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        149,
+        181
+      ],
+      "name": "buildConnectionConfigure",
+      "params": [
+        {
+          "name": "integration",
+          "optional": false,
+          "type": "Integration"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export const buildConnectionConfigure: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "authModeButtonLabel",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export const authModeButtonLabel: unknown"
+    }
+  ],
+  "module": "apps/docs/lib/integrations/connection-setup.ts"
+}

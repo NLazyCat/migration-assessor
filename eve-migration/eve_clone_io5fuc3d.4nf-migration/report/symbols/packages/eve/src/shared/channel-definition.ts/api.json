@@ -1,0 +1,230 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        19
+      ],
+      "name": "FetchFileResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FetchFileResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "bytes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Buffer",
+      "signature": "bytes: : Buffer"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "mediaType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "mediaType?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "filename",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "filename?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "FetchFileFunction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type FetchFileFunction = (url: string) => Promise<Buffer | FetchFileResult | null>;"
+    },
+    {
+      "generics": [
+        "TReceiveTarget"
+      ],
+      "kind": "interface",
+      "line_range": [
+        27,
+        31
+      ],
+      "name": "GenericReceiveInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GenericReceiveInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "target",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<TReceiveTarget>",
+      "signature": "target: : Readonly<TReceiveTarget>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionAuthContext | null",
+      "signature": "auth: : SessionAuthContext | null"
+    },
+    {
+      "generics": [
+        "TEvents",
+        "TState",
+        "TCtx",
+        "TReceiveTarget",
+        "TMetadata"
+      ],
+      "kind": "interface",
+      "line_range": [
+        44,
+        108
+      ],
+      "name": "GenericChannelDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GenericChannelDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TState",
+      "signature": "state?: : TState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "cors",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelCors",
+      "signature": "cors?: : ChannelCors"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "routes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly RouteDefinition<TState>[]",
+      "signature": "routes: : readonly RouteDefinition<TState>[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TEvents",
+      "signature": "events?: : TEvents"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "fetchFile",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": FetchFileFunction",
+      "signature": "fetchFile?: : FetchFileFunction"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (state: NonNullable<TState>) => TMetadata",
+      "signature": "metadata?: : (state: NonNullable<TState>) => TMetadata"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        107,
+        107
+      ],
+      "name": "kindHint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "kindHint?: : string"
+    }
+  ],
+  "module": "packages/eve/src/shared/channel-definition.ts"
+}

@@ -1,0 +1,87 @@
+{
+  "module": "packages/eve/src/harness/advertised-tools.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/advertised-tools.test.ts:createTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        139,
+        145
+      ],
+      "name": "createTool",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolDefinition",
+      "signature": "export function createTool(name: string) -> HarnessToolDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/advertised-tools.test.ts:createSubagentTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        147,
+        156
+      ],
+      "name": "createSubagentTool",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolDefinition",
+      "signature": "export function createSubagentTool(name: string) -> HarnessToolDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/advertised-tools.test.ts:createBuiltInAgentTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        158,
+        167
+      ],
+      "name": "createBuiltInAgentTool",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessToolDefinition",
+      "signature": "export function createBuiltInAgentTool() -> HarnessToolDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/advertised-tools.test.ts:createSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        169,
+        182
+      ],
+      "name": "createSession",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<HarnessSession>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createSession(overrides: Partial<HarnessSession>) -> HarnessSession",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        50
+      ],
+      "name": "createRuntimeSandboxKeys",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateRuntimeSandboxKeysInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly sessionKey: string;\r\n  readonly templateKey: string | null;\r\n}>",
+      "signature": "export function createRuntimeSandboxKeys(input: CreateRuntimeSandboxKeysInput) -> Promise<{\r\n  readonly sessionKey: string;\r\n  readonly templateKey: string | null;\r\n}>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        61,
+        69
+      ],
+      "name": "createRuntimeSandboxTemplateKey",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: RuntimeSandboxTemplatePlan;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function createRuntimeSandboxTemplateKey(input: {\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: RuntimeSandboxTemplatePlan;\r\n}) -> Promise<string | null>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/sandbox/keys.ts"
+}

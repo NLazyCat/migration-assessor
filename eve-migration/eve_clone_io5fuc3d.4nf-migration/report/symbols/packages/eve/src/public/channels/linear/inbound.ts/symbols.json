@@ -1,0 +1,1014 @@
+{
+  "module": "packages/eve/src/public/channels/linear/inbound.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionAction",
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "LinearAgentSessionAction",
+      "partial_analysis": false,
+      "value": "\"created\" | \"prompted\" | (string & {});",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDelivery:event",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "event",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDelivery:id",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDelivery",
+      "kind": "interface",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "LinearDelivery",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearUser:id",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearUser:displayName",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "displayName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearUser:name",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearUser:email",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "email",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearUser:url",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearUser",
+      "kind": "interface",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "LinearUser",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearIssueRef:id",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearIssueRef:identifier",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "identifier",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearIssueRef:title",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "title",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearIssueRef:url",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearIssueRef",
+      "kind": "interface",
+      "line_range": [
+        25,
+        30
+      ],
+      "name": "LinearIssueRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:appUserId",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "appUserId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:commentId",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "commentId",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:creator",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "creator",
+          "partial_analysis": false,
+          "return_type": ": LinearUser",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:creatorId",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "creatorId",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:id",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:issue",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "issue",
+          "partial_analysis": false,
+          "return_type": ": LinearIssueRef | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:issueId",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "issueId",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:organizationId",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "organizationId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:sourceCommentId",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "sourceCommentId",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:status",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:summary",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "summary",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef:url",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionRef",
+      "kind": "interface",
+      "line_range": [
+        33,
+        46
+      ],
+      "name": "LinearAgentSessionRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:body",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:content",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "content",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:id",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:signal",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:signalMetadata",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "signalMetadata",
+          "partial_analysis": false,
+          "return_type": ": JsonObject | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:sourceCommentId",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "sourceCommentId",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:user",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "user",
+          "partial_analysis": false,
+          "return_type": ": LinearUser",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef:userId",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "userId",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentActivityRef",
+      "kind": "interface",
+      "line_range": [
+        49,
+        58
+      ],
+      "name": "LinearAgentActivityRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:action",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": LinearAgentSessionAction",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:agentActivity",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "agentActivity",
+          "partial_analysis": false,
+          "return_type": ": LinearAgentActivityRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:agentSession",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "agentSession",
+          "partial_analysis": false,
+          "return_type": ": LinearAgentSessionRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:appUserId",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "appUserId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:createdAt",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "createdAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:delivery",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "delivery",
+          "partial_analysis": false,
+          "return_type": ": LinearDelivery",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:guidance",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "guidance",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:kind",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"agent_session\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:oauthClientId",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "oauthClientId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:organizationId",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "organizationId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:previousComments",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "previousComments",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:promptContext",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "promptContext",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent:raw",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearAgentSessionEvent",
+      "kind": "interface",
+      "line_range": [
+        61,
+        75
+      ],
+      "name": "LinearAgentSessionEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent:action",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent:delivery",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "delivery",
+          "partial_analysis": false,
+          "return_type": ": LinearDelivery",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent:kind",
+          "kind": "property",
+          "line_range": [
+            81,
+            81
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"data\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent:organizationId",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "organizationId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent:raw",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent:type",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearDataWebhookEvent",
+      "kind": "interface",
+      "line_range": [
+        78,
+        85
+      ],
+      "name": "LinearDataWebhookEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:LinearInboundEvent",
+      "kind": "type_alias",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "LinearInboundEvent",
+      "partial_analysis": false,
+      "value": "LinearAgentSessionEvent | LinearDataWebhookEvent;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:linearContinuationToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        91,
+        93
+      ],
+      "name": "linearContinuationToken",
+      "params": [
+        {
+          "name": "agentSessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function linearContinuationToken(agentSessionId: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:parseLinearWebhookEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        136
+      ],
+      "name": "parseLinearWebhookEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly body: string;\r\n  readonly headers: Headers;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearInboundEvent | null",
+      "signature": "export function parseLinearWebhookEvent(input: {\r\n  readonly body: string;\r\n  readonly headers: Headers;\r\n}) -> LinearInboundEvent | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:messageFromLinearAgentSessionEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        139,
+        158
+      ],
+      "name": "messageFromLinearAgentSessionEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "LinearAgentSessionEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UserContent",
+      "signature": "export function messageFromLinearAgentSessionEvent(event: LinearAgentSessionEvent) -> UserContent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:formatLinearContextBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        161,
+        180
+      ],
+      "name": "formatLinearContextBlock",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "LinearAgentSessionEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatLinearContextBlock(event: LinearAgentSessionEvent) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readAgentSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        182,
+        204
+      ],
+      "name": "readAgentSession",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearAgentSessionRef | null",
+      "signature": "export function readAgentSession(value: unknown) -> LinearAgentSessionRef | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readAgentActivity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        206,
+        224
+      ],
+      "name": "readAgentActivity",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearAgentActivityRef | undefined",
+      "signature": "export function readAgentActivity(value: unknown) -> LinearAgentActivityRef | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readActivityBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        226,
+        229
+      ],
+      "name": "readActivityBody",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readActivityBody(content: unknown) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readIssue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        231,
+        239
+      ],
+      "name": "readIssue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearIssueRef | null | undefined",
+      "signature": "export function readIssue(value: unknown) -> LinearIssueRef | null | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readUser",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        241,
+        249
+      ],
+      "name": "readUser",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearUser | undefined",
+      "signature": "export function readUser(value: unknown) -> LinearUser | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readPreviousComments",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        251,
+        260
+      ],
+      "name": "readPreviousComments",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function readPreviousComments(value: unknown) -> readonly string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/inbound.ts:readString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        262,
+        264
+      ],
+      "name": "readString",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readString(value: unknown) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

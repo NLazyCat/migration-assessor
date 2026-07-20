@@ -1,0 +1,452 @@
+{
+  "module": "packages/eve/src/compiler/compile-agent.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentInput:source",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": ProjectSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentInput:startPath",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "startPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentInput",
+      "kind": "interface",
+      "line_range": [
+        22,
+        29
+      ],
+      "name": "CompileAgentInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult:diagnostics",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnostic[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult:manifest",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult:metadata",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": CompileMetadata",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult:paths",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "paths",
+          "partial_analysis": false,
+          "return_type": ": CompilerArtifactPaths",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult:project",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": ResolvedDiscoveryProject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult",
+      "kind": "interface",
+      "line_range": [
+        35,
+        41
+      ],
+      "name": "CompileAgentResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentError:result",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            50,
+            54
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "result",
+              "optional": false,
+              "type": "CompileAgentResult"
+            },
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentError:fromDurableArtifacts",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            56,
+            62
+          ],
+          "name": "fromDurableArtifacts",
+          "params": [
+            {
+              "name": "result",
+              "optional": false,
+              "type": "CompileAgentResult"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "CompileAgentError",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentError:fromTransientArtifacts",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            64,
+            69
+          ],
+          "name": "fromTransientArtifacts",
+          "params": [
+            {
+              "name": "result",
+              "optional": false,
+              "type": "CompileAgentResult"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "CompileAgentError",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-agent.ts:CompileAgentError",
+      "kind": "class",
+      "line_range": [
+        47,
+        70
+      ],
+      "name": "CompileAgentError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:compileAgent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        76,
+        85
+      ],
+      "name": "compileAgent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CompileAgentInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileAgentResult>",
+      "signature": "export function compileAgent(input: CompileAgentInput) -> Promise<CompileAgentResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:compileAgentInWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        92,
+        100
+      ],
+      "name": "compileAgentInWorkspace",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly artifactLocations: CompilerArtifactLocations;\r\n  readonly startPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileAgentResult>",
+      "signature": "export function compileAgentInWorkspace(input: {\r\n  readonly artifactLocations: CompilerArtifactLocations;\r\n  readonly startPath: string;\r\n}) -> Promise<CompileAgentResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:DiscoveredAgentCompilation:diagnostics",
+          "kind": "property",
+          "line_range": [
+            103,
+            103
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnostic[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:DiscoveredAgentCompilation:manifest",
+          "kind": "property",
+          "line_range": [
+            104,
+            104
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": AgentSourceManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-agent.ts:DiscoveredAgentCompilation:project",
+          "kind": "property",
+          "line_range": [
+            105,
+            105
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": ResolvedDiscoveryProject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-agent.ts:DiscoveredAgentCompilation",
+      "kind": "interface",
+      "line_range": [
+        102,
+        106
+      ],
+      "name": "DiscoveredAgentCompilation",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:discoverAgentForCompilation",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        108,
+        120
+      ],
+      "name": "discoverAgentForCompilation",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CompileAgentInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoveredAgentCompilation>",
+      "signature": "export function discoverAgentForCompilation(input: CompileAgentInput) -> Promise<DiscoveredAgentCompilation>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:writeAgentCompilation",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        122,
+        140
+      ],
+      "name": "writeAgentCompilation",
+      "params": [
+        {
+          "name": "discovered",
+          "optional": false,
+          "type": "DiscoveredAgentCompilation"
+        },
+        {
+          "name": "artifactLocations",
+          "optional": false,
+          "type": "CompilerArtifactLocations"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileAgentResult>",
+      "signature": "export function writeAgentCompilation(discovered: DiscoveredAgentCompilation, artifactLocations: CompilerArtifactLocations) -> Promise<CompileAgentResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:finishAgentCompilation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        142,
+        153
+      ],
+      "name": "finishAgentCompilation",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "CompileAgentResult"
+        },
+        {
+          "name": "createError",
+          "optional": false,
+          "type": "(result: CompileAgentResult) => CompileAgentError"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompileAgentResult",
+      "signature": "export function finishAgentCompilation(result: CompileAgentResult, createError: (result: CompileAgentResult) => CompileAgentError) -> CompileAgentResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:reportDiscoverWarnings",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        155,
+        165
+      ],
+      "name": "reportDiscoverWarnings",
+      "params": [
+        {
+          "name": "diagnostics",
+          "optional": false,
+          "type": "readonly DiscoverDiagnostic[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function reportDiscoverWarnings(diagnostics: readonly DiscoverDiagnostic[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:formatCompileAgentErrorLines",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        167,
+        185
+      ],
+      "name": "formatCompileAgentErrorLines",
+      "params": [
+        {
+          "name": "diagnostics",
+          "optional": false,
+          "type": "readonly DiscoverDiagnostic[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function formatCompileAgentErrorLines(diagnostics: readonly DiscoverDiagnostic[]) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-agent.ts:formatDiagnosticSeverity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        187,
+        189
+      ],
+      "name": "formatDiagnosticSeverity",
+      "params": [
+        {
+          "name": "severity",
+          "optional": false,
+          "type": "DiscoverDiagnostic[\"severity\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDiagnosticSeverity(severity: DiscoverDiagnostic[\"severity\"]) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "ProviderPickerPhase",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderPickerPhase = | { kind: \"inactive\" }\r\n  | { kind: \"editing\"; editor: LineState }\r\n  | { kind: \"validating\"; editor: LineState; key: string }\r\n  | { kind: \"invalid\"; editor: LineState; message: string };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        21,
+        24
+      ],
+      "name": "ProviderPickerState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProviderPickerState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "select",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SelectState",
+      "signature": "select: : SelectState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "phase",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProviderPickerPhase",
+      "signature": "phase: : ProviderPickerPhase"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        27,
+        32
+      ],
+      "name": "ProviderPickerEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderPickerEvent = | { type: \"move\"; direction: \"up\" | \"down\" }\r\n  | { type: \"edit\"; editor: LineState }\r\n  | { type: \"cancel\" }\r\n  | { type: \"submit\" }\r\n  | { type: \"validated\"; validation: GatewayKeyValidation };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        35,
+        41
+      ],
+      "name": "ProviderPickerTransition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderPickerTransition = | { kind: \"ignore\"; state: ProviderPickerState }\r\n  | { kind: \"render\"; state: ProviderPickerState }\r\n  | { kind: \"clear\"; state: ProviderPickerState }\r\n  | { kind: \"cancel\" }\r\n  | { kind: \"validate\"; state: ProviderPickerState; key: string }\r\n  | { kind: \"settle\"; result: ProviderPickerChoice };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        59
+      ],
+      "name": "initialProviderPickerState",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<ProviderConnection>[]"
+        },
+        {
+          "name": "initialValue",
+          "optional": false,
+          "type": "ProviderConnection"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProviderPickerState",
+      "signature": "export function initialProviderPickerState(options: readonly PromptOption<ProviderConnection>[], initialValue: ProviderConnection) -> ProviderPickerState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        66,
+        146
+      ],
+      "name": "transitionProviderPicker",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "ProviderPickerState"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "ProviderPickerEvent"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<ProviderConnection>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProviderPickerTransition",
+      "signature": "export function transitionProviderPicker(state: ProviderPickerState, event: ProviderPickerEvent, options: readonly PromptOption<ProviderConnection>[]) -> ProviderPickerTransition"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/provider-picker.ts"
+}

@@ -1,0 +1,66 @@
+{
+  "module": "packages/eve/test/tui-client/tui-slash-commands.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-slash-commands.ts:UNREACHABLE_HOST",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "UNREACHABLE_HOST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-slash-commands.ts:runLocalChannelsCancellation",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        104,
+        151
+      ],
+      "name": "runLocalChannelsCancellation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runLocalChannelsCancellation() -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-slash-commands.ts:withTimeout",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        153,
+        163
+      ],
+      "name": "withTimeout",
+      "params": [
+        {
+          "name": "promise",
+          "optional": false,
+          "type": "Promise<T>"
+        },
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withTimeout(promise: Promise<T>, ms: number, message: string) -> Promise<T>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "SessionContext": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/context/build-base-tool-context.ts",
+        "line": 7
+      },
+      "symbol": "packages/eve/src/public/definitions/callback-context.ts:SessionContext"
+    }
+  ],
+  "ToolExecuteOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/context/build-base-tool-context.ts",
+        "line": 15
+      },
+      "symbol": "packages/eve/src/shared/tool-definition.ts:ToolExecuteOptions"
+    }
+  ],
+  "bindSandboxAbortSignal": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/context/build-base-tool-context.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/execution/sandbox/abort-bound-session.ts:bindSandboxAbortSignal"
+    }
+  ],
+  "buildCallbackContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/context/build-base-tool-context.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/context/build-callback-context.ts:buildCallbackContext"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/local-template-prune.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/local-template-prune.ts:selectStaleTemplateEntries",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        21
+      ],
+      "name": "selectStaleTemplateEntries",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "readonly T[]"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly now: number;\r\n    readonly recentWindowMs: number;\r\n    readonly retainCount: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T[]",
+      "signature": "export function selectStaleTemplateEntries(entries: readonly T[], input: {\r\n    readonly now: number;\r\n    readonly recentWindowMs: number;\r\n    readonly retainCount: number;\r\n  }) -> T[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/local-template-prune.ts:LOCAL_SANDBOX_TEMPLATE_RECENT_WINDOW_MS",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "LOCAL_SANDBOX_TEMPLATE_RECENT_WINDOW_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/local-template-prune.ts:LOCAL_SANDBOX_TEMPLATE_RETAIN_COUNT",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "LOCAL_SANDBOX_TEMPLATE_RETAIN_COUNT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

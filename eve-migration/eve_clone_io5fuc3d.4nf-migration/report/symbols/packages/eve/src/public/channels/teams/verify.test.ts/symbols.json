@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/public/channels/teams/verify.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.test.ts:createJwtFixture",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        65,
+        84
+      ],
+      "name": "createJwtFixture",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly audience: string;\r\n  readonly issuer?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly fetch: typeof fetch; readonly token: string }>",
+      "signature": "export function createJwtFixture(input: {\r\n  readonly audience: string;\r\n  readonly issuer?: string;\r\n}) -> Promise<{ readonly fetch: typeof fetch; readonly token: string }>",
+      "visibility": "Private"
+    }
+  ]
+}

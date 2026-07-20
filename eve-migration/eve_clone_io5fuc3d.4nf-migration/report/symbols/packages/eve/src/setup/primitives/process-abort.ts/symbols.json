@@ -1,0 +1,45 @@
+{
+  "module": "packages/eve/src/setup/primitives/process-abort.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/process-abort.ts:ABORT_KILL_GRACE_MS",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "ABORT_KILL_GRACE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/process-abort.ts:armProcessAbort",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        30
+      ],
+      "name": "armProcessAbort",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "ChildProcess"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function armProcessAbort(child: ChildProcess, signal: AbortSignal | undefined) -> () => void",
+      "visibility": "Public"
+    }
+  ]
+}

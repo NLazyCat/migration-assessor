@@ -1,0 +1,119 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DEFAULT_DOCKER_SANDBOX_IMAGE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_DOCKER_SANDBOX_IMAGE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "ResolvedDockerSandboxOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedDockerSandboxOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "env",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "env: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "image",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "image: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "networkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerSandboxNetworkPolicy",
+      "signature": "networkPolicy: : DockerSandboxNetworkPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "pullPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerSandboxPullPolicy",
+      "signature": "pullPolicy: : DockerSandboxPullPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        29,
+        38
+      ],
+      "name": "resolveDockerSandboxOptions",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DockerSandboxCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedDockerSandboxOptions",
+      "signature": "export function resolveDockerSandboxOptions(options: DockerSandboxCreateOptions) -> ResolvedDockerSandboxOptions"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        45
+      ],
+      "name": "createDockerSandboxOptionsHash",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolvedDockerSandboxOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createDockerSandboxOptionsHash(options: ResolvedDockerSandboxOptions) -> string"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/docker-options.ts"
+}

@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/execution/compaction.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/compaction.test.ts:run",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        16
+      ],
+      "name": "run",
+      "params": [
+        {
+          "name": "setup",
+          "optional": false,
+          "type": "(ctx: ContextContainer) => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  ctx: ContextContainer;\r\n  messages: readonly { role: string; content: unknown }[];\r\n}",
+      "signature": "export function run(setup: (ctx: ContextContainer) => void) -> {\r\n  ctx: ContextContainer;\r\n  messages: readonly { role: string; content: unknown }[];\r\n}",
+      "visibility": "Private"
+    }
+  ]
+}

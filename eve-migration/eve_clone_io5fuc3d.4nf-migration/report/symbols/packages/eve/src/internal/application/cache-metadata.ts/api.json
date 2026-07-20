@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        24
+      ],
+      "name": "prepareEveVersionedCacheDirectory",
+      "params": [
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function prepareEveVersionedCacheDirectory(directoryPath: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        29,
+        43
+      ],
+      "name": "writeEveVersionedCacheMetadata",
+      "params": [
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeEveVersionedCacheMetadata(directoryPath: string) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/cache-metadata.ts"
+}

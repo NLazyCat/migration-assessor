@@ -1,0 +1,87 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "DevelopmentCredentialGrant",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentCredentialGrant { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "target",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": VerifiedVercelTarget",
+      "signature": "target: : VerifiedVercelTarget"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "resolveToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => Promise<DevelopmentOidcTokenResolution | string>",
+      "signature": "resolveToken: : () => Promise<DevelopmentOidcTokenResolution | string>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        29
+      ],
+      "name": "DevelopmentCredentialGate",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentCredentialGate { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "serverOrigin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "serverOrigin: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        95
+      ],
+      "name": "createDevelopmentCredentialGate",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentCredentialGate",
+      "signature": "export function createDevelopmentCredentialGate(serverUrl: string) -> DevelopmentCredentialGate"
+    }
+  ],
+  "module": "packages/eve/src/services/dev-client/credential-gate.ts"
+}

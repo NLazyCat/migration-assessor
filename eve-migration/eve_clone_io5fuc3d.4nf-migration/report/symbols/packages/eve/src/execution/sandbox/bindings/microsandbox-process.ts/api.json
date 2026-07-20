@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        6,
+        81
+      ],
+      "name": "adaptMicrosandboxExecToSandboxProcess",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "MicrosandboxExecHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxProcess",
+      "signature": "export function adaptMicrosandboxExecToSandboxProcess(command: MicrosandboxExecHandle) -> SandboxProcess"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-process.ts"
+}

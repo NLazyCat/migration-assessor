@@ -1,0 +1,136 @@
+{
+  "module": "packages/eve/src/harness/workflow-continuation-security.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-continuation-security.ts:WORKFLOW_CONTINUATION_SECURITY_KEY",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "WORKFLOW_CONTINUATION_SECURITY_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-continuation-security.ts:WORKFLOW_CONTINUATION_MAX_AGE_MS",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "WORKFLOW_CONTINUATION_MAX_AGE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/workflow-continuation-security.ts:StoredWorkflowContinuationSecurity:signingKey",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "signingKey",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/workflow-continuation-security.ts:StoredWorkflowContinuationSecurity:version",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": 1",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/workflow-continuation-security.ts:StoredWorkflowContinuationSecurity",
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "StoredWorkflowContinuationSecurity",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-continuation-security.ts:ensureWorkflowContinuationSecurity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        30
+      ],
+      "name": "ensureWorkflowContinuationSecurity",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function ensureWorkflowContinuationSecurity(session: HarnessSession) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-continuation-security.ts:readWorkflowContinuationSecurity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        51
+      ],
+      "name": "readWorkflowContinuationSecurity",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSandboxContinuationSecurity | undefined",
+      "signature": "export function readWorkflowContinuationSecurity(session: HarnessSession) -> WorkflowSandboxContinuationSecurity | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-continuation-security.ts:getWorkflowContinuationSecurity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        61
+      ],
+      "name": "getWorkflowContinuationSecurity",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSandboxContinuationSecurity",
+      "signature": "export function getWorkflowContinuationSecurity(session: HarnessSession) -> WorkflowSandboxContinuationSecurity",
+      "visibility": "Public"
+    }
+  ]
+}

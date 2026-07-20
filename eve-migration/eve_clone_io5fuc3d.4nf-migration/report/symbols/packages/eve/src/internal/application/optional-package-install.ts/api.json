@@ -1,0 +1,97 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "ProjectPackageManager",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProjectPackageManager = \"bun\" | \"npm\" | \"pnpm\" | \"yarn\";"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        44
+      ],
+      "name": "detectProjectPackageManager",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectPackageManager",
+      "signature": "export function detectProjectPackageManager(appRoot: string) -> ProjectPackageManager"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        99
+      ],
+      "name": "installPackageIntoProject",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly packageName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function installPackageIntoProject(input: {\r\n  readonly appRoot: string;\r\n  readonly packageName: string;\r\n}) -> Promise<void>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        107,
+        171
+      ],
+      "name": "loadOptionalEnginePackage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly autoInstall: boolean;\r\n  readonly importInstalledModule?: () => Promise<T>;\r\n  readonly importModule: () => Promise<T>;\r\n  readonly missingMessage: string;\r\n  readonly packageName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function loadOptionalEnginePackage(input: {\r\n  readonly appRoot: string;\r\n  readonly autoInstall: boolean;\r\n  readonly importInstalledModule?: () => Promise<T>;\r\n  readonly importModule: () => Promise<T>;\r\n  readonly missingMessage: string;\r\n  readonly packageName: string;\r\n}) -> Promise<T>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        174,
+        180
+      ],
+      "name": "importInstalledEnginePackage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly packageName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function importInstalledEnginePackage(input: {\r\n  readonly appRoot: string;\r\n  readonly packageName: string;\r\n}) -> Promise<T>"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/optional-package-install.ts"
+}

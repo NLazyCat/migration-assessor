@@ -1,0 +1,227 @@
+{
+  "module": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:STREAMED_ACTION_TOOL",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "STREAMED_ACTION_TOOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:ActionNarrationState:observedNarration",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "observedNarration",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:ActionNarrationState:pendingNarration",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "pendingNarration",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:ActionNarrationState",
+      "kind": "interface",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "ActionNarrationState",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:ActionNarrationRequest:message",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:ActionNarrationRequest:token",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:ActionNarrationRequest",
+      "kind": "interface",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "ActionNarrationRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:initialState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "initialState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ActionNarrationState",
+      "signature": "export function initialState() -> ActionNarrationState",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:firstNonEmptyLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        25
+      ],
+      "name": "firstNonEmptyLine",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function firstNonEmptyLine(message: string) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:readNonEmptyString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        31
+      ],
+      "name": "readNonEmptyString",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readNonEmptyString(value: unknown) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:readRequestValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        33,
+        36
+      ],
+      "name": "readRequestValue",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function readRequestValue(body: unknown, key: string) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:readRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        38,
+        45
+      ],
+      "name": "readRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ActionNarrationRequest>",
+      "signature": "export function readRequest(request: Request) -> Promise<ActionNarrationRequest>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/channels/action-narration.ts:continuationToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        49
+      ],
+      "name": "continuationToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function continuationToken(token: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

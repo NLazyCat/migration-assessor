@@ -1,0 +1,131 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        82,
+        84
+      ],
+      "name": "DiscoverNamedSourceDirectoryModuleInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscoverNamedSourceDirectoryModuleInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "allowMarkdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": false",
+      "signature": "allowMarkdown?: : false"
+    },
+    {
+      "generics": [
+        "TDefinition"
+      ],
+      "kind": "interface",
+      "line_range": [
+        90,
+        95
+      ],
+      "name": "DiscoverNamedSourceDirectoryWithMarkdownInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscoverNamedSourceDirectoryWithMarkdownInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "allowMarkdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "allowMarkdown: : true"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        94,
+        94
+      ],
+      "name": "markdownLowerer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (markdown: string, input: { name: string }) => TDefinition",
+      "signature": "markdownLowerer: : (markdown: string, input: { name: string }) => TDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        114
+      ],
+      "name": "discoverNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverNamedSourceDirectoryModuleInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: ModuleSourceRef[];\r\n}>",
+      "signature": "export function discoverNamedSourceDirectory(input: DiscoverNamedSourceDirectoryModuleInput) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: ModuleSourceRef[];\r\n}>"
+    },
+    {
+      "generics": [
+        "TDefinition"
+      ],
+      "kind": "function",
+      "line_range": [
+        115,
+        120
+      ],
+      "name": "discoverNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>",
+      "signature": "export function discoverNamedSourceDirectory(input: DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>"
+    },
+    {
+      "generics": [
+        "TDefinition"
+      ],
+      "kind": "function",
+      "line_range": [
+        121,
+        173
+      ],
+      "name": "discoverNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "| DiscoverNamedSourceDirectoryModuleInput\r\n    | DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>",
+      "signature": "export function discoverNamedSourceDirectory(input: | DiscoverNamedSourceDirectoryModuleInput\r\n    | DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>"
+    }
+  ],
+  "module": "packages/eve/src/discover/named-source-directory.ts"
+}

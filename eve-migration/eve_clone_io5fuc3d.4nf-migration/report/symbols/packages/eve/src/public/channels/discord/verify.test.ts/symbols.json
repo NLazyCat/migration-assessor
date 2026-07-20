@@ -1,0 +1,43 @@
+{
+  "module": "packages/eve/src/public/channels/discord/verify.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/verify.test.ts:testKeys",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        17
+      ],
+      "name": "testKeys",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  privateKey: KeyObject;\r\n  publicKeyHex: string;\r\n}",
+      "signature": "export function testKeys() -> {\r\n  privateKey: KeyObject;\r\n  publicKeyHex: string;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/verify.test.ts:signedRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        38
+      ],
+      "name": "signedRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly body: string;\r\n  readonly privateKey: KeyObject;\r\n  readonly signatureOverride?: string;\r\n  readonly timestamp?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function signedRequest(input: {\r\n  readonly body: string;\r\n  readonly privateKey: KeyObject;\r\n  readonly signatureOverride?: string;\r\n  readonly timestamp?: string;\r\n}) -> Request",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "module": "packages/eve/src/setup/connection-connector.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:capture",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "capture",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:run",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "run",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:create",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "create",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:SERVICE",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "SERVICE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:CANONICAL_UID",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "CANONICAL_UID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:CANONICAL_NAME",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "CANONICAL_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:jsonResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "jsonResult",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function jsonResult(value: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.integration.test.ts:connectorResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "connectorResult",
+      "params": [
+        {
+          "name": "uid",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "subject",
+          "optional": false,
+          "type": "\"app\" | \"user\""
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function connectorResult(uid: string, id: string, subject: \"app\" | \"user\") -> void",
+      "visibility": "Private"
+    }
+  ]
+}

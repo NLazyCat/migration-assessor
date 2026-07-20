@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "justbash",
+      "params": [
+        {
+          "name": "opts",
+          "optional": true,
+          "type": "JustBashSandboxCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function justbash(opts: JustBashSandboxCreateOptions) -> SandboxBackend"
+    }
+  ],
+  "module": "packages/eve/src/public/sandbox/backends/just-bash.ts"
+}

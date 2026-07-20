@@ -1,0 +1,278 @@
+{
+  "module": "packages/eve/src/harness/ordered-stream-emitter.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:MAX_PENDING_EVENTS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "MAX_PENDING_EVENTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:MAX_PENDING_DELTA_CHARACTERS",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "MAX_PENDING_DELTA_CHARACTERS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:PendingEmission:deltaCharacters",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "deltaCharacters",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:PendingEmission:deltaParts",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "deltaParts",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:PendingEmission:event",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "event",
+          "partial_analysis": false,
+          "return_type": ": HandleMessageStreamEvent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:PendingEmission:messages",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "messages",
+          "partial_analysis": false,
+          "return_type": ": readonly import(\"ai\").ModelMessage[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:PendingEmission:sourceEvents",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "sourceEvents",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:PendingEmission",
+      "kind": "interface",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "PendingEmission",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:OrderedStreamEmitter:emit",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "emit",
+          "partial_analysis": false,
+          "return_type": ": HarnessEmitFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/ordered-stream-emitter.ts:OrderedStreamEmitter:failureSignal",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "failureSignal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:OrderedStreamEmitter",
+      "kind": "interface",
+      "line_range": [
+        19,
+        23
+      ],
+      "name": "OrderedStreamEmitter",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:createOrderedStreamEmitter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        162
+      ],
+      "name": "createOrderedStreamEmitter",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ readonly maxPendingEvents?: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OrderedStreamEmitter",
+      "signature": "export function createOrderedStreamEmitter(emitFn: HarnessEmitFn, options: { readonly maxPendingEvents?: number }) -> OrderedStreamEmitter",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:mergeAdjacentAppends",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        164,
+        188
+      ],
+      "name": "mergeAdjacentAppends",
+      "params": [
+        {
+          "name": "left",
+          "optional": false,
+          "type": "PendingEmission"
+        },
+        {
+          "name": "right",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly import(\"ai\").ModelMessage[] | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function mergeAdjacentAppends(left: PendingEmission, right: HandleMessageStreamEvent, messages: readonly import(\"ai\").ModelMessage[] | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:appendDelta",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        190,
+        194
+      ],
+      "name": "appendDelta",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function appendDelta(event: HandleMessageStreamEvent) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:materializeEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        196,
+        220
+      ],
+      "name": "materializeEvent",
+      "params": [
+        {
+          "name": "emission",
+          "optional": false,
+          "type": "PendingEmission"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function materializeEvent(emission: PendingEmission) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/ordered-stream-emitter.ts:sameCoordinates",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        222,
+        231
+      ],
+      "name": "sameCoordinates",
+      "params": [
+        {
+          "name": "left",
+          "optional": false,
+          "type": "MessageAppendedStreamEvent | ReasoningAppendedStreamEvent"
+        },
+        {
+          "name": "right",
+          "optional": false,
+          "type": "MessageAppendedStreamEvent | ReasoningAppendedStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function sameCoordinates(left: MessageAppendedStreamEvent | ReasoningAppendedStreamEvent, right: MessageAppendedStreamEvent | ReasoningAppendedStreamEvent) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

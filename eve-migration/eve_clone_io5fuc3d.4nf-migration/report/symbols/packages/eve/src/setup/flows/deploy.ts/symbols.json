@@ -1,0 +1,127 @@
+{
+  "module": "packages/eve/src/setup/flows/deploy.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/deploy.ts:DeployFlowDeps:detectDeployment",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "detectDeployment",
+          "partial_analysis": false,
+          "return_type": ": typeof detectDeployment",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/deploy.ts:DeployFlowDeps:resolveProvisioning",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "resolveProvisioning",
+          "partial_analysis": false,
+          "return_type": ": ResolveProvisioningDeps",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/deploy.ts:DeployFlowDeps:linkProject",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "linkProject",
+          "partial_analysis": false,
+          "return_type": ": LinkProjectDeps",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/deploy.ts:DeployFlowDeps:deployProject",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "deployProject",
+          "partial_analysis": false,
+          "return_type": ": DeployProjectDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/deploy.ts:DeployFlowDeps",
+      "kind": "interface",
+      "line_range": [
+        22,
+        27
+      ],
+      "name": "DeployFlowDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/deploy.ts:DeployFlowResult",
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        33
+      ],
+      "name": "DeployFlowResult",
+      "partial_analysis": false,
+      "value": "| { kind: \"deployed\"; productionUrl?: string }\r\n  | { kind: \"cancelled\" }\r\n  /** Unlinked directory in a non-interactive run: refused before any effect. */\r\n  | { kind: \"needs-link\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/deploy.ts:productionUrlOf",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        37
+      ],
+      "name": "productionUrlOf",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function productionUrlOf(project: ProjectResolution) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/deploy.ts:runDeployFlow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        50,
+        103
+      ],
+      "name": "runDeployFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /** False when no TTY: an unlinked directory refuses instead of prompting. */\r\n  interactive: boolean;\r\n  deps?: Partial<DeployFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DeployFlowResult>",
+      "signature": "export function runDeployFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /** False when no TTY: an unlinked directory refuses instead of prompting. */\r\n  interactive: boolean;\r\n  deps?: Partial<DeployFlowDeps>;\r\n}) -> Promise<DeployFlowResult>",
+      "visibility": "Public"
+    }
+  ]
+}

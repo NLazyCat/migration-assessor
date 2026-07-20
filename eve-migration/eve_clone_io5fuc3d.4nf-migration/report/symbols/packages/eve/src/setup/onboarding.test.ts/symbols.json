@@ -1,0 +1,55 @@
+{
+  "module": "packages/eve/src/setup/onboarding.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/onboarding.test.ts:composeBoxes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        12
+      ],
+      "name": "composeBoxes",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function composeBoxes() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/onboarding.test.ts:resolvedState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        20
+      ],
+      "name": "resolvedState",
+      "params": [
+        {
+          "name": "setupMode",
+          "optional": false,
+          "type": "SetupState[\"setupMode\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function resolvedState(setupMode: SetupState[\"setupMode\"]) -> SetupState",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/onboarding.test.ts:GATED_IDS",
+      "kind": "variable",
+      "line_range": [
+        23,
+        35
+      ],
+      "name": "GATED_IDS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    }
+  ]
+}

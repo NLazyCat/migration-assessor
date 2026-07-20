@@ -1,0 +1,238 @@
+{
+  "module": "packages/eve/src/setup/cli/rail-log.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/rail-log.ts:PromptOutput:isTTY",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "isTTY",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/rail-log.ts:PromptOutput:columns",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "columns",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:PromptOutput",
+      "kind": "interface",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "PromptOutput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:ActiveStatus",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "ActiveStatus",
+      "partial_analysis": false,
+      "value": "| { kind: \"idle\" }\r\n  | {\r\n      kind: \"active\";\r\n      commandLines: string[];\r\n      previewRows: number;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:RailSpinner",
+      "kind": "interface",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "RailSpinner",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:SPINNER_FRAMES",
+      "kind": "variable",
+      "line_range": [
+        38,
+        59
+      ],
+      "name": "SPINNER_FRAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:SPINNER_CELLS",
+      "kind": "variable",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "SPINNER_CELLS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:dotCount",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        63,
+        73
+      ],
+      "name": "dotCount",
+      "params": [
+        {
+          "name": "glyph",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function dotCount(glyph: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:SPINNER_STATIC",
+      "kind": "variable",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "SPINNER_STATIC",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:SPINNER_FRAME_MS",
+      "kind": "variable",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "SPINNER_FRAME_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:RailLog",
+      "kind": "interface",
+      "line_range": [
+        80,
+        90
+      ],
+      "name": "RailLog",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/rail-log.ts:RailLogOptions:colors",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "colors",
+          "partial_analysis": false,
+          "return_type": ": PromptColors",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/rail-log.ts:RailLogOptions:output",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": PromptOutput",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:RailLogOptions",
+      "kind": "interface",
+      "line_range": [
+        93,
+        96
+      ],
+      "name": "RailLogOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:countRows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        98,
+        100
+      ],
+      "name": "countRows",
+      "params": [
+        {
+          "name": "rendered",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function countRows(rendered: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/rail-log.ts:createRailLog",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        239
+      ],
+      "name": "createRailLog",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RailLogOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RailLog",
+      "signature": "export function createRailLog(options: RailLogOptions) -> RailLog",
+      "visibility": "Public"
+    }
+  ]
+}

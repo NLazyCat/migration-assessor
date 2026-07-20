@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/evals/runner/reporters/braintrust.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.test.ts:makeTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        16
+      ],
+      "name": "makeTarget",
+      "params": [
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "\"local\" | \"remote\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTarget",
+      "signature": "export function makeTarget(kind: \"local\" | \"remote\") -> EveEvalTarget",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.test.ts:makeConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        23
+      ],
+      "name": "makeConfig",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<BraintrustReporterConfig>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BraintrustReporterConfig",
+      "signature": "export function makeConfig(overrides: Partial<BraintrustReporterConfig>) -> BraintrustReporterConfig",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/braintrust.test.ts:makeEvalResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        63
+      ],
+      "name": "makeEvalResult",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<EveEvalResult>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalResult",
+      "signature": "export function makeEvalResult(overrides: Partial<EveEvalResult>) -> EveEvalResult",
+      "visibility": "Private"
+    }
+  ]
+}

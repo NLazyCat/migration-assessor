@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        16
+      ],
+      "name": "SessionCallbackParseResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SessionCallbackParseResult = | {\r\n      readonly callback: SessionCallback;\r\n      readonly ok: true;\r\n    }\r\n  | {\r\n      readonly cause: unknown;\r\n      readonly message: string;\r\n      readonly ok: false;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        59,
+        70
+      ],
+      "name": "parseSessionCallback",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionCallbackParseResult",
+      "signature": "export function parseSessionCallback(value: unknown) -> SessionCallbackParseResult"
+    }
+  ],
+  "module": "packages/eve/src/channel/session-callback.ts"
+}

@@ -1,0 +1,327 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:EVE_MARK_PATH",
+      "kind": "variable",
+      "line_range": [
+        6,
+        7
+      ],
+      "name": "EVE_MARK_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:EVE_MARK_WIDTH",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "EVE_MARK_WIDTH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:EVE_MARK_HEIGHT",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "EVE_MARK_HEIGHT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:roughness",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "roughness",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:specular",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "specular",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:fresnel",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "fresnel",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:flowSpeed",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "flowSpeed",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:distortion",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "distortion",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:tint",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "tint",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:brushAngle",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "brushAngle",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig:tonemap",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "tonemap",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalConfig",
+      "kind": "interface",
+      "line_range": [
+        11,
+        20
+      ],
+      "name": "MetalConfig",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:DEFAULT_CONFIG",
+      "kind": "variable",
+      "line_range": [
+        22,
+        31
+      ],
+      "name": "DEFAULT_CONFIG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:HERO_CONFIG",
+      "kind": "variable",
+      "line_range": [
+        33,
+        42
+      ],
+      "name": "HERO_CONFIG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:HERO_MARK_SCALE",
+      "kind": "variable",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "HERO_MARK_SCALE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalShaderProps",
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        52
+      ],
+      "name": "MetalShaderProps",
+      "partial_analysis": false,
+      "value": "{\r\n  className?: string;\r\n  config?: MetalConfig;\r\n  svgScale?: number;\r\n  svgPath?: string;\r\n  svgWidth?: number;\r\n  svgHeight?: number;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:getLogoTransform",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        67
+      ],
+      "name": "getLogoTransform",
+      "params": [
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "svgScale",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "svgWidth",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "svgHeight",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getLogoTransform(width: number, height: number, svgScale: number, svgWidth: number, svgHeight: number) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:getCurrentTheme",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        75
+      ],
+      "name": "getCurrentTheme",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "\"light\" | \"dark\"",
+      "signature": "export function getCurrentTheme() -> \"light\" | \"dark\"",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:useResolvedTheme",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        77,
+        99
+      ],
+      "name": "useResolvedTheme",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function useResolvedTheme() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:MetalShader",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        517
+      ],
+      "name": "MetalShader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MetalShaderProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function MetalShader(_: MetalShaderProps) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx:HeroMetalShader",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        519,
+        542
+      ],
+      "name": "HeroMetalShader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ className?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function HeroMetalShader(_: { className?: string }) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "module": "packages/eve/src/execution/node-step.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:log",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:CreateRuntime",
+      "kind": "type_alias",
+      "line_range": [
+        36,
+        39
+      ],
+      "name": "CreateRuntime",
+      "partial_analysis": false,
+      "value": "(config: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId?: string;\r\n}) => Runtime;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:abortSignal",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "abortSignal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:capabilities",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "capabilities",
+          "partial_analysis": false,
+          "return_type": ": SessionCapabilities",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:createRuntime",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "createRuntime",
+          "partial_analysis": false,
+          "return_type": ": CreateRuntime",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:handleEvent",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "handleEvent",
+          "partial_analysis": false,
+          "return_type": ": HandleEventFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:mode",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": RunMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:modelResolutionScope",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "modelResolutionScope",
+          "partial_analysis": false,
+          "return_type": ": RuntimeModelResolutionScope",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:node",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "node",
+          "partial_analysis": false,
+          "return_type": ": ResolvedRuntimeAgentNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput:workflowMaxSubagents",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "workflowMaxSubagents",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/node-step.ts:CreateExecutionNodeStepInput",
+      "kind": "interface",
+      "line_range": [
+        44,
+        68
+      ],
+      "name": "CreateExecutionNodeStepInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:createExecutionNodeStep",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        97
+      ],
+      "name": "createExecutionNodeStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateExecutionNodeStepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepFn",
+      "signature": "export function createExecutionNodeStep(input: CreateExecutionNodeStepInput) -> StepFn",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:buildRuntimeIdentity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        132
+      ],
+      "name": "buildRuntimeIdentity",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "ResolvedRuntimeAgentNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeIdentity",
+      "signature": "export function buildRuntimeIdentity(node: ResolvedRuntimeAgentNode) -> RuntimeIdentity",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:createRuntimeModelResolver",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        134,
+        138
+      ],
+      "name": "createRuntimeModelResolver",
+      "params": [
+        {
+          "name": "scope",
+          "optional": false,
+          "type": "RuntimeModelResolutionScope"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(modelReference: Parameters<typeof resolveRuntimeModelReference>[0]) => Promise<LanguageModel>",
+      "signature": "export function createRuntimeModelResolver(scope: RuntimeModelResolutionScope) -> (modelReference: Parameters<typeof resolveRuntimeModelReference>[0]) => Promise<LanguageModel>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:createRuntimeDynamicModelEventDispatcher",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        140,
+        153
+      ],
+      "name": "createRuntimeDynamicModelEventDispatcher",
+      "params": [
+        {
+          "name": "scope",
+          "optional": false,
+          "type": "RuntimeModelResolutionScope"
+        },
+        {
+          "name": "dynamicModel",
+          "optional": false,
+          "type": "NonNullable<ResolvedRuntimeAgentNode[\"turnAgent\"][\"dynamicModel\"]>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NonNullable<Parameters<typeof createToolLoopHarness>[0][\"dispatchDynamicModelEvent\"]>",
+      "signature": "export function createRuntimeDynamicModelEventDispatcher(scope: RuntimeModelResolutionScope, dynamicModel: NonNullable<ResolvedRuntimeAgentNode[\"turnAgent\"][\"dynamicModel\"]>) -> NonNullable<Parameters<typeof createToolLoopHarness>[0][\"dispatchDynamicModelEvent\"]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:createNodeHarnessTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        197
+      ],
+      "name": "createNodeHarnessTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly node: ResolvedRuntimeAgentNode;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolMap",
+      "signature": "export function createNodeHarnessTools(input: {\r\n  readonly node: ResolvedRuntimeAgentNode;\r\n}) -> HarnessToolMap",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:resolveHarnessToolDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        199,
+        255
+      ],
+      "name": "resolveHarnessToolDefinition",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly node: ResolvedRuntimeAgentNode;\r\n  readonly tool: PreparedRuntimeTool;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolDefinition | null",
+      "signature": "export function resolveHarnessToolDefinition(input: {\r\n  readonly node: ResolvedRuntimeAgentNode;\r\n  readonly tool: PreparedRuntimeTool;\r\n}) -> HarnessToolDefinition | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.ts:resolveAuthoredExecute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        268,
+        282
+      ],
+      "name": "resolveAuthoredExecute",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly isFrameworkTool: boolean;\r\n  readonly rawExecute: ResolvedToolDefinition[\"execute\"];\r\n  readonly scope: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolDefinition[\"execute\"]",
+      "signature": "export function resolveAuthoredExecute(input: {\r\n  readonly isFrameworkTool: boolean;\r\n  readonly rawExecute: ResolvedToolDefinition[\"execute\"];\r\n  readonly scope: string;\r\n}) -> HarnessToolDefinition[\"execute\"]",
+      "visibility": "Private"
+    }
+  ]
+}

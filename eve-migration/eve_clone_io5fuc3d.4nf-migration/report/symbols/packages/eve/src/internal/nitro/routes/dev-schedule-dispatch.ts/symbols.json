@@ -1,0 +1,45 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.ts:DEV_DISPATCH_SCHEDULE_PATH_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "DEV_DISPATCH_SCHEDULE_PATH_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.ts:handleDevScheduleDispatchRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        32,
+        75
+      ],
+      "name": "handleDevScheduleDispatchRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DevelopmentNitroArtifactsConfig"
+        },
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function handleDevScheduleDispatchRequest(input: DevelopmentNitroArtifactsConfig, request: Request) -> Promise<Response>",
+      "visibility": "Public"
+    }
+  ]
+}

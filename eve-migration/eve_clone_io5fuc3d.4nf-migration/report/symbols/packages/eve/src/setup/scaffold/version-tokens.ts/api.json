@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        144,
+        157
+      ],
+      "name": "resolveVersionToken",
+      "params": [
+        {
+          "name": "field",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveVersionToken(field: string, value: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/version-tokens.ts"
+}

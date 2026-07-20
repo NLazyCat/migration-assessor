@@ -51,6 +51,24 @@ pub(crate) struct SymbolChangeDetail {
     pub(crate) old_line_range: Option<[usize; 2]>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub(crate) new_line_range: Option<[usize; 2]>,
+    /// Full source snippet of the old version of this symbol
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub(crate) old_source: Option<String>,
+    /// Full source snippet of the new version of this symbol
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub(crate) new_source: Option<String>,
+    /// Target file to modify (from registry or default mapping)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub(crate) target_file: Option<String>,
+    /// Target symbol to modify (from registry or default mapping)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub(crate) target_symbol: Option<String>,
+    /// Target child/field/method name (context-aware match)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub(crate) target_child: Option<String>,
+    /// Line range in target file for the matched symbol/child
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub(crate) target_line_range: Option<[usize; 2]>,
 }
 
 #[derive(Debug, Clone, Serialize)]

@@ -1,0 +1,484 @@
+{
+  "module": "packages/eve/src/compiler/module-map.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:CompiledModuleNodeScope",
+      "kind": "type_alias",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "CompiledModuleNodeScope",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledModuleNodeScopeSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:CompiledModuleMap",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "CompiledModuleMap",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledModuleMapSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:compiledModuleNodeScopeSchema",
+      "kind": "variable",
+      "line_range": [
+        21,
+        25
+      ],
+      "name": "compiledModuleNodeScopeSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:compiledModuleMapSchema",
+      "kind": "variable",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "compiledModuleMapSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CreateCompiledModuleMapSourceInput:importSpecifierStyle",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "importSpecifierStyle",
+          "partial_analysis": false,
+          "return_type": ": \"absolute\" | \"relative\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CreateCompiledModuleMapSourceInput:manifest",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CreateCompiledModuleMapSourceInput:moduleMapPath",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "moduleMapPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/module-map.ts:CreateCompiledModuleMapSourceInput",
+      "kind": "interface",
+      "line_range": [
+        39,
+        48
+      ],
+      "name": "CreateCompiledModuleMapSourceInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleImport:bindingName",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "bindingName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleImport:importSpecifier",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "importSpecifier",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleImport:sourceId",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleImport",
+      "kind": "interface",
+      "line_range": [
+        50,
+        54
+      ],
+      "name": "CollectedModuleImport",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleNodeScope:modules",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "modules",
+          "partial_analysis": false,
+          "return_type": ": readonly CollectedModuleImport[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleNodeScope:nodeId",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "nodeId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/module-map.ts:CollectedModuleNodeScope",
+      "kind": "interface",
+      "line_range": [
+        56,
+        59
+      ],
+      "name": "CollectedModuleNodeScope",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:createCompiledModuleMapSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        112
+      ],
+      "name": "createCompiledModuleMapSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateCompiledModuleMapSourceInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createCompiledModuleMapSource(input: CreateCompiledModuleMapSourceInput) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:collectModuleNodeScope",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        114,
+        136
+      ],
+      "name": "collectModuleNodeScope",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly importSpecifierStyle: \"absolute\" | \"relative\";\r\n  readonly manifest: CompiledAgentNodeManifest;\r\n  readonly moduleMapDirectory: string;\r\n  readonly nextBindingName: () => string;\r\n  readonly nodeId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CollectedModuleNodeScope",
+      "signature": "export function collectModuleNodeScope(input: {\r\n  readonly agentRoot: string;\r\n  readonly importSpecifierStyle: \"absolute\" | \"relative\";\r\n  readonly manifest: CompiledAgentNodeManifest;\r\n  readonly moduleMapDirectory: string;\r\n  readonly nextBindingName: () => string;\r\n  readonly nodeId: string;\r\n}) -> CollectedModuleNodeScope",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:collectModuleRefsForManifest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        144,
+        275
+      ],
+      "name": "collectModuleRefsForManifest",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "CompiledAgentNodeManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModuleSourceRef[]",
+      "signature": "export function collectModuleRefsForManifest(manifest: CompiledAgentNodeManifest) -> ModuleSourceRef[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:createImportSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        277,
+        293
+      ],
+      "name": "createImportSpecifier",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  fromDirectory: string;\r\n  importSpecifierStyle: \"absolute\" | \"relative\";\r\n  targetPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createImportSpecifier(input: {\r\n  fromDirectory: string;\r\n  importSpecifierStyle: \"absolute\" | \"relative\";\r\n  targetPath: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:renderModuleMap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        295,
+        323
+      ],
+      "name": "renderModuleMap",
+      "params": [
+        {
+          "name": "scopes",
+          "optional": false,
+          "type": "readonly CollectedModuleNodeScope[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderModuleMap(scopes: readonly CollectedModuleNodeScope[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:renderFrozenObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        325,
+        348
+      ],
+      "name": "renderFrozenObject",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "ReadonlyArray<{\r\n    key: string;\r\n    value: string;\r\n  }>"
+        },
+        {
+          "name": "depth",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderFrozenObject(entries: ReadonlyArray<{\r\n    key: string;\r\n    value: string;\r\n  }>, depth: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:dirnameFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        350,
+        358
+      ],
+      "name": "dirnameFilesystemPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function dirnameFilesystemPath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:joinFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        360,
+        369
+      ],
+      "name": "joinFilesystemPath",
+      "params": [
+        {
+          "name": "base",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function joinFilesystemPath(base: string, next: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:relativeFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        371,
+        395
+      ],
+      "name": "relativeFilesystemPath",
+      "params": [
+        {
+          "name": "fromDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function relativeFilesystemPath(fromDirectory: string, targetPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:normalizeFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        397,
+        400
+      ],
+      "name": "normalizeFilesystemPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeFilesystemPath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:splitFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        402,
+        452
+      ],
+      "name": "splitFilesystemPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly root: string;\r\n  readonly segments: string[];\r\n}",
+      "signature": "export function splitFilesystemPath(path: string) -> {\r\n  readonly root: string;\r\n  readonly segments: string[];\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/module-map.ts:createFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        454,
+        468
+      ],
+      "name": "createFilesystemPath",
+      "params": [
+        {
+          "name": "root",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "segments",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createFilesystemPath(root: string, segments: readonly string[]) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

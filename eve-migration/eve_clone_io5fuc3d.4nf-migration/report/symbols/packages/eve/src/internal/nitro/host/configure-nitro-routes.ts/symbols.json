@@ -1,0 +1,471 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:includesApplicationRoutes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        39
+      ],
+      "name": "includesApplicationRoutes",
+      "params": [
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function includesApplicationRoutes(surface: NitroBuildSurface) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:includesWorkflowBundles",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        43
+      ],
+      "name": "includesWorkflowBundles",
+      "params": [
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function includesWorkflowBundles(surface: NitroBuildSurface) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:includesWorkflowRoute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        47
+      ],
+      "name": "includesWorkflowRoute",
+      "params": [
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function includesWorkflowRoute(surface: NitroBuildSurface) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:registerHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        69
+      ],
+      "name": "registerHandler",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    handlerPath: string;\r\n    method?: \"GET\" | \"HEAD\" | \"POST\" | \"PUT\" | \"PATCH\" | \"DELETE\";\r\n    route: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerHandler(nitro: Nitro, options: {\r\n    handlerPath: string;\r\n    method?: \"GET\" | \"HEAD\" | \"POST\" | \"PUT\" | \"PATCH\" | \"DELETE\";\r\n    route: string;\r\n  }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:resolveNitroWorkflowBuildDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "resolveNitroWorkflowBuildDirectory",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveNitroWorkflowBuildDirectory(nitro: Nitro) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:createRelativeImportSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        83
+      ],
+      "name": "createRelativeImportSpecifier",
+      "params": [
+        {
+          "name": "fromDirectoryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRelativeImportSpecifier(fromDirectoryPath: string, targetPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:WorkflowDirectHandlerEntry:bundlePath",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "bundlePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:WorkflowDirectHandlerEntry:queuePrefix",
+          "kind": "property",
+          "line_range": [
+            97,
+            97
+          ],
+          "name": "queuePrefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:WorkflowDirectHandlerEntry",
+      "kind": "interface",
+      "line_range": [
+        95,
+        98
+      ],
+      "name": "WorkflowDirectHandlerEntry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:addWorkflowFileHandler",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        113,
+        159
+      ],
+      "name": "addWorkflowFileHandler",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    bundleName: string;\r\n    bundlePath: string;\r\n    directHandlers?: ReadonlyArray<WorkflowDirectHandlerEntry>;\r\n    route: string;\r\n    runtimeImportSpecifier?: string;\r\n    workflowWorldPluginPath?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function addWorkflowFileHandler(nitro: Nitro, input: {\r\n    bundleName: string;\r\n    bundlePath: string;\r\n    directHandlers?: ReadonlyArray<WorkflowDirectHandlerEntry>;\r\n    route: string;\r\n    runtimeImportSpecifier?: string;\r\n    workflowWorldPluginPath?: string;\r\n  }) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:buildWorkflowFileHandlerSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        237
+      ],
+      "name": "buildWorkflowFileHandlerSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  bundlePath: string;\r\n  directHandlers: ReadonlyArray<{\r\n    importSpecifier: string;\r\n    isOwnBundle: boolean;\r\n    queuePrefix: string;\r\n  }>;\r\n  runtimeImportSpecifier?: string;\r\n  workflowWorldPluginImportSpecifier?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function buildWorkflowFileHandlerSource(input: {\r\n  bundlePath: string;\r\n  directHandlers: ReadonlyArray<{\r\n    importSpecifier: string;\r\n    isOwnBundle: boolean;\r\n    queuePrefix: string;\r\n  }>;\r\n  runtimeImportSpecifier?: string;\r\n  workflowWorldPluginImportSpecifier?: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:addFrameworkVirtualHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        248,
+        270
+      ],
+      "name": "addFrameworkVirtualHandler",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    args: string;\r\n    handlerExport: string;\r\n    method: \"GET\" | \"POST\";\r\n    modulePath: string;\r\n    route: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addFrameworkVirtualHandler(nitro: Nitro, input: {\r\n    args: string;\r\n    handlerExport: string;\r\n    method: \"GET\" | \"POST\";\r\n    modulePath: string;\r\n    route: string;\r\n  }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:registerWorkflowArtifactBuildHook",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        272,
+        287
+      ],
+      "name": "registerWorkflowArtifactBuildHook",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "syncWorkflowArtifacts",
+          "optional": false,
+          "type": "() => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function registerWorkflowArtifactBuildHook(nitro: Nitro, syncWorkflowArtifacts: () => Promise<void>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:registerApplicationRoutes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        289,
+        314
+      ],
+      "name": "registerApplicationRoutes",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "artifactsConfig",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerApplicationRoutes(nitro: Nitro, preparedHost: PreparedApplicationHost, artifactsConfig: NitroArtifactsConfig) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:registerDevelopmentControlRoutes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        316,
+        338
+      ],
+      "name": "registerDevelopmentControlRoutes",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "artifactsConfig",
+          "optional": false,
+          "type": "DevelopmentNitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerDevelopmentControlRoutes(nitro: Nitro, artifactsConfig: DevelopmentNitroArtifactsConfig) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:createWorkflowDirectHandlerEntry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        340,
+        348
+      ],
+      "name": "createWorkflowDirectHandlerEntry",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "bundlePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowDirectHandlerEntry",
+      "signature": "export function createWorkflowDirectHandlerEntry(preparedHost: PreparedApplicationHost, bundlePath: string) -> WorkflowDirectHandlerEntry",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:registerWorkflowRoute",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        350,
+        369
+      ],
+      "name": "registerWorkflowRoute",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "workflowBundlePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "directHandlers",
+          "optional": false,
+          "type": "ReadonlyArray<WorkflowDirectHandlerEntry>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function registerWorkflowRoute(nitro: Nitro, preparedHost: PreparedApplicationHost, workflowBundlePath: string, directHandlers: ReadonlyArray<WorkflowDirectHandlerEntry>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:configureDevelopmentNitroRoutes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        375,
+        415
+      ],
+      "name": "configureDevelopmentNitroRoutes",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function configureDevelopmentNitroRoutes(nitro: Nitro, preparedHost: PreparedApplicationHost) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.ts:configureProductionNitroRoutes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        421,
+        459
+      ],
+      "name": "configureProductionNitroRoutes",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function configureProductionNitroRoutes(nitro: Nitro, preparedHost: PreparedApplicationHost, surface: NitroBuildSurface) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

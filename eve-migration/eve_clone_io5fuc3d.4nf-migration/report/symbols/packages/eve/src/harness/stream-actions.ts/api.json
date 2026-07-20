@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        18,
+        101
+      ],
+      "name": "createProviderStreamActionBatch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly emitFn: HarnessEmitFn;\r\n  readonly state: ActionEventCoordinates;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProviderStreamActionBatch",
+      "signature": "export function createProviderStreamActionBatch(input: {\r\n  readonly emitFn: HarnessEmitFn;\r\n  readonly state: ActionEventCoordinates;\r\n}) -> ProviderStreamActionBatch"
+    }
+  ],
+  "module": "packages/eve/src/harness/stream-actions.ts"
+}

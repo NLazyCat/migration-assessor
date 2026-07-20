@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/compiler/normalize-manifest.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-manifest.test.ts:mocks",
+      "kind": "variable",
+      "line_range": [
+        14,
+        17
+      ],
+      "name": "mocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-manifest.test.ts:createConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        98,
+        118
+      ],
+      "name": "createConfig",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Pick<CompiledAgentDefinition, \"name\"> &\r\n    Partial<Pick<CompiledAgentDefinition, \"description\" | \"experimental\">>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentDefinition",
+      "signature": "export function createConfig(input: Pick<CompiledAgentDefinition, \"name\"> &\r\n    Partial<Pick<CompiledAgentDefinition, \"description\" | \"experimental\">>) -> CompiledAgentDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

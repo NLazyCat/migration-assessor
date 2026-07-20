@@ -1,0 +1,741 @@
+{
+  "module": "packages/eve/src/client/message-reducer.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:EveAssistantMessage",
+      "kind": "type_alias",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "EveAssistantMessage",
+      "partial_analysis": false,
+      "value": "EveMessage & { readonly role: \"assistant\" };",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer.ts:ActionDescriptor:kind",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"load-skill\" | \"subagent-call\" | \"tool-call\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer.ts:ActionDescriptor:name",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer.ts:ActionDescriptor:toolName",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "toolName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer.ts:ActionDescriptor",
+      "kind": "interface",
+      "line_range": [
+        35,
+        39
+      ],
+      "name": "ActionDescriptor",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:defaultMessageReducer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        58
+      ],
+      "name": "defaultMessageReducer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveAgentReducer<EveMessageData>",
+      "signature": "export function defaultMessageReducer() -> EveAgentReducer<EveMessageData>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:reduceMessageData",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        289
+      ],
+      "name": "reduceMessageData",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "EveAgentReducerEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function reduceMessageData(data: EveMessageData, event: EveAgentReducerEvent) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:respondToInputRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        291,
+        320
+      ],
+      "name": "respondToInputRequest",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "response",
+          "optional": false,
+          "type": "InputResponse"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function respondToInputRequest(data: EveMessageData, response: InputResponse) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:updateAssistantMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        322,
+        334
+      ],
+      "name": "updateAssistantMessage",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "turnId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "update",
+          "optional": false,
+          "type": "(message: EveAssistantMessage) => EveAssistantMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function updateAssistantMessage(data: EveMessageData, turnId: string, update: (message: EveAssistantMessage) => EveAssistantMessage) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:updateAssistantMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        336,
+        348
+      ],
+      "name": "updateAssistantMetadata",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "turnId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "EveMessageMetadata"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function updateAssistantMetadata(data: EveMessageData, turnId: string, metadata: EveMessageMetadata) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:createAssistantMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        350,
+        360
+      ],
+      "name": "createAssistantMessage",
+      "params": [
+        {
+          "name": "turnId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveAssistantMessage",
+      "signature": "export function createAssistantMessage(turnId: string) -> EveAssistantMessage",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:ensureStepStartPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        362,
+        376
+      ],
+      "name": "ensureStepStartPart",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "EveAssistantMessage"
+        },
+        {
+          "name": "stepIndex",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveAssistantMessage",
+      "signature": "export function ensureStepStartPart(message: EveAssistantMessage, stepIndex: number) -> EveAssistantMessage",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:upsertPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        378,
+        393
+      ],
+      "name": "upsertPart",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "EveAssistantMessage"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "EveMessagePart"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveAssistantMessage",
+      "signature": "export function upsertPart(message: EveAssistantMessage, next: EveMessagePart) -> EveAssistantMessage",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:removeTextPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        395,
+        411
+      ],
+      "name": "removeTextPart",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "EveAssistantMessage"
+        },
+        {
+          "name": "stepIndex",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveAssistantMessage",
+      "signature": "export function removeTextPart(message: EveAssistantMessage, stepIndex: number) -> EveAssistantMessage",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:updateToolPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        413,
+        431
+      ],
+      "name": "updateToolPart",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "toolCallId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "EveDynamicToolPart"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function updateToolPart(data: EveMessageData, toolCallId: string, next: EveDynamicToolPart) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:completeAuthorization",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        433,
+        447
+      ],
+      "name": "completeAuthorization",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "AuthorizationCompletedStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function completeAuthorization(data: EveMessageData, event: AuthorizationCompletedStreamEvent) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:updateAuthorizationPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        449,
+        464
+      ],
+      "name": "updateAuthorizationPart",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "existing",
+          "optional": false,
+          "type": "EveAuthorizationPart"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "EveAuthorizationPart"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function updateAuthorizationPart(data: EveMessageData, existing: EveAuthorizationPart, next: EveAuthorizationPart) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:findToolPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        466,
+        475
+      ],
+      "name": "findToolPart",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "toolCallId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveDynamicToolPart | undefined",
+      "signature": "export function findToolPart(data: EveMessageData, toolCallId: string) -> EveDynamicToolPart | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:findLatestPendingAuthorizationPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        477,
+        496
+      ],
+      "name": "findLatestPendingAuthorizationPart",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveAuthorizationPart | undefined",
+      "signature": "export function findLatestPendingAuthorizationPart(data: EveMessageData, name: string) -> EveAuthorizationPart | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:findToolPartByApprovalId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        498,
+        510
+      ],
+      "name": "findToolPartByApprovalId",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "approvalId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveDynamicToolPart | undefined",
+      "signature": "export function findToolPartByApprovalId(data: EveMessageData, approvalId: string) -> EveDynamicToolPart | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:projectReceivedParts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        512,
+        529
+      ],
+      "name": "projectReceivedParts",
+      "params": [
+        {
+          "name": "parts",
+          "optional": false,
+          "type": "readonly MessageReceivedPart[] | undefined"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly EveMessagePart[]",
+      "signature": "export function projectReceivedParts(parts: readonly MessageReceivedPart[] | undefined, message: string) -> readonly EveMessagePart[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:partKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        531,
+        546
+      ],
+      "name": "partKey",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "EveMessagePart"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function partKey(part: EveMessagePart) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:upsertMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        548,
+        557
+      ],
+      "name": "upsertMessage",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "EveMessageData"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "EveMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageData",
+      "signature": "export function upsertMessage(data: EveMessageData, next: EveMessage) -> EveMessageData",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:toMessageInputRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        559,
+        567
+      ],
+      "name": "toMessageInputRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageInputRequest",
+      "signature": "export function toMessageInputRequest(request: InputRequest) -> EveMessageInputRequest",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:createToolMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        569,
+        580
+      ],
+      "name": "createToolMetadata",
+      "params": [
+        {
+          "name": "descriptor",
+          "optional": false,
+          "type": "ActionDescriptor"
+        },
+        {
+          "name": "extra",
+          "optional": true,
+          "type": "{ readonly inputRequest?: EveMessageInputRequest }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageToolMetadata",
+      "signature": "export function createToolMetadata(descriptor: ActionDescriptor, extra: { readonly inputRequest?: EveMessageInputRequest }) -> EveMessageToolMetadata",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:mergeToolMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        582,
+        599
+      ],
+      "name": "mergeToolMetadata",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "EveMessageToolMetadata | undefined"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "EveMessageToolMetadata"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveMessageToolMetadata",
+      "signature": "export function mergeToolMetadata(current: EveMessageToolMetadata | undefined, next: EveMessageToolMetadata) -> EveMessageToolMetadata",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:approvedApproval",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        601,
+        618
+      ],
+      "name": "approvedApproval",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "EveDynamicToolPart | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "| {\r\n      readonly id: string;\r\n      readonly approved: true;\r\n      readonly reason?: string;\r\n      readonly isAutomatic?: boolean;\r\n    }\r\n  | undefined",
+      "signature": "export function approvedApproval(part: EveDynamicToolPart | undefined) -> | {\r\n      readonly id: string;\r\n      readonly approved: true;\r\n      readonly reason?: string;\r\n      readonly isAutomatic?: boolean;\r\n    }\r\n  | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:normalizeActionRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        620,
+        647
+      ],
+      "name": "normalizeActionRequest",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "RuntimeActionRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActionDescriptor",
+      "signature": "export function normalizeActionRequest(action: RuntimeActionRequest) -> ActionDescriptor",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:normalizeActionResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        649,
+        670
+      ],
+      "name": "normalizeActionResult",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "RuntimeActionResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActionDescriptor",
+      "signature": "export function normalizeActionResult(result: RuntimeActionResult) -> ActionDescriptor",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:optimisticUserMessageId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        672,
+        674
+      ],
+      "name": "optimisticUserMessageId",
+      "params": [
+        {
+          "name": "submissionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function optimisticUserMessageId(submissionId: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer.ts:stringifyUnknown",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        676,
+        683
+      ],
+      "name": "stringifyUnknown",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stringifyUnknown(value: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

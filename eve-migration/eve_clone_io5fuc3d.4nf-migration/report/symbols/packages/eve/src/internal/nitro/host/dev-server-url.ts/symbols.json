@@ -1,0 +1,66 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-server-url.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-server-url.ts:DEFAULT_DEVELOPMENT_SERVER_HOST",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "DEFAULT_DEVELOPMENT_SERVER_HOST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-server-url.ts:IPV6_LOOPBACK_HOSTNAME",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "IPV6_LOOPBACK_HOSTNAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-server-url.ts:IPV6_WILDCARD_LISTEN_HOSTNAMES",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "IPV6_WILDCARD_LISTEN_HOSTNAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-server-url.ts:normalizeDevelopmentServerClientUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        29
+      ],
+      "name": "normalizeDevelopmentServerClientUrl",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeDevelopmentServerClientUrl(serverUrl: string) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

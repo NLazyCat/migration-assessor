@@ -1,0 +1,63 @@
+{
+  "module": "packages/eve/src/internal/dev-boot-progress.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/dev-boot-progress.ts:DevBootProgressEvent",
+      "kind": "type_alias",
+      "line_range": [
+        1,
+        13
+      ],
+      "name": "DevBootProgressEvent",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly phase: string;\r\n      readonly type: \"phase-started\";\r\n    }\r\n  | {\r\n      readonly elapsedMs: number;\r\n      readonly phase: string;\r\n      readonly type: \"phase-finished\";\r\n    }\r\n  | {\r\n      readonly type: \"before-first-paint\";\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/dev-boot-progress.ts:DevBootProgressReporter",
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "DevBootProgressReporter",
+      "partial_analysis": false,
+      "value": "(event: DevBootProgressEvent) => void;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/dev-boot-progress.ts:devBootPhase",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        18,
+        32
+      ],
+      "name": "devBootPhase",
+      "params": [
+        {
+          "name": "phase",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "run",
+          "optional": false,
+          "type": "() => Promise<T>"
+        },
+        {
+          "name": "report",
+          "optional": true,
+          "type": "DevBootProgressReporter"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function devBootPhase(phase: string, run: () => Promise<T>, report: DevBootProgressReporter) -> Promise<T>",
+      "visibility": "Public"
+    }
+  ]
+}

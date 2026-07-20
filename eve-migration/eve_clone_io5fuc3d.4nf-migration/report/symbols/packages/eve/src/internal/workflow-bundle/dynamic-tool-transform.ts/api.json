@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        103,
+        125
+      ],
+      "name": "transformDynamicToolExecute",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ code: string } | null>",
+      "signature": "export function transformDynamicToolExecute(filename: string, source: string) -> Promise<{ code: string } | null>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts"
+}

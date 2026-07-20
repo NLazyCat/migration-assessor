@@ -1,0 +1,47 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        95
+      ],
+      "name": "decodeGltfMesh",
+      "params": [
+        {
+          "name": "gltf",
+          "optional": false,
+          "type": "GltfDocument"
+        },
+        {
+          "name": "loadBuffer",
+          "optional": false,
+          "type": "(uri: string) => Promise<ArrayBufferLike>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MeshData>",
+      "signature": "export function decodeGltfMesh(gltf: GltfDocument, loadBuffer: (uri: string) => Promise<ArrayBufferLike>) -> Promise<MeshData>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        97,
+        101
+      ],
+      "name": "meshAspect",
+      "params": [
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function meshAspect(mesh: MeshData) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts"
+}

@@ -1,0 +1,461 @@
+{
+  "module": "packages/eve/src/setup/cli/select-state.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-state.ts:SelectState:filter",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "filter",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-state.ts:SelectState:cursor",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "cursor",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-state.ts:SelectState:selected",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "selected",
+          "partial_analysis": false,
+          "return_type": ": Set<string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/select-state.ts:SelectState",
+      "kind": "interface",
+      "line_range": [
+        9,
+        13
+      ],
+      "name": "SelectState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:SearchActionOption",
+      "kind": "interface",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "SearchActionOption",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:SEARCH_ACTION_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "SEARCH_ACTION_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:searchActionValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "searchActionValue",
+      "params": [
+        {
+          "name": "query",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function searchActionValue(query: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:searchActionQuery",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        32
+      ],
+      "name": "searchActionQuery",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function searchActionQuery(value: string) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:SelectEvent",
+      "kind": "type_alias",
+      "line_range": [
+        35,
+        41
+      ],
+      "name": "SelectEvent",
+      "partial_analysis": false,
+      "value": "| { type: \"char\"; char: string }\r\n  | { type: \"backspace\" }\r\n  | { type: \"clear\" }\r\n  | { type: \"up\" }\r\n  | { type: \"down\" }\r\n  | { type: \"toggle\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-state.ts:SelectContext:options",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": readonly PromptOption<string>[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-state.ts:SelectContext:searchAction",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "searchAction",
+          "partial_analysis": false,
+          "return_type": ": SearchActionOption",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-state.ts:SelectContext:submitRow",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "submitRow",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/select-state.ts:SelectContext",
+      "kind": "interface",
+      "line_range": [
+        44,
+        56
+      ],
+      "name": "SelectContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:submitRowIndex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        61
+      ],
+      "name": "submitRowIndex",
+      "params": [
+        {
+          "name": "visible",
+          "optional": false,
+          "type": "readonly PromptOption<string>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function submitRowIndex(visible: readonly PromptOption<string>[]) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:filterOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        89
+      ],
+      "name": "filterOptions",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<string>[]"
+        },
+        {
+          "name": "filter",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "searchAction",
+          "optional": true,
+          "type": "SearchActionOption"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptOption<string>[]",
+      "signature": "export function filterOptions(options: readonly PromptOption<string>[], filter: string, searchAction: SearchActionOption) -> PromptOption<string>[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:isFocusable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        94
+      ],
+      "name": "isFocusable",
+      "params": [
+        {
+          "name": "option",
+          "optional": false,
+          "type": "PromptOption<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isFocusable(option: PromptOption<string>) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:isActionable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        99
+      ],
+      "name": "isActionable",
+      "params": [
+        {
+          "name": "option",
+          "optional": false,
+          "type": "PromptOption<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isActionable(option: PromptOption<string>) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:firstFocusableIndex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        105,
+        109
+      ],
+      "name": "firstFocusableIndex",
+      "params": [
+        {
+          "name": "visible",
+          "optional": false,
+          "type": "readonly PromptOption<string>[]"
+        },
+        {
+          "name": "submitRow",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function firstFocusableIndex(visible: readonly PromptOption<string>[], submitRow: boolean) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:stepCursor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        131
+      ],
+      "name": "stepCursor",
+      "params": [
+        {
+          "name": "visible",
+          "optional": false,
+          "type": "readonly PromptOption<string>[]"
+        },
+        {
+          "name": "cursor",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "delta",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "submitRow",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function stepCursor(visible: readonly PromptOption<string>[], cursor: number, delta: number, submitRow: boolean) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:reduceSelect",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        204
+      ],
+      "name": "reduceSelect",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SelectState"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "SelectEvent"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "SelectContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectState",
+      "signature": "export function reduceSelect(state: SelectState, event: SelectEvent, context: SelectContext) -> SelectState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:initialSelectState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        213,
+        234
+      ],
+      "name": "initialSelectState",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  options: readonly PromptOption<string>[];\r\n  filter?: string;\r\n  defaultValue?: string;\r\n  initialValues?: readonly string[];\r\n  searchAction?: SearchActionOption;\r\n  submitRow?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectState",
+      "signature": "export function initialSelectState(input: {\r\n  options: readonly PromptOption<string>[];\r\n  filter?: string;\r\n  defaultValue?: string;\r\n  initialValues?: readonly string[];\r\n  searchAction?: SearchActionOption;\r\n  submitRow?: boolean;\r\n}) -> SelectState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:selectValueAtCursor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        237,
+        243
+      ],
+      "name": "selectValueAtCursor",
+      "params": [
+        {
+          "name": "visible",
+          "optional": false,
+          "type": "readonly PromptOption<string>[]"
+        },
+        {
+          "name": "cursor",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function selectValueAtCursor(visible: readonly PromptOption<string>[], cursor: number) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-state.ts:orderedSelection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        246,
+        251
+      ],
+      "name": "orderedSelection",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<string>[]"
+        },
+        {
+          "name": "selected",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function orderedSelection(options: readonly PromptOption<string>[], selected: ReadonlySet<string>) -> string[]",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -6,10 +6,6 @@ pub struct InitArgs {
     /// Name of the project directory to create
     pub name: String,
 
-    /// Target language for migration (default: rust)
-    #[arg(long, default_value = "rust")]
-    pub target_lang: String,
-
     /// Path to parent directory (default: current directory)
     #[arg(long, default_value = ".")]
     pub dir: String,
@@ -25,53 +21,90 @@ pub fn run(args: &InitArgs) -> anyhow::Result<()> {
 
     std::fs::create_dir_all(&project_root)?;
 
-    // Create minimal project config
-    let config_content = format!(
-        r#"# Migration Assessor Configuration
+    let config_content = r#"# Migration Assessor Configuration
 #
-# 1. Clone your source repository into this directory:
-#    git clone <repo-url>
-#
-# 2. Run analysis:
-#    migration-analyze analyze
+# Fill in the [project] section with your source repository information.
+# Then run: migration-analyze analyze
 
 [project]
-target_language = "{target_lang}"
-# source_language = "typescript"   # auto-detected if not set
+# Source repository URL (git clone URL) or local path (required)
+# Examples:
+#   source_repo = "https://github.com/user/my-project.git"
+#   source_repo = "../local-project"
+source_repo = ""
+
+# Source language to analyze (typescript | javascript | rust)
+source_lang = "typescript"
+
+# Target language for migration
+target_language = "rust"
+
+# Source directory path (auto-detected if left empty)
+# source = ""
+
+# Target project path — enables real-time symbol alignment during diff
+# target = "../my-rust-project"
+
+# Git branch to analyze (optional)
+# source_branch = ""
+
+# Specific version analyzed — auto-managed by analyze, do not edit manually
+# source_version = ""
+
+# Fail on first error instead of collecting all errors
+# strict = false
+
+# File glob patterns to ignore during analysis
+# ignore = ["**/*.test.ts", "**/*.spec.ts"]
+
+# File glob patterns to exclude from analysis
+# exclude = ["src/generated/**"]
 
 [skip]
+# Skip framework-level dependencies
 framework = true
 
 [output]
+# Output directory for analysis report
 # directory = "report"
+
+# Split output by directory structure
 # split_by_directory = true
-"#,
-        target_lang = args.target_lang,
-    );
+
+[compatibility]
+# Custom compatibility overrides file
+# overrides_file = ".migration-assessor-compat.toml"
+
+[scoring.weights]
+in_degree = 30
+complexity = 25
+compatibility = 20
+cycles = 15
+tests = 10
+
+[mapping]
+# Override file path mappings between source and target
+# override_list = [
+#     { from = "src/utils.ts", to = "new/src/utils.rs" },
+# ]
+"#;
 
     let config_path = project_root.join("migration.toml");
     std::fs::write(&config_path, config_content)?;
 
-    // Create .gitignore with sensible defaults
-    let gitignore_path = project_root.join(".gitignore");
-    let gitignore_content = r#"# Migration artifacts
-*-migration/
+    let gitignore_content = "# Migration artifacts\n*-migration/\n\n# IDE\n.idea/\n.vscode/\n*.swp\n";
+    std::fs::write(project_root.join(".gitignore"), gitignore_content)?;
 
-# IDE
-.idea/
-.vscode/
-*.swp
-"#;
-    std::fs::write(&gitignore_path, gitignore_content)?;
-
-    println!("✅ Created project '{}'", args.name);
+    println!("Created project '{}'", args.name);
     println!();
     println!("  Location: {}", project_root.display());
     println!();
     println!("  Next steps:");
-    println!("    cd {}", args.name);
-    println!("    git clone <your-source-repo>");
-    println!("    migration-analyze analyze");
+    println!("    1. Edit migration.toml and fill in:");
+    println!("       - source_repo (git URL or local path)");
+    println!("       - source_lang (source language)");
+    println!("       - target_language (migration target)");
+    println!("    2. Run: migration-analyze analyze");
 
     Ok(())
 }

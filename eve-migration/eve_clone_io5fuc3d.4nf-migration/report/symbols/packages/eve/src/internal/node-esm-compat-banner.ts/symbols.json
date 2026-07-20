@@ -1,0 +1,393 @@
+{
+  "module": "packages/eve/src/internal/node-esm-compat-banner.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:NodeEsmCompatBannerOptions:includeRequire",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "includeRequire",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:NodeEsmCompatBannerOptions",
+      "kind": "interface",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "NodeEsmCompatBannerOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BannerLine:importLine",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "importLine",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BannerLine:declarationLine",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "declarationLine",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BannerLine:bindingPattern",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "bindingPattern",
+          "partial_analysis": false,
+          "return_type": ": RegExp",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BannerLine",
+      "kind": "interface",
+      "line_range": [
+        16,
+        20
+      ],
+      "name": "BannerLine",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BANNER_LINES",
+      "kind": "variable",
+      "line_range": [
+        26,
+        37
+      ],
+      "name": "BANNER_LINES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:REQUIRE_LINE",
+      "kind": "variable",
+      "line_range": [
+        39,
+        43
+      ],
+      "name": "REQUIRE_LINE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:buildNodeEsmCompatBanner",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        80
+      ],
+      "name": "buildNodeEsmCompatBanner",
+      "params": [
+        {
+          "name": "code",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "NodeEsmCompatBannerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function buildNodeEsmCompatBanner(code: string, options: NodeEsmCompatBannerOptions) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BannerPlugin:name",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BannerPlugin",
+      "kind": "interface",
+      "line_range": [
+        82,
+        88
+      ],
+      "name": "BannerPlugin",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:SourceMap:version",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": 3",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:SourceMap:sources",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "sources",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:SourceMap:sourcesContent",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "sourcesContent",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:SourceMap:names",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "names",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/node-esm-compat-banner.ts:SourceMap:mappings",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "mappings",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:SourceMap",
+      "kind": "interface",
+      "line_range": [
+        90,
+        96
+      ],
+      "name": "SourceMap",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:createNodeEsmCompatBannerPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        125
+      ],
+      "name": "createNodeEsmCompatBannerPlugin",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "NodeEsmCompatBannerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BannerPlugin",
+      "signature": "export function createNodeEsmCompatBannerPlugin(options: NodeEsmCompatBannerOptions) -> BannerPlugin",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:createPrependedLineSourceMap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        148
+      ],
+      "name": "createPrependedLineSourceMap",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  insertedLineCount: number;\r\n  source: string;\r\n  sourceContent: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SourceMap",
+      "signature": "export function createPrependedLineSourceMap(_: {\r\n  insertedLineCount: number;\r\n  source: string;\r\n  sourceContent: string;\r\n}) -> SourceMap",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:BASE64_VLQ_CHARS",
+      "kind": "variable",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "BASE64_VLQ_CHARS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:VLQ_BASE_SHIFT",
+      "kind": "variable",
+      "line_range": [
+        151,
+        151
+      ],
+      "name": "VLQ_BASE_SHIFT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:VLQ_BASE",
+      "kind": "variable",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "VLQ_BASE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:VLQ_BASE_MASK",
+      "kind": "variable",
+      "line_range": [
+        153,
+        153
+      ],
+      "name": "VLQ_BASE_MASK",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:VLQ_CONTINUATION_BIT",
+      "kind": "variable",
+      "line_range": [
+        154,
+        154
+      ],
+      "name": "VLQ_CONTINUATION_BIT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:encodeVlqFields",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        156,
+        158
+      ],
+      "name": "encodeVlqFields",
+      "params": [
+        {
+          "name": "fields",
+          "optional": false,
+          "type": "readonly number[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function encodeVlqFields(fields: readonly number[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/node-esm-compat-banner.ts:encodeVlqInteger",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        160,
+        176
+      ],
+      "name": "encodeVlqInteger",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function encodeVlqInteger(value: number) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

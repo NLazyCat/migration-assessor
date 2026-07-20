@@ -382,7 +382,7 @@ fn trim_to_relative(abs_path: &Path, project_root: &Path) -> PathBuf {
 }
 
 /// Build import map: file_path -> (local_name -> (target_file, exported_name))
-fn build_import_map(
+pub(crate) fn build_import_map(
     root: &Path,
     files: &[PathBuf],
 ) -> anyhow::Result<HashMap<String, FileBindings>> {
@@ -530,6 +530,7 @@ fn extract_file_refs(
     let program = ret.program;
 
     let semantic_ret = SemanticBuilder::new()
+        .with_build_nodes(true)
         .build(&program);
     let scoping = semantic_ret.semantic.scoping();
     let ast_nodes = semantic_ret.semantic.nodes();
@@ -555,7 +556,8 @@ fn extract_file_refs(
             let reference = scoping.get_reference(*ref_id);
             let ref_node_id = reference.node_id();
 
-            let ref_span = ast_nodes.get_node(ref_node_id).kind().span();
+            let ref_node = ast_nodes.get_node(ref_node_id);
+            let ref_span = ref_node.kind().span();
 
             let line = source[..ref_span.start as usize].matches('\n').count() + 1;
             let column = ref_span.start as usize

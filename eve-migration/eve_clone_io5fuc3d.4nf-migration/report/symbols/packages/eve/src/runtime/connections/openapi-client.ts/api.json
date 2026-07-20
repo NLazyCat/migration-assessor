@@ -1,0 +1,385 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        69
+      ],
+      "name": "OpenApiToolResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface OpenApiToolResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "status: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "statusText",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "statusText: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "body: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        83,
+        473
+      ],
+      "name": "OpenApiConnectionClient",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class OpenApiConnectionClient { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "OpenApiConnectionClient::constructor(connection: ResolvedConnectionDefinition) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        93,
+        95
+      ],
+      "name": "connect",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<OpenApiToolCache>",
+      "signature": "OpenApiConnectionClient::connect() -> Promise<OpenApiToolCache>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        97,
+        100
+      ],
+      "name": "getToolMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly ConnectionToolMetadata[]>",
+      "signature": "OpenApiConnectionClient::getToolMetadata() -> Promise<readonly ConnectionToolMetadata[]>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        102,
+        105
+      ],
+      "name": "getTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<ToolSet>",
+      "signature": "OpenApiConnectionClient::getTools() -> Promise<ToolSet>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        107,
+        122
+      ],
+      "name": "executeTool",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionToolExecuteOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<OpenApiToolResult>",
+      "signature": "OpenApiConnectionClient::executeTool(toolName: string, args: unknown, options: ConnectionToolExecuteOptions) -> Promise<OpenApiToolResult>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        124,
+        127
+      ],
+      "name": "close",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "OpenApiConnectionClient::close() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        129,
+        144
+      ],
+      "name": "#ensureTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<OpenApiToolCache>",
+      "signature": "OpenApiConnectionClient::#ensureTools() -> Promise<OpenApiToolCache>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        146,
+        191
+      ],
+      "name": "#buildTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<OpenApiToolCache>",
+      "signature": "OpenApiConnectionClient::#buildTools() -> Promise<OpenApiToolCache>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        202,
+        215
+      ],
+      "name": "#resolveBaseUrl",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "OpenApiConnectionClient::#resolveBaseUrl(document: Record<string, unknown>) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        217,
+        265
+      ],
+      "name": "#loadDocument",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, unknown>>",
+      "signature": "OpenApiConnectionClient::#loadDocument() -> Promise<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        267,
+        313
+      ],
+      "name": "#extractOperations",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenApiOperation[]",
+      "signature": "OpenApiConnectionClient::#extractOperations(document: Record<string, unknown>) -> OpenApiOperation[]"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        315,
+        347
+      ],
+      "name": "#resolveParameters",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenApiParameter[]",
+      "signature": "OpenApiConnectionClient::#resolveParameters(document: Record<string, unknown>, raw: readonly unknown[]) -> OpenApiParameter[]"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        349,
+        375
+      ],
+      "name": "#resolveRequestBody",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "rawParameters",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenApiRequestBody | undefined",
+      "signature": "OpenApiConnectionClient::#resolveRequestBody(document: Record<string, unknown>, raw: unknown, rawParameters: readonly unknown[]) -> OpenApiRequestBody | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        377,
+        392
+      ],
+      "name": "#resolveParameterSchema",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "parameter",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "OpenApiConnectionClient::#resolveParameterSchema(document: Record<string, unknown>, parameter: Record<string, unknown>) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        394,
+        413
+      ],
+      "name": "#resolveSwaggerBodyParameter",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "rawParameters",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenApiRequestBody | undefined",
+      "signature": "OpenApiConnectionClient::#resolveSwaggerBodyParameter(document: Record<string, unknown>, rawParameters: readonly unknown[]) -> OpenApiRequestBody | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        415,
+        472
+      ],
+      "name": "#request",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "OpenApiOperation"
+        },
+        {
+          "name": "baseUrl",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionToolExecuteOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<OpenApiToolResult>",
+      "signature": "OpenApiConnectionClient::#request(operation: OpenApiOperation, baseUrl: string, args: Record<string, unknown>, options: ConnectionToolExecuteOptions) -> Promise<OpenApiToolResult>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/connections/openapi-client.ts"
+}

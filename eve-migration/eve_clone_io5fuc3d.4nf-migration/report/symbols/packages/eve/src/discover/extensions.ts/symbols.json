@@ -1,0 +1,520 @@
+{
+  "module": "packages/eve/src/discover/extensions.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_MOUNT_UNRESOLVED",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "DISCOVER_EXTENSION_MOUNT_UNRESOLVED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_MOUNT_AMBIGUOUS",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "DISCOVER_EXTENSION_MOUNT_AMBIGUOUS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_MOUNT_MISSING_DECLARATION",
+      "kind": "variable",
+      "line_range": [
+        30,
+        31
+      ],
+      "name": "DISCOVER_EXTENSION_MOUNT_MISSING_DECLARATION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_NESTED_MOUNT_UNSUPPORTED",
+      "kind": "variable",
+      "line_range": [
+        38,
+        39
+      ],
+      "name": "DISCOVER_EXTENSION_NESTED_MOUNT_UNSUPPORTED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_OVERRIDE_OUTSIDE_MOUNT",
+      "kind": "variable",
+      "line_range": [
+        46,
+        47
+      ],
+      "name": "DISCOVER_EXTENSION_OVERRIDE_OUTSIDE_MOUNT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_PACKAGE_INVALID",
+      "kind": "variable",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "DISCOVER_EXTENSION_PACKAGE_INVALID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_COMPATIBILITY_INVALID",
+      "kind": "variable",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "DISCOVER_EXTENSION_COMPATIBILITY_INVALID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_CAPABILITY_INCOMPATIBLE",
+      "kind": "variable",
+      "line_range": [
+        64,
+        65
+      ],
+      "name": "DISCOVER_EXTENSION_CAPABILITY_INCOMPATIBLE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_AGENT_CONFIG_UNSUPPORTED",
+      "kind": "variable",
+      "line_range": [
+        71,
+        72
+      ],
+      "name": "DISCOVER_EXTENSION_AGENT_CONFIG_UNSUPPORTED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_SANDBOX_UNSUPPORTED",
+      "kind": "variable",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "DISCOVER_EXTENSION_SANDBOX_UNSUPPORTED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:DISCOVER_EXTENSION_SCHEDULE_UNSUPPORTED",
+      "kind": "variable",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "DISCOVER_EXTENSION_SCHEDULE_UNSUPPORTED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountLocation:namespace",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "namespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountLocation:specifier",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "specifier",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountLocation:packageName",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountLocation:packageRoot",
+          "kind": "property",
+          "line_range": [
+            98,
+            98
+          ],
+          "name": "packageRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountLocation:sourceRoot",
+          "kind": "property",
+          "line_range": [
+            100,
+            100
+          ],
+          "name": "sourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/extensions.ts:ExtensionMountLocation",
+      "kind": "interface",
+      "line_range": [
+        90,
+        101
+      ],
+      "name": "ExtensionMountLocation",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation:namespace",
+          "kind": "property",
+          "line_range": [
+            110,
+            110
+          ],
+          "name": "namespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation:specifier",
+          "kind": "property",
+          "line_range": [
+            112,
+            112
+          ],
+          "name": "specifier",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation:packageName",
+          "kind": "property",
+          "line_range": [
+            114,
+            114
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation:packageRoot",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "packageRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation:authoredSourceRoot",
+          "kind": "property",
+          "line_range": [
+            118,
+            118
+          ],
+          "name": "authoredSourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation:distRoot",
+          "kind": "property",
+          "line_range": [
+            120,
+            120
+          ],
+          "name": "distRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/extensions.ts:ExtensionMountPackageLocation",
+      "kind": "interface",
+      "line_range": [
+        108,
+        121
+      ],
+      "name": "ExtensionMountPackageLocation",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:mountNamespace",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        126,
+        134
+      ],
+      "name": "mountNamespace",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function mountNamespace(logicalPath: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:mountRefNamespace",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        148
+      ],
+      "name": "mountRefNamespace",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function mountRefNamespace(logicalPath: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:packageStateNamespace",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        156,
+        163
+      ],
+      "name": "packageStateNamespace",
+      "params": [
+        {
+          "name": "packageName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function packageStateNamespace(packageName: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:locateExtensionMount",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        171,
+        230
+      ],
+      "name": "locateExtensionMount",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly source: ProjectSource;\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly mount: ExtensionSourceRef;\r\n  /**\r\n   * Mount namespace the caller derived from the mount path — passed in because\r\n   * the file and directory mount forms name it at different path positions.\r\n   */\r\n  readonly namespace: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ location?: ExtensionMountLocation; diagnostics: DiscoverDiagnostic[] }>",
+      "signature": "export function locateExtensionMount(input: {\r\n  readonly source: ProjectSource;\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly mount: ExtensionSourceRef;\r\n  /**\r\n   * Mount namespace the caller derived from the mount path — passed in because\r\n   * the file and directory mount forms name it at different path positions.\r\n   */\r\n  readonly namespace: string;\r\n}) -> Promise<{ location?: ExtensionMountLocation; diagnostics: DiscoverDiagnostic[] }>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:locateExtensionMountPackage",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        236,
+        341
+      ],
+      "name": "locateExtensionMountPackage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly source: ProjectSource;\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly mount: ExtensionSourceRef;\r\n  readonly namespace: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  location?: ExtensionMountPackageLocation;\r\n  diagnostics: DiscoverDiagnostic[];\r\n}>",
+      "signature": "export function locateExtensionMountPackage(input: {\r\n  readonly source: ProjectSource;\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly mount: ExtensionSourceRef;\r\n  readonly namespace: string;\r\n}) -> Promise<{\r\n  location?: ExtensionMountPackageLocation;\r\n  diagnostics: DiscoverDiagnostic[];\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:formatSupportedVersions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        343,
+        347
+      ],
+      "name": "formatSupportedVersions",
+      "params": [
+        {
+          "name": "versions",
+          "optional": false,
+          "type": "readonly number[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSupportedVersions(versions: readonly number[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:resolvePackageRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        349,
+        377
+      ],
+      "name": "resolvePackageRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly source: ProjectSource;\r\n  readonly appRoot: string;\r\n  readonly mountDirectory: string;\r\n  readonly specifier: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function resolvePackageRoot(input: {\r\n  readonly source: ProjectSource;\r\n  readonly appRoot: string;\r\n  readonly mountDirectory: string;\r\n  readonly specifier: string;\r\n}) -> Promise<string | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:bareSpecifierPackagePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        383,
+        389
+      ],
+      "name": "bareSpecifierPackagePath",
+      "params": [
+        {
+          "name": "specifier",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function bareSpecifierPackagePath(specifier: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extensions.ts:hasPackageJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        391,
+        393
+      ],
+      "name": "hasPackageJson",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "packageRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function hasPackageJson(source: ProjectSource, packageRoot: string) -> Promise<boolean>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "module": "packages/eve/test/tui-client/tui-questions.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions.ts:RED_ID",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "RED_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions.ts:BLUE_ID",
+      "kind": "variable",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "BLUE_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions.ts:assistantReplyAfter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        122
+      ],
+      "name": "assistantReplyAfter",
+      "params": [
+        {
+          "name": "snapshot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "afterMarker",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "needle",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function assistantReplyAfter(snapshot: string, afterMarker: string, needle: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions.ts:waitForCondition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        124,
+        135
+      ],
+      "name": "waitForCondition",
+      "params": [
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "() => boolean"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ timeoutMs: number; label: string; intervalMs?: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForCondition(predicate: () => boolean, options: { timeoutMs: number; label: string; intervalMs?: number }) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

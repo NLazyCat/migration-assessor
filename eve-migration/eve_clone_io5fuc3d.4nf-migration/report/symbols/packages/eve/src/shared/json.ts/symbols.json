@@ -1,0 +1,210 @@
+{
+  "module": "packages/eve/src/shared/json.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:JsonPrimitive",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "JsonPrimitive",
+      "partial_analysis": false,
+      "value": "boolean | number | string | null;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:JsonArray",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "JsonArray",
+      "partial_analysis": false,
+      "value": "readonly JsonValue[];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:JsonObject",
+      "kind": "interface",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "JsonObject",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:JsonValue",
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "JsonValue",
+      "partial_analysis": false,
+      "value": "JsonArray | JsonObject | JsonPrimitive;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:INVALID_JSON_VALUE_CANDIDATE",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "INVALID_JSON_VALUE_CANDIDATE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:JSON_VALUE_ERROR_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "JSON_VALUE_ERROR_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:JSON_OBJECT_ERROR_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "JSON_OBJECT_ERROR_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:parseJsonValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        43
+      ],
+      "name": "parseJsonValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonValue",
+      "signature": "export function parseJsonValue(value: unknown) -> JsonValue",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:parseJsonObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        59
+      ],
+      "name": "parseJsonObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject",
+      "signature": "export function parseJsonObject(value: unknown) -> JsonObject",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:normalizeJsonValueCandidate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        122
+      ],
+      "name": "normalizeJsonValueCandidate",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "seen",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonValue | typeof INVALID_JSON_VALUE_CANDIDATE",
+      "signature": "export function normalizeJsonValueCandidate(value: unknown, seen: unknown) -> JsonValue | typeof INVALID_JSON_VALUE_CANDIDATE",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:isJsonObjectValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        129
+      ],
+      "name": "isJsonObjectValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "JsonValue | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is JsonObject",
+      "signature": "export function isJsonObjectValue(value: JsonValue | undefined) -> value is JsonObject",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/json.ts:isPlainObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        131,
+        134
+      ],
+      "name": "isPlainObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "object"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isPlainObject(value: object) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

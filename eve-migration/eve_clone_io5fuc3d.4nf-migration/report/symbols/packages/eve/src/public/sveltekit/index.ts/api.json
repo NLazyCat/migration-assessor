@@ -1,0 +1,88 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        18,
+        42
+      ],
+      "name": "EveSvelteKitPluginOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveSvelteKitPluginOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "eveRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "eveRoot?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "eveBuildCommand",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "eveBuildCommand?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "configureVercelJson",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "configureVercelJson?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "servicePrefix",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "servicePrefix?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        85,
+        128
+      ],
+      "name": "eveSvelteKit",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveSvelteKitPluginOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Plugin",
+      "signature": "export function eveSvelteKit(options: EveSvelteKitPluginOptions) -> Plugin"
+    }
+  ],
+  "module": "packages/eve/src/public/sveltekit/index.ts"
+}

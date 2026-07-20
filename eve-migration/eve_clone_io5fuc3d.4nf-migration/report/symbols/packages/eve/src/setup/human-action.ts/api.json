@@ -1,0 +1,92 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        14
+      ],
+      "name": "HumanAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HumanAction { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "kind: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "command",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "command: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "reason",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reason: : string"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        21,
+        29
+      ],
+      "name": "HumanActionRequiredError",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "HumanAction"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class HumanActionRequiredError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        24,
+        28
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "HumanAction"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "HumanActionRequiredError::constructor(action: HumanAction) -> void"
+    }
+  ],
+  "module": "packages/eve/src/setup/human-action.ts"
+}

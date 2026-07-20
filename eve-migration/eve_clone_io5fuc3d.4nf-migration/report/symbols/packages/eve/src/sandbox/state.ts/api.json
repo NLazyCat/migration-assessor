@@ -1,0 +1,67 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "SandboxSessionState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxSessionState = SandboxBackendSessionState;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        21,
+        24
+      ],
+      "name": "SandboxState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "initialized",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "initialized: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSessionState | null",
+      "signature": "session: : SandboxSessionState | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        35
+      ],
+      "name": "SandboxAccess",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxAccess { ... }"
+    }
+  ],
+  "module": "packages/eve/src/sandbox/state.ts"
+}

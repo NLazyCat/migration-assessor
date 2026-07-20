@@ -1,0 +1,105 @@
+{
+  "module": "packages/eve/src/services/dev-client/credential-gate.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client/credential-gate.ts:DevelopmentCredentialGrant:target",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": VerifiedVercelTarget",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client/credential-gate.ts:DevelopmentCredentialGrant:resolveToken",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "resolveToken",
+          "partial_analysis": false,
+          "return_type": ": () => Promise<DevelopmentOidcTokenResolution | string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/dev-client/credential-gate.ts:DevelopmentCredentialGrant",
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "DevelopmentCredentialGrant",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client/credential-gate.ts:DevelopmentCredentialGate:serverOrigin",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "serverOrigin",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/dev-client/credential-gate.ts:DevelopmentCredentialGate",
+      "kind": "interface",
+      "line_range": [
+        15,
+        29
+      ],
+      "name": "DevelopmentCredentialGate",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/credential-gate.ts:DevelopmentCredentialGateState",
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "DevelopmentCredentialGateState",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"anonymous\" }\r\n  | {\r\n      readonly kind: \"vercel\";\r\n      readonly resolveToken: () => Promise<DevelopmentOidcTokenResolution | string>;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/credential-gate.ts:createDevelopmentCredentialGate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        95
+      ],
+      "name": "createDevelopmentCredentialGate",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentCredentialGate",
+      "signature": "export function createDevelopmentCredentialGate(serverUrl: string) -> DevelopmentCredentialGate",
+      "visibility": "Public"
+    }
+  ]
+}

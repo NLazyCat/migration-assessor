@@ -1,0 +1,45 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "StateHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface StateHandle { ... }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        43,
+        63
+      ],
+      "name": "defineState",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "initial",
+          "optional": false,
+          "type": "() => T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StateHandle<T>",
+      "signature": "export function defineState(name: string, initial: () => T) -> StateHandle<T>"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/state.ts"
+}

@@ -1,0 +1,95 @@
+{
+  "module": "packages/eve/src/harness/turn-cancellation.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-cancellation.ts:TURN_CANCELLED_ERROR_NAME",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "TURN_CANCELLED_ERROR_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-cancellation.ts:TurnCancelledError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            5,
+            8
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "unknown"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/turn-cancellation.ts:TurnCancelledError",
+      "kind": "class",
+      "line_range": [
+        4,
+        9
+      ],
+      "name": "TurnCancelledError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-cancellation.ts:isTurnCancellation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        25
+      ],
+      "name": "isTurnCancellation",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isTurnCancellation(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-cancellation.ts:throwIfTurnAborted",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        36
+      ],
+      "name": "throwIfTurnAborted",
+      "params": [
+        {
+          "name": "abortSignal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function throwIfTurnAborted(abortSignal: AbortSignal | undefined) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

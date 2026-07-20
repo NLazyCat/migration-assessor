@@ -1,0 +1,229 @@
+{
+  "module": "packages/eve/test/scenarios/compile-agent.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:scenarioApp",
+      "kind": "variable",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "scenarioApp",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:createAppRoot",
+      "kind": "variable",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "createAppRoot",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:runFile",
+      "kind": "variable",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "runFile",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:APP_ROOT_OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "APP_ROOT_OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:REPO_ROOT",
+      "kind": "variable",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "REPO_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:ROOT_TYPE_DEFINITIONS",
+      "kind": "variable",
+      "line_range": [
+        43,
+        45
+      ],
+      "name": "ROOT_TYPE_DEFINITIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:TSC_BIN_PATH",
+      "kind": "variable",
+      "line_range": [
+        46,
+        48
+      ],
+      "name": "TSC_BIN_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:DEFAULT_AGENT_MODEL_ID",
+      "kind": "variable",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "DEFAULT_AGENT_MODEL_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:createSandboxRevalidationKeyValidationApp",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        1369,
+        1401
+      ],
+      "name": "createSandboxRevalidationKeyValidationApp",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string;\r\n  readonly revalidationKeyExpression: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly agentRoot: string; readonly appRoot: string }>",
+      "signature": "export function createSandboxRevalidationKeyValidationApp(input: {\r\n  readonly name: string;\r\n  readonly revalidationKeyExpression: string;\r\n}) -> Promise<{ readonly agentRoot: string; readonly appRoot: string }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:expectTscToPass",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        1403,
+        1422
+      ],
+      "name": "expectTscToPass",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ readonly cwd: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function expectTscToPass(args: readonly string[], options: { readonly cwd: string }) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:isCommandError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1424,
+        1429
+      ],
+      "name": "isCommandError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "error is Error & {\r\n  readonly stderr?: unknown;\r\n  readonly stdout?: unknown;\r\n}",
+      "signature": "export function isCommandError(error: unknown) -> error is Error & {\r\n  readonly stderr?: unknown;\r\n  readonly stdout?: unknown;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:normalizeArtifactValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1431,
+        1453
+      ],
+      "name": "normalizeArtifactValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "T"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function normalizeArtifactValue(value: T, appRoot: string) -> T",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compile-agent.scenario.test.ts:normalizeCompileMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1455,
+        1493
+      ],
+      "name": "normalizeCompileMetadata",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function normalizeCompileMetadata(value: unknown) -> unknown",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,918 @@
+{
+  "module": "packages/eve/src/public/next/index.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EVE_NEXT_SERVICE_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "EVE_NEXT_SERVICE_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EVE_NEXT_PRODUCTION_ORIGIN_ENV",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "EVE_NEXT_PRODUCTION_ORIGIN_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EVE_NEXT_PRODUCTION_PORT_ENV",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "EVE_NEXT_PRODUCTION_PORT_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:DEFAULT_EVE_NEXT_PRODUCTION_PORT",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "DEFAULT_EVE_NEXT_PRODUCTION_PORT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EVE_NAMED_AGENT_ROUTE_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "EVE_NAMED_AGENT_ROUTE_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:AGENT_NAME_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "AGENT_NAME_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:ArrayElement",
+      "kind": "type_alias",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "ArrayElement",
+      "partial_analysis": false,
+      "value": "T extends readonly (infer TElement)[] ? TElement : never;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:NextRewrites",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "NextRewrites",
+      "partial_analysis": false,
+      "value": "Awaited<ReturnType<NonNullable<NextConfig[\"rewrites\"]>>>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EveNextRewriteRule",
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "EveNextRewriteRule",
+      "partial_analysis": false,
+      "value": "ArrayElement<NextRewrites>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EveNextRewrites",
+      "kind": "type_alias",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "EveNextRewrites",
+      "partial_analysis": false,
+      "value": "NextRewrites;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EveNextRewriteSections",
+      "kind": "type_alias",
+      "line_range": [
+        39,
+        46
+      ],
+      "name": "EveNextRewriteSections",
+      "partial_analysis": false,
+      "value": "Extract<\r\n  NextRewrites,\r\n  {\r\n    readonly afterFiles?: EveNextRewriteRule[];\r\n    readonly beforeFiles?: EveNextRewriteRule[];\r\n    readonly fallback?: EveNextRewriteRule[];\r\n  }\r\n>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EveNextConfig",
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "EveNextConfig",
+      "partial_analysis": false,
+      "value": "NextConfig;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EveNextConfigFunction",
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        64
+      ],
+      "name": "EveNextConfigFunction",
+      "partial_analysis": false,
+      "value": "EveNextConfig> = (\r\n  phase: string,\r\n  context: {\r\n    readonly defaultConfig: TConfig;\r\n  },\r\n) => TConfig | Promise<TConfig>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:EveNextConfigInput",
+      "kind": "type_alias",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "EveNextConfigInput",
+      "partial_analysis": false,
+      "value": "EveNextConfig> =\r\n  | EveNextConfigFunction<TConfig>\r\n  | TConfig;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveAgentOptions:root",
+          "kind": "property",
+          "line_range": [
+            81,
+            81
+          ],
+          "name": "root",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveAgentOptions:buildCommand",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "buildCommand",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveAgentOptions:servicePrefix",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "servicePrefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/index.ts:WithEveAgentOptions",
+      "kind": "interface",
+      "line_range": [
+        76,
+        93
+      ],
+      "name": "WithEveAgentOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:WithEveAgentsConfig",
+      "kind": "type_alias",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "WithEveAgentsConfig",
+      "partial_analysis": false,
+      "value": "Record<string, string | WithEveAgentOptions>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveOptions:devServerTimeoutMs",
+          "kind": "property",
+          "line_range": [
+            109,
+            109
+          ],
+          "name": "devServerTimeoutMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveOptions:eveRoot",
+          "kind": "property",
+          "line_range": [
+            114,
+            114
+          ],
+          "name": "eveRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveOptions:agents",
+          "kind": "property",
+          "line_range": [
+            122,
+            122
+          ],
+          "name": "agents",
+          "partial_analysis": false,
+          "return_type": ": WithEveAgentsConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveOptions:eveBuildCommand",
+          "kind": "property",
+          "line_range": [
+            130,
+            130
+          ],
+          "name": "eveBuildCommand",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:WithEveOptions:servicePrefix",
+          "kind": "property",
+          "line_range": [
+            138,
+            138
+          ],
+          "name": "servicePrefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/index.ts:WithEveOptions",
+      "kind": "interface",
+      "line_range": [
+        103,
+        139
+      ],
+      "name": "WithEveOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent:appRoot",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent:buildCommand",
+          "kind": "property",
+          "line_range": [
+            143,
+            143
+          ],
+          "name": "buildCommand",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent:localProductionPortOffset",
+          "kind": "property",
+          "line_range": [
+            144,
+            144
+          ],
+          "name": "localProductionPortOffset",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent:name",
+          "kind": "property",
+          "line_range": [
+            145,
+            145
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent:publicRoutePrefix",
+          "kind": "property",
+          "line_range": [
+            146,
+            146
+          ],
+          "name": "publicRoutePrefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent:servicePrefix",
+          "kind": "property",
+          "line_range": [
+            147,
+            147
+          ],
+          "name": "servicePrefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/index.ts:ResolvedEveNextAgent",
+      "kind": "interface",
+      "line_range": [
+        141,
+        148
+      ],
+      "name": "ResolvedEveNextAgent",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:resolveApplicationRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        150,
+        156
+      ],
+      "name": "resolveApplicationRoot",
+      "params": [
+        {
+          "name": "appPath",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveApplicationRoot(appPath: string | undefined) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:resolveDevServerTimeout",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        158,
+        168
+      ],
+      "name": "resolveDevServerTimeout",
+      "params": [
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function resolveDevServerTimeout(timeoutMs: number | undefined) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:normalizeRoutePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        179
+      ],
+      "name": "normalizeRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeRoutePrefix(prefix: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:joinRoutePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        181,
+        183
+      ],
+      "name": "joinRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function joinRoutePrefix(prefix: string, path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:createNamedAgentRoutePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        185,
+        187
+      ],
+      "name": "createNamedAgentRoutePrefix",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createNamedAgentRoutePrefix(name: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:createNamedAgentServicePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        189,
+        191
+      ],
+      "name": "createNamedAgentServicePrefix",
+      "params": [
+        {
+          "name": "basePrefix",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createNamedAgentServicePrefix(basePrefix: string, name: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:createAgentRewriteSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        193,
+        195
+      ],
+      "name": "createAgentRewriteSource",
+      "params": [
+        {
+          "name": "publicRoutePrefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createAgentRewriteSource(publicRoutePrefix: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:normalizeOrigin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        197,
+        199
+      ],
+      "name": "normalizeOrigin",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeOrigin(origin: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:readLocalProductionPort",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        201,
+        223
+      ],
+      "name": "readLocalProductionPort",
+      "params": [
+        {
+          "name": "portOffset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function readLocalProductionPort(portOffset: number) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:resolveProductionDestination",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        225,
+        253
+      ],
+      "name": "resolveProductionDestination",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly localProductionPortOffset: number;\r\n  readonly servicePrefix: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly destinationPrefix: string;\r\n  readonly localServerOrigin?: string;\r\n}",
+      "signature": "export function resolveProductionDestination(input: {\r\n  readonly localProductionPortOffset: number;\r\n  readonly servicePrefix: string;\r\n}) -> {\r\n  readonly destinationPrefix: string;\r\n  readonly localServerOrigin?: string;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:createEveRewriteRule",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        255,
+        264
+      ],
+      "name": "createEveRewriteRule",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly destinationPrefix: string;\r\n  readonly publicRoutePrefix: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveNextRewriteRule",
+      "signature": "export function createEveRewriteRule(input: {\r\n  readonly destinationPrefix: string;\r\n  readonly publicRoutePrefix: string;\r\n}) -> EveNextRewriteRule",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:resolveExistingRewrites",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        266,
+        270
+      ],
+      "name": "resolveExistingRewrites",
+      "params": [
+        {
+          "name": "rewrites",
+          "optional": false,
+          "type": "EveNextConfig[\"rewrites\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveNextRewrites | undefined>",
+      "signature": "export function resolveExistingRewrites(rewrites: EveNextConfig[\"rewrites\"]) -> Promise<EveNextRewrites | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:mergeRewriteRules",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        272,
+        293
+      ],
+      "name": "mergeRewriteRules",
+      "params": [
+        {
+          "name": "existing",
+          "optional": false,
+          "type": "EveNextRewrites | undefined"
+        },
+        {
+          "name": "eveRules",
+          "optional": false,
+          "type": "EveNextRewriteRule[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveNextRewrites",
+      "signature": "export function mergeRewriteRules(existing: EveNextRewrites | undefined, eveRules: EveNextRewriteRule[]) -> EveNextRewrites",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:isRewriteSections",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        295,
+        297
+      ],
+      "name": "isRewriteSections",
+      "params": [
+        {
+          "name": "rewrites",
+          "optional": false,
+          "type": "EveNextRewrites"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "rewrites is EveNextRewriteSections",
+      "signature": "export function isRewriteSections(rewrites: EveNextRewrites) -> rewrites is EveNextRewriteSections",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:resolveNextConfig",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        299,
+        309
+      ],
+      "name": "resolveNextConfig",
+      "params": [
+        {
+          "name": "configOrFunction",
+          "optional": false,
+          "type": "EveNextConfigInput<TConfig>"
+        },
+        {
+          "name": "phase",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "{\r\n    readonly defaultConfig: TConfig;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TConfig>",
+      "signature": "export function resolveNextConfig(configOrFunction: EveNextConfigInput<TConfig>, phase: string, context: {\r\n    readonly defaultConfig: TConfig;\r\n  }) -> Promise<TConfig>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:assertValidAgentName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        311,
+        319
+      ],
+      "name": "assertValidAgentName",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertValidAgentName(name: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:quoteShellArg",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        321,
+        323
+      ],
+      "name": "quoteShellArg",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function quoteShellArg(value: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:toPosixPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        325,
+        327
+      ],
+      "name": "toPosixPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toPosixPath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:createDefaultBuildCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        329,
+        337
+      ],
+      "name": "createDefaultBuildCommand",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly nextRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createDefaultBuildCommand(input: {\r\n  readonly agentRoot: string;\r\n  readonly nextRoot: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:normalizeAgentsConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        339,
+        386
+      ],
+      "name": "normalizeAgentsConfig",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "WithEveOptions"
+        },
+        {
+          "name": "nextRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly ResolvedEveNextAgent[]",
+      "signature": "export function normalizeAgentsConfig(options: WithEveOptions, nextRoot: string) -> readonly ResolvedEveNextAgent[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/index.ts:withEve",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        400,
+        470
+      ],
+      "name": "withEve",
+      "params": [
+        {
+          "name": "configOrFunction",
+          "optional": false,
+          "type": "EveNextConfigInput<TConfig>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "WithEveOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveNextConfigFunction<TConfig>",
+      "signature": "export function withEve(configOrFunction: EveNextConfigInput<TConfig>, options: WithEveOptions) -> EveNextConfigFunction<TConfig>",
+      "visibility": "Public"
+    }
+  ]
+}

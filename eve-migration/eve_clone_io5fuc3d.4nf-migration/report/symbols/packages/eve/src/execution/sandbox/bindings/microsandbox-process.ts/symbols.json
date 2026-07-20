@@ -1,0 +1,67 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-process.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-process.ts:MICROSANDBOX_EXEC_POST_EXIT_DRAIN_MS",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "MICROSANDBOX_EXEC_POST_EXIT_DRAIN_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-process.ts:adaptMicrosandboxExecToSandboxProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        81
+      ],
+      "name": "adaptMicrosandboxExecToSandboxProcess",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "MicrosandboxExecHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxProcess",
+      "signature": "export function adaptMicrosandboxExecToSandboxProcess(command: MicrosandboxExecHandle) -> SandboxProcess",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-process.ts:nextWithTimeout",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        83,
+        100
+      ],
+      "name": "nextWithTimeout",
+      "params": [
+        {
+          "name": "iterator",
+          "optional": false,
+          "type": "AsyncIterator<T>"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<IteratorResult<T> | \"timeout\">",
+      "signature": "export function nextWithTimeout(iterator: AsyncIterator<T>, timeoutMs: number) -> Promise<IteratorResult<T> | \"timeout\">",
+      "visibility": "Private"
+    }
+  ]
+}

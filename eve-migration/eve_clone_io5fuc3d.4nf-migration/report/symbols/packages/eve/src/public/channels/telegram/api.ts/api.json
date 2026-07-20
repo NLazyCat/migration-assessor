@@ -1,0 +1,538 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "TelegramBotToken",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TelegramBotToken = string | (() => string | Promise<string>);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "TelegramFetch",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TelegramFetch = typeof fetch;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "TelegramCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramCredentials { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "botToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TelegramBotToken",
+      "signature": "botToken?: : TelegramBotToken"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        33
+      ],
+      "name": "TelegramApiOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramApiOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "apiBaseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "apiBaseUrl?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TelegramCredentials",
+      "signature": "credentials?: : TelegramCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "fetch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TelegramFetch",
+      "signature": "fetch?: : TelegramFetch"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "fileBaseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "fileBaseUrl?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        43
+      ],
+      "name": "TelegramApiResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramApiResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "body: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "ok",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "ok: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "status: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        46,
+        55
+      ],
+      "name": "TelegramMessageResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramMessageResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "chatId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "chatId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "chatType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TelegramChatType",
+      "signature": "chatType?: : TelegramChatType"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "raw: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        61,
+        69
+      ],
+      "name": "TelegramMessageBody",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramMessageBody { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "disable_notification",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "disable_notification?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "link_preview_options",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, unknown>>",
+      "signature": "link_preview_options?: : Readonly<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "message_thread_id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "message_thread_id?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "protect_content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "protect_content?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "reply_markup",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, unknown>>",
+      "signature": "reply_markup?: : Readonly<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "reply_parameters",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, unknown>>",
+      "signature": "reply_parameters?: : Readonly<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "TELEGRAM_MESSAGE_TEXT_MAX_LENGTH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const TELEGRAM_MESSAGE_TEXT_MAX_LENGTH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        89
+      ],
+      "name": "telegramContinuationToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly chatId: number | string;\r\n  readonly conversationId?: number | string;\r\n  readonly messageThreadId?: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function telegramContinuationToken(input: {\r\n  readonly chatId: number | string;\r\n  readonly conversationId?: number | string;\r\n  readonly messageThreadId?: number;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        96
+      ],
+      "name": "resolveTelegramBotToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": true,
+          "type": "TelegramBotToken"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveTelegramBotToken(token: TelegramBotToken) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        99,
+        127
+      ],
+      "name": "callTelegramApi",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly apiBaseUrl?: string;\r\n  readonly body?: JsonObject;\r\n  readonly botToken?: TelegramBotToken;\r\n  readonly fetch?: TelegramFetch;\r\n  readonly method: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TelegramApiResponse>",
+      "signature": "export function callTelegramApi(input: {\r\n  readonly apiBaseUrl?: string;\r\n  readonly body?: JsonObject;\r\n  readonly botToken?: TelegramBotToken;\r\n  readonly fetch?: TelegramFetch;\r\n  readonly method: string;\r\n}) -> Promise<TelegramApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        130,
+        147
+      ],
+      "name": "sendTelegramMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TelegramApiOptions & {\r\n    readonly body: TelegramMessageBody;\r\n    readonly chatId: number | string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TelegramMessageResult>",
+      "signature": "export function sendTelegramMessage(input: TelegramApiOptions & {\r\n    readonly body: TelegramMessageBody;\r\n    readonly chatId: number | string;\r\n  }) -> Promise<TelegramMessageResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        153,
+        171
+      ],
+      "name": "sendTelegramChatAction",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TelegramApiOptions & {\r\n    readonly action: string;\r\n    readonly chatId: number | string;\r\n    readonly messageThreadId?: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TelegramApiResponse>",
+      "signature": "export function sendTelegramChatAction(input: TelegramApiOptions & {\r\n    readonly action: string;\r\n    readonly chatId: number | string;\r\n    readonly messageThreadId?: number;\r\n  }) -> Promise<TelegramApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        174,
+        192
+      ],
+      "name": "answerTelegramCallbackQuery",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TelegramApiOptions & {\r\n    readonly callbackQueryId: string;\r\n    readonly showAlert?: boolean;\r\n    readonly text?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TelegramApiResponse>",
+      "signature": "export function answerTelegramCallbackQuery(input: TelegramApiOptions & {\r\n    readonly callbackQueryId: string;\r\n    readonly showAlert?: boolean;\r\n    readonly text?: string;\r\n  }) -> Promise<TelegramApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        195,
+        213
+      ],
+      "name": "editTelegramMessageReplyMarkup",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TelegramApiOptions & {\r\n    readonly chatId: number | string;\r\n    readonly messageId: number | string;\r\n    readonly replyMarkup?: Readonly<Record<string, unknown>>;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TelegramApiResponse>",
+      "signature": "export function editTelegramMessageReplyMarkup(input: TelegramApiOptions & {\r\n    readonly chatId: number | string;\r\n    readonly messageId: number | string;\r\n    readonly replyMarkup?: Readonly<Record<string, unknown>>;\r\n  }) -> Promise<TelegramApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        216,
+        237
+      ],
+      "name": "getTelegramFile",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TelegramApiOptions & {\r\n    readonly fileId: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly filePath: string; readonly raw: unknown }>",
+      "signature": "export function getTelegramFile(input: TelegramApiOptions & {\r\n    readonly fileId: string;\r\n  }) -> Promise<{ readonly filePath: string; readonly raw: unknown }>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        240,
+        252
+      ],
+      "name": "downloadTelegramFile",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TelegramApiOptions & {\r\n    readonly filePath: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function downloadTelegramFile(input: TelegramApiOptions & {\r\n    readonly filePath: string;\r\n  }) -> Promise<Response>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        255,
+        271
+      ],
+      "name": "splitTelegramMessageText",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function splitTelegramMessageText(text: string) -> readonly string[]"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/telegram/api.ts"
+}

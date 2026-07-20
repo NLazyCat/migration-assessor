@@ -1,0 +1,380 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "IntegrationType",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type IntegrationType = \"channel\" | \"connection\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "AuthMode",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AuthMode = \"user\" | \"app\" | \"jwtBearer\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        50
+      ],
+      "name": "ConnectionSpec",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionSpec { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "connector",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connector?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "authModes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AuthMode[]",
+      "signature": "authModes: : AuthMode[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "mcp",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionIdentity[\"mcp\"]",
+      "signature": "mcp?: : ConnectionIdentity[\"mcp\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "openapi",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionIdentity[\"openapi\"]",
+      "signature": "openapi?: : ConnectionIdentity[\"openapi\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "configureNote",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "configureNote?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        52,
+        78
+      ],
+      "name": "Integration",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface Integration { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": IntegrationType",
+      "signature": "type: : IntegrationType"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "protocols",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionProtocol[]",
+      "signature": "protocols?: : ConnectionProtocol[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "tagline",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "tagline: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "logo",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LogoKey",
+      "signature": "logo: : LogoKey"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "badge",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "badge?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "docsHref",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "docsHref: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "keywords",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "keywords?: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "install",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "install?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "quickStart",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "quickStart?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "configure",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "configure?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "connection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionSpec",
+      "signature": "connection?: : ConnectionSpec"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        775,
+        778
+      ],
+      "name": "protocolLabel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const protocolLabel: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        781,
+        784
+      ],
+      "name": "protocolBadgeClassName",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const protocolBadgeClassName: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        787,
+        791
+      ],
+      "name": "authModeLabel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const authModeLabel: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        793,
+        793
+      ],
+      "name": "integrations",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const integrations: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        795,
+        796
+      ],
+      "name": "getIntegration",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Integration | undefined",
+      "signature": "export const getIntegration: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        798,
+        798
+      ],
+      "name": "integrationSlugs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export const integrationSlugs: unknown"
+    }
+  ],
+  "module": "apps/docs/lib/integrations/data.ts"
+}

@@ -1,0 +1,165 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/tool-format.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:ELLIPSIS",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "ELLIPSIS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:summarizeToolArgs",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        43
+      ],
+      "name": "summarizeToolArgs",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "maxLength",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function summarizeToolArgs(input: unknown, maxLength: unknown) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:summarizeToolResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        87
+      ],
+      "name": "summarizeToolResult",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "maxLength",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function summarizeToolResult(output: unknown, maxLength: unknown) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:formatValuePretty",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        104
+      ],
+      "name": "formatValuePretty",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatValuePretty(value: unknown) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:formatInlineValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        114
+      ],
+      "name": "formatInlineValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatInlineValue(value: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:formatScalar",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        116,
+        119
+      ],
+      "name": "formatScalar",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatScalar(value: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tool-format.ts:truncate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        125,
+        131
+      ],
+      "name": "truncate",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "maxLength",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function truncate(text: string, maxLength: number) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

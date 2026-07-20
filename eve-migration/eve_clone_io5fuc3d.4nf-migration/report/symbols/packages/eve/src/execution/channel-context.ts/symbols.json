@@ -1,0 +1,37 @@
+{
+  "module": "packages/eve/src/execution/channel-context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/channel-context.ts:setChannelContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        23
+      ],
+      "name": "setChannelContext",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ContextContainer"
+        },
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly channelName?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setChannelContext(ctx: ContextContainer, adapter: ChannelAdapter, options: {\r\n    readonly channelName?: string;\r\n  }) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

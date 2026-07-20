@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        62
+      ],
+      "name": "turnWorkflow",
+      "params": [
+        {
+          "name": "rawInput",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function turnWorkflow(rawInput: unknown) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/execution/turn-workflow.ts"
+}

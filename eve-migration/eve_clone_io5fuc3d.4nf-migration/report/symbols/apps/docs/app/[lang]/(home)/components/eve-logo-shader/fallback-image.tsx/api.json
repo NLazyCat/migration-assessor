@@ -1,0 +1,107 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "FALLBACK_IMAGE_WIDTH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_IMAGE_WIDTH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "FALLBACK_IMAGE_HEIGHT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_IMAGE_HEIGHT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "FALLBACK_IMAGE_ASPECT_RATIO",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_IMAGE_ASPECT_RATIO: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "FALLBACK_CONTAINER_ASPECT_RATIO",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_CONTAINER_ASPECT_RATIO: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "FALLBACK_IMAGE_SIZES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_IMAGE_SIZES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "FALLBACK_IMAGE_PADDING",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_IMAGE_PADDING: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        27,
+        37
+      ],
+      "name": "getFallbackImageProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function getFallbackImageProps() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        63
+      ],
+      "name": "FallbackImage",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  imageProps: ComponentProps<\"img\">;\r\n  visible: boolean;\r\n  className: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function FallbackImage(_: {\r\n  imageProps: ComponentProps<\"img\">;\r\n  visible: boolean;\r\n  className: string;\r\n}) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/fallback-image.tsx"
+}

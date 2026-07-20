@@ -1,0 +1,268 @@
+{
+  "module": "packages/eve/src/services/dev-client.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client.ts:DevelopmentRuntimeArtifactRefresher",
+      "kind": "interface",
+      "line_range": [
+        13,
+        47
+      ],
+      "name": "DevelopmentRuntimeArtifactRefresher",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:DevelopmentRuntimeArtifactChange:previousRevision",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "previousRevision",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:DevelopmentRuntimeArtifactChange:revision",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "revision",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/dev-client.ts:DevelopmentRuntimeArtifactChange",
+      "kind": "interface",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "DevelopmentRuntimeArtifactChange",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:#isLocal",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "#isLocal",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:#serverUrl",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "#serverUrl",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:#artifactRevision",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "#artifactRevision",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            59,
+            62
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{ readonly serverUrl: string }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:clear",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            64,
+            66
+          ],
+          "name": "clear",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:refresh",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            68,
+            80
+          ],
+          "name": "refresh",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly inputResponses?: readonly InputResponse[];\r\n    readonly message?: string | UserContent;\r\n    readonly onRuntimeArtifactsChanged?: (\r\n      change: DevelopmentRuntimeArtifactChange,\r\n    ) => void | Promise<void>;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:refreshIdle",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            82,
+            88
+          ],
+          "name": "refreshIdle",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly onRuntimeArtifactsChanged?: (\r\n      change: DevelopmentRuntimeArtifactChange,\r\n    ) => void | Promise<void>;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:refreshAfterSourceChange",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            90,
+            100
+          ],
+          "name": "refreshAfterSourceChange",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly onRuntimeArtifactsChanged?: (\r\n      change: DevelopmentRuntimeArtifactChange,\r\n    ) => void | Promise<void>;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher:#refreshRuntimeArtifacts",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            102,
+            131
+          ],
+          "name": "#refreshRuntimeArtifacts",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly onRuntimeArtifactsChanged?: (\r\n      change: DevelopmentRuntimeArtifactChange,\r\n    ) => void | Promise<void>;\r\n    readonly force?: boolean;\r\n    readonly rebuild: boolean;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/dev-client.ts:LocalDevelopmentRuntimeArtifactRefresher",
+      "kind": "class",
+      "line_range": [
+        54,
+        132
+      ],
+      "name": "LocalDevelopmentRuntimeArtifactRefresher",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client.ts:shouldRefreshRuntimeArtifactsForTurn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        134,
+        139
+      ],
+      "name": "shouldRefreshRuntimeArtifactsForTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly inputResponses?: readonly InputResponse[];\r\n  readonly message?: string | UserContent;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldRefreshRuntimeArtifactsForTurn(input: {\r\n  readonly inputResponses?: readonly InputResponse[];\r\n  readonly message?: string | UserContent;\r\n}) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client.ts:createDevelopmentRuntimeArtifactRefresher",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        144,
+        148
+      ],
+      "name": "createDevelopmentRuntimeArtifactRefresher",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly serverUrl: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRuntimeArtifactRefresher",
+      "signature": "export function createDevelopmentRuntimeArtifactRefresher(input: {\r\n  readonly serverUrl: string;\r\n}) -> DevelopmentRuntimeArtifactRefresher",
+      "visibility": "Public"
+    }
+  ]
+}

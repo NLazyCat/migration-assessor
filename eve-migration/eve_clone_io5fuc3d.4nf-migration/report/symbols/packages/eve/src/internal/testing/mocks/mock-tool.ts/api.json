@@ -1,0 +1,101 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        41
+      ],
+      "name": "MockToolInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockToolInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "inputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject | null",
+      "signature": "inputSchema?: : JsonObject | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "execute",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (input: unknown, ctx: SessionContext) => Promise<unknown> | unknown",
+      "signature": "execute?: : (input: unknown, ctx: SessionContext) => Promise<unknown> | unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        69
+      ],
+      "name": "mockTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockToolInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedToolDefinition",
+      "signature": "export function mockTool(input: MockToolInput) -> ResolvedToolDefinition"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/mocks/mock-tool.ts"
+}

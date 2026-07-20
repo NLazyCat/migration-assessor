@@ -1,0 +1,470 @@
+{
+  "module": "packages/eve/src/setup/boxes/resolve-provisioning.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:requireAuth",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "requireAuth",
+          "partial_analysis": false,
+          "return_type": ": typeof requireAuth",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:isVercelAuthenticated",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "isVercelAuthenticated",
+          "partial_analysis": false,
+          "return_type": ": typeof isVercelAuthenticated",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:detectProjectResolution",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "detectProjectResolution",
+          "partial_analysis": false,
+          "return_type": ": typeof detectProjectResolution",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:pathExists",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "pathExists",
+          "partial_analysis": false,
+          "return_type": ": typeof pathExists",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:validateTeam",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "validateTeam",
+          "partial_analysis": false,
+          "return_type": ": typeof validateTeam",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:resolveTeam",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "resolveTeam",
+          "partial_analysis": false,
+          "return_type": ": typeof resolveTeam",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:pickTeam",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "pickTeam",
+          "partial_analysis": false,
+          "return_type": ": typeof pickTeam",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:pickProject",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "pickProject",
+          "partial_analysis": false,
+          "return_type": ": typeof pickProject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:pickNewProjectName",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "pickNewProjectName",
+          "partial_analysis": false,
+          "return_type": ": typeof pickNewProjectName",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:assertNewProjectNameAvailable",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "assertNewProjectNameAvailable",
+          "partial_analysis": false,
+          "return_type": ": typeof assertNewProjectNameAvailable",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps:resolveProjectByNameOrId",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "resolveProjectByNameOrId",
+          "partial_analysis": false,
+          "return_type": ": typeof resolveProjectByNameOrId",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningDeps",
+      "kind": "interface",
+      "line_range": [
+        39,
+        51
+      ],
+      "name": "ResolveProvisioningDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:asker",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "asker",
+          "partial_analysis": false,
+          "return_type": ": Asker",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:prompter",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "prompter",
+          "partial_analysis": false,
+          "return_type": ": Prompter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:targetDirectory",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "targetDirectory",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:mode",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": ProvisioningMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:adoptExistingLink",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "adoptExistingLink",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:projectSelection",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "projectSelection",
+          "partial_analysis": false,
+          "return_type": ": \"create-or-link\" | \"existing-only\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:teamSelectMessage",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "teamSelectMessage",
+          "partial_analysis": false,
+          "return_type": ": (currentTeam: string) => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions:deps",
+          "kind": "property",
+          "line_range": [
+            81,
+            81
+          ],
+          "name": "deps",
+          "partial_analysis": false,
+          "return_type": ": ResolveProvisioningDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolveProvisioningOptions",
+      "kind": "interface",
+      "line_range": [
+        53,
+        82
+      ],
+      "name": "ResolveProvisioningOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolvedProvisioning:vercelProject",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "vercelProject",
+          "partial_analysis": false,
+          "return_type": ": ResolvedVercelProject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolvedProvisioning:aiGateway",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "aiGateway",
+          "partial_analysis": false,
+          "return_type": ": ResolvedAiGateway",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolvedProvisioning:modelWiring",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "modelWiring",
+          "partial_analysis": false,
+          "return_type": ": WiringMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolvedProvisioning:project",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": ProjectResolution",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:ResolvedProvisioning",
+      "kind": "interface",
+      "line_range": [
+        85,
+        97
+      ],
+      "name": "ResolvedProvisioning",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:VercelDemands:slack",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "slack",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:VercelDemands:connectSlugs",
+          "kind": "property",
+          "line_range": [
+            109,
+            109
+          ],
+          "name": "connectSlugs",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:VercelDemands",
+      "kind": "interface",
+      "line_range": [
+        107,
+        110
+      ],
+      "name": "VercelDemands",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:vercelDemands",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        119
+      ],
+      "name": "vercelDemands",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Readonly<SetupState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelDemands",
+      "signature": "export function vercelDemands(state: Readonly<SetupState>) -> VercelDemands",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:connectClause",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        122,
+        125
+      ],
+      "name": "connectClause",
+      "params": [
+        {
+          "name": "connectSlugs",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function connectClause(connectSlugs: readonly string[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:vercelRequirements",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        128,
+        137
+      ],
+      "name": "vercelRequirements",
+      "params": [
+        {
+          "name": "demands",
+          "optional": false,
+          "type": "VercelDemands"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function vercelRequirements(demands: VercelDemands) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/resolve-provisioning.ts:resolveProvisioning",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        146,
+        469
+      ],
+      "name": "resolveProvisioning",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolveProvisioningOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ResolvedProvisioning, ResolvedProvisioning>",
+      "signature": "export function resolveProvisioning(options: ResolveProvisioningOptions) -> SetupBox<SetupState, ResolvedProvisioning, ResolvedProvisioning>",
+      "visibility": "Public"
+    }
+  ]
+}

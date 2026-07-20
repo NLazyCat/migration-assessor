@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        5,
+        25
+      ],
+      "name": "coalesceDeliverPayloads",
+      "params": [
+        {
+          "name": "payloads",
+          "optional": false,
+          "type": "readonly DeliverPayload[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DeliverPayload",
+      "signature": "export function coalesceDeliverPayloads(payloads: readonly DeliverPayload[]) -> DeliverPayload"
+    }
+  ],
+  "module": "packages/eve/src/execution/deliver-payloads.ts"
+}

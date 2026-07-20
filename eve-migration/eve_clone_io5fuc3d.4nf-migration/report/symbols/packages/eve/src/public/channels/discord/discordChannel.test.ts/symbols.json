@@ -1,0 +1,257 @@
+{
+  "module": "packages/eve/src/public/channels/discord/discordChannel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:asCompiled",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        23
+      ],
+      "name": "asCompiled",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledChannel<T>",
+      "signature": "export function asCompiled(channel: unknown) -> CompiledChannel<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:getAdapter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        27
+      ],
+      "name": "getAdapter",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelAdapter<any>",
+      "signature": "export function getAdapter(channel: unknown) -> ChannelAdapter<any>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:withState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        34
+      ],
+      "name": "withState",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter<any>"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelAdapter<any>",
+      "signature": "export function withState(adapter: ChannelAdapter<any>, state: Record<string, unknown>) -> ChannelAdapter<any>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:stubAlsContext",
+      "kind": "variable",
+      "line_range": [
+        36,
+        44
+      ],
+      "name": "stubAlsContext",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:callEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        52
+      ],
+      "name": "callEvent",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "any"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<HandleMessageStreamEvent>",
+      "signature": "export function callEvent(adapter: ChannelAdapter, event: HandleMessageStreamEvent, ctx: any) -> Promise<HandleMessageStreamEvent>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:captureAccessor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        74
+      ],
+      "name": "captureAccessor",
+      "params": [
+        {
+          "name": "initialContinuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  accessor: any;\r\n  writes: Array<[string, unknown]>;\r\n}",
+      "signature": "export function captureAccessor(initialContinuationToken: string) -> {\r\n  accessor: any;\r\n  writes: Array<[string, unknown]>;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:makeEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        81
+      ],
+      "name": "makeEvent",
+      "params": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": "T"
+        },
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function makeEvent(type: T, data: unknown) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:testKeys",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        90
+      ],
+      "name": "testKeys",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ privateKey: KeyObject; publicKeyHex: string }",
+      "signature": "export function testKeys() -> { privateKey: KeyObject; publicKeyHex: string }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:signedRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        110
+      ],
+      "name": "signedRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly body: string;\r\n  readonly privateKey: KeyObject;\r\n  readonly signatureOverride?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function signedRequest(input: {\r\n  readonly body: string;\r\n  readonly privateKey: KeyObject;\r\n  readonly signatureOverride?: string;\r\n}) -> Request",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:firePost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        112,
+        144
+      ],
+      "name": "firePost",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  response: Response;\r\n  send: ReturnType<typeof vi.fn>;\r\n  waitUntil: ReturnType<typeof vi.fn>;\r\n}>",
+      "signature": "export function firePost(channel: unknown, request: Request) -> Promise<{\r\n  response: Response;\r\n  send: ReturnType<typeof vi.fn>;\r\n  waitUntil: ReturnType<typeof vi.fn>;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/discordChannel.test.ts:commandBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        146,
+        163
+      ],
+      "name": "commandBody",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function commandBody(overrides: Record<string, unknown>) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

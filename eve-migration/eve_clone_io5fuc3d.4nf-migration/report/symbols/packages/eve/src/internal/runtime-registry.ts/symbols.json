@@ -1,0 +1,413 @@
+{
+  "module": "packages/eve/src/internal/runtime-registry.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryEntryLocation:logicalPath",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryEntryLocation:sourceId",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryEntryLocation",
+      "kind": "interface",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "RuntimeRegistryEntryLocation",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryError:registry",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "registry",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryError:entryName",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "entryName",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryError:logicalPath",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryError:sourceId",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            27,
+            44
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "registry",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "context",
+              "optional": false,
+              "type": "RuntimeRegistryEntryLocation & { readonly entryName?: string }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryError",
+      "kind": "class",
+      "line_range": [
+        21,
+        45
+      ],
+      "name": "RuntimeRegistryError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryRegisterOptions:location",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "location",
+          "partial_analysis": false,
+          "return_type": ": RuntimeRegistryEntryLocation",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryRegisterOptions:duplicateMessage",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "duplicateMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryRegisterOptions:reservedMessage",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "reservedMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistryRegisterOptions",
+      "kind": "interface",
+      "line_range": [
+        50,
+        57
+      ],
+      "name": "RuntimeRegistryRegisterOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:registry",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "registry",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:_entries",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "_entries",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:_reserved",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "_reserved",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            75,
+            78
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "registry",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "reserved",
+              "optional": false,
+              "type": "Iterable<string>"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:size",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            80,
+            82
+          ],
+          "name": "size",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:has",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            84,
+            86
+          ],
+          "name": "has",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:get",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            88,
+            90
+          ],
+          "name": "get",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "TEntry | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:asMap",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            96,
+            98
+          ],
+          "name": "asMap",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "ReadonlyMap<string, TEntry>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:register",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            105,
+            125
+          ],
+          "name": "register",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "entry",
+              "optional": false,
+              "type": "TEntry"
+            },
+            {
+              "name": "options",
+              "optional": false,
+              "type": "RuntimeRegistryRegisterOptions"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry:set",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            132,
+            135
+          ],
+          "name": "set",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "entry",
+              "optional": false,
+              "type": "TEntry"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/runtime-registry.ts:RuntimeRegistry",
+      "kind": "class",
+      "line_range": [
+        70,
+        136
+      ],
+      "name": "RuntimeRegistry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/runtime-registry.ts:capitalize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        138,
+        140
+      ],
+      "name": "capitalize",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function capitalize(value: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

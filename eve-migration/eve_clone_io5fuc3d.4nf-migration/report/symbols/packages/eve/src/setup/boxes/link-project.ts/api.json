@@ -1,0 +1,126 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "LinkProjectDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinkProjectDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "linkProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof linkProject",
+      "signature": "linkProject: : typeof linkProject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "detectProjectResolution",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectProjectResolution",
+      "signature": "detectProjectResolution: : typeof detectProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "unresolvedProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof unresolvedProject",
+      "signature": "unresolvedProject: : typeof unresolvedProject"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        26
+      ],
+      "name": "LinkProjectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinkProjectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "prompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Prompter",
+      "signature": "prompter: : Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinkProjectDeps",
+      "signature": "deps?: : LinkProjectDeps"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        98
+      ],
+      "name": "linkVercelProject",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "LinkProjectOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, null, ProjectResolution>",
+      "signature": "export function linkVercelProject(options: LinkProjectOptions) -> SetupBox<SetupState, null, ProjectResolution>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/link-project.ts"
+}

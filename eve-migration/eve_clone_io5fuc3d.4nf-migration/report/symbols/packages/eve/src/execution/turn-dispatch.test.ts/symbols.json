@@ -1,0 +1,106 @@
+{
+  "module": "packages/eve/src/execution/turn-dispatch.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-dispatch.test.ts:createHookMock",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "createHookMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-dispatch.test.ts:createDeliveryHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        218,
+        225
+      ],
+      "name": "createDeliveryHook",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<SessionDeliveryHook>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionDeliveryHook",
+      "signature": "export function createDeliveryHook(overrides: Partial<SessionDeliveryHook>) -> SessionDeliveryHook",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-dispatch.test.ts:installControlHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        227,
+        235
+      ],
+      "name": "installControlHook",
+      "params": [
+        {
+          "name": "values",
+          "optional": false,
+          "type": "readonly TurnControlPayload[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installControlHook(values: readonly TurnControlPayload[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-dispatch.test.ts:createMockHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        237,
+        248
+      ],
+      "name": "createMockHook",
+      "params": [
+        {
+          "name": "next",
+          "optional": false,
+          "type": "() => Promise<IteratorResult<TurnControlPayload>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function createMockHook(next: () => Promise<IteratorResult<TurnControlPayload>>) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-dispatch.test.ts:createState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        250,
+        258
+      ],
+      "name": "createState",
+      "params": [
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableSessionState",
+      "signature": "export function createState(continuationToken: string) -> DurableSessionState",
+      "visibility": "Private"
+    }
+  ]
+}

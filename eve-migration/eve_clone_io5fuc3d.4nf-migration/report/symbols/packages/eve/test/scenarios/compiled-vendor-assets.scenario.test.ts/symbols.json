@@ -1,0 +1,148 @@
+{
+  "module": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:EVE_PACKAGE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "EVE_PACKAGE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:COMPILED_VENDOR_ROOT",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "COMPILED_VENDOR_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:VENDOR_WARNING_LOG_PATH",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "VENDOR_WARNING_LOG_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:require",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "require",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:VERCEL_SANDBOX_DIST_ROOT",
+      "kind": "variable",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "VERCEL_SANDBOX_DIST_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:VendorWarningLog",
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        29
+      ],
+      "name": "VendorWarningLog",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly createVendoredDependencyWarningFilter: () => {\r\n    readonly onLog: (\r\n      level: string,\r\n      log: {\r\n        readonly id?: string;\r\n        readonly loc?: { readonly file?: string };\r\n        readonly message: string;\r\n      },\r\n      defaultHandler: (level: string, log: { readonly message: string }) => void,\r\n    ) => void;\r\n  };\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:loadVendorWarningLog",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        33
+      ],
+      "name": "loadVendorWarningLog",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<VendorWarningLog>",
+      "signature": "export function loadVendorWarningLog() -> Promise<VendorWarningLog>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:containsSourceMapComment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        37
+      ],
+      "name": "containsSourceMapComment",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function containsSourceMapComment(source: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts:rewriteDeclarationImports",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        52
+      ],
+      "name": "rewriteDeclarationImports",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "rewrites",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function rewriteDeclarationImports(source: string, rewrites: Readonly<Record<string, string>>) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

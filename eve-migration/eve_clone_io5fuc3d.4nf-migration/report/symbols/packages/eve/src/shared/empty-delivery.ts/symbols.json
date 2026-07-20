@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/shared/empty-delivery.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/empty-delivery.ts:EMPTY_DELIVERY_SENTINEL",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "EMPTY_DELIVERY_SENTINEL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/empty-delivery.ts:CONDITIONAL_DELIVERY_INSTRUCTION",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "CONDITIONAL_DELIVERY_INSTRUCTION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/empty-delivery.ts:hasEmptyDeliverySentinel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        5,
+        7
+      ],
+      "name": "hasEmptyDeliverySentinel",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string | null | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasEmptyDeliverySentinel(text: string | null | undefined) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

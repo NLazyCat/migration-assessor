@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        15,
+        22
+      ],
+      "name": "resolveEveBinaryPath",
+      "params": [
+        {
+          "name": "nextRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveBinaryPath(nextRoot: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/next/resolve-eve-binary.ts"
+}

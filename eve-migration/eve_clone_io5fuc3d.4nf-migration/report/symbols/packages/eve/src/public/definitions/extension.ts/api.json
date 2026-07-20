@@ -1,0 +1,182 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        41
+      ],
+      "name": "MountedExtension",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MountedExtension { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "[expr]: : true"
+    },
+    {
+      "generics": [
+        "S"
+      ],
+      "kind": "interface",
+      "line_range": [
+        49,
+        56
+      ],
+      "name": "ExtensionHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "config",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": StandardSchemaV1.InferOutput<S>",
+      "signature": "config: : StandardSchemaV1.InferOutput<S>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "schema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": S",
+      "signature": "schema: : S"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        62,
+        66
+      ],
+      "name": "NoConfigExtensionHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface NoConfigExtensionHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "config",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, never>",
+      "signature": "config: : Record<string, never>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "schema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": undefined",
+      "signature": "schema: : undefined"
+    },
+    {
+      "generics": [
+        "S"
+      ],
+      "kind": "function",
+      "line_range": [
+        125,
+        128
+      ],
+      "name": "defineExtension",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ readonly config: S }"
+        },
+        {
+          "name": "namespace",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionHandle<S>",
+      "signature": "export function defineExtension(options: { readonly config: S }, namespace: string) -> ExtensionHandle<S>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        129,
+        132
+      ],
+      "name": "defineExtension",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "{ readonly config?: undefined }"
+        },
+        {
+          "name": "namespace",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NoConfigExtensionHandle",
+      "signature": "export function defineExtension(options: { readonly config?: undefined }, namespace: string) -> NoConfigExtensionHandle"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        133,
+        162
+      ],
+      "name": "defineExtension",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "{ readonly config?: StandardSchemaV1 }"
+        },
+        {
+          "name": "namespace",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionHandle | NoConfigExtensionHandle",
+      "signature": "export function defineExtension(options: { readonly config?: StandardSchemaV1 }, namespace: string) -> ExtensionHandle | NoConfigExtensionHandle"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/extension.ts"
+}

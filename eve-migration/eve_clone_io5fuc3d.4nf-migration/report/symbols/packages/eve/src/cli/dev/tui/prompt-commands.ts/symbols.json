@@ -1,0 +1,302 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/prompt-commands.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandExtensionName",
+      "kind": "type_alias",
+      "line_range": [
+        1,
+        7
+      ],
+      "name": "PromptCommandExtensionName",
+      "partial_analysis": false,
+      "value": "| \"model\"\r\n  | \"channels\"\r\n  | \"connect\"\r\n  | \"deploy\"\r\n  | \"vc:install\"\r\n  | \"vc:login\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandTarget",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "PromptCommandTarget",
+      "partial_analysis": false,
+      "value": "\"local\" | \"remote\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommand",
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "PromptCommand",
+      "partial_analysis": false,
+      "value": "| { type: \"new\" }\r\n  | { type: \"exit\" }\r\n  | { type: \"help\" }\r\n  | { type: \"loglevel\"; argument: string }\r\n  | { type: \"extension\"; name: PromptCommandExtensionName; argument: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec:name",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec:aliases",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "aliases",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec:description",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec:argumentHint",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "argumentHint",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec:takesArgument",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "takesArgument",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec:build",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "build",
+          "partial_analysis": false,
+          "return_type": ": (argument: string) => PromptCommand",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandSpec",
+      "kind": "interface",
+      "line_range": [
+        24,
+        36
+      ],
+      "name": "PromptCommandSpec",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandDefinition:targets",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "targets",
+          "partial_analysis": false,
+          "return_type": ": readonly PromptCommandTarget[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PromptCommandDefinition",
+      "kind": "interface",
+      "line_range": [
+        38,
+        40
+      ],
+      "name": "PromptCommandDefinition",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PROMPT_COMMAND_DEFINITIONS",
+      "kind": "variable",
+      "line_range": [
+        47,
+        132
+      ],
+      "name": "PROMPT_COMMAND_DEFINITIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:PROMPT_COMMANDS",
+      "kind": "variable",
+      "line_range": [
+        134,
+        134
+      ],
+      "name": "PROMPT_COMMANDS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:promptCommandsFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        136,
+        140
+      ],
+      "name": "promptCommandsFor",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "PromptCommandTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly PromptCommandSpec[]",
+      "signature": "export function promptCommandsFor(target: PromptCommandTarget) -> readonly PromptCommandSpec[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:isPromptCommandAvailableFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        143,
+        150
+      ],
+      "name": "isPromptCommandAvailableFor",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "PromptCommandExtensionName"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "PromptCommandTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPromptCommandAvailableFor(name: PromptCommandExtensionName, target: PromptCommandTarget) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:parsePromptCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        158,
+        171
+      ],
+      "name": "parsePromptCommand",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptCommand | null",
+      "signature": "export function parsePromptCommand(prompt: string) -> PromptCommand | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:isPromptControlCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        174,
+        176
+      ],
+      "name": "isPromptControlCommand",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPromptControlCommand(prompt: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/prompt-commands.ts:formatPromptCommandHelp",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        182,
+        192
+      ],
+      "name": "formatPromptCommandHelp",
+      "params": [
+        {
+          "name": "commands",
+          "optional": false,
+          "type": "readonly PromptCommandSpec[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptCommandHelp(commands: readonly PromptCommandSpec[]) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

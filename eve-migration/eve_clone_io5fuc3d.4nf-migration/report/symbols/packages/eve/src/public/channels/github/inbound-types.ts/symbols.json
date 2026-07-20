@@ -1,0 +1,1773 @@
+{
+  "module": "packages/eve/src/public/channels/github/inbound-types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubConversationKind",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "GitHubConversationKind",
+      "partial_analysis": false,
+      "value": "\"issue\" | \"pull_request\" | \"review_thread\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubRepositoryRef:fullName",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "fullName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubRepositoryRef:id",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubRepositoryRef:name",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubRepositoryRef:owner",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "owner",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubRepositoryRef:private",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "private",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubRepositoryRef",
+      "kind": "interface",
+      "line_range": [
+        7,
+        13
+      ],
+      "name": "GitHubRepositoryRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubUser:htmlUrl",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "htmlUrl",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubUser:id",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubUser:login",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "login",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubUser:type",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubUser:url",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubUser",
+      "kind": "interface",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "GitHubUser",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubDelivery:event",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "event",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubDelivery:hookId",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "hookId",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubDelivery:id",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubDelivery",
+      "kind": "interface",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "GitHubDelivery",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubConversationRef:issueNumber",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "issueNumber",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubConversationRef:kind",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationKind",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubConversationRef:pullRequestNumber",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "pullRequestNumber",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubConversationRef",
+      "kind": "interface",
+      "line_range": [
+        32,
+        36
+      ],
+      "name": "GitHubConversationRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment:author",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "author",
+          "partial_analysis": false,
+          "return_type": ": GitHubUser | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment:body",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment:htmlUrl",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "htmlUrl",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment:id",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment:raw",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment:url",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubComment",
+      "kind": "interface",
+      "line_range": [
+        43,
+        50
+      ],
+      "name": "GitHubComment",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:author",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "author",
+          "partial_analysis": false,
+          "return_type": ": GitHubUser | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:body",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:htmlUrl",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "htmlUrl",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:id",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:issueNumber",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "issueNumber",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:pullRequestNumber",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "pullRequestNumber",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:raw",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment:url",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueComment",
+      "kind": "interface",
+      "line_range": [
+        53,
+        62
+      ],
+      "name": "GitHubIssueComment",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:author",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "author",
+          "partial_analysis": false,
+          "return_type": ": GitHubUser | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:body",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:htmlUrl",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "htmlUrl",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:id",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:inReplyToId",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "inReplyToId",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:pullRequestNumber",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "pullRequestNumber",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:raw",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:reviewThreadRootCommentId",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "reviewThreadRootCommentId",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment:url",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewComment",
+      "kind": "interface",
+      "line_range": [
+        65,
+        75
+      ],
+      "name": "GitHubPullRequestReviewComment",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueAction",
+      "kind": "type_alias",
+      "line_range": [
+        81,
+        90
+      ],
+      "name": "GitHubIssueAction",
+      "partial_analysis": false,
+      "value": "| \"assigned\"\r\n  | \"closed\"\r\n  | \"edited\"\r\n  | \"labeled\"\r\n  | \"opened\"\r\n  | \"reopened\"\r\n  | \"unassigned\"\r\n  | \"unlabeled\"\r\n  | (string & {});",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestAction",
+      "kind": "type_alias",
+      "line_range": [
+        93,
+        102
+      ],
+      "name": "GitHubPullRequestAction",
+      "partial_analysis": false,
+      "value": "| \"closed\"\r\n  | \"edited\"\r\n  | \"labeled\"\r\n  | \"opened\"\r\n  | \"ready_for_review\"\r\n  | \"reopened\"\r\n  | \"synchronize\"\r\n  | \"unlabeled\"\r\n  | (string & {});",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueEvent:action",
+          "kind": "property",
+          "line_range": [
+            106,
+            106
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": GitHubIssueAction",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueEvent:issueNumber",
+          "kind": "property",
+          "line_range": [
+            107,
+            107
+          ],
+          "name": "issueNumber",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueEvent:raw",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueEvent",
+      "kind": "interface",
+      "line_range": [
+        105,
+        109
+      ],
+      "name": "GitHubIssueEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestEvent:action",
+          "kind": "property",
+          "line_range": [
+            113,
+            113
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": GitHubPullRequestAction",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestEvent:headSha",
+          "kind": "property",
+          "line_range": [
+            114,
+            114
+          ],
+          "name": "headSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestEvent:pullRequestNumber",
+          "kind": "property",
+          "line_range": [
+            115,
+            115
+          ],
+          "name": "pullRequestNumber",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestEvent:raw",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestEvent",
+      "kind": "interface",
+      "line_range": [
+        112,
+        117
+      ],
+      "name": "GitHubPullRequestEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubAppRef:slug",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubAppRef",
+      "kind": "interface",
+      "line_range": [
+        120,
+        122
+      ],
+      "name": "GitHubAppRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:action",
+          "kind": "property",
+          "line_range": [
+            126,
+            126
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:app",
+          "kind": "property",
+          "line_range": [
+            127,
+            127
+          ],
+          "name": "app",
+          "partial_analysis": false,
+          "return_type": ": GitHubAppRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:conclusion",
+          "kind": "property",
+          "line_range": [
+            128,
+            128
+          ],
+          "name": "conclusion",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:headSha",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "headSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:pullRequests",
+          "kind": "property",
+          "line_range": [
+            130,
+            130
+          ],
+          "name": "pullRequests",
+          "partial_analysis": false,
+          "return_type": ": readonly number[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:raw",
+          "kind": "property",
+          "line_range": [
+            131,
+            131
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent:status",
+          "kind": "property",
+          "line_range": [
+            132,
+            132
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiEvent",
+      "kind": "interface",
+      "line_range": [
+        125,
+        133
+      ],
+      "name": "GitHubCiEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckSuiteEvent:checkSuiteId",
+          "kind": "property",
+          "line_range": [
+            137,
+            137
+          ],
+          "name": "checkSuiteId",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckSuiteEvent",
+      "kind": "interface",
+      "line_range": [
+        136,
+        138
+      ],
+      "name": "GitHubCheckSuiteEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckRunEvent:checkRunId",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "checkRunId",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckRunEvent",
+      "kind": "interface",
+      "line_range": [
+        141,
+        143
+      ],
+      "name": "GitHubCheckRunEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubWorkflowRunEvent:workflowRunId",
+          "kind": "property",
+          "line_range": [
+            147,
+            147
+          ],
+          "name": "workflowRunId",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubWorkflowRunEvent",
+      "kind": "interface",
+      "line_range": [
+        146,
+        148
+      ],
+      "name": "GitHubWorkflowRunEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiPayload",
+      "kind": "type_alias",
+      "line_range": [
+        151,
+        151
+      ],
+      "name": "GitHubCiPayload",
+      "partial_analysis": false,
+      "value": "GitHubCheckRunEvent | GitHubCheckSuiteEvent | GitHubWorkflowRunEvent;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEventBase:delivery",
+          "kind": "property",
+          "line_range": [
+            154,
+            154
+          ],
+          "name": "delivery",
+          "partial_analysis": false,
+          "return_type": ": GitHubDelivery",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEventBase:installationId",
+          "kind": "property",
+          "line_range": [
+            155,
+            155
+          ],
+          "name": "installationId",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEventBase:raw",
+          "kind": "property",
+          "line_range": [
+            156,
+            156
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEventBase:repository",
+          "kind": "property",
+          "line_range": [
+            157,
+            157
+          ],
+          "name": "repository",
+          "partial_analysis": false,
+          "return_type": ": GitHubRepositoryRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEventBase:sender",
+          "kind": "property",
+          "line_range": [
+            158,
+            158
+          ],
+          "name": "sender",
+          "partial_analysis": false,
+          "return_type": ": GitHubUser",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEventBase",
+      "kind": "interface",
+      "line_range": [
+        153,
+        159
+      ],
+      "name": "GitHubInboundEventBase",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPingEvent:kind",
+          "kind": "property",
+          "line_range": [
+            162,
+            162
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"ping\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPingEvent",
+      "kind": "interface",
+      "line_range": [
+        161,
+        163
+      ],
+      "name": "GitHubPingEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:action",
+          "kind": "property",
+          "line_range": [
+            166,
+            166
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:baseRef",
+          "kind": "property",
+          "line_range": [
+            167,
+            167
+          ],
+          "name": "baseRef",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:baseSha",
+          "kind": "property",
+          "line_range": [
+            168,
+            168
+          ],
+          "name": "baseSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:comment",
+          "kind": "property",
+          "line_range": [
+            169,
+            169
+          ],
+          "name": "comment",
+          "partial_analysis": false,
+          "return_type": ": GitHubIssueComment",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            170,
+            170
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:defaultBranch",
+          "kind": "property",
+          "line_range": [
+            171,
+            171
+          ],
+          "name": "defaultBranch",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:headRef",
+          "kind": "property",
+          "line_range": [
+            172,
+            172
+          ],
+          "name": "headRef",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:headSha",
+          "kind": "property",
+          "line_range": [
+            173,
+            173
+          ],
+          "name": "headSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent:kind",
+          "kind": "property",
+          "line_range": [
+            174,
+            174
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"issue_comment\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueCommentEvent",
+      "kind": "interface",
+      "line_range": [
+        165,
+        175
+      ],
+      "name": "GitHubIssueCommentEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:action",
+          "kind": "property",
+          "line_range": [
+            178,
+            178
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:baseRef",
+          "kind": "property",
+          "line_range": [
+            179,
+            179
+          ],
+          "name": "baseRef",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:baseSha",
+          "kind": "property",
+          "line_range": [
+            180,
+            180
+          ],
+          "name": "baseSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:comment",
+          "kind": "property",
+          "line_range": [
+            181,
+            181
+          ],
+          "name": "comment",
+          "partial_analysis": false,
+          "return_type": ": GitHubPullRequestReviewComment",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            182,
+            182
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:defaultBranch",
+          "kind": "property",
+          "line_range": [
+            183,
+            183
+          ],
+          "name": "defaultBranch",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:headRef",
+          "kind": "property",
+          "line_range": [
+            184,
+            184
+          ],
+          "name": "headRef",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:headSha",
+          "kind": "property",
+          "line_range": [
+            185,
+            185
+          ],
+          "name": "headSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent:kind",
+          "kind": "property",
+          "line_range": [
+            186,
+            186
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"pull_request_review_comment\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestReviewCommentEvent",
+      "kind": "interface",
+      "line_range": [
+        177,
+        187
+      ],
+      "name": "GitHubPullRequestReviewCommentEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueWebhookEvent:action",
+          "kind": "property",
+          "line_range": [
+            190,
+            190
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueWebhookEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            191,
+            191
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueWebhookEvent:issue",
+          "kind": "property",
+          "line_range": [
+            192,
+            192
+          ],
+          "name": "issue",
+          "partial_analysis": false,
+          "return_type": ": GitHubIssueEvent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueWebhookEvent:kind",
+          "kind": "property",
+          "line_range": [
+            193,
+            193
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"issues\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubIssueWebhookEvent",
+      "kind": "interface",
+      "line_range": [
+        189,
+        194
+      ],
+      "name": "GitHubIssueWebhookEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:action",
+          "kind": "property",
+          "line_range": [
+            197,
+            197
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:baseRef",
+          "kind": "property",
+          "line_range": [
+            198,
+            198
+          ],
+          "name": "baseRef",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:baseSha",
+          "kind": "property",
+          "line_range": [
+            199,
+            199
+          ],
+          "name": "baseSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            200,
+            200
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:defaultBranch",
+          "kind": "property",
+          "line_range": [
+            201,
+            201
+          ],
+          "name": "defaultBranch",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:headRef",
+          "kind": "property",
+          "line_range": [
+            202,
+            202
+          ],
+          "name": "headRef",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:headSha",
+          "kind": "property",
+          "line_range": [
+            203,
+            203
+          ],
+          "name": "headSha",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:kind",
+          "kind": "property",
+          "line_range": [
+            204,
+            204
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"pull_request\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent:pullRequest",
+          "kind": "property",
+          "line_range": [
+            205,
+            205
+          ],
+          "name": "pullRequest",
+          "partial_analysis": false,
+          "return_type": ": GitHubPullRequestEvent",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubPullRequestWebhookEvent",
+      "kind": "interface",
+      "line_range": [
+        196,
+        206
+      ],
+      "name": "GitHubPullRequestWebhookEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckSuiteWebhookEvent:checkSuite",
+          "kind": "property",
+          "line_range": [
+            209,
+            209
+          ],
+          "name": "checkSuite",
+          "partial_analysis": false,
+          "return_type": ": GitHubCheckSuiteEvent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckSuiteWebhookEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            210,
+            210
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckSuiteWebhookEvent:kind",
+          "kind": "property",
+          "line_range": [
+            211,
+            211
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"check_suite\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckSuiteWebhookEvent",
+      "kind": "interface",
+      "line_range": [
+        208,
+        212
+      ],
+      "name": "GitHubCheckSuiteWebhookEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckRunWebhookEvent:checkRun",
+          "kind": "property",
+          "line_range": [
+            215,
+            215
+          ],
+          "name": "checkRun",
+          "partial_analysis": false,
+          "return_type": ": GitHubCheckRunEvent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckRunWebhookEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            216,
+            216
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckRunWebhookEvent:kind",
+          "kind": "property",
+          "line_range": [
+            217,
+            217
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"check_run\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCheckRunWebhookEvent",
+      "kind": "interface",
+      "line_range": [
+        214,
+        218
+      ],
+      "name": "GitHubCheckRunWebhookEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubWorkflowRunWebhookEvent:conversation",
+          "kind": "property",
+          "line_range": [
+            221,
+            221
+          ],
+          "name": "conversation",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubWorkflowRunWebhookEvent:kind",
+          "kind": "property",
+          "line_range": [
+            222,
+            222
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"workflow_run\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubWorkflowRunWebhookEvent:workflowRun",
+          "kind": "property",
+          "line_range": [
+            223,
+            223
+          ],
+          "name": "workflowRun",
+          "partial_analysis": false,
+          "return_type": ": GitHubWorkflowRunEvent",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubWorkflowRunWebhookEvent",
+      "kind": "interface",
+      "line_range": [
+        220,
+        224
+      ],
+      "name": "GitHubWorkflowRunWebhookEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCiWebhookEvent",
+      "kind": "type_alias",
+      "line_range": [
+        227,
+        230
+      ],
+      "name": "GitHubCiWebhookEvent",
+      "partial_analysis": false,
+      "value": "| GitHubCheckRunWebhookEvent\r\n  | GitHubCheckSuiteWebhookEvent\r\n  | GitHubWorkflowRunWebhookEvent;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubInboundEvent",
+      "kind": "type_alias",
+      "line_range": [
+        233,
+        241
+      ],
+      "name": "GitHubInboundEvent",
+      "partial_analysis": false,
+      "value": "| GitHubCheckRunWebhookEvent\r\n  | GitHubCheckSuiteWebhookEvent\r\n  | GitHubIssueCommentEvent\r\n  | GitHubIssueWebhookEvent\r\n  | GitHubPingEvent\r\n  | GitHubPullRequestReviewCommentEvent\r\n  | GitHubPullRequestWebhookEvent\r\n  | GitHubWorkflowRunWebhookEvent;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCommentTrigger:kind",
+          "kind": "property",
+          "line_range": [
+            245,
+            245
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"mention\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCommentTrigger:message",
+          "kind": "property",
+          "line_range": [
+            246,
+            246
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCommentTrigger:token",
+          "kind": "property",
+          "line_range": [
+            247,
+            247
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/inbound-types.ts:GitHubCommentTrigger",
+      "kind": "interface",
+      "line_range": [
+        244,
+        248
+      ],
+      "name": "GitHubCommentTrigger",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

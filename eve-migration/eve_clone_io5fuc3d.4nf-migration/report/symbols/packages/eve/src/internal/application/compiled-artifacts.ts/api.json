@@ -1,0 +1,176 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "BuiltInWorkflowWorldTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type BuiltInWorkflowWorldTarget = \"local\" | \"vercel\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        42
+      ],
+      "name": "GeneratedCompiledArtifactsFiles",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GeneratedCompiledArtifactsFiles { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "bootstrapPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "bootstrapPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "workflowWorldPluginPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workflowWorldPluginPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "instrumentationPluginPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "instrumentationPluginPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "instrumentationSourcePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "instrumentationSourcePath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        51,
+        102
+      ],
+      "name": "writeCompiledArtifactsFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  compileResult: CompileAgentResult;\r\n  defaultWorkflowWorld: BuiltInWorkflowWorldTarget;\r\n  outDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GeneratedCompiledArtifactsFiles>",
+      "signature": "export function writeCompiledArtifactsFiles(input: {\r\n  compileResult: CompileAgentResult;\r\n  defaultWorkflowWorld: BuiltInWorkflowWorldTarget;\r\n  outDir: string;\r\n}) -> Promise<GeneratedCompiledArtifactsFiles>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        108,
+        162
+      ],
+      "name": "writeDevelopmentCompiledArtifactsFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compileResult: CompileAgentResult;\r\n  readonly outDir: string;\r\n  readonly runtimeAppRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GeneratedCompiledArtifactsFiles>",
+      "signature": "export function writeDevelopmentCompiledArtifactsFiles(input: {\r\n  readonly compileResult: CompileAgentResult;\r\n  readonly outDir: string;\r\n  readonly runtimeAppRoot: string;\r\n}) -> Promise<GeneratedCompiledArtifactsFiles>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        199,
+        244
+      ],
+      "name": "createCompiledArtifactsBootstrapSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  compileResult: CompileAgentResult;\r\n  installModulePath: string;\r\n  metadata: CompileMetadata;\r\n  moduleMapPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createCompiledArtifactsBootstrapSource(input: {\r\n  compileResult: CompileAgentResult;\r\n  installModulePath: string;\r\n  metadata: CompileMetadata;\r\n  moduleMapPath: string;\r\n}) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        246,
+        301
+      ],
+      "name": "createWorkflowWorldPluginSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  compiledArtifactsBootstrapPath: string;\r\n  configuredWorld: AgentWorkflowWorldDefinition | undefined;\r\n  defaultWorld: BuiltInWorkflowWorldTarget;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createWorkflowWorldPluginSource(input: {\r\n  compiledArtifactsBootstrapPath: string;\r\n  configuredWorld: AgentWorkflowWorldDefinition | undefined;\r\n  defaultWorld: BuiltInWorkflowWorldTarget;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        312,
+        340
+      ],
+      "name": "createDevelopmentWorkflowWorldPluginSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  compiledArtifactsBootstrapPath: string;\r\n  configuredWorld: AgentWorkflowWorldDefinition | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createDevelopmentWorkflowWorldPluginSource(input: {\r\n  compiledArtifactsBootstrapPath: string;\r\n  configuredWorld: AgentWorkflowWorldDefinition | undefined;\r\n}) -> string"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/compiled-artifacts.ts"
+}

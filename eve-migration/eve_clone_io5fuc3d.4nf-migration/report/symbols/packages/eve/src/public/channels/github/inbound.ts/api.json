@@ -1,0 +1,124 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        80
+      ],
+      "name": "githubContinuationToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly conversationKind: GitHubConversationKind;\r\n  readonly issueNumber?: number | null;\r\n  readonly pullRequestNumber?: number | null;\r\n  readonly repositoryId: number;\r\n  readonly reviewThreadRootCommentId?: number | null;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function githubContinuationToken(input: {\r\n  readonly conversationKind: GitHubConversationKind;\r\n  readonly issueNumber?: number | null;\r\n  readonly pullRequestNumber?: number | null;\r\n  readonly repositoryId: number;\r\n  readonly reviewThreadRootCommentId?: number | null;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        83,
+        90
+      ],
+      "name": "shouldDispatchGitHubComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly author?: GitHubUser;\r\n  readonly body: string;\r\n  readonly botName?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldDispatchGitHubComment(input: {\r\n  readonly author?: GitHubUser;\r\n  readonly body: string;\r\n  readonly botName?: string;\r\n}) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        107
+      ],
+      "name": "extractGitHubCommentTrigger",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly body: string;\r\n  readonly botName?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitHubCommentTrigger | null",
+      "signature": "export function extractGitHubCommentTrigger(input: {\r\n  readonly body: string;\r\n  readonly botName?: string;\r\n}) -> GitHubCommentTrigger | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        110,
+        146
+      ],
+      "name": "parseGitHubWebhookEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly body: string;\r\n  readonly contentType?: string;\r\n  readonly headers: Headers;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitHubInboundEvent | null",
+      "signature": "export function parseGitHubWebhookEvent(input: {\r\n  readonly body: string;\r\n  readonly contentType?: string;\r\n  readonly headers: Headers;\r\n}) -> GitHubInboundEvent | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        184,
+        211
+      ],
+      "name": "formatGitHubContextBlock",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly commentUrl?: string;\r\n  readonly deliveryId: string;\r\n  readonly headSha?: string | null;\r\n  readonly issueNumber?: number | null;\r\n  readonly pullRequestNumber?: number | null;\r\n  readonly repository: GitHubRepositoryRef;\r\n  readonly sender: GitHubUser;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatGitHubContextBlock(input: {\r\n  readonly commentUrl?: string;\r\n  readonly deliveryId: string;\r\n  readonly headSha?: string | null;\r\n  readonly issueNumber?: number | null;\r\n  readonly pullRequestNumber?: number | null;\r\n  readonly repository: GitHubRepositoryRef;\r\n  readonly sender: GitHubUser;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        214,
+        223
+      ],
+      "name": "prependGitHubContext",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string | UserContent"
+        },
+        {
+          "name": "block",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent",
+      "signature": "export function prependGitHubContext(message: string | UserContent, block: string) -> string | UserContent"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/inbound.ts"
+}

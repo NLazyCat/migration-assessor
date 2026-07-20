@@ -1,0 +1,737 @@
+{
+  "module": "packages/eve/src/setup/primitives/run-vercel.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:CONNECT_FEATURE_FLAG_ENV",
+      "kind": "variable",
+      "line_range": [
+        9,
+        11
+      ],
+      "name": "CONNECT_FEATURE_FLAG_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:VERCEL_NOT_FOUND_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "VERCEL_NOT_FOUND_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:buildSpawnEnv",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        22
+      ],
+      "name": "buildSpawnEnv",
+      "params": [
+        {
+          "name": "extraEnv",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NodeJS.ProcessEnv",
+      "signature": "export function buildSpawnEnv(extraEnv: Readonly<Record<string, string>>) -> NodeJS.ProcessEnv",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:commandArgs",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        27
+      ],
+      "name": "commandArgs",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "nonInteractive",
+          "optional": false,
+          "type": "boolean | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function commandArgs(args: string[], nonInteractive: boolean | undefined) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:existingDir",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        45
+      ],
+      "name": "existingDir",
+      "params": [
+        {
+          "name": "dir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function existingDir(dir: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions:cwd",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "cwd",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions:extraEnv",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "extraEnv",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions:nonInteractive",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "nonInteractive",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions:onOutput",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "onOutput",
+          "partial_analysis": false,
+          "return_type": ": ProcessOutputHandler",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions:signal",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions:timeoutMs",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "timeoutMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelOptions",
+      "kind": "interface",
+      "line_range": [
+        48,
+        64
+      ],
+      "name": "RunVercelOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:KILL_GRACE_MS",
+      "kind": "variable",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "KILL_GRACE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:armDeadline",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        90
+      ],
+      "name": "armDeadline",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "ChildProcess"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "onTimeout",
+          "optional": false,
+          "type": "() => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function armDeadline(child: ChildProcess, timeoutMs: number | undefined, onTimeout: () => void) -> () => void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:timeoutMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        94
+      ],
+      "name": "timeoutMessage",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function timeoutMessage(args: string[], timeoutMs: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:abortMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        98
+      ],
+      "name": "abortMessage",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function abortMessage(args: string[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:isAbortError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        100,
+        102
+      ],
+      "name": "isAbortError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "NodeJS.ErrnoException"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAbortError(error: NodeJS.ErrnoException, signal: AbortSignal | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCliInvocation:command",
+          "kind": "property",
+          "line_range": [
+            105,
+            105
+          ],
+          "name": "command",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCliInvocation:commandArgs",
+          "kind": "property",
+          "line_range": [
+            106,
+            106
+          ],
+          "name": "commandArgs",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCliInvocation:shell",
+          "kind": "property",
+          "line_range": [
+            107,
+            107
+          ],
+          "name": "shell",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCliInvocation",
+      "kind": "interface",
+      "line_range": [
+        104,
+        108
+      ],
+      "name": "VercelCliInvocation",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:Platform",
+      "kind": "type_alias",
+      "line_range": [
+        110,
+        110
+      ],
+      "name": "Platform",
+      "partial_analysis": false,
+      "value": "NodeJS.Platform;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:ancestorDirectories",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        121
+      ],
+      "name": "ancestorDirectories",
+      "params": [
+        {
+          "name": "dir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function ancestorDirectories(dir: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:findExecutable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        123,
+        131
+      ],
+      "name": "findExecutable",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function findExecutable(filePath: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:vercelExecutableNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        133,
+        135
+      ],
+      "name": "vercelExecutableNames",
+      "params": [
+        {
+          "name": "platform",
+          "optional": false,
+          "type": "Platform"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function vercelExecutableNames(platform: Platform) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:findLocalVercel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        145
+      ],
+      "name": "findLocalVercel",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "platform",
+          "optional": false,
+          "type": "Platform"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function findLocalVercel(cwd: string, platform: Platform) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:resolveVercelInvocation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        147,
+        159
+      ],
+      "name": "resolveVercelInvocation",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "platform",
+          "optional": false,
+          "type": "Platform"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCliInvocation",
+      "signature": "export function resolveVercelInvocation(cwd: string, args: string[], platform: Platform) -> VercelCliInvocation",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:stdioForRun",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        161,
+        168
+      ],
+      "name": "stdioForRun",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RunVercelOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "[\"inherit\" | \"ignore\", \"pipe\", \"pipe\"] | \"inherit\"",
+      "signature": "export function stdioForRun(options: RunVercelOptions) -> [\"inherit\" | \"ignore\", \"pipe\", \"pipe\"] | \"inherit\"",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:runVercel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        176,
+        244
+      ],
+      "name": "runVercel",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RunVercelOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function runVercel(args: string[], options: RunVercelOptions) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelCaptureResult:ok",
+          "kind": "property",
+          "line_range": [
+            248,
+            248
+          ],
+          "name": "ok",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelCaptureResult:stdout",
+          "kind": "property",
+          "line_range": [
+            249,
+            249
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:RunVercelCaptureResult",
+      "kind": "interface",
+      "line_range": [
+        247,
+        250
+      ],
+      "name": "RunVercelCaptureResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:runVercelCaptureStdout",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        261,
+        334
+      ],
+      "name": "runVercelCaptureStdout",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RunVercelOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RunVercelCaptureResult>",
+      "signature": "export function runVercelCaptureStdout(args: string[], options: RunVercelOptions) -> Promise<RunVercelCaptureResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureFailure:code",
+          "kind": "property",
+          "line_range": [
+            339,
+            339
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureFailure:errno",
+          "kind": "property",
+          "line_range": [
+            341,
+            341
+          ],
+          "name": "errno",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureFailure:stderr",
+          "kind": "property",
+          "line_range": [
+            343,
+            343
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureFailure:stdout",
+          "kind": "property",
+          "line_range": [
+            345,
+            345
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureFailure:message",
+          "kind": "property",
+          "line_range": [
+            347,
+            347
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureFailure",
+      "kind": "interface",
+      "line_range": [
+        337,
+        348
+      ],
+      "name": "VercelCaptureFailure",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:VercelCaptureResult",
+      "kind": "type_alias",
+      "line_range": [
+        356,
+        358
+      ],
+      "name": "VercelCaptureResult",
+      "partial_analysis": false,
+      "value": "| { ok: true; stdout: string }\r\n  | { ok: false; failure: VercelCaptureFailure };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/run-vercel.ts:captureVercel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        367,
+        469
+      ],
+      "name": "captureVercel",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RunVercelOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelCaptureResult>",
+      "signature": "export function captureVercel(args: string[], options: RunVercelOptions) -> Promise<VercelCaptureResult>",
+      "visibility": "Public"
+    }
+  ]
+}

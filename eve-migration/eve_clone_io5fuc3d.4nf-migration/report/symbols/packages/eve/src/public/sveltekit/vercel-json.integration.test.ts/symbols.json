@@ -1,0 +1,43 @@
+{
+  "module": "packages/eve/src/public/sveltekit/vercel-json.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sveltekit/vercel-json.integration.test.ts:createTempRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "createTempRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createTempRoot() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sveltekit/vercel-json.integration.test.ts:readJsonFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "readJsonFile",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function readJsonFile(path: string) -> Promise<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

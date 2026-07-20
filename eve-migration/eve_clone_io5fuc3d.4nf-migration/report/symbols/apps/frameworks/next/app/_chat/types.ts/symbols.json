@@ -1,0 +1,967 @@
+{
+  "module": "apps/frameworks/next/app/_chat/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:ComposeState",
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        16
+      ],
+      "name": "ComposeState",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly status: \"idle\";\r\n    }\r\n  | {\r\n      readonly status: \"sending\";\r\n    }\r\n  | {\r\n      readonly status: \"streaming\";\r\n    }\r\n  | {\r\n      readonly message: string;\r\n      readonly status: \"error\";\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:AgentInfoState",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        33
+      ],
+      "name": "AgentInfoState",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly status: \"idle\";\r\n    }\r\n  | {\r\n      readonly status: \"loading\";\r\n    }\r\n  | {\r\n      readonly message: string;\r\n      readonly status: \"error\";\r\n    }\r\n  | {\r\n      readonly info: AgentInformation;\r\n      readonly status: \"ready\";\r\n      readonly updatedAt: number;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ChatSessionCursor:continuationToken",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ChatSessionCursor:sessionId",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ChatSessionCursor:streamIndex",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "streamIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:ChatSessionCursor",
+      "kind": "interface",
+      "line_range": [
+        35,
+        39
+      ],
+      "name": "ChatSessionCursor",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptMessageReceivedEvent:data",
+          "kind": "property",
+          "line_range": [
+            42,
+            44
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly message: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptMessageReceivedEvent:type",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"message.received\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptMessageReceivedEvent",
+      "kind": "interface",
+      "line_range": [
+        41,
+        46
+      ],
+      "name": "TranscriptMessageReceivedEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptMessageCompletedEvent:data",
+          "kind": "property",
+          "line_range": [
+            49,
+            52
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly finishReason?: string;\r\n    readonly message: string | null;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptMessageCompletedEvent:type",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"message.completed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptMessageCompletedEvent",
+      "kind": "interface",
+      "line_range": [
+        48,
+        54
+      ],
+      "name": "TranscriptMessageCompletedEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptSessionFailedEvent:data",
+          "kind": "property",
+          "line_range": [
+            57,
+            59
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly message: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptSessionFailedEvent:type",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"session.failed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptSessionFailedEvent",
+      "kind": "interface",
+      "line_range": [
+        56,
+        61
+      ],
+      "name": "TranscriptSessionFailedEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptEventMeta:at",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "at",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptEventMeta",
+      "kind": "interface",
+      "line_range": [
+        63,
+        65
+      ],
+      "name": "TranscriptEventMeta",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TranscriptStreamEvent",
+      "kind": "type_alias",
+      "line_range": [
+        67,
+        77
+      ],
+      "name": "TranscriptStreamEvent",
+      "partial_analysis": false,
+      "value": "(\r\n  | TranscriptMessageCompletedEvent\r\n  | TranscriptMessageReceivedEvent\r\n  | TranscriptSessionFailedEvent\r\n  | {\r\n      readonly data?: unknown;\r\n      readonly type: string;\r\n    }\r\n) & {\r\n  readonly meta?: TranscriptEventMeta;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceStepStatus",
+      "kind": "type_alias",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "TraceStepStatus",
+      "partial_analysis": false,
+      "value": "\"aborted\" | \"completed\" | \"failed\" | \"running\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStepUsage:cacheReadTokens",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "cacheReadTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStepUsage:cacheWriteTokens",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "cacheWriteTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStepUsage:inputTokens",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "inputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStepUsage:outputTokens",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "outputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceStepUsage",
+      "kind": "interface",
+      "line_range": [
+        90,
+        95
+      ],
+      "name": "TraceStepUsage",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceActionKind",
+      "kind": "type_alias",
+      "line_range": [
+        100,
+        100
+      ],
+      "name": "TraceActionKind",
+      "partial_analysis": false,
+      "value": "\"load-skill\" | \"subagent-call\" | \"tool-call\" | \"unknown\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceActionStatus",
+      "kind": "type_alias",
+      "line_range": [
+        110,
+        110
+      ],
+      "name": "TraceActionStatus",
+      "partial_analysis": false,
+      "value": "\"aborted\" | \"completed\" | \"failed\" | \"requested\" | \"running\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceActionError:code",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceActionError:message",
+          "kind": "property",
+          "line_range": [
+            117,
+            117
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceActionError",
+      "kind": "interface",
+      "line_range": [
+        115,
+        118
+      ],
+      "name": "TraceActionError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:callId",
+          "kind": "property",
+          "line_range": [
+            124,
+            124
+          ],
+          "name": "callId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:durationMs",
+          "kind": "property",
+          "line_range": [
+            125,
+            125
+          ],
+          "name": "durationMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:endTime",
+          "kind": "property",
+          "line_range": [
+            126,
+            126
+          ],
+          "name": "endTime",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:error",
+          "kind": "property",
+          "line_range": [
+            127,
+            127
+          ],
+          "name": "error",
+          "partial_analysis": false,
+          "return_type": ": TraceActionError",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:input",
+          "kind": "property",
+          "line_range": [
+            128,
+            128
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:kind",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": TraceActionKind",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:name",
+          "kind": "property",
+          "line_range": [
+            130,
+            130
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:output",
+          "kind": "property",
+          "line_range": [
+            131,
+            131
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:startTime",
+          "kind": "property",
+          "line_range": [
+            132,
+            132
+          ],
+          "name": "startTime",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction:status",
+          "kind": "property",
+          "line_range": [
+            133,
+            133
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": TraceActionStatus",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceAction",
+      "kind": "interface",
+      "line_range": [
+        123,
+        134
+      ],
+      "name": "TraceAction",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:actions",
+          "kind": "property",
+          "line_range": [
+            140,
+            140
+          ],
+          "name": "actions",
+          "partial_analysis": false,
+          "return_type": ": readonly TraceAction[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:actionCount",
+          "kind": "property",
+          "line_range": [
+            141,
+            141
+          ],
+          "name": "actionCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:durationMs",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "durationMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:endTime",
+          "kind": "property",
+          "line_range": [
+            143,
+            143
+          ],
+          "name": "endTime",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:errorMessage",
+          "kind": "property",
+          "line_range": [
+            144,
+            144
+          ],
+          "name": "errorMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:events",
+          "kind": "property",
+          "line_range": [
+            145,
+            145
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly TranscriptStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:finishReason",
+          "kind": "property",
+          "line_range": [
+            146,
+            146
+          ],
+          "name": "finishReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:reasoningText",
+          "kind": "property",
+          "line_range": [
+            147,
+            147
+          ],
+          "name": "reasoningText",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:responseText",
+          "kind": "property",
+          "line_range": [
+            148,
+            148
+          ],
+          "name": "responseText",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:startTime",
+          "kind": "property",
+          "line_range": [
+            149,
+            149
+          ],
+          "name": "startTime",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:status",
+          "kind": "property",
+          "line_range": [
+            150,
+            150
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": TraceStepStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:stepIndex",
+          "kind": "property",
+          "line_range": [
+            151,
+            151
+          ],
+          "name": "stepIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:subagentCount",
+          "kind": "property",
+          "line_range": [
+            152,
+            152
+          ],
+          "name": "subagentCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep:usage",
+          "kind": "property",
+          "line_range": [
+            153,
+            153
+          ],
+          "name": "usage",
+          "partial_analysis": false,
+          "return_type": ": TraceStepUsage",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceStep",
+      "kind": "interface",
+      "line_range": [
+        139,
+        154
+      ],
+      "name": "TraceStep",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceTimelineRowStatus",
+      "kind": "type_alias",
+      "line_range": [
+        159,
+        159
+      ],
+      "name": "TraceTimelineRowStatus",
+      "partial_analysis": false,
+      "value": "\"aborted\" | \"active\" | \"failed\" | \"normal\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurnStatus",
+      "kind": "type_alias",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "TraceTurnStatus",
+      "partial_analysis": false,
+      "value": "\"completed\" | \"failed\" | \"running\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:assistantMessage",
+          "kind": "property",
+          "line_range": [
+            167,
+            167
+          ],
+          "name": "assistantMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:durationMs",
+          "kind": "property",
+          "line_range": [
+            168,
+            168
+          ],
+          "name": "durationMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:endTime",
+          "kind": "property",
+          "line_range": [
+            169,
+            169
+          ],
+          "name": "endTime",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:events",
+          "kind": "property",
+          "line_range": [
+            170,
+            170
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly TranscriptStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:sequence",
+          "kind": "property",
+          "line_range": [
+            171,
+            171
+          ],
+          "name": "sequence",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:startTime",
+          "kind": "property",
+          "line_range": [
+            172,
+            172
+          ],
+          "name": "startTime",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:steps",
+          "kind": "property",
+          "line_range": [
+            173,
+            173
+          ],
+          "name": "steps",
+          "partial_analysis": false,
+          "return_type": ": readonly TraceStep[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:status",
+          "kind": "property",
+          "line_range": [
+            174,
+            174
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": TraceTurnStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:subagentCount",
+          "kind": "property",
+          "line_range": [
+            175,
+            175
+          ],
+          "name": "subagentCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:turnId",
+          "kind": "property",
+          "line_range": [
+            176,
+            176
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn:userMessage",
+          "kind": "property",
+          "line_range": [
+            177,
+            177
+          ],
+          "name": "userMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:TraceTurn",
+      "kind": "interface",
+      "line_range": [
+        166,
+        178
+      ],
+      "name": "TraceTurn",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ThreadState:continuationToken",
+          "kind": "property",
+          "line_range": [
+            185,
+            185
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ThreadState:sessionId",
+          "kind": "property",
+          "line_range": [
+            186,
+            186
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ThreadState:streamIndex",
+          "kind": "property",
+          "line_range": [
+            187,
+            187
+          ],
+          "name": "streamIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/app/_chat/types.ts:ThreadState:turns",
+          "kind": "property",
+          "line_range": [
+            188,
+            188
+          ],
+          "name": "turns",
+          "partial_analysis": false,
+          "return_type": ": readonly TraceTurn[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/app/_chat/types.ts:ThreadState",
+      "kind": "interface",
+      "line_range": [
+        184,
+        189
+      ],
+      "name": "ThreadState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

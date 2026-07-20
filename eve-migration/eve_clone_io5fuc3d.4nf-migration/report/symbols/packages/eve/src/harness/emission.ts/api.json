@@ -1,0 +1,358 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        75,
+        80
+      ],
+      "name": "HarnessEmissionState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HarnessEmissionState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "sessionStarted",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "sessionStarted: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "sequence",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "sequence: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "stepIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "stepIndex: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "turnId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "turnId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        95
+      ],
+      "name": "getHarnessEmissionState",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessEmissionState",
+      "signature": "export function getHarnessEmissionState(state: SessionStateMap | undefined) -> HarnessEmissionState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        112,
+        114
+      ],
+      "name": "isHarnessBetweenTurns",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isHarnessBetweenTurns(session: HarnessSession) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        119,
+        130
+      ],
+      "name": "setHarnessEmissionState",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setHarnessEmissionState(session: HarnessSession, state: HarnessEmissionState) -> HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        140,
+        170
+      ],
+      "name": "emitTurnPreamble",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "StepInput"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "runtimeIdentity",
+          "optional": true,
+          "type": "RuntimeIdentity"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<HarnessEmissionState>",
+      "signature": "export function emitTurnPreamble(emitFn: HarnessEmitFn, input: StepInput, state: HarnessEmissionState, runtimeIdentity: RuntimeIdentity) -> Promise<HarnessEmissionState>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        175,
+        188
+      ],
+      "name": "emitStepStarted",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "messages",
+          "optional": true,
+          "type": "readonly import(\"ai\").ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitStepStarted(emitFn: HarnessEmitFn, state: HarnessEmissionState, messages: readonly import(\"ai\").ModelMessage[]) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        232,
+        239
+      ],
+      "name": "emitFailedStep",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "FailedStepPayload & { readonly sessionId: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitFailedStep(emitFn: HarnessEmitFn, state: HarnessEmissionState, input: FailedStepPayload & { readonly sessionId: string }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        245,
+        259
+      ],
+      "name": "emitRecoverableFailedTurn",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "FailedStepPayload & { readonly continuationToken: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<HarnessEmissionState>",
+      "signature": "export function emitRecoverableFailedTurn(emitFn: HarnessEmitFn, state: HarnessEmissionState, input: FailedStepPayload & { readonly continuationToken: string }) -> Promise<HarnessEmissionState>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        264,
+        269
+      ],
+      "name": "advanceStep",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessEmissionState",
+      "signature": "export function advanceStep(state: HarnessEmissionState) -> HarnessEmissionState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        275,
+        300
+      ],
+      "name": "emitTurnEpilogue",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "RunMode"
+        },
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<HarnessEmissionState>",
+      "signature": "export function emitTurnEpilogue(emitFn: HarnessEmitFn, state: HarnessEmissionState, mode: RunMode, continuationToken: string) -> Promise<HarnessEmissionState>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        310,
+        323
+      ],
+      "name": "normalizeAssistantStepFinishReason",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AssistantStepFinishReason",
+      "signature": "export function normalizeAssistantStepFinishReason(value: string | undefined) -> AssistantStepFinishReason"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        356,
+        382
+      ],
+      "name": "emitStreamContent",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "fullStream",
+          "optional": false,
+          "type": "AsyncIterable<TextStreamPart<ToolSet>>"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "StreamActionEmissionOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EmittedStreamContent>",
+      "signature": "export function emitStreamContent(emitFn: HarnessEmitFn, state: HarnessEmissionState, fullStream: AsyncIterable<TextStreamPart<ToolSet>>, options: StreamActionEmissionOptions) -> Promise<EmittedStreamContent>"
+    }
+  ],
+  "module": "packages/eve/src/harness/emission.ts"
+}

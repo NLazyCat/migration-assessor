@@ -1,0 +1,137 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/extension-declarations.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-declarations.ts:emitExtensionDeclarations",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        13,
+        70
+      ],
+      "name": "emitExtensionDeclarations",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly declarationsRoot: string;\r\n  readonly moduleLogicalPaths: readonly string[];\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitExtensionDeclarations(input: {\r\n  readonly appRoot: string;\r\n  readonly declarationsRoot: string;\r\n  readonly moduleLogicalPaths: readonly string[];\r\n  readonly sourceRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-declarations.ts:assertModuleDeclarationsEmitted",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        72,
+        106
+      ],
+      "name": "assertModuleDeclarationsEmitted",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly declarationsRoot: string;\r\n  readonly moduleLogicalPaths: readonly string[];\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function assertModuleDeclarationsEmitted(input: {\r\n  readonly appRoot: string;\r\n  readonly declarationsRoot: string;\r\n  readonly moduleLogicalPaths: readonly string[];\r\n  readonly sourceRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-declarations.ts:declarationLogicalPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        108,
+        119
+      ],
+      "name": "declarationLogicalPath",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function declarationLogicalPath(logicalPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-declarations.ts:collectDeclarationInputs",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        121,
+        135
+      ],
+      "name": "collectDeclarationInputs",
+      "params": [
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function collectDeclarationInputs(directory: string) -> Promise<string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-declarations.ts:declarationEmitOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        146
+      ],
+      "name": "declarationEmitOutput",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function declarationEmitOutput(error: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-declarations.ts:resolveTypeScriptBinary",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        148,
+        167
+      ],
+      "name": "resolveTypeScriptBinary",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveTypeScriptBinary(appRoot: string) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

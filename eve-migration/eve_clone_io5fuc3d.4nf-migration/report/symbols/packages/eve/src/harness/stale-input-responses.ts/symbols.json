@@ -1,0 +1,121 @@
+{
+  "module": "packages/eve/src/harness/stale-input-responses.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/stale-input-responses.ts:StaleResponseConversion",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        18
+      ],
+      "name": "StaleResponseConversion",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly kind: \"unchanged\";\r\n      readonly stepInput?: StepInput;\r\n    }\r\n  | {\r\n      readonly displayMessage: string | UserContent;\r\n      readonly kind: \"converted\";\r\n      readonly stepInput: StepInput;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/stale-input-responses.ts:convertStaleResponsesToUserMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        76
+      ],
+      "name": "convertStaleResponsesToUserMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly history: readonly ModelMessage[];\r\n  readonly pendingRequestIds: ReadonlySet<string>;\r\n  readonly stepInput?: StepInput;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StaleResponseConversion",
+      "signature": "export function convertStaleResponsesToUserMessage(input: {\r\n  readonly history: readonly ModelMessage[];\r\n  readonly pendingRequestIds: ReadonlySet<string>;\r\n  readonly stepInput?: StepInput;\r\n}) -> StaleResponseConversion",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/stale-input-responses.ts:formatModelMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        78,
+        137
+      ],
+      "name": "formatModelMessage",
+      "params": [
+        {
+          "name": "responses",
+          "optional": false,
+          "type": "readonly InputResponse[]"
+        },
+        {
+          "name": "requests",
+          "optional": false,
+          "type": "ReadonlyMap<string, InputRequest>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatModelMessage(responses: readonly InputResponse[], requests: ReadonlyMap<string, InputRequest>) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/stale-input-responses.ts:formatDisplayMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        139,
+        155
+      ],
+      "name": "formatDisplayMessage",
+      "params": [
+        {
+          "name": "responses",
+          "optional": false,
+          "type": "readonly InputResponse[]"
+        },
+        {
+          "name": "requests",
+          "optional": false,
+          "type": "ReadonlyMap<string, InputRequest>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDisplayMessage(responses: readonly InputResponse[], requests: ReadonlyMap<string, InputRequest>) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/stale-input-responses.ts:appendOptionalUserContent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        157,
+        166
+      ],
+      "name": "appendOptionalUserContent",
+      "params": [
+        {
+          "name": "existing",
+          "optional": false,
+          "type": "string | UserContent | undefined"
+        },
+        {
+          "name": "appended",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent",
+      "signature": "export function appendOptionalUserContent(existing: string | UserContent | undefined, appended: string) -> string | UserContent",
+      "visibility": "Private"
+    }
+  ]
+}

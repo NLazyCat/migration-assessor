@@ -1,0 +1,181 @@
+{
+  "module": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:scenarioApp",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "scenarioApp",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:CHAOS_SCENARIO_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "CHAOS_SCENARIO_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:CHAOS_CHANNEL_SOURCE",
+      "kind": "variable",
+      "line_range": [
+        31,
+        63
+      ],
+      "name": "CHAOS_CHANNEL_SOURCE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:CHAOS_DESCRIPTOR",
+      "kind": "variable",
+      "line_range": [
+        65,
+        72
+      ],
+      "name": "CHAOS_DESCRIPTOR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:toolSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        86
+      ],
+      "name": "toolSource",
+      "params": [
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toolSource(marker: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:HealthProbe:failures",
+          "kind": "property",
+          "line_range": [
+            89,
+            89
+          ],
+          "name": "failures",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:HealthProbe",
+      "kind": "interface",
+      "line_range": [
+        88,
+        91
+      ],
+      "name": "HealthProbe",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:startHealthProbe",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        123
+      ],
+      "name": "startHealthProbe",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HealthProbe",
+      "signature": "export function startHealthProbe(serverUrl: string) -> HealthProbe",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:completeStreamedTurn",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        125,
+        139
+      ],
+      "name": "completeStreamedTurn",
+      "params": [
+        {
+          "name": "server",
+          "optional": false,
+          "type": "RunningEveDev"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function completeStreamedTurn(server: RunningEveDev, message: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts:waitForToolMarker",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        141,
+        146
+      ],
+      "name": "waitForToolMarker",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForToolMarker(serverUrl: string, marker: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

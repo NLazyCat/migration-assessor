@@ -1,0 +1,50 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/vercel-status.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.test.ts:identity",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "identity",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.test.ts:collect",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        13
+      ],
+      "name": "collect",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  snapshots: VercelStatusSnapshot[];\r\n  onChange: (s: VercelStatusSnapshot) => void;\r\n}",
+      "signature": "export function collect() -> {\r\n  snapshots: VercelStatusSnapshot[];\r\n  onChange: (s: VercelStatusSnapshot) => void;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.test.ts:settled",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        15,
+        19
+      ],
+      "name": "settled",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function settled() -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

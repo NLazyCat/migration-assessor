@@ -1,0 +1,77 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/setup-commands.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-commands.test.ts:APP_ROOT",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "APP_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-commands.test.ts:fakePanelRenderer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        49
+      ],
+      "name": "fakePanelRenderer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "TuiSetupCommandRenderer & {\r\n  fireInterrupt: () => void;\r\n  interruptDisposed: () => boolean;\r\n}",
+      "signature": "export function fakePanelRenderer() -> TuiSetupCommandRenderer & {\r\n  fireInterrupt: () => void;\r\n  interruptDisposed: () => boolean;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-commands.test.ts:fakeFlows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        75
+      ],
+      "name": "fakeFlows",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<TuiSetupFlows>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TuiSetupFlows",
+      "signature": "export function fakeFlows(overrides: Partial<TuiSetupFlows>) -> TuiSetupFlows",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-commands.test.ts:run",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        77,
+        95
+      ],
+      "name": "run",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  command: \"vc:install\" | \"vc:login\" | \"model\" | \"channels\" | \"connect\" | \"deploy\";\r\n  flows: TuiSetupFlows;\r\n  renderer?: TuiSetupCommandRenderer;\r\n  initialModelStep?: \"provider\";\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function run(input: {\r\n  command: \"vc:install\" | \"vc:login\" | \"model\" | \"channels\" | \"connect\" | \"deploy\";\r\n  flows: TuiSetupFlows;\r\n  renderer?: TuiSetupCommandRenderer;\r\n  initialModelStep?: \"provider\";\r\n}) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

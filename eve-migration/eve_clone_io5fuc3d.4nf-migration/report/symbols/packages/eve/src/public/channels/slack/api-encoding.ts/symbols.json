@@ -1,0 +1,76 @@
+{
+  "module": "packages/eve/src/public/channels/slack/api-encoding.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/api-encoding.ts:encodeSlackApiBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1,
+        20
+      ],
+      "name": "encodeSlackApiBody",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly body: string;\r\n  readonly contentType: string;\r\n}",
+      "signature": "export function encodeSlackApiBody(body: unknown) -> {\r\n  readonly body: string;\r\n  readonly contentType: string;\r\n}",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/api-encoding.ts:decodeSlackApiBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        32
+      ],
+      "name": "decodeSlackApiBody",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "contentType",
+          "optional": false,
+          "type": "string | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function decodeSlackApiBody(body: unknown, contentType: string | null) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/api-encoding.ts:parseJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        40
+      ],
+      "name": "parseJson",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function parseJson(value: string) -> unknown",
+      "visibility": "Private"
+    }
+  ]
+}

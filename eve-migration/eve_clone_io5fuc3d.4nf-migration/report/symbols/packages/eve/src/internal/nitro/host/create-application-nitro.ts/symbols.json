@@ -1,0 +1,996 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/create-application-nitro.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:WORKFLOW_ALIAS_SPECIFIERS",
+      "kind": "variable",
+      "line_range": [
+        49,
+        56
+      ],
+      "name": "WORKFLOW_ALIAS_SPECIFIERS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:WORKFLOW_TRANSFORM_PATCHED",
+      "kind": "variable",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "WORKFLOW_TRANSFORM_PATCHED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:WORKFLOW_CACHE_PATH_FRAGMENT",
+      "kind": "variable",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "WORKFLOW_CACHE_PATH_FRAGMENT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:FRAMEWORK_HOSTED_EXTERNAL_PACKAGES",
+      "kind": "variable",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "FRAMEWORK_HOSTED_EXTERNAL_PACKAGES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:LOCAL_SANDBOX_BACKEND_NAMES",
+      "kind": "variable",
+      "line_range": [
+        71,
+        74
+      ],
+      "name": "LOCAL_SANDBOX_BACKEND_NAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:resolveWorkflowAliases",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        82
+      ],
+      "name": "resolveWorkflowAliases",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Record<string, string>",
+      "signature": "export function resolveWorkflowAliases() -> Record<string, string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:resolveProductionNitroPreset",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        84,
+        86
+      ],
+      "name": "resolveProductionNitroPreset",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "\"vercel\" | undefined",
+      "signature": "export function resolveProductionNitroPreset() -> \"vercel\" | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:includesApplicationSurface",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "includesApplicationSurface",
+      "params": [
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function includesApplicationSurface(surface: NitroBuildSurface) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:includesWorkflowSurface",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        94
+      ],
+      "name": "includesWorkflowSurface",
+      "params": [
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function includesWorkflowSurface(surface: NitroBuildSurface) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:includesWorkflowStepRegistrations",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        98
+      ],
+      "name": "includesWorkflowStepRegistrations",
+      "params": [
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function includesWorkflowStepRegistrations(surface: NitroBuildSurface) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:manifestEnablesWorkflow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        104
+      ],
+      "name": "manifestEnablesWorkflow",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "CompiledAgentManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function manifestEnablesWorkflow(manifest: CompiledAgentManifest) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:manifestHasWebSocketChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        110
+      ],
+      "name": "manifestHasWebSocketChannel",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "CompiledAgentManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function manifestHasWebSocketChannel(manifest: CompiledAgentManifest) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:collectHostedTraceDependencies",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        138
+      ],
+      "name": "collectHostedTraceDependencies",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "configuredOptionalEnginePackages",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function collectHostedTraceDependencies(preparedHost: PreparedApplicationHost, configuredOptionalEnginePackages: readonly string[]) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:collectConfiguredSandboxBackendNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        145,
+        152
+      ],
+      "name": "collectConfiguredSandboxBackendNames",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "CompiledAgentManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Set<string>",
+      "signature": "export function collectConfiguredSandboxBackendNames(manifest: CompiledAgentManifest) -> Set<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:shouldPruneLocalSandboxBackends",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        160,
+        170
+      ],
+      "name": "shouldPruneLocalSandboxBackends",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly configuredBackendNames: ReadonlySet<string>;\r\n  readonly preset: \"vercel\" | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldPruneLocalSandboxBackends(input: {\r\n  readonly configuredBackendNames: ReadonlySet<string>;\r\n  readonly preset: \"vercel\" | undefined;\r\n}) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createDevelopmentWatchOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        172,
+        179
+      ],
+      "name": "createDevelopmentWatchOptions",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ ignored: string[] }",
+      "signature": "export function createDevelopmentWatchOptions(appRoot: string) -> { ignored: string[] }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:normalizePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        181,
+        183
+      ],
+      "name": "normalizePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizePath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:stripPathQueryAndHash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        185,
+        192
+      ],
+      "name": "stripPathQueryAndHash",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripPathQueryAndHash(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:stripFileSystemPrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        194,
+        196
+      ],
+      "name": "stripFileSystemPrefix",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripFileSystemPrefix(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:resolveNitroModuleComparisonPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        198,
+        208
+      ],
+      "name": "resolveNitroModuleComparisonPath",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveNitroModuleComparisonPath(rootDir: string, path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:isWorkflowBundlePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        210,
+        217
+      ],
+      "name": "isWorkflowBundlePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "normalizedWorkflowBuildDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isWorkflowBundlePath(path: string, normalizedWorkflowBuildDir: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:normalizeStepTransformComparisonPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        219,
+        222
+      ],
+      "name": "normalizeStepTransformComparisonPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeStepTransformComparisonPath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:parseImportedModuleSpecifiers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        224,
+        236
+      ],
+      "name": "parseImportedModuleSpecifiers",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function parseImportedModuleSpecifiers(source: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:resolveNitroImportPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        238,
+        261
+      ],
+      "name": "resolveNitroImportPath",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "importSpecifier",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "importer",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function resolveNitroImportPath(rootDir: string, importSpecifier: string, importer: string) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:collectNitroStepTransformTargets",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        263,
+        279
+      ],
+      "name": "collectNitroStepTransformTargets",
+      "params": [
+        {
+          "name": "stepEntrypointPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Set<string>>",
+      "signature": "export function collectNitroStepTransformTargets(stepEntrypointPath: string, rootDir: string) -> Promise<Set<string>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:addNitroStepNoExternals",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        281,
+        305
+      ],
+      "name": "addNitroStepNoExternals",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "stepEntrypointPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function addNitroStepNoExternals(nitro: Nitro, stepEntrypointPath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createRelativeTransformFilename",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        307,
+        341
+      ],
+      "name": "createRelativeTransformFilename",
+      "params": [
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRelativeTransformFilename(workingDir: string, path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createPackageRelativeTransformFilename",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        343,
+        362
+      ],
+      "name": "createPackageRelativeTransformFilename",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function createPackageRelativeTransformFilename(path: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:addWorkflowModuleSideEffectsPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        364,
+        397
+      ],
+      "name": "addWorkflowModuleSideEffectsPlugin",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "workflowBuildDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addWorkflowModuleSideEffectsPlugin(nitro: Nitro, workflowBuildDir: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:addNitroStepModuleSideEffectsPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        399,
+        452
+      ],
+      "name": "addNitroStepModuleSideEffectsPlugin",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    stepEntrypointPath: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function addNitroStepModuleSideEffectsPlugin(nitro: Nitro, input: {\r\n    stepEntrypointPath: string;\r\n  }) -> () => void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:addNitroStepTransformPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        459,
+        517
+      ],
+      "name": "addNitroStepTransformPlugin",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    stepEntrypointPath: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function addNitroStepTransformPlugin(nitro: Nitro, input: {\r\n    stepEntrypointPath: string;\r\n  }) -> () => void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:addDynamicToolTransformPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        524,
+        540
+      ],
+      "name": "addDynamicToolTransformPlugin",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addDynamicToolTransformPlugin(nitro: Nitro) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:addInstrumentationModuleSideEffectsPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        547,
+        572
+      ],
+      "name": "addInstrumentationModuleSideEffectsPlugin",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "instrumentationModulePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addInstrumentationModuleSideEffectsPlugin(nitro: Nitro, instrumentationModulePath: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:patchWorkflowTransformExcludePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        581,
+        625
+      ],
+      "name": "patchWorkflowTransformExcludePath",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "workflowBuildDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function patchWorkflowTransformExcludePath(nitro: Nitro, workflowBuildDir: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createApplicationNitroBundlerConfiguration",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        627,
+        673
+      ],
+      "name": "createApplicationNitroBundlerConfiguration",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "preset",
+          "optional": false,
+          "type": "\"vercel\" | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createApplicationNitroBundlerConfiguration(preparedHost: PreparedApplicationHost, preset: \"vercel\" | undefined) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createApplicationNitroPlugins",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        675,
+        690
+      ],
+      "name": "createApplicationNitroPlugins",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function createApplicationNitroPlugins(preparedHost: PreparedApplicationHost) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:configureSharedApplicationNitro",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        692,
+        715
+      ],
+      "name": "configureSharedApplicationNitro",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function configureSharedApplicationNitro(nitro: Nitro, preparedHost: PreparedApplicationHost, surface: NitroBuildSurface) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:configureNitroStepPlugins",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        717,
+        722
+      ],
+      "name": "configureNitroStepPlugins",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "stepEntrypointPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Array<() => void>",
+      "signature": "export function configureNitroStepPlugins(nitro: Nitro, stepEntrypointPath: string) -> Array<() => void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:externalizeDevelopmentWorkflowBundle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        724,
+        747
+      ],
+      "name": "externalizeDevelopmentWorkflowBundle",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function externalizeDevelopmentWorkflowBundle(nitro: Nitro, preparedHost: PreparedApplicationHost) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createDevelopmentApplicationNitro",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        752,
+        796
+      ],
+      "name": "createDevelopmentApplicationNitro",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Nitro>",
+      "signature": "export function createDevelopmentApplicationNitro(preparedHost: PreparedDevelopmentApplicationHost) -> Promise<Nitro>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:ProductionApplicationNitroOptions:buildDir",
+          "kind": "property",
+          "line_range": [
+            799,
+            799
+          ],
+          "name": "buildDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:ProductionApplicationNitroOptions:outputDir",
+          "kind": "property",
+          "line_range": [
+            800,
+            800
+          ],
+          "name": "outputDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:ProductionApplicationNitroOptions:surface",
+          "kind": "property",
+          "line_range": [
+            801,
+            801
+          ],
+          "name": "surface",
+          "partial_analysis": false,
+          "return_type": ": NitroBuildSurface",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:ProductionApplicationNitroOptions",
+      "kind": "interface",
+      "line_range": [
+        798,
+        802
+      ],
+      "name": "ProductionApplicationNitroOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/create-application-nitro.ts:createProductionApplicationNitro",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        811,
+        875
+      ],
+      "name": "createProductionApplicationNitro",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ProductionApplicationNitroOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Nitro>",
+      "signature": "export function createProductionApplicationNitro(preparedHost: PreparedApplicationHost, options: ProductionApplicationNitroOptions) -> Promise<Nitro>",
+      "visibility": "Public"
+    }
+  ]
+}

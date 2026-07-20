@@ -1,0 +1,329 @@
+{
+  "module": "packages/eve/src/public/connections/errors.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge:url",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge:userCode",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "userCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge:expiresAt",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "expiresAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge:instructions",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "instructions",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge:displayName",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "displayName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge",
+      "kind": "interface",
+      "line_range": [
+        8,
+        44
+      ],
+      "name": "ConnectionAuthorizationChallenge",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationRequiredErrorOptions:message",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationRequiredErrorOptions",
+      "kind": "interface",
+      "line_range": [
+        49,
+        55
+      ],
+      "name": "ConnectionAuthorizationRequiredErrorOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedErrorOptions:message",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedErrorOptions:reason",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "reason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedErrorOptions:retryable",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "retryable",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedErrorOptions",
+      "kind": "interface",
+      "line_range": [
+        60,
+        94
+      ],
+      "name": "ConnectionAuthorizationFailedErrorOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationRequiredError:connectionName",
+          "kind": "property",
+          "line_range": [
+            105,
+            105
+          ],
+          "name": "connectionName",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationRequiredError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            107,
+            111
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "connectionName",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "optional": true,
+              "type": "ConnectionAuthorizationRequiredErrorOptions"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationRequiredError",
+      "kind": "class",
+      "line_range": [
+        104,
+        112
+      ],
+      "name": "ConnectionAuthorizationRequiredError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedError:connectionName",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "connectionName",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedError:reason",
+          "kind": "property",
+          "line_range": [
+            122,
+            122
+          ],
+          "name": "reason",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedError:retryable",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "retryable",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            125,
+            131
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "connectionName",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "optional": true,
+              "type": "ConnectionAuthorizationFailedErrorOptions"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationFailedError",
+      "kind": "class",
+      "line_range": [
+        120,
+        132
+      ],
+      "name": "ConnectionAuthorizationFailedError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/connections/errors.ts:isConnectionAuthorizationRequiredError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        145
+      ],
+      "name": "isConnectionAuthorizationRequiredError",
+      "params": [
+        {
+          "name": "err",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "err is ConnectionAuthorizationRequiredError",
+      "signature": "export function isConnectionAuthorizationRequiredError(err: unknown) -> err is ConnectionAuthorizationRequiredError",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/connections/errors.ts:isConnectionAuthorizationFailedError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        154,
+        158
+      ],
+      "name": "isConnectionAuthorizationFailedError",
+      "params": [
+        {
+          "name": "err",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "err is ConnectionAuthorizationFailedError",
+      "signature": "export function isConnectionAuthorizationFailedError(err: unknown) -> err is ConnectionAuthorizationFailedError",
+      "visibility": "Public"
+    }
+  ]
+}

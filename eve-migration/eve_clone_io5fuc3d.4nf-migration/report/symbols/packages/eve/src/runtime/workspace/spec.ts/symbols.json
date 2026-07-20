@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/runtime/workspace/spec.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/workspace/spec.ts:createWorkspacePromptSection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        26
+      ],
+      "name": "createWorkspacePromptSection",
+      "params": [
+        {
+          "name": "spec",
+          "optional": false,
+          "type": "WorkspaceRuntimeSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function createWorkspacePromptSection(spec: WorkspaceRuntimeSpec) -> string | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "DiscordChannelCredentials": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/public/channels/discord/verifyInbound.ts",
+        "line": 13
+      },
+      "symbol": "packages/eve/src/public/channels/discord/discordChannel.ts:DiscordChannelCredentials"
+    }
+  ],
+  "createLogger": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/discord/verifyInbound.ts",
+        "line": 5
+      },
+      "symbol": "packages/eve/src/internal/logging.ts:createLogger"
+    }
+  ],
+  "verifyDiscordRequest": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/discord/verifyInbound.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/public/channels/discord/verify.ts:verifyDiscordRequest"
+    }
+  ]
+}

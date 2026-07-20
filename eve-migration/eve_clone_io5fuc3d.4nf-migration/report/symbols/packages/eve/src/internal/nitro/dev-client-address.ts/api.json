@@ -1,0 +1,106 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "DEVELOPMENT_CLIENT_ADDRESS_HEADER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_CLIENT_ADDRESS_HEADER: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "DEVELOPMENT_CLIENT_ADDRESS_SIGNATURE_HEADER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_CLIENT_ADDRESS_SIGNATURE_HEADER: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        35
+      ],
+      "name": "stampDevelopmentClientAddress",
+      "params": [
+        {
+          "name": "headers",
+          "optional": false,
+          "type": "Headers | IncomingHttpHeaders"
+        },
+        {
+          "name": "address",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "secret",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function stampDevelopmentClientAddress(headers: Headers | IncomingHttpHeaders, address: string | undefined, secret: string | undefined) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        58
+      ],
+      "name": "readTrustedDevelopmentClientAddress",
+      "params": [
+        {
+          "name": "headers",
+          "optional": false,
+          "type": "Headers"
+        },
+        {
+          "name": "secret",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readTrustedDevelopmentClientAddress(headers: Headers, secret: string | undefined) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        68
+      ],
+      "name": "timingSafeEqualStrings",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function timingSafeEqualStrings(a: string, b: string) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/dev-client-address.ts"
+}

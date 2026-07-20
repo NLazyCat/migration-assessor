@@ -1,0 +1,346 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "DEV_RUNTIME_SOURCE_DIRECTORY",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEV_RUNTIME_SOURCE_DIRECTORY: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "DevelopmentRuntimeSourceSnapshotError",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class DevelopmentRuntimeSourceSnapshotError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        32,
+        35
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "DevelopmentRuntimeSourceSnapshotError::constructor(message: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        38,
+        49
+      ],
+      "name": "DevelopmentSourceSnapshotPlan",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentSourceSnapshotPlan { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "copyFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "copyFiles: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "copyRoots",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "copyRoots: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "runtimeAppRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "runtimeAppRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "snapshotRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "snapshotRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "snapshotSourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "snapshotSourceRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "sourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "symlinks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly DevelopmentSourceSnapshotSymlink[]",
+      "signature": "symlinks: : readonly DevelopmentSourceSnapshotSymlink[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "tsconfigPaths",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "tsconfigPaths: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "watchPaths",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "watchPaths: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        55
+      ],
+      "name": "DevelopmentSourceSnapshotSymlink",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentSourceSnapshotSymlink { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "linkPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "linkPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "targetKind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"external\" | \"local\"",
+      "signature": "targetKind: : \"external\" | \"local\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "targetPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "targetPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        70,
+        147
+      ],
+      "name": "createDevelopmentSourceSnapshotPlan",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly snapshotRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentSourceSnapshotPlan>",
+      "signature": "export function createDevelopmentSourceSnapshotPlan(input: {\r\n  readonly appRoot: string;\r\n  readonly snapshotRoot: string;\r\n}) -> Promise<DevelopmentSourceSnapshotPlan>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        149,
+        159
+      ],
+      "name": "resolveDevelopmentSourceSnapshotWatchPaths",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function resolveDevelopmentSourceSnapshotWatchPaths(appRoot: string) -> Promise<string[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        161,
+        167
+      ],
+      "name": "toDevelopmentSourceSnapshotPath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourcePath: string;\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toDevelopmentSourceSnapshotPath(input: {\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourcePath: string;\r\n  readonly sourceRoot: string;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        170,
+        188
+      ],
+      "name": "resolveDevelopmentSourceRoot",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveDevelopmentSourceRoot(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        602,
+        610
+      ],
+      "name": "isAuthoredSourcePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "sourceRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAuthoredSourcePath(path: string, sourceRoot: string) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot.ts"
+}

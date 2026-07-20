@@ -1,0 +1,72 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "resolveOutputPublicationLockPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveOutputPublicationLockPath(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        52
+      ],
+      "name": "startPublicationJournalHeartbeat",
+      "params": [
+        {
+          "name": "journalDirectoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function startPublicationJournalHeartbeat(journalDirectoryPath: string) -> () => void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        54,
+        114
+      ],
+      "name": "acquireOutputPublicationLock",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "OutputPublicationJournal"
+        },
+        {
+          "name": "onContention",
+          "optional": false,
+          "type": "() => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<() => Promise<void>>",
+      "signature": "export function acquireOutputPublicationLock(lockPath: string, journal: OutputPublicationJournal, onContention: () => Promise<void>) -> Promise<() => Promise<void>>"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/output-publication-lock.ts"
+}

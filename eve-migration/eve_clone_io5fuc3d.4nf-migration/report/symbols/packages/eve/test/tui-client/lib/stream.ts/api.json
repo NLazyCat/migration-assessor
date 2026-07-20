@@ -1,0 +1,62 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        129
+      ],
+      "name": "printStreamEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function printStreamEvent(event: HandleMessageStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        170,
+        182
+      ],
+      "name": "printUserLine",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  message: string;\r\n  tone?: \"approve\" | \"deny\" | \"text\";\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function printUserLine(input: {\r\n  message: string;\r\n  tone?: \"approve\" | \"deny\" | \"text\";\r\n}) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        190,
+        214
+      ],
+      "name": "printErrorChain",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function printErrorChain(error: unknown) -> void"
+    }
+  ],
+  "module": "packages/eve/test/tui-client/lib/stream.ts"
+}

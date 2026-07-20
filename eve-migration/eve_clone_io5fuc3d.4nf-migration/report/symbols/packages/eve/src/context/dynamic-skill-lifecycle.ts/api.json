@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "PendingSkillAnnouncementKey",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PendingSkillAnnouncementKey: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        243
+      ],
+      "name": "dispatchDynamicSkillEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ctx: ContextContainer;\r\n  readonly resolvers: readonly ResolvedDynamicSkillResolver[];\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly messages: readonly ModelMessage[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchDynamicSkillEvent(input: {\r\n  readonly ctx: ContextContainer;\r\n  readonly resolvers: readonly ResolvedDynamicSkillResolver[];\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly messages: readonly ModelMessage[];\r\n}) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/context/dynamic-skill-lifecycle.ts"
+}

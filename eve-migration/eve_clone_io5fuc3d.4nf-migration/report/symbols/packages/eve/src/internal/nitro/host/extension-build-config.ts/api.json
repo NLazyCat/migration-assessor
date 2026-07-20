@@ -1,0 +1,138 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        19
+      ],
+      "name": "ExtensionBuildConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionBuildConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "sourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "distRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "distRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "outDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "outDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "packageName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "shortName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "shortName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "runtimeDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "runtimeDependencies: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        22,
+        82
+      ],
+      "name": "tryReadExtensionBuildConfig",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExtensionBuildConfig | null>",
+      "signature": "export function tryReadExtensionBuildConfig(rootDir: string) -> Promise<ExtensionBuildConfig | null>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        85,
+        120
+      ],
+      "name": "ensureExtensionExports",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "outDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function ensureExtensionExports(appRoot: string, outDir: string) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/extension-build-config.ts"
+}

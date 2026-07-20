@@ -1,0 +1,507 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/start-development-server.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:MAX_ALLOWED_DEVELOPMENT_SERVER_PORT",
+      "kind": "variable",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "MAX_ALLOWED_DEVELOPMENT_SERVER_PORT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:PORT_ENV",
+      "kind": "variable",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "PORT_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:isActiveDevelopmentServerForApp",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        73,
+        95
+      ],
+      "name": "isActiveDevelopmentServerForApp",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly serverUrl: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isActiveDevelopmentServerForApp(input: {\r\n  readonly appRoot: string;\r\n  readonly serverUrl: string;\r\n}) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:isAddressInUseError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        99
+      ],
+      "name": "isAddressInUseError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "error is NodeJS.ErrnoException",
+      "signature": "export function isAddressInUseError(error: unknown) -> error is NodeJS.ErrnoException",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:NitroDevelopmentServer",
+      "kind": "type_alias",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "NitroDevelopmentServer",
+      "partial_analysis": false,
+      "value": "DrainedNitroDevServer;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:resolveDevelopmentServerPort",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        118
+      ],
+      "name": "resolveDevelopmentServerPort",
+      "params": [
+        {
+          "name": "port",
+          "optional": false,
+          "type": "number | string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function resolveDevelopmentServerPort(port: number | string | undefined) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:readEnvironmentPort",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        120,
+        136
+      ],
+      "name": "readEnvironmentPort",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readEnvironmentPort() -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:detectDevelopmentCommandPackageManager",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        138,
+        146
+      ],
+      "name": "detectDevelopmentCommandPackageManager",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageManagerKind>",
+      "signature": "export function detectDevelopmentCommandPackageManager(appRoot: string) -> Promise<PackageManagerKind>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:formatDevelopmentServerConnectCommand",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        148,
+        154
+      ],
+      "name": "formatDevelopmentServerConnectCommand",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function formatDevelopmentServerConnectCommand(appRoot: string, serverUrl: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:createDevelopmentServerAlreadyRunningError",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        156,
+        167
+      ],
+      "name": "createDevelopmentServerAlreadyRunningError",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Error>",
+      "signature": "export function createDevelopmentServerAlreadyRunningError(appRoot: string, serverUrl: string) -> Promise<Error>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:resolveDevelopmentServerPorts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        169,
+        192
+      ],
+      "name": "resolveDevelopmentServerPorts",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly port: number | string | undefined;\r\n  readonly retryOnAddressInUse: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly [number, ...number[]]",
+      "signature": "export function resolveDevelopmentServerPorts(input: {\r\n  readonly port: number | string | undefined;\r\n  readonly retryOnAddressInUse: boolean;\r\n}) -> readonly [number, ...number[]]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:addDevelopmentControlHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        194,
+        223
+      ],
+      "name": "addDevelopmentControlHandler",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly devServer: DrainedNitroDevServer;\r\n  readonly getWatcher: () => AuthoredSourceWatcherHandle | undefined;\r\n  readonly workflowWorld: ParentDevelopmentWorkflowWorld | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addDevelopmentControlHandler(input: {\r\n  readonly appRoot: string;\r\n  readonly devServer: DrainedNitroDevServer;\r\n  readonly getWatcher: () => AuthoredSourceWatcherHandle | undefined;\r\n  readonly workflowWorld: ParentDevelopmentWorkflowWorld | undefined;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:closeDevelopmentServerResources",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        225,
+        267
+      ],
+      "name": "closeDevelopmentServerResources",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly authoredSourceWatcher: AuthoredSourceWatcherHandle | undefined;\r\n  readonly devServer: NitroDevelopmentServer | undefined;\r\n  readonly developmentSandboxRunId: string;\r\n  readonly nitro: Nitro | undefined;\r\n  readonly workflowWorld: ParentDevelopmentWorkflowWorld | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly errors: readonly unknown[]; readonly listenerClosed: boolean }>",
+      "signature": "export function closeDevelopmentServerResources(input: {\r\n  readonly appRoot: string;\r\n  readonly authoredSourceWatcher: AuthoredSourceWatcherHandle | undefined;\r\n  readonly devServer: NitroDevelopmentServer | undefined;\r\n  readonly developmentSandboxRunId: string;\r\n  readonly nitro: Nitro | undefined;\r\n  readonly workflowWorld: ParentDevelopmentWorkflowWorld | undefined;\r\n}) -> Promise<{ readonly errors: readonly unknown[]; readonly listenerClosed: boolean }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:createDevelopmentServerCleanupError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        269,
+        284
+      ],
+      "name": "createDevelopmentServerCleanupError",
+      "params": [
+        {
+          "name": "errors",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error | undefined",
+      "signature": "export function createDevelopmentServerCleanupError(errors: readonly unknown[]) -> Error | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:createDevelopmentServerStartupCleanupError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        286,
+        295
+      ],
+      "name": "createDevelopmentServerStartupCleanupError",
+      "params": [
+        {
+          "name": "startupError",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "cleanupErrors",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AggregateError",
+      "signature": "export function createDevelopmentServerStartupCleanupError(startupError: unknown, cleanupErrors: readonly unknown[]) -> AggregateError",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:listenForDevelopmentServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        297,
+        338
+      ],
+      "name": "listenForDevelopmentServer",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly devServer: NitroDevelopmentServer;\r\n  readonly host: string;\r\n  readonly port: number | string | undefined;\r\n  readonly retryOnAddressInUse: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function listenForDevelopmentServer(input: {\r\n  readonly devServer: NitroDevelopmentServer;\r\n  readonly host: string;\r\n  readonly port: number | string | undefined;\r\n  readonly retryOnAddressInUse: boolean;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:DevelopmentServerStartResult:handle",
+          "kind": "property",
+          "line_range": [
+            341,
+            341
+          ],
+          "name": "handle",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentServerHandle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:DevelopmentServerStartResult:close",
+          "kind": "property",
+          "line_range": [
+            343,
+            343
+          ],
+          "name": "close",
+          "partial_analysis": false,
+          "return_type": ": (() => Promise<void>) | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:DevelopmentServerStartResult",
+      "kind": "interface",
+      "line_range": [
+        340,
+        344
+      ],
+      "name": "DevelopmentServerStartResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:startNitroDevelopmentServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        346,
+        578
+      ],
+      "name": "startNitroDevelopmentServer",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DevelopmentServerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentServerStartResult>",
+      "signature": "export function startNitroDevelopmentServer(rootDir: string, options: DevelopmentServerOptions) -> Promise<DevelopmentServerStartResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:createDevelopmentServer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        593,
+        596
+      ],
+      "name": "createDevelopmentServer",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "DevelopmentServerOptions & { existing?: \"reject\" }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentServer<StartedDevelopmentServer>",
+      "signature": "export function createDevelopmentServer(rootDir: string, options: DevelopmentServerOptions & { existing?: \"reject\" }) -> DevelopmentServer<StartedDevelopmentServer>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:createDevelopmentServer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        597,
+        600
+      ],
+      "name": "createDevelopmentServer",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "DevelopmentServerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentServer",
+      "signature": "export function createDevelopmentServer(rootDir: string, options: DevelopmentServerOptions) -> DevelopmentServer",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:createDevelopmentServer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        601,
+        629
+      ],
+      "name": "createDevelopmentServer",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DevelopmentServerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentServer",
+      "signature": "export function createDevelopmentServer(rootDir: string, options: DevelopmentServerOptions) -> DevelopmentServer",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-development-server.ts:restoreDevelopmentSandboxRunId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        631,
+        637
+      ],
+      "name": "restoreDevelopmentSandboxRunId",
+      "params": [
+        {
+          "name": "previous",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function restoreDevelopmentSandboxRunId(previous: string | undefined) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

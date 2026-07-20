@@ -1,0 +1,83 @@
+{
+  "module": "packages/eve/src/runtime/sessions/turn.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/turn.ts:PreparedRuntimeAuthoredTool",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        14
+      ],
+      "name": "PreparedRuntimeAuthoredTool",
+      "partial_analysis": false,
+      "value": "Readonly<\r\n  InternalToolDefinition &\r\n    SourceRef & {\r\n      kind: \"authored-tool\";\r\n    }\r\n>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/turn.ts:PreparedRuntimeDelegationToolBase",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "PreparedRuntimeDelegationToolBase",
+      "partial_analysis": false,
+      "value": "Readonly<\r\n  InternalToolDefinition &\r\n    SourceRef &\r\n    Node & {\r\n      kind: TKind;\r\n    }\r\n>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/turn.ts:PreparedRuntimeSubagentTool",
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "PreparedRuntimeSubagentTool",
+      "partial_analysis": false,
+      "value": "PreparedRuntimeDelegationToolBase<\"subagent\">;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/turn.ts:PreparedRuntimeRemoteAgentTool",
+      "kind": "type_alias",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "PreparedRuntimeRemoteAgentTool",
+      "partial_analysis": false,
+      "value": "PreparedRuntimeDelegationToolBase<\"remote\">;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/turn.ts:PreparedRuntimeDelegationTool",
+      "kind": "type_alias",
+      "line_range": [
+        40,
+        42
+      ],
+      "name": "PreparedRuntimeDelegationTool",
+      "partial_analysis": false,
+      "value": "| PreparedRuntimeRemoteAgentTool\r\n  | PreparedRuntimeSubagentTool;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/turn.ts:PreparedRuntimeTool",
+      "kind": "type_alias",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "PreparedRuntimeTool",
+      "partial_analysis": false,
+      "value": "PreparedRuntimeAuthoredTool | PreparedRuntimeDelegationTool;",
+      "visibility": "Public"
+    }
+  ]
+}

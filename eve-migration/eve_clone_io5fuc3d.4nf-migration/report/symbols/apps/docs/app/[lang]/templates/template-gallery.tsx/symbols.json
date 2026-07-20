@@ -1,0 +1,219 @@
+{
+  "module": "apps/docs/app/[lang]/templates/template-gallery.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:ALL",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "ALL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterValue",
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "FilterValue",
+      "partial_analysis": false,
+      "value": "typeof ALL | T;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:TemplateGalleryProps:entries",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "entries",
+          "partial_analysis": false,
+          "return_type": ": TemplateEntry[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:TemplateGalleryProps",
+      "kind": "interface",
+      "line_range": [
+        22,
+        24
+      ],
+      "name": "TemplateGalleryProps",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelectProps:allLabel",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "allLabel",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelectProps:label",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelectProps:onChange",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "onChange",
+          "partial_analysis": false,
+          "return_type": ": (value: FilterValue<T>) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelectProps:options",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": T[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelectProps:value",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": FilterValue<T>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelectProps",
+      "kind": "interface",
+      "line_range": [
+        26,
+        32
+      ],
+      "name": "FilterSelectProps",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterSelect",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        34,
+        64
+      ],
+      "name": "FilterSelect",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "FilterSelectProps<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:FilterOption",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        66,
+        70
+      ],
+      "name": "FilterOption",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ label: string; value: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:TemplateCard",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        72,
+        99
+      ],
+      "name": "TemplateCard",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ entry: TemplateEntry }"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/template-gallery.tsx:TemplateGallery",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        101,
+        195
+      ],
+      "name": "TemplateGallery",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "TemplateGalleryProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

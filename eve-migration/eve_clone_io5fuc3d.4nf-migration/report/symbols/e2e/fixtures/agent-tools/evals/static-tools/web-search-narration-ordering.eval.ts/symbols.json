@@ -1,0 +1,177 @@
+{
+  "module": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:TOOL_NAME",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "TOOL_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:WebSearchEventOrder:requestIndex",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "requestIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:WebSearchEventOrder:resultIndex",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "resultIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:WebSearchEventOrder",
+      "kind": "interface",
+      "line_range": [
+        44,
+        47
+      ],
+      "name": "WebSearchEventOrder",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:narratedWebSearchOrder",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        56
+      ],
+      "name": "narratedWebSearchOrder",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function narratedWebSearchOrder(events: readonly HandleMessageStreamEvent[]) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:unNarratedWebSearchOrder",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        65
+      ],
+      "name": "unNarratedWebSearchOrder",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function unNarratedWebSearchOrder(events: readonly HandleMessageStreamEvent[]) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:webSearchEventOrder",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        97
+      ],
+      "name": "webSearchEventOrder",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WebSearchEventOrder | undefined",
+      "signature": "export function webSearchEventOrder(events: readonly HandleMessageStreamEvent[]) -> WebSearchEventOrder | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:preToolNarrationExists",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        112
+      ],
+      "name": "preToolNarrationExists",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        },
+        {
+          "name": "requestIndex",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function preToolNarrationExists(events: readonly HandleMessageStreamEvent[], requestIndex: number) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search-narration-ordering.eval.ts:finalMessageFollowsResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        114,
+        126
+      ],
+      "name": "finalMessageFollowsResult",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        },
+        {
+          "name": "resultIndex",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function finalMessageFollowsResult(events: readonly HandleMessageStreamEvent[], resultIndex: number) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

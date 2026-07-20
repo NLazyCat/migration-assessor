@@ -1,0 +1,62 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        30
+      ],
+      "name": "ensureWorkflowContinuationSecurity",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function ensureWorkflowContinuationSecurity(session: HarnessSession) -> HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        51
+      ],
+      "name": "readWorkflowContinuationSecurity",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSandboxContinuationSecurity | undefined",
+      "signature": "export function readWorkflowContinuationSecurity(session: HarnessSession) -> WorkflowSandboxContinuationSecurity | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        61
+      ],
+      "name": "getWorkflowContinuationSecurity",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSandboxContinuationSecurity",
+      "signature": "export function getWorkflowContinuationSecurity(session: HarnessSession) -> WorkflowSandboxContinuationSecurity"
+    }
+  ],
+  "module": "packages/eve/src/harness/workflow-continuation-security.ts"
+}

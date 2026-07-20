@@ -1,0 +1,93 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        5,
+        14
+      ],
+      "name": "AuthJsSession",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AuthJsSession { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "providerId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "providerId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "profile",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    sub: string;\r\n    name?: string;\r\n    email?: string;\r\n    image?: string;\r\n  }",
+      "signature": "profile: : {\r\n    sub: string;\r\n    name?: string;\r\n    email?: string;\r\n    image?: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        86
+      ],
+      "name": "getAuthJsSession",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request | { headers: Headers | Record<string, string> }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AuthJsSession | null>",
+      "signature": "export function getAuthJsSession(request: Request | { headers: Headers | Record<string, string> }) -> Promise<AuthJsSession | null>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "authMiddleware",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function authMiddleware(request: Request) -> void"
+    }
+  ],
+  "module": "apps/frameworks/next/lib/auth.ts"
+}

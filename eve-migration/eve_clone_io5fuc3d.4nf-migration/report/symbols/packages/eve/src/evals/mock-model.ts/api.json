@@ -1,0 +1,470 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        22
+      ],
+      "name": "MockModelMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "role",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"assistant\" | \"system\" | \"tool\" | \"user\"",
+      "signature": "role: : \"assistant\" | \"system\" | \"tool\" | \"user\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        25,
+        32
+      ],
+      "name": "MockModelTool",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelTool { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "inputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "inputSchema?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        44
+      ],
+      "name": "MockModelToolResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelToolResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "output: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "isError",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "isError: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        47,
+        60
+      ],
+      "name": "MockModelRequest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelRequest { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "messages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly MockModelMessage[]",
+      "signature": "messages: : readonly MockModelMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "userMessages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "userMessages: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "lastUserMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "lastUserMessage: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "userMessageCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "userMessageCount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly MockModelTool[]",
+      "signature": "tools: : readonly MockModelTool[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "toolResults",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly MockModelToolResult[]",
+      "signature": "toolResults: : readonly MockModelToolResult[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        63,
+        70
+      ],
+      "name": "MockModelToolCall",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelToolCall { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "input",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "input?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        73,
+        78
+      ],
+      "name": "MockModelUsage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelUsage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "inputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "inputTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "outputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "outputTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        81,
+        88
+      ],
+      "name": "MockModelResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "toolCalls",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly MockModelToolCall[]",
+      "signature": "toolCalls?: : readonly MockModelToolCall[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "usage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": MockModelUsage",
+      "signature": "usage?: : MockModelUsage"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        91,
+        93
+      ],
+      "name": "MockModelResponder",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MockModelResponder = (\r\n  request: MockModelRequest,\r\n) => MockModelResponse | Promise<MockModelResponse | string> | string;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        96,
+        103
+      ],
+      "name": "MockModelOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockModelOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "modelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "modelId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        100,
+        100
+      ],
+      "name": "provider",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "provider?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "respond",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": MockModelResponder | string",
+      "signature": "respond?: : MockModelResponder | string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        118,
+        135
+      ],
+      "name": "mockModel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockModelOptions | MockModelResponder | string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LanguageModel",
+      "signature": "export function mockModel(input: MockModelOptions | MockModelResponder | string) -> LanguageModel"
+    }
+  ],
+  "module": "packages/eve/src/evals/mock-model.ts"
+}

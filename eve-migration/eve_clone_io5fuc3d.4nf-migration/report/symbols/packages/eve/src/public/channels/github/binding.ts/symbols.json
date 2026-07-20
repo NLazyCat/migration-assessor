@@ -1,0 +1,301 @@
+{
+  "module": "packages/eve/src/public/channels/github/binding.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingConfig:api",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "api",
+          "partial_analysis": false,
+          "return_type": ": GitHubApiOptions",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingConfig:credentials",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "credentials",
+          "partial_analysis": false,
+          "return_type": ": GitHubChannelCredentials",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingConfig",
+      "kind": "interface",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "GitHubBindingConfig",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:conversationKind",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "conversationKind",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationKind",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:installationId",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "installationId",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:issueNumber",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "issueNumber",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:owner",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "owner",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:pullRequestNumber",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "pullRequestNumber",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:repo",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "repo",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:repositoryId",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "repositoryId",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:reviewCommentId",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "reviewCommentId",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:reviewThreadRootCommentId",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "reviewThreadRootCommentId",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState:triggeringCommentId",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "triggeringCommentId",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/binding.ts:GitHubBindingState",
+      "kind": "interface",
+      "line_range": [
+        26,
+        37
+      ],
+      "name": "GitHubBindingState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubHandle:installationId",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "installationId",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubHandle:repository",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "repository",
+          "partial_analysis": false,
+          "return_type": ": GitHubRepositoryRef",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/binding.ts:GitHubHandle",
+      "kind": "interface",
+      "line_range": [
+        40,
+        52
+      ],
+      "name": "GitHubHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/github/binding.ts:GitHubThread:kind",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": GitHubConversationKind",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/github/binding.ts:GitHubThread",
+      "kind": "interface",
+      "line_range": [
+        55,
+        69
+      ],
+      "name": "GitHubThread",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/binding.ts:buildGitHubBinding",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        155
+      ],
+      "name": "buildGitHubBinding",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubBindingConfig;\r\n  readonly state: GitHubBindingState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly github: GitHubHandle; readonly thread: GitHubThread }",
+      "signature": "export function buildGitHubBinding(input: {\r\n  readonly config: GitHubBindingConfig;\r\n  readonly state: GitHubBindingState;\r\n}) -> { readonly github: GitHubHandle; readonly thread: GitHubThread }",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/binding.ts:requiredStateNumber",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        157,
+        160
+      ],
+      "name": "requiredStateNumber",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "number | null | undefined"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function requiredStateNumber(value: number | null | undefined, name: string) -> number",
+      "visibility": "Private"
+    }
+  ]
+}

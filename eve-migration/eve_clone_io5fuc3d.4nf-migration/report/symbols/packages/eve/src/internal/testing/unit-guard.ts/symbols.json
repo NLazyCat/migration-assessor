@@ -1,0 +1,145 @@
+{
+  "module": "packages/eve/src/internal/testing/unit-guard.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:INTEGRATION_GUIDANCE",
+      "kind": "variable",
+      "line_range": [
+        7,
+        8
+      ],
+      "name": "INTEGRATION_GUIDANCE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:createUnitGuardError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "createUnitGuardError",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function createUnitGuardError(operation: string) -> Error",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:createThrowingFn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        20
+      ],
+      "name": "createThrowingFn",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(...args: unknown[]) => never",
+      "signature": "export function createThrowingFn(operation: string) -> (...args: unknown[]) => never",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:createAsyncThrowingFn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        24
+      ],
+      "name": "createAsyncThrowingFn",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(...args: unknown[]) => Promise<never>",
+      "signature": "export function createAsyncThrowingFn(operation: string) -> (...args: unknown[]) => Promise<never>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:FORBIDDEN_FS_PROMISES_OPERATIONS",
+      "kind": "variable",
+      "line_range": [
+        31,
+        51
+      ],
+      "name": "FORBIDDEN_FS_PROMISES_OPERATIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:FORBIDDEN_FS_OPERATIONS",
+      "kind": "variable",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "FORBIDDEN_FS_OPERATIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:FORBIDDEN_CHILD_PROCESS_OPERATIONS",
+      "kind": "variable",
+      "line_range": [
+        86,
+        94
+      ],
+      "name": "FORBIDDEN_CHILD_PROCESS_OPERATIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/unit-guard.ts:resolveFetchUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        132,
+        142
+      ],
+      "name": "resolveFetchUrl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Parameters<typeof fetch>[0]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveFetchUrl(input: Parameters<typeof fetch>[0]) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

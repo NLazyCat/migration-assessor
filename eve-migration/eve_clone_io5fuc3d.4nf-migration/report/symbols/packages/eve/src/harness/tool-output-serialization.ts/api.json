@@ -1,0 +1,67 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        3,
+        21
+      ],
+      "name": "ToolOutputSerializationError",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly boundary: ToolOutputSerializationBoundary;\r\n    readonly cause?: unknown;\r\n    readonly toolCallId?: string;\r\n    readonly toolName: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ToolOutputSerializationError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        7,
+        20
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly boundary: ToolOutputSerializationBoundary;\r\n    readonly cause?: unknown;\r\n    readonly toolCallId?: string;\r\n    readonly toolName: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ToolOutputSerializationError::constructor(input: {\r\n    readonly boundary: ToolOutputSerializationBoundary;\r\n    readonly cause?: unknown;\r\n    readonly toolCallId?: string;\r\n    readonly toolName: string;\r\n  }) -> void"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        45,
+        66
+      ],
+      "name": "withToolOutputSerializationError",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly boundary: ToolOutputSerializationBoundary;\r\n    readonly toolCallId?: string;\r\n    readonly toolName: string;\r\n  }"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "() => T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function withToolOutputSerializationError(input: {\r\n    readonly boundary: ToolOutputSerializationBoundary;\r\n    readonly toolCallId?: string;\r\n    readonly toolName: string;\r\n  }, fn: () => T) -> T"
+    }
+  ],
+  "module": "packages/eve/src/harness/tool-output-serialization.ts"
+}

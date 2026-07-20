@@ -1,0 +1,385 @@
+{
+  "module": "packages/eve/src/internal/application/output-publication-lock.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:PUBLICATION_LOCK_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "PUBLICATION_LOCK_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:INCOMPLETE_LOCK_STALE_MS",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "INCOMPLETE_LOCK_STALE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:PUBLICATION_JOURNAL_HEARTBEAT_MS",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "PUBLICATION_JOURNAL_HEARTBEAT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:ACTIVE_JOURNAL_STALE_MS",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "ACTIVE_JOURNAL_STALE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:RecoveryLease",
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "RecoveryLease",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:resolveOutputPublicationLockPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "resolveOutputPublicationLockPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveOutputPublicationLockPath(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:startPublicationJournalHeartbeat",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        52
+      ],
+      "name": "startPublicationJournalHeartbeat",
+      "params": [
+        {
+          "name": "journalDirectoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function startPublicationJournalHeartbeat(journalDirectoryPath: string) -> () => void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:acquireOutputPublicationLock",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        54,
+        114
+      ],
+      "name": "acquireOutputPublicationLock",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "OutputPublicationJournal"
+        },
+        {
+          "name": "onContention",
+          "optional": false,
+          "type": "() => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<() => Promise<void>>",
+      "signature": "export function acquireOutputPublicationLock(lockPath: string, journal: OutputPublicationJournal, onContention: () => Promise<void>) -> Promise<() => Promise<void>>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:recoverStalePublication",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        116,
+        174
+      ],
+      "name": "recoverStalePublication",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "recoveryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "recoveryJournal",
+          "optional": false,
+          "type": "OutputPublicationJournal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function recoverStalePublication(lockPath: string, recoveryPath: string, recoveryJournal: OutputPublicationJournal) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:acquireRecoveryLease",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        176,
+        261
+      ],
+      "name": "acquireRecoveryLease",
+      "params": [
+        {
+          "name": "recoveryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RecoveryLease | undefined>",
+      "signature": "export function acquireRecoveryLease(recoveryPath: string, token: string) -> Promise<RecoveryLease | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:finishInterruptedPublication",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        269,
+        282
+      ],
+      "name": "finishInterruptedPublication",
+      "params": [
+        {
+          "name": "journalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function finishInterruptedPublication(journalPath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:hasTokenDerivedBackupPaths",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        288,
+        293
+      ],
+      "name": "hasTokenDerivedBackupPaths",
+      "params": [
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "OutputPublicationJournal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasTokenDerivedBackupPaths(journal: OutputPublicationJournal) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:removePublicationScratchDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        298,
+        308
+      ],
+      "name": "removePublicationScratchDirectory",
+      "params": [
+        {
+          "name": "journal",
+          "optional": false,
+          "type": "OutputPublicationJournal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function removePublicationScratchDirectory(journal: OutputPublicationJournal) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:waitForPublicationLockChange",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        310,
+        366
+      ],
+      "name": "waitForPublicationLockChange",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "deadline",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForPublicationLockChange(lockPath: string, deadline: number) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:readPublicationLockState",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        368,
+        382
+      ],
+      "name": "readPublicationLockState",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readPublicationLockState(lockPath: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:isPathStale",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        384,
+        393
+      ],
+      "name": "isPathStale",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isPathStale(path: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:isJournalStale",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        395,
+        405
+      ],
+      "name": "isJournalStale",
+      "params": [
+        {
+          "name": "journalDirectoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isJournalStale(journalDirectoryPath: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/output-publication-lock.ts:isProcessAlive",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        407,
+        414
+      ],
+      "name": "isProcessAlive",
+      "params": [
+        {
+          "name": "pid",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isProcessAlive(pid: number) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

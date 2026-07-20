@@ -1,0 +1,139 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "BundledCompiledArtifacts",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface BundledCompiledArtifacts { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledAgentManifest",
+      "signature": "manifest: : CompiledAgentManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompileMetadata",
+      "signature": "metadata?: : CompileMetadata"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "moduleMap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledModuleMap",
+      "signature": "moduleMap: : CompiledModuleMap"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        26
+      ],
+      "name": "WithBundledCompiledArtifactsInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WithBundledCompiledArtifactsInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        34,
+        40
+      ],
+      "name": "installBundledCompiledArtifacts",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "BundledCompiledArtifacts"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installBundledCompiledArtifacts(input: BundledCompiledArtifacts) -> void"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        46,
+        56
+      ],
+      "name": "withBundledCompiledArtifacts",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "WithBundledCompiledArtifactsInput"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "() => Promise<T> | T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withBundledCompiledArtifacts(input: WithBundledCompiledArtifactsInput, fn: () => Promise<T> | T) -> Promise<T>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        64
+      ],
+      "name": "readBundledCompiledArtifacts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "BundledCompiledArtifacts | null",
+      "signature": "export function readBundledCompiledArtifacts() -> BundledCompiledArtifacts | null"
+    }
+  ],
+  "module": "packages/eve/src/runtime/loaders/bundled-artifacts.ts"
+}

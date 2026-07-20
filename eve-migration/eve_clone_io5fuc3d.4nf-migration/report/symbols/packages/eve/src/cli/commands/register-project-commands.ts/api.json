@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        9,
+        29
+      ],
+      "name": "registerProjectCommands",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  program: Command;\r\n  logger: ProjectCommandLogger;\r\n  appRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerProjectCommands(input: {\r\n  program: Command;\r\n  logger: ProjectCommandLogger;\r\n  appRoot: string;\r\n}) -> void"
+    }
+  ],
+  "module": "packages/eve/src/cli/commands/register-project-commands.ts"
+}

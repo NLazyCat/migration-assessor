@@ -1,0 +1,84 @@
+{
+  "module": "packages/eve/src/public/channels/slack/blocks.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/blocks.ts:BlockKitBlock",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "BlockKitBlock",
+      "partial_analysis": false,
+      "value": "Record<string, unknown>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/blocks.ts:cardToBlocks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "cardToBlocks",
+      "params": [
+        {
+          "name": "card",
+          "optional": false,
+          "type": "CardElement"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BlockKitBlock[]",
+      "signature": "export function cardToBlocks(card: CardElement) -> BlockKitBlock[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/blocks.ts:cardToFallbackText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        25
+      ],
+      "name": "cardToFallbackText",
+      "params": [
+        {
+          "name": "card",
+          "optional": false,
+          "type": "CardElement"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function cardToFallbackText(card: CardElement) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/blocks.ts:preserveLinkActionId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        45
+      ],
+      "name": "preserveLinkActionId",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "CardChild"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CardChild",
+      "signature": "export function preserveLinkActionId(child: CardChild) -> CardChild",
+      "visibility": "Private"
+    }
+  ]
+}

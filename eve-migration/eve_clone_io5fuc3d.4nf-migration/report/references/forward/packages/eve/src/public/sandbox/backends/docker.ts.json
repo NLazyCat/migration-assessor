@@ -1,0 +1,35 @@
+{
+  "DockerSandboxCreateOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/public/sandbox/backends/docker.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxCreateOptions"
+    }
+  ],
+  "SandboxBackend": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 59,
+        "file": "packages/eve/src/public/sandbox/backends/docker.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxBackend"
+    }
+  ],
+  "createDockerSandboxBackend": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/public/sandbox/backends/docker.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.ts:createDockerSandboxBackend"
+    }
+  ]
+}

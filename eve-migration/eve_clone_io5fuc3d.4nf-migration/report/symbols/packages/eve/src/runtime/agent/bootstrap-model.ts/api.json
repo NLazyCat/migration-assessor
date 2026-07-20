@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        49
+      ],
+      "name": "resolveBootstrapRuntimeModel",
+      "params": [
+        {
+          "name": "reference",
+          "optional": false,
+          "type": "RuntimeModelReference"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LanguageModel | null",
+      "signature": "export function resolveBootstrapRuntimeModel(reference: RuntimeModelReference) -> LanguageModel | null"
+    }
+  ],
+  "module": "packages/eve/src/runtime/agent/bootstrap-model.ts"
+}

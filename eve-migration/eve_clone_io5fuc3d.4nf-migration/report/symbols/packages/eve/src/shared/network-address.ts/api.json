@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "httpServerUrlSchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const httpServerUrlSchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        65
+      ],
+      "name": "isLoopbackHostname",
+      "params": [
+        {
+          "name": "hostname",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLoopbackHostname(hostname: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        68,
+        71
+      ],
+      "name": "isLoopbackServerUrl",
+      "params": [
+        {
+          "name": "urlText",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLoopbackServerUrl(urlText: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        83,
+        90
+      ],
+      "name": "isReservedIpAddress",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isReservedIpAddress(host: string) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/shared/network-address.ts"
+}

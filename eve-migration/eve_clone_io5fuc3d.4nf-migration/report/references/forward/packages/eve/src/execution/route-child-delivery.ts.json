@@ -1,0 +1,66 @@
+{
+  "DeliverPayload": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/execution/route-child-delivery.ts",
+        "line": 19
+      },
+      "symbol": "packages/eve/src/channel/types.ts:DeliverPayload"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/route-child-delivery.ts",
+        "line": 21
+      },
+      "symbol": "packages/eve/src/channel/types.ts:DeliverPayload"
+    }
+  ],
+  "DurableSessionState": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/route-child-delivery.ts",
+        "line": 20
+      },
+      "symbol": "packages/eve/src/execution/durable-session-store.ts:DurableSessionState"
+    }
+  ],
+  "SessionAuthContext": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/route-child-delivery.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/channel/types.ts:SessionAuthContext"
+    }
+  ],
+  "coalesceDeliverPayloads": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/route-child-delivery.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/execution/deliver-payloads.ts:coalesceDeliverPayloads"
+    }
+  ],
+  "routeProxiedDeliverStep": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/execution/route-child-delivery.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/execution/workflow-steps.ts:routeProxiedDeliverStep"
+    }
+  ]
+}

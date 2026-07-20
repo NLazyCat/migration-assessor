@@ -1,0 +1,163 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        21,
+        26
+      ],
+      "name": "DefaultSandboxOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DefaultSandboxOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "docker",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerSandboxCreateOptions",
+      "signature": "docker?: : DockerSandboxCreateOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "justBash",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JustBashSandboxCreateOptions",
+      "signature": "justBash?: : JustBashSandboxCreateOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "microsandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": MicrosandboxSandboxCreateOptions",
+      "signature": "microsandbox?: : MicrosandboxSandboxCreateOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "vercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": VercelSandboxCreateOptions",
+      "signature": "vercel?: : VercelSandboxCreateOptions"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        36
+      ],
+      "name": "DefaultSandboxProbes",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DefaultSandboxProbes { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "isDeployedOnVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => boolean",
+      "signature": "isDeployedOnVercel: : () => boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "isDockerAvailable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => boolean",
+      "signature": "isDockerAvailable: : () => boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "isMicrosandboxSupported",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => boolean",
+      "signature": "isMicrosandboxSupported: : () => boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        66,
+        68
+      ],
+      "name": "defaultSandbox",
+      "params": [
+        {
+          "name": "opts",
+          "optional": true,
+          "type": "DefaultSandboxOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function defaultSandbox(opts: DefaultSandboxOptions) -> SandboxBackend"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        74,
+        88
+      ],
+      "name": "selectDefaultSandbox",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "DefaultSandboxOptions | undefined"
+        },
+        {
+          "name": "probes",
+          "optional": false,
+          "type": "DefaultSandboxProbes"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function selectDefaultSandbox(opts: DefaultSandboxOptions | undefined, probes: DefaultSandboxProbes) -> SandboxBackend"
+    }
+  ],
+  "module": "packages/eve/src/public/sandbox/backends/default.ts"
+}

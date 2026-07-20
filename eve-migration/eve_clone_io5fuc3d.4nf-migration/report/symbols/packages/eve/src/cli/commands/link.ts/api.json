@@ -1,0 +1,84 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        8,
+        11
+      ],
+      "name": "LinkCliLogger",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinkCliLogger { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        13,
+        19
+      ],
+      "name": "LinkCommandDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinkCommandDependencies { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => Prompter",
+      "signature": "createPrompter?: : () => Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "flowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Partial<LinkFlowDeps>",
+      "signature": "flowDeps?: : Partial<LinkFlowDeps>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        34,
+        66
+      ],
+      "name": "runLinkCommand",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "LinkCliLogger"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dependencies",
+          "optional": false,
+          "type": "LinkCommandDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runLinkCommand(logger: LinkCliLogger, appRoot: string, dependencies: LinkCommandDependencies) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/cli/commands/link.ts"
+}

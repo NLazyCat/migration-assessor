@@ -1,0 +1,604 @@
+{
+  "module": "packages/eve/src/public/nuxt/dev-server.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:EVE_BASE_URL_ENV",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "EVE_BASE_URL_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:DEFAULT_SERVER_READY_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "DEFAULT_SERVER_READY_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:DEV_SERVER_REGISTRY_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DEV_SERVER_REGISTRY_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:DEV_SERVER_REGISTRY_POLL_MS",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "DEV_SERVER_REGISTRY_POLL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:DEV_SERVER_STALE_LOCK_MS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "DEV_SERVER_STALE_LOCK_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:EVE_CACHE_DIRECTORY_NAME",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "EVE_CACHE_DIRECTORY_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:EVE_NUXT_DEV_SERVER_FILE_NAME",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "EVE_NUXT_DEV_SERVER_FILE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:EVE_NUXT_DEV_SERVER_LOCK_FILE_NAME",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "EVE_NUXT_DEV_SERVER_LOCK_FILE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:LOCAL_SERVER_URL_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "LOCAL_SERVER_URL_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/dev-server.ts:EveProcessHandle:origin",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "origin",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/dev-server.ts:EveProcessHandle:process",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "process",
+          "partial_analysis": false,
+          "return_type": ": ChildProcess",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:EveProcessHandle",
+      "kind": "interface",
+      "line_range": [
+        21,
+        24
+      ],
+      "name": "EveProcessHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/dev-server.ts:EveDevServerRegistry:appRoot",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/dev-server.ts:EveDevServerRegistry:origin",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "origin",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/dev-server.ts:EveDevServerRegistry:pid",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "pid",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/nuxt/dev-server.ts:EveDevServerRegistry:updatedAt",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "updatedAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:EveDevServerRegistry",
+      "kind": "interface",
+      "line_range": [
+        26,
+        31
+      ],
+      "name": "EveDevServerRegistry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:isNodeErrorWithCode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        33,
+        35
+      ],
+      "name": "isNodeErrorWithCode",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "code",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNodeErrorWithCode(error: unknown, code: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:delay",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        39
+      ],
+      "name": "delay",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function delay(ms: number) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        43
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:resolveEveCacheDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        47
+      ],
+      "name": "resolveEveCacheDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveCacheDirectory(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:resolveEveDevServerRegistryPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        51
+      ],
+      "name": "resolveEveDevServerRegistryPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveDevServerRegistryPath(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:resolveEveDevServerLockPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        55
+      ],
+      "name": "resolveEveDevServerLockPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveDevServerLockPath(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:normalizeDevServerRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        81
+      ],
+      "name": "normalizeDevServerRegistry",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveDevServerRegistry | undefined",
+      "signature": "export function normalizeDevServerRegistry(value: unknown) -> EveDevServerRegistry | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:isEveServerHealthy",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        83,
+        96
+      ],
+      "name": "isEveServerHealthy",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isEveServerHealthy(origin: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:readUsableEveDevServerRegistry",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        98,
+        110
+      ],
+      "name": "readUsableEveDevServerRegistry",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function readUsableEveDevServerRegistry(appRoot: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:writeEveDevServerRegistry",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        112,
+        127
+      ],
+      "name": "writeEveDevServerRegistry",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handle",
+          "optional": false,
+          "type": "EveProcessHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeEveDevServerRegistry(appRoot: string, handle: EveProcessHandle) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:removeStaleEveDevServerLock",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        129,
+        138
+      ],
+      "name": "removeStaleEveDevServerLock",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function removeStaleEveDevServerLock(lockPath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:acquireEveDevServerLock",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        140,
+        167
+      ],
+      "name": "acquireEveDevServerLock",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<() => Promise<void>>",
+      "signature": "export function acquireEveDevServerLock(appRoot: string) -> Promise<() => Promise<void>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:createEveBinaryPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        169,
+        171
+      ],
+      "name": "createEveBinaryPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveBinaryPath() -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:startServerProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        173,
+        232
+      ],
+      "name": "startServerProcess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly args: readonly string[];\r\n  readonly command: string;\r\n  readonly cwd: string;\r\n  readonly env?: Record<string, string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function startServerProcess(input: {\r\n  readonly args: readonly string[];\r\n  readonly command: string;\r\n  readonly cwd: string;\r\n  readonly env?: Record<string, string>;\r\n}) -> Promise<EveProcessHandle>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:installProcessShutdown",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        234,
+        245
+      ],
+      "name": "installProcessShutdown",
+      "params": [
+        {
+          "name": "handle",
+          "optional": false,
+          "type": "EveProcessHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveProcessHandle",
+      "signature": "export function installProcessShutdown(handle: EveProcessHandle) -> EveProcessHandle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:startEveDevServer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        247,
+        256
+      ],
+      "name": "startEveDevServer",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function startEveDevServer(appRoot: string) -> Promise<EveProcessHandle>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/nuxt/dev-server.ts:resolveSharedEveDevServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        263,
+        283
+      ],
+      "name": "resolveSharedEveDevServer",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function resolveSharedEveDevServer(appRoot: string) -> Promise<EveProcessHandle>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "module": "packages/eve/src/cli/commands/extension-init.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCliLogger",
+      "kind": "interface",
+      "line_range": [
+        32,
+        35
+      ],
+      "name": "ExtensionInitCliLogger",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:detectInvokingPackageManager",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "detectInvokingPackageManager",
+          "partial_analysis": false,
+          "return_type": ": typeof detectInvokingPackageManager",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:detectPackageManager",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "detectPackageManager",
+          "partial_analysis": false,
+          "return_type": ": typeof detectPackageManager",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:isCodingAgentLaunch",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "isCodingAgentLaunch",
+          "partial_analysis": false,
+          "return_type": ": typeof isCodingAgentLaunch",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:now",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "now",
+          "partial_analysis": false,
+          "return_type": ": () => number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:runPackageManagerInstall",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "runPackageManagerInstall",
+          "partial_analysis": false,
+          "return_type": ": typeof runPackageManagerInstall",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:scaffoldExtensionProject",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "scaffoldExtensionProject",
+          "partial_analysis": false,
+          "return_type": ": typeof scaffoldExtensionProject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies:tryInitializeGit",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "tryInitializeGit",
+          "partial_analysis": false,
+          "return_type": ": typeof tryInitializeGit",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:ExtensionInitCommandDependencies",
+      "kind": "interface",
+      "line_range": [
+        37,
+        45
+      ],
+      "name": "ExtensionInitCommandDependencies",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:defaultDependencies",
+      "kind": "variable",
+      "line_range": [
+        47,
+        55
+      ],
+      "name": "defaultDependencies",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:CURRENT_DIRECTORY_PROJECT_NAME",
+      "kind": "variable",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "CURRENT_DIRECTORY_PROJECT_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:ALLOWED_CREATE_IN_PLACE_ENTRIES",
+      "kind": "variable",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "ALLOWED_CREATE_IN_PLACE_ENTRIES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:EVE_INIT_PACKAGE_SPEC_ENV",
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "EVE_INIT_PACKAGE_SPEC_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:initLog",
+      "kind": "variable",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "initLog",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:isCurrentDirectoryTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        66
+      ],
+      "name": "isCurrentDirectoryTarget",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isCurrentDirectoryTarget(target: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:resolveTargetDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        68,
+        75
+      ],
+      "name": "resolveTargetDirectory",
+      "params": [
+        {
+          "name": "parentDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function resolveTargetDirectory(parentDirectory: string, target: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:assertCanScaffoldInPlace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        77,
+        89
+      ],
+      "name": "assertCanScaffoldInPlace",
+      "params": [
+        {
+          "name": "targetRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function assertCanScaffoldInPlace(targetRoot: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:moveDirectoryContents",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        91,
+        95
+      ],
+      "name": "moveDirectoryContents",
+      "params": [
+        {
+          "name": "sourceRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function moveDirectoryContents(sourceRoot: string, targetRoot: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:uniqueWorkspaceRootMutations",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        110
+      ],
+      "name": "uniqueWorkspaceRootMutations",
+      "params": [
+        {
+          "name": "mutations",
+          "optional": false,
+          "type": "readonly WorkspaceRootMutation[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkspaceRootMutation[]",
+      "signature": "export function uniqueWorkspaceRootMutations(mutations: readonly WorkspaceRootMutation[]) -> WorkspaceRootMutation[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:formatWorkspaceRootMutationWarning",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        119
+      ],
+      "name": "formatWorkspaceRootMutationWarning",
+      "params": [
+        {
+          "name": "mutation",
+          "optional": false,
+          "type": "WorkspaceRootMutation"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatWorkspaceRootMutationWarning(mutation: WorkspaceRootMutation) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:resolveScaffoldPackageManager",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        121,
+        130
+      ],
+      "name": "resolveScaffoldPackageManager",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dependencies",
+          "optional": false,
+          "type": "ExtensionInitCommandDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageManagerKind>",
+      "signature": "export function resolveScaffoldPackageManager(projectPath: string, dependencies: ExtensionInitCommandDependencies) -> Promise<PackageManagerKind>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:scaffoldExtension",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        132,
+        175
+      ],
+      "name": "scaffoldExtension",
+      "params": [
+        {
+          "name": "parentDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "dependencies",
+          "optional": false,
+          "type": "ExtensionInitCommandDependencies"
+        },
+        {
+          "name": "evePackage",
+          "optional": false,
+          "type": "EvePackageContract | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ projectPath: string; workspaceRootMutations: WorkspaceRootMutation[] }>",
+      "signature": "export function scaffoldExtension(parentDirectory: string, projectName: string, packageManager: PackageManagerKind, dependencies: ExtensionInitCommandDependencies, evePackage: EvePackageContract | undefined) -> Promise<{ projectPath: string; workspaceRootMutations: WorkspaceRootMutation[] }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:installProgressDetail",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        194
+      ],
+      "name": "installProgressDetail",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "line",
+          "optional": false,
+          "type": "ProcessOutputLine"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function installProgressDetail(packageManager: PackageManagerKind, line: ProcessOutputLine) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:NPM_NOISE_LINE",
+      "kind": "variable",
+      "line_range": [
+        196,
+        196
+      ],
+      "name": "NPM_NOISE_LINE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:INSTALL_OUTPUT_FALLBACK_LINES",
+      "kind": "variable",
+      "line_range": [
+        197,
+        197
+      ],
+      "name": "INSTALL_OUTPUT_FALLBACK_LINES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:resolveInitEvePackageOverride",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        199,
+        209
+      ],
+      "name": "resolveInitEvePackageOverride",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EvePackageContract | undefined",
+      "signature": "export function resolveInitEvePackageOverride() -> EvePackageContract | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/extension-init.ts:runExtensionInitCommand",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        215,
+        340
+      ],
+      "name": "runExtensionInitCommand",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "ExtensionInitCliLogger"
+        },
+        {
+          "name": "parentDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "dependencies",
+          "optional": false,
+          "type": "ExtensionInitCommandDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runExtensionInitCommand(logger: ExtensionInitCliLogger, parentDirectory: string, target: string | undefined, dependencies: ExtensionInitCommandDependencies) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

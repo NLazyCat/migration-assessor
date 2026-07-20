@@ -1,0 +1,55 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "ActiveDynamicModelSelection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ActiveDynamicModelSelection = LiveDynamicModelSelection;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        74
+      ],
+      "name": "getActiveDynamicModelSelection",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{\r\n  get<T>(key: ContextKey<T>): T | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActiveDynamicModelSelection | null",
+      "signature": "export function getActiveDynamicModelSelection(ctx: {\r\n  get<T>(key: ContextKey<T>): T | undefined;\r\n}) -> ActiveDynamicModelSelection | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        128
+      ],
+      "name": "dispatchDynamicModelEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ctx: AlsContext;\r\n  readonly dynamicModel: RuntimeDynamicModelReference | undefined;\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly fallback: RuntimeModelReference;\r\n  readonly messages: readonly ModelMessage[];\r\n  readonly scope: RuntimeModelResolutionScope;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchDynamicModelEvent(input: {\r\n  readonly ctx: AlsContext;\r\n  readonly dynamicModel: RuntimeDynamicModelReference | undefined;\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly fallback: RuntimeModelReference;\r\n  readonly messages: readonly ModelMessage[];\r\n  readonly scope: RuntimeModelResolutionScope;\r\n}) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/context/dynamic-model-lifecycle.ts"
+}

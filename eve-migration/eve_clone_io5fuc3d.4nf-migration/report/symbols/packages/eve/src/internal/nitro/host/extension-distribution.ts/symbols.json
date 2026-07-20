@@ -1,0 +1,444 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/extension-distribution.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:emitExtensionDistribution",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        15,
+        72
+      ],
+      "name": "emitExtensionDistribution",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly declarationsRoot: string;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly shortName: string;\r\n  readonly sourceRoot: string;\r\n  readonly stagedDistRoot: string;\r\n  readonly stagedOutDir: string;\r\n  readonly transactionRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitExtensionDistribution(input: {\r\n  readonly appRoot: string;\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly declarationsRoot: string;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly shortName: string;\r\n  readonly sourceRoot: string;\r\n  readonly stagedDistRoot: string;\r\n  readonly stagedOutDir: string;\r\n  readonly transactionRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:ExtensionOutputRestoreError:preservedOutputPath",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "preservedOutputPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:ExtensionOutputRestoreError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            82,
+            89
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "preservedOutputPath",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "optional": false,
+              "type": "{ cause: unknown }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:ExtensionOutputRestoreError",
+      "kind": "class",
+      "line_range": [
+        79,
+        90
+      ],
+      "name": "ExtensionOutputRestoreError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:replaceExtensionBuildOutput",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        93,
+        119
+      ],
+      "name": "replaceExtensionBuildOutput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly outDir: string;\r\n  readonly stagedOutDir: string;\r\n  readonly transactionRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function replaceExtensionBuildOutput(input: {\r\n  readonly outDir: string;\r\n  readonly stagedOutDir: string;\r\n  readonly transactionRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:ExtensionSourceFile:absolutePath",
+          "kind": "property",
+          "line_range": [
+            122,
+            122
+          ],
+          "name": "absolutePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:ExtensionSourceFile:logicalPath",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:ExtensionSourceFile",
+      "kind": "interface",
+      "line_range": [
+        121,
+        124
+      ],
+      "name": "ExtensionSourceFile",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:collectExtensionSourceFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        126,
+        150
+      ],
+      "name": "collectExtensionSourceFiles",
+      "params": [
+        {
+          "name": "sourceRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExtensionSourceFile[]>",
+      "signature": "export function collectExtensionSourceFiles(sourceRoot: string, directory: unknown) -> Promise<ExtensionSourceFile[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:isAuthoredModule",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        152,
+        157
+      ],
+      "name": "isAuthoredModule",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAuthoredModule(logicalPath: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:copyDistributionDataFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        159,
+        173
+      ],
+      "name": "copyDistributionDataFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly files: readonly ExtensionSourceFile[];\r\n  readonly moduleLogicalPaths: ReadonlySet<string>;\r\n  readonly stagedDistRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyDistributionDataFiles(input: {\r\n  readonly files: readonly ExtensionSourceFile[];\r\n  readonly moduleLogicalPaths: ReadonlySet<string>;\r\n  readonly stagedDistRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:createDistributionEntries",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        175,
+        221
+      ],
+      "name": "createDistributionEntries",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly moduleFiles: readonly ExtensionSourceFile[];\r\n  readonly shortName: string;\r\n  readonly sourceRoot: string;\r\n  readonly stagedDistRoot: string;\r\n  readonly stagedOutDir: string;\r\n  readonly transactionRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExtensionDistributionGraphEntry[]>",
+      "signature": "export function createDistributionEntries(input: {\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly moduleFiles: readonly ExtensionSourceFile[];\r\n  readonly shortName: string;\r\n  readonly sourceRoot: string;\r\n  readonly stagedDistRoot: string;\r\n  readonly stagedOutDir: string;\r\n  readonly transactionRoot: string;\r\n}) -> Promise<ExtensionDistributionGraphEntry[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:stageRuntimeBarrel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        223,
+        234
+      ],
+      "name": "stageRuntimeBarrel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly barrelPath: string;\r\n  readonly name: string;\r\n  readonly reexports: readonly { readonly name: string; readonly path: string }[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExtensionDistributionGraphEntry>",
+      "signature": "export function stageRuntimeBarrel(input: {\r\n  readonly barrelPath: string;\r\n  readonly name: string;\r\n  readonly reexports: readonly { readonly name: string; readonly path: string }[];\r\n}) -> Promise<ExtensionDistributionGraphEntry>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:emitDeclarationBarrels",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        236,
+        265
+      ],
+      "name": "emitDeclarationBarrels",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly shortName: string;\r\n  readonly stagedDistRoot: string;\r\n  readonly stagedOutDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitDeclarationBarrels(input: {\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly shortName: string;\r\n  readonly stagedDistRoot: string;\r\n  readonly stagedOutDir: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:writeDeclarationBarrel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        267,
+        279
+      ],
+      "name": "writeDeclarationBarrel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly path: string;\r\n  readonly reexports: readonly { readonly name: string; readonly specifier: string }[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeDeclarationBarrel(input: {\r\n  readonly path: string;\r\n  readonly reexports: readonly { readonly name: string; readonly specifier: string }[];\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:stripAuthoredModuleExtension",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        281,
+        288
+      ],
+      "name": "stripAuthoredModuleExtension",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripAuthoredModuleExtension(logicalPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:toolExportName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        290,
+        294
+      ],
+      "name": "toolExportName",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toolExportName(logicalPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:relativeImport",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        296,
+        299
+      ],
+      "name": "relativeImport",
+      "params": [
+        {
+          "name": "fromDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function relativeImport(fromDir: string, targetPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:reexportLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        301,
+        305
+      ],
+      "name": "reexportLine",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "specifier",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function reexportLine(name: string, specifier: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:toDeclarationSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        307,
+        312
+      ],
+      "name": "toDeclarationSpecifier",
+      "params": [
+        {
+          "name": "specifier",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toDeclarationSpecifier(specifier: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-distribution.ts:isFileSystemError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        314,
+        316
+      ],
+      "name": "isFileSystemError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "code",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "error is NodeJS.ErrnoException",
+      "signature": "export function isFileSystemError(error: unknown, code: string) -> error is NodeJS.ErrnoException",
+      "visibility": "Private"
+    }
+  ]
+}

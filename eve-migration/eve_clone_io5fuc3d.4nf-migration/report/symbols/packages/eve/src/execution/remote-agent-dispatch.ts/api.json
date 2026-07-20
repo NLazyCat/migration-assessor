@@ -1,0 +1,81 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        22,
+        84
+      ],
+      "name": "startRemoteAgentSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly action: RuntimeRemoteAgentCallActionRequest;\r\n  readonly callbackBaseUrl: string | undefined;\r\n  readonly callbackToken?: string;\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function startRemoteAgentSession(input: {\r\n  readonly action: RuntimeRemoteAgentCallActionRequest;\r\n  readonly callbackBaseUrl: string | undefined;\r\n  readonly callbackToken?: string;\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly session: HarnessSession;\r\n}) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        122
+      ],
+      "name": "cancelRemoteAgentTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly sessionId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CancelTurnResult>",
+      "signature": "export function cancelRemoteAgentTurn(input: {\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly sessionId: string;\r\n}) -> Promise<CancelTurnResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        124,
+        126
+      ],
+      "name": "isRetryableRemoteAgentCancelError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRetryableRemoteAgentCancelError(error: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        128,
+        139
+      ],
+      "name": "resolveRemoteAgentForAction",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly nodeId: string;\r\n  readonly registry: RuntimeSubagentRegistry[\"subagentsByNodeId\"];\r\n  readonly remoteAgentName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedRuntimeRemoteAgentNode",
+      "signature": "export function resolveRemoteAgentForAction(input: {\r\n  readonly nodeId: string;\r\n  readonly registry: RuntimeSubagentRegistry[\"subagentsByNodeId\"];\r\n  readonly remoteAgentName: string;\r\n}) -> ResolvedRuntimeRemoteAgentNode"
+    }
+  ],
+  "module": "packages/eve/src/execution/remote-agent-dispatch.ts"
+}

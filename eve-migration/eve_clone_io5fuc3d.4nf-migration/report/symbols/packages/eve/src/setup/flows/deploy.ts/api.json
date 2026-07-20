@@ -1,0 +1,100 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        22,
+        27
+      ],
+      "name": "DeployFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeployFlowDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "detectDeployment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectDeployment",
+      "signature": "detectDeployment: : typeof detectDeployment"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "resolveProvisioning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolveProvisioningDeps",
+      "signature": "resolveProvisioning?: : ResolveProvisioningDeps"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "linkProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinkProjectDeps",
+      "signature": "linkProject?: : LinkProjectDeps"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "deployProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DeployProjectDeps",
+      "signature": "deployProject?: : DeployProjectDeps"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        33
+      ],
+      "name": "DeployFlowResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DeployFlowResult = | { kind: \"deployed\"; productionUrl?: string }\r\n  | { kind: \"cancelled\" }\r\n  /** Unlinked directory in a non-interactive run: refused before any effect. */\r\n  | { kind: \"needs-link\" };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        103
+      ],
+      "name": "runDeployFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /** False when no TTY: an unlinked directory refuses instead of prompting. */\r\n  interactive: boolean;\r\n  deps?: Partial<DeployFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DeployFlowResult>",
+      "signature": "export function runDeployFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /** False when no TTY: an unlinked directory refuses instead of prompting. */\r\n  interactive: boolean;\r\n  deps?: Partial<DeployFlowDeps>;\r\n}) -> Promise<DeployFlowResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/flows/deploy.ts"
+}

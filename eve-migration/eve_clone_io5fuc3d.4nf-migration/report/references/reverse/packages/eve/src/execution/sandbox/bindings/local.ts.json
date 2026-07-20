@@ -1,0 +1,193 @@
+{
+  "DOCKER_BACKEND_NAME": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 51,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:DOCKER_BACKEND_NAME"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 20
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:DOCKER_BACKEND_NAME"
+    }
+  ],
+  "JUST_BASH_BACKEND_NAME": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 53,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:JUST_BASH_BACKEND_NAME"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 20
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:JUST_BASH_BACKEND_NAME"
+    }
+  ],
+  "MICROSANDBOX_BACKEND_NAME": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 57,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:MICROSANDBOX_BACKEND_NAME"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 60,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 20
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:MICROSANDBOX_BACKEND_NAME"
+    }
+  ],
+  "createDockerSandboxBackend": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:createDockerSandboxBackend"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 29
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:createDockerSandboxBackend"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/public/sandbox/backends/docker.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/public/sandbox/backends/docker.ts:createDockerSandboxBackend"
+    }
+  ],
+  "createJustBashSandboxBackend": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:createJustBashSandboxBackend"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 35
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:createJustBashSandboxBackend"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/public/sandbox/backends/just-bash.ts",
+        "line": 20
+      },
+      "symbol": "packages/eve/src/public/sandbox/backends/just-bash.ts:createJustBashSandboxBackend"
+    }
+  ],
+  "createMicrosandboxSandboxBackend": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:createMicrosandboxSandboxBackend"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local.test.ts:createMicrosandboxSandboxBackend"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/public/sandbox/backends/microsandbox.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/public/sandbox/backends/microsandbox.ts:createMicrosandboxSandboxBackend"
+    }
+  ],
+  "isDockerDaemonAvailableSync": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 27,
+        "file": "packages/eve/src/public/sandbox/backends/default.ts",
+        "line": 44
+      },
+      "symbol": "packages/eve/src/public/sandbox/backends/default.ts:isDockerDaemonAvailableSync"
+    }
+  ],
+  "isMicrosandboxPlatformSupported": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 33,
+        "file": "packages/eve/src/public/sandbox/backends/default.ts",
+        "line": 45
+      },
+      "symbol": "packages/eve/src/public/sandbox/backends/default.ts:isMicrosandboxPlatformSupported"
+    }
+  ],
+  "pruneLocalSandboxTemplatesInBackground": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/internal/nitro/host/start-development-server.ts",
+        "line": 405
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/start-development-server.ts:pruneLocalSandboxTemplatesInBackground"
+    }
+  ],
+  "stopDevelopmentSandboxResources": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/internal/nitro/host/start-development-server.ts",
+        "line": 259
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/start-development-server.ts:stopDevelopmentSandboxResources"
+    }
+  ]
+}

@@ -2,11 +2,14 @@ use std::collections::HashMap;
 use std::sync::OnceLock;
 
 use super::Language;
+use super::javascript::JavaScriptLanguage;
 use super::typescript::TypeScriptLanguage;
 use super::rust::RustLanguage;
 
 pub struct LanguageRegistry {
     languages: HashMap<String, Box<dyn Language>>,
+    /// Ordered list of language names for deterministic detection priority.
+    order: Vec<String>,
 }
 
 impl LanguageRegistry {
@@ -15,7 +18,9 @@ impl LanguageRegistry {
         INSTANCE.get_or_init(|| {
             let mut registry = LanguageRegistry {
                 languages: HashMap::new(),
+                order: Vec::new(),
             };
+            registry.register(Box::new(JavaScriptLanguage));
             registry.register(Box::new(TypeScriptLanguage));
             registry.register(Box::new(RustLanguage));
             registry
@@ -23,7 +28,9 @@ impl LanguageRegistry {
     }
 
     fn register(&mut self, lang: Box<dyn Language>) {
-        self.languages.insert(lang.name().to_string(), lang);
+        let name = lang.name().to_string();
+        self.order.push(name.clone());
+        self.languages.insert(name, lang);
     }
 
     pub fn get_language(&self, name: &str) -> Option<&dyn Language> {
@@ -31,16 +38,18 @@ impl LanguageRegistry {
     }
 
     pub fn detect_language(&self, project_root: &std::path::Path) -> Option<String> {
-        for (name, lang) in &self.languages {
-            if lang.detect_project_type(project_root) {
-                return Some(name.clone());
+        for name in &self.order {
+            if let Some(lang) = self.languages.get(name) {
+                if lang.detect_project_type(project_root) {
+                    return Some(name.clone());
+                }
             }
         }
         None
     }
 
     pub fn list_languages(&self) -> Vec<String> {
-        self.languages.keys().cloned().collect()
+        self.order.clone()
     }
 }
 
@@ -59,6 +68,7 @@ mod tests {
     fn test_registered_languages() {
         let reg = LanguageRegistry::get();
         let langs = reg.list_languages();
+        assert!(langs.contains(&"javascript".to_string()));
         assert!(langs.contains(&"typescript".to_string()));
         assert!(langs.contains(&"rust".to_string()));
     }
@@ -85,9 +95,19 @@ mod tests {
     fn test_detect_language_ts() {
         let dir = tempfile::TempDir::new().unwrap();
         std::fs::write(dir.path().join("package.json"), "{}").unwrap();
+        std::fs::write(dir.path().join("tsconfig.json"), "{}").unwrap();
         let reg = LanguageRegistry::get();
         let detected = reg.detect_language(dir.path());
         assert_eq!(detected, Some("typescript".to_string()));
+    }
+
+    #[test]
+    fn test_detect_language_js() {
+        let dir = tempfile::TempDir::new().unwrap();
+        std::fs::write(dir.path().join("package.json"), "{}").unwrap();
+        let reg = LanguageRegistry::get();
+        let detected = reg.detect_language(dir.path());
+        assert_eq!(detected, Some("javascript".to_string()));
     }
 
     #[test]
@@ -110,6 +130,10 @@ mod tests {
     #[test]
     fn test_language_names() {
         let reg = LanguageRegistry::get();
+        let js = reg.get_language("javascript").unwrap();
+        assert_eq!(js.name(), "javascript");
+        assert!(!js.file_extensions().is_empty());
+
         let ts = reg.get_language("typescript").unwrap();
         assert_eq!(ts.name(), "typescript");
         assert!(!ts.file_extensions().is_empty());

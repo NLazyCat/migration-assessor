@@ -1,0 +1,101 @@
+{
+  "module": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts:EVE_PACKAGE_INFO",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "EVE_PACKAGE_INFO",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts:EVE_PACKAGE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "EVE_PACKAGE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts:DEPLOYABLE_BUILD_OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        22,
+        24
+      ],
+      "name": "DEPLOYABLE_BUILD_OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts:readJavaScriptModulesRecursively",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        26,
+        43
+      ],
+      "name": "readJavaScriptModulesRecursively",
+      "params": [
+        {
+          "name": "rootDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readJavaScriptModulesRecursively(rootDirectory: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts:readTracedServerPackageJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        45,
+        67
+      ],
+      "name": "readTracedServerPackageJson",
+      "params": [
+        {
+          "name": "outputDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  dependencies: Record<string, string>;\r\n}>",
+      "signature": "export function readTracedServerPackageJson(outputDir: string) -> Promise<{\r\n  dependencies: Record<string, string>;\r\n}>",
+      "visibility": "Private"
+    }
+  ]
+}

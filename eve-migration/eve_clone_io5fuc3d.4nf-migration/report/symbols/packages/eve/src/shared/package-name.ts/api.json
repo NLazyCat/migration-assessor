@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        4,
+        7
+      ],
+      "name": "stripNpmPackageScope",
+      "params": [
+        {
+          "name": "packageName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripNpmPackageScope(packageName: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/shared/package-name.ts"
+}

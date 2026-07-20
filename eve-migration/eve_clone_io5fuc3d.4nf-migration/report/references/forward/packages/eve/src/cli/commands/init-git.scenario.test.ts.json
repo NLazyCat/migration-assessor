@@ -1,0 +1,24 @@
+{
+  "pathExists": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/cli/commands/init-git.scenario.test.ts",
+        "line": 36
+      },
+      "symbol": "packages/eve/src/setup/path-exists.ts:pathExists"
+    }
+  ],
+  "useTemporaryDirectories": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/cli/commands/init-git.scenario.test.ts",
+        "line": 12
+      },
+      "symbol": "packages/eve/src/internal/testing/use-temporary-app-roots.ts:useTemporaryDirectories"
+    }
+  ]
+}

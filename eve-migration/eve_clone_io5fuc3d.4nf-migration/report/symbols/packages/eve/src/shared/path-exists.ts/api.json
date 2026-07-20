@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        13,
+        23
+      ],
+      "name": "pathExists",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function pathExists(path: string) -> Promise<boolean>"
+    }
+  ],
+  "module": "packages/eve/src/shared/path-exists.ts"
+}

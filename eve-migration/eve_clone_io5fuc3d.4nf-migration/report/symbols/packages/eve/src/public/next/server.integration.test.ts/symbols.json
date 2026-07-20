@@ -1,0 +1,150 @@
+{
+  "module": "packages/eve/src/public/next/server.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.integration.test.ts:spawnMock",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "spawnMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.integration.test.ts:tempRoots",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "tempRoots",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.integration.test.ts:MockChildProcess:stdout",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": EventEmitter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.integration.test.ts:MockChildProcess:stderr",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": EventEmitter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.integration.test.ts:MockChildProcess:killed",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "killed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.integration.test.ts:MockChildProcess:pid",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "pid",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/server.integration.test.ts:MockChildProcess",
+      "kind": "interface",
+      "line_range": [
+        18,
+        24
+      ],
+      "name": "MockChildProcess",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.integration.test.ts:createMockChildProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        37
+      ],
+      "name": "createMockChildProcess",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "MockChildProcess",
+      "signature": "export function createMockChildProcess() -> MockChildProcess",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.integration.test.ts:createTempAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        132,
+        136
+      ],
+      "name": "createTempAppRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createTempAppRoot() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.integration.test.ts:readRegisteredOrigin",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        138,
+        146
+      ],
+      "name": "readRegisteredOrigin",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readRegisteredOrigin(appRoot: string) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

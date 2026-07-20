@@ -1,0 +1,95 @@
+{
+  "module": "packages/eve/src/shared/vercel-project.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/shared/vercel-project.ts:VercelOidcTokenClaims:ownerId",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "ownerId",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/shared/vercel-project.ts:VercelOidcTokenClaims:projectId",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/shared/vercel-project.ts:VercelOidcTokenClaims",
+      "kind": "interface",
+      "line_range": [
+        8,
+        11
+      ],
+      "name": "VercelOidcTokenClaims",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/vercel-project.ts:EMPTY_CLAIMS",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "EMPTY_CLAIMS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/vercel-project.ts:decodeVercelOidcTokenClaims",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        41
+      ],
+      "name": "decodeVercelOidcTokenClaims",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelOidcTokenClaims",
+      "signature": "export function decodeVercelOidcTokenClaims(token: string) -> VercelOidcTokenClaims",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/vercel-project.ts:resolveVercelProjectIdFromEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        62
+      ],
+      "name": "resolveVercelProjectIdFromEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveVercelProjectIdFromEnvironment() -> string | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "graphemes",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GraphemeSpan[]",
+      "signature": "export function graphemes(text: string) -> GraphemeSpan[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "previousGraphemeBoundary",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function previousGraphemeBoundary(text: string, offset: number) -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        37
+      ],
+      "name": "nextGraphemeBoundary",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function nextGraphemeBoundary(text: string, offset: number) -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        46
+      ],
+      "name": "graphemeBoundaryAtOrAfter",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function graphemeBoundaryAtOrAfter(text: string, offset: number) -> number"
+    }
+  ],
+  "module": "packages/eve/src/shared/text-boundaries.ts"
+}

@@ -116,6 +116,9 @@ impl FileDiscovery {
         let matches_language = match self.source_language {
             SourceLanguage::TypeScript => matches!(extension, Some("ts") | Some("tsx")),
             SourceLanguage::Rust => matches!(extension, Some("rs")),
+            SourceLanguage::JavaScript => {
+                matches!(extension, Some("js") | Some("jsx") | Some("mjs") | Some("cjs"))
+            }
         };
 
         if !matches_language {

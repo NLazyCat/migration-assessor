@@ -1,0 +1,101 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/docker.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.ts:DOCKER_BACKEND_NAME",
+      "kind": "variable",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "DOCKER_BACKEND_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/docker.ts:CreateDockerSandboxBackendInput:createOptions",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "createOptions",
+          "partial_analysis": false,
+          "return_type": ": DockerSandboxCreateOptions",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/docker.ts:CreateDockerSandboxBackendInput:dockerCli",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "dockerCli",
+          "partial_analysis": false,
+          "return_type": ": DockerCli",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.ts:CreateDockerSandboxBackendInput",
+      "kind": "interface",
+      "line_range": [
+        57,
+        61
+      ],
+      "name": "CreateDockerSandboxBackendInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.ts:createDockerSandboxBackend",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        287
+      ],
+      "name": "createDockerSandboxBackend",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateDockerSandboxBackendInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function createDockerSandboxBackend(input: CreateDockerSandboxBackendInput) -> SandboxBackend",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker.ts:getDockerContainerName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        289,
+        292
+      ],
+      "name": "getDockerContainerName",
+      "params": [
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "Record<string, unknown> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getDockerContainerName(metadata: Record<string, unknown> | undefined) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        11,
+        24
+      ],
+      "name": "verifyDiscordInbound",
+      "params": [
+        {
+          "name": "req",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "credentials",
+          "optional": false,
+          "type": "DiscordChannelCredentials | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function verifyDiscordInbound(req: Request, credentials: DiscordChannelCredentials | undefined) -> Promise<string | null>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/discord/verifyInbound.ts"
+}

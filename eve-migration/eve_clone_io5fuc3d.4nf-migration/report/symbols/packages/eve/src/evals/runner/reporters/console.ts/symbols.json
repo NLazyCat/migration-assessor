@@ -1,0 +1,377 @@
+{
+  "module": "packages/eve/src/evals/runner/reporters/console.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporterConfig:log",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "log",
+          "partial_analysis": false,
+          "return_type": ": (message: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporterConfig:color",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "color",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporterConfig",
+      "kind": "interface",
+      "line_range": [
+        15,
+        20
+      ],
+      "name": "ConsoleReporterConfig",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/console.ts:Console",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        27
+      ],
+      "name": "Console",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "ConsoleReporterConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EvalReporter",
+      "signature": "export function Console(config: ConsoleReporterConfig) -> EvalReporter",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#log",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "#log",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#colors",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "#colors",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            36,
+            39
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "config",
+              "optional": true,
+              "type": "ConsoleReporterConfig"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:onRunStart",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            41,
+            50
+          ],
+          "name": "onRunStart",
+          "params": [
+            {
+              "name": "evaluations",
+              "optional": false,
+              "type": "readonly EveEval[]"
+            },
+            {
+              "name": "target",
+              "optional": false,
+              "type": "EveEvalTarget"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:onEvalComplete",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            52,
+            83
+          ],
+          "name": "onEvalComplete",
+          "params": [
+            {
+              "name": "result",
+              "optional": false,
+              "type": "EveEvalResult"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:onRunComplete",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            85,
+            133
+          ],
+          "name": "onRunComplete",
+          "params": [
+            {
+              "name": "summary",
+              "optional": false,
+              "type": "EveEvalRunSummary"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#verdictIcon",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            135,
+            146
+          ],
+          "name": "#verdictIcon",
+          "params": [
+            {
+              "name": "verdict",
+              "optional": false,
+              "type": "EveEvalResult[\"verdict\"]"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#formatGateCount",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            148,
+            151
+          ],
+          "name": "#formatGateCount",
+          "params": [
+            {
+              "name": "passed",
+              "optional": false,
+              "type": "number"
+            },
+            {
+              "name": "total",
+              "optional": false,
+              "type": "number"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#formatScore",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            153,
+            160
+          ],
+          "name": "#formatScore",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "score",
+              "optional": false,
+              "type": "number"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#aggregateGates",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            162,
+            176
+          ],
+          "name": "#aggregateGates",
+          "params": [
+            {
+              "name": "results",
+              "optional": false,
+              "type": "readonly EveEvalResult[]"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "{\r\n    passed: number;\r\n    failed: number;\r\n    total: number;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter:#aggregateScores",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            178,
+            201
+          ],
+          "name": "#aggregateScores",
+          "params": [
+            {
+              "name": "results",
+              "optional": false,
+              "type": "readonly EveEvalResult[]"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "{ name: string; avg: number; count: number }[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/reporters/console.ts:ConsoleReporter",
+      "kind": "class",
+      "line_range": [
+        32,
+        202
+      ],
+      "name": "ConsoleReporter",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/console.ts:gatesOf",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        204,
+        206
+      ],
+      "name": "gatesOf",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "EveEvalResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly AssertionResult[]",
+      "signature": "export function gatesOf(result: EveEvalResult) -> readonly AssertionResult[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/console.ts:computeDurationMs",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        208,
+        210
+      ],
+      "name": "computeDurationMs",
+      "params": [
+        {
+          "name": "startedAt",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "completedAt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function computeDurationMs(startedAt: string, completedAt: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/console.ts:formatDuration",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        212,
+        218
+      ],
+      "name": "formatDuration",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDuration(ms: number) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

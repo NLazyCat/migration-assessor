@@ -1,3 +1,4 @@
+pub mod javascript;
 pub mod rust;
 pub mod typescript;
 
@@ -159,18 +160,52 @@ impl SymbolExtractor {
                             }
                         }
                     }
+                    SourceLanguage::JavaScript => {
+                        match javascript::extract(&module, &source, Some(file)) {
+                            Ok(r) => Some(r),
+                            Err(e) => {
+                                eprintln!(
+                                    "Warning: failed to extract symbols from {}: {}",
+                                    file.display(),
+                                    e
+                                );
+                                None
+                            }
+                        }
+                    }
                 }
             })
             .collect();
 
         Ok(results)
     }
+
+    /// Extract symbols from an entire project directory (auto-discover files).
+    pub fn extract_all_from_dir(
+        root: &Path,
+        language: &str,
+    ) -> anyhow::Result<Vec<(SymbolIndex, ApiContract)>> {
+        let source_lang = match language {
+            "typescript" | "ts" => SourceLanguage::TypeScript,
+            "rust" | "rs" => SourceLanguage::Rust,
+            "javascript" | "js" => SourceLanguage::JavaScript,
+            _ => anyhow::bail!("Unsupported target language: {}", language),
+        };
+        let discovery = crate::discovery::FileDiscovery::new(
+            source_lang.clone(),
+            vec![],
+            vec![],
+            false,
+        );
+        let files = discovery.discover(root);
+        Self::extract_all(root, &files, source_lang)
+    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::project::SourceLanguage;
+use crate::project::SourceLanguage;
 
     fn make_symbol(name: &str, children: Vec<Symbol>) -> Symbol {
         Symbol {
@@ -241,6 +276,9 @@ mod tests {
         assert!(result.is_empty());
 
         let result = SymbolExtractor::extract_all(dir.path(), &[], SourceLanguage::Rust).unwrap();
+        assert!(result.is_empty());
+
+        let result = SymbolExtractor::extract_all(dir.path(), &[], SourceLanguage::JavaScript).unwrap();
         assert!(result.is_empty());
     }
 }

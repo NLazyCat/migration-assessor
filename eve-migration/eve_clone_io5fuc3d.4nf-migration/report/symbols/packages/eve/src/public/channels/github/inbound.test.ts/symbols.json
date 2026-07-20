@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/src/public/channels/github/inbound.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound.test.ts:basePayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        29
+      ],
+      "name": "basePayload",
+      "params": [
+        {
+          "name": "extra",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function basePayload(extra: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound.test.ts:parse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        44
+      ],
+      "name": "parse",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "contentType",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function parse(event: string, payload: Record<string, unknown>, contentType: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/inbound.test.ts:parseWithoutGitHubHeaders",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        52
+      ],
+      "name": "parseWithoutGitHubHeaders",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function parseWithoutGitHubHeaders(payload: Record<string, unknown>) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

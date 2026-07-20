@@ -1,0 +1,104 @@
+{
+  "Approval": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 49,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 49
+      },
+      "symbol": "packages/eve/src/public/definitions/approval.ts:Approval"
+    }
+  ],
+  "ConnectionClient": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 37,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/runtime/connections/types.ts:ConnectionClient"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 15
+      },
+      "symbol": "packages/eve/src/runtime/connections/types.ts:ConnectionClient"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/runtime/connections/types.ts:ConnectionClient"
+    }
+  ],
+  "ConnectionRegistry": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 47,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 14
+      },
+      "symbol": "packages/eve/src/runtime/connections/types.ts:ConnectionRegistry"
+    }
+  ],
+  "McpConnectionClient": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 40
+      },
+      "symbol": "packages/eve/src/runtime/connections/mcp-client.ts:McpConnectionClient"
+    }
+  ],
+  "OpenApiConnectionClient": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/runtime/connections/openapi-client.ts:OpenApiConnectionClient"
+    }
+  ],
+  "ResolvedConnectionDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedConnectionDefinition"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 64
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedConnectionDefinition"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/runtime/connections/registry.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedConnectionDefinition"
+    }
+  ]
+}

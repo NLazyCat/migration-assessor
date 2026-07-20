@@ -1,0 +1,94 @@
+{
+  "module": "packages/eve/src/internal/compiled-manifest-fingerprint.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/compiled-manifest-fingerprint.ts:RUNTIME_ROOT_TOKEN",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "RUNTIME_ROOT_TOKEN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/compiled-manifest-fingerprint.ts:serializeCompiledManifestForFingerprint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        12
+      ],
+      "name": "serializeCompiledManifestForFingerprint",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly manifest: CompiledAgentManifest;\r\n  readonly runtimeAppRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function serializeCompiledManifestForFingerprint(input: {\r\n  readonly manifest: CompiledAgentManifest;\r\n  readonly runtimeAppRoot: string;\r\n}) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/compiled-manifest-fingerprint.ts:normalizeValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        32
+      ],
+      "name": "normalizeValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "runtimeAppRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function normalizeValue(value: unknown, runtimeAppRoot: string) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/compiled-manifest-fingerprint.ts:normalizeRuntimePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        47
+      ],
+      "name": "normalizeRuntimePath",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "runtimeAppRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeRuntimePath(value: string, runtimeAppRoot: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

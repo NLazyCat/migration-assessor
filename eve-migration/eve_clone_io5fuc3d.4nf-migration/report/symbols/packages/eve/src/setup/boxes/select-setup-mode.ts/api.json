@@ -1,0 +1,113 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        24
+      ],
+      "name": "SelectSetupModeOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SelectSetupModeOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "asker",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Asker",
+      "signature": "asker: : Asker"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "presetMode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SetupMode",
+      "signature": "presetMode?: : SetupMode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "presetModel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "presetModel?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "SelectSetupModePayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SelectSetupModePayload { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SetupMode",
+      "signature": "mode: : SetupMode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "modelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "modelId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        90
+      ],
+      "name": "selectSetupMode",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SelectSetupModeOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, SetupMode, SelectSetupModePayload>",
+      "signature": "export function selectSetupMode(options: SelectSetupModeOptions) -> SetupBox<SetupState, SetupMode, SelectSetupModePayload>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/select-setup-mode.ts"
+}

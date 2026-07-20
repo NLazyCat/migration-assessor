@@ -1,0 +1,72 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": "PROGRESS_PULSE_GLYPH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROGRESS_PULSE_GLYPH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "PROGRESS_PULSE_ASCII_GLYPH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROGRESS_PULSE_ASCII_GLYPH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "PROGRESS_PULSE_SEQUENCE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROGRESS_PULSE_SEQUENCE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "PROGRESS_PULSE_DURATION_MS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROGRESS_PULSE_DURATION_MS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "isProgressPulseVisible",
+      "params": [
+        {
+          "name": "elapsedMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isProgressPulseVisible(elapsedMs: number) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/cli/ui/progress-pulse.ts"
+}

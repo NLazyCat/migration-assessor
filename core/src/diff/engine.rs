@@ -76,6 +76,56 @@ impl DiffEngine {
             },
         })
     }
+
+    /// Diff HEAD vs working tree (uncommitted changes) for a project.
+    pub fn diff_uncommitted(project_root: &Path) -> anyhow::Result<DiffReport> {
+        let lang_name = LanguageRegistry::get()
+            .detect_language(project_root)
+            .ok_or_else(|| anyhow::anyhow!("Cannot detect project language"))?;
+
+        let language = LanguageRegistry::get()
+            .get_language(&lang_name)
+            .ok_or_else(|| anyhow::anyhow!("Language {} not supported", lang_name))?;
+
+        let changed_files = git::get_uncommitted_files(project_root)?;
+
+        let mut file_changes = Vec::new();
+        for file in &changed_files {
+            let old_source = git::get_file_at_version(project_root, "HEAD", file).ok();
+            let new_source = std::fs::read_to_string(project_root.join(file)).ok();
+
+            match (old_source, new_source) {
+                (Some(old), Some(new)) => {
+                    let diff = Self::diff_files(&old, &new, file, language)?;
+                    file_changes.push(diff);
+                }
+                (None, Some(_)) => {
+                    file_changes.push(FileDiffResult {
+                        file: file.clone(),
+                        status: "added".to_string(),
+                        symbol_changes: Vec::new(),
+                        import_changes: Vec::new(),
+                        doc_changes: Vec::new(),
+                    });
+                }
+                _ => {}
+            }
+        }
+
+        let summary = compute_summary(&file_changes);
+
+        Ok(DiffReport {
+            generated_at: chrono::Local::now().to_rfc3339(),
+            from_version: Some("HEAD".to_string()),
+            to_version: "working-tree".to_string(),
+            summary,
+            file_changes,
+            dependency_changes: Vec::new(),
+            propagation: PropagationResult {
+                affected_symbols: Vec::new(),
+            },
+        })
+    }
 }
 
 fn compute_summary(file_changes: &[FileDiffResult]) -> DiffSummary {
@@ -159,28 +209,24 @@ mod tests {
             file: "test.ts".into(),
             status: "modified".into(),
             symbol_changes: vec![
-                SymbolChange {
-                    symbol: "foo".into(),
-                    kind: "function".into(),
-                    change_type: "added".into(),
-                    severity: "low".into(),
-                    old_name: None,
-                    rename_confidence: None,
-                    details: vec![],
-                    old_line_range: None,
-                    new_line_range: None,
-                },
-                SymbolChange {
-                    symbol: "bar".into(),
-                    kind: "function".into(),
-                    change_type: "removed".into(),
-                    severity: "breaking".into(),
-                    old_name: None,
-                    rename_confidence: None,
-                    details: vec![],
-                    old_line_range: None,
-                    new_line_range: None,
-                },
+                SymbolChange::new(
+                    "foo".into(),
+                    "function".into(),
+                    "added".into(),
+                    "low".into(),
+                    None,
+                    None,
+                    vec![],
+                ),
+                SymbolChange::new(
+                    "bar".into(),
+                    "function".into(),
+                    "removed".into(),
+                    "breaking".into(),
+                    None,
+                    None,
+                    vec![],
+                ),
             ],
             import_changes: vec![
                 ImportChange {

@@ -1,0 +1,97 @@
+{
+  "module": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts:localAction",
+      "kind": "variable",
+      "line_range": [
+        33,
+        41
+      ],
+      "name": "localAction",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts:remoteAction",
+      "kind": "variable",
+      "line_range": [
+        43,
+        51
+      ],
+      "name": "remoteAction",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts:remote",
+      "kind": "variable",
+      "line_range": [
+        53,
+        59
+      ],
+      "name": "remote",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts:installRemoteRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        183
+      ],
+      "name": "installRemoteRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installRemoteRegistry() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts:createPendingState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        185,
+        210
+      ],
+      "name": "createPendingState",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly includeRemote?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPendingState(input: { readonly includeRemote?: boolean }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/cancel-descendant-turns-step.test.ts:createSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        212,
+        220
+      ],
+      "name": "createSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createSession() -> HarnessSession",
+      "visibility": "Private"
+    }
+  ]
+}

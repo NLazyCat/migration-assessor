@@ -1,0 +1,31 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        5,
+        29
+      ],
+      "name": "interruptStreamOnFailure",
+      "params": [
+        {
+          "name": "stream",
+          "optional": false,
+          "type": "AsyncIterable<T>"
+        },
+        {
+          "name": "failureSignal",
+          "optional": false,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncIterable<T>",
+      "signature": "export function interruptStreamOnFailure(stream: AsyncIterable<T>, failureSignal: AbortSignal) -> AsyncIterable<T>"
+    }
+  ],
+  "module": "packages/eve/src/harness/interruptible-stream.ts"
+}

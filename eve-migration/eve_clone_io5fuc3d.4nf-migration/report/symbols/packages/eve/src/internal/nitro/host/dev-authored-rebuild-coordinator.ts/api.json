@@ -1,0 +1,146 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "DevelopmentRebuildKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevelopmentRebuildKind = \"structural\" | \"unchanged\" | \"runtime\";"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        27,
+        35
+      ],
+      "name": "PostCommitDevelopmentRebuildError",
+      "params": [
+        {
+          "name": "cause",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class PostCommitDevelopmentRebuildError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        28,
+        34
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "cause",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "PostCommitDevelopmentRebuildError::constructor(cause: unknown) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        42,
+        49
+      ],
+      "name": "DevelopmentWorkflowWorldChangeRequiresRestartError",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class DevelopmentWorkflowWorldChangeRequiresRestartError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        43,
+        48
+      ],
+      "name": "constructor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "DevelopmentWorkflowWorldChangeRequiresRestartError::constructor() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "DevelopmentRebuildResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentRebuildResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "host",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PreparedDevelopmentApplicationHost",
+      "signature": "host: : PreparedDevelopmentApplicationHost"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevelopmentRebuildKind",
+      "signature": "kind: : DevelopmentRebuildKind"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        56,
+        58
+      ],
+      "name": "DevelopmentAuthoredRebuildCoordinator",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentAuthoredRebuildCoordinator { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        60,
+        70
+      ],
+      "name": "createDevelopmentAuthoredRebuildCoordinator",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly devServer: DrainedNitroDevServer;\r\n  readonly initialHost: PreparedDevelopmentApplicationHost;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentAuthoredRebuildCoordinator>",
+      "signature": "export function createDevelopmentAuthoredRebuildCoordinator(input: {\r\n  readonly devServer: DrainedNitroDevServer;\r\n  readonly initialHost: PreparedDevelopmentApplicationHost;\r\n}) -> Promise<DevelopmentAuthoredRebuildCoordinator>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts"
+}

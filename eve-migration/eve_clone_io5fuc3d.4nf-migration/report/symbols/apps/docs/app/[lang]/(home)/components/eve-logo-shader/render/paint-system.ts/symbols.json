@@ -1,0 +1,36 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/paint-system.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/paint-system.ts:createPaintSystem",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        304
+      ],
+      "name": "createPaintSystem",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPaintSystem(device: Device, resources: RendererResources, mesh: MeshData) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

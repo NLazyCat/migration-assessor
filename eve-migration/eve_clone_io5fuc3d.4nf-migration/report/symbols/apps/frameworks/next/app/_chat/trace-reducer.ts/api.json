@@ -1,0 +1,56 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "TraceProjection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TraceProjection { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly HandleMessageStreamEvent[]",
+      "signature": "events: : readonly HandleMessageStreamEvent[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "turns",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TraceTurn[]",
+      "signature": "turns: : readonly TraceTurn[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        24
+      ],
+      "name": "traceReducer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveAgentReducer<TraceProjection>",
+      "signature": "export function traceReducer() -> EveAgentReducer<TraceProjection>"
+    }
+  ],
+  "module": "apps/frameworks/next/app/_chat/trace-reducer.ts"
+}

@@ -1,0 +1,131 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "EMPTY_CHAT_SESSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EMPTY_CHAT_SESSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        144,
+        159
+      ],
+      "name": "loadThreadViewFromTranscript",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly eventsRead: number;\r\n  readonly thread: ThreadState;\r\n}>",
+      "signature": "export function loadThreadViewFromTranscript(sessionId: string) -> Promise<{\r\n  readonly eventsRead: number;\r\n  readonly thread: ThreadState;\r\n}>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        165,
+        183
+      ],
+      "name": "mergeThreadStreamEvents",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly baseThread?: ThreadState;\r\n  readonly sessionId: string;\r\n  readonly startIndex: number;\r\n  readonly streamEvents: readonly TranscriptStreamEvent[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ThreadState",
+      "signature": "export function mergeThreadStreamEvents(input: {\r\n  readonly baseThread?: ThreadState;\r\n  readonly sessionId: string;\r\n  readonly startIndex: number;\r\n  readonly streamEvents: readonly TranscriptStreamEvent[];\r\n}) -> ThreadState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        189,
+        198
+      ],
+      "name": "resolveContinuationToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly currentContinuationToken?: string;\r\n  readonly nextContinuationToken?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveContinuationToken(input: {\r\n  readonly currentContinuationToken?: string;\r\n  readonly nextContinuationToken?: string;\r\n}) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        204,
+        236
+      ],
+      "name": "createStreamingThreadBase",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly baseThread?: ThreadState;\r\n  readonly continuationToken?: string;\r\n  readonly sessionId: string;\r\n  readonly startIndex: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ThreadState | undefined",
+      "signature": "export function createStreamingThreadBase(input: {\r\n  readonly baseThread?: ThreadState;\r\n  readonly continuationToken?: string;\r\n  readonly sessionId: string;\r\n  readonly startIndex: number;\r\n}) -> ThreadState | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        242,
+        252
+      ],
+      "name": "shouldHydrateSelectedThread",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly isComposeInProgress: boolean;\r\n  readonly lastHydratedSessionId: string | null;\r\n  readonly selectedSessionId: string | null;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldHydrateSelectedThread(input: {\r\n  readonly isComposeInProgress: boolean;\r\n  readonly lastHydratedSessionId: string | null;\r\n  readonly selectedSessionId: string | null;\r\n}) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        258,
+        269
+      ],
+      "name": "isReplayOnlyThread",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly isComposeInProgress: boolean;\r\n  readonly selectedSessionId: string | null;\r\n  readonly selectedThreadState?: ThreadState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isReplayOnlyThread(input: {\r\n  readonly isComposeInProgress: boolean;\r\n  readonly selectedSessionId: string | null;\r\n  readonly selectedThreadState?: ThreadState;\r\n}) -> boolean"
+    }
+  ],
+  "module": "apps/frameworks/next/app/_chat/thread-state.ts"
+}

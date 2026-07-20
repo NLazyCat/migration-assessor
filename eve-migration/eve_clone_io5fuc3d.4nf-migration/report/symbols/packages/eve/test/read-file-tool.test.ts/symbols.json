@@ -1,0 +1,54 @@
+{
+  "module": "packages/eve/test/read-file-tool.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/read-file-tool.test.ts:createFakeAccess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        17,
+        54
+      ],
+      "name": "createFakeAccess",
+      "params": [
+        {
+          "name": "files",
+          "optional": false,
+          "type": "Record<string, string | null>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxAccess",
+      "signature": "export function createFakeAccess(files: Record<string, string | null>) -> SandboxAccess",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/read-file-tool.test.ts:runInContext",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        56,
+        66
+      ],
+      "name": "runInContext",
+      "params": [
+        {
+          "name": "files",
+          "optional": false,
+          "type": "Record<string, string | null>"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "(sandbox: SandboxSession) => Promise<unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function runInContext(files: Record<string, string | null>, fn: (sandbox: SandboxSession) => Promise<unknown>) -> Promise<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

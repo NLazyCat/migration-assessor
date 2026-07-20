@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        35
+      ],
+      "name": "dispatchStreamEventHooks",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ctx: ContextContainer;\r\n  readonly registry: RuntimeHookRegistry;\r\n  readonly event: HandleMessageStreamEvent;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchStreamEventHooks(input: {\r\n  readonly ctx: ContextContainer;\r\n  readonly registry: RuntimeHookRegistry;\r\n  readonly event: HandleMessageStreamEvent;\r\n}) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/context/hook-lifecycle.ts"
+}

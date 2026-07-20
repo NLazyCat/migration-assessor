@@ -1,0 +1,57 @@
+{
+  "module": "packages/eve/src/public/definitions/state.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/state.ts:StateHandle",
+      "kind": "interface",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "StateHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/state.ts:RESERVED_STATE_NAME_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "RESERVED_STATE_NAME_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/state.ts:defineState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        43,
+        63
+      ],
+      "name": "defineState",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "initial",
+          "optional": false,
+          "type": "() => T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StateHandle<T>",
+      "signature": "export function defineState(name: string, initial: () => T) -> StateHandle<T>",
+      "visibility": "Public"
+    }
+  ]
+}

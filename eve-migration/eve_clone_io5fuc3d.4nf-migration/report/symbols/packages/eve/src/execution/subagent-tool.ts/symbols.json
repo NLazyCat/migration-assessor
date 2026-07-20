@@ -1,0 +1,140 @@
+{
+  "module": "packages/eve/src/execution/subagent-tool.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/subagent-tool.ts:BatchEventMetadata:sequence",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "sequence",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/subagent-tool.ts:BatchEventMetadata:turnId",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/subagent-tool.ts:BatchEventMetadata",
+      "kind": "interface",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "BatchEventMetadata",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.ts:SubagentInputSource",
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        32
+      ],
+      "name": "SubagentInputSource",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly description: string;\r\n      readonly type: \"local\";\r\n    }\r\n  | {\r\n      readonly type: \"runtime\";\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/subagent-tool.ts:SubagentRunInputBuild:childContinuationToken",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "childContinuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/subagent-tool.ts:SubagentRunInputBuild:runInput",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "runInput",
+          "partial_analysis": false,
+          "return_type": ": RunInput",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/subagent-tool.ts:SubagentRunInputBuild",
+      "kind": "interface",
+      "line_range": [
+        41,
+        44
+      ],
+      "name": "SubagentRunInputBuild",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.ts:buildSubagentRunInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        145
+      ],
+      "name": "buildSubagentRunInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly action: RuntimeSubagentCallActionRequest;\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly batchEvent: BatchEventMetadata;\r\n  /**\r\n   * Parent's session capabilities. Forwarded verbatim so HITL\r\n   * readiness flows transparently down through a subagent chain. Undefined\r\n   * parent capabilities produce an undefined child capability set.\r\n   */\r\n  readonly capabilities?: SessionCapabilities;\r\n  readonly channelMetadata?: ChannelInstrumentationProjection;\r\n  /**\r\n   * Number of local subagent calls dispatched in this batch. The parent's\r\n   * remaining token quota is split evenly across them so parallel children\r\n   * are collectively, not individually, bounded by it. Remote agents run\r\n   * under their own deployment's limits and are not counted.\r\n   */\r\n  readonly fanoutSize?: number;\r\n  readonly initiatorAuth: SessionAuthContext | null;\r\n  /** Hook token owned by the workflow currently waiting for this child. */\r\n  readonly parentContinuationToken?: string;\r\n  readonly session: HarnessSession;\r\n  readonly source: SubagentInputSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SubagentRunInputBuild",
+      "signature": "export function buildSubagentRunInput(input: {\r\n  readonly action: RuntimeSubagentCallActionRequest;\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly batchEvent: BatchEventMetadata;\r\n  /**\r\n   * Parent's session capabilities. Forwarded verbatim so HITL\r\n   * readiness flows transparently down through a subagent chain. Undefined\r\n   * parent capabilities produce an undefined child capability set.\r\n   */\r\n  readonly capabilities?: SessionCapabilities;\r\n  readonly channelMetadata?: ChannelInstrumentationProjection;\r\n  /**\r\n   * Number of local subagent calls dispatched in this batch. The parent's\r\n   * remaining token quota is split evenly across them so parallel children\r\n   * are collectively, not individually, bounded by it. Remote agents run\r\n   * under their own deployment's limits and are not counted.\r\n   */\r\n  readonly fanoutSize?: number;\r\n  readonly initiatorAuth: SessionAuthContext | null;\r\n  /** Hook token owned by the workflow currently waiting for this child. */\r\n  readonly parentContinuationToken?: string;\r\n  readonly session: HarnessSession;\r\n  readonly source: SubagentInputSource;\r\n}) -> SubagentRunInputBuild",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-tool.ts:formatSubagentCallInputMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        150,
+        175
+      ],
+      "name": "formatSubagentCallInputMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly action: Pick<RuntimeSubagentCallActionRequest, \"input\" | \"subagentName\">;\r\n  readonly source: SubagentInputSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSubagentCallInputMessage(input: {\r\n  readonly action: Pick<RuntimeSubagentCallActionRequest, \"input\" | \"subagentName\">;\r\n  readonly source: SubagentInputSource;\r\n}) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

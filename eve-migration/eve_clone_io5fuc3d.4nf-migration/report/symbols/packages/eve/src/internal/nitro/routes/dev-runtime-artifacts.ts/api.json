@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        16
+      ],
+      "name": "handleDevRuntimeArtifactsRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ appRoot: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function handleDevRuntimeArtifactsRequest(input: { appRoot: string }) -> Response"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/dev-runtime-artifacts.ts"
+}

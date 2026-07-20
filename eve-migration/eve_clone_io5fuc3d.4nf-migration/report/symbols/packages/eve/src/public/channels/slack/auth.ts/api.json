@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "slackUserIdFromAuthContext",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "SessionAuthContext | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function slackUserIdFromAuthContext(auth: SessionAuthContext | null) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        24,
+        51
+      ],
+      "name": "buildSlackAuthContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SlackAuthContextInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext",
+      "signature": "export function buildSlackAuthContext(input: SlackAuthContextInput) -> SessionAuthContext"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/auth.ts"
+}

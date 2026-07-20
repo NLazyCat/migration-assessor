@@ -1,0 +1,675 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        47,
+        63
+      ],
+      "name": "LinearChannelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearChannelState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "agentSessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "agentSessionId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "agentSessionUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "agentSessionUrl?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "commentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "commentId?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "issueId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "issueId?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "issueIdentifier",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "issueIdentifier?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "issueTitle",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "issueTitle?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "issueUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "issueUrl?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "organizationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "organizationId?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "pendingToolCallMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "pendingToolCallMessage?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "sourceCommentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "sourceCommentId?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        66,
+        72
+      ],
+      "name": "LinearInstrumentationMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearInstrumentationMetadata { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "agentSessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "agentSessionId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "commentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "commentId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "issueId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "issueId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "issueIdentifier",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "issueIdentifier: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "organizationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "organizationId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        75,
+        91
+      ],
+      "name": "LinearReceiveTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LinearReceiveTarget = | {\r\n      readonly agentSessionId: string;\r\n      readonly initialActivity?: string;\r\n    }\r\n  | {\r\n      readonly externalLink?: string;\r\n      readonly externalUrls?: readonly { readonly label: string; readonly url: string }[];\r\n      readonly initialActivity?: string;\r\n      readonly issueId: string;\r\n    }\r\n  | {\r\n      readonly commentId: string;\r\n      readonly externalLink?: string;\r\n      readonly externalUrls?: readonly { readonly label: string; readonly url: string }[];\r\n      readonly initialActivity?: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        94,
+        98
+      ],
+      "name": "LinearSessionContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearSessionContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "delivery",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearDelivery",
+      "signature": "delivery: : LinearDelivery"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "linear",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearHandle",
+      "signature": "linear: : LinearHandle"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearAgentSessionRef",
+      "signature": "session: : LinearAgentSessionRef"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        101,
+        104
+      ],
+      "name": "LinearChannelContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearChannelContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "linear",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearHandle",
+      "signature": "linear: : LinearHandle"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearChannelState",
+      "signature": "state: : LinearChannelState"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        107,
+        107
+      ],
+      "name": "LinearEventContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearEventContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        110,
+        126
+      ],
+      "name": "LinearHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        111,
+        111
+      ],
+      "name": "agentSessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentSessionId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        140,
+        155
+      ],
+      "name": "LinearChannelEvents",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearChannelEvents { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        141,
+        141
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"turn.started\">",
+      "signature": "[expr]?: : LinearEventHandler<\"turn.started\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        142,
+        142
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"actions.requested\">",
+      "signature": "[expr]?: : LinearEventHandler<\"actions.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        143,
+        143
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"action.result\">",
+      "signature": "[expr]?: : LinearEventHandler<\"action.result\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        144,
+        144
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"message.completed\">",
+      "signature": "[expr]?: : LinearEventHandler<\"message.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        145,
+        145
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"message.appended\">",
+      "signature": "[expr]?: : LinearEventHandler<\"message.appended\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        146,
+        146
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"input.requested\">",
+      "signature": "[expr]?: : LinearEventHandler<\"input.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        147,
+        147
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"turn.failed\">",
+      "signature": "[expr]?: : LinearEventHandler<\"turn.failed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        148,
+        148
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"turn.completed\">",
+      "signature": "[expr]?: : LinearEventHandler<\"turn.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"turn.cancelled\">",
+      "signature": "[expr]?: : LinearEventHandler<\"turn.cancelled\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearSessionFailedHandler",
+      "signature": "[expr]?: : LinearSessionFailedHandler"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        151,
+        151
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"session.completed\">",
+      "signature": "[expr]?: : LinearEventHandler<\"session.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"session.waiting\">",
+      "signature": "[expr]?: : LinearEventHandler<\"session.waiting\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        153,
+        153
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"authorization.required\">",
+      "signature": "[expr]?: : LinearEventHandler<\"authorization.required\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        154,
+        154
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearEventHandler<\"authorization.completed\">",
+      "signature": "[expr]?: : LinearEventHandler<\"authorization.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        162,
+        165
+      ],
+      "name": "LinearInboundResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LinearInboundResult = {\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly context?: readonly string[];\r\n} | null;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "LinearInboundResultOrPromise",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LinearInboundResultOrPromise = LinearInboundResult | Promise<LinearInboundResult>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        171,
+        185
+      ],
+      "name": "LinearChannelConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearChannelConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        172,
+        172
+      ],
+      "name": "api",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearApiOptions",
+      "signature": "api?: : LinearApiOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearChannelCredentials",
+      "signature": "credentials?: : LinearChannelCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        174,
+        174
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearChannelEvents",
+      "signature": "events?: : LinearChannelEvents"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        175,
+        175
+      ],
+      "name": "route",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "route?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        188,
+        192
+      ],
+      "name": "LinearChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearChannel { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        195,
+        281
+      ],
+      "name": "linearChannel",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "LinearChannelConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearChannel",
+      "signature": "export function linearChannel(config: LinearChannelConfig) -> LinearChannel"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/linear/linearChannel.ts"
+}

@@ -1,0 +1,356 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "ConnectionMutationAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ConnectionMutationAction = \"created\" | \"overwritten\" | \"skipped\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        40
+      ],
+      "name": "ConnectionMutationResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionMutationResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "protocol",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionProtocol",
+      "signature": "protocol: : ConnectionProtocol"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionMutationAction",
+      "signature": "action: : ConnectionMutationAction"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "filePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "filePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "filesWritten",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "filesWritten: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "filesOverwritten",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "filesOverwritten?: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "filesSkipped",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "filesSkipped: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "packageJsonUpdated",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PackageJsonMutation[]",
+      "signature": "packageJsonUpdated: : PackageJsonMutation[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "envKeysAdded",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "envKeysAdded: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "envKeysRequired",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "envKeysRequired: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "ConnectionInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ConnectionInput = ConnectionCatalogEntry | CustomConnectionInput;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        45,
+        54
+      ],
+      "name": "EnsureConnectionOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EnsureConnectionOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "projectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "protocol",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionProtocol",
+      "signature": "protocol: : ConnectionProtocol"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "entry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionInput",
+      "signature": "entry: : ConnectionInput"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "force",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "force?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "connectPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        56,
+        59
+      ],
+      "name": "EnsureConnectionDependenciesOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EnsureConnectionDependenciesOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "projectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "connectPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        167,
+        175
+      ],
+      "name": "ensureConnectionDependencies",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EnsureConnectionDependenciesOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageJsonMutation[]>",
+      "signature": "export function ensureConnectionDependencies(options: EnsureConnectionDependenciesOptions) -> Promise<PackageJsonMutation[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        204,
+        276
+      ],
+      "name": "ensureConnection",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EnsureConnectionOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionMutationResult>",
+      "signature": "export function ensureConnection(options: EnsureConnectionOptions) -> Promise<ConnectionMutationResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        279,
+        309
+      ],
+      "name": "listAuthoredConnections",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function listAuthoredConnections(projectRoot: string) -> Promise<string[]>"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/update/connections.ts"
+}

@@ -1,0 +1,922 @@
+{
+  "module": "packages/eve/src/setup/ask.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SelectOption:id",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SelectOption:label",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SelectOption:value",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": T",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SelectOption:hint",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "hint",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SelectOption:featured",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "featured",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:SelectOption",
+      "kind": "interface",
+      "line_range": [
+        20,
+        33
+      ],
+      "name": "SelectOption",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectOption:disabled",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "disabled",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectOption:disabledReason",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "disabledReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectOption:locked",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "locked",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectOption:lockedReason",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "lockedReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:MultiSelectOption",
+      "kind": "interface",
+      "line_range": [
+        42,
+        51
+      ],
+      "name": "MultiSelectOption",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:Question",
+      "kind": "type_alias",
+      "line_range": [
+        58,
+        97
+      ],
+      "name": "Question",
+      "partial_analysis": false,
+      "value": "{\r\n  key: string;\r\n  message: string;\r\n  /** Found in the world (e.g. an on-disk link). Feeds the confirm/assume rungs. */\r\n  detected?: T;\r\n  /** A safe assumption (e.g. the most popular model). Used by \"assume\". */\r\n  recommended?: T;\r\n  /**\r\n   * Questions are skippable by default; required is the opt-in. Headless and\r\n   * assume runs auto-skip non-required questions, and only a required question\r\n   * may refuse a headless run ({@link InteractionRequired}). Set by the box\r\n   * when intrinsic, or by the flow via {@link withRequired}.\r\n   */\r\n  required?: boolean;\r\n  /**\r\n   * Synthesized by a decorator (e.g. the confirm-detected rung): interaction\r\n   * mechanics, not a box value, so bases render it but do not announce it.\r\n   */\r\n  internal?: boolean;\r\n} & (\r\n  | {\r\n      kind: \"select\";\r\n      options: readonly SelectOption<T>[];\r\n      // Presentation hints, not semantics: interactive renderers forward them\r\n      // to the picker, every other asker ignores them. They exist so a\r\n      // migrated box keeps rendering exactly as its hand-written prompt did.\r\n      /** Offer the type-ahead filter line in interactive renderers. */\r\n      search?: boolean;\r\n      /** Placeholder for the filter line while it is empty. */\r\n      placeholder?: string;\r\n    }\r\n  | { kind: \"confirm\" }\r\n  | {\r\n      kind: \"text\";\r\n      validate?: (raw: string) => string | null;\r\n      sensitive?: boolean;\r\n      /** Presentation hint: ghost text shown while the input is empty. */\r\n      placeholder?: string;\r\n    }\r\n);",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:key",
+          "kind": "property",
+          "line_range": [
+            106,
+            106
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:message",
+          "kind": "property",
+          "line_range": [
+            107,
+            107
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:options",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": readonly MultiSelectOption<T>[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:detected",
+          "kind": "property",
+          "line_range": [
+            110,
+            110
+          ],
+          "name": "detected",
+          "partial_analysis": false,
+          "return_type": ": readonly T[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:recommended",
+          "kind": "property",
+          "line_range": [
+            112,
+            112
+          ],
+          "name": "recommended",
+          "partial_analysis": false,
+          "return_type": ": readonly T[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:required",
+          "kind": "property",
+          "line_range": [
+            114,
+            114
+          ],
+          "name": "required",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:internal",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "internal",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:requireSelection",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "requireSelection",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:search",
+          "kind": "property",
+          "line_range": [
+            125,
+            125
+          ],
+          "name": "search",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion:placeholder",
+          "kind": "property",
+          "line_range": [
+            127,
+            127
+          ],
+          "name": "placeholder",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:MultiSelectQuestion",
+      "kind": "interface",
+      "line_range": [
+        105,
+        128
+      ],
+      "name": "MultiSelectQuestion",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:select",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        131,
+        136
+      ],
+      "name": "select",
+      "params": [
+        {
+          "name": "q",
+          "optional": false,
+          "type": "Omit<Extract<Question<T>, { kind: \"select\" }>, \"kind\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Question<T>",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:confirm",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        139,
+        149
+      ],
+      "name": "confirm",
+      "params": [
+        {
+          "name": "q",
+          "optional": false,
+          "type": "{\r\n  key: string;\r\n  message: string;\r\n  detected?: boolean;\r\n  recommended?: boolean;\r\n  required?: boolean;\r\n  internal?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Question<boolean>",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:text",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        152,
+        161
+      ],
+      "name": "text",
+      "params": [
+        {
+          "name": "q",
+          "optional": false,
+          "type": "{\r\n  key: string;\r\n  message: string;\r\n  detected?: string;\r\n  recommended?: string;\r\n  required?: boolean;\r\n  validate?: (raw: string) => string | null;\r\n  sensitive?: boolean;\r\n  placeholder?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Question<string>",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:Asker",
+      "kind": "interface",
+      "line_range": [
+        164,
+        172
+      ],
+      "name": "Asker",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:AskerDecorator",
+      "kind": "type_alias",
+      "line_range": [
+        175,
+        175
+      ],
+      "name": "AskerDecorator",
+      "partial_analysis": false,
+      "value": "(inner: Asker) => Asker;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SkippedSignal:key",
+          "kind": "property",
+          "line_range": [
+            186,
+            186
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:SkippedSignal:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            187,
+            191
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "key",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:SkippedSignal",
+      "kind": "class",
+      "line_range": [
+        185,
+        192
+      ],
+      "name": "SkippedSignal",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:AnyQuestion",
+      "kind": "type_alias",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "AnyQuestion",
+      "partial_analysis": false,
+      "value": "Question<unknown> | MultiSelectQuestion<unknown>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:InteractionRequired:question",
+          "kind": "property",
+          "line_range": [
+            202,
+            202
+          ],
+          "name": "question",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:InteractionRequired:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            203,
+            207
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "question",
+              "optional": false,
+              "type": "AnyQuestion"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:InteractionRequired",
+      "kind": "class",
+      "line_range": [
+        201,
+        208
+      ],
+      "name": "InteractionRequired",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:InvalidAnswerError:key",
+          "kind": "property",
+          "line_range": [
+            212,
+            212
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:InvalidAnswerError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            213,
+            217
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "key",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:InvalidAnswerError",
+      "kind": "class",
+      "line_range": [
+        211,
+        218
+      ],
+      "name": "InvalidAnswerError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:ResolutionSource",
+      "kind": "type_alias",
+      "line_range": [
+        221,
+        221
+      ],
+      "name": "ResolutionSource",
+      "partial_analysis": false,
+      "value": "\"answer\" | \"detected\" | \"assumed\" | \"asked\" | \"skipped\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:Resolution:key",
+          "kind": "property",
+          "line_range": [
+            225,
+            225
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:Resolution:value",
+          "kind": "property",
+          "line_range": [
+            226,
+            226
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:Resolution:source",
+          "kind": "property",
+          "line_range": [
+            227,
+            227
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": ResolutionSource",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:Resolution",
+      "kind": "interface",
+      "line_range": [
+        224,
+        228
+      ],
+      "name": "Resolution",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.ts:AskerEvents:onResolved",
+          "kind": "property",
+          "line_range": [
+            232,
+            232
+          ],
+          "name": "onResolved",
+          "partial_analysis": false,
+          "return_type": ": (resolution: Resolution) => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.ts:AskerEvents",
+      "kind": "interface",
+      "line_range": [
+        231,
+        233
+      ],
+      "name": "AskerEvents",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:announce",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        235,
+        243
+      ],
+      "name": "announce",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "AskerEvents | undefined"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "T"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ResolutionSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function announce(events: AskerEvents | undefined, key: string, value: T, source: ResolutionSource) -> T",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:coerceAnswer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        245,
+        273
+      ],
+      "name": "coerceAnswer",
+      "params": [
+        {
+          "name": "question",
+          "optional": false,
+          "type": "Question<T>"
+        },
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function coerceAnswer(question: Question<T>, raw: unknown) -> T",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:coerceManyAnswer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        282,
+        313
+      ],
+      "name": "coerceManyAnswer",
+      "params": [
+        {
+          "name": "question",
+          "optional": false,
+          "type": "MultiSelectQuestion<T>"
+        },
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T[]",
+      "signature": "export function coerceManyAnswer(question: MultiSelectQuestion<T>, raw: unknown) -> T[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:renderQuestion",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        317,
+        370
+      ],
+      "name": "renderQuestion",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "question",
+          "optional": false,
+          "type": "Question<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function renderQuestion(prompter: Prompter, question: Question<T>) -> Promise<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:renderManyQuestion",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        372,
+        416
+      ],
+      "name": "renderManyQuestion",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "question",
+          "optional": false,
+          "type": "MultiSelectQuestion<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T[]>",
+      "signature": "export function renderManyQuestion(prompter: Prompter, question: MultiSelectQuestion<T>) -> Promise<T[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:interactiveAsker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        425,
+        438
+      ],
+      "name": "interactiveAsker",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "events",
+          "optional": true,
+          "type": "AskerEvents"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Asker",
+      "signature": "export function interactiveAsker(prompter: Prompter, events: AskerEvents) -> Asker",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:headlessAsker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        445,
+        462
+      ],
+      "name": "headlessAsker",
+      "params": [
+        {
+          "name": "events",
+          "optional": true,
+          "type": "AskerEvents"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Asker",
+      "signature": "export function headlessAsker(events: AskerEvents) -> Asker",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:withAnswers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        470,
+        490
+      ],
+      "name": "withAnswers",
+      "params": [
+        {
+          "name": "answers",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "events",
+          "optional": true,
+          "type": "AskerEvents"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AskerDecorator",
+      "signature": "export function withAnswers(answers: Record<string, unknown>, events: AskerEvents) -> AskerDecorator",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:withRequired",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        497,
+        513
+      ],
+      "name": "withRequired",
+      "params": [
+        {
+          "name": "keys",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AskerDecorator",
+      "signature": "export function withRequired(keys: readonly string[]) -> AskerDecorator",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:AnswerPolicy",
+      "kind": "type_alias",
+      "line_range": [
+        516,
+        516
+      ],
+      "name": "AnswerPolicy",
+      "partial_analysis": false,
+      "value": "\"confirm-detected\" | \"assume\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.ts:withPolicy",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        525,
+        584
+      ],
+      "name": "withPolicy",
+      "params": [
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "AnswerPolicy"
+        },
+        {
+          "name": "events",
+          "optional": true,
+          "type": "AskerEvents"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AskerDecorator",
+      "signature": "export function withPolicy(policy: AnswerPolicy, events: AskerEvents) -> AskerDecorator",
+      "visibility": "Public"
+    }
+  ]
+}

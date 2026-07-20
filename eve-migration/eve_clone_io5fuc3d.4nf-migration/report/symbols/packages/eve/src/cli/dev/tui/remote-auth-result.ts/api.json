@@ -1,0 +1,91 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        8
+      ],
+      "name": "RemoteAuthCompletedMutation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RemoteAuthCompletedMutation = | { readonly kind: \"vercel-login\" }\r\n  | {\r\n      readonly kind: \"trusted-sources-updated\";\r\n      readonly targetProjectName: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        25
+      ],
+      "name": "RemoteAuthPreparation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RemoteAuthPreparation = | {\r\n      readonly kind: \"prepared\";\r\n      readonly target: VerifiedVercelTarget;\r\n      readonly resolveToken: () => Promise<string>;\r\n      readonly completedMutations: readonly RemoteAuthCompletedMutation[];\r\n    }\r\n  | {\r\n      readonly kind: \"cancelled\";\r\n      readonly completedMutations: readonly RemoteAuthCompletedMutation[];\r\n    }\r\n  | {\r\n      readonly kind: \"failed\";\r\n      readonly message: string;\r\n      readonly completedMutations: readonly RemoteAuthCompletedMutation[];\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        39
+      ],
+      "name": "describeRemoteAuthCompletedMutations",
+      "params": [
+        {
+          "name": "completedMutations",
+          "optional": false,
+          "type": "readonly RemoteAuthCompletedMutation[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function describeRemoteAuthCompletedMutations(completedMutations: readonly RemoteAuthCompletedMutation[]) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        50
+      ],
+      "name": "appendRemoteAuthMutationSummary",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "completedMutations",
+          "optional": false,
+          "type": "readonly RemoteAuthCompletedMutation[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function appendRemoteAuthMutationSummary(message: string, completedMutations: readonly RemoteAuthCompletedMutation[]) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        65
+      ],
+      "name": "formatRemoteAuthChallengeMessage",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatRemoteAuthChallengeMessage(serverUrl: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/remote-auth-result.ts"
+}

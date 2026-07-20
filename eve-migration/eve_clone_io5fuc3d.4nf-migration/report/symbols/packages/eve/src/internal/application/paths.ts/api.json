@@ -1,0 +1,281 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "EVE_INTERNAL_BUILD_OUTPUT_DIRECTORY_ENV",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_INTERNAL_BUILD_OUTPUT_DIRECTORY_ENV: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        14,
+        15
+      ],
+      "name": "EVE_INTERNAL_HOST_BUILD_OUTPUT_DIRECTORY_ENV",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_INTERNAL_HOST_BUILD_OUTPUT_DIRECTORY_ENV: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        23
+      ],
+      "name": "ApplicationInfo",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ApplicationInfo { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "outputDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "outputDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "workflowId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workflowId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "workflowBuildDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workflowBuildDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "workflowSourceDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workflowSourceDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "resolveApplicationRoot",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveApplicationRoot(cwd: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        43
+      ],
+      "name": "isVercelBuildEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isVercelBuildEnvironment() -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        59
+      ],
+      "name": "resolveNitroBuildDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveNitroBuildDirectory(appRoot: string, surface: NitroBuildSurface) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        61,
+        63
+      ],
+      "name": "resolveApplicationHostArtifactsDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveApplicationHostArtifactsDirectory(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        68,
+        73
+      ],
+      "name": "resolveNitroSurfaceOutputDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "Exclude<NitroBuildSurface, \"all\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveNitroSurfaceOutputDirectory(appRoot: string, surface: Exclude<NitroBuildSurface, \"all\">) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        89,
+        93
+      ],
+      "name": "resolveWorkflowBuildDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkflowBuildDirectory(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        137
+      ],
+      "name": "resolveSandboxCacheDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveSandboxCacheDirectory(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        142,
+        148
+      ],
+      "name": "resolveOutputDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveOutputDirectory(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        153,
+        161
+      ],
+      "name": "getApplicationInfo",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ApplicationInfo",
+      "signature": "export function getApplicationInfo(appRoot: string) -> ApplicationInfo"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/paths.ts"
+}

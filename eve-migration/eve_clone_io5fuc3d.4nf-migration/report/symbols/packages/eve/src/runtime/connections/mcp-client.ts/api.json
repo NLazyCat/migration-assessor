@@ -1,0 +1,268 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        32,
+        247
+      ],
+      "name": "McpConnectionClient",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class McpConnectionClient { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        39,
+        41
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "McpConnectionClient::constructor(connection: ResolvedConnectionDefinition) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        50,
+        67
+      ],
+      "name": "connect",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<MCPClient>",
+      "signature": "McpConnectionClient::connect() -> Promise<MCPClient>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        69,
+        85
+      ],
+      "name": "#createClient",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<MCPClient>",
+      "signature": "McpConnectionClient::#createClient() -> Promise<MCPClient>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        96,
+        99
+      ],
+      "name": "getToolMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly ConnectionToolMetadata[]>",
+      "signature": "McpConnectionClient::getToolMetadata() -> Promise<readonly ConnectionToolMetadata[]>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        106,
+        109
+      ],
+      "name": "getTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<ToolSet>",
+      "signature": "McpConnectionClient::getTools() -> Promise<ToolSet>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        120,
+        139
+      ],
+      "name": "executeTool",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionToolExecuteOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "McpConnectionClient::executeTool(toolName: string, args: unknown, options: ConnectionToolExecuteOptions) -> Promise<unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        141,
+        158
+      ],
+      "name": "#ensureTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<McpToolCache>",
+      "signature": "McpConnectionClient::#ensureTools() -> Promise<McpToolCache>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        160,
+        166
+      ],
+      "name": "#fetchTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<McpToolCache>",
+      "signature": "McpConnectionClient::#fetchTools() -> Promise<McpToolCache>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        168,
+        196
+      ],
+      "name": "#fetchToolsInner",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<McpToolCache>",
+      "signature": "McpConnectionClient::#fetchToolsInner() -> Promise<McpToolCache>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        198,
+        206
+      ],
+      "name": "close",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "McpConnectionClient::close() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        217,
+        228
+      ],
+      "name": "#rethrowClassified",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<never>",
+      "signature": "McpConnectionClient::#rethrowClassified(error: unknown) -> Promise<never>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        238,
+        246
+      ],
+      "name": "#evictCachedToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "McpConnectionClient::#evictCachedToken() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        257,
+        259
+      ],
+      "name": "isMcpAuthRequiredError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isMcpAuthRequiredError(error: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        337,
+        348
+      ],
+      "name": "passesToolFilter",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filter",
+          "optional": false,
+          "type": "Readonly<ToolFilterDefinition> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function passesToolFilter(toolName: string, filter: Readonly<ToolFilterDefinition> | undefined) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        361,
+        391
+      ],
+      "name": "resolveHeaders",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, string>>",
+      "signature": "export function resolveHeaders(connection: ResolvedConnectionDefinition) -> Promise<Record<string, string>>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/connections/mcp-client.ts"
+}

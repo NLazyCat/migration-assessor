@@ -1,0 +1,46 @@
+{
+  "SandboxKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 42,
+        "file": "packages/eve/src/execution/sandbox/require-sandbox.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/context/keys.ts:SandboxKey"
+    }
+  ],
+  "SandboxSession": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 80,
+        "file": "packages/eve/src/execution/sandbox/require-sandbox.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/public/definitions/sandbox.ts:SandboxSession"
+    }
+  ],
+  "bindSandboxAbortSignal": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 47,
+        "file": "packages/eve/src/execution/sandbox/require-sandbox.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/execution/sandbox/abort-bound-session.ts:bindSandboxAbortSignal"
+    }
+  ],
+  "loadContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/execution/sandbox/require-sandbox.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    }
+  ]
+}

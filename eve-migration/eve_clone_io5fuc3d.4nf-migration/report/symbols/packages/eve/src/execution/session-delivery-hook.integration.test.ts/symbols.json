@@ -1,0 +1,70 @@
+{
+  "module": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-delivery-hook.integration.test.ts:pauseHookDisposal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        54,
+        94
+      ],
+      "name": "pauseHookDisposal",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly finished: Promise<void>;\r\n  readonly started: Promise<void>;\r\n  release(): void;\r\n  restore(): void;\r\n}>",
+      "signature": "export function pauseHookDisposal(token: string) -> Promise<{\r\n  readonly finished: Promise<void>;\r\n  readonly started: Promise<void>;\r\n  release(): void;\r\n  restore(): void;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-delivery-hook.integration.test.ts:createDeferred",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        102
+      ],
+      "name": "createDeferred",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ readonly promise: Promise<void>; resolve(): void }",
+      "signature": "export function createDeferred() -> { readonly promise: Promise<void>; resolve(): void }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-delivery-hook.integration.test.ts:withTimeout",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        104,
+        118
+      ],
+      "name": "withTimeout",
+      "params": [
+        {
+          "name": "promise",
+          "optional": false,
+          "type": "Promise<T>"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withTimeout(promise: Promise<T>, label: string) -> Promise<T>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "ScaffoldDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScaffoldDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "scaffoldBaseProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof scaffoldBaseProject",
+      "signature": "scaffoldBaseProject: : typeof scaffoldBaseProject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "isEveProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof isEveProject",
+      "signature": "isEveProject: : typeof isEveProject"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        33
+      ],
+      "name": "ScaffoldOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScaffoldOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "prompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Prompter",
+      "signature": "prompter: : Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "evePackage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EvePackageContract",
+      "signature": "evePackage?: : EvePackageContract"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "targetDirectory",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "targetDirectory?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "overwriteExisting",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "overwriteExisting?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ScaffoldDeps",
+      "signature": "deps?: : ScaffoldDeps"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        41
+      ],
+      "name": "ScaffoldInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScaffoldInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        93
+      ],
+      "name": "scaffold",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ScaffoldOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ScaffoldInput, string>",
+      "signature": "export function scaffold(options: ScaffoldOptions) -> SetupBox<SetupState, ScaffoldInput, string>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/scaffold.ts"
+}

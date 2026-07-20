@@ -1,0 +1,119 @@
+{
+  "module": "packages/eve/src/context/dynamic-instruction-lifecycle.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:log",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:SlugMessageMap",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "SlugMessageMap",
+      "partial_analysis": false,
+      "value": "Record<string, readonly SystemModelMessage[]>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:lowerToSystemMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        25
+      ],
+      "name": "lowerToSystemMessage",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "InstructionsDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SystemModelMessage | undefined",
+      "signature": "export function lowerToSystemMessage(definition: InstructionsDefinition) -> SystemModelMessage | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:durableKeyForEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        36
+      ],
+      "name": "durableKeyForEvent",
+      "params": [
+        {
+          "name": "eventType",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextKey<SlugMessageMap> | undefined",
+      "signature": "export function durableKeyForEvent(eventType: string) -> ContextKey<SlugMessageMap> | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:buildDynamicInstructionMessages",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        48
+      ],
+      "name": "buildDynamicInstructionMessages",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{\r\n  get<T>(key: ContextKey<T>): T | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SystemModelMessage[]",
+      "signature": "export function buildDynamicInstructionMessages(ctx: {\r\n  get<T>(key: ContextKey<T>): T | undefined;\r\n}) -> SystemModelMessage[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:dispatchDynamicInstructionEvent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        58,
+        115
+      ],
+      "name": "dispatchDynamicInstructionEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ctx: ContextContainer;\r\n  readonly resolvers: readonly ResolvedDynamicInstructionsResolver[];\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly messages: readonly ModelMessage[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchDynamicInstructionEvent(input: {\r\n  readonly ctx: ContextContainer;\r\n  readonly resolvers: readonly ResolvedDynamicInstructionsResolver[];\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly messages: readonly ModelMessage[];\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

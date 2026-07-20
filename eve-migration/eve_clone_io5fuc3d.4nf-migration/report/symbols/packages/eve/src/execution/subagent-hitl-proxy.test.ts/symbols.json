@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/execution/subagent-hitl-proxy.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/subagent-hitl-proxy.test.ts:createSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        20
+      ],
+      "name": "createSession",
+      "params": [
+        {
+          "name": "state",
+          "optional": true,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createSession(state: Record<string, unknown>) -> HarnessSession",
+      "visibility": "Private"
+    }
+  ]
+}

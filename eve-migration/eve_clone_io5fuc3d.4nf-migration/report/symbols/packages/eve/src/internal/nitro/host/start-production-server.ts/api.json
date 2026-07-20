@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        227,
+        334
+      ],
+      "name": "startProductionServer",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    host?: string;\r\n    port?: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProductionServerHandle>",
+      "signature": "export function startProductionServer(rootDir: string, options: {\r\n    host?: string;\r\n    port?: number;\r\n  }) -> Promise<ProductionServerHandle>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/start-production-server.ts"
+}

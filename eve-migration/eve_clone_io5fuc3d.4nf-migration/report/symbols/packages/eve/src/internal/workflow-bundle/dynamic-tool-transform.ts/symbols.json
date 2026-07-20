@@ -1,0 +1,812 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:AstNode",
+      "kind": "type_alias",
+      "line_range": [
+        30,
+        54
+      ],
+      "name": "AstNode",
+      "partial_analysis": false,
+      "value": "{\r\n  argument?: AstNode | null;\r\n  arguments?: AstNode[];\r\n  async?: boolean;\r\n  body?: AstNode | AstNode[] | { body?: AstNode[]; type?: string; start?: number; end?: number };\r\n  callee?: AstNode;\r\n  computed?: boolean;\r\n  declaration?: AstNode | null;\r\n  declarations?: AstNode[];\r\n  end?: number;\r\n  expression?: AstNode | null;\r\n  id?: { name?: string; start?: number; end?: number } | null;\r\n  init?: AstNode | null;\r\n  key?: AstNode | null;\r\n  kind?: string;\r\n  left?: AstNode | null;\r\n  method?: boolean;\r\n  name?: string;\r\n  params?: AstNode[];\r\n  properties?: AstNode[];\r\n  right?: AstNode | null;\r\n  start?: number;\r\n  type?: string;\r\n  value?: AstNode | unknown;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:HandlerInfo:handlerNode",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "handlerNode",
+          "partial_analysis": false,
+          "return_type": ": AstNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:HandlerInfo:bodyStart",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "bodyStart",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:HandlerInfo:scopeVars",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "scopeVars",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:HandlerInfo:paramNames",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "paramNames",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:HandlerInfo:executes",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "executes",
+          "partial_analysis": false,
+          "return_type": ": readonly ExecuteInfo[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:HandlerInfo",
+      "kind": "interface",
+      "line_range": [
+        56,
+        67
+      ],
+      "name": "HandlerInfo",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:propStart",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "propStart",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:propEnd",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "propEnd",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:fnSource",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "fnSource",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:isAsync",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "isAsync",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:hoistedName",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "hoistedName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:params",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "params",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:body",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo:nestedScopes",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "nestedScopes",
+          "partial_analysis": false,
+          "return_type": ": readonly ScopeEntry[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ExecuteInfo",
+      "kind": "interface",
+      "line_range": [
+        69,
+        85
+      ],
+      "name": "ExecuteInfo",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ScopeEntry:params",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "params",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ScopeEntry:vars",
+          "kind": "property",
+          "line_range": [
+            89,
+            89
+          ],
+          "name": "vars",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:ScopeEntry",
+      "kind": "interface",
+      "line_range": [
+        87,
+        90
+      ],
+      "name": "ScopeEntry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:transformCounter",
+      "kind": "variable",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "transformCounter",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:transformDynamicToolExecute",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        103,
+        125
+      ],
+      "name": "transformDynamicToolExecute",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ code: string } | null>",
+      "signature": "export function transformDynamicToolExecute(filename: string, source: string) -> Promise<{ code: string } | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:parseSource",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        130,
+        132
+      ],
+      "name": "parseSource",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AstNode>",
+      "signature": "export function parseSource(filename: string, source: string) -> Promise<AstNode>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:findDynamicToolHandlers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        138,
+        161
+      ],
+      "name": "findDynamicToolHandlers",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandlerInfo[]",
+      "signature": "export function findDynamicToolHandlers(source: string, ast: AstNode) -> HandlerInfo[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:collectHandlers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        193
+      ],
+      "name": "collectHandlers",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "eventsObj",
+          "optional": false,
+          "type": "AstNode"
+        },
+        {
+          "name": "handlers",
+          "optional": false,
+          "type": "HandlerInfo[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function collectHandlers(source: string, eventsObj: AstNode, handlers: HandlerInfo[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:findBlockBodyStart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        195,
+        208
+      ],
+      "name": "findBlockBodyStart",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | null",
+      "signature": "export function findBlockBodyStart(node: AstNode) -> number | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:extractParamNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        210,
+        218
+      ],
+      "name": "extractParamNames",
+      "params": [
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function extractParamNames(fn: AstNode) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:collectScopeVarDeclarations",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        225,
+        229
+      ],
+      "name": "collectScopeVarDeclarations",
+      "params": [
+        {
+          "name": "bodyNode",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function collectScopeVarDeclarations(bodyNode: AstNode) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:collectVarsRecursive",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        231,
+        281
+      ],
+      "name": "collectVarsRecursive",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode | null | undefined"
+        },
+        {
+          "name": "vars",
+          "optional": false,
+          "type": "string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function collectVarsRecursive(node: AstNode | null | undefined, vars: string[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:collectDeclaredNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        283,
+        287
+      ],
+      "name": "collectDeclaredNames",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode"
+        },
+        {
+          "name": "names",
+          "optional": false,
+          "type": "string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function collectDeclaredNames(node: AstNode, names: string[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:collectPatternNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        289,
+        314
+      ],
+      "name": "collectPatternNames",
+      "params": [
+        {
+          "name": "pattern",
+          "optional": false,
+          "type": "AstNode | null"
+        },
+        {
+          "name": "names",
+          "optional": false,
+          "type": "string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function collectPatternNames(pattern: AstNode | null, names: string[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:findExecuteFunctions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        320,
+        324
+      ],
+      "name": "findExecuteFunctions",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "bodyNode",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExecuteInfo[]",
+      "signature": "export function findExecuteFunctions(source: string, bodyNode: AstNode) -> ExecuteInfo[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:walkForExecuteProps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        326,
+        445
+      ],
+      "name": "walkForExecuteProps",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode | null | undefined"
+        },
+        {
+          "name": "results",
+          "optional": false,
+          "type": "ExecuteInfo[]"
+        },
+        {
+          "name": "nestedScopes",
+          "optional": false,
+          "type": "readonly ScopeEntry[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function walkForExecuteProps(source: string, node: AstNode | null | undefined, results: ExecuteInfo[], nestedScopes: readonly ScopeEntry[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:extractFnParams",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        447,
+        453
+      ],
+      "name": "extractFnParams",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function extractFnParams(source: string, fn: AstNode) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:extractFnBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        455,
+        463
+      ],
+      "name": "extractFnBody",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function extractFnBody(source: string, fn: AstNode) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:applyTransform",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        469,
+        575
+      ],
+      "name": "applyTransform",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handlers",
+          "optional": false,
+          "type": "HandlerInfo[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ code: string }",
+      "signature": "export function applyTransform(source: string, handlers: HandlerInfo[]) -> { code: string }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:walkNode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        581,
+        609
+      ],
+      "name": "walkNode",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode"
+        },
+        {
+          "name": "visitor",
+          "optional": false,
+          "type": "(node: AstNode) => boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function walkNode(node: AstNode, visitor: (node: AstNode) => boolean) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:findProperty",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        611,
+        616
+      ],
+      "name": "findProperty",
+      "params": [
+        {
+          "name": "obj",
+          "optional": false,
+          "type": "AstNode"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AstNode | undefined",
+      "signature": "export function findProperty(obj: AstNode, name: string) -> AstNode | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:escapeForRegex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        618,
+        620
+      ],
+      "name": "escapeForRegex",
+      "params": [
+        {
+          "name": "s",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function escapeForRegex(s: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:splitParamsTopLevel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        628,
+        643
+      ],
+      "name": "splitParamsTopLevel",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function splitParamsTopLevel(raw: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:extractParamBindingName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        651,
+        663
+      ],
+      "name": "extractParamBindingName",
+      "params": [
+        {
+          "name": "param",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function extractParamBindingName(param: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.ts:extractExecuteParamNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        668,
+        676
+      ],
+      "name": "extractExecuteParamNames",
+      "params": [
+        {
+          "name": "paramString",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Set<string>",
+      "signature": "export function extractExecuteParamNames(paramString: string) -> Set<string>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        15
+      ],
+      "name": "TurnContentItem",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TurnContentItem = | {\r\n      readonly key: string;\r\n      readonly kind: \"actions\";\r\n      readonly items: readonly TraceAction[];\r\n      readonly stepIndex: number;\r\n    }\r\n  | {\r\n      readonly key: string;\r\n      readonly kind: \"response\";\r\n      readonly stepIndex: number;\r\n      readonly text: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        79,
+        98
+      ],
+      "name": "resolveTurnFailureMessage",
+      "params": [
+        {
+          "name": "turn",
+          "optional": false,
+          "type": "TraceTurn"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveTurnFailureMessage(turn: TraceTurn) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        104,
+        119
+      ],
+      "name": "shouldRenderAssistantTurn",
+      "params": [
+        {
+          "name": "turn",
+          "optional": false,
+          "type": "TraceTurn"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldRenderAssistantTurn(turn: TraceTurn) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        126,
+        200
+      ],
+      "name": "buildTurnContentItems",
+      "params": [
+        {
+          "name": "turn",
+          "optional": false,
+          "type": "TraceTurn"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly TurnContentItem[]",
+      "signature": "export function buildTurnContentItems(turn: TraceTurn) -> readonly TurnContentItem[]"
+    }
+  ],
+  "module": "apps/frameworks/next/app/_chat/turn-content.ts"
+}

@@ -1,0 +1,625 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/terminal-text.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:ansiEscape",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "ansiEscape",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:ansiPattern",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "ansiPattern",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:ansiPrefixPattern",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "ansiPrefixPattern",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:emojiPresentationPattern",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "emojiPresentationPattern",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:extendedPictographicPattern",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "extendedPictographicPattern",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:keycapPattern",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "keycapPattern",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:stripAnsi",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        13
+      ],
+      "name": "stripAnsi",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripAnsi(input: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:stripTerminalControls",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        37
+      ],
+      "name": "stripTerminalControls",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripTerminalControls(input: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:visibleLength",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        43
+      ],
+      "name": "visibleLength",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function visibleLength(input: string) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:sliceVisible",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        68
+      ],
+      "name": "sliceVisible",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sliceVisible(input: string, width: number) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:clipVisible",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        75
+      ],
+      "name": "clipVisible",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function clipVisible(input: string, width: number) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:inputTextWidth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        78,
+        84
+      ],
+      "name": "inputTextWidth",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function inputTextWidth(input: string) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:renderInputText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        89
+      ],
+      "name": "renderInputText",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderInputText(input: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput:before",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "before",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput:under",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "under",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput:after",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "after",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput:visible",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "visible",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput:inverse",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "inverse",
+          "partial_analysis": false,
+          "return_type": ": (text: string) => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput:render",
+          "kind": "property",
+          "line_range": [
+            97,
+            97
+          ],
+          "name": "render",
+          "partial_analysis": false,
+          "return_type": ": (text: string) => string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:BlockCursorInput",
+      "kind": "interface",
+      "line_range": [
+        91,
+        98
+      ],
+      "name": "BlockCursorInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:renderInputWithBlockCursor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        108
+      ],
+      "name": "renderInputWithBlockCursor",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "BlockCursorInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderInputWithBlockCursor(input: BlockCursorInput) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:offsetAtVisibleColumn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        114,
+        125
+      ],
+      "name": "offsetAtVisibleColumn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "column",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function offsetAtVisibleColumn(input: string, column: number) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:terminalGraphemeWidth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        138
+      ],
+      "name": "terminalGraphemeWidth",
+      "params": [
+        {
+          "name": "grapheme",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function terminalGraphemeWidth(grapheme: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:TerminalTextUnit:text",
+          "kind": "property",
+          "line_range": [
+            141,
+            141
+          ],
+          "name": "text",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:TerminalTextUnit:width",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "width",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:TerminalTextUnit:ansi",
+          "kind": "property",
+          "line_range": [
+            143,
+            143
+          ],
+          "name": "ansi",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:TerminalTextUnit",
+      "kind": "interface",
+      "line_range": [
+        140,
+        144
+      ],
+      "name": "TerminalTextUnit",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:terminalTextUnits",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        146,
+        166
+      ],
+      "name": "terminalTextUnits",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TerminalTextUnit[]",
+      "signature": "export function terminalTextUnits(input: string) -> TerminalTextUnit[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:wrapVisibleLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        173,
+        193
+      ],
+      "name": "wrapVisibleLine",
+      "params": [
+        {
+          "name": "line",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function wrapVisibleLine(line: string, width: number) -> string[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:findVisibleBreakPoint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        195,
+        214
+      ],
+      "name": "findVisibleBreakPoint",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function findVisibleBreakPoint(input: string, width: number) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:codePointWidth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        216,
+        230
+      ],
+      "name": "codePointWidth",
+      "params": [
+        {
+          "name": "codePoint",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function codePointWidth(codePoint: number) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:isUnsafeTerminalControlCodePoint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        232,
+        238
+      ],
+      "name": "isUnsafeTerminalControlCodePoint",
+      "params": [
+        {
+          "name": "codePoint",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isUnsafeTerminalControlCodePoint(codePoint: number) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:isZeroWidthCodePoint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        240,
+        275
+      ],
+      "name": "isZeroWidthCodePoint",
+      "params": [
+        {
+          "name": "codePoint",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isZeroWidthCodePoint(codePoint: number) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/terminal-text.ts:isWideCodePoint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        277,
+        294
+      ],
+      "name": "isWideCodePoint",
+      "params": [
+        {
+          "name": "codePoint",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isWideCodePoint(codePoint: number) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

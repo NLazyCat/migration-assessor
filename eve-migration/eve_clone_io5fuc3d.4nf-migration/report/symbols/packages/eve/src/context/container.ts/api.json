@@ -1,0 +1,221 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        25
+      ],
+      "name": "AlsContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AlsContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        30,
+        96
+      ],
+      "name": "ContextContainer",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class ContextContainer { ... }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "method",
+      "line_range": [
+        34,
+        39
+      ],
+      "name": "get",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "ContextKey<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T | undefined",
+      "signature": "ContextContainer::get(key: ContextKey<T>) -> T | undefined"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "method",
+      "line_range": [
+        41,
+        46
+      ],
+      "name": "require",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "ContextKey<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "ContextContainer::require(key: ContextKey<T>) -> T"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "method",
+      "line_range": [
+        48,
+        50
+      ],
+      "name": "has",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "ContextKey<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "ContextContainer::has(key: ContextKey<T>) -> boolean"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "method",
+      "line_range": [
+        52,
+        59
+      ],
+      "name": "set",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "ContextKey<T>"
+        },
+        {
+          "name": "valueOrUpdater",
+          "optional": false,
+          "type": "T | ((current: T | undefined) => T)"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "ContextContainer::set(key: ContextKey<T>, valueOrUpdater: T | ((current: T | undefined) => T)) -> T"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "method",
+      "line_range": [
+        61,
+        66
+      ],
+      "name": "ensure",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "ContextKey<T>"
+        },
+        {
+          "name": "create",
+          "optional": false,
+          "type": "() => T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "ContextContainer::ensure(key: ContextKey<T>, create: () => T) -> T"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        74,
+        76
+      ],
+      "name": "clearVirtualContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "ContextContainer::clearVirtualContext() -> void"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "method",
+      "line_range": [
+        84,
+        86
+      ],
+      "name": "setVirtualContext",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "ContextKey<T>"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "ContextContainer::setVirtualContext(key: ContextKey<T>, value: T) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        88,
+        95
+      ],
+      "name": "entries",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Generator<readonly [ContextKey<unknown>, unknown]>",
+      "signature": "ContextContainer::entries() -> Generator<readonly [ContextKey<unknown>, unknown]>"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        117,
+        117
+      ],
+      "name": "contextStorage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const contextStorage: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        122,
+        131
+      ],
+      "name": "loadContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AlsContext",
+      "signature": "export function loadContext() -> AlsContext"
+    }
+  ],
+  "module": "packages/eve/src/context/container.ts"
+}

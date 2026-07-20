@@ -1,0 +1,109 @@
+{
+  "module": "packages/eve/src/execution/workflow-callback-url.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-callback-url.ts:PRODUCTION_ENVIRONMENT",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "PRODUCTION_ENVIRONMENT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-callback-url.ts:VERCEL_PROTECTION_BYPASS_QUERY",
+      "kind": "variable",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": "VERCEL_PROTECTION_BYPASS_QUERY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-callback-url.ts:WORKFLOW_LOCAL_BASE_URL_ENV",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "WORKFLOW_LOCAL_BASE_URL_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-callback-url.ts:resolveVercelProductionCallbackBaseUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        22
+      ],
+      "name": "resolveVercelProductionCallbackBaseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function resolveVercelProductionCallbackBaseUrl() -> string | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-callback-url.ts:resolveWorkflowCallbackBaseUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "resolveWorkflowCallbackBaseUrl",
+      "params": [
+        {
+          "name": "metadataUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkflowCallbackBaseUrl(metadataUrl: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-callback-url.ts:createWorkflowCallbackUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        51
+      ],
+      "name": "createWorkflowCallbackUrl",
+      "params": [
+        {
+          "name": "baseUrl",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "callbackPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createWorkflowCallbackUrl(baseUrl: string, callbackPath: string) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

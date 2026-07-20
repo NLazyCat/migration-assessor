@@ -1,0 +1,127 @@
+{
+  "module": "packages/eve/src/internal/testing/mocks/mock-tool.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:MockToolInput:name",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:MockToolInput:description",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:MockToolInput:inputSchema",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "inputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:MockToolInput:execute",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "execute",
+          "partial_analysis": false,
+          "return_type": ": (input: unknown, ctx: SessionContext) => Promise<unknown> | unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:MockToolInput:logicalPath",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:MockToolInput",
+      "kind": "interface",
+      "line_range": [
+        15,
+        41
+      ],
+      "name": "MockToolInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:mockTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        69
+      ],
+      "name": "mockTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockToolInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedToolDefinition",
+      "signature": "export function mockTool(input: MockToolInput) -> ResolvedToolDefinition",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-tool.ts:sanitizeLogicalPathSegment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        76
+      ],
+      "name": "sanitizeLogicalPathSegment",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sanitizeLogicalPathSegment(name: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

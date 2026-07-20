@@ -1,0 +1,357 @@
+{
+  "module": "packages/eve/src/evals/runner/run-evals.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:DEFAULT_MAX_CONCURRENCY",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DEFAULT_MAX_CONCURRENCY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:evaluations",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "evaluations",
+          "partial_analysis": false,
+          "return_type": ": readonly EveEval[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:config",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "config",
+          "partial_analysis": false,
+          "return_type": ": EveEvalConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:target",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTargetHandle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:client",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "client",
+          "partial_analysis": false,
+          "return_type": ": Client",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:appRoot",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:reporters",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "reporters",
+          "partial_analysis": false,
+          "return_type": ": readonly EvalReporter[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:includeEvalReporters",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "includeEvalReporters",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:maxConcurrency",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "maxConcurrency",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:timeoutMs",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "timeoutMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions:onEvalLog",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "onEvalLog",
+          "partial_analysis": false,
+          "return_type": ": (evalId: string, message: string) => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:RunEvalsOptions",
+      "kind": "interface",
+      "line_range": [
+        18,
+        38
+      ],
+      "name": "RunEvalsOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:ReporterBinding:reporter",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "reporter",
+          "partial_analysis": false,
+          "return_type": ": EvalReporter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/run-evals.ts:ReporterBinding:evalIds",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "evalIds",
+          "partial_analysis": false,
+          "return_type": ": ReadonlySet<string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:ReporterBinding",
+      "kind": "interface",
+      "line_range": [
+        41,
+        44
+      ],
+      "name": "ReporterBinding",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:runEvals",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        55,
+        145
+      ],
+      "name": "runEvals",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RunEvalsOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveEvalRunSummary>",
+      "signature": "export function runEvals(options: RunEvalsOptions) -> Promise<EveEvalRunSummary>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:buildReporterBindings",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        147,
+        186
+      ],
+      "name": "buildReporterBindings",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "Omit<RunEvalsOptions, \"evaluations\"> & { readonly evaluations: readonly EveEval[] }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReporterBinding[]",
+      "signature": "export function buildReporterBindings(options: Omit<RunEvalsOptions, \"evaluations\"> & { readonly evaluations: readonly EveEval[] }) -> ReporterBinding[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:applyConfigDefaults",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        192,
+        200
+      ],
+      "name": "applyConfigDefaults",
+      "params": [
+        {
+          "name": "evaluation",
+          "optional": false,
+          "type": "EveEval"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "EveEvalConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEval",
+      "signature": "export function applyConfigDefaults(evaluation: EveEval, config: EveEvalConfig) -> EveEval",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:buildSummary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        202,
+        218
+      ],
+      "name": "buildSummary",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "RunEvalsOptions[\"target\"]"
+        },
+        {
+          "name": "results",
+          "optional": false,
+          "type": "readonly EveEvalResult[]"
+        },
+        {
+          "name": "startedAt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalRunSummary",
+      "signature": "export function buildSummary(target: RunEvalsOptions[\"target\"], results: readonly EveEvalResult[], startedAt: string) -> EveEvalRunSummary",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:scopeSummary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        221,
+        236
+      ],
+      "name": "scopeSummary",
+      "params": [
+        {
+          "name": "summary",
+          "optional": false,
+          "type": "EveEvalRunSummary"
+        },
+        {
+          "name": "evalIds",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalRunSummary",
+      "signature": "export function scopeSummary(summary: EveEvalRunSummary, evalIds: ReadonlySet<string>) -> EveEvalRunSummary",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.ts:countVerdicts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        238,
+        243
+      ],
+      "name": "countVerdicts",
+      "params": [
+        {
+          "name": "results",
+          "optional": false,
+          "type": "readonly EveEvalResult[]"
+        },
+        {
+          "name": "verdict",
+          "optional": false,
+          "type": "EveEvalResult[\"verdict\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function countVerdicts(results: readonly EveEvalResult[], verdict: EveEvalResult[\"verdict\"]) -> number",
+      "visibility": "Private"
+    }
+  ]
+}

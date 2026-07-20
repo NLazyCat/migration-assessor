@@ -1,0 +1,419 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        33
+      ],
+      "name": "InstrumentationSetupContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationSetupContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "agentName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "InstrumentationRuntimeContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstrumentationRuntimeContext = JsonObject;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        58
+      ],
+      "name": "InstrumentationSession",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationSession { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly current: SessionAuthContext | null;\r\n    readonly initiator: SessionAuthContext | null;\r\n  }",
+      "signature": "auth: : {\r\n    readonly current: SessionAuthContext | null;\r\n    readonly initiator: SessionAuthContext | null;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "parent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionParent",
+      "signature": "parent?: : SessionParent"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        68
+      ],
+      "name": "InstrumentationTurn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationTurn { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "sequence",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "sequence: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        74,
+        76
+      ],
+      "name": "InstrumentationStep",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationStep { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "index",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "index: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        84,
+        87
+      ],
+      "name": "InstrumentationModelInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationModelInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "instructions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | SystemModelMessage | undefined",
+      "signature": "instructions: : string | SystemModelMessage | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "messages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ModelMessage[]",
+      "signature": "messages: : readonly ModelMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        94,
+        100
+      ],
+      "name": "InstrumentationStepStartedEventInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationStepStartedEventInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "channel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationChannel",
+      "signature": "channel: : InstrumentationChannel"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "modelInput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationModelInput",
+      "signature": "modelInput: : InstrumentationModelInput"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationSession",
+      "signature": "session: : InstrumentationSession"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "step",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationStep",
+      "signature": "step: : InstrumentationStep"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        99,
+        99
+      ],
+      "name": "turn",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationTurn",
+      "signature": "turn: : InstrumentationTurn"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        108,
+        113
+      ],
+      "name": "InstrumentationStepStartedEventResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationStepStartedEventResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        112,
+        112
+      ],
+      "name": "runtimeContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationRuntimeContext",
+      "signature": "runtimeContext: : InstrumentationRuntimeContext"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        118,
+        126
+      ],
+      "name": "InstrumentationEvents",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationEvents { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        123,
+        125
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (\r\n    input: InstrumentationStepStartedEventInput,\r\n  ) => InstrumentationStepStartedEventResult | undefined",
+      "signature": "[expr]?: : (\r\n    input: InstrumentationStepStartedEventInput,\r\n  ) => InstrumentationStepStartedEventResult | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        134,
+        162
+      ],
+      "name": "InstrumentationDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        140,
+        140
+      ],
+      "name": "functionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "functionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        144,
+        144
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationEvents",
+      "signature": "events?: : InstrumentationEvents"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "recordInputs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "recordInputs?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        155,
+        155
+      ],
+      "name": "recordOutputs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "recordOutputs?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        161,
+        161
+      ],
+      "name": "setup",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (context: InstrumentationSetupContext) => void",
+      "signature": "setup?: : (context: InstrumentationSetupContext) => void"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        170,
+        174
+      ],
+      "name": "defineInstrumentation",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<T, InstrumentationDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function defineInstrumentation(definition: ExactDefinition<T, InstrumentationDefinition>) -> T"
+    }
+  ],
+  "module": "packages/eve/src/public/instrumentation/index.ts"
+}

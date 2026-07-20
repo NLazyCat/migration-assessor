@@ -1,0 +1,206 @@
+{
+  "module": "packages/eve/src/internal/testing/mocks/mock-skill.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput:name",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput:description",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput:markdown",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "markdown",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput:references",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "references",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput:scripts",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "scripts",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput:assets",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "assets",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkillInput",
+      "kind": "interface",
+      "line_range": [
+        15,
+        38
+      ],
+      "name": "MockSkillInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkill:source",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": CompiledSkillDefinition",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:MockSkill",
+      "kind": "interface",
+      "line_range": [
+        43,
+        58
+      ],
+      "name": "MockSkill",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:pendingMockSkillCleanups",
+      "kind": "variable",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "pendingMockSkillCleanups",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:mockSkill",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        93,
+        152
+      ],
+      "name": "mockSkill",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockSkillInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MockSkill>",
+      "signature": "export function mockSkill(input: MockSkillInput) -> Promise<MockSkill>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:materializeSubtree",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        154,
+        163
+      ],
+      "name": "materializeSubtree",
+      "params": [
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "files",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function materializeSubtree(directory: string, files: Readonly<Record<string, string>>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-skill.ts:buildSkillSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        165,
+        203
+      ],
+      "name": "buildSkillSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  assetsPath: string | undefined;\r\n  description: string;\r\n  markdown: string;\r\n  name: string;\r\n  referencesPath: string | undefined;\r\n  rootPath: string;\r\n  scriptsPath: string | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledSkillDefinition",
+      "signature": "export function buildSkillSource(input: {\r\n  assetsPath: string | undefined;\r\n  description: string;\r\n  markdown: string;\r\n  name: string;\r\n  referencesPath: string | undefined;\r\n  rootPath: string;\r\n  scriptsPath: string | undefined;\r\n}) -> CompiledSkillDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

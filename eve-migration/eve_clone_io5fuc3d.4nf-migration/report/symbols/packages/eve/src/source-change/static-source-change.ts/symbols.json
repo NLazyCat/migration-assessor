@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/src/source-change/static-source-change.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/source-change/static-source-change.ts:ApplyResult",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "ApplyResult",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"applied\"; readonly from: string; readonly to: string }\r\n  | {\r\n      readonly kind: \"bail\";\r\n      readonly reason: string;\r\n      readonly at: { readonly logicalPath: string; readonly line: number };\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/source-change/static-source-change.ts:StaticSourceChange",
+      "kind": "interface",
+      "line_range": [
+        26,
+        33
+      ],
+      "name": "StaticSourceChange",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/source-change/static-source-change.ts:createStaticSourceChange",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        42
+      ],
+      "name": "createStaticSourceChange",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StaticSourceChange",
+      "signature": "export function createStaticSourceChange(manifest: AgentSourceManifest) -> StaticSourceChange",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/source-change/static-source-change.ts:updateAgentModelName",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        44,
+        78
+      ],
+      "name": "updateAgentModelName",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        },
+        {
+          "name": "modelName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ApplyResult>",
+      "signature": "export function updateAgentModelName(manifest: AgentSourceManifest, modelName: string) -> Promise<ApplyResult>",
+      "visibility": "Private"
+    }
+  ]
+}

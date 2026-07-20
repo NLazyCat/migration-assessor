@@ -1,0 +1,292 @@
+{
+  "module": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxInput:id",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxInput:initialFiles",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "initialFiles",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxInput:commands",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "commands",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, SandboxCommandResult>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxInput:run",
+          "kind": "property",
+          "line_range": [
+            52,
+            54
+          ],
+          "name": "run",
+          "partial_analysis": false,
+          "return_type": ": (\r\n    options: SandboxRunOptions,\r\n  ) => Promise<SandboxCommandResult> | SandboxCommandResult",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxInput",
+      "kind": "interface",
+      "line_range": [
+        29,
+        55
+      ],
+      "name": "MockSandboxInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxWrite:path",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxWrite:content",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "content",
+          "partial_analysis": false,
+          "return_type": ": string | Uint8Array",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandboxWrite",
+      "kind": "interface",
+      "line_range": [
+        63,
+        66
+      ],
+      "name": "MockSandboxWrite",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:access",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "access",
+          "partial_analysis": false,
+          "return_type": ": SandboxAccess",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:session",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": SandboxSession",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:commandLog",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "commandLog",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:removedPaths",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "removedPaths",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:networkPolicyUpdates",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "networkPolicyUpdates",
+          "partial_analysis": false,
+          "return_type": ": readonly SandboxNetworkPolicy[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:files",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": Map<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:fileBytes",
+          "kind": "property",
+          "line_range": [
+            102,
+            102
+          ],
+          "name": "fileBytes",
+          "partial_analysis": false,
+          "return_type": ": Map<string, Buffer>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox:writes",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "writes",
+          "partial_analysis": false,
+          "return_type": ": readonly MockSandboxWrite[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:MockSandbox",
+      "kind": "interface",
+      "line_range": [
+        75,
+        109
+      ],
+      "name": "MockSandbox",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:mockSandbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        114,
+        267
+      ],
+      "name": "mockSandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockSandboxInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MockSandbox",
+      "signature": "export function mockSandbox(input: MockSandboxInput) -> MockSandbox",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:synthesizeMockProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        274,
+        284
+      ],
+      "name": "synthesizeMockProcess",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "SandboxCommandResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxProcess",
+      "signature": "export function synthesizeMockProcess(result: SandboxCommandResult) -> SandboxProcess",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts:resolveWorkspacePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        290,
+        296
+      ],
+      "name": "resolveWorkspacePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkspacePath(path: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

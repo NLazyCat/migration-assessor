@@ -9,6 +9,7 @@ use migration_core::*;
 use rayon::join;
 use std::collections::{BTreeMap, HashMap};
 use std::path::{Path, PathBuf};
+use std::time::Duration;
 
 use crate::commands::{resolve_project_path, run_git_cmd};
 
@@ -76,6 +77,9 @@ target_language = "rust"
         config.scoring.weights.cycles = parts[3].parse()?;
         config.scoring.weights.tests = parts[4].parse()?;
     }
+
+    // Ensure source repo is available (clone remote repo if configured)
+    ensure_source_repo(&mut config, &project_root)?;
 
     // Auto-detect source repo (respects config.project.source if set)
     let source_repo_dir = detect_source_repo(&project_root, &config)?;
@@ -154,6 +158,9 @@ target_language = "rust"
                 references::typescript::extract_all(&project.root, &files)
             }
             project::SourceLanguage::Rust => references::rust::extract_all(&project.root, &files),
+            project::SourceLanguage::JavaScript => {
+                references::javascript::extract_all(&project.root, &files)
+            }
         },
     );
     let symbol_results = symbol_results?;
@@ -486,6 +493,97 @@ fn is_repo_root(path: &Path) -> bool {
         return true;
     }
     false
+}
+
+/// Ensure the source repo is available.
+/// - If `source_repo` is a remote URL: clone it into the project root (retry 4×).
+/// - If `source_repo` is a local path: set `source` so detection can find it.
+fn ensure_source_repo(
+    config: &mut migration_core::config::Config,
+    project_root: &Path,
+) -> anyhow::Result<()> {
+    let Some(repo_url) = &config.project.source_repo else {
+        return Ok(());
+    };
+    if repo_url.is_empty() {
+        return Ok(());
+    }
+
+    if !is_remote_url(repo_url) {
+        // Local path — just set source for downstream detection
+        config.project.source = Some(repo_url.clone());
+        return Ok(());
+    }
+
+    let repo_name = repo_name_from_url(repo_url);
+    let target_dir = project_root.join(&repo_name);
+
+    // Already cloned?
+    if target_dir.join(".git").exists() || target_dir.join("HEAD").exists() {
+        println!(
+            "  {} {}",
+            style("Source repo:").bold(),
+            target_dir.display()
+        );
+        config.project.source = Some(repo_name);
+        return Ok(());
+    }
+
+    // Clone with retry
+    println!("  {} {} ...", style("Cloning:").bold(), repo_url);
+    for attempt in 1..=4 {
+        let output = std::process::Command::new("git")
+            .args(["clone", repo_url, &repo_name])
+            .current_dir(project_root)
+            .output();
+
+        match output {
+            Ok(out) if out.status.success() => {
+                println!(
+                    "  {} {}",
+                    style("Clone successful:").bold().green(),
+                    target_dir.display()
+                );
+                config.project.source = Some(repo_name);
+                return Ok(());
+            }
+            _ => {
+                if attempt < 4 {
+                    eprintln!(
+                        "  {} (attempt {}/4), retrying in 2s...",
+                        style("Clone failed").yellow(),
+                        attempt
+                    );
+                    std::thread::sleep(Duration::from_secs(2));
+                }
+            }
+        }
+    }
+
+    // All retries exhausted
+    eprintln!("  {}", style("Clone failed after 4 attempts.").red());
+    eprintln!("  {}", style("Please clone manually:").bold());
+    eprintln!("    cd {}", project_root.display());
+    eprintln!("    git clone {} <folder-name>", repo_url);
+    anyhow::bail!(
+        "Failed to clone repository after 4 attempts: {}",
+        repo_url
+    );
+}
+
+fn is_remote_url(s: &str) -> bool {
+    s.contains("://") || s.starts_with("git@")
+}
+
+fn repo_name_from_url(url: &str) -> String {
+    let stem = url.trim_end_matches(".git").trim_end_matches('/');
+    if let Some((_, name)) = stem.rsplit_once('/') {
+        name.to_string()
+    } else if let Some((_, name)) = stem.rsplit_once(':') {
+        name.to_string()
+    } else {
+        "source".to_string()
+    }
 }
 
 /// Auto-detect git info from the source repo.

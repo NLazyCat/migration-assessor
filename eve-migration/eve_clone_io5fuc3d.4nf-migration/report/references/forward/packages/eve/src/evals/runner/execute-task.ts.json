@@ -1,0 +1,227 @@
+{
+  "AssertionCollector": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector"
+    }
+  ],
+  "AssertionResult": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/evals/types.ts:AssertionResult"
+    }
+  ],
+  "Client": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/client/client.ts:Client"
+    }
+  ],
+  "EvalRequirementFailed": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 78
+      },
+      "symbol": "packages/eve/src/evals/control-flow.ts:EvalRequirementFailed"
+    }
+  ],
+  "EvalSessionManager": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 53
+      },
+      "symbol": "packages/eve/src/evals/session.ts:EvalSessionManager"
+    }
+  ],
+  "EvalSkipped": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 76
+      },
+      "symbol": "packages/eve/src/evals/control-flow.ts:EvalSkipped"
+    }
+  ],
+  "EveEval": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEval"
+    }
+  ],
+  "EveEvalDerivedFacts": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 73,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 113
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts"
+    }
+  ],
+  "EveEvalSessionResult": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 95
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalSessionResult"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 48,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 113
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalSessionResult"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 51,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 135
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalSessionResult"
+    }
+  ],
+  "EveEvalTargetHandle": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalTargetHandle"
+    }
+  ],
+  "EveEvalTaskResult": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 97
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalTaskResult"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalTaskResult"
+    }
+  ],
+  "EveEvalTurn": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 96
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalTurn"
+    }
+  ],
+  "HandleMessageStreamEvent": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 144
+      },
+      "symbol": "packages/eve/src/protocol/message.ts:HandleMessageStreamEvent"
+    }
+  ],
+  "RuntimeIdentity": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 3,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 145
+      },
+      "symbol": "packages/eve/src/protocol/message.ts:RuntimeIdentity"
+    }
+  ],
+  "createEmptyDerivedFacts": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 114
+      },
+      "symbol": "packages/eve/src/evals/runner/derive-run-facts.ts:createEmptyDerivedFacts"
+    }
+  ],
+  "createEvalContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 59
+      },
+      "symbol": "packages/eve/src/evals/context.ts:createEvalContext"
+    }
+  ],
+  "scopeEvalTargetHandle": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 54
+      },
+      "symbol": "packages/eve/src/evals/target.ts:scopeEvalTargetHandle"
+    }
+  ],
+  "toErrorMessage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/evals/runner/execute-task.ts",
+        "line": 79
+      },
+      "symbol": "packages/eve/src/shared/errors.ts:toErrorMessage"
+    }
+  ]
+}

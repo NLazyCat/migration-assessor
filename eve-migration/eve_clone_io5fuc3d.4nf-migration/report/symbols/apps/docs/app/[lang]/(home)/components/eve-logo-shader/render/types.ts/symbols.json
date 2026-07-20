@@ -1,0 +1,239 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:Bounds",
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "Bounds",
+      "partial_analysis": false,
+      "value": "{\r\n  min: [number, number, number];\r\n  max: [number, number, number];\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:MeshData",
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "MeshData",
+      "partial_analysis": false,
+      "value": "{\r\n  positions: Float32Array;\r\n  normals: Float32Array;\r\n  indices: Uint32Array;\r\n  bounds: Bounds;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:EveMaterial",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        27
+      ],
+      "name": "EveMaterial",
+      "partial_analysis": false,
+      "value": "| \"glass\"\r\n  | \"normal\"\r\n  | \"camera reflected normal\"\r\n  | \"metallic\"\r\n  | \"back-albedo\"\r\n  | \"back-depth\"\r\n  | \"thickness\"\r\n  | \"paint-debug\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintSeed",
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        33
+      ],
+      "name": "PaintSeed",
+      "partial_analysis": false,
+      "value": "{\r\n  width: number;\r\n  height: number;\r\n  values: Float32Array;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintStroke",
+      "kind": "type_alias",
+      "line_range": [
+        35,
+        40
+      ],
+      "name": "PaintStroke",
+      "partial_analysis": false,
+      "value": "{\r\n  fromCell: readonly [number, number];\r\n  toCell: readonly [number, number];\r\n  duration?: number;\r\n  movementGated?: boolean;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintRenderOptions",
+      "kind": "type_alias",
+      "line_range": [
+        42,
+        56
+      ],
+      "name": "PaintRenderOptions",
+      "partial_analysis": false,
+      "value": "{\r\n  seed?: PaintSeed;\r\n  steps?: number;\r\n  dt?: number;\r\n  brushCell?: readonly [number, number];\r\n  brushPreviousCell?: readonly [number, number];\r\n  brushRadius?: number;\r\n  brushStrength?: number;\r\n  brushActive?: boolean;\r\n  decayRate?: number;\r\n  diffusionRate?: number;\r\n  diffusionJitter?: number;\r\n  stroke?: PaintStroke;\r\n  decaySteps?: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:ImprintRenderOptions",
+      "kind": "type_alias",
+      "line_range": [
+        58,
+        66
+      ],
+      "name": "ImprintRenderOptions",
+      "partial_analysis": false,
+      "value": "{\r\n  progress?: number;\r\n  gridScaleMultiplier?: number;\r\n  glyphScale?: number;\r\n  time?: number;\r\n  mouse?: readonly [number, number];\r\n  paint?: PaintRenderOptions;\r\n  devicePixelRatio?: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:RenderControls",
+      "kind": "type_alias",
+      "line_range": [
+        68,
+        80
+      ],
+      "name": "RenderControls",
+      "partial_analysis": false,
+      "value": "{\r\n  yaw: number;\r\n  pitch: number;\r\n  radius: number;\r\n  fov: number;\r\n  envYaw: number;\r\n  envPitch: number;\r\n  insideRendering: boolean;\r\n  outsideRendering: boolean;\r\n  material: EveMaterial;\r\n  wireframe: boolean;\r\n  showEnv: boolean;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintPointerRect",
+      "kind": "type_alias",
+      "line_range": [
+        82,
+        87
+      ],
+      "name": "PaintPointerRect",
+      "partial_analysis": false,
+      "value": "{\r\n  left: number;\r\n  top: number;\r\n  width: number;\r\n  height: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintPointerMappingInput",
+      "kind": "type_alias",
+      "line_range": [
+        89,
+        102
+      ],
+      "name": "PaintPointerMappingInput",
+      "partial_analysis": false,
+      "value": "{\r\n  clientX: number;\r\n  clientY: number;\r\n  rect: PaintPointerRect;\r\n  canvasWidth: number;\r\n  canvasHeight: number;\r\n  logicalWidth: number;\r\n  logicalHeight: number;\r\n  controls: Pick<RenderControls, \"radius\" | \"yaw\" | \"pitch\" | \"fov\">;\r\n  meshBounds: Bounds;\r\n  gridScaleMultiplier?: number;\r\n  paddingRadius?: number;\r\n  devicePixelRatio?: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintPointerMapping",
+      "kind": "type_alias",
+      "line_range": [
+        104,
+        113
+      ],
+      "name": "PaintPointerMapping",
+      "partial_analysis": false,
+      "value": "{\r\n  physical: readonly [number, number];\r\n  logical: readonly [number, number];\r\n  model: readonly [number, number];\r\n  brushCell: readonly [number, number];\r\n  originCell: readonly [number, number];\r\n  gridScale: number;\r\n  pxPerModelUnit: number;\r\n  insideLogicalBounds: boolean;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:GpuMesh",
+      "kind": "type_alias",
+      "line_range": [
+        115,
+        121
+      ],
+      "name": "GpuMesh",
+      "partial_analysis": false,
+      "value": "{\r\n  vertexBuffer: Buffer;\r\n  indexBuffer: Buffer;\r\n  lineIndexBuffer: Buffer;\r\n  indexCount: number;\r\n  lineIndexCount: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:StudioCubemap",
+      "kind": "type_alias",
+      "line_range": [
+        123,
+        128
+      ],
+      "name": "StudioCubemap",
+      "partial_analysis": false,
+      "value": "{\r\n  texture: GPUTexture;\r\n  view: GPUTextureView;\r\n  sampler: GPUSampler;\r\n  faceParams: Buffer;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:Mat4",
+      "kind": "type_alias",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "Mat4",
+      "partial_analysis": false,
+      "value": "Float32Array;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:Vec3",
+      "kind": "type_alias",
+      "line_range": [
+        131,
+        131
+      ],
+      "name": "Vec3",
+      "partial_analysis": false,
+      "value": "[number, number, number];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:EnvLightConfig",
+      "kind": "type_alias",
+      "line_range": [
+        133,
+        141
+      ],
+      "name": "EnvLightConfig",
+      "partial_analysis": false,
+      "value": "{\r\n  name: string;\r\n  position: readonly [number, number, number];\r\n  color: string;\r\n  intensity: number;\r\n  radius: number;\r\n  softness: number;\r\n  luminance: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:BloomTargets",
+      "kind": "type_alias",
+      "line_range": [
+        143,
+        152
+      ],
+      "name": "BloomTargets",
+      "partial_analysis": false,
+      "value": "{\r\n  width: number;\r\n  height: number;\r\n  scene: GPUTexture;\r\n  backMaterial: GPUTexture;\r\n  backDepth: GPUTexture;\r\n  backSurfaceDepth: GPUTexture;\r\n  horizontal: GPUTexture;\r\n  vertical: GPUTexture;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts:PaintTargets",
+      "kind": "type_alias",
+      "line_range": [
+        154,
+        167
+      ],
+      "name": "PaintTargets",
+      "partial_analysis": false,
+      "value": "{\r\n  cols: number;\r\n  rows: number;\r\n  ping: GPUTexture;\r\n  pong: GPUTexture;\r\n  staticNoise: GPUTexture;\r\n  voronoiValue: GPUTexture;\r\n  voronoiEdge: GPUTexture;\r\n  readIsPing: boolean;\r\n  pingReadBindGroup: GPUBindGroup;\r\n  pongReadBindGroup: GPUBindGroup;\r\n  pingDebugBindGroup: GPUBindGroup;\r\n  pongDebugBindGroup: GPUBindGroup;\r\n};",
+      "visibility": "Public"
+    }
+  ]
+}

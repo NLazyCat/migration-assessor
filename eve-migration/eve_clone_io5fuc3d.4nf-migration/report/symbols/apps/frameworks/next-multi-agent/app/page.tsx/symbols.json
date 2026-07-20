@@ -1,0 +1,67 @@
+{
+  "module": "apps/frameworks/next-multi-agent/app/page.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/frameworks/next-multi-agent/app/page.tsx:AGENTS",
+      "kind": "variable",
+      "line_range": [
+        6,
+        22
+      ],
+      "name": "AGENTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next-multi-agent/app/page.tsx:AgentName",
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "AgentName",
+      "partial_analysis": false,
+      "value": "(typeof AGENTS)[number][\"name\"];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next-multi-agent/app/page.tsx:Home",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        40
+      ],
+      "name": "Home",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function Home() -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next-multi-agent/app/page.tsx:AgentPanel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        100
+      ],
+      "name": "AgentPanel",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  readonly agent: {\r\n    readonly description: string;\r\n    readonly initialPrompt: string;\r\n    readonly name: AgentName;\r\n  };\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function AgentPanel(_: {\r\n  readonly agent: {\r\n    readonly description: string;\r\n    readonly initialPrompt: string;\r\n    readonly name: AgentName;\r\n  };\r\n}) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

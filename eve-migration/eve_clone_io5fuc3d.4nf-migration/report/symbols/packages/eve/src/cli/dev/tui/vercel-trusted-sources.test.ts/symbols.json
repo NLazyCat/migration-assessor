@@ -1,0 +1,209 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:rule",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "rule",
+      "params": [
+        {
+          "name": "from",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "to",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TrustedSourceEnvironmentRule",
+      "signature": "export function rule(from: string, to: string) -> TrustedSourceEnvironmentRule",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:self",
+      "kind": "variable",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "self",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:PREVIEW_TARGET",
+      "kind": "variable",
+      "line_range": [
+        28,
+        32
+      ],
+      "name": "PREVIEW_TARGET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:PRODUCTION_TARGET",
+      "kind": "variable",
+      "line_range": [
+        33,
+        38
+      ],
+      "name": "PRODUCTION_TARGET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:captureSequence",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        46
+      ],
+      "name": "captureSequence",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function captureSequence() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:success",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        50
+      ],
+      "name": "success",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureResult",
+      "signature": "export function success(value: unknown) -> VercelCaptureResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:projectResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        64
+      ],
+      "name": "projectResponse",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "customEnvironmentSlugs",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "trustedSources",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function projectResponse(id: string, name: string, customEnvironmentSlugs: readonly string[], trustedSources: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:failure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        66,
+        68
+      ],
+      "name": "failure",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureResult",
+      "signature": "export function failure(message: string) -> VercelCaptureResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:accessDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        70,
+        74
+      ],
+      "name": "accessDeps",
+      "params": [
+        {
+          "name": "captureVercel",
+          "optional": false,
+          "type": "VercelTrustedSourceDeps[\"captureVercel\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Partial<VercelTrustedSourceDeps>",
+      "signature": "export function accessDeps(captureVercel: VercelTrustedSourceDeps[\"captureVercel\"]) -> Partial<VercelTrustedSourceDeps>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts:prepareAndApply",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        76,
+        95
+      ],
+      "name": "prepareAndApply",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly captureVercel: VercelTrustedSourceDeps[\"captureVercel\"];\r\n  readonly prompter: Prompter;\r\n  readonly target?: typeof PRODUCTION_TARGET;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function prepareAndApply(input: {\r\n  readonly captureVercel: VercelTrustedSourceDeps[\"captureVercel\"];\r\n  readonly prompter: Prompter;\r\n  readonly target?: typeof PRODUCTION_TARGET;\r\n}) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

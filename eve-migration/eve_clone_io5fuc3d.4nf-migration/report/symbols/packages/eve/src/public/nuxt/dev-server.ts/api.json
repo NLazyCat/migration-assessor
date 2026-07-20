@@ -1,0 +1,157 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "EVE_BASE_URL_ENV",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_BASE_URL_ENV: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        21,
+        24
+      ],
+      "name": "EveProcessHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveProcessHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "origin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "origin: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "process",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChildProcess",
+      "signature": "process?: : ChildProcess"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        31
+      ],
+      "name": "EveDevServerRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveDevServerRegistry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "origin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "origin: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "pid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "pid: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "updatedAt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "updatedAt: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        81
+      ],
+      "name": "normalizeDevServerRegistry",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveDevServerRegistry | undefined",
+      "signature": "export function normalizeDevServerRegistry(value: unknown) -> EveDevServerRegistry | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        263,
+        283
+      ],
+      "name": "resolveSharedEveDevServer",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function resolveSharedEveDevServer(appRoot: string) -> Promise<EveProcessHandle>"
+    }
+  ],
+  "module": "packages/eve/src/public/nuxt/dev-server.ts"
+}

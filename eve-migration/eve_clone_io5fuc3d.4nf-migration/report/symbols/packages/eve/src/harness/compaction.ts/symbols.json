@@ -1,0 +1,336 @@
+{
+  "module": "packages/eve/src/harness/compaction.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:COMPACTION_SUMMARY_RESERVE_TOKENS",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "COMPACTION_SUMMARY_RESERVE_TOKENS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:ModelMessageContentPart",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "ModelMessageContentPart",
+      "partial_analysis": false,
+      "value": "Exclude<ModelMessage[\"content\"], string>[number];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:estimateTokens",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "estimateTokens",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function estimateTokens(value: unknown) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:COMPACTION_PROMPT_OVERHEAD_TOKENS",
+      "kind": "variable",
+      "line_range": [
+        30,
+        33
+      ],
+      "name": "COMPACTION_PROMPT_OVERHEAD_TOKENS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:getInputTokenCount",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        58
+      ],
+      "name": "getInputTokenCount",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function getInputTokenCount(messages: readonly ModelMessage[], config: CompactionConfig) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:shouldCompact",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        72
+      ],
+      "name": "shouldCompact",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldCompact(messages: readonly ModelMessage[], config: CompactionConfig) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:resolveCompactionModel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        80,
+        99
+      ],
+      "name": "resolveCompactionModel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compactionModelReference?: RuntimeModelReference;\r\n  readonly model: LanguageModel;\r\n  readonly modelReference: RuntimeModelReference;\r\n  readonly resolveModel: ToolLoopHarnessConfig[\"resolveModel\"];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly model: LanguageModel;\r\n  readonly providerOptions: Parameters<typeof generateText>[0][\"providerOptions\"];\r\n}>",
+      "signature": "export function resolveCompactionModel(input: {\r\n  readonly compactionModelReference?: RuntimeModelReference;\r\n  readonly model: LanguageModel;\r\n  readonly modelReference: RuntimeModelReference;\r\n  readonly resolveModel: ToolLoopHarnessConfig[\"resolveModel\"];\r\n}) -> Promise<{\r\n  readonly model: LanguageModel;\r\n  readonly providerOptions: Parameters<typeof generateText>[0][\"providerOptions\"];\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:compactMessages",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        105,
+        165
+      ],
+      "name": "compactMessages",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "ModelMessage[]"
+        },
+        {
+          "name": "model",
+          "optional": false,
+          "type": "LanguageModel"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        },
+        {
+          "name": "providerOptions",
+          "optional": true,
+          "type": "Parameters<typeof generateText>[0][\"providerOptions\"]"
+        },
+        {
+          "name": "telemetry",
+          "optional": true,
+          "type": "TelemetryOptions"
+        },
+        {
+          "name": "headers",
+          "optional": true,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "abortSignal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ModelMessage[]>",
+      "signature": "export function compactMessages(messages: ModelMessage[], model: LanguageModel, config: CompactionConfig, providerOptions: Parameters<typeof generateText>[0][\"providerOptions\"], telemetry: TelemetryOptions, headers: Record<string, string>, abortSignal: AbortSignal) -> Promise<ModelMessage[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:extractPreviousCheckpoint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        167,
+        185
+      ],
+      "name": "extractPreviousCheckpoint",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly conversation: ModelMessage[];\r\n  readonly previousCheckpoint: string | undefined;\r\n}",
+      "signature": "export function extractPreviousCheckpoint(messages: readonly ModelMessage[]) -> {\r\n  readonly conversation: ModelMessage[];\r\n  readonly previousCheckpoint: string | undefined;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:keepNonToolResultMessages",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        195,
+        215
+      ],
+      "name": "keepNonToolResultMessages",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelMessage[]",
+      "signature": "export function keepNonToolResultMessages(messages: readonly ModelMessage[]) -> ModelMessage[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:assistantMessageText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        221,
+        233
+      ],
+      "name": "assistantMessageText",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "ModelMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function assistantMessageText(message: ModelMessage) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:selectRecentWindowSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        235,
+        260
+      ],
+      "name": "selectRecentWindowSize",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function selectRecentWindowSize(messages: readonly ModelMessage[], config: CompactionConfig) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:resolveCompactionSummaryReserve",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        262,
+        267
+      ],
+      "name": "resolveCompactionSummaryReserve",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function resolveCompactionSummaryReserve(config: CompactionConfig) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/compaction.ts:splitMessagesForCompaction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        269,
+        287
+      ],
+      "name": "splitMessagesForCompaction",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "keep",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly older: ModelMessage[];\r\n  readonly recent: ModelMessage[];\r\n}",
+      "signature": "export function splitMessagesForCompaction(messages: readonly ModelMessage[], keep: number) -> {\r\n  readonly older: ModelMessage[];\r\n  readonly recent: ModelMessage[];\r\n}",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+{
+  "module": "packages/eve/src/setup/slackbot.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slackbot.ts:SlackbotProvisionDeps:readProjectLink",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "readProjectLink",
+          "partial_analysis": false,
+          "return_type": ": typeof readProjectLink",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slackbot.ts:SlackbotProvisionDeps:delay",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "delay",
+          "partial_analysis": false,
+          "return_type": ": (ms: number, signal?: AbortSignal) => Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slackbot.ts:SlackbotProvisionDeps:now",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "now",
+          "partial_analysis": false,
+          "return_type": ": () => number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slackbot.ts:SlackbotProvisionDeps",
+      "kind": "interface",
+      "line_range": [
+        40,
+        47
+      ],
+      "name": "SlackbotProvisionDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:defaultDeps",
+      "kind": "variable",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "defaultDeps",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:realDelay",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        51,
+        52
+      ],
+      "name": "realDelay",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:monotonicNow",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "monotonicNow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:WORKSPACE_POLL_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "WORKSPACE_POLL_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:WORKSPACE_POLL_INTERVAL_MS",
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "WORKSPACE_POLL_INTERVAL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:ProvisionSlackbotResult",
+      "kind": "type_alias",
+      "line_range": [
+        73,
+        89
+      ],
+      "name": "ProvisionSlackbotResult",
+      "partial_analysis": false,
+      "value": "| { state: \"connector-lookup-failed\" }\r\n  | { state: \"create-failed\" }\r\n  | { state: \"cancelled\" }\r\n  | { state: \"existing-not-installed\"; connectorUid: string }\r\n  | { state: \"cleanup-failed\"; connectorUids: readonly string[] }\r\n  | { state: \"detach-failed\"; connectorUid: string }\r\n  | { state: \"attach-failed\"; connectorUid: string }\r\n  | { state: \"not-installed\" }\r\n  | { state: \"installation-check-failed\"; connectorUid: string }\r\n  | {\r\n      state: \"attached\";\r\n      connectorUid: string;\r\n      /** Deep link that opens a DM compose with the bot (\"chat with your agent\"). */\r\n      chatUrl?: string;\r\n      workspaceName?: string;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:SlackWorkspacePollResult",
+      "kind": "type_alias",
+      "line_range": [
+        92,
+        95
+      ],
+      "name": "SlackWorkspacePollResult",
+      "partial_analysis": false,
+      "value": "| { state: \"connected\"; workspace: SlackWorkspaceConnection }\r\n  | { state: \"timed-out\" }\r\n  | { state: \"failed\"; message: string };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:AttemptOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        98,
+        109
+      ],
+      "name": "AttemptOutcome",
+      "partial_analysis": false,
+      "value": "| {\r\n      state: \"attached\";\r\n      ref: SlackConnectorRef;\r\n      workspace?: SlackWorkspaceConnection;\r\n    }\r\n  | { state: \"create-failed\" }\r\n  | { state: \"unresolved\" }\r\n  | { state: \"detach-failed\"; ref: SlackConnectorRef }\r\n  | { state: \"attach-failed\"; ref: SlackConnectorRef }\r\n  | { state: \"timed-out\"; ref: SlackConnectorRef }\r\n  | { state: \"failed\"; ref: SlackConnectorRef; message: string };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:Phase",
+      "kind": "type_alias",
+      "line_range": [
+        115,
+        115
+      ],
+      "name": "Phase",
+      "partial_analysis": false,
+      "value": "<T>(message: string, task: () => Promise<T>) => Promise<T>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:AttemptSource",
+      "kind": "type_alias",
+      "line_range": [
+        117,
+        119
+      ],
+      "name": "AttemptSource",
+      "partial_analysis": false,
+      "value": "| { state: \"existing\"; ref: SlackConnectorRef }\r\n  | { state: \"new\"; baselineConnectorUids: ReadonlySet<string> };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:ExistingAttemptSource",
+      "kind": "type_alias",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "ExistingAttemptSource",
+      "partial_analysis": false,
+      "value": "Extract<AttemptSource, { state: \"existing\" }>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:NewAttemptSource",
+      "kind": "type_alias",
+      "line_range": [
+        122,
+        122
+      ],
+      "name": "NewAttemptSource",
+      "partial_analysis": false,
+      "value": "Extract<AttemptSource, { state: \"new\" }>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:pollSlackWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        128,
+        161
+      ],
+      "name": "pollSlackWorkspace",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "SlackbotProvisionDeps"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "connectorId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "orgId",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ReturnType<typeof createPromptCommandOutput>"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackWorkspacePollResult>",
+      "signature": "export function pollSlackWorkspace(deps: SlackbotProvisionDeps, projectRoot: string, connectorId: string, orgId: string | undefined, onOutput: ReturnType<typeof createPromptCommandOutput>, signal: AbortSignal) -> Promise<SlackWorkspacePollResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:isAbortFromSignal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        168
+      ],
+      "name": "isAbortFromSignal",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAbortFromSignal(error: unknown, signal: AbortSignal | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:cleanupFailureResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        177
+      ],
+      "name": "cleanupFailureResult",
+      "params": [
+        {
+          "name": "cleanup",
+          "optional": false,
+          "type": "Extract<SlackConnectorCleanupResult, { state: \"failed\" }>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Extract<ProvisionSlackbotResult, { state: \"cleanup-failed\" }>",
+      "signature": "export function cleanupFailureResult(cleanup: Extract<SlackConnectorCleanupResult, { state: \"failed\" }>) -> Extract<ProvisionSlackbotResult, { state: \"cleanup-failed\" }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:runAttempt",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        188,
+        255
+      ],
+      "name": "runAttempt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  log: ChannelSetupLog;\r\n  deps: SlackbotProvisionDeps;\r\n  projectRoot: string;\r\n  orgId: string | undefined;\r\n  slug: string;\r\n  source: AttemptSource;\r\n  onOutput: ReturnType<typeof createPromptCommandOutput>;\r\n  signal: AbortSignal | undefined;\r\n  phase: Phase;\r\n  onCreated: (ref: SlackConnectorRef) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AttemptOutcome>",
+      "signature": "export function runAttempt(input: {\r\n  log: ChannelSetupLog;\r\n  deps: SlackbotProvisionDeps;\r\n  projectRoot: string;\r\n  orgId: string | undefined;\r\n  slug: string;\r\n  source: AttemptSource;\r\n  onOutput: ReturnType<typeof createPromptCommandOutput>;\r\n  signal: AbortSignal | undefined;\r\n  phase: Phase;\r\n  onCreated: (ref: SlackConnectorRef) => void;\r\n}) -> Promise<AttemptOutcome>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:RaceResult",
+      "kind": "type_alias",
+      "line_range": [
+        258,
+        260
+      ],
+      "name": "RaceResult",
+      "partial_analysis": false,
+      "value": "| { via: \"work\"; outcome: AttemptOutcome }\r\n  | { via: \"choice\"; choice: string | undefined; settled: AttemptOutcome | undefined };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:raceAttemptAgainstChoice",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        271,
+        308
+      ],
+      "name": "raceAttemptAgainstChoice",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  prompt: ChannelSetupChoice;\r\n  outerSignal: AbortSignal | undefined;\r\n  run: (signal: AbortSignal) => Promise<AttemptOutcome>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RaceResult>",
+      "signature": "export function raceAttemptAgainstChoice(input: {\r\n  prompt: ChannelSetupChoice;\r\n  outerSignal: AbortSignal | undefined;\r\n  run: (signal: AbortSignal) => Promise<AttemptOutcome>;\r\n}) -> Promise<RaceResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slackbot.ts:ProvisionSlackbotOptions:signal",
+          "kind": "property",
+          "line_range": [
+            321,
+            321
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slackbot.ts:ProvisionSlackbotOptions:awaitChoice",
+          "kind": "property",
+          "line_range": [
+            323,
+            323
+          ],
+          "name": "awaitChoice",
+          "partial_analysis": false,
+          "return_type": ": ChannelSetupAwaitChoice",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slackbot.ts:ProvisionSlackbotOptions",
+      "kind": "interface",
+      "line_range": [
+        316,
+        324
+      ],
+      "name": "ProvisionSlackbotOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:provisionSlackbot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        326,
+        626
+      ],
+      "name": "provisionSlackbot",
+      "params": [
+        {
+          "name": "log",
+          "optional": false,
+          "type": "ChannelSetupLog"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "SlackbotProvisionDeps"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ProvisionSlackbotOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProvisionSlackbotResult>",
+      "signature": "export function provisionSlackbot(log: ChannelSetupLog, projectRoot: string, slug: string, deps: SlackbotProvisionDeps, options: ProvisionSlackbotOptions) -> Promise<ProvisionSlackbotResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slackbot.ts:reconcileSlackUid",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        631,
+        647
+      ],
+      "name": "reconcileSlackUid",
+      "params": [
+        {
+          "name": "log",
+          "optional": false,
+          "type": "ChannelSetupLog"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "slackbot",
+          "optional": false,
+          "type": "ProvisionSlackbotResult"
+        },
+        {
+          "name": "expectedUid",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function reconcileSlackUid(log: ChannelSetupLog, projectRoot: string, slackbot: ProvisionSlackbotResult, expectedUid: string) -> Promise<boolean>",
+      "visibility": "Public"
+    }
+  ]
+}

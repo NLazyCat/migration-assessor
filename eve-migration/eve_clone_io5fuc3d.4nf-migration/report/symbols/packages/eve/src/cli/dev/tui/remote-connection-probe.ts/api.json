@@ -1,0 +1,72 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        16
+      ],
+      "name": "RemoteProbeResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RemoteProbeResult = Extract<\r\n  RemoteConnectionState,\r\n  { state: \"ready\" | \"auth-required\" | \"unavailable\" }\r\n>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "RemoteProbePhase",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RemoteProbePhase = \"connection-check\" | \"authentication-verification\";"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        71
+      ],
+      "name": "classifyRemoteError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "phase",
+          "optional": false,
+          "type": "RemoteProbePhase"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RemoteProbeResult",
+      "signature": "export function classifyRemoteError(error: unknown, phase: RemoteProbePhase) -> RemoteProbeResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        108
+      ],
+      "name": "probeRemoteInfo",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly client: Client;\r\n  readonly phase: RemoteProbePhase;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RemoteProbeResult>",
+      "signature": "export function probeRemoteInfo(input: {\r\n  readonly client: Client;\r\n  readonly phase: RemoteProbePhase;\r\n}) -> Promise<RemoteProbeResult>"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/remote-connection-probe.ts"
+}

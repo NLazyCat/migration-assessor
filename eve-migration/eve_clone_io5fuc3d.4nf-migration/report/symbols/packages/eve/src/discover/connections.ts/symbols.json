@@ -1,0 +1,140 @@
+{
+  "module": "packages/eve/src/discover/connections.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/connections.ts:DISCOVER_CONNECTIONS_DIRECTORY_INVALID",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DISCOVER_CONNECTIONS_DIRECTORY_INVALID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/connections.ts:DISCOVER_CONNECTION_FILE_FOLDER_COLLISION",
+      "kind": "variable",
+      "line_range": [
+        25,
+        26
+      ],
+      "name": "DISCOVER_CONNECTION_FILE_FOLDER_COLLISION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/connections.ts:DISCOVER_CONNECTION_FOLDER_EMPTY",
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "DISCOVER_CONNECTION_FOLDER_EMPTY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/connections.ts:CONNECTION_DEFINITION_BASE_NAME",
+      "kind": "variable",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "CONNECTION_DEFINITION_BASE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/connections.ts:DiscoverConnectionSourcesResult:connections",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "connections",
+          "partial_analysis": false,
+          "return_type": ": ConnectionSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/connections.ts:DiscoverConnectionSourcesResult:diagnostics",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnostic[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/connections.ts:DiscoverConnectionSourcesResult",
+      "kind": "interface",
+      "line_range": [
+        43,
+        46
+      ],
+      "name": "DiscoverConnectionSourcesResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/connections.ts:discoverConnectionSources",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        51,
+        205
+      ],
+      "name": "discoverConnectionSources",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  rootEntries: readonly ProjectSourceEntry[];\r\n  rootPath: string;\r\n  source: ProjectSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoverConnectionSourcesResult>",
+      "signature": "export function discoverConnectionSources(input: {\r\n  rootEntries: readonly ProjectSourceEntry[];\r\n  rootPath: string;\r\n  source: ProjectSource;\r\n}) -> Promise<DiscoverConnectionSourcesResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/connections.ts:collectFolderConnectionModuleCandidates",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        211,
+        227
+      ],
+      "name": "collectFolderConnectionModuleCandidates",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "readonly ProjectSourceEntry[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function collectFolderConnectionModuleCandidates(entries: readonly ProjectSourceEntry[]) -> readonly string[]",
+      "visibility": "Private"
+    }
+  ]
+}

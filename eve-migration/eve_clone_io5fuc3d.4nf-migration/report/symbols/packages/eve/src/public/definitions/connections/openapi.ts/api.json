@@ -1,0 +1,139 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "OpenAPISpecSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type OpenAPISpecSource = string | Record<string, unknown>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        36,
+        103
+      ],
+      "name": "OpenAPIConnectionDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface OpenAPIConnectionDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "spec",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": OpenAPISpecSource",
+      "signature": "spec: : OpenAPISpecSource"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "baseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "baseUrl?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionAuthDefinition",
+      "signature": "auth?: : ConnectionAuthDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "approval",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Approval",
+      "signature": "approval?: : Approval"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "headers",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HeadersDefinition",
+      "signature": "headers?: : HeadersDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "operations",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ToolFilterDefinition",
+      "signature": "operations?: : ToolFilterDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        113,
+        125
+      ],
+      "name": "defineOpenAPIConnection",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "OpenAPIConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenAPIConnectionDefinition",
+      "signature": "export function defineOpenAPIConnection(definition: OpenAPIConnectionDefinition) -> OpenAPIConnectionDefinition"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/connections/openapi.ts"
+}

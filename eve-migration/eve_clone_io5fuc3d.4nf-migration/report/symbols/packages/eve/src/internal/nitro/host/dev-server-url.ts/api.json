@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "DEFAULT_DEVELOPMENT_SERVER_HOST",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_DEVELOPMENT_SERVER_HOST: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        15,
+        29
+      ],
+      "name": "normalizeDevelopmentServerClientUrl",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeDevelopmentServerClientUrl(serverUrl: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-server-url.ts"
+}

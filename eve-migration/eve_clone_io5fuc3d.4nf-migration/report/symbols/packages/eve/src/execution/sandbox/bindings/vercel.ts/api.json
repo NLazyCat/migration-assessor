@@ -1,0 +1,75 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        52,
+        56
+      ],
+      "name": "CreateVercelSandboxInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateVercelSandboxInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "createSandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CreateVercelSandbox",
+      "signature": "createSandbox?: : CreateVercelSandbox"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "createOptions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": VercelCreateOptions",
+      "signature": "createOptions?: : VercelCreateOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "loadSandboxModule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => Promise<VercelModule>",
+      "signature": "loadSandboxModule?: : () => Promise<VercelModule>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        65,
+        162
+      ],
+      "name": "createVercelSandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateVercelSandboxInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend<VercelSandboxBootstrapUseOptions, VercelSandboxSessionUseOptions>",
+      "signature": "export function createVercelSandbox(input: CreateVercelSandboxInput) -> SandboxBackend<VercelSandboxBootstrapUseOptions, VercelSandboxSessionUseOptions>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel.ts"
+}

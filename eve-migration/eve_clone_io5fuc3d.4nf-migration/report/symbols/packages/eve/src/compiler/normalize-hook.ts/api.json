@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        22
+      ],
+      "name": "compileHookEntry",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "HookSourceRef"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledHookDefinition",
+      "signature": "export function compileHookEntry(source: HookSourceRef) -> CompiledHookDefinition"
+    }
+  ],
+  "module": "packages/eve/src/compiler/normalize-hook.ts"
+}

@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/public/channels/slack/verify.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/verify.test.ts:SECRET",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "SECRET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/verify.test.ts:signedRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        32
+      ],
+      "name": "signedRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  body: string;\r\n  timestamp?: number;\r\n  secret?: string;\r\n  signature?: string;\r\n  omitTimestamp?: boolean;\r\n  omitSignature?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function signedRequest(input: {\r\n  body: string;\r\n  timestamp?: number;\r\n  secret?: string;\r\n  signature?: string;\r\n  omitTimestamp?: boolean;\r\n  omitSignature?: boolean;\r\n}) -> Request",
+      "visibility": "Private"
+    }
+  ]
+}

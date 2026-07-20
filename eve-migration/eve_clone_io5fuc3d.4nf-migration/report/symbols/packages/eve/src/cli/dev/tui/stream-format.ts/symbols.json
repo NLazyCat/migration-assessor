@@ -1,0 +1,467 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/stream-format.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:TerminalKey",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        39
+      ],
+      "name": "TerminalKey",
+      "partial_analysis": false,
+      "value": "| {\r\n      type: \"text\";\r\n      value: string;\r\n      /** Terminal framing, not proof that the text came from a physical keypress. */\r\n      framing: \"unframed\" | \"bracketed-paste\";\r\n    }\r\n  | { type: \"newline\" }\r\n  | { type: \"backspace\" }\r\n  | { type: \"delete\" }\r\n  | { type: \"enter\" }\r\n  | { type: \"up\" }\r\n  | { type: \"down\" }\r\n  | { type: \"left\" }\r\n  | { type: \"right\" }\r\n  | { type: \"home\" }\r\n  | { type: \"end\" }\r\n  | { type: \"tab\" }\r\n  | { type: \"escape\" }\r\n  | { type: \"ctrl-a\" }\r\n  | { type: \"ctrl-e\" }\r\n  | { type: \"ctrl-d\" }\r\n  | { type: \"ctrl-k\" }\r\n  | { type: \"ctrl-n\" }\r\n  | { type: \"ctrl-p\" }\r\n  | { type: \"ctrl-u\" }\r\n  | { type: \"ctrl-w\" }\r\n  | { type: \"ctrl-l\" }\r\n  | { type: \"ctrl-r\" }\r\n  | { type: \"ctrl-c\" }\r\n  | { type: \"ignore\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/stream-format.ts:KeyToken:key",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "return_type": ": TerminalKey",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/stream-format.ts:KeyToken:consumed",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "consumed",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/stream-format.ts:KeyToken:incomplete",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "incomplete",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:KeyToken",
+      "kind": "interface",
+      "line_range": [
+        42,
+        47
+      ],
+      "name": "KeyToken",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:CSI_FINAL",
+      "kind": "variable",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "CSI_FINAL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:PASTE_START",
+      "kind": "variable",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "PASTE_START",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:PASTE_END",
+      "kind": "variable",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "PASTE_END",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:sanitizePastedText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        75
+      ],
+      "name": "sanitizePastedText",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sanitizePastedText(text: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:isIncompletePaste",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "isIncompletePaste",
+      "params": [
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isIncompletePaste(buffer: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:stripPasteStart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "stripPasteStart",
+      "params": [
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripPasteStart(buffer: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:stripPromptControlCharacters",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        101
+      ],
+      "name": "stripPromptControlCharacters",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripPromptControlCharacters(text: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:nextKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        163
+      ],
+      "name": "nextKey",
+      "params": [
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "KeyToken",
+      "signature": "export function nextKey(buffer: string) -> KeyToken",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:parseKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        165,
+        237
+      ],
+      "name": "parseKey",
+      "params": [
+        {
+          "name": "chunk",
+          "optional": false,
+          "type": "Buffer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TerminalKey",
+      "signature": "export function parseKey(chunk: Buffer) -> TerminalKey",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/stream-format.ts:AssistantResponseStats:totalTokens",
+          "kind": "property",
+          "line_range": [
+            240,
+            240
+          ],
+          "name": "totalTokens",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/stream-format.ts:AssistantResponseStats:outputTokens",
+          "kind": "property",
+          "line_range": [
+            241,
+            241
+          ],
+          "name": "outputTokens",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/stream-format.ts:AssistantResponseStats:tokensPerSecond",
+          "kind": "property",
+          "line_range": [
+            242,
+            242
+          ],
+          "name": "tokensPerSecond",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:AssistantResponseStats",
+      "kind": "interface",
+      "line_range": [
+        239,
+        243
+      ],
+      "name": "AssistantResponseStats",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:takeUntil",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        245,
+        274
+      ],
+      "name": "takeUntil",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "AsyncIterable<T>"
+        },
+        {
+          "name": "stop",
+          "optional": false,
+          "type": "Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncIterable<T>",
+      "signature": "export function takeUntil(source: AsyncIterable<T>, stop: Promise<void>) -> AsyncIterable<T>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:formatCompactTokenCount",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        277,
+        282
+      ],
+      "name": "formatCompactTokenCount",
+      "params": [
+        {
+          "name": "count",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatCompactTokenCount(count: number) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:formatTokenFlow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        289,
+        298
+      ],
+      "name": "formatTokenFlow",
+      "params": [
+        {
+          "name": "flow",
+          "optional": false,
+          "type": "{ inputTokens: number; outputTokens: number; contextSize?: number }"
+        },
+        {
+          "name": "glyph",
+          "optional": false,
+          "type": "{ arrowUp: string; arrowDown: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatTokenFlow(flow: { inputTokens: number; outputTokens: number; contextSize?: number }, glyph: { arrowUp: string; arrowDown: string }) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:formatContextPercentage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        300,
+        308
+      ],
+      "name": "formatContextPercentage",
+      "params": [
+        {
+          "name": "tokens",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "contextSize",
+          "optional": false,
+          "type": "number | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatContextPercentage(tokens: number, contextSize: number | undefined) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:formatAssistantResponseStats",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        310,
+        321
+      ],
+      "name": "formatAssistantResponseStats",
+      "params": [
+        {
+          "name": "stats",
+          "optional": false,
+          "type": "AssistantResponseStats"
+        },
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "AssistantResponseStatsMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatAssistantResponseStats(stats: AssistantResponseStats, mode: AssistantResponseStatsMode) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:formatTokensPerSecond",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        323,
+        326
+      ],
+      "name": "formatTokensPerSecond",
+      "params": [
+        {
+          "name": "tokensPerSecond",
+          "optional": false,
+          "type": "number | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatTokensPerSecond(tokensPerSecond: number | undefined) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/stream-format.ts:formatNumber",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        328,
+        332
+      ],
+      "name": "formatNumber",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatNumber(value: number) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

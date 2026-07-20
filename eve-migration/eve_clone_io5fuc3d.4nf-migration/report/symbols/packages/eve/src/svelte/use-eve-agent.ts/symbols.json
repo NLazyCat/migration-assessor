@@ -1,0 +1,540 @@
+{
+  "module": "packages/eve/src/svelte/use-eve-agent.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentStatus",
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "UseEveAgentStatus",
+      "partial_analysis": false,
+      "value": "EveAgentStoreStatus;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentSnapshot",
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "UseEveAgentSnapshot",
+      "partial_analysis": false,
+      "value": "EveAgentStoreSnapshot<TData>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:data",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": TData",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:error",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "error",
+          "partial_analysis": false,
+          "return_type": ": Error | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:events",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:reset",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "reset",
+          "partial_analysis": false,
+          "return_type": ": () => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:send",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "send",
+          "partial_analysis": false,
+          "return_type": ": <TOutput = unknown>(input: SendTurnPayload<TOutput>) => Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:session",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": SessionState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:status",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": UseEveAgentStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn:stop",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "stop",
+          "partial_analysis": false,
+          "return_type": ": () => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentReturn",
+      "kind": "interface",
+      "line_range": [
+        40,
+        57
+      ],
+      "name": "UseEveAgentReturn",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:agent",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "agent",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:auth",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "auth",
+          "partial_analysis": false,
+          "return_type": ": ClientAuth",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:headers",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "headers",
+          "partial_analysis": false,
+          "return_type": ": HeadersValue",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:host",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:initialEvents",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "initialEvents",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:initialSession",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "initialSession",
+          "partial_analysis": false,
+          "return_type": ": SessionState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:maxReconnectAttempts",
+          "kind": "property",
+          "line_range": [
+            102,
+            102
+          ],
+          "name": "maxReconnectAttempts",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:optimistic",
+          "kind": "property",
+          "line_range": [
+            111,
+            111
+          ],
+          "name": "optimistic",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:reducer",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "reducer",
+          "partial_analysis": false,
+          "return_type": ": EveAgentReducer<TData>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions:session",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": ClientSession",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:UseEveAgentOptions",
+      "kind": "interface",
+      "line_range": [
+        67,
+        122
+      ],
+      "name": "UseEveAgentOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:#snapshot",
+          "kind": "property",
+          "line_range": [
+            125,
+            125
+          ],
+          "name": "#snapshot",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:#store",
+          "kind": "property",
+          "line_range": [
+            126,
+            126
+          ],
+          "name": "#store",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:#subscribe",
+          "kind": "property",
+          "line_range": [
+            127,
+            127
+          ],
+          "name": "#subscribe",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            129,
+            145
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "store",
+              "optional": false,
+              "type": "EveAgentStore<TData>"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:data",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            147,
+            150
+          ],
+          "name": "data",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "TData",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:error",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            152,
+            155
+          ],
+          "name": "error",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Error | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:events",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            157,
+            160
+          ],
+          "name": "events",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:session",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            162,
+            165
+          ],
+          "name": "session",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "SessionState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:status",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            167,
+            170
+          ],
+          "name": "status",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "UseEveAgentStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:reset",
+          "kind": "property",
+          "line_range": [
+            172,
+            174
+          ],
+          "name": "reset",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:send",
+          "kind": "property",
+          "line_range": [
+            176,
+            178
+          ],
+          "name": "send",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent:stop",
+          "kind": "property",
+          "line_range": [
+            180,
+            182
+          ],
+          "name": "stop",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:SvelteEveAgent",
+      "kind": "class",
+      "line_range": [
+        124,
+        183
+      ],
+      "name": "SvelteEveAgent",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:useEveAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        185,
+        187
+      ],
+      "name": "useEveAgent",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "UseEveAgentOptions<EveMessageData>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UseEveAgentReturn<EveMessageData>",
+      "signature": "export function useEveAgent(options: UseEveAgentOptions<EveMessageData>) -> UseEveAgentReturn<EveMessageData>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:useEveAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        189,
+        191
+      ],
+      "name": "useEveAgent",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "UseEveAgentOptions<TData> & { readonly reducer: EveAgentReducer<TData> }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UseEveAgentReturn<TData>",
+      "signature": "export function useEveAgent(options: UseEveAgentOptions<TData> & { readonly reducer: EveAgentReducer<TData> }) -> UseEveAgentReturn<TData>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.ts:useEveAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        202,
+        227
+      ],
+      "name": "useEveAgent",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "UseEveAgentOptions<TData>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UseEveAgentReturn<TData>",
+      "signature": "export function useEveAgent(options: UseEveAgentOptions<TData>) -> UseEveAgentReturn<TData>",
+      "visibility": "Public"
+    }
+  ]
+}

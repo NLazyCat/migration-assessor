@@ -1,0 +1,1078 @@
+{
+  "module": "packages/eve/src/public/channels/eve.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:log",
+      "kind": "variable",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:EveEventContext",
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "EveEventContext",
+      "partial_analysis": false,
+      "value": "ChannelSessionOps;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:EveChannelEvents",
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "EveChannelEvents",
+      "partial_analysis": false,
+      "value": "ChannelEvents<EveEventContext>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:origin",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "origin",
+          "partial_analysis": false,
+          "return_type": ": \"*\" | \"null\" | string | readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:methods",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "methods",
+          "partial_analysis": false,
+          "return_type": ": \"*\" | readonly ChannelMethod[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:allowedHeaders",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "allowedHeaders",
+          "partial_analysis": false,
+          "return_type": ": \"*\" | readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:exposedHeaders",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "exposedHeaders",
+          "partial_analysis": false,
+          "return_type": ": \"*\" | readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:credentials",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "credentials",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:maxAge",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "maxAge",
+          "partial_analysis": false,
+          "return_type": ": number | false",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions:preflightStatus",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "preflightStatus",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:EveChannelCorsOptions",
+      "kind": "interface",
+      "line_range": [
+        54,
+        72
+      ],
+      "name": "EveChannelCorsOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:EveChannelCors",
+      "kind": "type_alias",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "EveChannelCors",
+      "partial_analysis": false,
+      "value": "boolean | EveChannelCorsOptions;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveHandle:caller",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "caller",
+          "partial_analysis": false,
+          "return_type": ": SessionAuthContext | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveHandle:request",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "request",
+          "partial_analysis": false,
+          "return_type": ": Request",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveHandle:sessionId",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:EveHandle",
+      "kind": "interface",
+      "line_range": [
+        81,
+        87
+      ],
+      "name": "EveHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveMessageContext:eve",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "eve",
+          "partial_analysis": false,
+          "return_type": ": EveHandle",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:EveMessageContext",
+      "kind": "interface",
+      "line_range": [
+        90,
+        92
+      ],
+      "name": "EveMessageContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:EveMessageResult",
+      "kind": "type_alias",
+      "line_range": [
+        98,
+        101
+      ],
+      "name": "EveMessageResult",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly context?: readonly string[];\r\n} | null;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:EveMessageResultOrPromise",
+      "kind": "type_alias",
+      "line_range": [
+        104,
+        104
+      ],
+      "name": "EveMessageResultOrPromise",
+      "partial_analysis": false,
+      "value": "EveMessageResult | Promise<EveMessageResult>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:defaultEveAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        112
+      ],
+      "name": "defaultEveAuth",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "EveMessageContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext | null",
+      "signature": "export function defaultEveAuth(ctx: EveMessageContext) -> SessionAuthContext | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelInput:auth",
+          "kind": "property",
+          "line_range": [
+            124,
+            124
+          ],
+          "name": "auth",
+          "partial_analysis": false,
+          "return_type": ": AuthFn<Request> | readonly AuthFn<Request>[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelInput:uploadPolicy",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "uploadPolicy",
+          "partial_analysis": false,
+          "return_type": ": UploadPolicyInput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelInput:cors",
+          "kind": "property",
+          "line_range": [
+            135,
+            135
+          ],
+          "name": "cors",
+          "partial_analysis": false,
+          "return_type": ": EveChannelCors",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelInput:onMessage",
+          "kind": "property",
+          "line_range": [
+            140,
+            143
+          ],
+          "name": "onMessage",
+          "partial_analysis": false,
+          "return_type": ": (\r\n    ctx: EveMessageContext,\r\n    message: string | UserContent,\r\n  ) => EveMessageResultOrPromise",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:EveChannelInput:events",
+          "kind": "property",
+          "line_range": [
+            148,
+            148
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": EveChannelEvents",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:EveChannelInput",
+      "kind": "interface",
+      "line_range": [
+        118,
+        149
+      ],
+      "name": "EveChannelInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:EveChannel",
+      "kind": "interface",
+      "line_range": [
+        156,
+        156
+      ],
+      "name": "EveChannel",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:eveChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        167,
+        398
+      ],
+      "name": "eveChannel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EveChannelInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveChannel",
+      "signature": "export function eveChannel(input: EveChannelInput) -> EveChannel",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:normalizeEveCors",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        400,
+        443
+      ],
+      "name": "normalizeEveCors",
+      "params": [
+        {
+          "name": "cors",
+          "optional": false,
+          "type": "EveChannelCors | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelCors",
+      "signature": "export function normalizeEveCors(cors: EveChannelCors | undefined) -> ChannelCors",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:normalizeEveCorsOrigin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        445,
+        455
+      ],
+      "name": "normalizeEveCorsOrigin",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "NonNullable<EveChannelCorsOptions[\"origin\"]>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"*\" | \"null\" | readonly string[]",
+      "signature": "export function normalizeEveCorsOrigin(origin: NonNullable<EveChannelCorsOptions[\"origin\"]>) -> \"*\" | \"null\" | readonly string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:OnMessageOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        457,
+        465
+      ],
+      "name": "OnMessageOutcome",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly auth: SessionAuthContext | null;\r\n      readonly context?: readonly string[];\r\n      readonly dispatch: true;\r\n    }\r\n  | {\r\n      readonly dispatch: false;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:resolveOnMessage",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        467,
+        501
+      ],
+      "name": "resolveOnMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly config: EveChannelInput;\r\n  readonly message: string | UserContent;\r\n  readonly request: Request;\r\n  readonly sessionId?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<OnMessageOutcome | Response>",
+      "signature": "export function resolveOnMessage(input: {\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly config: EveChannelInput;\r\n  readonly message: string | UserContent;\r\n  readonly request: Request;\r\n  readonly sessionId?: string;\r\n}) -> Promise<OnMessageOutcome | Response>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:defaultOnMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        503,
+        505
+      ],
+      "name": "defaultOnMessage",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "EveMessageContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Exclude<EveMessageResult, null>",
+      "signature": "export function defaultOnMessage(ctx: EveMessageContext) -> Exclude<EveMessageResult, null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:droppedMessageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        507,
+        512
+      ],
+      "name": "droppedMessageResponse",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function droppedMessageResponse() -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedCreateBody:callback",
+          "kind": "property",
+          "line_range": [
+            515,
+            515
+          ],
+          "name": "callback",
+          "partial_analysis": false,
+          "return_type": ": SessionCallback",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedCreateBody:message",
+          "kind": "property",
+          "line_range": [
+            516,
+            516
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string | UserContent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedCreateBody:mode",
+          "kind": "property",
+          "line_range": [
+            517,
+            517
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": RunMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedCreateBody:context",
+          "kind": "property",
+          "line_range": [
+            518,
+            518
+          ],
+          "name": "context",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedCreateBody:outputSchema",
+          "kind": "property",
+          "line_range": [
+            519,
+            519
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:ParsedCreateBody",
+      "kind": "interface",
+      "line_range": [
+        514,
+        520
+      ],
+      "name": "ParsedCreateBody",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseCreateBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        522,
+        546
+      ],
+      "name": "parseCreateBody",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParsedCreateBody | Response",
+      "signature": "export function parseCreateBody(payload: Record<string, unknown>) -> ParsedCreateBody | Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedContinueBody:message",
+          "kind": "property",
+          "line_range": [
+            549,
+            549
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string | UserContent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedContinueBody:continuationToken",
+          "kind": "property",
+          "line_range": [
+            550,
+            550
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedContinueBody:inputResponses",
+          "kind": "property",
+          "line_range": [
+            551,
+            551
+          ],
+          "name": "inputResponses",
+          "partial_analysis": false,
+          "return_type": ": readonly InputResponse[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedContinueBody:context",
+          "kind": "property",
+          "line_range": [
+            552,
+            552
+          ],
+          "name": "context",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedContinueBody:outputSchema",
+          "kind": "property",
+          "line_range": [
+            553,
+            553
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:ParsedContinueBody",
+      "kind": "interface",
+      "line_range": [
+        548,
+        554
+      ],
+      "name": "ParsedContinueBody",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseContinueBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        556,
+        592
+      ],
+      "name": "parseContinueBody",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParsedContinueBody | Response",
+      "signature": "export function parseContinueBody(payload: Record<string, unknown>) -> ParsedContinueBody | Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/eve.ts:ParsedCancelTurnBody:turnId",
+          "kind": "property",
+          "line_range": [
+            595,
+            595
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/eve.ts:ParsedCancelTurnBody",
+      "kind": "interface",
+      "line_range": [
+        594,
+        596
+      ],
+      "name": "ParsedCancelTurnBody",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseCancelTurnBody",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        598,
+        630
+      ],
+      "name": "parseCancelTurnBody",
+      "params": [
+        {
+          "name": "req",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ParsedCancelTurnBody | Response>",
+      "signature": "export function parseCancelTurnBody(req: Request) -> Promise<ParsedCancelTurnBody | Response>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:createSendPayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        632,
+        658
+      ],
+      "name": "createSendPayload",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "ParsedCreateBody"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "| string\r\n  | UserContent\r\n  | {\r\n      readonly message: string | UserContent;\r\n      readonly context?: readonly string[];\r\n      readonly outputSchema?: JsonObject;\r\n    }",
+      "signature": "export function createSendPayload(body: ParsedCreateBody, context: unknown) -> | string\r\n  | UserContent\r\n  | {\r\n      readonly message: string | UserContent;\r\n      readonly context?: readonly string[];\r\n      readonly outputSchema?: JsonObject;\r\n    }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseOutputSchemaField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        660,
+        671
+      ],
+      "name": "parseOutputSchemaField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject | Response | undefined",
+      "signature": "export function parseOutputSchemaField(value: unknown) -> JsonObject | Response | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseCallbackField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        673,
+        679
+      ],
+      "name": "parseCallbackField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionCallback | Response | undefined",
+      "signature": "export function parseCallbackField(value: unknown) -> SessionCallback | Response | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseModeField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        681,
+        688
+      ],
+      "name": "parseModeField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RunMode | Response | undefined",
+      "signature": "export function parseModeField(value: unknown) -> RunMode | Response | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseMessageField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        690,
+        710
+      ],
+      "name": "parseMessageField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent | undefined | Response",
+      "signature": "export function parseMessageField(value: unknown) -> string | UserContent | undefined | Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseMessagePart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        712,
+        767
+      ],
+      "name": "parseMessagePart",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TextPart | FilePart | Response",
+      "signature": "export function parseMessagePart(raw: unknown) -> TextPart | FilePart | Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:checkUploadPolicy",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        769,
+        804
+      ],
+      "name": "checkUploadPolicy",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "ParsedCreateBody | ParsedContinueBody"
+        },
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "UploadPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response | null",
+      "signature": "export function checkUploadPolicy(body: ParsedCreateBody | ParsedContinueBody, policy: UploadPolicy) -> Response | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseInputResponses",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        806,
+        825
+      ],
+      "name": "parseInputResponses",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly InputResponse[] | Response | undefined",
+      "signature": "export function parseInputResponses(value: unknown) -> readonly InputResponse[] | Response | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:mergeContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        827,
+        834
+      ],
+      "name": "mergeContext",
+      "params": [
+        {
+          "name": "existing",
+          "optional": false,
+          "type": "readonly string[] | undefined"
+        },
+        {
+          "name": "added",
+          "optional": false,
+          "type": "readonly string[] | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[] | undefined",
+      "signature": "export function mergeContext(existing: readonly string[] | undefined, added: readonly string[] | undefined) -> readonly string[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:CLIENT_CONTEXT_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        836,
+        836
+      ],
+      "name": "CLIENT_CONTEXT_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseClientContextField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        838,
+        877
+      ],
+      "name": "parseClientContextField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[] | Response | undefined",
+      "signature": "export function parseClientContextField(value: unknown) -> string[] | Response | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:toClientContextMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        879,
+        881
+      ],
+      "name": "toClientContextMessage",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toClientContextMessage(content: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:parseStartIndex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        883,
+        894
+      ],
+      "name": "parseStartIndex",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined | Response",
+      "signature": "export function parseStartIndex(request: Request) -> number | undefined | Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/eve.ts:serializeAsNdjson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        896,
+        905
+      ],
+      "name": "serializeAsNdjson",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "ReadableStream<unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadableStream<Uint8Array>",
+      "signature": "export function serializeAsNdjson(events: ReadableStream<unknown>) -> ReadableStream<Uint8Array>",
+      "visibility": "Private"
+    }
+  ]
+}

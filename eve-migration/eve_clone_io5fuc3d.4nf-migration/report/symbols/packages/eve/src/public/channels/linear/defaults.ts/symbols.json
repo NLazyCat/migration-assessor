@@ -1,0 +1,262 @@
+{
+  "module": "packages/eve/src/public/channels/linear/defaults.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:defaultLinearAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        44
+      ],
+      "name": "defaultLinearAuth",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "LinearAgentSessionEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext",
+      "signature": "export function defaultLinearAuth(event: LinearAgentSessionEvent) -> SessionAuthContext",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:defaultOnAgentSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        53
+      ],
+      "name": "defaultOnAgentSession",
+      "params": [
+        {
+          "name": "_ctx",
+          "optional": false,
+          "type": "LinearSessionContext"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "LinearAgentSessionEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearInboundResult",
+      "signature": "export function defaultOnAgentSession(_ctx: LinearSessionContext, event: LinearAgentSessionEvent) -> LinearInboundResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/defaults.ts:LinearDefaultEventOptions:api",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "api",
+          "partial_analysis": false,
+          "return_type": ": LinearApiOptions",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/defaults.ts:LinearDefaultEventOptions:credentials",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "credentials",
+          "partial_analysis": false,
+          "return_type": ": LinearChannelCredentials",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:LinearDefaultEventOptions",
+      "kind": "interface",
+      "line_range": [
+        56,
+        59
+      ],
+      "name": "LinearDefaultEventOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:createDefaultEvents",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        180
+      ],
+      "name": "createDefaultEvents",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "LinearDefaultEventOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearChannelEvents",
+      "signature": "export function createDefaultEvents(options: LinearDefaultEventOptions) -> LinearChannelEvents",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:postActivity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        182,
+        199
+      ],
+      "name": "postActivity",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "Parameters<NonNullable<LinearChannelEvents[\"turn.started\"]>>[1]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "LinearDefaultEventOptions"
+        },
+        {
+          "name": "content",
+          "optional": false,
+          "type": "Parameters<typeof createLinearAgentActivity>[0][\"activity\"][\"content\"]"
+        },
+        {
+          "name": "activityOptions",
+          "optional": false,
+          "type": "{\r\n    readonly ephemeral?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly id: string; readonly success: boolean }>",
+      "signature": "export function postActivity(channel: Parameters<NonNullable<LinearChannelEvents[\"turn.started\"]>>[1], options: LinearDefaultEventOptions, content: Parameters<typeof createLinearAgentActivity>[0][\"activity\"][\"content\"], activityOptions: {\r\n    readonly ephemeral?: boolean;\r\n  }) -> Promise<{ readonly id: string; readonly success: boolean }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:requireAgentSessionId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        201,
+        206
+      ],
+      "name": "requireAgentSessionId",
+      "params": [
+        {
+          "name": "agentSessionId",
+          "optional": false,
+          "type": "string | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function requireAgentSessionId(agentSessionId: string | null) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:linearUserLabel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        208,
+        210
+      ],
+      "name": "linearUserLabel",
+      "params": [
+        {
+          "name": "user",
+          "optional": false,
+          "type": "LinearUser"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function linearUserLabel(user: LinearUser) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:firstNonEmptyLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        212,
+        218
+      ],
+      "name": "firstNonEmptyLine",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function firstNonEmptyLine(text: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:actionLabel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        220,
+        222
+      ],
+      "name": "actionLabel",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "{ readonly kind: string; readonly toolName?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function actionLabel(action: { readonly kind: string; readonly toolName?: string }) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/defaults.ts:actionParameter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        224,
+        239
+      ],
+      "name": "actionParameter",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "{\r\n  readonly description?: string;\r\n  readonly input?: unknown;\r\n  readonly name?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function actionParameter(action: {\r\n  readonly description?: string;\r\n  readonly input?: unknown;\r\n  readonly name?: string;\r\n}) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

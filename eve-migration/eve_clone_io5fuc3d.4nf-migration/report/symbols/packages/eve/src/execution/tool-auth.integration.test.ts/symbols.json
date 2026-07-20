@@ -1,0 +1,72 @@
+{
+  "module": "packages/eve/src/execution/tool-auth.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/tool-auth.integration.test.ts:REQUIRED_ERROR",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "REQUIRED_ERROR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/tool-auth.integration.test.ts:requiredError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        35
+      ],
+      "name": "requiredError",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function requiredError() -> Error",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/tool-auth.integration.test.ts:seedUserPrincipal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        43,
+        53
+      ],
+      "name": "seedUserPrincipal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function seedUserPrincipal() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/tool-auth.integration.test.ts:authoredTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        72
+      ],
+      "name": "authoredTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string;\r\n  readonly execute: (toolInput: unknown, ctx: ToolContext) => unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedToolDefinition",
+      "signature": "export function authoredTool(input: {\r\n  readonly name: string;\r\n  readonly execute: (toolInput: unknown, ctx: ToolContext) => unknown;\r\n}) -> ResolvedToolDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

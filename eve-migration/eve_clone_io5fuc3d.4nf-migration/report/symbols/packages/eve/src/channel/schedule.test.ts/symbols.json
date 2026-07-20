@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/channel/schedule.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/schedule.test.ts:createMockRunHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "createMockRunHandle",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RunHandle",
+      "signature": "export function createMockRunHandle() -> RunHandle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/schedule.test.ts:createMockRuntime",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        32
+      ],
+      "name": "createMockRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Runtime",
+      "signature": "export function createMockRuntime() -> Runtime",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/schedule.test.ts:makeSlackChannelEntry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        57
+      ],
+      "name": "makeSlackChannelEntry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  definition: CompiledChannel;\r\n  resolved: ResolvedChannelDefinition;\r\n}",
+      "signature": "export function makeSlackChannelEntry() -> {\r\n  definition: CompiledChannel;\r\n  resolved: ResolvedChannelDefinition;\r\n}",
+      "visibility": "Private"
+    }
+  ]
+}

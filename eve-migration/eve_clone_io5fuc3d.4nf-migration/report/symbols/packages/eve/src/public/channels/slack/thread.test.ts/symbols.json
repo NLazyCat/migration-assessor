@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/public/channels/slack/thread.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/thread.test.ts:threadMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        22
+      ],
+      "name": "threadMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly isMe?: boolean;\r\n  readonly threadTs: string;\r\n  readonly ts: string;\r\n  readonly text?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackThreadMessage",
+      "signature": "export function threadMessage(input: {\r\n  readonly isMe?: boolean;\r\n  readonly threadTs: string;\r\n  readonly ts: string;\r\n  readonly text?: string;\r\n}) -> SlackThreadMessage",
+      "visibility": "Private"
+    }
+  ]
+}

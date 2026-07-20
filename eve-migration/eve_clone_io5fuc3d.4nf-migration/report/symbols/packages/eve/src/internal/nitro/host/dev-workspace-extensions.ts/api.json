@@ -1,0 +1,75 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        29
+      ],
+      "name": "DevelopmentWorkspaceExtension",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentWorkspaceExtension { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "config",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ExtensionBuildConfig",
+      "signature": "config: : ExtensionBuildConfig"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "packageRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "buildConfigPaths",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "buildConfigPaths: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        90
+      ],
+      "name": "prepareDevelopmentWorkspaceExtensions",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly changedPaths?: readonly string[];\r\n  readonly previousExtensions?: readonly DevelopmentWorkspaceExtension[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly DevelopmentWorkspaceExtension[]>",
+      "signature": "export function prepareDevelopmentWorkspaceExtensions(input: {\r\n  readonly appRoot: string;\r\n  readonly changedPaths?: readonly string[];\r\n  readonly previousExtensions?: readonly DevelopmentWorkspaceExtension[];\r\n}) -> Promise<readonly DevelopmentWorkspaceExtension[]>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.ts"
+}

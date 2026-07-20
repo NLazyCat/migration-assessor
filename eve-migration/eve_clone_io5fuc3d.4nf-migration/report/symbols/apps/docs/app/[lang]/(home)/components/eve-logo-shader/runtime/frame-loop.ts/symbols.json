@@ -1,0 +1,286 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:ENV_YAW_LERP_SPEED",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "ENV_YAW_LERP_SPEED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:AGENTS_ENV_YAW_LERP_SPEED",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "AGENTS_ENV_YAW_LERP_SPEED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:AGENTS_ENV_YAW_OFFSET",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "AGENTS_ENV_YAW_OFFSET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:ASCII_MOUSE_LERP_SPEED",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "ASCII_MOUSE_LERP_SPEED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:PAINT_MOVEMENT_GRACE_MS",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "PAINT_MOVEMENT_GRACE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:CANVAS_FADE_FALLBACK_MS",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "CANVAS_FADE_FALLBACK_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:CANVAS_REVEAL_RENDER_COUNT",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "CANVAS_REVEAL_RENDER_COUNT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:MAX_FRAME_DELTA_SECONDS",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "MAX_FRAME_DELTA_SECONDS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:AGENTS_MAX_FRAME_DELTA_SECONDS",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "AGENTS_MAX_FRAME_DELTA_SECONDS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:PROBE_DATASET_WRITE_INTERVAL_MS",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "PROBE_DATASET_WRITE_INTERVAL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:Renderer",
+      "kind": "type_alias",
+      "line_range": [
+        30,
+        38
+      ],
+      "name": "Renderer",
+      "partial_analysis": false,
+      "value": "{\r\n  render: (\r\n    target: GPUTextureView,\r\n    controls: RenderControls,\r\n    logicalWidth: number,\r\n    logicalHeight: number,\r\n    imprint?: ImprintRenderOptions,\r\n  ) => void;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:IS_PRODUCTION",
+      "kind": "variable",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "IS_PRODUCTION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:EveHeroFrameLoopProbe",
+      "kind": "type_alias",
+      "line_range": [
+        42,
+        46
+      ],
+      "name": "EveHeroFrameLoopProbe",
+      "partial_analysis": false,
+      "value": "{\r\n  frames: number;\r\n  running: boolean;\r\n  lastFrameAt: number;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:getHeroFrameLoopProbe",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        65
+      ],
+      "name": "getHeroFrameLoopProbe",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveHeroFrameLoopProbe | undefined",
+      "signature": "export function getHeroFrameLoopProbe() -> EveHeroFrameLoopProbe | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:DrawLoop",
+      "kind": "type_alias",
+      "line_range": [
+        67,
+        72
+      ],
+      "name": "DrawLoop",
+      "partial_analysis": false,
+      "value": "{\r\n  start: () => void;\r\n  stop: () => void;\r\n  step: (frameTime?: number) => void;\r\n  dispose: () => void;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:createDrawLoop",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        282
+      ],
+      "name": "createDrawLoop",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  state: HeroRuntimeState;\r\n  canvas: HTMLCanvasElement;\r\n  context: GPUCanvasContext;\r\n  renderer: Renderer;\r\n  controlsRef: ControlsRef;\r\n  transitionDebug: EveTransitionDebugState;\r\n  modeTransitionProgressRef: MutableRefObject<number>;\r\n  targetLogoModeProgressRef: MutableRefObject<number>;\r\n  targetAgentsEnvYawMixRef: MutableRefObject<number>;\r\n  defaultMaterial: RenderControls[\"material\"];\r\n  canvasLayoutRef: CanvasLayoutRef;\r\n  devicePixelRatioRef: DevicePixelRatioRef;\r\n  onCanvasRevealed: () => void;\r\n  onFallback: () => void;\r\n  onFatalError: () => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createDrawLoop(_: {\r\n  state: HeroRuntimeState;\r\n  canvas: HTMLCanvasElement;\r\n  context: GPUCanvasContext;\r\n  renderer: Renderer;\r\n  controlsRef: ControlsRef;\r\n  transitionDebug: EveTransitionDebugState;\r\n  modeTransitionProgressRef: MutableRefObject<number>;\r\n  targetLogoModeProgressRef: MutableRefObject<number>;\r\n  targetAgentsEnvYawMixRef: MutableRefObject<number>;\r\n  defaultMaterial: RenderControls[\"material\"];\r\n  canvasLayoutRef: CanvasLayoutRef;\r\n  devicePixelRatioRef: DevicePixelRatioRef;\r\n  onCanvasRevealed: () => void;\r\n  onFallback: () => void;\r\n  onFatalError: () => void;\r\n}) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:stepLogoModeProgress",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        284,
+        295
+      ],
+      "name": "stepLogoModeProgress",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "deltaSeconds",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "durationSeconds",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function stepLogoModeProgress(current: number, target: number, deltaSeconds: number, durationSeconds: number) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts:onCanvasFullyOpaque",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        297,
+        314
+      ],
+      "name": "onCanvasFullyOpaque",
+      "params": [
+        {
+          "name": "canvas",
+          "optional": false,
+          "type": "HTMLCanvasElement"
+        },
+        {
+          "name": "callback",
+          "optional": false,
+          "type": "() => void"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function onCanvasFullyOpaque(canvas: HTMLCanvasElement, callback: () => void) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

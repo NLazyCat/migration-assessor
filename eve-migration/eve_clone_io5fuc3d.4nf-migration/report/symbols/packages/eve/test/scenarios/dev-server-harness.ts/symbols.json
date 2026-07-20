@@ -1,0 +1,558 @@
+{
+  "module": "packages/eve/test/scenarios/dev-server-harness.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/dev-server-harness.ts:RunningEveDev:stderr",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/dev-server-harness.ts:RunningEveDev:stdout",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/dev-server-harness.ts:RunningEveDev:url",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:RunningEveDev",
+      "kind": "interface",
+      "line_range": [
+        17,
+        23
+      ],
+      "name": "RunningEveDev",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/dev-server-harness.ts:StartEveDevOptions:env",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "env",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string | undefined>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/dev-server-harness.ts:StartEveDevOptions:runtime",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "runtime",
+          "partial_analysis": false,
+          "return_type": ": \"bun\" | \"node\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:StartEveDevOptions",
+      "kind": "interface",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "StartEveDevOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:startEveDev",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        37,
+        86
+      ],
+      "name": "startEveDev",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "StartEveDevOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RunningEveDev>",
+      "signature": "export function startEveDev(appRoot: string, options: StartEveDevOptions) -> Promise<RunningEveDev>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:stopEveDevChild",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        114
+      ],
+      "name": "stopEveDevChild",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "ChildProcessByStdio<null, Readable, Readable>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function stopEveDevChild(child: ChildProcessByStdio<null, Readable, Readable>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:runEveDevToExit",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        120,
+        150
+      ],
+      "name": "runEveDevToExit",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "StartEveDevOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly code: number | null; readonly output: string }>",
+      "signature": "export function runEveDevToExit(appRoot: string, options: StartEveDevOptions) -> Promise<{ readonly code: number | null; readonly output: string }>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:spawnEveDev",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        152,
+        168
+      ],
+      "name": "spawnEveDev",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "StartEveDevOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChildProcessByStdio<null, Readable, Readable>",
+      "signature": "export function spawnEveDev(appRoot: string, options: StartEveDevOptions) -> ChildProcessByStdio<null, Readable, Readable>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:isBunAvailable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        177
+      ],
+      "name": "isBunAvailable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isBunAvailable() -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:hasUnsupportedWindowsEsmImport",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        179,
+        185
+      ],
+      "name": "hasUnsupportedWindowsEsmImport",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasUnsupportedWindowsEsmImport(text: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:hasKnownDevServerFailure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        191,
+        202
+      ],
+      "name": "hasKnownDevServerFailure",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasKnownDevServerFailure(text: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:wait",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        204,
+        208
+      ],
+      "name": "wait",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function wait(ms: number) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:waitForCondition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        210,
+        223
+      ],
+      "name": "waitForCondition",
+      "params": [
+        {
+          "name": "condition",
+          "optional": false,
+          "type": "() => boolean | Promise<boolean>"
+        },
+        {
+          "name": "failureMessage",
+          "optional": false,
+          "type": "string | (() => string)"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForCondition(condition: () => boolean | Promise<boolean>, failureMessage: string | (() => string), timeoutMs: number) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:withinDeadline",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        225,
+        243
+      ],
+      "name": "withinDeadline",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "Promise<T>"
+        },
+        {
+          "name": "failureMessage",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withinDeadline(operation: Promise<T>, failureMessage: string, timeoutMs: number) -> Promise<T>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:waitForPath",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        245,
+        272
+      ],
+      "name": "waitForPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForPath(path: string, timeoutMs: number) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:fetchText",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        274,
+        280
+      ],
+      "name": "fetchText",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function fetchText(serverUrl: string, path: string) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:fetchAgentInfo",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        282,
+        288
+      ],
+      "name": "fetchAgentInfo",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoResponse>",
+      "signature": "export function fetchAgentInfo(serverUrl: string) -> Promise<AgentInfoResponse>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:forceDevelopmentRebuild",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        290,
+        297
+      ],
+      "name": "forceDevelopmentRebuild",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function forceDevelopmentRebuild(serverUrl: string) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:readDevelopmentRevision",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        299,
+        309
+      ],
+      "name": "readDevelopmentRevision",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readDevelopmentRevision(serverUrl: string) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:stripAnsi",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        311,
+        322
+      ],
+      "name": "stripAnsi",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripAnsi(text: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:parseServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        324,
+        328
+      ],
+      "name": "parseServerUrl",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function parseServerUrl(stdout: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:waitForServerUrl",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        330,
+        424
+      ],
+      "name": "waitForServerUrl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly child: ChildProcessByStdio<null, Readable, Readable>;\r\n  readonly getOutput: () => {\r\n    readonly stderr: string;\r\n    readonly stdout: string;\r\n  };\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function waitForServerUrl(input: {\r\n  readonly child: ChildProcessByStdio<null, Readable, Readable>;\r\n  readonly getOutput: () => {\r\n    readonly stderr: string;\r\n    readonly stdout: string;\r\n  };\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-harness.ts:requestWithAgent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        430,
+        455
+      ],
+      "name": "requestWithAgent",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "agent",
+          "optional": false,
+          "type": "Agent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly body: string; readonly localPort: number | undefined }>",
+      "signature": "export function requestWithAgent(url: string, agent: Agent) -> Promise<{ readonly body: string; readonly localPort: number | undefined }>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "ManifestCompileContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ManifestCompileContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "modelCatalog",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledRuntimeModelCatalogLoader",
+      "signature": "modelCatalog: : CompiledRuntimeModelCatalogLoader"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "ModuleBackedDefinitionLoadOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ModuleBackedDefinitionLoadOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "externalDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AuthoredModuleLoadOptions[\"externalDependencies\"]",
+      "signature": "externalDependencies?: : AuthoredModuleLoadOptions[\"externalDependencies\"]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        60
+      ],
+      "name": "loadModuleBackedDefinition",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly displayPath?: string;\r\n  readonly externalDependencies?: ModuleBackedDefinitionLoadOptions[\"externalDependencies\"];\r\n  readonly kind: string;\r\n  readonly source: ModuleSourceRef;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function loadModuleBackedDefinition(input: {\r\n  readonly agentRoot: string;\r\n  readonly displayPath?: string;\r\n  readonly externalDependencies?: ModuleBackedDefinitionLoadOptions[\"externalDependencies\"];\r\n  readonly kind: string;\r\n  readonly source: ModuleSourceRef;\r\n}) -> Promise<unknown>"
+    }
+  ],
+  "module": "packages/eve/src/compiler/normalize-helpers.ts"
+}

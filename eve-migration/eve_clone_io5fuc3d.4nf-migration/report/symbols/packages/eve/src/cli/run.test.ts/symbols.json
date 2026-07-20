@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/cli/run.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.test.ts:withInteractiveTerminal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        9,
+        28
+      ],
+      "name": "withInteractiveTerminal",
+      "params": [
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "() => Promise<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withInteractiveTerminal(fn: () => Promise<T>) -> Promise<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.test.ts:runInteractiveDev",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        30,
+        39
+      ],
+      "name": "runInteractiveDev",
+      "params": [
+        {
+          "name": "argv",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "NonNullable<Parameters<typeof runCli>[2]>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function runInteractiveDev(argv: string[], runtime: NonNullable<Parameters<typeof runCli>[2]>) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

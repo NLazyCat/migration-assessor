@@ -1,0 +1,473 @@
+{
+  "module": "packages/eve/src/client/agent-info-schema.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:source",
+      "kind": "variable",
+      "line_range": [
+        3,
+        8
+      ],
+      "name": "source",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:entry",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "entry",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:modelRouting",
+      "kind": "variable",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "modelRouting",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:modelEndpoint",
+      "kind": "variable",
+      "line_range": [
+        17,
+        25
+      ],
+      "name": "modelEndpoint",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:tool",
+      "kind": "variable",
+      "line_range": [
+        27,
+        38
+      ],
+      "name": "tool",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:frameworkTool",
+      "kind": "variable",
+      "line_range": [
+        40,
+        44
+      ],
+      "name": "frameworkTool",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:dynamicResolver",
+      "kind": "variable",
+      "line_range": [
+        46,
+        50
+      ],
+      "name": "dynamicResolver",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:skill",
+      "kind": "variable",
+      "line_range": [
+        52,
+        57
+      ],
+      "name": "skill",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:instructions",
+      "kind": "variable",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "instructions",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:schedule",
+      "kind": "variable",
+      "line_range": [
+        61,
+        65
+      ],
+      "name": "schedule",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:subagent",
+      "kind": "variable",
+      "line_range": [
+        67,
+        81
+      ],
+      "name": "subagent",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:channel",
+      "kind": "variable",
+      "line_range": [
+        83,
+        88
+      ],
+      "name": "channel",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:frameworkChannel",
+      "kind": "variable",
+      "line_range": [
+        90,
+        94
+      ],
+      "name": "frameworkChannel",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:connection",
+      "kind": "variable",
+      "line_range": [
+        96,
+        105
+      ],
+      "name": "connection",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:hook",
+      "kind": "variable",
+      "line_range": [
+        107,
+        110
+      ],
+      "name": "hook",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:sandbox",
+      "kind": "variable",
+      "line_range": [
+        112,
+        119
+      ],
+      "name": "sandbox",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoResultSchema",
+      "kind": "variable",
+      "line_range": [
+        122,
+        185
+      ],
+      "name": "AgentInfoResultSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:ReadonlyDeep",
+      "kind": "type_alias",
+      "line_range": [
+        187,
+        191
+      ],
+      "name": "ReadonlyDeep",
+      "partial_analysis": false,
+      "value": "T extends readonly (infer Item)[]\r\n  ? readonly ReadonlyDeep<Item>[]\r\n  : T extends object\r\n    ? { readonly [Key in keyof T]: ReadonlyDeep<T[Key]> }\r\n    : T;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoSource",
+      "kind": "type_alias",
+      "line_range": [
+        193,
+        193
+      ],
+      "name": "AgentInfoSource",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof source>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoEntry",
+      "kind": "type_alias",
+      "line_range": [
+        194,
+        194
+      ],
+      "name": "AgentInfoEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof entry>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoToolEntry",
+      "kind": "type_alias",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "AgentInfoToolEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof tool>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoFrameworkToolEntry",
+      "kind": "type_alias",
+      "line_range": [
+        196,
+        196
+      ],
+      "name": "AgentInfoFrameworkToolEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof frameworkTool>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoDynamicResolverEntry",
+      "kind": "type_alias",
+      "line_range": [
+        197,
+        197
+      ],
+      "name": "AgentInfoDynamicResolverEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof dynamicResolver>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoTools",
+      "kind": "type_alias",
+      "line_range": [
+        198,
+        198
+      ],
+      "name": "AgentInfoTools",
+      "partial_analysis": false,
+      "value": "AgentInfoResult[\"tools\"];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoSkillEntry",
+      "kind": "type_alias",
+      "line_range": [
+        199,
+        199
+      ],
+      "name": "AgentInfoSkillEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof skill>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoInstructionsEntry",
+      "kind": "type_alias",
+      "line_range": [
+        200,
+        200
+      ],
+      "name": "AgentInfoInstructionsEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof instructions>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoInstructions",
+      "kind": "type_alias",
+      "line_range": [
+        201,
+        201
+      ],
+      "name": "AgentInfoInstructions",
+      "partial_analysis": false,
+      "value": "AgentInfoResult[\"instructions\"];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoScheduleEntry",
+      "kind": "type_alias",
+      "line_range": [
+        202,
+        202
+      ],
+      "name": "AgentInfoScheduleEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof schedule>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoSubagentEntry",
+      "kind": "type_alias",
+      "line_range": [
+        203,
+        203
+      ],
+      "name": "AgentInfoSubagentEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof subagent>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoChannelEntry",
+      "kind": "type_alias",
+      "line_range": [
+        204,
+        204
+      ],
+      "name": "AgentInfoChannelEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof channel>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoFrameworkChannelEntry",
+      "kind": "type_alias",
+      "line_range": [
+        205,
+        205
+      ],
+      "name": "AgentInfoFrameworkChannelEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof frameworkChannel>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoChannels",
+      "kind": "type_alias",
+      "line_range": [
+        206,
+        206
+      ],
+      "name": "AgentInfoChannels",
+      "partial_analysis": false,
+      "value": "AgentInfoResult[\"channels\"];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoConnectionEntry",
+      "kind": "type_alias",
+      "line_range": [
+        207,
+        207
+      ],
+      "name": "AgentInfoConnectionEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof connection>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoHookEntry",
+      "kind": "type_alias",
+      "line_range": [
+        208,
+        208
+      ],
+      "name": "AgentInfoHookEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof hook>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoSandboxEntry",
+      "kind": "type_alias",
+      "line_range": [
+        209,
+        209
+      ],
+      "name": "AgentInfoSandboxEntry",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof sandbox>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/agent-info-schema.ts:AgentInfoResult",
+      "kind": "type_alias",
+      "line_range": [
+        210,
+        210
+      ],
+      "name": "AgentInfoResult",
+      "partial_analysis": false,
+      "value": "ReadonlyDeep<z.output<typeof AgentInfoResultSchema>>;",
+      "visibility": "Public"
+    }
+  ]
+}

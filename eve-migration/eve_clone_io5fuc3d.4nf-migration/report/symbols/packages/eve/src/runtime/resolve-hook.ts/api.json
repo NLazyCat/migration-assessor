@@ -1,0 +1,34 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        74
+      ],
+      "name": "resolveHookDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledHookDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedHookDefinition>",
+      "signature": "export function resolveHookDefinition(definition: CompiledHookDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedHookDefinition>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/resolve-hook.ts"
+}

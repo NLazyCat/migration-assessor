@@ -1,0 +1,155 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "CACHED_CHANNEL_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CACHED_CHANNEL_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        17
+      ],
+      "name": "RESOLVE_EXTENSIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const RESOLVE_EXTENSIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        29
+      ],
+      "name": "RolldownResolveContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RolldownResolveContext = {\r\n  resolve(\r\n    source: string,\r\n    importer: string | undefined,\r\n    options: { kind: string; skipSelf: boolean },\r\n  ): Promise<RolldownResolveResult | null>;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        73
+      ],
+      "name": "createGenerationPackageBoundaryPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createGenerationPackageBoundaryPlugin(input: {\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        75,
+        158
+      ],
+      "name": "createRuntimeLoaderPackageBoundaryPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createRuntimeLoaderPackageBoundaryPlugin(input: {\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        164,
+        234
+      ],
+      "name": "createDistributionPackageBoundaryPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createDistributionPackageBoundaryPlugin(input: {\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        268,
+        275
+      ],
+      "name": "normalizeExternalDependencies",
+      "params": [
+        {
+          "name": "externalDependencies",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function normalizeExternalDependencies(externalDependencies: readonly string[]) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        344,
+        346
+      ],
+      "name": "isPathImport",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathImport(source: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        365,
+        367
+      ],
+      "name": "isNodeModulesPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNodeModulesPath(path: string) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/internal/authored-package-boundary.ts"
+}

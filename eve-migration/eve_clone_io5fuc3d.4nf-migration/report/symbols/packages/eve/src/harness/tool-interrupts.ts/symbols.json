@@ -1,0 +1,99 @@
+{
+  "module": "packages/eve/src/harness/tool-interrupts.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-interrupts.ts:PendingToolInterruptsKey",
+      "kind": "variable",
+      "line_range": [
+        22,
+        24
+      ],
+      "name": "PendingToolInterruptsKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-interrupts.ts:stashToolInterrupt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        37
+      ],
+      "name": "stashToolInterrupt",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "toolCallId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AuthorizationSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function stashToolInterrupt(ctx: AlsContext, toolCallId: string, signal: AuthorizationSignal) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-interrupts.ts:readToolInterrupt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        45
+      ],
+      "name": "readToolInterrupt",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "toolCallId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthorizationSignal | undefined",
+      "signature": "export function readToolInterrupt(ctx: AlsContext, toolCallId: string) -> AuthorizationSignal | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-interrupts.ts:asContainer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        54
+      ],
+      "name": "asContainer",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function asContainer(ctx: AlsContext) -> ContextContainer",
+      "visibility": "Private"
+    }
+  ]
+}

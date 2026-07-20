@@ -1,0 +1,194 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TOutput"
+      ],
+      "kind": "interface",
+      "line_range": [
+        11,
+        15
+      ],
+      "name": "MatchedToolResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MatchedToolResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "callId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "callId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TOutput",
+      "signature": "output: : TOutput"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "toolName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "toolName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        31
+      ],
+      "name": "MatchedConnectionResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MatchedConnectionResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "callId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "callId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "connectionToolName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectionToolName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "output: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "toolName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "toolName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        79,
+        81
+      ],
+      "name": "stampDefinitionKey",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "object"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function stampDefinitionKey(definition: object, key: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        98,
+        115
+      ],
+      "name": "registerDefinitionSource",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "DefinitionSourceEntry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerDefinitionSource(key: string, entry: DefinitionSourceEntry) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        137,
+        147
+      ],
+      "name": "ToolResultFromFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ToolResultFromFn { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        160,
+        160
+      ],
+      "name": "toolResultFrom",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const toolResultFrom: unknown"
+    }
+  ],
+  "module": "packages/eve/src/public/tool-result-narrowing.ts"
+}

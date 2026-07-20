@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        21,
+        99
+      ],
+      "name": "createEvalContext",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "{\r\n  readonly manager: EvalSessionManager;\r\n  readonly collector: AssertionCollector;\r\n  readonly target: EveEvalTargetHandle;\r\n  readonly signal: AbortSignal;\r\n  readonly judge: EveEvalJudgeConfig | undefined;\r\n  readonly log: (message: string) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly context: EveEvalContext; readonly collector: AssertionCollector }",
+      "signature": "export function createEvalContext(deps: {\r\n  readonly manager: EvalSessionManager;\r\n  readonly collector: AssertionCollector;\r\n  readonly target: EveEvalTargetHandle;\r\n  readonly signal: AbortSignal;\r\n  readonly judge: EveEvalJudgeConfig | undefined;\r\n  readonly log: (message: string) => void;\r\n}) -> { readonly context: EveEvalContext; readonly collector: AssertionCollector }"
+    }
+  ],
+  "module": "packages/eve/src/evals/context.ts"
+}

@@ -1,0 +1,55 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "DurableCompiledArtifactsSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DurableCompiledArtifactsSource = | RuntimeCompiledArtifactsSource\r\n  | DevelopmentCompiledArtifactsSelector;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        23
+      ],
+      "name": "serializeDurableCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableCompiledArtifactsSource",
+      "signature": "export function serializeDurableCompiledArtifactsSource(source: RuntimeCompiledArtifactsSource) -> DurableCompiledArtifactsSource"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        38
+      ],
+      "name": "resolveDurableCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "DurableCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeCompiledArtifactsSource",
+      "signature": "export function resolveDurableCompiledArtifactsSource(source: DurableCompiledArtifactsSource) -> RuntimeCompiledArtifactsSource"
+    }
+  ],
+  "module": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts"
+}

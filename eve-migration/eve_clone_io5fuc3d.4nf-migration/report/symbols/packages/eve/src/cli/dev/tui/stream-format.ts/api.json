@@ -1,0 +1,326 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        39
+      ],
+      "name": "TerminalKey",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TerminalKey = | {\r\n      type: \"text\";\r\n      value: string;\r\n      /** Terminal framing, not proof that the text came from a physical keypress. */\r\n      framing: \"unframed\" | \"bracketed-paste\";\r\n    }\r\n  | { type: \"newline\" }\r\n  | { type: \"backspace\" }\r\n  | { type: \"delete\" }\r\n  | { type: \"enter\" }\r\n  | { type: \"up\" }\r\n  | { type: \"down\" }\r\n  | { type: \"left\" }\r\n  | { type: \"right\" }\r\n  | { type: \"home\" }\r\n  | { type: \"end\" }\r\n  | { type: \"tab\" }\r\n  | { type: \"escape\" }\r\n  | { type: \"ctrl-a\" }\r\n  | { type: \"ctrl-e\" }\r\n  | { type: \"ctrl-d\" }\r\n  | { type: \"ctrl-k\" }\r\n  | { type: \"ctrl-n\" }\r\n  | { type: \"ctrl-p\" }\r\n  | { type: \"ctrl-u\" }\r\n  | { type: \"ctrl-w\" }\r\n  | { type: \"ctrl-l\" }\r\n  | { type: \"ctrl-r\" }\r\n  | { type: \"ctrl-c\" }\r\n  | { type: \"ignore\" };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        42,
+        47
+      ],
+      "name": "KeyToken",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface KeyToken { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "key",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TerminalKey",
+      "signature": "key?: : TerminalKey"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "consumed",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "consumed: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "incomplete",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "incomplete?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        75
+      ],
+      "name": "sanitizePastedText",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sanitizePastedText(text: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "isIncompletePaste",
+      "params": [
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isIncompletePaste(buffer: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "stripPasteStart",
+      "params": [
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripPasteStart(buffer: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        101
+      ],
+      "name": "stripPromptControlCharacters",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripPromptControlCharacters(text: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        110,
+        163
+      ],
+      "name": "nextKey",
+      "params": [
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "KeyToken",
+      "signature": "export function nextKey(buffer: string) -> KeyToken"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        165,
+        237
+      ],
+      "name": "parseKey",
+      "params": [
+        {
+          "name": "chunk",
+          "optional": false,
+          "type": "Buffer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TerminalKey",
+      "signature": "export function parseKey(chunk: Buffer) -> TerminalKey"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        239,
+        243
+      ],
+      "name": "AssistantResponseStats",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AssistantResponseStats { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        240,
+        240
+      ],
+      "name": "totalTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "totalTokens: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        241,
+        241
+      ],
+      "name": "outputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "outputTokens: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        242,
+        242
+      ],
+      "name": "tokensPerSecond",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "tokensPerSecond: : number | undefined"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        245,
+        274
+      ],
+      "name": "takeUntil",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "AsyncIterable<T>"
+        },
+        {
+          "name": "stop",
+          "optional": false,
+          "type": "Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncIterable<T>",
+      "signature": "export function takeUntil(source: AsyncIterable<T>, stop: Promise<void>) -> AsyncIterable<T>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        277,
+        282
+      ],
+      "name": "formatCompactTokenCount",
+      "params": [
+        {
+          "name": "count",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatCompactTokenCount(count: number) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        289,
+        298
+      ],
+      "name": "formatTokenFlow",
+      "params": [
+        {
+          "name": "flow",
+          "optional": false,
+          "type": "{ inputTokens: number; outputTokens: number; contextSize?: number }"
+        },
+        {
+          "name": "glyph",
+          "optional": false,
+          "type": "{ arrowUp: string; arrowDown: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatTokenFlow(flow: { inputTokens: number; outputTokens: number; contextSize?: number }, glyph: { arrowUp: string; arrowDown: string }) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        310,
+        321
+      ],
+      "name": "formatAssistantResponseStats",
+      "params": [
+        {
+          "name": "stats",
+          "optional": false,
+          "type": "AssistantResponseStats"
+        },
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "AssistantResponseStatsMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatAssistantResponseStats(stats: AssistantResponseStats, mode: AssistantResponseStatsMode) -> string | undefined"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/stream-format.ts"
+}

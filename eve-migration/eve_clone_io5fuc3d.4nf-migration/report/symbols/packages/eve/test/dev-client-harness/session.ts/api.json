@@ -1,0 +1,126 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        24
+      ],
+      "name": "DevelopmentSessionState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentSessionState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "boundaryCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "boundaryCount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "streamIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "streamIndex: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        30,
+        44
+      ],
+      "name": "createDevelopmentSessionState",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly boundaryCount?: number;\r\n    readonly continuationToken?: string;\r\n    readonly sessionId?: string;\r\n    readonly streamIndex?: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentSessionState",
+      "signature": "export function createDevelopmentSessionState(input: {\r\n    readonly boundaryCount?: number;\r\n    readonly continuationToken?: string;\r\n    readonly sessionId?: string;\r\n    readonly streamIndex?: number;\r\n  }) -> DevelopmentSessionState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        64
+      ],
+      "name": "createDevelopmentMessageRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly message: string;\r\n  readonly session: DevelopmentSessionState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageRequestBody",
+      "signature": "export function createDevelopmentMessageRequest(input: {\r\n  readonly message: string;\r\n  readonly session: DevelopmentSessionState;\r\n}) -> HandleMessageRequestBody"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        70,
+        90
+      ],
+      "name": "updateDevelopmentSessionState",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly continuationToken?: string;\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly sessionId: string;\r\n  readonly session: DevelopmentSessionState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentSessionState",
+      "signature": "export function updateDevelopmentSessionState(input: {\r\n  readonly continuationToken?: string;\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly sessionId: string;\r\n  readonly session: DevelopmentSessionState;\r\n}) -> DevelopmentSessionState"
+    }
+  ],
+  "module": "packages/eve/test/dev-client-harness/session.ts"
+}

@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/bash.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/bash.ts:BASH_INPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "BASH_INPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/bash.ts:BASH_OUTPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        24,
+        29
+      ],
+      "name": "BASH_OUTPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/bash.ts:executeBash",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        39,
+        44
+      ],
+      "name": "executeBash",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ToolExecuteOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function executeBash(input: unknown, options: ToolExecuteOptions) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/bash.ts:BASH_TOOL_DEFINITION",
+      "kind": "variable",
+      "line_range": [
+        46,
+        55
+      ],
+      "name": "BASH_TOOL_DEFINITION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

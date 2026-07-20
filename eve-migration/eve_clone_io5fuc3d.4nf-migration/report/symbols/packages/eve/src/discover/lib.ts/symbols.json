@@ -1,0 +1,144 @@
+{
+  "module": "packages/eve/src/discover/lib.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/lib.ts:DISCOVER_LIB_DIRECTORY_INVALID",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DISCOVER_LIB_DIRECTORY_INVALID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/lib.ts:DISCOVER_LIB_ENTRY_UNSUPPORTED",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "DISCOVER_LIB_ENTRY_UNSUPPORTED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesInput:agentRoot",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesInput:rootEntries",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "rootEntries",
+          "partial_analysis": false,
+          "return_type": ": readonly ProjectSourceEntry[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesInput:source",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": ProjectSource",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesInput",
+      "kind": "interface",
+      "line_range": [
+        21,
+        25
+      ],
+      "name": "DiscoverLibSourcesInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesResult:diagnostics",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnostic[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesResult:lib",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "lib",
+          "partial_analysis": false,
+          "return_type": ": ModuleSourceRef[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/lib.ts:DiscoverLibSourcesResult",
+      "kind": "interface",
+      "line_range": [
+        30,
+        33
+      ],
+      "name": "DiscoverLibSourcesResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/lib.ts:discoverLibSources",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        39,
+        62
+      ],
+      "name": "discoverLibSources",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverLibSourcesInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoverLibSourcesResult>",
+      "signature": "export function discoverLibSources(input: DiscoverLibSourcesInput) -> Promise<DiscoverLibSourcesResult>",
+      "visibility": "Public"
+    }
+  ]
+}

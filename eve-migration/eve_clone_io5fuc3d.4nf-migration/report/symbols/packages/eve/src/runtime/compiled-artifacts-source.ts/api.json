@@ -1,0 +1,213 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        6
+      ],
+      "name": "RuntimeCompiledArtifactsSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RuntimeCompiledArtifactsSource = | RuntimeBundledCompiledArtifactsSource\r\n  | RuntimeDiskCompiledArtifactsSource;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        12,
+        14
+      ],
+      "name": "RuntimeBundledCompiledArtifactsSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeBundledCompiledArtifactsSource { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"bundled\"",
+      "signature": "kind: : \"bundled\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        44
+      ],
+      "name": "RuntimeDiskCompiledArtifactsSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeDiskCompiledArtifactsSource { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"disk\"",
+      "signature": "kind: : \"disk\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "moduleMapLoaderPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "moduleMapLoaderPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "sandboxAppRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sandboxAppRoot?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "durableReference",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"development-generation\"",
+      "signature": "durableReference?: : \"development-generation\""
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        53
+      ],
+      "name": "createBundledRuntimeCompiledArtifactsSource",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeBundledCompiledArtifactsSource",
+      "signature": "export function createBundledRuntimeCompiledArtifactsSource() -> RuntimeBundledCompiledArtifactsSource"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        84
+      ],
+      "name": "createDiskRuntimeCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly durableReference?: \"development-generation\";\r\n    readonly moduleMapLoaderPath?: string;\r\n    readonly sandboxAppRoot?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeDiskCompiledArtifactsSource",
+      "signature": "export function createDiskRuntimeCompiledArtifactsSource(appRoot: string, options: {\r\n    readonly durableReference?: \"development-generation\";\r\n    readonly moduleMapLoaderPath?: string;\r\n    readonly sandboxAppRoot?: string;\r\n  }) -> RuntimeDiskCompiledArtifactsSource"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        89,
+        93
+      ],
+      "name": "getRuntimeCompiledArtifactsAppRoot",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getRuntimeCompiledArtifactsAppRoot(source: RuntimeCompiledArtifactsSource) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        98,
+        102
+      ],
+      "name": "getRuntimeCompiledArtifactsSandboxAppRoot",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getRuntimeCompiledArtifactsSandboxAppRoot(source: RuntimeCompiledArtifactsSource) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        107,
+        119
+      ],
+      "name": "getRuntimeCompiledArtifactsCacheKey",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function getRuntimeCompiledArtifactsCacheKey(source: RuntimeCompiledArtifactsSource) -> string"
+    }
+  ],
+  "module": "packages/eve/src/runtime/compiled-artifacts-source.ts"
+}

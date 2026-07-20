@@ -1,0 +1,242 @@
+{
+  "module": "packages/eve/src/runtime/sessions/runtime-session.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSession:id",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSession:compiledArtifacts",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "compiledArtifacts",
+          "partial_analysis": false,
+          "return_type": ": BundledCompiledArtifacts | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSession:bundleCache",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "bundleCache",
+          "partial_analysis": false,
+          "return_type": ": Map<string, Promise<CompiledRuntimeAgentBundle>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSession:bundleCacheKeyBySourceKey",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "bundleCacheKeyBySourceKey",
+          "partial_analysis": false,
+          "return_type": ": Map<string, string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSession",
+      "kind": "interface",
+      "line_range": [
+        14,
+        36
+      ],
+      "name": "RuntimeSession",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:createRuntimeSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        48
+      ],
+      "name": "createRuntimeSession",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSession",
+      "signature": "export function createRuntimeSession(id: string) -> RuntimeSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RUNTIME_SESSION_STORAGE_GLOBAL_KEY",
+      "kind": "variable",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "RUNTIME_SESSION_STORAGE_GLOBAL_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RUNTIME_SESSION_DEFAULT_GLOBAL_KEY",
+      "kind": "variable",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "RUNTIME_SESSION_DEFAULT_GLOBAL_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSessionGlobal:[expr]",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": AsyncLocalStorage<RuntimeSession>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSessionGlobal:[expr]",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": RuntimeSession",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:RuntimeSessionGlobal",
+      "kind": "interface",
+      "line_range": [
+        59,
+        62
+      ],
+      "name": "RuntimeSessionGlobal",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:globalContainer",
+      "kind": "variable",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "globalContainer",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:runtimeSessionStorage",
+      "kind": "variable",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "runtimeSessionStorage",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:resolveProcessDefaultSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        77
+      ],
+      "name": "resolveProcessDefaultSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeSession",
+      "signature": "export function resolveProcessDefaultSession() -> RuntimeSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:getActiveRuntimeSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        88
+      ],
+      "name": "getActiveRuntimeSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeSession",
+      "signature": "export function getActiveRuntimeSession() -> RuntimeSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sessions/runtime-session.ts:withRuntimeSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        96,
+        101
+      ],
+      "name": "withRuntimeSession",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "RuntimeSession"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "() => Promise<T> | T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withRuntimeSession(session: RuntimeSession, fn: () => Promise<T> | T) -> Promise<T>",
+      "visibility": "Public"
+    }
+  ]
+}

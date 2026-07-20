@@ -1,0 +1,89 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/copy-host-middleware.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/copy-host-middleware.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        4,
+        6
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/copy-host-middleware.ts:NEXT_MIDDLEWARE_PATH",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "NEXT_MIDDLEWARE_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/copy-host-middleware.ts:resolveMiddlewareFunctionDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        35
+      ],
+      "name": "resolveMiddlewareFunctionDirectory",
+      "params": [
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "middlewarePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveMiddlewareFunctionDirectory(outputDirectory: string, middlewarePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/copy-host-middleware.ts:copyHostMiddlewareFunctions",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        45,
+        98
+      ],
+      "name": "copyHostMiddlewareFunctions",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly hostOutputDirectory: string;\r\n  readonly serviceOutputDirectory: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyHostMiddlewareFunctions(input: {\r\n  readonly hostOutputDirectory: string;\r\n  readonly serviceOutputDirectory: string;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 27,
+        "file": "packages/eve/src/harness/workflow-interrupt-state.ts",
+        "line": 63
+      },
+      "symbol": "packages/eve/src/harness/workflow-interrupt-state.ts:WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/harness/workflow-runtime-action-state.test.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/harness/workflow-runtime-action-state.test.ts:WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/harness/workflow-sandbox.ts",
+        "line": 104
+      },
+      "symbol": "packages/eve/src/harness/workflow-sandbox.ts:WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/harness/workflow-subagent-limit.test.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/harness/workflow-subagent-limit.test.ts:WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/harness/workflow-subagent-limit.test.ts",
+        "line": 67
+      },
+      "symbol": "packages/eve/src/harness/workflow-subagent-limit.test.ts:WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND"
+    }
+  ],
+  "buildRuntimeActionsFromWorkflowInterrupt": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts",
+        "line": 43
+      },
+      "symbol": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts:buildRuntimeActionsFromWorkflowInterrupt"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/harness/workflow-runtime-action-state.test.ts",
+        "line": 77
+      },
+      "symbol": "packages/eve/src/harness/workflow-runtime-action-state.test.ts:buildRuntimeActionsFromWorkflowInterrupt"
+    }
+  ],
+  "getRuntimeActionKeysFromWorkflowInterrupt": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/execution/workflow-steps.ts",
+        "line": 419
+      },
+      "symbol": "packages/eve/src/execution/workflow-steps.ts:getRuntimeActionKeysFromWorkflowInterrupt"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/harness/workflow-runtime-action-state.test.ts",
+        "line": 91
+      },
+      "symbol": "packages/eve/src/harness/workflow-runtime-action-state.test.ts:getRuntimeActionKeysFromWorkflowInterrupt"
+    }
+  ],
+  "getWorkflowRuntimeActionInterrupts": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 2257
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:getWorkflowRuntimeActionInterrupts"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 2336
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:getWorkflowRuntimeActionInterrupts"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/harness/workflow-runtime-action-state.test.ts",
+        "line": 67
+      },
+      "symbol": "packages/eve/src/harness/workflow-runtime-action-state.test.ts:getWorkflowRuntimeActionInterrupts"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/harness/workflow-sandbox.scenario.test.ts",
+        "line": 68
+      },
+      "symbol": "packages/eve/src/harness/workflow-sandbox.scenario.test.ts:getWorkflowRuntimeActionInterrupts"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/harness/workflow-sandbox.scenario.test.ts",
+        "line": 101
+      },
+      "symbol": "packages/eve/src/harness/workflow-sandbox.scenario.test.ts:getWorkflowRuntimeActionInterrupts"
+    }
+  ],
+  "isWorkflowRuntimeActionInterrupt": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/execution/workflow-steps.ts",
+        "line": 415
+      },
+      "symbol": "packages/eve/src/execution/workflow-steps.ts:isWorkflowRuntimeActionInterrupt"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 1836
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:isWorkflowRuntimeActionInterrupt"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 7,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 2215
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:isWorkflowRuntimeActionInterrupt"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 2255
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:isWorkflowRuntimeActionInterrupt"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 2288
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:isWorkflowRuntimeActionInterrupt"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "module": "packages/eve/src/setup/scaffold/workspace-glob.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:escapeRegex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        3,
+        5
+      ],
+      "name": "escapeRegex",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function escapeRegex(input: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:workspacePatternToRegex",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        25
+      ],
+      "name": "workspacePatternToRegex",
+      "params": [
+        {
+          "name": "pattern",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RegExp",
+      "signature": "export function workspacePatternToRegex(pattern: string) -> RegExp",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:workspaceRelativePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "workspaceRelativePath",
+      "params": [
+        {
+          "name": "workspaceRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function workspaceRelativePath(workspaceRoot: string, projectRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:isPathInside",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        34
+      ],
+      "name": "isPathInside",
+      "params": [
+        {
+          "name": "parentPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "childPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathInside(parentPath: string, childPath: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:workspacePatternForProject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        42
+      ],
+      "name": "workspacePatternForProject",
+      "params": [
+        {
+          "name": "workspaceRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function workspacePatternForProject(workspaceRoot: string, projectRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:workspacePatternClaimsRelativePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        48
+      ],
+      "name": "workspacePatternClaimsRelativePath",
+      "params": [
+        {
+          "name": "pattern",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "relativePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function workspacePatternClaimsRelativePath(pattern: string, relativePath: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-glob.ts:workspacePatternsClaimProject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        65
+      ],
+      "name": "workspacePatternsClaimProject",
+      "params": [
+        {
+          "name": "patterns",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "workspaceRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function workspacePatternsClaimProject(patterns: readonly string[], workspaceRoot: string, projectRoot: string) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

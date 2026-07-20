@@ -1,0 +1,26 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TDefinition"
+      ],
+      "kind": "function",
+      "line_range": [
+        20,
+        33
+      ],
+      "name": "discoverMarkdownSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverMarkdownSourceInput<TDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MarkdownSourceRef<TDefinition>>",
+      "signature": "export function discoverMarkdownSource(input: DiscoverMarkdownSourceInput<TDefinition>) -> Promise<MarkdownSourceRef<TDefinition>>"
+    }
+  ],
+  "module": "packages/eve/src/discover/markdown.ts"
+}

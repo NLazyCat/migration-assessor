@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/public/tools/define-bash-tool.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/tools/define-bash-tool.ts:DefineBashToolInput:description",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/tools/define-bash-tool.ts:DefineBashToolInput",
+      "kind": "interface",
+      "line_range": [
+        8,
+        14
+      ],
+      "name": "DefineBashToolInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/tools/define-bash-tool.ts:defineBashTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        34
+      ],
+      "name": "defineBashTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DefineBashToolInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolDefinition",
+      "signature": "export function defineBashTool(input: DefineBashToolInput) -> ToolDefinition",
+      "visibility": "Public"
+    }
+  ]
+}

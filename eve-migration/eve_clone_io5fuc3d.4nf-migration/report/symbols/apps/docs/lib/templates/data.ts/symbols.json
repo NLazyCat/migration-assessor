@@ -1,0 +1,287 @@
+{
+  "module": "apps/docs/lib/templates/data.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/data.ts:TemplateCategory",
+      "kind": "type_alias",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "TemplateCategory",
+      "partial_analysis": false,
+      "value": "\"Chat\" | \"Collaboration\" | \"Example\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/data.ts:TemplateIntegration",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        10
+      ],
+      "name": "TemplateIntegration",
+      "partial_analysis": false,
+      "value": "| \"HTTP API\"\r\n  | \"Linear\"\r\n  | \"Notion\"\r\n  | \"Sentry\"\r\n  | \"Slack\"\r\n  | \"Web chat\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/data.ts:TemplateSource",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "TemplateSource",
+      "partial_analysis": false,
+      "value": "\"GitHub\" | \"Vercel Templates\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateFile:contents",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "contents",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateFile:language",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "language",
+          "partial_analysis": false,
+          "return_type": ": \"markdown\" | \"typescript\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateFile:relativePath",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "relativePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/templates/data.ts:TemplateFile",
+      "kind": "interface",
+      "line_range": [
+        13,
+        17
+      ],
+      "name": "TemplateFile",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:category",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "category",
+          "partial_analysis": false,
+          "return_type": ": TemplateCategory",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:description",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:files",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": TemplateFile[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:integrations",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "integrations",
+          "partial_analysis": false,
+          "return_type": ": TemplateIntegration[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:model",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:slug",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:source",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": TemplateSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:sourceHref",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "sourceHref",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:sourceRevision",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "sourceRevision",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:setupPrompt",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "setupPrompt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/templates/data.ts:TemplateEntry:title",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "title",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/templates/data.ts:TemplateEntry",
+      "kind": "interface",
+      "line_range": [
+        19,
+        31
+      ],
+      "name": "TemplateEntry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/data.ts:templateEntries",
+      "kind": "variable",
+      "line_range": [
+        33,
+        79
+      ],
+      "name": "templateEntries",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/data.ts:getTemplateEntry",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        81,
+        82
+      ],
+      "name": "getTemplateEntry",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TemplateEntry | undefined",
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

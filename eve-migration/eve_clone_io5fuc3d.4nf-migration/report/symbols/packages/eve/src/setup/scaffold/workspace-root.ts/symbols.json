@@ -1,0 +1,430 @@
+{
+  "module": "packages/eve/src/setup/scaffold/workspace-root.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/workspace-root.ts:PackageJsonWorkspaceShape:workspaces",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "workspaces",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:PackageJsonWorkspaceShape",
+      "kind": "interface",
+      "line_range": [
+        20,
+        22
+      ],
+      "name": "PackageJsonWorkspaceShape",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/workspace-root.ts:WorkspaceRootMutation:kind",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"package-json\" | \"workspace-config\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/workspace-root.ts:WorkspaceRootMutation:nodeEngineOverride",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "nodeEngineOverride",
+          "partial_analysis": false,
+          "return_type": ": NodeEngineOverride",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/workspace-root.ts:WorkspaceRootMutation:path",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:WorkspaceRootMutation",
+      "kind": "interface",
+      "line_range": [
+        24,
+        28
+      ],
+      "name": "WorkspaceRootMutation",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/workspace-root.ts:WorkspaceRootPackageJsonPatchResult:path",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:WorkspaceRootPackageJsonPatchResult",
+      "kind": "interface",
+      "line_range": [
+        30,
+        33
+      ],
+      "name": "WorkspaceRootPackageJsonPatchResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:isJsonObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        37
+      ],
+      "name": "isJsonObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isJsonObject(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:packageJsonWorkspacePatterns",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        46
+      ],
+      "name": "packageJsonWorkspacePatterns",
+      "params": [
+        {
+          "name": "packageJson",
+          "optional": false,
+          "type": "PackageJsonWorkspaceShape"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function packageJsonWorkspacePatterns(packageJson: PackageJsonWorkspaceShape) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:readPackageJsonWorkspacePatterns",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        53
+      ],
+      "name": "readPackageJsonWorkspacePatterns",
+      "params": [
+        {
+          "name": "packageJsonPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[] | undefined",
+      "signature": "export function readPackageJsonWorkspacePatterns(packageJsonPath: string) -> string[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:findAncestorPackageJsonWorkspaceRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        71
+      ],
+      "name": "findAncestorPackageJsonWorkspaceRoot",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function findAncestorPackageJsonWorkspaceRoot(projectRoot: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:findClaimingPackageJsonWorkspaceRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        73,
+        86
+      ],
+      "name": "findClaimingPackageJsonWorkspaceRoot",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function findClaimingPackageJsonWorkspaceRoot(projectRoot: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:findPackageManagerWorkspaceRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        101
+      ],
+      "name": "findPackageManagerWorkspaceRoot",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function findPackageManagerWorkspaceRoot(packageManager: PackageManagerKind, projectRoot: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:isPackageManagerWorkspaceMember",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        109
+      ],
+      "name": "isPackageManagerWorkspaceMember",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPackageManagerWorkspaceMember(packageManager: PackageManagerKind, projectRoot: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:workspaceRootPackageJsonPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        111,
+        117
+      ],
+      "name": "workspaceRootPackageJsonPath",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function workspaceRootPackageJsonPath(packageManager: PackageManagerKind, projectRoot: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:ensurePackageJsonWorkspaceIncludesProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        119,
+        145
+      ],
+      "name": "ensurePackageJsonWorkspaceIncludesProject",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function ensurePackageJsonWorkspaceIncludesProject(projectRoot: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:ensurePackageManagerWorkspaceIncludesProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        147,
+        163
+      ],
+      "name": "ensurePackageManagerWorkspaceIncludesProject",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function ensurePackageManagerWorkspaceIncludesProject(packageManager: PackageManagerKind, projectRoot: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:packageManagerRootOnlyPackageJsonPatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        165,
+        190
+      ],
+      "name": "packageManagerRootOnlyPackageJsonPatch",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly aiPackageVersion?: string;\r\n    readonly nodeEngineRequirement?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PackageJsonPatch",
+      "signature": "export function packageManagerRootOnlyPackageJsonPatch(packageManager: PackageManagerKind, input: {\r\n    readonly aiPackageVersion?: string;\r\n    readonly nodeEngineRequirement?: string;\r\n  }) -> PackageJsonPatch",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:patchWorkspaceRootPackageJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        193,
+        223
+      ],
+      "name": "patchWorkspaceRootPackageJson",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly aiPackageVersion?: string;\r\n    readonly nodeEngineRequirement?: string;\r\n    readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkspaceRootPackageJsonPatchResult>",
+      "signature": "export function patchWorkspaceRootPackageJson(packageManager: PackageManagerKind, projectRoot: string, input: {\r\n    readonly aiPackageVersion?: string;\r\n    readonly nodeEngineRequirement?: string;\r\n    readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n  }) -> Promise<WorkspaceRootPackageJsonPatchResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/workspace-root.ts:applyPackageManagerWorkspaceConfiguration",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        226,
+        259
+      ],
+      "name": "applyPackageManagerWorkspaceConfiguration",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly packageManager: PackageManagerKind;\r\n  readonly projectRoot: string;\r\n  readonly workspaceProbeRoot?: string;\r\n  readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  filesSkipped: string[];\r\n  filesWritten: string[];\r\n}>",
+      "signature": "export function applyPackageManagerWorkspaceConfiguration(input: {\r\n  readonly packageManager: PackageManagerKind;\r\n  readonly projectRoot: string;\r\n  readonly workspaceProbeRoot?: string;\r\n  readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n}) -> Promise<{\r\n  filesSkipped: string[];\r\n  filesWritten: string[];\r\n}>",
+      "visibility": "Public"
+    }
+  ]
+}

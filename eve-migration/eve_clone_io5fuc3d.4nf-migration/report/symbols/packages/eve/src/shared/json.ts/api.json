@@ -1,0 +1,110 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "JsonPrimitive",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type JsonPrimitive = boolean | number | string | null;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "JsonArray",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type JsonArray = readonly JsonValue[];"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "JsonObject",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface JsonObject { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "JsonValue",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type JsonValue = JsonArray | JsonObject | JsonPrimitive;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        43
+      ],
+      "name": "parseJsonValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonValue",
+      "signature": "export function parseJsonValue(value: unknown) -> JsonValue"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        51,
+        59
+      ],
+      "name": "parseJsonObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject",
+      "signature": "export function parseJsonObject(value: unknown) -> JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        127,
+        129
+      ],
+      "name": "isJsonObjectValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "JsonValue | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is JsonObject",
+      "signature": "export function isJsonObjectValue(value: JsonValue | undefined) -> value is JsonObject"
+    }
+  ],
+  "module": "packages/eve/src/shared/json.ts"
+}

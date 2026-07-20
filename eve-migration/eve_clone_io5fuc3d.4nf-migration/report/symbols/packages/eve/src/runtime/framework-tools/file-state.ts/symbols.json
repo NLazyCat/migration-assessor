@@ -1,0 +1,210 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/file-state.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileStamp:byteLength",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "byteLength",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileStamp:contentHash",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "contentHash",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileStamp:filePath",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "filePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileStamp",
+      "kind": "interface",
+      "line_range": [
+        16,
+        20
+      ],
+      "name": "ReadFileStamp",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileState:byTarget",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "byTarget",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, ReadFileStamp>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileState",
+      "kind": "interface",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "ReadFileState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:ReadFileStateKey",
+      "kind": "variable",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "ReadFileStateKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:normalizeModelPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        51
+      ],
+      "name": "normalizeModelPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeModelPath(path: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:buildReadFileTargetKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        61
+      ],
+      "name": "buildReadFileTargetKey",
+      "params": [
+        {
+          "name": "normalizedPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function buildReadFileTargetKey(normalizedPath: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:createReadFileStamp",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "createReadFileStamp",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ content: string; filePath: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadFileStamp",
+      "signature": "export function createReadFileStamp(input: { content: string; filePath: string }) -> ReadFileStamp",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:setReadFileStamp",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        92
+      ],
+      "name": "setReadFileStamp",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "targetKey",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "stamp",
+          "optional": false,
+          "type": "ReadFileStamp"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setReadFileStamp(ctx: AlsContext, targetKey: string, stamp: ReadFileStamp) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/file-state.ts:clearReadFileState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        105
+      ],
+      "name": "clearReadFileState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function clearReadFileState() -> void",
+      "visibility": "Public"
+    }
+  ]
+}

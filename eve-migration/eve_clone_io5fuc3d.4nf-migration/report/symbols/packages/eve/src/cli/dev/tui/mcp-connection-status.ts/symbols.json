@@ -1,0 +1,139 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:DEFAULT_PROBE_INTERVAL_MS",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "DEFAULT_PROBE_INTERVAL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:McpConnectionProbe",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "McpConnectionProbe",
+      "partial_analysis": false,
+      "value": "(input: {\r\n  url: string;\r\n  signal: AbortSignal;\r\n}) => Promise<string | undefined>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:probeMcpConnection",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        10,
+        41
+      ],
+      "name": "probeMcpConnection",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  url: string;\r\n  signal: AbortSignal;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function probeMcpConnection(input: {\r\n  url: string;\r\n  signal: AbortSignal;\r\n}) -> Promise<string | undefined>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:McpConnectionStatusTracker",
+      "kind": "interface",
+      "line_range": [
+        43,
+        47
+      ],
+      "name": "McpConnectionStatusTracker",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:McpConnectionStatusTrackerOptions:onChange",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "onChange",
+          "partial_analysis": false,
+          "return_type": ": (disabledConnectionReasons: Readonly<Record<string, string>>) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:McpConnectionStatusTrackerOptions:probe",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "probe",
+          "partial_analysis": false,
+          "return_type": ": McpConnectionProbe",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:McpConnectionStatusTrackerOptions:intervalMs",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "intervalMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:McpConnectionStatusTrackerOptions",
+      "kind": "interface",
+      "line_range": [
+        49,
+        53
+      ],
+      "name": "McpConnectionStatusTrackerOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/mcp-connection-status.ts:createMcpConnectionStatusTracker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        108
+      ],
+      "name": "createMcpConnectionStatusTracker",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "McpConnectionStatusTrackerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "McpConnectionStatusTracker",
+      "signature": "export function createMcpConnectionStatusTracker(options: McpConnectionStatusTrackerOptions) -> McpConnectionStatusTracker",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "resolveArtifactDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveArtifactDirectory(appRoot: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        20,
+        50
+      ],
+      "name": "writeArtifacts",
+      "params": [
+        {
+          "name": "artifactDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "summary",
+          "optional": false,
+          "type": "EveEvalRunSummary"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeArtifacts(artifactDir: string, summary: EveEvalRunSummary) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/evals/runner/artifacts.ts"
+}

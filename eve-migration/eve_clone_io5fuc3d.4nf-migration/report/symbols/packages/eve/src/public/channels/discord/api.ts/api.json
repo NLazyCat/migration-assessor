@@ -1,0 +1,522 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "DiscordApplicationId",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscordApplicationId = string | (() => string | Promise<string>);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "DiscordBotToken",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscordBotToken = string | (() => string | Promise<string>);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "DiscordFetch",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscordFetch = typeof fetch;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        31
+      ],
+      "name": "DiscordCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordCredentials { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "applicationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordApplicationId",
+      "signature": "applicationId?: : DiscordApplicationId"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "botToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordBotToken",
+      "signature": "botToken?: : DiscordBotToken"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "publicKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordPublicKey",
+      "signature": "publicKey?: : DiscordPublicKey"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        34,
+        38
+      ],
+      "name": "DiscordApiOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordApiOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "apiBaseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "apiBaseUrl?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordCredentials",
+      "signature": "credentials?: : DiscordCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "fetch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordFetch",
+      "signature": "fetch?: : DiscordFetch"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        45
+      ],
+      "name": "DiscordApiResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordApiResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "status: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "ok",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "ok: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "body: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        48,
+        55
+      ],
+      "name": "DiscordPostedMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordPostedMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "raw: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "DISCORD_NO_MENTIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_NO_MENTIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "DISCORD_MESSAGE_CONTENT_MAX_LENGTH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_MESSAGE_CONTENT_MAX_LENGTH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        69
+      ],
+      "name": "discordContinuationToken",
+      "params": [
+        {
+          "name": "channelId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "conversationId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function discordContinuationToken(channelId: string, conversationId: string | undefined) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        78
+      ],
+      "name": "resolveDiscordApplicationId",
+      "params": [
+        {
+          "name": "applicationId",
+          "optional": true,
+          "type": "DiscordApplicationId"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveDiscordApplicationId(applicationId: DiscordApplicationId) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        85
+      ],
+      "name": "resolveDiscordBotToken",
+      "params": [
+        {
+          "name": "botToken",
+          "optional": true,
+          "type": "DiscordBotToken"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveDiscordBotToken(botToken: DiscordBotToken) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        95,
+        128
+      ],
+      "name": "callDiscordApi",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly apiBaseUrl?: string;\r\n  readonly body?: JsonObject;\r\n  readonly botToken?: DiscordBotToken;\r\n  readonly fetch?: DiscordFetch;\r\n  readonly method?: \"DELETE\" | \"GET\" | \"PATCH\" | \"POST\" | \"PUT\";\r\n  readonly path: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscordApiResponse>",
+      "signature": "export function callDiscordApi(input: {\r\n  readonly apiBaseUrl?: string;\r\n  readonly body?: JsonObject;\r\n  readonly botToken?: DiscordBotToken;\r\n  readonly fetch?: DiscordFetch;\r\n  readonly method?: \"DELETE\" | \"GET\" | \"PATCH\" | \"POST\" | \"PUT\";\r\n  readonly path: string;\r\n}) -> Promise<DiscordApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        131,
+        148
+      ],
+      "name": "sendDiscordChannelMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscordApiOptions & {\r\n    readonly body: DiscordMessageBody;\r\n    readonly channelId: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscordPostedMessage>",
+      "signature": "export function sendDiscordChannelMessage(input: DiscordApiOptions & {\r\n    readonly body: DiscordMessageBody;\r\n    readonly channelId: string;\r\n  }) -> Promise<DiscordPostedMessage>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        151,
+        165
+      ],
+      "name": "triggerDiscordTypingIndicator",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscordApiOptions & {\r\n    readonly channelId: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function triggerDiscordTypingIndicator(input: DiscordApiOptions & {\r\n    readonly channelId: string;\r\n  }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        168,
+        188
+      ],
+      "name": "editDiscordOriginalResponse",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscordApiOptions & {\r\n    readonly body: DiscordMessageBody;\r\n    readonly interactionToken: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscordPostedMessage>",
+      "signature": "export function editDiscordOriginalResponse(input: DiscordApiOptions & {\r\n    readonly body: DiscordMessageBody;\r\n    readonly interactionToken: string;\r\n  }) -> Promise<DiscordPostedMessage>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        191,
+        210
+      ],
+      "name": "createDiscordFollowupMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscordApiOptions & {\r\n    readonly body: DiscordMessageBody;\r\n    readonly interactionToken: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscordPostedMessage>",
+      "signature": "export function createDiscordFollowupMessage(input: DiscordApiOptions & {\r\n    readonly body: DiscordMessageBody;\r\n    readonly interactionToken: string;\r\n  }) -> Promise<DiscordPostedMessage>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        217,
+        223
+      ],
+      "name": "DiscordMessageBody",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordMessageBody { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        218,
+        218
+      ],
+      "name": "allowed_mentions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, unknown>>",
+      "signature": "allowed_mentions?: : Readonly<Record<string, unknown>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        219,
+        219
+      ],
+      "name": "components",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly Readonly<Record<string, unknown>>[]",
+      "signature": "components?: : readonly Readonly<Record<string, unknown>>[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        220,
+        220
+      ],
+      "name": "content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "content?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        221,
+        221
+      ],
+      "name": "flags",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "flags?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        222,
+        222
+      ],
+      "name": "tts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "tts?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        229,
+        245
+      ],
+      "name": "splitDiscordMessageContent",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function splitDiscordMessageContent(content: string) -> readonly string[]"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/discord/api.ts"
+}

@@ -1,0 +1,441 @@
+{
+  "module": "packages/eve/src/internal/authored-package-boundary.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:CACHED_CHANNEL_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "CACHED_CHANNEL_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:RESOLVE_EXTENSIONS",
+      "kind": "variable",
+      "line_range": [
+        7,
+        17
+      ],
+      "name": "RESOLVE_EXTENSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:RolldownResolveResult",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "RolldownResolveResult",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly id: string;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:RolldownResolveContext",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        29
+      ],
+      "name": "RolldownResolveContext",
+      "partial_analysis": false,
+      "value": "{\r\n  resolve(\r\n    source: string,\r\n    importer: string | undefined,\r\n    options: { kind: string; skipSelf: boolean },\r\n  ): Promise<RolldownResolveResult | null>;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/authored-package-boundary.ts:ResolvedAuthoredExternalModule:packageName",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/authored-package-boundary.ts:ResolvedAuthoredExternalModule:resolvedId",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "resolvedId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:ResolvedAuthoredExternalModule",
+      "kind": "interface",
+      "line_range": [
+        31,
+        34
+      ],
+      "name": "ResolvedAuthoredExternalModule",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:createGenerationPackageBoundaryPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        73
+      ],
+      "name": "createGenerationPackageBoundaryPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createGenerationPackageBoundaryPlugin(input: {\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}) -> Record<string, unknown>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:createRuntimeLoaderPackageBoundaryPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        158
+      ],
+      "name": "createRuntimeLoaderPackageBoundaryPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createRuntimeLoaderPackageBoundaryPlugin(input: {\r\n  readonly externalDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}) -> Record<string, unknown>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:createDistributionPackageBoundaryPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        164,
+        234
+      ],
+      "name": "createDistributionPackageBoundaryPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createDistributionPackageBoundaryPlugin(input: {\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly packageRoot: string;\r\n}) -> Record<string, unknown>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:resolveConfiguredExternalModule",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        236,
+        266
+      ],
+      "name": "resolveConfiguredExternalModule",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly externalDependencies: readonly string[];\r\n    readonly importer: string | undefined;\r\n    readonly kind: string;\r\n    readonly packageRoot: string;\r\n    readonly source: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedAuthoredExternalModule | undefined>",
+      "signature": "export function resolveConfiguredExternalModule(input: {\r\n    readonly externalDependencies: readonly string[];\r\n    readonly importer: string | undefined;\r\n    readonly kind: string;\r\n    readonly packageRoot: string;\r\n    readonly source: string;\r\n  }) -> Promise<ResolvedAuthoredExternalModule | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:normalizeExternalDependencies",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        268,
+        275
+      ],
+      "name": "normalizeExternalDependencies",
+      "params": [
+        {
+          "name": "externalDependencies",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function normalizeExternalDependencies(externalDependencies: readonly string[]) -> string[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:resolveConfiguredExternalDependency",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        277,
+        284
+      ],
+      "name": "resolveConfiguredExternalDependency",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "externalDependencies",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveConfiguredExternalDependency(source: string, externalDependencies: readonly string[]) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:packageImportName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        286,
+        288
+      ],
+      "name": "packageImportName",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function packageImportName(source: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:nearestPackageName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        290,
+        310
+      ],
+      "name": "nearestPackageName",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function nearestPackageName(filePath: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:resolveExistingExternalFilePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        312,
+        326
+      ],
+      "name": "resolveExistingExternalFilePath",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveExistingExternalFilePath(id: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:isPackageImport",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        328,
+        342
+      ],
+      "name": "isPackageImport",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPackageImport(source: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:isPathImport",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        344,
+        346
+      ],
+      "name": "isPathImport",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathImport(source: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:isFrameworkRuntimeImport",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        348,
+        363
+      ],
+      "name": "isFrameworkRuntimeImport",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "importer",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isFrameworkRuntimeImport(source: string, importer: string | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:isNodeModulesPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        365,
+        367
+      ],
+      "name": "isNodeModulesPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNodeModulesPath(path: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:toCanonicalPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        369,
+        375
+      ],
+      "name": "toCanonicalPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toCanonicalPath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-package-boundary.ts:isPathInsideOrEqual",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        377,
+        384
+      ],
+      "name": "isPathInsideOrEqual",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathInsideOrEqual(path: string, directory: string) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

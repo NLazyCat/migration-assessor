@@ -1,0 +1,62 @@
+{
+  "createTestRuntime": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "line": 10
+      },
+      "symbol": "packages/eve/src/internal/testing/app-harness.ts:createTestRuntime"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "line": 35
+      },
+      "symbol": "packages/eve/src/internal/testing/app-harness.ts:createTestRuntime"
+    }
+  ],
+  "start": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "line": 13
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:start"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:start"
+    }
+  ],
+  "taskModelRetryFixtureWorkflow": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "line": 13
+      },
+      "symbol": "packages/eve/src/internal/testing/task-model-retry-workflow.ts:taskModelRetryFixtureWorkflow"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/internal/testing/task-model-retry-workflow.ts:taskModelRetryFixtureWorkflow"
+    }
+  ]
+}

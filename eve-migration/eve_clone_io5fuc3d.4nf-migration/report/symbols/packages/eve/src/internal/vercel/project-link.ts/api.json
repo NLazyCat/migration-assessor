@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        6,
+        10
+      ],
+      "name": "VercelProjectLinkSchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const VercelProjectLinkSchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "VercelProjectLink",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelProjectLink = z.infer<typeof VercelProjectLinkSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        26
+      ],
+      "name": "readVercelProjectLink",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectLink | undefined>",
+      "signature": "export function readVercelProjectLink(projectPath: string) -> Promise<VercelProjectLink | undefined>"
+    }
+  ],
+  "module": "packages/eve/src/internal/vercel/project-link.ts"
+}

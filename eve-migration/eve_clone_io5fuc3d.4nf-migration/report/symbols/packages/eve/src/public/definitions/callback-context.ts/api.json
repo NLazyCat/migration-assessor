@@ -1,0 +1,30 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        37
+      ],
+      "name": "SessionContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        25
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly id: string;\r\n    readonly auth: SessionAuth;\r\n    readonly turn: SessionTurn;\r\n    readonly parent?: SessionParent;\r\n  }",
+      "signature": "session: : {\r\n    readonly id: string;\r\n    readonly auth: SessionAuth;\r\n    readonly turn: SessionTurn;\r\n    readonly parent?: SessionParent;\r\n  }"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/callback-context.ts"
+}

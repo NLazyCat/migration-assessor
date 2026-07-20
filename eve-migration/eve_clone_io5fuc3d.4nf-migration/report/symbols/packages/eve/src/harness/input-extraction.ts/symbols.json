@@ -1,0 +1,167 @@
+{
+  "module": "packages/eve/src/harness/input-extraction.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:ToolCallDescriptorSchema",
+      "kind": "variable",
+      "line_range": [
+        11,
+        15
+      ],
+      "name": "ToolCallDescriptorSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:ToolCallDescriptor",
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "ToolCallDescriptor",
+      "partial_analysis": false,
+      "value": "z.infer<typeof ToolCallDescriptorSchema>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:PersistedToolCallSchema",
+      "kind": "variable",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "PersistedToolCallSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:ToolApprovalRequestSchema",
+      "kind": "variable",
+      "line_range": [
+        26,
+        32
+      ],
+      "name": "ToolApprovalRequestSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:extractQuestionInputRequests",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        43
+      ],
+      "name": "extractQuestionInputRequests",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly excludedCallIds: ReadonlySet<string>;\r\n  readonly toolCalls: readonly TypedToolCall<ToolSet>[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InputRequest[]",
+      "signature": "export function extractQuestionInputRequests(input: {\r\n  readonly excludedCallIds: ReadonlySet<string>;\r\n  readonly toolCalls: readonly TypedToolCall<ToolSet>[];\r\n}) -> InputRequest[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:extractQuestionRequests",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        93
+      ],
+      "name": "extractQuestionRequests",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly excludedCallIds: ReadonlySet<string>;\r\n  readonly toolCalls: readonly ToolCallDescriptor[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InputRequest[]",
+      "signature": "export function extractQuestionRequests(input: {\r\n  readonly excludedCallIds: ReadonlySet<string>;\r\n  readonly toolCalls: readonly ToolCallDescriptor[];\r\n}) -> InputRequest[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:extractToolApprovalInputRequests",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        104
+      ],
+      "name": "extractToolApprovalInputRequests",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly content: readonly ContentPart<ToolSet>[];\r\n  readonly excludedCallIds?: ReadonlySet<string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InputRequest[]",
+      "signature": "export function extractToolApprovalInputRequests(input: {\r\n  readonly content: readonly ContentPart<ToolSet>[];\r\n  readonly excludedCallIds?: ReadonlySet<string>;\r\n}) -> InputRequest[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:extractApprovalRequests",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        109,
+        169
+      ],
+      "name": "extractApprovalRequests",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly content: readonly unknown[];\r\n  readonly excludedCallIds?: ReadonlySet<string>;\r\n  readonly includedRequestIds?: ReadonlySet<string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InputRequest[]",
+      "signature": "export function extractApprovalRequests(input: {\r\n  readonly content: readonly unknown[];\r\n  readonly excludedCallIds?: ReadonlySet<string>;\r\n  readonly includedRequestIds?: ReadonlySet<string>;\r\n}) -> InputRequest[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-extraction.ts:extractHistoricalInputRequests",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        176,
+        216
+      ],
+      "name": "extractHistoricalInputRequests",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly history: readonly ModelMessage[];\r\n  readonly requestIds: ReadonlySet<string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadonlyMap<string, InputRequest>",
+      "signature": "export function extractHistoricalInputRequests(input: {\r\n  readonly history: readonly ModelMessage[];\r\n  readonly requestIds: ReadonlySet<string>;\r\n}) -> ReadonlyMap<string, InputRequest>",
+      "visibility": "Public"
+    }
+  ]
+}

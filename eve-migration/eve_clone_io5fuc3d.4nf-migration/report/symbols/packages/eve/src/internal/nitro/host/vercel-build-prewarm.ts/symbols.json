@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/vercel-build-prewarm.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/vercel-build-prewarm.ts:PrewarmAppSandboxesInput",
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "PrewarmAppSandboxesInput",
+      "partial_analysis": false,
+      "value": "Parameters<typeof prewarmAppSandboxes>[0];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/vercel-build-prewarm.ts:MISSING_VERCEL_BUILD_OIDC_ERROR",
+      "kind": "variable",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "MISSING_VERCEL_BUILD_OIDC_ERROR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/vercel-build-prewarm.ts:runVercelBuildPrewarm",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        18,
+        35
+      ],
+      "name": "runVercelBuildPrewarm",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "PrewarmAppSandboxesInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function runVercelBuildPrewarm(input: PrewarmAppSandboxesInput) -> Promise<boolean>",
+      "visibility": "Public"
+    }
+  ]
+}

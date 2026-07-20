@@ -1,0 +1,54 @@
+{
+  "module": "packages/eve/src/svelte/use-eve-agent.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.test.ts:createStartedMessageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        20
+      ],
+      "name": "createStartedMessageResponse",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createStartedMessageResponse(sessionId: string, continuationToken: string) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/svelte/use-eve-agent.test.ts:createEagerStreamResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        34
+      ],
+      "name": "createEagerStreamResponse",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createEagerStreamResponse(events: readonly HandleMessageStreamEvent[]) -> Response",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "module": "packages/eve/src/internal/attachments/data.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/data.ts:fileDataToBytes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        46
+      ],
+      "name": "fileDataToBytes",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Buffer | null>",
+      "signature": "export function fileDataToBytes(data: unknown) -> Promise<Buffer | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/data.ts:getKnownByteLength",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        81
+      ],
+      "name": "getKnownByteLength",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | null",
+      "signature": "export function getKnownByteLength(data: unknown) -> number | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/data.ts:decodeStringData",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        104
+      ],
+      "name": "decodeStringData",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Buffer | null",
+      "signature": "export function decodeStringData(value: string) -> Buffer | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/data.ts:computeStringByteLength",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        132
+      ],
+      "name": "computeStringByteLength",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | null",
+      "signature": "export function computeStringByteLength(value: string) -> number | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/attachments/data.ts:estimateBase64ByteLength",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        134,
+        146
+      ],
+      "name": "estimateBase64ByteLength",
+      "params": [
+        {
+          "name": "base64",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function estimateBase64ByteLength(base64: string) -> number",
+      "visibility": "Private"
+    }
+  ]
+}

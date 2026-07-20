@@ -1,0 +1,101 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        111
+      ],
+      "name": "normalizeAgentDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Readonly<NormalizedAgentDefinition>",
+      "signature": "export function normalizeAgentDefinition(value: unknown, message: string) -> Readonly<NormalizedAgentDefinition>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        327,
+        336
+      ],
+      "name": "normalizeInstructionsDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InstructionsDefinition & { readonly markdown: string }",
+      "signature": "export function normalizeInstructionsDefinition(value: unknown, message: string) -> InstructionsDefinition & { readonly markdown: string }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        345,
+        368
+      ],
+      "name": "normalizeSkillDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SkillDefinition",
+      "signature": "export function normalizeSkillDefinition(value: unknown, message: string) -> SkillDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        398,
+        426
+      ],
+      "name": "normalizeScheduleDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ScheduleDefinition",
+      "signature": "export function normalizeScheduleDefinition(value: unknown, message: string) -> ScheduleDefinition"
+    }
+  ],
+  "module": "packages/eve/src/internal/authored-definition/core.ts"
+}

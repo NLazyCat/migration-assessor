@@ -1,0 +1,891 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        66,
+        69
+      ],
+      "name": "TeamsContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "teams",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsHandle",
+      "signature": "teams: : TeamsHandle"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "thread",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsThread",
+      "signature": "thread: : TeamsThread"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        72,
+        75
+      ],
+      "name": "TeamsChannelContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsChannelContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "adaptiveCardVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "adaptiveCardVersion: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsChannelState",
+      "signature": "state: : TeamsChannelState"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "TeamsEventContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsEventContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        81,
+        97
+      ],
+      "name": "TeamsChannelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsChannelState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "bot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsChannelAccount | null",
+      "signature": "bot: : TeamsChannelAccount | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "channelId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "conversationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "conversationId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "conversationType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "conversationType: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        89,
+        89
+      ],
+      "name": "replyToActivityId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "replyToActivityId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        90,
+        90
+      ],
+      "name": "serviceUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "serviceUrl: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "teamId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "tenantId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "tenantId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        94,
+        94
+      ],
+      "name": "triggeringUser",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsChannelAccount | null",
+      "signature": "triggeringUser: : TeamsChannelAccount | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "pendingAuthActivityId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "pendingAuthActivityId?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        100,
+        103
+      ],
+      "name": "TeamsChannelCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsChannelCredentials { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "webhookVerifier",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsWebhookVerifier",
+      "signature": "webhookVerifier?: : TeamsWebhookVerifier"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        111,
+        126
+      ],
+      "name": "TeamsReceiveTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsReceiveTarget { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        113,
+        113
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "conversationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "conversationId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        116,
+        116
+      ],
+      "name": "conversationType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "conversationType?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        118,
+        118
+      ],
+      "name": "initialMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | TeamsMessageBody",
+      "signature": "initialMessage?: : string | TeamsMessageBody"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        120,
+        120
+      ],
+      "name": "replyToActivityId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "replyToActivityId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "serviceUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "serviceUrl: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        123,
+        123
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "teamId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "tenantId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "tenantId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        129,
+        132
+      ],
+      "name": "TeamsInboundResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TeamsInboundResult = {\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly context?: readonly string[];\r\n} | null;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        135,
+        135
+      ],
+      "name": "TeamsInboundResultOrPromise",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TeamsInboundResultOrPromise = TeamsInboundResult | Promise<TeamsInboundResult>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        138,
+        138
+      ],
+      "name": "TeamsInputResponseResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TeamsInputResponseResult = { readonly auth: SessionAuthContext | null } | null;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        141,
+        141
+      ],
+      "name": "TeamsInvokeResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TeamsInvokeResult = Record<string, unknown> | Response | null | undefined;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        144,
+        144
+      ],
+      "name": "TeamsInvokeResultOrPromise",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TeamsInvokeResultOrPromise = TeamsInvokeResult | Promise<TeamsInvokeResult>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        158,
+        173
+      ],
+      "name": "TeamsChannelEvents",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsChannelEvents { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        159,
+        159
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"turn.started\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"turn.started\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        160,
+        160
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"actions.requested\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"actions.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        161,
+        161
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"action.result\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"action.result\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        162,
+        162
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"message.completed\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"message.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        163,
+        163
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"message.appended\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"message.appended\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"input.requested\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"input.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        165,
+        165
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"turn.failed\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"turn.failed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"turn.completed\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"turn.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"turn.cancelled\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"turn.cancelled\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsSessionFailedHandler",
+      "signature": "[expr]?: : TeamsSessionFailedHandler"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        169,
+        169
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"session.completed\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"session.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        170,
+        170
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"session.waiting\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"session.waiting\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        171,
+        171
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"authorization.required\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"authorization.required\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        172,
+        172
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsEventHandler<\"authorization.completed\">",
+      "signature": "[expr]?: : TeamsEventHandler<\"authorization.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        176,
+        201
+      ],
+      "name": "TeamsChannelConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsChannelConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        178,
+        178
+      ],
+      "name": "adaptiveCardVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "adaptiveCardVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        180,
+        180
+      ],
+      "name": "api",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Omit<TeamsApiOptions, \"credentials\">",
+      "signature": "api?: : Omit<TeamsApiOptions, \"credentials\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        182,
+        182
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsChannelCredentials",
+      "signature": "credentials?: : TeamsChannelCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsChannelEvents",
+      "signature": "events?: : TeamsChannelEvents"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        186,
+        186
+      ],
+      "name": "files",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TeamsFilesConfig",
+      "signature": "files?: : TeamsFilesConfig"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        188,
+        188
+      ],
+      "name": "route",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "route?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        204,
+        233
+      ],
+      "name": "TeamsHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        205,
+        205
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "channelId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        206,
+        206
+      ],
+      "name": "conversationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "conversationId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        207,
+        207
+      ],
+      "name": "conversationType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "conversationType: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        208,
+        208
+      ],
+      "name": "replyToActivityId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "replyToActivityId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        209,
+        209
+      ],
+      "name": "serviceUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "serviceUrl: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        210,
+        210
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "teamId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        211,
+        211
+      ],
+      "name": "tenantId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "tenantId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        236,
+        243
+      ],
+      "name": "TeamsThread",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsThread { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        246,
+        249
+      ],
+      "name": "TeamsRequestOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsRequestOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        248,
+        248
+      ],
+      "name": "method",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"DELETE\" | \"GET\" | \"POST\" | \"PUT\"",
+      "signature": "method?: : \"DELETE\" | \"GET\" | \"POST\" | \"PUT\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        252,
+        256
+      ],
+      "name": "TeamsChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsChannel { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        259,
+        383
+      ],
+      "name": "teamsChannel",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "TeamsChannelConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TeamsChannel",
+      "signature": "export function teamsChannel(config: TeamsChannelConfig) -> TeamsChannel"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/teams/teamsChannel.ts"
+}

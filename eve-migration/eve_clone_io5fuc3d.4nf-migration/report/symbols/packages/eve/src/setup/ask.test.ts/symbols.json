@@ -1,0 +1,253 @@
+{
+  "module": "packages/eve/src/setup/ask.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:untouchableAsker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        37
+      ],
+      "name": "untouchableAsker",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Asker",
+      "signature": "export function untouchableAsker() -> Asker",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:recordingEvents",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        42
+      ],
+      "name": "recordingEvents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ resolutions: Resolution[]; onResolved: (r: Resolution) => void }",
+      "signature": "export function recordingEvents() -> { resolutions: Resolution[]; onResolved: (r: Resolution) => void }",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/ask.test.ts:Color:hex",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "hex",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/ask.test.ts:Color",
+      "kind": "interface",
+      "line_range": [
+        44,
+        46
+      ],
+      "name": "Color",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:RED",
+      "kind": "variable",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "RED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:BLUE",
+      "kind": "variable",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "BLUE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:COLOR_OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "COLOR_OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:colorQuestion",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        63
+      ],
+      "name": "colorQuestion",
+      "params": [
+        {
+          "name": "extra",
+          "optional": false,
+          "type": "Partial<Pick<Question<Color>, \"detected\" | \"recommended\" | \"required\">> & {\r\n    search?: boolean;\r\n    placeholder?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Question<Color>",
+      "signature": "export function colorQuestion(extra: Partial<Pick<Question<Color>, \"detected\" | \"recommended\" | \"required\">> & {\r\n    search?: boolean;\r\n    placeholder?: string;\r\n  }) -> Question<Color>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:GREEN",
+      "kind": "variable",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "GREEN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:WHITE",
+      "kind": "variable",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "WHITE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:COLOR_MULTI_OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        68,
+        73
+      ],
+      "name": "COLOR_MULTI_OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:colorsQuestion",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        79
+      ],
+      "name": "colorsQuestion",
+      "params": [
+        {
+          "name": "extra",
+          "optional": false,
+          "type": "Partial<MultiSelectQuestion<Color>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MultiSelectQuestion<Color>",
+      "signature": "export function colorsQuestion(extra: Partial<MultiSelectQuestion<Color>>) -> MultiSelectQuestion<Color>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:SingleHandler",
+      "kind": "type_alias",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "SingleHandler",
+      "partial_analysis": false,
+      "value": "(opts: SingleSelectOptions<PrompterValue>) => PrompterValue;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:selectPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        86
+      ],
+      "name": "selectPrompter",
+      "params": [
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "SingleHandler"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function selectPrompter(handler: SingleHandler) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:MultipleHandler",
+      "kind": "type_alias",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "MultipleHandler",
+      "partial_analysis": false,
+      "value": "(opts: MultiSelectOptions<PrompterValue>) => PrompterValue[];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/ask.test.ts:multiSelectPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        90,
+        93
+      ],
+      "name": "multiSelectPrompter",
+      "params": [
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "MultipleHandler"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function multiSelectPrompter(handler: MultipleHandler) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

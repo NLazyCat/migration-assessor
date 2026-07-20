@@ -1,0 +1,158 @@
+{
+  "module": "packages/eve/src/internal/application/build-workspace.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:appRoot",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:compiler",
+          "kind": "property",
+          "line_range": [
+            10,
+            13
+          ],
+          "name": "compiler",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly artifactsDir: string;\r\n    readonly rootDir: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:host",
+          "kind": "property",
+          "line_range": [
+            14,
+            16
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly artifactsDir: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:nitro",
+          "kind": "property",
+          "line_range": [
+            17,
+            20
+          ],
+          "name": "nitro",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly buildDir: string;\r\n    readonly surfaceOutputDir: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:publication",
+          "kind": "property",
+          "line_range": [
+            21,
+            30
+          ],
+          "name": "publication",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly output: {\r\n      readonly finalDir: string;\r\n      readonly stagedDir: string;\r\n    };\r\n    readonly summary: {\r\n      readonly finalPath: string;\r\n      readonly stagedPath: string;\r\n    };\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:rootDir",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "rootDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace:workflow",
+          "kind": "property",
+          "line_range": [
+            32,
+            34
+          ],
+          "name": "workflow",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly buildDir: string;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace",
+      "kind": "interface",
+      "line_range": [
+        8,
+        35
+      ],
+      "name": "ApplicationBuildWorkspace",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-workspace.ts:createApplicationBuildWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        43,
+        82
+      ],
+      "name": "createApplicationBuildWorkspace",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "outputDirectory",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ApplicationBuildWorkspace>",
+      "signature": "export function createApplicationBuildWorkspace(appRoot: string, outputDirectory: string) -> Promise<ApplicationBuildWorkspace>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-workspace.ts:removeApplicationBuildWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        84,
+        88
+      ],
+      "name": "removeApplicationBuildWorkspace",
+      "params": [
+        {
+          "name": "workspace",
+          "optional": false,
+          "type": "ApplicationBuildWorkspace"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function removeApplicationBuildWorkspace(workspace: ApplicationBuildWorkspace) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

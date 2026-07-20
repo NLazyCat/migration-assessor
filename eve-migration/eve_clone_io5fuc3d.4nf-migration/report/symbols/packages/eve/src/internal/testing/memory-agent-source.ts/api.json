@@ -1,0 +1,191 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        13,
+        57
+      ],
+      "name": "MemoryAgentProjectInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MemoryAgentProjectInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "agentFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "agentFiles?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "agentDirectories",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "agentDirectories?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "appFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "appFiles?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "appDirectories",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "appDirectories?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "packageName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "flat",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "flat?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "omitPackageJson",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "omitPackageJson?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        62,
+        79
+      ],
+      "name": "MemoryAgentProject",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MemoryAgentProject { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "agentRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "source",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProjectSource",
+      "signature": "source: : ProjectSource"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        87,
+        127
+      ],
+      "name": "buildMemoryAgentProject",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MemoryAgentProjectInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MemoryAgentProject",
+      "signature": "export function buildMemoryAgentProject(input: MemoryAgentProjectInput) -> MemoryAgentProject"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/memory-agent-source.ts"
+}

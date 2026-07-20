@@ -1,0 +1,43 @@
+{
+  "module": "packages/eve/src/execution/durable-session-migrations/turn-workflow.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.test.ts:createDelivery",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        158,
+        160
+      ],
+      "name": "createDelivery",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HookPayload",
+      "signature": "export function createDelivery() -> HookPayload",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.test.ts:createSessionState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        162,
+        171
+      ],
+      "name": "createSessionState",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<DurableSessionState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableSessionState",
+      "signature": "export function createSessionState(overrides: Partial<DurableSessionState>) -> DurableSessionState",
+      "visibility": "Private"
+    }
+  ]
+}

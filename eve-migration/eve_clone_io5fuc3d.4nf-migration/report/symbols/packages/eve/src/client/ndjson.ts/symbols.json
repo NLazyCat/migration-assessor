@@ -1,0 +1,49 @@
+{
+  "module": "packages/eve/src/client/ndjson.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/client/ndjson.ts:isStreamDisconnectError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        25
+      ],
+      "name": "isStreamDisconnectError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isStreamDisconnectError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/ndjson.ts:readNdjsonStream",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        36,
+        86
+      ],
+      "name": "readNdjsonStream",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncGenerator<HandleMessageStreamEvent>",
+      "signature": "export function readNdjsonStream(body: ReadableStream<Uint8Array>) -> AsyncGenerator<HandleMessageStreamEvent>",
+      "visibility": "Public"
+    }
+  ]
+}

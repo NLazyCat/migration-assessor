@@ -1,0 +1,64 @@
+{
+  "module": "packages/eve/src/runtime/resolve-dynamic-tool.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-dynamic-tool.ts:resolveDynamicToolDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        77
+      ],
+      "name": "resolveDynamicToolDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledDynamicToolDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedDynamicToolResolver>",
+      "signature": "export function resolveDynamicToolDefinition(definition: CompiledDynamicToolDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedDynamicToolResolver>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-dynamic-tool.ts:describe",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        79,
+        81
+      ],
+      "name": "describe",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledDynamicToolDefinition"
+        },
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function describe(definition: CompiledDynamicToolDefinition, predicate: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:getPaddedRenderSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        21
+      ],
+      "name": "getPaddedRenderSize",
+      "params": [
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "paddingRadius",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getPaddedRenderSize(width: number, height: number, paddingRadius: unknown) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:createBloomTexture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        30
+      ],
+      "name": "createBloomTexture",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createBloomTexture(device: Device, label: string, width: number, height: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:createBackDepthTexture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        44
+      ],
+      "name": "createBackDepthTexture",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createBackDepthTexture(device: Device, label: string, width: number, height: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:createPaintTexture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        57
+      ],
+      "name": "createPaintTexture",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPaintTexture(device: Device, label: string, width: number, height: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:createPaintStaticNoiseTexture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        71
+      ],
+      "name": "createPaintStaticNoiseTexture",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPaintStaticNoiseTexture(device: Device, label: string, width: number, height: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:createVoronoiNoiseTexture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        73,
+        85
+      ],
+      "name": "createVoronoiNoiseTexture",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createVoronoiNoiseTexture(device: Device, label: string, width: number, height: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:uploadStaticNoiseTexture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        109
+      ],
+      "name": "uploadStaticNoiseTexture",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "texture",
+          "optional": false,
+          "type": "GPUTexture"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function uploadStaticNoiseTexture(device: Device, texture: GPUTexture, width: number, height: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts:hashPaintCell",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        111,
+        117
+      ],
+      "name": "hashPaintCell",
+      "params": [
+        {
+          "name": "x",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "y",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "salt",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function hashPaintCell(x: number, y: number, salt: number) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

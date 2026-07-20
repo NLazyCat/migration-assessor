@@ -1,0 +1,143 @@
+{
+  "module": "packages/eve/src/runtime/skills/sandbox-access.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/skills/sandbox-access.ts:FRONTMATTER_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "FRONTMATTER_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/skills/sandbox-access.ts:assertSafeSkillId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        26
+      ],
+      "name": "assertSafeSkillId",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "asserts id is string",
+      "signature": "export function assertSafeSkillId(id: string) -> asserts id is string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/skills/sandbox-access.ts:loadSkillFromSandbox",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        37,
+        59
+      ],
+      "name": "loadSkillFromSandbox",
+      "params": [
+        {
+          "name": "access",
+          "optional": false,
+          "type": "SandboxAccess"
+        },
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "availableNames",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function loadSkillFromSandbox(access: SandboxAccess, id: string, availableNames: readonly string[]) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/skills/sandbox-access.ts:createSandboxSkillHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        111
+      ],
+      "name": "createSandboxSkillHandle",
+      "params": [
+        {
+          "name": "access",
+          "optional": false,
+          "type": "SandboxAccess"
+        },
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SkillHandle",
+      "signature": "export function createSandboxSkillHandle(access: SandboxAccess, id: string) -> SkillHandle",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/skills/sandbox-access.ts:assertSafeSkillRelativePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        124
+      ],
+      "name": "assertSafeSkillRelativePath",
+      "params": [
+        {
+          "name": "relativePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertSafeSkillRelativePath(relativePath: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/skills/sandbox-access.ts:requireSandboxSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        126,
+        132
+      ],
+      "name": "requireSandboxSession",
+      "params": [
+        {
+          "name": "access",
+          "optional": false,
+          "type": "SandboxAccess"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SandboxSession>",
+      "signature": "export function requireSandboxSession(access: SandboxAccess) -> Promise<SandboxSession>",
+      "visibility": "Private"
+    }
+  ]
+}

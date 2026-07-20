@@ -1,0 +1,326 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "EXTENSION_COMPATIBILITY_MANIFEST_KIND",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTENSION_COMPATIBILITY_MANIFEST_KIND: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "EXTENSION_COMPATIBILITY_MANIFEST_FORMAT_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTENSION_COMPATIBILITY_MANIFEST_FORMAT_VERSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "EXTENSION_COMPATIBILITY_MANIFEST_FILENAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTENSION_COMPATIBILITY_MANIFEST_FILENAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        17,
+        29
+      ],
+      "name": "EXTENSION_CAPABILITY_VERSIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTENSION_CAPABILITY_VERSIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "ExtensionCapability",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ExtensionCapability = keyof typeof EXTENSION_CAPABILITY_VERSIONS;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "ExtensionCapabilityRequirements",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ExtensionCapabilityRequirements = Partial<Record<ExtensionCapability, number>>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        61,
+        63
+      ],
+      "name": "EXTENSION_CAPABILITY_SUPPORT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTENSION_CAPABILITY_SUPPORT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "ExtensionCapabilitySupport",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ExtensionCapabilitySupport = Readonly<Record<string, readonly number[]>>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        69,
+        75
+      ],
+      "name": "ExtensionCompatibilityManifest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionCompatibilityManifest { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof EXTENSION_COMPATIBILITY_MANIFEST_KIND",
+      "signature": "kind: : typeof EXTENSION_COMPATIBILITY_MANIFEST_KIND"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "formatVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof EXTENSION_COMPATIBILITY_MANIFEST_FORMAT_VERSION",
+      "signature": "formatVersion: : typeof EXTENSION_COMPATIBILITY_MANIFEST_FORMAT_VERSION"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "builtWithEve",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "builtWithEve: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "requires",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, number>>",
+      "signature": "requires: : Readonly<Record<string, number>>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        78,
+        82
+      ],
+      "name": "UnsupportedExtensionCapability",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface UnsupportedExtensionCapability { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "capability",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "capability: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "requiredVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "requiredVersion: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "supportedVersions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly number[]",
+      "signature": "supportedVersions: : readonly number[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        94,
+        98
+      ],
+      "name": "serializeExtensionCompatibilityManifest",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "ExtensionCompatibilityManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function serializeExtensionCompatibilityManifest(manifest: ExtensionCompatibilityManifest) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        101,
+        121
+      ],
+      "name": "parseExtensionCompatibilityManifest",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "manifestPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionCompatibilityManifest",
+      "signature": "export function parseExtensionCompatibilityManifest(raw: string, manifestPath: string) -> ExtensionCompatibilityManifest"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        124,
+        128
+      ],
+      "name": "readExtensionCompatibilityManifest",
+      "params": [
+        {
+          "name": "manifestPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExtensionCompatibilityManifest>",
+      "signature": "export function readExtensionCompatibilityManifest(manifestPath: string) -> Promise<ExtensionCompatibilityManifest>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        131,
+        140
+      ],
+      "name": "writeExtensionCompatibilityManifest",
+      "params": [
+        {
+          "name": "distRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "ExtensionCompatibilityManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeExtensionCompatibilityManifest(distRoot: string, manifest: ExtensionCompatibilityManifest) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        143,
+        159
+      ],
+      "name": "findUnsupportedExtensionCapabilities",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "ExtensionCompatibilityManifest"
+        },
+        {
+          "name": "support",
+          "optional": false,
+          "type": "ExtensionCapabilitySupport"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UnsupportedExtensionCapability[]",
+      "signature": "export function findUnsupportedExtensionCapabilities(manifest: ExtensionCompatibilityManifest, support: ExtensionCapabilitySupport) -> UnsupportedExtensionCapability[]"
+    }
+  ],
+  "module": "packages/eve/src/compiler/extension-compatibility.ts"
+}

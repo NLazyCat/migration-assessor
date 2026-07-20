@@ -1,0 +1,125 @@
+{
+  "module": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:PROTOCOL_PARAM",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "PROTOCOL_PARAM",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:AUTH_PARAM",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "AUTH_PARAM",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:SetupTabsProps:protocols",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "protocols",
+          "partial_analysis": false,
+          "return_type": ": ConnectionProtocol[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:SetupTabsProps:authModes",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "authModes",
+          "partial_analysis": false,
+          "return_type": ": AuthMode[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:SetupTabsProps:variants",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "variants",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:SetupTabsProps",
+      "kind": "interface",
+      "line_range": [
+        18,
+        22
+      ],
+      "name": "SetupTabsProps",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:SwitcherRow",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        24,
+        52
+      ],
+      "name": "SwitcherRow",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  options: T[];\r\n  active: T;\r\n  label: (value: T) => string;\r\n  onSelect: (value: T) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx:SetupTabs",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        54,
+        103
+      ],
+      "name": "SetupTabs",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "SetupTabsProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

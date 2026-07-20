@@ -1,0 +1,165 @@
+{
+  "module": "packages/eve/src/runtime/loaders/manifest.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/manifest.ts:BUNDLED_MANIFEST_SOURCE",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "BUNDLED_MANIFEST_SOURCE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/manifest.ts:LoadCompiledManifestInput:compiledArtifactsSource",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "compiledArtifactsSource",
+          "partial_analysis": false,
+          "return_type": ": RuntimeCompiledArtifactsSource",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/manifest.ts:LoadCompiledManifestInput",
+      "kind": "interface",
+      "line_range": [
+        13,
+        15
+      ],
+      "name": "LoadCompiledManifestInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/manifest.ts:LoadCompiledManifestError:manifestPath",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "manifestPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/manifest.ts:LoadCompiledManifestError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            23,
+            30
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "manifestPath",
+              "optional": true,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/manifest.ts:LoadCompiledManifestError",
+      "kind": "class",
+      "line_range": [
+        20,
+        31
+      ],
+      "name": "LoadCompiledManifestError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/manifest.ts:loadCompiledManifest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        36,
+        68
+      ],
+      "name": "loadCompiledManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "LoadCompiledManifestInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledAgentManifest>",
+      "signature": "export function loadCompiledManifest(input: LoadCompiledManifestInput) -> Promise<CompiledAgentManifest>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/manifest.ts:parseCompiledManifest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        70,
+        81
+      ],
+      "name": "parseCompiledManifest",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "manifestPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentManifest",
+      "signature": "export function parseCompiledManifest(value: unknown, manifestPath: string) -> CompiledAgentManifest",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/manifest.ts:formatLoadErrorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        89
+      ],
+      "name": "formatLoadErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatLoadErrorMessage(error: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

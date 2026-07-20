@@ -1,0 +1,762 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "COMPILED_AGENT_MANIFEST_KIND",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const COMPILED_AGENT_MANIFEST_KIND: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "ROOT_COMPILED_AGENT_NODE_ID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const ROOT_COMPILED_AGENT_NODE_ID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "COMPILED_AGENT_MANIFEST_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const COMPILED_AGENT_MANIFEST_VERSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "CompiledChannelEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledChannelEntry = CompiledChannelDefinition | DisabledCompiledChannelEntry;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        54,
+        78
+      ],
+      "name": "CompiledChannelDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledChannelDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"channel\"",
+      "signature": "kind: : \"channel\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "method",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelRouteMethod",
+      "signature": "method: : ChannelRouteMethod"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "urlPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "urlPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "sourceKind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"module\"",
+      "signature": "sourceKind: : \"module\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "exportName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "exportName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "adapterKind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "adapterKind?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "cors",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": NormalizedChannelCorsOptions",
+      "signature": "cors?: : NormalizedChannelCorsOptions"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "CompiledRuntimeModelReference",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledRuntimeModelReference = InternalAgentModelDefinition & {\r\n  routing: ModelRouting;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        107,
+        109
+      ],
+      "name": "CompiledDynamicModelDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledDynamicModelDefinition = ModuleSourceRef & {\r\n  readonly eventNames: readonly string[];\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        127,
+        131
+      ],
+      "name": "CompiledAgentDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledAgentDefinition = Omit<InternalAgentDefinition, \"model\" | \"compaction\"> & {\r\n  model: CompiledRuntimeModelReference;\r\n  compaction?: CompiledAgentCompactionDefinition;\r\n  dynamicModel?: CompiledDynamicModelDefinition;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        137,
+        138
+      ],
+      "name": "CompiledInstructionsDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledInstructionsDefinition = InternalInstructionsDefinition &\r\n  (Omit<MarkdownSourceRef<undefined>, \"definition\"> | Omit<ModuleSourceRef, \"exportName\">);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        143,
+        144
+      ],
+      "name": "CompiledSkillDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledSkillDefinition = NamedSkillDefinition &\r\n  (Omit<MarkdownSourceRef<undefined>, \"definition\"> | ModuleSourceRef | SkillPackageSourceRef);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "CompiledScheduleDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledScheduleDefinition = z.infer<typeof compiledScheduleDefinitionSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        154,
+        154
+      ],
+      "name": "CompiledSandboxDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledSandboxDefinition = z.infer<typeof compiledSandboxDefinitionSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "CompiledWorkspaceResourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledWorkspaceResourceRoot = z.infer<typeof compiledWorkspaceResourceRootSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "CompiledConnectionDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledConnectionDefinition = z.infer<typeof compiledConnectionDefinitionSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        178,
+        178
+      ],
+      "name": "CompiledToolDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledToolDefinition = InternalToolDefinition & ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        183,
+        185
+      ],
+      "name": "CompiledWorkflowToolDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledWorkflowToolDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "maxSubagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "maxSubagents?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        192,
+        202
+      ],
+      "name": "CompiledDynamicToolDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledDynamicToolDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        193,
+        193
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        194,
+        194
+      ],
+      "name": "eventNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "eventNames: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        201,
+        201
+      ],
+      "name": "extensionNamespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "extensionNamespace?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        209,
+        217
+      ],
+      "name": "CompiledDynamicSkillDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledDynamicSkillDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        210,
+        210
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        211,
+        211
+      ],
+      "name": "eventNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "eventNames: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        216,
+        216
+      ],
+      "name": "extensionNamespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "extensionNamespace?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        223,
+        226
+      ],
+      "name": "CompiledDynamicInstructionsDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledDynamicInstructionsDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        224,
+        224
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        225,
+        225
+      ],
+      "name": "eventNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "eventNames: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        235,
+        242
+      ],
+      "name": "CompiledHookDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledHookDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        241,
+        241
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        248,
+        248
+      ],
+      "name": "CompiledAgentNodeManifest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledAgentNodeManifest = z.infer<typeof compiledAgentNodeManifestSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        254,
+        263
+      ],
+      "name": "CompiledSubagentNode",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledSubagentNode = Readonly<\r\n  ModuleSourceRef &\r\n    Node & {\r\n      agent: CompiledAgentNodeManifest;\r\n      description: string;\r\n      entryPath: string;\r\n      name: string;\r\n      rootPath: string;\r\n    }\r\n>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        270,
+        273
+      ],
+      "name": "CompiledSubagentEdge",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledSubagentEdge { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        271,
+        271
+      ],
+      "name": "childNodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "childNodeId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        272,
+        272
+      ],
+      "name": "parentNodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "parentNodeId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        278,
+        278
+      ],
+      "name": "CompiledAgentManifest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledAgentManifest = z.infer<typeof compiledAgentManifestSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        689,
+        707
+      ],
+      "name": "CompiledExtensionMount",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledExtensionMount { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        691,
+        691
+      ],
+      "name": "namespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "namespace: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        692,
+        692
+      ],
+      "name": "packageName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        698,
+        698
+      ],
+      "name": "packageNamespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageNamespace: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        704,
+        704
+      ],
+      "name": "sourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        705,
+        705
+      ],
+      "name": "mountSourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "mountSourceId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        706,
+        706
+      ],
+      "name": "mountLogicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "mountLogicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        723,
+        751
+      ],
+      "name": "compiledAgentManifestSchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const compiledAgentManifestSchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        756,
+        869
+      ],
+      "name": "createCompiledAgentNodeManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicInstructions?: readonly CompiledDynamicInstructionsDefinition[];\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly workspaceResourceRoot?: CompiledWorkspaceResourceRoot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentNodeManifest",
+      "signature": "export function createCompiledAgentNodeManifest(input: {\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicInstructions?: readonly CompiledDynamicInstructionsDefinition[];\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly workspaceResourceRoot?: CompiledWorkspaceResourceRoot;\r\n}) -> CompiledAgentNodeManifest"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        879,
+        892
+      ],
+      "name": "deriveResourceRootEntries",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function deriveResourceRootEntries(input: {\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n}) -> readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        898,
+        904
+      ],
+      "name": "createCompiledSubagentNodeId",
+      "params": [
+        {
+          "name": "parentNodeId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "sourceId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createCompiledSubagentNodeId(parentNodeId: string, sourceId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        909,
+        940
+      ],
+      "name": "createCompiledAgentManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly subagentEdges?: readonly CompiledSubagentEdge[];\r\n  readonly subagents?: readonly CompiledSubagentNode[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly extensionMounts?: readonly CompiledExtensionMount[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentManifest",
+      "signature": "export function createCompiledAgentManifest(input: {\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly subagentEdges?: readonly CompiledSubagentEdge[];\r\n  readonly subagents?: readonly CompiledSubagentNode[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly extensionMounts?: readonly CompiledExtensionMount[];\r\n}) -> CompiledAgentManifest"
+    }
+  ],
+  "module": "packages/eve/src/compiler/manifest.ts"
+}

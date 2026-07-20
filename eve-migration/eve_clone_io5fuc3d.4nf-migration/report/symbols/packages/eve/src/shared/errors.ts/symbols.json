@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/shared/errors.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/errors.ts:toErrorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        29
+      ],
+      "name": "toErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toErrorMessage(error: unknown) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/errors.ts:toError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        58
+      ],
+      "name": "toError",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function toError(raw: unknown) -> Error",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/errors.ts:safeJsonStringify",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        71
+      ],
+      "name": "safeJsonStringify",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function safeJsonStringify(value: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

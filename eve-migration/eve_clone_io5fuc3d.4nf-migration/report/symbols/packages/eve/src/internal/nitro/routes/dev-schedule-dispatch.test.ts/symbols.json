@@ -1,0 +1,81 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts:mocks",
+      "kind": "variable",
+      "line_range": [
+        3,
+        5
+      ],
+      "name": "mocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts:APP_ROOT",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "APP_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts:ARTIFACTS_CONFIG",
+      "kind": "variable",
+      "line_range": [
+        18,
+        23
+      ],
+      "name": "ARTIFACTS_CONFIG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts:importHandler",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        25,
+        27
+      ],
+      "name": "importHandler",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function importHandler() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts:postSchedule",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        29,
+        35
+      ],
+      "name": "postSchedule",
+      "params": [
+        {
+          "name": "scheduleIdInUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function postSchedule(scheduleIdInUrl: string) -> Promise<Response>",
+      "visibility": "Private"
+    }
+  ]
+}

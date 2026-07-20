@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/test/define-glob-tool.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/define-glob-tool.test.ts:createFakeAccess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        54
+      ],
+      "name": "createFakeAccess",
+      "params": [
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "(command: string) => { exitCode: number; stderr: string; stdout: string } | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxAccess",
+      "signature": "export function createFakeAccess(handler: (command: string) => { exitCode: number; stderr: string; stdout: string } | null) -> SandboxAccess",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "module": "packages/eve/src/execution/web-fetch/html.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/web-fetch/html.ts:convertHtmlToMarkdown",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        21
+      ],
+      "name": "convertHtmlToMarkdown",
+      "params": [
+        {
+          "name": "html",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function convertHtmlToMarkdown(html: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/web-fetch/html.ts:extractTextFromHtml",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        60
+      ],
+      "name": "extractTextFromHtml",
+      "params": [
+        {
+          "name": "html",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function extractTextFromHtml(html: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/web-fetch/html.ts:ENTITY_MAP",
+      "kind": "variable",
+      "line_range": [
+        62,
+        71
+      ],
+      "name": "ENTITY_MAP",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/web-fetch/html.ts:ENTITY_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "ENTITY_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/web-fetch/html.ts:decodeHtmlEntities",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        77
+      ],
+      "name": "decodeHtmlEntities",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function decodeHtmlEntities(text: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

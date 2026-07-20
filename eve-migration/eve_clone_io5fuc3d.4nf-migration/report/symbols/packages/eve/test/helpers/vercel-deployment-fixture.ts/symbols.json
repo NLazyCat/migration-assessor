@@ -1,0 +1,464 @@
+{
+  "module": "packages/eve/test/helpers/vercel-deployment-fixture.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:VERCEL_CLI_PACKAGE",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "VERCEL_CLI_PACKAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:DEFAULT_DEPLOYMENT_READY_ATTEMPTS",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "DEFAULT_DEPLOYMENT_READY_ATTEMPTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:DEFAULT_DEPLOYMENT_READY_WAIT_MS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "DEFAULT_DEPLOYMENT_READY_WAIT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:TarballVercelDeploymentFixture:appRoot",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:TarballVercelDeploymentFixture:deploymentUrl",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "deploymentUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:TarballVercelDeploymentFixture",
+      "kind": "interface",
+      "line_range": [
+        20,
+        24
+      ],
+      "name": "TarballVercelDeploymentFixture",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:descriptor",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "descriptor",
+          "partial_analysis": false,
+          "return_type": ": ScenarioAppDescriptor",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:orgId",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "orgId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:prefix",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "prefix",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:projectId",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:runtimeEnv",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "runtimeEnv",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:scope",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "scope",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:token",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput:waitForHealth",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "waitForHealth",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:CreateTarballVercelDeploymentFixtureInput",
+      "kind": "interface",
+      "line_range": [
+        29,
+        39
+      ],
+      "name": "CreateTarballVercelDeploymentFixtureInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:createTarballVercelDeploymentFixture",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        46,
+        102
+      ],
+      "name": "createTarballVercelDeploymentFixture",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateTarballVercelDeploymentFixtureInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TarballVercelDeploymentFixture>",
+      "signature": "export function createTarballVercelDeploymentFixture(input: CreateTarballVercelDeploymentFixtureInput) -> Promise<TarballVercelDeploymentFixture>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:writeDescriptorAppFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        104,
+        121
+      ],
+      "name": "writeDescriptorAppFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly descriptor: ScenarioAppDescriptor;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeDescriptorAppFiles(input: {\r\n  readonly appRoot: string;\r\n  readonly descriptor: ScenarioAppDescriptor;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:writeDescriptorPackageManifest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        123,
+        143
+      ],
+      "name": "writeDescriptorPackageManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly descriptor: ScenarioAppDescriptor;\r\n  readonly tarballFileName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeDescriptorPackageManifest(input: {\r\n  readonly appRoot: string;\r\n  readonly descriptor: ScenarioAppDescriptor;\r\n  readonly tarballFileName: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:writeVercelProjectLink",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        145,
+        167
+      ],
+      "name": "writeVercelProjectLink",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly orgId: string;\r\n  readonly projectId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeVercelProjectLink(input: {\r\n  readonly appRoot: string;\r\n  readonly orgId: string;\r\n  readonly projectId: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:deployFixtureToVercel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        169,
+        213
+      ],
+      "name": "deployFixtureToVercel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly runtimeEnv?: Readonly<Record<string, string>>;\r\n  readonly scope?: string;\r\n  readonly token: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function deployFixtureToVercel(input: {\r\n  readonly appRoot: string;\r\n  readonly runtimeEnv?: Readonly<Record<string, string>>;\r\n  readonly scope?: string;\r\n  readonly token: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:extractDeploymentUrlFromJsonOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        215,
+        243
+      ],
+      "name": "extractDeploymentUrlFromJsonOutput",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractDeploymentUrlFromJsonOutput(stdout: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:readDeploymentUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        245,
+        263
+      ],
+      "name": "readDeploymentUrl",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readDeploymentUrl(value: unknown) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        265,
+        267
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:extractDeploymentUrlFromText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        269,
+        291
+      ],
+      "name": "extractDeploymentUrlFromText",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractDeploymentUrlFromText(output: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:normalizeDeploymentUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        293,
+        301
+      ],
+      "name": "normalizeDeploymentUrl",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeDeploymentUrl(value: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:waitForDeploymentReady",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        303,
+        345
+      ],
+      "name": "waitForDeploymentReady",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly deploymentUrl: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForDeploymentReady(input: { readonly deploymentUrl: string }) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/helpers/vercel-deployment-fixture.ts:sleep",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        347,
+        351
+      ],
+      "name": "sleep",
+      "params": [
+        {
+          "name": "milliseconds",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function sleep(milliseconds: number) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

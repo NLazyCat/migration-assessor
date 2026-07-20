@@ -1,0 +1,37 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        20,
+        35
+      ],
+      "name": "workflow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Plugin[]",
+      "signature": "export function workflow() -> Plugin[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        100,
+        102
+      ],
+      "name": "resolveWorkflowTestOutputDirectory",
+      "params": [
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkflowTestOutputDirectory(workingDir: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts"
+}

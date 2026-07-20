@@ -1,0 +1,215 @@
+{
+  "module": "apps/templates/web-chat-next/components/ui/dialog.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:Dialog",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "Dialog",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Root>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function Dialog(_: React.ComponentProps<typeof DialogPrimitive.Root>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogTrigger",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "DialogTrigger",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Trigger>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogTrigger(_: React.ComponentProps<typeof DialogPrimitive.Trigger>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogPortal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        20
+      ],
+      "name": "DialogPortal",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Portal>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogPortal(_: React.ComponentProps<typeof DialogPrimitive.Portal>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogClose",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        24
+      ],
+      "name": "DialogClose",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Close>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogClose(_: React.ComponentProps<typeof DialogPrimitive.Close>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogOverlay",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        40
+      ],
+      "name": "DialogOverlay",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Overlay>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogOverlay(_: React.ComponentProps<typeof DialogPrimitive.Overlay>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogContent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        74
+      ],
+      "name": "DialogContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Content> & {\r\n  showCloseButton?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogContent(_: React.ComponentProps<typeof DialogPrimitive.Content> & {\r\n  showCloseButton?: boolean;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogHeader",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        84
+      ],
+      "name": "DialogHeader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"div\">"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogHeader(_: React.ComponentProps<\"div\">) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogFooter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        108
+      ],
+      "name": "DialogFooter",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"div\"> & {\r\n  showCloseButton?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogFooter(_: React.ComponentProps<\"div\"> & {\r\n  showCloseButton?: boolean;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogTitle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        118
+      ],
+      "name": "DialogTitle",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Title>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogTitle(_: React.ComponentProps<typeof DialogPrimitive.Title>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/dialog.tsx:DialogDescription",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        120,
+        131
+      ],
+      "name": "DialogDescription",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof DialogPrimitive.Description>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function DialogDescription(_: React.ComponentProps<typeof DialogPrimitive.Description>) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

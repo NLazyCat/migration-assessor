@@ -1,0 +1,105 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        15,
+        44
+      ],
+      "name": "defaultLinearAuth",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "LinearAgentSessionEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext",
+      "signature": "export function defaultLinearAuth(event: LinearAgentSessionEvent) -> SessionAuthContext"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        47,
+        53
+      ],
+      "name": "defaultOnAgentSession",
+      "params": [
+        {
+          "name": "_ctx",
+          "optional": false,
+          "type": "LinearSessionContext"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "LinearAgentSessionEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearInboundResult",
+      "signature": "export function defaultOnAgentSession(_ctx: LinearSessionContext, event: LinearAgentSessionEvent) -> LinearInboundResult"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        56,
+        59
+      ],
+      "name": "LinearDefaultEventOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinearDefaultEventOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "api",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearApiOptions",
+      "signature": "api?: : LinearApiOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinearChannelCredentials",
+      "signature": "credentials?: : LinearChannelCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        180
+      ],
+      "name": "createDefaultEvents",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "LinearDefaultEventOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinearChannelEvents",
+      "signature": "export function createDefaultEvents(options: LinearDefaultEventOptions) -> LinearChannelEvents"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/linear/defaults.ts"
+}

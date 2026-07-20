@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/public/sandbox/backends/microsandbox.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/backends/microsandbox.ts:microsandbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        27
+      ],
+      "name": "microsandbox",
+      "params": [
+        {
+          "name": "opts",
+          "optional": true,
+          "type": "MicrosandboxSandboxCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend<MicrosandboxBootstrapUseOptions, MicrosandboxSessionUseOptions>",
+      "signature": "export function microsandbox(opts: MicrosandboxSandboxCreateOptions) -> SandboxBackend<MicrosandboxBootstrapUseOptions, MicrosandboxSessionUseOptions>",
+      "visibility": "Public"
+    }
+  ]
+}

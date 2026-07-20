@@ -1,0 +1,101 @@
+{
+  "module": "packages/eve/src/cli/commands/link.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/link.ts:LinkCliLogger",
+      "kind": "interface",
+      "line_range": [
+        8,
+        11
+      ],
+      "name": "LinkCliLogger",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/link.ts:LinkCommandDependencies:createPrompter",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "createPrompter",
+          "partial_analysis": false,
+          "return_type": ": () => Prompter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/link.ts:LinkCommandDependencies:flowDeps",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "flowDeps",
+          "partial_analysis": false,
+          "return_type": ": Partial<LinkFlowDeps>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/link.ts:LinkCommandDependencies",
+      "kind": "interface",
+      "line_range": [
+        13,
+        19
+      ],
+      "name": "LinkCommandDependencies",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/link.ts:defaultDependencies",
+      "kind": "variable",
+      "line_range": [
+        21,
+        24
+      ],
+      "name": "defaultDependencies",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/link.ts:runLinkCommand",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        34,
+        66
+      ],
+      "name": "runLinkCommand",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "LinkCliLogger"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dependencies",
+          "optional": false,
+          "type": "LinkCommandDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runLinkCommand(logger: LinkCliLogger, appRoot: string, dependencies: LinkCommandDependencies) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

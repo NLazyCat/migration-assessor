@@ -1,0 +1,126 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "RemoteAuthFlow",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RemoteAuthFlow = typeof runRemoteAuthFlow;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        35
+      ],
+      "name": "RemoteAuthFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RemoteAuthFlowDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "runLoginFlow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof runLoginFlow",
+      "signature": "runLoginFlow: : typeof runLoginFlow"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "pickTeam",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof pickTeam",
+      "signature": "pickTeam: : typeof pickTeam"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "resolveVercelDeployment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof resolveVercelDeployment",
+      "signature": "resolveVercelDeployment: : typeof resolveVercelDeployment"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "resolveOidcToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof resolveDevelopmentOidcToken",
+      "signature": "resolveOidcToken: : typeof resolveDevelopmentOidcToken"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "prepareVercelTrustedSourceAccess",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof prepareVercelTrustedSourceAccess",
+      "signature": "prepareVercelTrustedSourceAccess: : typeof prepareVercelTrustedSourceAccess"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "applyVercelTrustedSourceAccess",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof applyVercelTrustedSourceAccess",
+      "signature": "applyVercelTrustedSourceAccess: : typeof applyVercelTrustedSourceAccess"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        107,
+        252
+      ],
+      "name": "runRemoteAuthFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly workspaceRoot: string;\r\n  readonly serverUrl: string;\r\n  readonly configureTrustedSources?: boolean;\r\n  readonly prompter: Prompter;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<RemoteAuthFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RemoteAuthPreparation>",
+      "signature": "export function runRemoteAuthFlow(input: {\r\n  readonly workspaceRoot: string;\r\n  readonly serverUrl: string;\r\n  readonly configureTrustedSources?: boolean;\r\n  readonly prompter: Prompter;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<RemoteAuthFlowDeps>;\r\n}) -> Promise<RemoteAuthPreparation>"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/remote-auth.ts"
+}

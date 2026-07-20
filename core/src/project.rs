@@ -4,6 +4,7 @@ use std::path::{Path, PathBuf};
 pub enum SourceLanguage {
     TypeScript,
     Rust,
+    JavaScript,
 }
 
 #[derive(Debug, Clone)]
@@ -25,6 +26,7 @@ impl Project {
         let source_language = match source_lang_hint.as_deref() {
             Some("typescript") | Some("ts") => SourceLanguage::TypeScript,
             Some("rust") | Some("rs") => SourceLanguage::Rust,
+            Some("javascript") | Some("js") => SourceLanguage::JavaScript,
             _ => match (has_package_json, has_cargo_toml) {
                 (true, false) => SourceLanguage::TypeScript,
                 (false, true) => SourceLanguage::Rust,
@@ -48,6 +50,7 @@ impl Project {
         match self.source_language {
             SourceLanguage::TypeScript => "typescript",
             SourceLanguage::Rust => "rust",
+            SourceLanguage::JavaScript => "javascript",
         }
     }
 }

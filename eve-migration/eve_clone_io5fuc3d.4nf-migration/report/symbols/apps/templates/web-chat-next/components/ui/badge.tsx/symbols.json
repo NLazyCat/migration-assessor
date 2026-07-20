@@ -1,0 +1,39 @@
+{
+  "module": "apps/templates/web-chat-next/components/ui/badge.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/badge.tsx:badgeVariants",
+      "kind": "variable",
+      "line_range": [
+        7,
+        26
+      ],
+      "name": "badgeVariants",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/badge.tsx:Badge",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        44
+      ],
+      "name": "Badge",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"span\"> & VariantProps<typeof badgeVariants> & { asChild?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function Badge(_: React.ComponentProps<\"span\"> & VariantProps<typeof badgeVariants> & { asChild?: boolean }) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

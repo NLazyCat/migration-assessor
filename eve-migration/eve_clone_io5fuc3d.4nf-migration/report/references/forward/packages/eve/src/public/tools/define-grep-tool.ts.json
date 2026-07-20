@@ -1,0 +1,57 @@
+{
+  "GREP_INPUT_SCHEMA": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/tools/define-grep-tool.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/grep.ts:GREP_INPUT_SCHEMA"
+    }
+  ],
+  "GREP_OUTPUT_SCHEMA": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/public/tools/define-grep-tool.ts",
+        "line": 33
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/grep.ts:GREP_OUTPUT_SCHEMA"
+    }
+  ],
+  "GrepInput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 66,
+        "file": "packages/eve/src/public/tools/define-grep-tool.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/execution/sandbox/grep-tool.ts:GrepInput"
+    }
+  ],
+  "ToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 65,
+        "file": "packages/eve/src/public/tools/define-grep-tool.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/public/definitions/tool.ts:ToolDefinition"
+    }
+  ],
+  "executeGrepOnSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/public/tools/define-grep-tool.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/execution/sandbox/grep-tool.ts:executeGrepOnSandbox"
+    }
+  ]
+}

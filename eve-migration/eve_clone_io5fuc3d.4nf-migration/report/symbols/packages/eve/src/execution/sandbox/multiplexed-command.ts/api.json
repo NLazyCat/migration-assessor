@@ -1,0 +1,26 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "Log"
+      ],
+      "kind": "function",
+      "line_range": [
+        54,
+        98
+      ],
+      "name": "adaptMultiplexedCommandToSandboxProcess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly command: MultiplexedCommand<Log>;\r\n  readonly getOutput: (log: Log) => OutputName;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxProcess",
+      "signature": "export function adaptMultiplexedCommandToSandboxProcess(input: {\r\n  readonly command: MultiplexedCommand<Log>;\r\n  readonly getOutput: (log: Log) => OutputName;\r\n}) -> SandboxProcess"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/multiplexed-command.ts"
+}

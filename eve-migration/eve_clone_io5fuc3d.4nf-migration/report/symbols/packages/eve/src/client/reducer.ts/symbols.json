@@ -1,0 +1,147 @@
+{
+  "module": "packages/eve/src/client/reducer.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/reducer.ts:ClientMessageSubmittedEvent:data",
+          "kind": "property",
+          "line_range": [
+            9,
+            13
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly createdAt: number;\r\n    readonly message: string;\r\n    readonly submissionId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/reducer.ts:ClientMessageSubmittedEvent:type",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"client.message.submitted\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/reducer.ts:ClientMessageSubmittedEvent",
+      "kind": "interface",
+      "line_range": [
+        8,
+        15
+      ],
+      "name": "ClientMessageSubmittedEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/reducer.ts:ClientMessageFailedEvent:data",
+          "kind": "property",
+          "line_range": [
+            22,
+            29
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly createdAt: number;\r\n    readonly error: {\r\n      readonly message: string;\r\n    };\r\n    readonly message: string;\r\n    readonly submissionId: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/reducer.ts:ClientMessageFailedEvent:type",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"client.message.failed\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/reducer.ts:ClientMessageFailedEvent",
+      "kind": "interface",
+      "line_range": [
+        21,
+        31
+      ],
+      "name": "ClientMessageFailedEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/reducer.ts:ClientInputRespondedEvent:data",
+          "kind": "property",
+          "line_range": [
+            38,
+            41
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly createdAt: number;\r\n    readonly responses: readonly InputResponse[];\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/reducer.ts:ClientInputRespondedEvent:type",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": \"client.input.responded\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/reducer.ts:ClientInputRespondedEvent",
+      "kind": "interface",
+      "line_range": [
+        37,
+        43
+      ],
+      "name": "ClientInputRespondedEvent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/reducer.ts:EveAgentReducerEvent",
+      "kind": "type_alias",
+      "line_range": [
+        54,
+        58
+      ],
+      "name": "EveAgentReducerEvent",
+      "partial_analysis": false,
+      "value": "| ClientInputRespondedEvent\r\n  | ClientMessageFailedEvent\r\n  | ClientMessageSubmittedEvent\r\n  | HandleMessageStreamEvent;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/reducer.ts:EveAgentReducer",
+      "kind": "interface",
+      "line_range": [
+        63,
+        73
+      ],
+      "name": "EveAgentReducer",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

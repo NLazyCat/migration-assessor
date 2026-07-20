@@ -1,0 +1,271 @@
+{
+  "module": "packages/eve/src/evals/target.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:HEALTH_POLL_INTERVAL_MS",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "HEALTH_POLL_INTERVAL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:HEALTH_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "HEALTH_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:resolveEvalTargetHandle",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        19,
+        44
+      ],
+      "name": "resolveEvalTargetHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly client: Client;\r\n  readonly expectedAgentName?: string;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveEvalTargetHandle>",
+      "signature": "export function resolveEvalTargetHandle(input: {\r\n  readonly client: Client;\r\n  readonly expectedAgentName?: string;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}) -> Promise<EveEvalTargetHandle>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:createEvalTargetHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        59
+      ],
+      "name": "createEvalTargetHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly capabilities: EveEvalTargetCapabilities;\r\n  readonly client: Client;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTargetHandle",
+      "signature": "export function createEvalTargetHandle(input: {\r\n  readonly capabilities: EveEvalTargetCapabilities;\r\n  readonly client: Client;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly url: string;\r\n}) -> EveEvalTargetHandle",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:scopeEvalTargetHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        75
+      ],
+      "name": "scopeEvalTargetHandle",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTargetHandle"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly sessions?: EvalSessionManager;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTargetHandle",
+      "signature": "export function scopeEvalTargetHandle(target: EveEvalTargetHandle, input: {\r\n    readonly sessions?: EvalSessionManager;\r\n  }) -> EveEvalTargetHandle",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:createHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        77,
+        159
+      ],
+      "name": "createHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly capabilities: EveEvalTargetCapabilities;\r\n  readonly client: Client | undefined;\r\n  readonly delegate?: EveEvalTargetHandle;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly sessions: EvalSessionManager | undefined;\r\n  readonly url: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTargetHandle",
+      "signature": "export function createHandle(input: {\r\n  readonly capabilities: EveEvalTargetCapabilities;\r\n  readonly client: Client | undefined;\r\n  readonly delegate?: EveEvalTargetHandle;\r\n  readonly kind: \"local\" | \"remote\";\r\n  readonly sessions: EvalSessionManager | undefined;\r\n  readonly url: string;\r\n}) -> EveEvalTargetHandle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:capabilitiesFromInfo",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        161,
+        165
+      ],
+      "name": "capabilitiesFromInfo",
+      "params": [
+        {
+          "name": "info",
+          "optional": false,
+          "type": "AgentInfoResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTargetCapabilities",
+      "signature": "export function capabilitiesFromInfo(info: AgentInfoResult) -> EveEvalTargetCapabilities",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:matchesExpectedAgentName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        167,
+        169
+      ],
+      "name": "matchesExpectedAgentName",
+      "params": [
+        {
+          "name": "expected",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "actual",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function matchesExpectedAgentName(expected: string, actual: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:waitForTargetHealth",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        171,
+        189
+      ],
+      "name": "waitForTargetHealth",
+      "params": [
+        {
+          "name": "client",
+          "optional": false,
+          "type": "Client"
+        },
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForTargetHealth(client: Client, url: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:assertAgentInfoShape",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        191,
+        195
+      ],
+      "name": "assertAgentInfoShape",
+      "params": [
+        {
+          "name": "info",
+          "optional": false,
+          "type": "AgentInfoResult"
+        },
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertAgentInfoShape(info: AgentInfoResult, url: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:parseScheduleDispatchResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        197,
+        216
+      ],
+      "name": "parseScheduleDispatchResult",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalScheduleDispatchResult",
+      "signature": "export function parseScheduleDispatchResult(payload: unknown) -> EveEvalScheduleDispatchResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.ts:readResponseBodySafely",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        218,
+        224
+      ],
+      "name": "readResponseBodySafely",
+      "params": [
+        {
+          "name": "response",
+          "optional": false,
+          "type": "Response"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readResponseBodySafely(response: Response) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

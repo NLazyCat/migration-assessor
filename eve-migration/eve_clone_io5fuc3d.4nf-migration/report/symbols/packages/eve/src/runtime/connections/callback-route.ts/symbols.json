@@ -1,0 +1,156 @@
+{
+  "module": "packages/eve/src/runtime/connections/callback-route.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:HTTP_CONNECTION_CALLBACK_CHANNEL_NAME_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "HTTP_CONNECTION_CALLBACK_CHANNEL_NAME_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:HANDLED_METHODS",
+      "kind": "variable",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "HANDLED_METHODS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:getConnectionCallbackChannelDefinitions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        61
+      ],
+      "name": "getConnectionCallbackChannelDefinitions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "readonly ResolvedChannelDefinition[]",
+      "signature": "export function getConnectionCallbackChannelDefinitions() -> readonly ResolvedChannelDefinition[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:getConnectionCallbackChannelNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "getConnectionCallbackChannelNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getConnectionCallbackChannelNames() -> ReadonlySet<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:buildCallbackChannelDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        73,
+        84
+      ],
+      "name": "buildCallbackChannelDefinition",
+      "params": [
+        {
+          "name": "method",
+          "optional": false,
+          "type": "ChannelMethod"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedChannelDefinition",
+      "signature": "export function buildCallbackChannelDefinition(method: ChannelMethod) -> ResolvedChannelDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:channelNameForMethod",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        88
+      ],
+      "name": "channelNameForMethod",
+      "params": [
+        {
+          "name": "method",
+          "optional": false,
+          "type": "ChannelMethod"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function channelNameForMethod(method: ChannelMethod) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:handleConnectionCallbackRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        95,
+        124
+      ],
+      "name": "handleConnectionCallbackRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "RouteContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function handleConnectionCallbackRequest(request: Request, ctx: RouteContext) -> Promise<Response>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/callback-route.ts:projectAuthorizationCallback",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        136,
+        161
+      ],
+      "name": "projectAuthorizationCallback",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AuthorizationCallback>",
+      "signature": "export function projectAuthorizationCallback(request: Request) -> Promise<AuthorizationCallback>",
+      "visibility": "Private"
+    }
+  ]
+}

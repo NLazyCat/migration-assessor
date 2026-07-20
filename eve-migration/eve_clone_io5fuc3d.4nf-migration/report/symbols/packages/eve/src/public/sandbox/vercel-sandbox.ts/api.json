@@ -1,0 +1,41 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "VercelSandboxCreateOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelSandboxCreateOptions = VercelSandboxAuthorCreateOptions<VercelCreateOptions>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "VercelSandboxBootstrapUseOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelSandboxBootstrapUseOptions = VercelUpdateOptions;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "VercelSandboxSessionUseOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelSandboxSessionUseOptions = VercelUpdateOptions;"
+    }
+  ],
+  "module": "packages/eve/src/public/sandbox/vercel-sandbox.ts"
+}

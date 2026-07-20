@@ -1,0 +1,79 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": "LOG_DISPLAY_MODES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LOG_DISPLAY_MODES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "LogDisplayMode",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LogDisplayMode = (typeof LOG_DISPLAY_MODES)[number];"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "LOG_DISPLAY_MODE_CYCLE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LOG_DISPLAY_MODE_CYCLE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "parseLogDisplayMode",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LogDisplayMode | undefined",
+      "signature": "export function parseLogDisplayMode(value: string) -> LogDisplayMode | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        24,
+        27
+      ],
+      "name": "nextLogDisplayMode",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "LogDisplayMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LogDisplayMode",
+      "signature": "export function nextLogDisplayMode(current: LogDisplayMode) -> LogDisplayMode"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/log-display-mode.ts"
+}

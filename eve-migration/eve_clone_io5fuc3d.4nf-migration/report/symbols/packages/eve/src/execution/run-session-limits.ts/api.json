@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        23
+      ],
+      "name": "resolveInheritedTokenLimit",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly configured: TokenLimit | undefined;\r\n  readonly inherited: TokenLimit | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenLimit | undefined",
+      "signature": "export function resolveInheritedTokenLimit(input: {\r\n  readonly configured: TokenLimit | undefined;\r\n  readonly inherited: TokenLimit | undefined;\r\n}) -> TokenLimit | undefined"
+    }
+  ],
+  "module": "packages/eve/src/execution/run-session-limits.ts"
+}

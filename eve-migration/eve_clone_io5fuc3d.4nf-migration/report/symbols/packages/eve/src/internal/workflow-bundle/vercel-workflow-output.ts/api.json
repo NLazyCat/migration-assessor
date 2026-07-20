@@ -1,0 +1,148 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        28,
+        33
+      ],
+      "name": "WORKFLOW_STEP_EXTERNAL_PACKAGES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const WORKFLOW_STEP_EXTERNAL_PACKAGES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "WORKFLOW_BUILDER_DEFERRED_PACKAGES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const WORKFLOW_BUILDER_DEFERRED_PACKAGES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        47,
+        56
+      ],
+      "name": "createWorkflowFunctionEnvironment",
+      "params": [
+        {
+          "name": "environment",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createWorkflowFunctionEnvironment(environment: unknown) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        65,
+        71
+      ],
+      "name": "prepareVercelFunctionDirectory",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function prepareVercelFunctionDirectory(path: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        107
+      ],
+      "name": "copyNitroFunctionDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  fallbackPath: string;\r\n  sourcePath: string;\r\n  targetPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyNitroFunctionDirectory(input: {\r\n  fallbackPath: string;\r\n  sourcePath: string;\r\n  targetPath: string;\r\n}) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        123,
+        135
+      ],
+      "name": "normalizeEveVercelFunctionOutput",
+      "params": [
+        {
+          "name": "outputDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ readonly servicePrefix?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function normalizeEveVercelFunctionOutput(outputDir: string, options: { readonly servicePrefix?: string }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        296,
+        352
+      ],
+      "name": "emitBundledWorkflowFunctionDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  bundlePath: string;\r\n  pluginPaths?: readonly string[];\r\n  targetPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitBundledWorkflowFunctionDirectory(input: {\r\n  bundlePath: string;\r\n  pluginPaths?: readonly string[];\r\n  targetPath: string;\r\n}) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        610,
+        635
+      ],
+      "name": "retargetNitroFunctionDirectoryToWorkflowRoute",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  functionDirectoryPath: string;\r\n  workflowRoutePath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function retargetNitroFunctionDirectoryToWorkflowRoute(input: {\r\n  functionDirectoryPath: string;\r\n  workflowRoutePath: string;\r\n}) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/vercel-workflow-output.ts"
+}

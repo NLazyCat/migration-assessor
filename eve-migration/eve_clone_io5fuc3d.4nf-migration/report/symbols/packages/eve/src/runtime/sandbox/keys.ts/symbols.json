@@ -1,0 +1,440 @@
+{
+  "module": "packages/eve/src/runtime/sandbox/keys.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:RUNTIME_SANDBOX_CONTRACT_VERSION",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "RUNTIME_SANDBOX_CONTRACT_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput:backendName",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "backendName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput:compiledArtifactsSource",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "compiledArtifactsSource",
+          "partial_analysis": false,
+          "return_type": ": RuntimeCompiledArtifactsSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput:nodeId",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "nodeId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput:sessionId",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput:sourceId",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput:templatePlan",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "templatePlan",
+          "partial_analysis": false,
+          "return_type": ": RuntimeSandboxTemplatePlan",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:CreateRuntimeSandboxKeysInput",
+      "kind": "interface",
+      "line_range": [
+        24,
+        31
+      ],
+      "name": "CreateRuntimeSandboxKeysInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:createRuntimeSandboxKeys",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        41,
+        50
+      ],
+      "name": "createRuntimeSandboxKeys",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateRuntimeSandboxKeysInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly sessionKey: string;\r\n  readonly templateKey: string | null;\r\n}>",
+      "signature": "export function createRuntimeSandboxKeys(input: CreateRuntimeSandboxKeysInput) -> Promise<{\r\n  readonly sessionKey: string;\r\n  readonly templateKey: string | null;\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:createRuntimeSandboxTemplateKey",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        61,
+        69
+      ],
+      "name": "createRuntimeSandboxTemplateKey",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: RuntimeSandboxTemplatePlan;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function createRuntimeSandboxTemplateKey(input: {\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: RuntimeSandboxTemplatePlan;\r\n}) -> Promise<string | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:RuntimeSandboxKeyParts:metadata",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": CompileMetadata | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:RuntimeSandboxKeyParts:scope",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "scope",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/keys.ts:RuntimeSandboxKeyParts:versionHash",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "versionHash",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:RuntimeSandboxKeyParts",
+      "kind": "interface",
+      "line_range": [
+        76,
+        80
+      ],
+      "name": "RuntimeSandboxKeyParts",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:deriveRuntimeSandboxKeyParts",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        82,
+        102
+      ],
+      "name": "deriveRuntimeSandboxKeyParts",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: RuntimeSandboxTemplatePlan;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RuntimeSandboxKeyParts>",
+      "signature": "export function deriveRuntimeSandboxKeyParts(input: {\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: RuntimeSandboxTemplatePlan;\r\n}) -> Promise<RuntimeSandboxKeyParts>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:buildRuntimeSandboxTemplateKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        119
+      ],
+      "name": "buildRuntimeSandboxTemplateKey",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly backendName: string }"
+        },
+        {
+          "name": "parts",
+          "optional": false,
+          "type": "RuntimeSandboxKeyParts"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function buildRuntimeSandboxTemplateKey(input: { readonly backendName: string }, parts: RuntimeSandboxKeyParts) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:buildRuntimeSandboxSessionKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        133,
+        145
+      ],
+      "name": "buildRuntimeSandboxSessionKey",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly backendName: string; readonly nodeId: string; readonly sessionId: string }"
+        },
+        {
+          "name": "parts",
+          "optional": false,
+          "type": "RuntimeSandboxKeyParts"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function buildRuntimeSandboxSessionKey(input: { readonly backendName: string; readonly nodeId: string; readonly sessionId: string }, parts: RuntimeSandboxKeyParts) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:resolvePackageVersionForTemplateKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        156,
+        158
+      ],
+      "name": "resolvePackageVersionForTemplateKey",
+      "params": [
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "CompileMetadata | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolvePackageVersionForTemplateKey(metadata: CompileMetadata | null) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:loadCompileMetadataForKeys",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        160,
+        170
+      ],
+      "name": "loadCompileMetadataForKeys",
+      "params": [
+        {
+          "name": "compiledArtifactsSource",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileMetadata | null>",
+      "signature": "export function loadCompileMetadataForKeys(compiledArtifactsSource: RuntimeCompiledArtifactsSource) -> Promise<CompileMetadata | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:resolveRuntimeSandboxScope",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        186,
+        206
+      ],
+      "name": "resolveRuntimeSandboxScope",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveRuntimeSandboxScope(input: {\r\n  readonly backendName: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:resolveRuntimeSandboxVersionHash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        208,
+        227
+      ],
+      "name": "resolveRuntimeSandboxVersionHash",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly metadata: CompileMetadata | null;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: Exclude<RuntimeSandboxTemplatePlan, { readonly kind: \"none\" }>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveRuntimeSandboxVersionHash(input: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly metadata: CompileMetadata | null;\r\n  readonly nodeId: string;\r\n  readonly sourceId: string;\r\n  readonly templatePlan: Exclude<RuntimeSandboxTemplatePlan, { readonly kind: \"none\" }>;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:resolveSourceGraphHash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        229,
+        237
+      ],
+      "name": "resolveSourceGraphHash",
+      "params": [
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "CompileMetadata | null"
+        },
+        {
+          "name": "compiledArtifactsSource",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveSourceGraphHash(metadata: CompileMetadata | null, compiledArtifactsSource: RuntimeCompiledArtifactsSource) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:createStableHash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        239,
+        241
+      ],
+      "name": "createStableHash",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createStableHash(value: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/keys.ts:sanitizeRuntimeSandboxKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        243,
+        245
+      ],
+      "name": "sanitizeRuntimeSandboxKey",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sanitizeRuntimeSandboxKey(value: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

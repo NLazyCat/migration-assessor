@@ -1,0 +1,605 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "PrompterValue",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type PrompterValue = string | number | boolean;"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        33,
+        78
+      ],
+      "name": "SelectOption",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SelectOption { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "value",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": T",
+      "signature": "value: : T"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "label",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "label: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "trailingAction",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "trailingAction?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "hint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "hint?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "focusHint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "focusHint?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "accent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"warning\"",
+      "signature": "accent?: : \"warning\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "disabled",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "disabled?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "disabledReason",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "disabledReason?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "disabledReasonTone",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"warning\"",
+      "signature": "disabledReasonTone?: : \"warning\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "completed",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "completed?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "locked",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "locked?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "lockedReason",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "lockedReason?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "featured",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "featured?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        85,
+        88
+      ],
+      "name": "SelectNotice",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SelectNotice { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "tone",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"success\" | \"info\" | \"warning\" | \"error\"",
+      "signature": "tone: : \"success\" | \"info\" | \"warning\" | \"error\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        91,
+        118
+      ],
+      "name": "SelectCommonOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SelectCommonOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "options",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SelectOption<T>[]",
+      "signature": "options: : SelectOption<T>[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "search",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "search?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        100,
+        100
+      ],
+      "name": "placeholder",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "placeholder?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        106,
+        106
+      ],
+      "name": "required",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "required?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        115,
+        115
+      ],
+      "name": "hintLayout",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"stacked\" | \"inline\"",
+      "signature": "hintLayout?: : \"stacked\" | \"inline\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        117,
+        117
+      ],
+      "name": "notices",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SelectNotice[]",
+      "signature": "notices?: : readonly SelectNotice[]"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        121,
+        130
+      ],
+      "name": "SearchAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SearchAction { ... }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        133,
+        139
+      ],
+      "name": "SingleSelectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SingleSelectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        134,
+        134
+      ],
+      "name": "multiple",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": false",
+      "signature": "multiple?: : false"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        136,
+        136
+      ],
+      "name": "initialValue",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": T",
+      "signature": "initialValue?: : T"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        138,
+        138
+      ],
+      "name": "searchAction",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SearchAction<T>",
+      "signature": "searchAction?: : SearchAction<T>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        142,
+        146
+      ],
+      "name": "MultiSelectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MultiSelectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        143,
+        143
+      ],
+      "name": "multiple",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "multiple: : true"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        145,
+        145
+      ],
+      "name": "initialValues",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": T[]",
+      "signature": "initialValues?: : T[]"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        149,
+        151
+      ],
+      "name": "EditableSelectResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EditableSelectResult = | { kind: \"selected\"; value: T }\r\n  | { kind: \"edited\"; value: T; text: string };"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        154,
+        161
+      ],
+      "name": "EditableSelectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EditableSelectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        155,
+        160
+      ],
+      "name": "editable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    value: T;\r\n    defaultValue: string;\r\n    formatHint: (value: string) => string;\r\n    validate?: (value: string) => string | undefined;\r\n  }",
+      "signature": "editable: : {\r\n    value: T;\r\n    defaultValue: string;\r\n    formatHint: (value: string) => string;\r\n    validate?: (value: string) => string | undefined;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "NoteTone",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type NoteTone = \"warning\" | \"success\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        167,
+        170
+      ],
+      "name": "AcknowledgeOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AcknowledgeOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        169,
+        169
+      ],
+      "name": "lines",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "lines?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        172,
+        255
+      ],
+      "name": "Prompter",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface Prompter { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        225,
+        225
+      ],
+      "name": "awaitChoice",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelSetupAwaitChoice",
+      "signature": "awaitChoice?: : ChannelSetupAwaitChoice"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        240,
+        254
+      ],
+      "name": "log",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    message(text: string): void;\r\n    info(text: string): void;\r\n    success(text: string): void;\r\n    warning(text: string): void;\r\n    error(text: string): void;\r\n    commandOutput(text: string): void;\r\n    section?(title: string, lines: readonly string[]): void;\r\n    /**\r\n     * Starts a section-like braille spinner for a network or other async wait,\r\n     * returning a handle whose `stop()` clears it. Present on the real prompter;\r\n     * optional so lightweight test fakes can omit it.\r\n     */\r\n    spinner?(message: string): RailSpinner;\r\n  }",
+      "signature": "log: : {\r\n    message(text: string): void;\r\n    info(text: string): void;\r\n    success(text: string): void;\r\n    warning(text: string): void;\r\n    error(text: string): void;\r\n    commandOutput(text: string): void;\r\n    section?(title: string, lines: readonly string[]): void;\r\n    /**\r\n     * Starts a section-like braille spinner for a network or other async wait,\r\n     * returning a handle whose `stop()` clears it. Present on the real prompter;\r\n     * optional so lightweight test fakes can omit it.\r\n     */\r\n    spinner?(message: string): RailSpinner;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        405,
+        496
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createPrompter() -> Prompter"
+    }
+  ],
+  "module": "packages/eve/src/setup/prompter.ts"
+}

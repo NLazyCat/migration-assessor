@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        5,
+        27
+      ],
+      "name": "formatElapsed",
+      "params": [
+        {
+          "name": "milliseconds",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatElapsed(milliseconds: number) -> string"
+    }
+  ],
+  "module": "packages/eve/src/cli/format-elapsed.ts"
+}

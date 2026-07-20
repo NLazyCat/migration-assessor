@@ -1,0 +1,484 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        29
+      ],
+      "name": "LineState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LineState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "cursor",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cursor: : number"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "EMPTY_LINE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EMPTY_LINE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        37
+      ],
+      "name": "lineOf",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function lineOf(text: string) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        45
+      ],
+      "name": "maskLine",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function maskLine(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        53
+      ],
+      "name": "insert",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function insert(state: LineState, value: string) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        56,
+        61
+      ],
+      "name": "backspace",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function backspace(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        69
+      ],
+      "name": "deleteForward",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function deleteForward(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        76
+      ],
+      "name": "moveLeft",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function moveLeft(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        79,
+        83
+      ],
+      "name": "moveRight",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function moveRight(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        89
+      ],
+      "name": "moveHome",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function moveHome(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        95
+      ],
+      "name": "moveEnd",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function moveEnd(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        98,
+        105
+      ],
+      "name": "killToEnd",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function killToEnd(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        108,
+        115
+      ],
+      "name": "killToStart",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function killToStart(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        118,
+        136
+      ],
+      "name": "deleteWord",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState",
+      "signature": "export function deleteWord(state: LineState) -> LineState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        159,
+        193
+      ],
+      "name": "applyLineEditorKey",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "TerminalKey"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "LineEditorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState | undefined",
+      "signature": "export function applyLineEditorKey(state: LineState, key: TerminalKey, options: LineEditorOptions) -> LineState | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        211,
+        256
+      ],
+      "name": "visibleLine",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        },
+        {
+          "name": "budget",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "ellipsis",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VisibleLine",
+      "signature": "export function visibleLine(state: LineState, budget: number, ellipsis: unknown) -> VisibleLine"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        279,
+        297
+      ],
+      "name": "layoutPromptInput",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptLayout",
+      "signature": "export function layoutPromptInput(state: LineState) -> PromptLayout"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        300,
+        312
+      ],
+      "name": "movePromptLine",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "LineState"
+        },
+        {
+          "name": "direction",
+          "optional": false,
+          "type": "\"up\" | \"down\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LineState | undefined",
+      "signature": "export function movePromptLine(state: LineState, direction: \"up\" | \"down\") -> LineState | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        321,
+        364
+      ],
+      "name": "PromptHistory",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class PromptHistory { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        327,
+        336
+      ],
+      "name": "add",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "PromptHistory::add(entry: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        339,
+        342
+      ],
+      "name": "begin",
+      "params": [
+        {
+          "name": "draft",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "PromptHistory::begin(draft: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        345,
+        351
+      ],
+      "name": "previous",
+      "params": [
+        {
+          "name": "currentDraft",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "PromptHistory::previous(currentDraft: string) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        354,
+        358
+      ],
+      "name": "next",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "PromptHistory::next() -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        360,
+        363
+      ],
+      "name": "#resetCursor",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "PromptHistory::#resetCursor() -> void"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/line-editor.ts"
+}

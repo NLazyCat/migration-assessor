@@ -1,0 +1,212 @@
+{
+  "module": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:FANOUT_SIZE",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "FANOUT_SIZE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:RequestedToolCall:callId",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "callId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:RequestedToolCall:eventIndex",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "eventIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:RequestedToolCall:input",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:RequestedToolCall",
+      "kind": "interface",
+      "line_range": [
+        5,
+        9
+      ],
+      "name": "RequestedToolCall",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:fanoutRequestsPrecedeFirstResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        34
+      ],
+      "name": "fanoutRequestsPrecedeFirstResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function fanoutRequestsPrecedeFirstResult(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:fanoutRequestsUseExpectedLabels",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        52
+      ],
+      "name": "fanoutRequestsUseExpectedLabels",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly labels: readonly string[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function fanoutRequestsUseExpectedLabels(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly labels: readonly string[];\r\n  readonly toolName: string;\r\n}) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:authoredFanoutExecutionsOverlap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        82
+      ],
+      "name": "authoredFanoutExecutionsOverlap",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function authoredFanoutExecutionsOverlap(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:requestedToolCalls",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        84,
+        96
+      ],
+      "name": "requestedToolCalls",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RequestedToolCall[]",
+      "signature": "export function requestedToolCalls(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}) -> RequestedToolCall[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:readFiniteNumberField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        98,
+        103
+      ],
+      "name": "readFiniteNumberField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "field",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readFiniteNumberField(value: unknown, field: string) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts:readStringField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        105,
+        110
+      ],
+      "name": "readStringField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "field",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readStringField(value: unknown, field: string) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

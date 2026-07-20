@@ -1,0 +1,249 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "UploadPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type UploadPolicy = \"disabled\" | UploadPolicyConfig;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "UploadPolicyConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface UploadPolicyConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "maxBytes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "maxBytes: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "allowedMediaTypes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[] | \"*\"",
+      "signature": "allowedMediaTypes: : readonly string[] | \"*\""
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "UploadPolicyInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type UploadPolicyInput = \"disabled\" | Partial<UploadPolicyConfig>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "DEFAULT_UPLOAD_POLICY",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_UPLOAD_POLICY: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        47,
+        60
+      ],
+      "name": "UploadPolicyViolation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type UploadPolicyViolation = | {\r\n      readonly kind: \"too-large\";\r\n      readonly mediaType: string;\r\n      readonly filename?: string;\r\n      readonly byteLength: number;\r\n      readonly limit: number;\r\n    }\r\n  | {\r\n      readonly kind: \"disallowed-media-type\";\r\n      readonly mediaType: string;\r\n      readonly filename?: string;\r\n      readonly allowedMediaTypes: readonly string[];\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        84
+      ],
+      "name": "mergeUploadPolicy",
+      "params": [
+        {
+          "name": "override",
+          "optional": true,
+          "type": "UploadPolicyInput"
+        },
+        {
+          "name": "base",
+          "optional": false,
+          "type": "UploadPolicyConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UploadPolicy",
+      "signature": "export function mergeUploadPolicy(override: UploadPolicyInput, base: UploadPolicyConfig) -> UploadPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        91,
+        96
+      ],
+      "name": "isUploadsDisabled",
+      "params": [
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "UploadPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isUploadsDisabled(policy: UploadPolicy) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        101,
+        122
+      ],
+      "name": "isMediaTypeAllowed",
+      "params": [
+        {
+          "name": "mediaType",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "UploadPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isMediaTypeAllowed(mediaType: string, policy: UploadPolicy) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        170
+      ],
+      "name": "evaluateFilePart",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "FilePart"
+        },
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "UploadPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UploadPolicyViolation | null",
+      "signature": "export function evaluateFilePart(part: FilePart, policy: UploadPolicy) -> UploadPolicyViolation | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        181,
+        200
+      ],
+      "name": "collectUploadPolicyViolations",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string | UserContent"
+        },
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "UploadPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly UploadPolicyViolation[]",
+      "signature": "export function collectUploadPolicyViolations(content: string | UserContent, policy: UploadPolicy) -> readonly UploadPolicyViolation[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        212,
+        228
+      ],
+      "name": "stripDisallowedFileParts",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string | UserContent"
+        },
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "UploadPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent",
+      "signature": "export function stripDisallowedFileParts(content: string | UserContent, policy: UploadPolicy) -> string | UserContent"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        234,
+        244
+      ],
+      "name": "formatUploadPolicyViolation",
+      "params": [
+        {
+          "name": "violation",
+          "optional": false,
+          "type": "UploadPolicyViolation"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatUploadPolicyViolation(violation: UploadPolicyViolation) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/upload-policy.ts"
+}

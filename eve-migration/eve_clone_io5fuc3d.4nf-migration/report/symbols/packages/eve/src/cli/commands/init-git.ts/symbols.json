@@ -1,0 +1,185 @@
+{
+  "module": "packages/eve/src/cli/commands/init-git.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:GIT_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "GIT_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:runFile",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "runFile",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:GitInitResult",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "GitInitResult",
+      "partial_analysis": false,
+      "value": "| { kind: \"initialized\" }\r\n  | { kind: \"skipped\" }\r\n  | { kind: \"failed\"; reason: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:commandSucceeds",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        14,
+        27
+      ],
+      "name": "commandSucceeds",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "cwd",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function commandSucceeds(command: string, args: readonly string[], cwd: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:isGitAvailable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        31
+      ],
+      "name": "isGitAvailable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isGitAvailable() -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:isInsideExistingRepository",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        33,
+        38
+      ],
+      "name": "isInsideExistingRepository",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isInsideExistingRepository(cwd: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:hasConfiguredDefaultBranch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        42
+      ],
+      "name": "hasConfiguredDefaultBranch",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function hasConfiguredDefaultBranch(cwd: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:runGit",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        44,
+        46
+      ],
+      "name": "runGit",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runGit(cwd: string, args: readonly string[]) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-git.ts:tryInitializeGit",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        54,
+        79
+      ],
+      "name": "tryInitializeGit",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitInitResult>",
+      "signature": "export function tryInitializeGit(projectPath: string) -> Promise<GitInitResult>",
+      "visibility": "Public"
+    }
+  ]
+}

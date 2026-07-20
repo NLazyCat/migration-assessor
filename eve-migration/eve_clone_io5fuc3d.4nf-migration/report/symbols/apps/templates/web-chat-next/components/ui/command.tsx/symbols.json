@@ -1,0 +1,194 @@
+{
+  "module": "apps/templates/web-chat-next/components/ui/command.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:Command",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        27
+      ],
+      "name": "Command",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function Command(_: React.ComponentProps<typeof CommandPrimitive>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandDialog",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        58
+      ],
+      "name": "CommandDialog",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof Dialog> & {\r\n  title?: string;\r\n  description?: string;\r\n  className?: string;\r\n  showCloseButton?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandDialog(_: React.ComponentProps<typeof Dialog> & {\r\n  title?: string;\r\n  description?: string;\r\n  className?: string;\r\n  showCloseButton?: boolean;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        77
+      ],
+      "name": "CommandInput",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive.Input>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandInput(_: React.ComponentProps<typeof CommandPrimitive.Input>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandList",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        79,
+        87
+      ],
+      "name": "CommandList",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive.List>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandList(_: React.ComponentProps<typeof CommandPrimitive.List>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandEmpty",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        97
+      ],
+      "name": "CommandEmpty",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive.Empty>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandEmpty(_: React.ComponentProps<typeof CommandPrimitive.Empty>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandGroup",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        113
+      ],
+      "name": "CommandGroup",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive.Group>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandGroup(_: React.ComponentProps<typeof CommandPrimitive.Group>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandSeparator",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        126
+      ],
+      "name": "CommandSeparator",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive.Separator>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandSeparator(_: React.ComponentProps<typeof CommandPrimitive.Separator>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandItem",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        128,
+        139
+      ],
+      "name": "CommandItem",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<typeof CommandPrimitive.Item>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandItem(_: React.ComponentProps<typeof CommandPrimitive.Item>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/command.tsx:CommandShortcut",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        149
+      ],
+      "name": "CommandShortcut",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"span\">"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function CommandShortcut(_: React.ComponentProps<\"span\">) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

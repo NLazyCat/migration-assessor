@@ -1,0 +1,121 @@
+{
+  "module": "packages/eve/src/runtime/sandbox/registry.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/registry.ts:DEFAULT_SANDBOX_SOURCE_ID",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "DEFAULT_SANDBOX_SOURCE_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/registry.ts:RuntimeRegisteredSandbox:definition",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "definition",
+          "partial_analysis": false,
+          "return_type": ": ResolvedSandboxDefinition",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/registry.ts:RuntimeRegisteredSandbox:workspaceResourceRoot",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "workspaceResourceRoot",
+          "partial_analysis": false,
+          "return_type": ": CompiledWorkspaceResourceRoot",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/sandbox/registry.ts:RuntimeRegisteredSandbox",
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "RuntimeRegisteredSandbox",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/sandbox/registry.ts:RuntimeSandboxRegistry:sandbox",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "sandbox",
+          "partial_analysis": false,
+          "return_type": ": RuntimeRegisteredSandbox",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/sandbox/registry.ts:RuntimeSandboxRegistry",
+      "kind": "interface",
+      "line_range": [
+        42,
+        44
+      ],
+      "name": "RuntimeSandboxRegistry",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/registry.ts:createRuntimeSandboxRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        62
+      ],
+      "name": "createRuntimeSandboxRegistry",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authoredSandbox: ResolvedSandboxDefinition | null;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSandboxRegistry",
+      "signature": "export function createRuntimeSandboxRegistry(input: {\r\n  readonly authoredSandbox: ResolvedSandboxDefinition | null;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}) -> RuntimeSandboxRegistry",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/registry.ts:createFrameworkSandboxDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        82
+      ],
+      "name": "createFrameworkSandboxDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ResolvedSandboxDefinition",
+      "signature": "export function createFrameworkSandboxDefinition() -> ResolvedSandboxDefinition",
+      "visibility": "Public"
+    }
+  ]
+}

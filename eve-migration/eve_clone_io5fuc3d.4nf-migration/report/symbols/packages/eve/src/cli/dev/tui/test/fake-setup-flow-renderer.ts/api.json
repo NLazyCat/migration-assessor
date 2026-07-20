@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        3,
+        25
+      ],
+      "name": "createFakeSetupFlowRenderer",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<SetupFlowRenderer>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupFlowRenderer",
+      "signature": "export function createFakeSetupFlowRenderer(overrides: Partial<SetupFlowRenderer>) -> SetupFlowRenderer"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/test/fake-setup-flow-renderer.ts"
+}

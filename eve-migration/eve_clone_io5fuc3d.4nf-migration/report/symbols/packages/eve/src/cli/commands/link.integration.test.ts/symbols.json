@@ -1,0 +1,118 @@
+{
+  "module": "packages/eve/src/cli/commands/link.integration.test.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/link.integration.test.ts:TestLogger:errors",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "errors",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/link.integration.test.ts:TestLogger:logs",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "logs",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/link.integration.test.ts:TestLogger:error",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            20,
+            22
+          ],
+          "name": "error",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/link.integration.test.ts:TestLogger:log",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            24,
+            26
+          ],
+          "name": "log",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/link.integration.test.ts:TestLogger",
+      "kind": "class",
+      "line_range": [
+        16,
+        27
+      ],
+      "name": "TestLogger",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/link.integration.test.ts:createAgentProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        29,
+        39
+      ],
+      "name": "createAgentProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createAgentProject() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/link.integration.test.ts:createFlowDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        104
+      ],
+      "name": "createFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Partial<LinkFlowDeps>",
+      "signature": "export function createFlowDeps() -> Partial<LinkFlowDeps>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        12,
+        43
+      ],
+      "name": "MicrosandboxSandboxCreateOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MicrosandboxSandboxCreateOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "image",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "image?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "cpus",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cpus?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "memoryMiB",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "memoryMiB?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "env",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "env?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "pullPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"always\" | \"if-missing\" | \"never\"",
+      "signature": "pullPolicy?: : \"always\" | \"if-missing\" | \"never\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        40
+      ],
+      "name": "setup",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly autoInstall?: boolean;\r\n    readonly skipVerify?: boolean;\r\n  }",
+      "signature": "setup?: : {\r\n    readonly autoInstall?: boolean;\r\n    readonly skipVerify?: boolean;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "networkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxNetworkPolicy",
+      "signature": "networkPolicy?: : SandboxNetworkPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        48,
+        50
+      ],
+      "name": "MicrosandboxBootstrapUseOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MicrosandboxBootstrapUseOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "networkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxNetworkPolicy",
+      "signature": "networkPolicy?: : SandboxNetworkPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        55,
+        57
+      ],
+      "name": "MicrosandboxSessionUseOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MicrosandboxSessionUseOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "networkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxNetworkPolicy",
+      "signature": "networkPolicy?: : SandboxNetworkPolicy"
+    }
+  ],
+  "module": "packages/eve/src/public/sandbox/microsandbox-sandbox.ts"
+}

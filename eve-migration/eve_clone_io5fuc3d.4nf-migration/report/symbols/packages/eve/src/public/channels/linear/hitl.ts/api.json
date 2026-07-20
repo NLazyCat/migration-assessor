@@ -1,0 +1,86 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "LINEAR_HITL_MARKER_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LINEAR_HITL_MARKER_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "LINEAR_HITL_MARKER_SUFFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LINEAR_HITL_MARKER_SUFFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        22,
+        26
+      ],
+      "name": "renderLinearInputRequests",
+      "params": [
+        {
+          "name": "requests",
+          "optional": false,
+          "type": "readonly InputRequest[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderLinearInputRequests(requests: readonly InputRequest[]) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        29,
+        36
+      ],
+      "name": "resolveLinearPromptInputResponses",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly activities: readonly LinearAgentActivityRecord[];\r\n  readonly body: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly InputResponse[]",
+      "signature": "export function resolveLinearPromptInputResponses(input: {\r\n  readonly activities: readonly LinearAgentActivityRecord[];\r\n  readonly body: string;\r\n}) -> readonly InputResponse[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        43
+      ],
+      "name": "stripLinearHitlMarker",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripLinearHitlMarker(body: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/linear/hitl.ts"
+}

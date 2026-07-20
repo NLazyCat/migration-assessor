@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "FANOUT_SIZE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FANOUT_SIZE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        34
+      ],
+      "name": "fanoutRequestsPrecedeFirstResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function fanoutRequestsPrecedeFirstResult(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        52
+      ],
+      "name": "fanoutRequestsUseExpectedLabels",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly labels: readonly string[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function fanoutRequestsUseExpectedLabels(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly labels: readonly string[];\r\n  readonly toolName: string;\r\n}) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        59,
+        82
+      ],
+      "name": "authoredFanoutExecutionsOverlap",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function authoredFanoutExecutionsOverlap(input: {\r\n  readonly events: readonly HandleMessageStreamEvent[];\r\n  readonly toolName: string;\r\n}) -> boolean"
+    }
+  ],
+  "module": "e2e/fixtures/agent-tools/evals/static-tools/fanout.ts"
+}

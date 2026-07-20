@@ -75,6 +75,12 @@ pub(crate) fn run_ast_diff(
                         details: Vec::new(),
                         old_line_range: None,
                         new_line_range: Some(sym.line_range),
+                        old_source: None,
+                        new_source: Some(migration_core::util::extract_source_snippet(&new_source, sym.line_range)),
+                        target_file: None,
+                        target_symbol: None,
+                        target_child: None,
+                        target_line_range: None,
                     });
                 }
                 file_changes.push(FileDiffResult {
@@ -100,6 +106,12 @@ pub(crate) fn run_ast_diff(
                         details: Vec::new(),
                         old_line_range: Some(sym.line_range),
                         new_line_range: None,
+                        old_source: Some(migration_core::util::extract_source_snippet(&old_source, sym.line_range)),
+                        new_source: None,
+                        target_file: None,
+                        target_symbol: None,
+                        target_child: None,
+                        target_line_range: None,
                     });
                 }
                 file_changes.push(FileDiffResult {
@@ -206,6 +218,12 @@ fn fetch_repo_and_diff(
                         details: Vec::new(),
                         old_line_range: None,
                         new_line_range: Some(sym.line_range),
+                        old_source: None,
+                        new_source: Some(migration_core::util::extract_source_snippet(&new_source, sym.line_range)),
+                        target_file: None,
+                        target_symbol: None,
+                        target_child: None,
+                        target_line_range: None,
                     });
                 }
                 file_changes.push(FileDiffResult {
@@ -231,6 +249,12 @@ fn fetch_repo_and_diff(
                         details: Vec::new(),
                         old_line_range: Some(sym.line_range),
                         new_line_range: None,
+                        old_source: Some(migration_core::util::extract_source_snippet(&old_source, sym.line_range)),
+                        new_source: None,
+                        target_file: None,
+                        target_symbol: None,
+                        target_child: None,
+                        target_line_range: None,
                     });
                 }
                 file_changes.push(FileDiffResult {

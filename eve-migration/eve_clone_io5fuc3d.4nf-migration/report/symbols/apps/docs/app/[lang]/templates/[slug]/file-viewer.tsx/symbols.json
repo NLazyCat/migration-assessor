@@ -1,0 +1,373 @@
+{
+  "module": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:HighlightedTemplateFile:code",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": ReactNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:HighlightedTemplateFile:language",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "language",
+          "partial_analysis": false,
+          "return_type": ": TemplateFile[\"language\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:HighlightedTemplateFile:relativePath",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "relativePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:HighlightedTemplateFile",
+      "kind": "interface",
+      "line_range": [
+        18,
+        22
+      ],
+      "name": "HighlightedTemplateFile",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FileViewerProps:files",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": HighlightedTemplateFile[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FileViewerProps",
+      "kind": "interface",
+      "line_range": [
+        24,
+        26
+      ],
+      "name": "FileViewerProps",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:CategoryStyle:icon",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "icon",
+          "partial_analysis": false,
+          "return_type": ": LucideIcon",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:CategoryStyle",
+      "kind": "interface",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "CategoryStyle",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:categoryStyles",
+      "kind": "variable",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "categoryStyles",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:defaultStyle",
+      "kind": "variable",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "defaultStyle",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:categoryOrder",
+      "kind": "variable",
+      "line_range": [
+        44,
+        53
+      ],
+      "name": "categoryOrder",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FileEntry:file",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "file",
+          "partial_analysis": false,
+          "return_type": ": HighlightedTemplateFile",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FileEntry:label",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FileEntry",
+      "kind": "interface",
+      "line_range": [
+        55,
+        58
+      ],
+      "name": "FileEntry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FolderNode:entries",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "entries",
+          "partial_analysis": false,
+          "return_type": ": FileEntry[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FolderNode:key",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FolderNode:kind",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"folder\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FolderNode:style",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "style",
+          "partial_analysis": false,
+          "return_type": ": CategoryStyle",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FolderNode",
+      "kind": "interface",
+      "line_range": [
+        60,
+        65
+      ],
+      "name": "FolderNode",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:LeafNode:file",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "file",
+          "partial_analysis": false,
+          "return_type": ": HighlightedTemplateFile",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:LeafNode:key",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "key",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:LeafNode:kind",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"leaf\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:LeafNode:style",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "style",
+          "partial_analysis": false,
+          "return_type": ": CategoryStyle",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:LeafNode",
+      "kind": "interface",
+      "line_range": [
+        67,
+        72
+      ],
+      "name": "LeafNode",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:TreeNode",
+      "kind": "type_alias",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "TreeNode",
+      "partial_analysis": false,
+      "value": "FolderNode | LeafNode;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:buildTree",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        76,
+        112
+      ],
+      "name": "buildTree",
+      "params": [
+        {
+          "name": "files",
+          "optional": false,
+          "type": "HighlightedTemplateFile[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TreeNode[]",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx:FileViewer",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        114,
+        252
+      ],
+      "name": "FileViewer",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "FileViewerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

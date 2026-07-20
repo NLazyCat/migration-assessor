@@ -1,3 +1,4 @@
+pub mod javascript;
 pub mod registry;
 pub mod rust;
 pub mod typescript;
@@ -80,6 +81,12 @@ pub trait DiffAnalyzer: Send + Sync + 'static {
                 details: Vec::new(),
                 old_line_range: Some(old_sym.line_range),
                 new_line_range: Some(new_sym.line_range),
+                old_source: None,
+                new_source: None,
+                target_file: None,
+                target_symbol: Some(new_sym.name.clone()),
+                target_child: None,
+                target_line_range: None,
             });
         }
 
@@ -94,6 +101,12 @@ pub trait DiffAnalyzer: Send + Sync + 'static {
                 details: Vec::new(),
                 old_line_range: None,
                 new_line_range: Some(sym.line_range),
+                old_source: None,
+                new_source: None,
+                target_file: None,
+                target_symbol: None,
+                target_child: None,
+                target_line_range: None,
             });
         }
 
@@ -108,6 +121,12 @@ pub trait DiffAnalyzer: Send + Sync + 'static {
                 details: Vec::new(),
                 old_line_range: Some(sym.line_range),
                 new_line_range: None,
+                old_source: None,
+                new_source: None,
+                target_file: None,
+                target_symbol: None,
+                target_child: None,
+                target_line_range: None,
             });
         }
 
@@ -174,17 +193,15 @@ pub trait DiffAnalyzer: Send + Sync + 'static {
         }
 
         if let Some(doc_change) = crate::diff::doc::diff(old_sym, new_sym) {
-            let mut sc = SymbolChange {
-                symbol: new_sym.name.clone(),
-                kind: new_sym.kind.clone(),
-                change_type: "modified".to_string(),
-                severity: "compatible".to_string(),
-                old_name: None,
-                rename_confidence: None,
-                details: Vec::new(),
-                old_line_range: Some(old_sym.line_range),
-                new_line_range: Some(new_sym.line_range),
-            };
+            let mut sc = SymbolChange::new(
+                new_sym.name.clone(),
+                new_sym.kind.clone(),
+                "modified".to_string(),
+                "compatible".to_string(),
+                Some(old_sym.line_range),
+                Some(new_sym.line_range),
+                Vec::new(),
+            );
             sc.details.push(crate::diff::ChangeDetail {
                 aspect: "documentation".to_string(),
                 change_type: doc_change.change_type.clone(),

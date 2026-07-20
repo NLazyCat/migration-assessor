@@ -1,0 +1,148 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/tui.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/tui.ts:RunDevelopmentTuiInput:target",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentTuiTarget",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/tui.ts:RunDevelopmentTuiInput:headers",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "headers",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/tui.ts:RunDevelopmentTuiInput:initialInput",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "initialInput",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/tui.ts:RunDevelopmentTuiInput:onBootProgress",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "onBootProgress",
+          "partial_analysis": false,
+          "return_type": ": DevBootProgressReporter",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/tui.ts:RunDevelopmentTuiInput",
+      "kind": "interface",
+      "line_range": [
+        26,
+        38
+      ],
+      "name": "RunDevelopmentTuiInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui.ts:prepareRemoteTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        53
+      ],
+      "name": "prepareRemoteTarget",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "RemoteDevelopmentTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function prepareRemoteTarget(target: RemoteDevelopmentTarget) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui.ts:PreparedDevelopmentTuiTarget",
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        64
+      ],
+      "name": "PreparedDevelopmentTuiTarget",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly kind: \"local\";\r\n      readonly target: Extract<DevelopmentTuiTarget, { kind: \"local\" }>;\r\n    }\r\n  | {\r\n      readonly kind: \"remote\";\r\n      readonly target: RemoteDevelopmentTarget;\r\n      readonly remote: NonNullable<EveTUIRunnerOptions[\"remote\"]>;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui.ts:prepareDevelopmentTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        66,
+        70
+      ],
+      "name": "prepareDevelopmentTarget",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "DevelopmentTuiTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PreparedDevelopmentTuiTarget",
+      "signature": "export function prepareDevelopmentTarget(target: DevelopmentTuiTarget) -> PreparedDevelopmentTuiTarget",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui.ts:runDevelopmentTui",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        81,
+        123
+      ],
+      "name": "runDevelopmentTui",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "RunDevelopmentTuiInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runDevelopmentTui(input: RunDevelopmentTuiInput) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

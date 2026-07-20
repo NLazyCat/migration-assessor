@@ -1,0 +1,73 @@
+{
+  "module": "packages/eve/src/public/channels/twilio/api.test.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/api.test.ts:FetchCall:url",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/api.test.ts:FetchCall:authorization",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "authorization",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/api.test.ts:FetchCall:body",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": URLSearchParams",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/twilio/api.test.ts:FetchCall",
+      "kind": "interface",
+      "line_range": [
+        5,
+        9
+      ],
+      "name": "FetchCall",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/api.test.ts:buildFetchMock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        25
+      ],
+      "name": "buildFetchMock",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ fetch: typeof fetch; calls: FetchCall[] }",
+      "signature": "export function buildFetchMock() -> { fetch: typeof fetch; calls: FetchCall[] }",
+      "visibility": "Private"
+    }
+  ]
+}

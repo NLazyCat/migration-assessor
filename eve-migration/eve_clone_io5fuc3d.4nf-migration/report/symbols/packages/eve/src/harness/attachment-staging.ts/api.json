@@ -1,0 +1,84 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "ATTACHMENTS_ROOT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const ATTACHMENTS_ROOT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        63,
+        82
+      ],
+      "name": "stageAttachmentsForAdapter",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string | UserContent"
+        },
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "adapterCtx",
+          "optional": false,
+          "type": "ChannelAdapterContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | UserContent>",
+      "signature": "export function stageAttachmentsForAdapter(content: string | UserContent, sandbox: SandboxSession, adapterCtx: ChannelAdapterContext) -> Promise<string | UserContent>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        128
+      ],
+      "name": "stageAttachmentsToSandbox",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string | UserContent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | UserContent>",
+      "signature": "export function stageAttachmentsToSandbox(message: string | UserContent) -> Promise<string | UserContent>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        137,
+        168
+      ],
+      "name": "hydrateSandboxAttachments",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ModelMessage[]>",
+      "signature": "export function hydrateSandboxAttachments(messages: readonly ModelMessage[]) -> Promise<ModelMessage[]>"
+    }
+  ],
+  "module": "packages/eve/src/harness/attachment-staging.ts"
+}

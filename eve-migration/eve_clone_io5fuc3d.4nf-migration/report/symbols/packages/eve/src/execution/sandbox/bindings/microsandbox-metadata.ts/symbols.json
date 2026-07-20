@@ -1,0 +1,374 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MICROSANDBOX_METADATA_VERSION",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "MICROSANDBOX_METADATA_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MICROSANDBOX_METADATA_FILE_NAME",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "MICROSANDBOX_METADATA_FILE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxTemplateMetadata:optionsHash",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "optionsHash",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxTemplateMetadata:snapshotName",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "snapshotName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxTemplateMetadata:version",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": typeof MICROSANDBOX_METADATA_VERSION",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxTemplateMetadata",
+      "kind": "interface",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "MicrosandboxTemplateMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxSessionMetadata:networkPolicy",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "networkPolicy",
+          "partial_analysis": false,
+          "return_type": ": SandboxNetworkPolicy",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxSessionMetadata:optionsHash",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "optionsHash",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxSessionMetadata:sandboxName",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "sandboxName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxSessionMetadata:stateSnapshotName",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "stateSnapshotName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxSessionMetadata:version",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": typeof MICROSANDBOX_METADATA_VERSION",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MicrosandboxSessionMetadata",
+      "kind": "interface",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "MicrosandboxSessionMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:resolveMicrosandboxMetadataPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        26
+      ],
+      "name": "resolveMicrosandboxMetadataPath",
+      "params": [
+        {
+          "name": "rootPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveMicrosandboxMetadataPath(rootPath: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:readTemplateMetadata",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        28,
+        44
+      ],
+      "name": "readTemplateMetadata",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MicrosandboxTemplateMetadata | null>",
+      "signature": "export function readTemplateMetadata(path: string) -> Promise<MicrosandboxTemplateMetadata | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:writeTemplateMetadata",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        46,
+        51
+      ],
+      "name": "writeTemplateMetadata",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "MicrosandboxTemplateMetadata"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeTemplateMetadata(path: string, metadata: MicrosandboxTemplateMetadata) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:readSessionMetadata",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        53,
+        57
+      ],
+      "name": "readSessionMetadata",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MicrosandboxSessionMetadata | null>",
+      "signature": "export function readSessionMetadata(path: string) -> Promise<MicrosandboxSessionMetadata | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:readSessionMetadataRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        78
+      ],
+      "name": "readSessionMetadataRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MicrosandboxSessionMetadata | null",
+      "signature": "export function readSessionMetadataRecord(value: unknown) -> MicrosandboxSessionMetadata | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:writeSessionMetadata",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        80,
+        85
+      ],
+      "name": "writeSessionMetadata",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "MicrosandboxSessionMetadata"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeSessionMetadata(path: string, metadata: MicrosandboxSessionMetadata) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:readJsonFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        87,
+        97
+      ],
+      "name": "readJsonFile",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, unknown> | null>",
+      "signature": "export function readJsonFile(path: string) -> Promise<Record<string, unknown> | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:writeJsonFileAtomically",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        99,
+        104
+      ],
+      "name": "writeJsonFileAtomically",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeJsonFileAtomically(path: string, value: unknown) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        108
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

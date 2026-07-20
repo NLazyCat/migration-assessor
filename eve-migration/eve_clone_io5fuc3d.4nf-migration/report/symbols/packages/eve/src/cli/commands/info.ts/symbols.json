@@ -1,0 +1,342 @@
+{
+  "module": "packages/eve/src/cli/commands/info.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/info.ts:CliInfoLogger",
+      "kind": "interface",
+      "line_range": [
+        4,
+        6
+      ],
+      "name": "CliInfoLogger",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:PrintApplicationInfoOptions:json",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "json",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/info.ts:PrintApplicationInfoOptions",
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "PrintApplicationInfoOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:appRoot",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:agentRoot",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:layout",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "layout",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:status",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:diagnostics",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": { errors: number; warnings: number } | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:model",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:instructions",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "instructions",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:skills",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "skills",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:tools",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:channels",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "channels",
+          "partial_analysis": false,
+          "return_type": ": { name: string; kind: string | null; method: string | null; urlPath: string | null }[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:messaging",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "messaging",
+          "partial_analysis": false,
+          "return_type": ": { create: string; continue: string; stream: string }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson:artifacts",
+          "kind": "property",
+          "line_range": [
+            27,
+            33
+          ],
+          "name": "artifacts",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    compiledManifest: string;\r\n    discoveryManifest: string;\r\n    diagnostics: string;\r\n    moduleMap: string;\r\n    metadata: string;\r\n  } | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/info.ts:ApplicationInfoJson",
+      "kind": "interface",
+      "line_range": [
+        15,
+        34
+      ],
+      "name": "ApplicationInfoJson",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/info.ts:buildApplicationInfoJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        83
+      ],
+      "name": "buildApplicationInfoJson",
+      "params": [
+        {
+          "name": "inspection",
+          "optional": false,
+          "type": "ApplicationInspection"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ApplicationInfoJson",
+      "signature": "export function buildApplicationInfoJson(inspection: ApplicationInspection) -> ApplicationInfoJson",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/info.ts:pluralize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        85,
+        87
+      ],
+      "name": "pluralize",
+      "params": [
+        {
+          "name": "count",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "noun",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function pluralize(count: number, noun: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/info.ts:formatDiscoverySummary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        91
+      ],
+      "name": "formatDiscoverySummary",
+      "params": [
+        {
+          "name": "errors",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "warnings",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDiscoverySummary(errors: number, warnings: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/info.ts:resolveCompileTone",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        102
+      ],
+      "name": "resolveCompileTone",
+      "params": [
+        {
+          "name": "status",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"danger\" | \"success\" | \"warning\"",
+      "signature": "export function resolveCompileTone(status: string) -> \"danger\" | \"success\" | \"warning\"",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/info.ts:printApplicationInfo",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        107,
+        274
+      ],
+      "name": "printApplicationInfo",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliInfoLogger"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "PrintApplicationInfoOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function printApplicationInfo(logger: CliInfoLogger, appRoot: string, options: PrintApplicationInfoOptions) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

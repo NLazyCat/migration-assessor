@@ -1,0 +1,59 @@
+{
+  "module": "packages/eve/src/channel/cross-channel-receive.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.test.ts:makeRuntime",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        19
+      ],
+      "name": "makeRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Runtime",
+      "signature": "export function makeRuntime() -> Runtime",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.test.ts:makeSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        32
+      ],
+      "name": "makeSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Session",
+      "signature": "export function makeSession() -> Session",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.test.ts:makeChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        56
+      ],
+      "name": "makeChannel",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  target: CrossChannelTarget;\r\n  receive: ReturnType<typeof vi.fn>;\r\n  definition: CompiledChannel;\r\n}",
+      "signature": "export function makeChannel(name: string) -> {\r\n  target: CrossChannelTarget;\r\n  receive: ReturnType<typeof vi.fn>;\r\n  definition: CompiledChannel;\r\n}",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "module": "packages/eve/src/execution/workflow-steps.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:installSessionStoreMocks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        73
+      ],
+      "name": "installSessionStoreMocks",
+      "params": [
+        {
+          "name": "sessions",
+          "optional": false,
+          "type": "HarnessSession[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installSessionStoreMocks(sessions: HarnessSession[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:createStubSessionState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        84
+      ],
+      "name": "createStubSessionState",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<DurableSessionState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableSessionState",
+      "signature": "export function createStubSessionState(overrides: Partial<DurableSessionState>) -> DurableSessionState",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:DEFAULT_WORKFLOW_STREAM_NAMESPACE",
+      "kind": "variable",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "DEFAULT_WORKFLOW_STREAM_NAMESPACE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:getRunMock",
+      "kind": "variable",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "getRunMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:startMock",
+      "kind": "variable",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "startMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:workflowWritesByNamespace",
+      "kind": "variable",
+      "line_range": [
+        89,
+        89
+      ],
+      "name": "workflowWritesByNamespace",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:createTestWritable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        91,
+        101
+      ],
+      "name": "createTestWritable",
+      "params": [
+        {
+          "name": "namespace",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WritableStream<Uint8Array>",
+      "signature": "export function createTestWritable(namespace: unknown) -> WritableStream<Uint8Array>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:ThreadKey",
+      "kind": "variable",
+      "line_range": [
+        117,
+        117
+      ],
+      "name": "ThreadKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:TestTurnAgent",
+      "kind": "variable",
+      "line_range": [
+        118,
+        125
+      ],
+      "name": "TestTurnAgent",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:threadContextAdapter",
+      "kind": "variable",
+      "line_range": [
+        127,
+        139
+      ],
+      "name": "threadContextAdapter",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:createStubSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        150
+      ],
+      "name": "createStubSession",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<HarnessSession>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createStubSession(overrides: Partial<HarnessSession>) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-steps.test.ts:createSerializedContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        152,
+        178
+      ],
+      "name": "createSerializedContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createSerializedContext() -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

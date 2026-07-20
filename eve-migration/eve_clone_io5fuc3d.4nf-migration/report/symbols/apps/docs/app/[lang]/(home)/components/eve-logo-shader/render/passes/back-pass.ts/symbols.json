@@ -1,0 +1,127 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/back-pass.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/back-pass.ts:renderBackMaterial",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        55
+      ],
+      "name": "renderBackMaterial",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "depth",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "controls",
+          "optional": false,
+          "type": "RenderControls"
+        },
+        {
+          "name": "logicalWidth",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "logicalHeight",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "projectionPaddingRadius",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderBackMaterial(device: Device, resources: RendererResources, mesh: MeshData, target: GPUTextureView, depth: GPUTextureView, controls: RenderControls, logicalWidth: number, logicalHeight: number, projectionPaddingRadius: unknown) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/back-pass.ts:renderBackDepth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        99
+      ],
+      "name": "renderBackDepth",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "depth",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "controls",
+          "optional": false,
+          "type": "RenderControls"
+        },
+        {
+          "name": "logicalWidth",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "logicalHeight",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "projectionPaddingRadius",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderBackDepth(device: Device, resources: RendererResources, mesh: MeshData, target: GPUTextureView, depth: GPUTextureView, controls: RenderControls, logicalWidth: number, logicalHeight: number, projectionPaddingRadius: unknown) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

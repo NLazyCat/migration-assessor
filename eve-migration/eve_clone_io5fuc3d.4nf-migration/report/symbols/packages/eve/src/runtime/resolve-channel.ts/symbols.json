@@ -1,0 +1,89 @@
+{
+  "module": "packages/eve/src/runtime/resolve-channel.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-channel.ts:resolveChannelDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        32,
+        101
+      ],
+      "name": "resolveChannelDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledChannelDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedChannelDefinition>",
+      "signature": "export function resolveChannelDefinition(definition: CompiledChannelDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedChannelDefinition>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-channel.ts:resolveHttpRoute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        111
+      ],
+      "name": "resolveHttpRoute",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledChannelDefinition"
+        },
+        {
+          "name": "route",
+          "optional": false,
+          "type": "RouteDefinition | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function resolveHttpRoute(definition: CompiledChannelDefinition, route: RouteDefinition | undefined) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-channel.ts:resolveWebSocketRoute",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        125
+      ],
+      "name": "resolveWebSocketRoute",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledChannelDefinition"
+        },
+        {
+          "name": "route",
+          "optional": false,
+          "type": "RouteDefinition | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function resolveWebSocketRoute(definition: CompiledChannelDefinition, route: RouteDefinition | undefined) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

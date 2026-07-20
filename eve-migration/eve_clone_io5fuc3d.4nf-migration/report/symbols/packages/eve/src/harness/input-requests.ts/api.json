@@ -1,0 +1,233 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "RejectedActionBatch",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RejectedActionBatch { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "event",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PendingInputBatchEvent",
+      "signature": "event: : PendingInputBatchEvent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "results",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly RuntimeToolResultActionResult[]",
+      "signature": "results: : readonly RuntimeToolResultActionResult[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        68
+      ],
+      "name": "hasStepInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": true,
+          "type": "StepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasStepInput(input: StepInput) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        107
+      ],
+      "name": "consumeDeferredStepInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}",
+      "signature": "export function consumeDeferredStepInput(input: {\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}) -> {\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        113,
+        115
+      ],
+      "name": "hasDeferredStepInput",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasDeferredStepInput(session: HarnessSession) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        132,
+        248
+      ],
+      "name": "resolvePendingInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly history?: readonly ModelMessage[];\r\n  readonly resolveApprovalKey?: (request: InputRequest) => string | undefined;\r\n  readonly session: HarnessSession;\r\n  readonly stepInput?: StepInput;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvePendingInputResult",
+      "signature": "export function resolvePendingInput(input: {\r\n  readonly history?: readonly ModelMessage[];\r\n  readonly resolveApprovalKey?: (request: InputRequest) => string | undefined;\r\n  readonly session: HarnessSession;\r\n  readonly stepInput?: StepInput;\r\n}) -> ResolvePendingInputResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        339,
+        341
+      ],
+      "name": "hasPendingInputBatch",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasPendingInputBatch(state: SessionStateMap | undefined) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        346,
+        348
+      ],
+      "name": "getPendingInputRequestIds",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getPendingInputRequestIds(state: SessionStateMap | undefined) -> ReadonlySet<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        369,
+        383
+      ],
+      "name": "setPendingInputBatch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly event?: PendingInputBatchEvent;\r\n  readonly requests: readonly InputRequest[];\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setPendingInputBatch(input: {\r\n  readonly event?: PendingInputBatchEvent;\r\n  readonly requests: readonly InputRequest[];\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        438,
+        446
+      ],
+      "name": "getApprovedTools",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getApprovedTools(session: HarnessSession) -> ReadonlySet<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        647,
+        653
+      ],
+      "name": "isApprovalRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isApprovalRequest(request: InputRequest) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        662,
+        678
+      ],
+      "name": "createRuntimeToolCallActionFromToolCall",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly toolCall: {\r\n    readonly input: unknown;\r\n    readonly toolCallId: string;\r\n    readonly toolName: string;\r\n  };\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolCallActionRequest",
+      "signature": "export function createRuntimeToolCallActionFromToolCall(input: {\r\n  readonly toolCall: {\r\n    readonly input: unknown;\r\n    readonly toolCallId: string;\r\n    readonly toolName: string;\r\n  };\r\n}) -> RuntimeToolCallActionRequest"
+    }
+  ],
+  "module": "packages/eve/src/harness/input-requests.ts"
+}

@@ -1,0 +1,1038 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        101,
+        105
+      ],
+      "name": "AgentTUIStreamResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIStreamResult = {\r\n  events: AsyncIterable<AgentTUIStreamEvent> | ReadableStream<AgentTUIStreamEvent>;\r\n  abort?: () => void;\r\n  turnState?: AgentTUITurnState;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        107,
+        110
+      ],
+      "name": "AgentTUIStreamUsage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIStreamUsage = {\r\n  inputTokens?: number;\r\n  outputTokens?: number;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        112,
+        124
+      ],
+      "name": "AgentTUIStreamEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIStreamEvent = | { type: \"step-start\" }\r\n  | { type: \"step-finish\"; usage?: AgentTUIStreamUsage }\r\n  | { type: \"assistant-delta\"; id: string; delta: string }\r\n  | { type: \"assistant-complete\"; id: string; text?: string | null }\r\n  | { type: \"reasoning-delta\"; id: string; delta: string }\r\n  | { type: \"reasoning-complete\"; id: string }\r\n  | { type: \"tool-call\"; toolCallId: string; toolName: string; input: unknown }\r\n  | { type: \"tool-approval-request\"; approvalId: string; toolCallId: string }\r\n  | { type: \"tool-result\"; toolCallId: string; output: unknown }\r\n  | { type: \"tool-error\"; toolCallId: string; errorText: string }\r\n  | { type: \"error\"; errorText: string; detail?: string }\r\n  | { type: \"finish\"; usage?: AgentTUIStreamUsage };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        126,
+        131
+      ],
+      "name": "AgentTUITurnState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUITurnState = {\r\n  boundaryEvent?: \"session.completed\" | \"session.failed\" | \"session.waiting\";\r\n  pendingApprovals: AgentTUIToolApprovalRequest[];\r\n  pendingQuestions: InputRequest[];\r\n  sawSessionFailure: boolean;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        133,
+        148
+      ],
+      "name": "AgentTUISessionOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUISessionOptions = {\r\n  title?: string;\r\n  /**\r\n   * Text to seed the editable prompt buffer with before the user types.\r\n   * Set by the runner for the first prompt when `eve dev --input` is used.\r\n   */\r\n  initialDraft?: string;\r\n  submittedPrompt?: string;\r\n  continueSession?: boolean;\r\n  tools?: TerminalPartDisplayMode;\r\n  reasoning?: TerminalPartDisplayMode;\r\n  subagents?: TerminalPartDisplayMode;\r\n  connectionAuth?: TerminalPartDisplayMode;\r\n  assistantResponseStats?: AssistantResponseStatsMode;\r\n  contextSize?: number;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        150,
+        156
+      ],
+      "name": "AgentTUIToolApprovalRequest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIToolApprovalRequest = {\r\n  approvalId: string;\r\n  toolCallId: string;\r\n  toolName: string;\r\n  title?: string;\r\n  input: unknown;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        158,
+        161
+      ],
+      "name": "AgentTUIToolApprovalResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIToolApprovalResponse = {\r\n  approved: boolean;\r\n  reason?: string;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        163,
+        168
+      ],
+      "name": "AgentTUIInputOption",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIInputOption = {\r\n  id: string;\r\n  label: string;\r\n  description?: string;\r\n  style?: \"primary\" | \"danger\" | \"default\";\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        170,
+        176
+      ],
+      "name": "AgentTUIInputQuestion",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIInputQuestion = {\r\n  requestId: string;\r\n  prompt: string;\r\n  display: \"select\" | \"text\";\r\n  options?: ReadonlyArray<AgentTUIInputOption>;\r\n  allowFreeform?: boolean;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        178,
+        181
+      ],
+      "name": "AgentTUIInputQuestionResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIInputQuestionResponse = {\r\n  optionId?: string;\r\n  text?: string;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        183,
+        189
+      ],
+      "name": "AgentTUIAgentHeader",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIAgentHeader = {\r\n  name: string;\r\n  serverUrl: string;\r\n  info?: AgentInfoResult;\r\n  /** Message-of-the-day line shown under the brand line (local sessions only). */\r\n  tip?: string;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        191,
+        298
+      ],
+      "name": "AgentTUIRenderer",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentTUIRenderer = {\r\n  /**\r\n   * Commits a startup header describing the connected agent (brand mark,\r\n   * model, instructions, tools, skills, subagents) to the transcript before\r\n   * the first prompt, and refreshes it after local dev artifact changes.\r\n   * Optional — renderers without a header simply skip it.\r\n   */\r\n  renderAgentHeader?(header: AgentTUIAgentHeader): void;\r\n  /**\r\n   * Commits a single informational line to the transcript. Used for session\r\n   * recovery and slash-command results. Optional.\r\n   */\r\n  renderNotice?(text: string): void;\r\n  /**\r\n   * Commits one development sandbox lifecycle line to the transcript.\r\n   * Optional so non-terminal renderers can ignore local prewarm progress.\r\n   */\r\n  renderSandboxLog?(text: string): void;\r\n  renderSetupWarning?(text: string): void;\r\n  /** Clears the setup attention line once its issue is resolved. */\r\n  clearSetupWarning?(): void;\r\n  /** Commits the startup `/vc:login` invocation to the transcript. */\r\n  renderCommandInvocation?(text: string, status?: \"failed\"): void;\r\n  renderCommandResult?(text: string): void;\r\n  readonly setupFlow?: SetupFlowRenderer;\r\n  readPrompt?(options?: AgentTUISessionOptions): Promise<string | undefined>;\r\n  readToolApproval?(\r\n    request: AgentTUIToolApprovalRequest,\r\n    options?: AgentTUISessionOptions,\r\n  ): Promise<AgentTUIToolApprovalResponse>;\r\n  readInputQuestion?(\r\n    question: AgentTUIInputQuestion,\r\n    options?: AgentTUISessionOptions,\r\n  ): Promise<AgentTUIInputQuestionResponse | undefined>;\r\n  renderStream(result: AgentTUIStreamResult, options?: AgentTUISessionOptions): Promise<void>;\r\n  /**\r\n   * Out-of-band update for one child step (reasoning + message text) of a\r\n   * subagent dispatch. Called by the runner as child-session stream events\r\n   * arrive. The renderer renders this as a body section colored by the\r\n   * subagent palette.\r\n   */\r\n  upsertSubagentStep?(update: SubagentStepUpdate): void;\r\n  /**\r\n   * Out-of-band update for one child tool call of a subagent dispatch.\r\n   */\r\n  upsertSubagentTool?(update: SubagentToolUpdate): void;\r\n  /**\r\n   * Registers a tool call id as originating from a subagent's child\r\n   * session. The renderer must skip or remove parent-level tool blocks for\r\n   * these ids — they are surfaced via {@link upsertSubagentTool} instead.\r\n   */\r\n  markChildToolCallId?(callId: string): void;\r\n  /**\r\n   * Out-of-band update for one MCP connection authorization lifecycle.\r\n   * Called by the runner as `authorization.*` events arrive.\r\n   * The renderer renders this as a persistent body section per\r\n   * connection that transitions through `required` → `pending` →\r\n   * one of the terminal `ConnectionAuthorizationOutcome` states.\r\n   */\r\n  upsertConnectionAuth?(update: ConnectionAuthUpdate): void;\r\n  /**\r\n   * Sets the number of connections currently awaiting an OAuth\r\n   * callback. The renderer overrides its bottom status bar with a\r\n   * \"waiting for connection authorization\" hint while this is > 0,\r\n   * so the user understands the agent is parked, not hung.\r\n   */\r\n  setConnectionAuthPendingCount?(count: number): void;\r\n  /**\r\n   * The log display mode currently in effect. Paired with\r\n   * {@link setLogDisplayMode}; both are absent on renderers that do not\r\n   * capture process output.\r\n   */\r\n  logDisplayMode?(): LogDisplayMode;\r\n  /**\r\n   * Switches which captured log sources (stdout/stderr) the transcript\r\n   * shows. Captured output is buffered regardless of mode, so a change\r\n   * applies retroactively: hiding removes already-rendered log lines from\r\n   * the transcript and showing restores buffered ones at their original\r\n   * positions. Used by the `/loglevel` command.\r\n   */\r\n  setLogDisplayMode?(mode: LogDisplayMode): void;\r\n  /**\r\n   * Commits any delayed local dev build errors immediately before dispatching\r\n   * a user prompt. Renderers without process-log capture ignore it.\r\n   */\r\n  flushDelayedDevBuildErrors?(): void;\r\n  /**\r\n   * Sets the workspace-scoped Vercel segment of the persistent bottom\r\n   * status line: linked project identity and the session's pending-deploy\r\n   * flag. Pushed by the runner at startup (async probe) and after\r\n   * /vercel, /channels, /deploy outcomes. Renderers without a status\r\n   * line ignore it.\r\n   */\r\n  setVercelStatus?(status: VercelStatusSnapshot): void;\r\n  /** Sets the remote deployment badge and its current connection/authentication state. */\r\n  setRemoteConnectionStatus?(status: RemoteConnectionSnapshot): void;\r\n  /**\r\n   * Clears the rendered transcript and resets per-conversation display\r\n   * state, leaving the UI interactive on a fresh screen. Used by the\r\n   * `/new` command to start a new session with a clean slate.\r\n   */\r\n  reset?(): void;\r\n  /**\r\n   * Tears down interactive mode and restores the terminal when the runner's\r\n   * lifecycle ends.\r\n   */\r\n  shutdown?(): void;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        300,
+        312
+      ],
+      "name": "PromptCommandHandlerContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PromptCommandHandlerContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        301,
+        301
+      ],
+      "name": "renderer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentTUIRenderer",
+      "signature": "renderer: : AgentTUIRenderer"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        302,
+        302
+      ],
+      "name": "title",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "title: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        304,
+        304
+      ],
+      "name": "initialModelStep",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"provider\"",
+      "signature": "initialModelStep?: : \"provider\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        309,
+        309
+      ],
+      "name": "keepSetupFlowOpen",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "keepSetupFlowOpen?: : true"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        310,
+        310
+      ],
+      "name": "remoteConnection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RemoteConnectionController",
+      "signature": "remoteConnection?: : RemoteConnectionController"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        311,
+        311
+      ],
+      "name": "disabledConnectionReasons",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "disabledConnectionReasons?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        315,
+        320
+      ],
+      "name": "PromptCommandOutcome",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PromptCommandOutcome { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        317,
+        317
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        319,
+        319
+      ],
+      "name": "effect",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": VercelStatusEffect | { kind: \"connection-added\" } | { kind: \"model-access-changed\" }",
+      "signature": "effect?: : VercelStatusEffect | { kind: \"connection-added\" } | { kind: \"model-access-changed\" }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        322,
+        327
+      ],
+      "name": "PromptCommandHandler",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PromptCommandHandler { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        329,
+        385
+      ],
+      "name": "EveTUIRunnerOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveTUIRunnerOptions = TuiDisplayOptions & {\r\n  session: ClientSession;\r\n  /** Production TUI probe injected by the launcher; omitted in hermetic runners. */\r\n  probeMcpConnection?: McpConnectionProbe;\r\n  /**\r\n   * Optional client used to attach to child sessions for live subagent\r\n   * stream observation. When omitted, the TUI still shows the subagent\r\n   * section but cannot surface the subagent's reasoning / response /\r\n   * intermediate events — only the parent-stream `called` and\r\n   * `completed` transitions.\r\n   */\r\n  client?: Client;\r\n  renderer?: AgentTUIRenderer;\r\n  screen?: TerminalOutput;\r\n  userInput?: TerminalInput;\r\n  /**\r\n   * Formats an error thrown while dispatching a turn (the initial\r\n   * `session.send()` POST — e.g. a transport failure or a Vercel\r\n   * Deployment Protection challenge) into the text rendered in the\r\n   * inline error region. Defaults to the error's message. Callers that\r\n   * know about transport-specific challenges (the `eve dev` glue) inject\r\n   * a richer formatter here.\r\n   */\r\n  formatTransportError?: (error: unknown) => string;\r\n  /**\r\n   * Local `eve dev` server URL. When present, normal prompts refresh the\r\n   * runtime artifacts after HMR so the next prompt uses the latest authored\r\n   * artifacts while retaining its logical session.\r\n   */\r\n  serverUrl?: string;\r\n  /** Absolute local application root; omitted for remote `--url` sessions. */\r\n  appRoot?: string;\r\n  /**\r\n   * Seeds the editable prompt buffer for the first prompt. A bare local\r\n   * `/model` starts initial model onboarding.\r\n   */\r\n  initialInput?: string;\r\n  /** Handles non-core slash commands without adding feature branches to the runner. */\r\n  promptCommandHandler?: PromptCommandHandler;\r\n  /** Commands shown in discovery for this local or remote session. */\r\n  availablePromptCommands?: readonly PromptCommandSpec[];\r\n  /** Remote target and mutable OIDC token source, when connected through `--url`. */\r\n  remote?: {\r\n    readonly target: RemoteDevelopmentTarget;\r\n    readonly credentials: DevelopmentCredentialGate;\r\n    readonly resolveOidcToken: NonNullable<RemoteConnectionControllerOptions[\"resolveOidcToken\"]>;\r\n    readonly resolveDeployment: NonNullable<RemoteConnectionControllerOptions[\"resolveDeployment\"]>;\r\n  };\r\n  /** Boot-time installation-state checks; defaults to the built-ins. */\r\n  bootDetections?: readonly BootDetection[];\r\n  /** Test seam for the status line's Vercel link probe; defaults to the real one. */\r\n  detectProjectIdentity?: typeof detectProjectIdentity;\r\n  /** Test seam for the off-critical-path boot login probe; defaults to the real one. */\r\n  getVercelAuthStatus?: typeof getVercelAuthStatus;\r\n  /** Reports phases from this runner's initial local-dev connection. */\r\n  onBootProgress?: DevBootProgressReporter;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        394,
+        1681
+      ],
+      "name": "EveTUIRunner",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveTUIRunnerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class EveTUIRunner { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        493,
+        549
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveTUIRunnerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "EveTUIRunner::constructor(options: EveTUIRunnerOptions) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        556,
+        586
+      ],
+      "name": "#renderAgentHeader",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#renderAgentHeader() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        588,
+        603
+      ],
+      "name": "#replaceAgentInfo",
+      "params": [
+        {
+          "name": "info",
+          "optional": false,
+          "type": "AgentInfoResult | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentInfoResult | undefined",
+      "signature": "EveTUIRunner::#replaceAgentInfo(info: AgentInfoResult | undefined) -> AgentInfoResult | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        605,
+        609
+      ],
+      "name": "#reportBeforeFirstPaint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#reportBeforeFirstPaint() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        611,
+        628
+      ],
+      "name": "run",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "EveTUIRunner::run() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        630,
+        864
+      ],
+      "name": "#run",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "EveTUIRunner::#run() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        872,
+        884
+      ],
+      "name": "#startNewSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#startNewSession() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        886,
+        891
+      ],
+      "name": "#abortSubagentChildPumps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#abortSubagentChildPumps() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        893,
+        949
+      ],
+      "name": "#readPromptWithIdleRefresh",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AgentTUISessionOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "EveTUIRunner::#readPromptWithIdleRefresh(options: AgentTUISessionOptions) -> Promise<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        951,
+        1001
+      ],
+      "name": "#streamTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    prompt: string | undefined;\r\n    inputResponses: readonly InputResponse[] | undefined;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentTUIStreamResult>",
+      "signature": "EveTUIRunner::#streamTurn(input: {\r\n    prompt: string | undefined;\r\n    inputResponses: readonly InputResponse[] | undefined;\r\n  }) -> Promise<AgentTUIStreamResult>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1008,
+        1014
+      ],
+      "name": "#streamConnectionAuthorization",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AgentTUIStreamResult",
+      "signature": "EveTUIRunner::#streamConnectionAuthorization() -> AgentTUIStreamResult"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1016,
+        1043
+      ],
+      "name": "#createTUIStreamResult",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "AsyncIterable<HandleMessageStreamEvent>"
+        },
+        {
+          "name": "abort",
+          "optional": false,
+          "type": "() => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentTUIStreamResult",
+      "signature": "EveTUIRunner::#createTUIStreamResult(events: AsyncIterable<HandleMessageStreamEvent>, abort: () => void) -> AgentTUIStreamResult"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1045,
+        1059
+      ],
+      "name": "#renderSetupIssues",
+      "params": [
+        {
+          "name": "info",
+          "optional": false,
+          "type": "AgentInfoResult | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#renderSetupIssues(info: AgentInfoResult | undefined) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1062,
+        1069
+      ],
+      "name": "#paintSetupAttention",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#paintSetupAttention() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1072,
+        1084
+      ],
+      "name": "#probeAuthIssue",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#probeAuthIssue() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1092,
+        1109
+      ],
+      "name": "#refreshSetupAttention",
+      "params": [
+        {
+          "name": "info",
+          "optional": false,
+          "type": "AgentInfoResult | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#refreshSetupAttention(info: AgentInfoResult | undefined) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1111,
+        1123
+      ],
+      "name": "#subscribeDevelopmentSandboxLogs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#subscribeDevelopmentSandboxLogs() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1125,
+        1132
+      ],
+      "name": "#renderCommandOutcome",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#renderCommandOutcome(text: string | undefined) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1134,
+        1157
+      ],
+      "name": "#handleExtensionCommand",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "Extract<PromptCommand, { type: \"extension\" }>"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Pick<PromptCommandHandlerContext, \"initialModelStep\" | \"keepSetupFlowOpen\" | \"title\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PromptCommandOutcome | undefined>",
+      "signature": "EveTUIRunner::#handleExtensionCommand(command: Extract<PromptCommand, { type: \"extension\" }>, input: Pick<PromptCommandHandlerContext, \"initialModelStep\" | \"keepSetupFlowOpen\" | \"title\">) -> Promise<PromptCommandOutcome | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1159,
+        1169
+      ],
+      "name": "#renderStartupCommandInvocation",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "Extract<PromptCommand, { type: \"extension\" }>"
+        },
+        {
+          "name": "trigger",
+          "optional": false,
+          "type": "\"startup\" | \"command\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#renderStartupCommandInvocation(command: Extract<PromptCommand, { type: \"extension\" }>, trigger: \"startup\" | \"command\") -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1171,
+        1190
+      ],
+      "name": "#applyCommandEffect",
+      "params": [
+        {
+          "name": "effect",
+          "optional": false,
+          "type": "PromptCommandOutcome[\"effect\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#applyCommandEffect(effect: PromptCommandOutcome[\"effect\"]) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1192,
+        1199
+      ],
+      "name": "#refreshConnectionRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#refreshConnectionRuntime() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1201,
+        1219
+      ],
+      "name": "#executeExtensionCommand",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "Extract<PromptCommand, { type: \"extension\" }>"
+        },
+        {
+          "name": "title",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n      readonly trigger: \"startup\" | \"command\";\r\n      readonly initialModelStep?: \"provider\";\r\n      readonly keepSetupFlowOpen?: true;\r\n    }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#executeExtensionCommand(command: Extract<PromptCommand, { type: \"extension\" }>, title: string, input: {\r\n      readonly trigger: \"startup\" | \"command\";\r\n      readonly initialModelStep?: \"provider\";\r\n      readonly keepSetupFlowOpen?: true;\r\n    }) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1228,
+        1271
+      ],
+      "name": "#runInitialModelOnboarding",
+      "params": [
+        {
+          "name": "title",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#runInitialModelOnboarding(title: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1273,
+        1283
+      ],
+      "name": "#refreshHeaderFromRemoteConnection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#refreshHeaderFromRemoteConnection() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1290,
+        1316
+      ],
+      "name": "#applyLogLevelCommand",
+      "params": [
+        {
+          "name": "argument",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "EveTUIRunner::#applyLogLevelCommand(argument: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1324,
+        1331
+      ],
+      "name": "#refreshModelAccess",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#refreshModelAccess() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1333,
+        1339
+      ],
+      "name": "#readAgentInfo",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoResult | undefined>",
+      "signature": "EveTUIRunner::#readAgentInfo() -> Promise<AgentInfoResult | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1341,
+        1349
+      ],
+      "name": "#handleRuntimeArtifactsChanged",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveTUIRunner::#handleRuntimeArtifactsChanged() -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1351,
+        1365
+      ],
+      "name": "#handleConnectionAuthRequired",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "AuthorizationRequiredStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#handleConnectionAuthRequired(event: AuthorizationRequiredStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1372,
+        1390
+      ],
+      "name": "#enterPendingConnectionAuthorization",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "AgentTUIStreamResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "EveTUIRunner::#enterPendingConnectionAuthorization(result: AgentTUIStreamResult) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1392,
+        1407
+      ],
+      "name": "#handleConnectionAuthCompleted",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "AuthorizationCompletedStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#handleConnectionAuthCompleted(event: AuthorizationCompletedStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1409,
+        1418
+      ],
+      "name": "#emitConnectionAuthUpdate",
+      "params": [
+        {
+          "name": "run",
+          "optional": false,
+          "type": "ConnectionAuthRun"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#emitConnectionAuthUpdate(run: ConnectionAuthRun) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1432,
+        1484
+      ],
+      "name": "#startSubagentChildPump",
+      "params": [
+        {
+          "name": "called",
+          "optional": false,
+          "type": "SubagentCalledStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "EveTUIRunner::#startSubagentChildPump(called: SubagentCalledStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1486,
+        1528
+      ],
+      "name": "#registerChildTool",
+      "params": [
+        {
+          "name": "callId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "run",
+          "optional": false,
+          "type": "SubagentRun"
+        },
+        {
+          "name": "request",
+          "optional": false,
+          "type": "{\r\n      childCallId: string;\r\n      toolName: string;\r\n      input: unknown;\r\n      status: SubagentToolState[\"status\"];\r\n    }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveTUIRunner::#registerChildTool(callId: string, run: SubagentRun, request: {\r\n      childCallId: string;\r\n      toolName: string;\r\n      input: unknown;\r\n      status: SubagentToolState[\"status\"];\r\n    }) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1530,
+        1554
+      ],
+      "name": "#stopSubagentChildPump",
+      "params": [
+        {
+          "name": "callId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "EveTUIRunner::#stopSubagentChildPump(callId: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        1556,
+        1680
+      ],
+      "name": "#applyChildEvent",
+      "params": [
+        {
+          "name": "callId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "EveTUIRunner::#applyChildEvent(callId: string, event: HandleMessageStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        2328,
+        2347
+      ],
+      "name": "SubagentRun",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SubagentRun = {\r\n  name: string;\r\n  /**\r\n   * One entry per logical \"child message\" — independent of the child's\r\n   * `stepIndex` field, which the harness can reuse across multiple\r\n   * assistant messages within a turn (e.g. a message before a tool call\r\n   * and another message after the tool result both arrive under\r\n   * `stepIndex: 0`). The key is a monotonic counter so each\r\n   * `message.completed` opens a new box on the next inbound delta.\r\n   */\r\n  steps: Map<number, SubagentChildStep>;\r\n  /**\r\n   * Section currently accepting reasoning/message deltas. `null` means\r\n   * the next delta opens a new section.\r\n   */\r\n  currentSectionKey: number | null;\r\n  /** Monotonic counter for new section keys. */\r\n  nextSectionKey: number;\r\n  tools: Map<string, SubagentToolState>;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        2349,
+        2356
+      ],
+      "name": "SubagentStepUpdate",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SubagentStepUpdate = {\r\n  callId: string;\r\n  subagentName: string;\r\n  sectionKey: number;\r\n  reasoning: string;\r\n  message: string;\r\n  finalized: boolean;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        2358,
+        2367
+      ],
+      "name": "SubagentToolUpdate",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SubagentToolUpdate = {\r\n  callId: string;\r\n  subagentName: string;\r\n  childCallId: string;\r\n  toolName: string;\r\n  input: unknown;\r\n  status: \"approval-requested\" | \"executing\" | \"done\" | \"failed\";\r\n  output?: unknown;\r\n  errorText?: string;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        2369,
+        2374
+      ],
+      "name": "ConnectionAuthChallenge",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ConnectionAuthChallenge = {\r\n  url?: string;\r\n  userCode?: string;\r\n  expiresAt?: string;\r\n  instructions?: string;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        2376,
+        2376
+      ],
+      "name": "ConnectionAuthState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ConnectionAuthState = \"required\" | \"pending\" | ConnectionAuthorizationOutcome;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        2378,
+        2384
+      ],
+      "name": "ConnectionAuthUpdate",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ConnectionAuthUpdate = {\r\n  name: string;\r\n  description: string;\r\n  state: ConnectionAuthState;\r\n  challenge?: ConnectionAuthChallenge;\r\n  reason?: string;\r\n};"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/runner.ts"
+}

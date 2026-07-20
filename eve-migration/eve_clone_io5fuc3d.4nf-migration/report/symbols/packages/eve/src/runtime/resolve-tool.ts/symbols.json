@@ -1,0 +1,104 @@
+{
+  "module": "packages/eve/src/runtime/resolve-tool.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-tool.ts:resolveToolDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        19,
+        82
+      ],
+      "name": "resolveToolDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledToolDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedToolDefinition>",
+      "signature": "export function resolveToolDefinition(definition: CompiledToolDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedToolDefinition>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-tool.ts:OptionalResolvedFields",
+      "kind": "type_alias",
+      "line_range": [
+        90,
+        92
+      ],
+      "name": "OptionalResolvedFields",
+      "partial_analysis": false,
+      "value": "{\r\n  -readonly [K in \"approval\" | \"toModelOutput\"]?: ResolvedToolDefinition[K];\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-tool.ts:extractOptionalHooks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        120
+      ],
+      "name": "extractOptionalHooks",
+      "params": [
+        {
+          "name": "record",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledToolDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OptionalResolvedFields",
+      "signature": "export function extractOptionalHooks(record: Record<string, unknown>, definition: CompiledToolDefinition) -> OptionalResolvedFields",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-tool.ts:describe",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        126,
+        128
+      ],
+      "name": "describe",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledToolDefinition"
+        },
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function describe(definition: CompiledToolDefinition, predicate: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

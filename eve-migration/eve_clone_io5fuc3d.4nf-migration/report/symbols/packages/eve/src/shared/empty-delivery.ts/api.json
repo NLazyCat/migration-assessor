@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "EMPTY_DELIVERY_SENTINEL",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EMPTY_DELIVERY_SENTINEL: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "CONDITIONAL_DELIVERY_INSTRUCTION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CONDITIONAL_DELIVERY_INSTRUCTION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        5,
+        7
+      ],
+      "name": "hasEmptyDeliverySentinel",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string | null | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasEmptyDeliverySentinel(text: string | null | undefined) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/shared/empty-delivery.ts"
+}

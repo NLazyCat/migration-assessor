@@ -1,0 +1,74 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mobile-motion.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mobile-motion.ts:MOBILE_AUTO_ROTATE_SPEED",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "MOBILE_AUTO_ROTATE_SPEED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mobile-motion.ts:EvePointerInteractionMode",
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        6
+      ],
+      "name": "EvePointerInteractionMode",
+      "partial_analysis": false,
+      "value": "{\r\n  paintEnabled: boolean;\r\n  autoRotateEnvYaw: boolean;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mobile-motion.ts:evePointerInteractionMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "evePointerInteractionMode",
+      "params": [
+        {
+          "name": "isCoarsePointer",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EvePointerInteractionMode",
+      "signature": "export function evePointerInteractionMode(isCoarsePointer: boolean) -> EvePointerInteractionMode",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mobile-motion.ts:mobileAutoEnvYaw",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "mobileAutoEnvYaw",
+      "params": [
+        {
+          "name": "timeSeconds",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function mobileAutoEnvYaw(timeSeconds: number) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

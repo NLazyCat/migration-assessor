@@ -1,0 +1,96 @@
+{
+  "module": "packages/eve/src/public/sandbox/vercel-sandbox.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelCreateOptions",
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "VercelCreateOptions",
+      "partial_analysis": false,
+      "value": "NonNullable<Parameters<typeof Vercel.Sandbox.create>[0]>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelUpdateOptions",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "VercelUpdateOptions",
+      "partial_analysis": false,
+      "value": "Parameters<Vercel.Sandbox[\"update\"]>[0];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelSandboxInternalCreateOptions",
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        9
+      ],
+      "name": "VercelSandboxInternalCreateOptions",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly [key: `__${string}`]: unknown;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelSandboxAuthorCreateOptions",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "VercelSandboxAuthorCreateOptions",
+      "partial_analysis": false,
+      "value": "T extends unknown\r\n  ? Omit<T, \"name\" | \"onResume\" | \"persistent\" | \"runtime\" | \"signal\"> &\r\n      VercelSandboxInternalCreateOptions\r\n  : never;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelSandboxCreateOptions",
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "VercelSandboxCreateOptions",
+      "partial_analysis": false,
+      "value": "VercelSandboxAuthorCreateOptions<VercelCreateOptions>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelSandboxBootstrapUseOptions",
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "VercelSandboxBootstrapUseOptions",
+      "partial_analysis": false,
+      "value": "VercelUpdateOptions;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/vercel-sandbox.ts:VercelSandboxSessionUseOptions",
+      "kind": "type_alias",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "VercelSandboxSessionUseOptions",
+      "partial_analysis": false,
+      "value": "VercelUpdateOptions;",
+      "visibility": "Public"
+    }
+  ]
+}

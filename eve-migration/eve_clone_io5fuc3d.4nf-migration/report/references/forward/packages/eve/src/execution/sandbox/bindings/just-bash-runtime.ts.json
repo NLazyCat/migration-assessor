@@ -1,0 +1,159 @@
+{
+  "SandboxBackendHandle": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 3,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 193
+      },
+      "symbol": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxBackendHandle"
+    }
+  ],
+  "SandboxProcess": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 55,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 135
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxProcess"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 47,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 41
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxProcess"
+    }
+  ],
+  "SandboxRemovePathOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 127
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxRemovePathOptions"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxRemovePathOptions"
+    }
+  ],
+  "SandboxSpawnOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 135
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxSpawnOptions"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 41
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxSpawnOptions"
+    }
+  ],
+  "WORKSPACE_ROOT": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 99
+      },
+      "symbol": "packages/eve/src/runtime/workspace/types.ts:WORKSPACE_ROOT"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 226
+      },
+      "symbol": "packages/eve/src/runtime/workspace/types.ts:WORKSPACE_ROOT"
+    }
+  ],
+  "adaptMultiplexedCommandToSandboxProcess": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 155
+      },
+      "symbol": "packages/eve/src/execution/sandbox/multiplexed-command.ts:adaptMultiplexedCommandToSandboxProcess"
+    }
+  ],
+  "buildSandboxSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 194
+      },
+      "symbol": "packages/eve/src/execution/sandbox/session.ts:buildSandboxSession"
+    }
+  ],
+  "createFileBackedInternalSandboxSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 195
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local-backend-utils.ts:createFileBackedInternalSandboxSession"
+    }
+  ],
+  "loadOptionalEnginePackage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/internal/application/optional-package-install.ts:loadOptionalEnginePackage"
+    }
+  ],
+  "pathExists": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 232
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local-backend-utils.ts:pathExists"
+    }
+  ],
+  "shellQuote": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "line": 141
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    }
+  ]
+}

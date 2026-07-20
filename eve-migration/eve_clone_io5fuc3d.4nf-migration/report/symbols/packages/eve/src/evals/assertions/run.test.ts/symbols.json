@@ -1,0 +1,196 @@
+{
+  "module": "packages/eve/src/evals/assertions/run.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:makeResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        26
+      ],
+      "name": "makeResult",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "{\r\n  status?: EveEvalTaskResult[\"status\"];\r\n  events?: readonly HandleMessageStreamEvent[];\r\n  derived?: Partial<EveEvalDerivedFacts>;\r\n  output?: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalTaskResult",
+      "signature": "export function makeResult(overrides: {\r\n  status?: EveEvalTaskResult[\"status\"];\r\n  events?: readonly HandleMessageStreamEvent[];\r\n  derived?: Partial<EveEvalDerivedFacts>;\r\n  output?: unknown;\r\n}) -> EveEvalTaskResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:toolCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "toolCall",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EveEvalToolCall[\"input\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalToolCall",
+      "signature": "export function toolCall(name: string, input: EveEvalToolCall[\"input\"]) -> EveEvalToolCall",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:completedToolCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "completedToolCall",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalToolCall",
+      "signature": "export function completedToolCall(name: string) -> EveEvalToolCall",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:subagentCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        45
+      ],
+      "name": "subagentCall",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "optional": false,
+          "type": "EveEvalSubagentCall[\"status\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalSubagentCall",
+      "signature": "export function subagentCall(name: string, status: EveEvalSubagentCall[\"status\"]) -> EveEvalSubagentCall",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:message",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        52
+      ],
+      "name": "message",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function message(text: string) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:actionsRequested",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        66
+      ],
+      "name": "actionsRequested",
+      "params": [
+        {
+          "name": "actions",
+          "optional": false,
+          "type": "readonly { readonly callId: string; readonly toolName: string }[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function actionsRequested(actions: readonly { readonly callId: string; readonly toolName: string }[]) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:actionResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        68,
+        79
+      ],
+      "name": "actionResult",
+      "params": [
+        {
+          "name": "callId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function actionResult(callId: string, toolName: string) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/run.test.ts:failedSubagentResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        106
+      ],
+      "name": "failedSubagentResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  callId: string;\r\n  output: unknown;\r\n  subagentName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function failedSubagentResult(input: {\r\n  callId: string;\r\n  output: unknown;\r\n  subagentName: string;\r\n}) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    }
+  ]
+}

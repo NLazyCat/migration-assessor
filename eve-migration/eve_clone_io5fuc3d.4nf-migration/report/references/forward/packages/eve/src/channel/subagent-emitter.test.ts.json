@@ -1,0 +1,55 @@
+{
+  "ChannelAdapter": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/channel/subagent-emitter.test.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/channel/adapter.ts:ChannelAdapter"
+    }
+  ],
+  "SUBAGENT_ADAPTER_KIND": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/channel/subagent-emitter.test.ts",
+        "line": 19
+      },
+      "symbol": "packages/eve/src/execution/subagent-adapter.ts:SUBAGENT_ADAPTER_KIND"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/channel/subagent-emitter.test.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/execution/subagent-adapter.ts:SUBAGENT_ADAPTER_KIND"
+    }
+  ],
+  "createRuntimeAdapterRegistry": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/channel/subagent-emitter.test.ts",
+        "line": 40
+      },
+      "symbol": "packages/eve/src/runtime/channels/registry.ts:createRuntimeAdapterRegistry"
+    }
+  ],
+  "deserializeRuntimeAdapter": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/channel/subagent-emitter.test.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/runtime/channels/registry.ts:deserializeRuntimeAdapter"
+    }
+  ]
+}

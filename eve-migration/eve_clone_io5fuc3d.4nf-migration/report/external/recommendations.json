@@ -1,0 +1,2951 @@
+{
+  "dependencies": [
+    {
+      "affected_module_count": 118,
+      "affected_modules": [
+        "packages/eve/src/harness/workflow-sandbox.test.ts",
+        "apps/templates/web-chat-next/components/ai-elements/conversation.tsx",
+        "packages/eve/src/public/channels/teams/index.ts",
+        "packages/eve/src/harness/advertised-tools.ts",
+        "packages/eve/src/harness/input-requests.ts",
+        "packages/eve/src/harness/provider-tool-history.ts",
+        "packages/eve/src/harness/input-extraction.integration.test.ts",
+        "packages/eve/src/runtime/agent/bootstrap-model.ts",
+        "packages/eve/src/shared/tool-schema.test.ts",
+        "packages/eve/src/context/dynamic-model-lifecycle.ts",
+        "packages/eve/src/harness/tool-call-input-errors.ts",
+        "packages/eve/src/public/channels/telegram/index.ts",
+        "packages/eve/src/channel/send.ts",
+        "packages/eve/src/shared/workflow-sandbox.ts",
+        "packages/eve/src/execution/node-step.ts",
+        "packages/eve/src/internal/classify-model-routing.ts",
+        "packages/eve/src/evals/mock-model.ts",
+        "packages/eve/src/client/eve-agent-store.ts",
+        "packages/eve/src/runtime/framework-tools/todo.test.ts",
+        "packages/eve/src/public/channels/discord/index.ts",
+        "packages/eve/src/harness/workflow-lifecycle.ts",
+        "packages/eve/src/harness/types.ts",
+        "packages/eve/src/runtime/connections/types.ts",
+        "packages/eve/src/harness/otel-integration.ts",
+        "packages/eve/src/public/channels/slack/index.ts",
+        "packages/eve/src/internal/classify-model-routing.test.ts",
+        "packages/eve/src/harness/instrumentation-runtime-context.ts",
+        "packages/eve/src/evals/mock-model.test.ts",
+        "packages/eve/src/shared/sandbox-session.ts",
+        "packages/eve/src/harness/runtime-actions.ts",
+        "packages/eve/src/harness/tool-loop-cancellation.integration.test.ts",
+        "packages/eve/src/evals/judge.ts",
+        "packages/eve/src/harness/workflow-lifecycle.test.ts",
+        "packages/eve/src/harness/stale-input-responses.test.ts",
+        "packages/eve/src/client/types.ts",
+        "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx",
+        "packages/eve/src/channel/routes.ts",
+        "packages/eve/src/protocol/message.test.ts",
+        "packages/eve/src/harness/workflow-sandbox.scenario.test.ts",
+        "packages/eve/src/public/channels/linear/inbound.ts",
+        "packages/eve/src/context/keys.ts",
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "packages/eve/src/harness/attachment-staging.ts",
+        "packages/eve/src/public/channels/slack/attachments.ts",
+        "packages/eve/src/runtime/framework-tools/todo.ts",
+        "packages/eve/src/internal/testing/durable-session-workflow.ts",
+        "packages/eve/src/harness/tool-input-validation.integration.test.ts",
+        "packages/eve/src/public/channels/eve.ts",
+        "packages/eve/src/public/channels/eve.test.ts",
+        "packages/eve/src/harness/attachment-staging.test.ts",
+        "packages/eve/src/shared/agent-definition.ts",
+        "packages/eve/src/context/dynamic-instruction-lifecycle.ts",
+        "packages/eve/src/client/file-parts.ts",
+        "packages/eve/src/services/dev-client.ts",
+        "packages/eve/src/runtime/connections/mcp-client.ts",
+        "packages/eve/src/harness/attachment-staging.integration.test.ts",
+        "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts",
+        "packages/eve/src/harness/compaction.ts",
+        "packages/eve/src/runtime/agent/mock-model-adapter.ts",
+        "packages/eve/src/harness/messages.test.ts",
+        "packages/eve/src/execution/compaction.ts",
+        "packages/eve/src/harness/compaction.test.ts",
+        "packages/eve/src/context/dynamic-model-lifecycle.test.ts",
+        "packages/eve/src/harness/input-extraction.ts",
+        "packages/eve/src/channel/types.ts",
+        "packages/eve/src/public/channels/upload-policy.test.ts",
+        "packages/eve/src/context/dynamic-skill-lifecycle.ts",
+        "packages/eve/src/public/instrumentation/index.ts",
+        "packages/eve/src/internal/runtime-model.ts",
+        "packages/eve/src/public/channels/teams/attachments.ts",
+        "packages/eve/src/harness/inline-tool-authorization.ts",
+        "packages/eve/src/context/dynamic-tool-lifecycle.test.ts",
+        "packages/eve/src/shared/dynamic-tool-definition.ts",
+        "packages/eve/src/harness/messages.ts",
+        "packages/eve/src/harness/workflow-sandbox.ts",
+        "packages/eve/src/runtime/agent/resolve-model.ts",
+        "packages/eve/src/harness/prompt-cache.ts",
+        "packages/eve/src/execution/durable-session-store.ts",
+        "packages/eve/src/execution/node-step.test.ts",
+        "packages/eve/src/public/channels/chat-sdk/messageToUserContent.ts",
+        "packages/eve/src/runtime/connections/openapi-client.ts",
+        "packages/eve/src/harness/stale-input-responses.ts",
+        "packages/eve/src/harness/emission.test.ts",
+        "packages/eve/src/harness/advertised-tools.test.ts",
+        "packages/eve/src/harness/input-requests.test.ts",
+        "packages/eve/src/context/dynamic-resolve-context.ts",
+        "packages/eve/src/protocol/message.ts",
+        "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts",
+        "packages/eve/src/harness/tools.test.ts",
+        "packages/eve/src/public/channels/telegram/attachments.ts",
+        "apps/templates/web-chat-next/components/ai-elements/tool.tsx",
+        "packages/eve/src/harness/prompt-cache.test.ts",
+        "packages/eve/src/harness/compaction-prompt.ts",
+        "packages/eve/src/harness/prompt-cache-accounting.test.ts",
+        "packages/eve/src/internal/aisdk-provider-contract.test.ts",
+        "packages/eve/src/channel/cross-channel-receive.ts",
+        "packages/eve/src/harness/instrumentation-runtime-context.test.ts",
+        "packages/eve/test/resolve-agent.test.ts",
+        "packages/eve/src/public/models/openai/index.ts",
+        "packages/eve/src/harness/compaction-prompt.test.ts",
+        "packages/eve/src/shared/tool-definition.ts",
+        "packages/eve/src/harness/provider-tools.ts",
+        "packages/eve/src/harness/tool-interrupts.test.ts",
+        "packages/eve/src/harness/workflow-interrupt-state.ts",
+        "apps/templates/web-chat-next/app/_components/agent-chat.tsx",
+        "packages/eve/src/internal/testing/task-model-retry-workflow.ts",
+        "packages/eve/src/harness/session-limit-enforcement.ts",
+        "packages/eve/src/public/channels/github/inbound.ts",
+        "packages/eve/src/setup/validate-gateway-key.ts",
+        "packages/eve/src/evals/types.ts",
+        "packages/eve/src/harness/provider-tool-history.test.ts",
+        "packages/eve/src/context/dynamic-tool-lifecycle.ts",
+        "packages/eve/src/harness/action-result-helpers.ts",
+        "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts",
+        "packages/eve/src/runtime/framework-tools/final-output.ts",
+        "packages/eve/src/harness/tool-loop-stream-retry.integration.test.ts",
+        "packages/eve/src/public/channels/upload-policy.ts",
+        "packages/eve/src/harness/execute-tool.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "ai",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 56,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/conversation.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts",
+        "apps/frameworks/next/app/_components/AuthControls.tsx",
+        "packages/eve/src/react/use-eve-agent.test.ts",
+        "apps/docs/app/[lang]/(home)/components/file-tree-view.tsx",
+        "apps/docs/app/[lang]/(home)/components/metal-shader.tsx",
+        "apps/templates/web-chat-next/components/ui/tooltip.tsx",
+        "apps/frameworks/next/app/_chat/App.tsx",
+        "apps/templates/web-chat-next/components/ui/badge.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/hooks.ts",
+        "apps/docs/app/[lang]/integrations/components/markdown.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/templates/web-chat-next/components/ui/hover-card.tsx",
+        "apps/docs/components/geistdocs/installer.tsx",
+        "apps/docs/app/[lang]/(home)/components/hero-audience.tsx",
+        "apps/templates/web-chat-next/components/ui/input.tsx",
+        "apps/docs/app/[lang]/templates/integration-icons.tsx",
+        "apps/docs/components/geistdocs/provider.tsx",
+        "packages/eve/src/react/use-eve-agent.ts",
+        "apps/docs/app/[lang]/templates/[slug]/template-actions.tsx",
+        "apps/docs/components/geistdocs/docs-layout.tsx",
+        "apps/docs/app/[lang]/integrations/[slug]/page.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/fallback-image.tsx",
+        "apps/templates/web-chat-next/components/ui/textarea.tsx",
+        "apps/docs/lib/integrations/logos.tsx",
+        "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx",
+        "apps/templates/web-chat-next/components/ui/command.tsx",
+        "apps/docs/app/[lang]/templates/template-gallery.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/chain-of-thought.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/index.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/tool.tsx",
+        "apps/docs/hooks/use-mobile.ts",
+        "apps/templates/web-chat-next/components/ui/separator.tsx",
+        "apps/docs/app/[lang]/(home)/components/feature-grid.tsx",
+        "apps/docs/app/[lang]/integrations/components/gallery.tsx",
+        "apps/templates/web-chat-next/components/ui/select.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx",
+        "apps/docs/app/[lang]/(home)/components/install-switcher.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/state.ts",
+        "apps/templates/web-chat-next/components/ui/button.tsx",
+        "apps/templates/web-chat-next/app/layout.tsx",
+        "apps/docs/app/[lang]/(home)/components/gradient-border.tsx",
+        "apps/frameworks/next-multi-agent/app/page.tsx",
+        "apps/templates/web-chat-next/components/ui/dropdown-menu.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx",
+        "apps/docs/app/[lang]/integrations/components/setup-tabs.tsx",
+        "apps/templates/web-chat-next/components/ui/dialog.tsx",
+        "apps/templates/web-chat-next/components/ui/input-group.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/frame-loop.ts",
+        "apps/docs/app/[lang]/(home)/components/file-tree.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/page.tsx",
+        "apps/docs/app/[lang]/(home)/components/scroll-state.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/code-block.tsx",
+        "apps/docs/app/[lang]/(home)/components/architecture.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "react",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 37,
+      "affected_modules": [
+        "e2e/fixtures/agent-subagents/agent/agent.ts",
+        "e2e/fixtures/agent-tools-sandbox/agent/agent.ts",
+        "apps/frameworks/next-multi-agent/agents/support/agent.ts",
+        "e2e/fixtures/agent-basic-runtime/agent/agent.ts",
+        "apps/frameworks/next-multi-agent/agents/billing/agent.ts",
+        "e2e/fixtures/agent-tools-hitl/agent/agent.ts",
+        "e2e/fixtures/agent-cancellation/agent/subagents/sleeper/agent.ts",
+        "apps/templates/web-chat-next/agent/agent.ts",
+        "apps/frameworks/next/agent/agent.ts",
+        "e2e/fixtures/extensions/agent/agent.ts",
+        "apps/fixtures/weather-agent/agent/agent.ts",
+        "e2e/fixtures/compaction-regression-shared/src/agent.ts",
+        "apps/frameworks/sveltekit/agent/agent.ts",
+        "e2e/fixtures/dist-extensions/agent/agent.ts",
+        "apps/fixtures/agent-tui-client/agent/agent.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/agent/agent.ts",
+        "packages/eve/src/cli/banner.ts",
+        "e2e/fixtures/agent-tools-hitl-openai/agent/agent.ts",
+        "e2e/fixtures/agent-model/agent/agent.ts",
+        "packages/eve/src/internal/package-name.ts",
+        "e2e/fixtures/agent-subagents-hitl/agent/agent.ts",
+        "e2e/fixtures/agent-prompt-cache/agent/agent.ts",
+        "apps/frameworks/nuxt/agent/agent.ts",
+        "apps/fixtures/agent-tui-client/agent/subagents/echo-marker/agent.ts",
+        "e2e/fixtures/agent-workflow-stress/agent/agent.ts",
+        "e2e/fixtures/agent-tools/agent/agent.ts",
+        "e2e/fixtures/agent-skills/agent/agent.ts",
+        "apps/frameworks/next-multi-agent/agents/research/agent.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/agent/agent.ts",
+        "e2e/fixtures/agent-subagents/agent/subagents/echo-marker/agent.ts",
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/agent/agent.ts",
+        "e2e/fixtures/agent-subagents-hitl/agent/subagents/stock-price/agent.ts",
+        "e2e/fixtures/agent-schedules/agent/agent.ts",
+        "e2e/fixtures/agent-session-limits/agent/agent.ts",
+        "e2e/fixtures/agent-channels/agent/agent.ts",
+        "e2e/fixtures/agent-cancellation/agent/agent.ts",
+        "e2e/fixtures/agent-openapi-swagger/agent/agent.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "eve",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "workspace:*"
+    },
+    {
+      "affected_module_count": 28,
+      "affected_modules": [
+        "apps/docs/app/[lang]/llms.mdx/[[...slug]]/route.ts",
+        "apps/docs/app/[lang]/(home)/components/cta.tsx",
+        "apps/docs/app/api/chat/route.ts",
+        "apps/docs/lib/geistdocs/source.ts",
+        "apps/docs/app/[lang]/integrations/components/markdown.tsx",
+        "apps/docs/components/geistdocs/installer.tsx",
+        "apps/docs/lib/geistdocs/config.tsx",
+        "apps/docs/app/[lang]/(home)/layout.tsx",
+        "apps/docs/components/geistdocs/provider.tsx",
+        "apps/docs/app/[lang]/layout.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/template-actions.tsx",
+        "apps/docs/components/geistdocs/docs-layout.tsx",
+        "apps/docs/lib/geistdocs/md-tracking.ts",
+        "apps/docs/app/[lang]/agents.md/route.ts",
+        "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx",
+        "apps/docs/app/[lang]/templates/template-gallery.tsx",
+        "apps/docs/app/[lang]/integrations/components/gallery.tsx",
+        "apps/docs/components/geistdocs/footer.tsx",
+        "apps/docs/app/[lang]/docs/[[...slug]]/page.tsx",
+        "apps/docs/components/geistdocs/mdx-components.tsx",
+        "apps/docs/app/api/search/route.ts",
+        "apps/docs/proxy.ts",
+        "apps/docs/geistdocs.tsx",
+        "apps/docs/app/[lang]/(home)/components/file-tree.tsx",
+        "apps/docs/app/[lang]/llms.txt/route.ts",
+        "apps/docs/app/[lang]/templates/[slug]/page.tsx",
+        "apps/docs/app/[lang]/sitemap.md/route.ts",
+        "apps/docs/app/[lang]/(home)/components/architecture.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/geistdocs",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.12.0"
+    },
+    {
+      "affected_module_count": 20,
+      "affected_modules": [
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/paint-system.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/back-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts",
+        "apps/docs/scripts/eve-render/views.ts",
+        "apps/docs/scripts/render-eve-5.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/shaders.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/targets.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/params.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/debug-passes.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/bindings.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/scene-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/types.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/cubemap.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/textures.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/pipelines.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/index.tsx",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/light-composite-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/bloom-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/renderer.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "@vgpu/core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.0.7"
+    },
+    {
+      "affected_module_count": 20,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/conversation.tsx",
+        "apps/templates/web-chat-next/components/ui/spinner.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/docs/components/geistdocs/installer.tsx",
+        "apps/docs/app/[lang]/templates/integration-icons.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/template-actions.tsx",
+        "apps/docs/app/[lang]/integrations/[slug]/page.tsx",
+        "apps/templates/web-chat-next/components/ui/command.tsx",
+        "apps/docs/app/[lang]/templates/template-gallery.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/chain-of-thought.tsx",
+        "apps/docs/app/[lang]/integrations/components/gallery.tsx",
+        "apps/templates/web-chat-next/components/ui/select.tsx",
+        "apps/docs/components/geistdocs/footer.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx",
+        "apps/templates/web-chat-next/app/_components/agent-chat.tsx",
+        "apps/templates/web-chat-next/components/ui/dropdown-menu.tsx",
+        "apps/templates/web-chat-next/components/ui/dialog.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/page.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/code-block.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "lucide-react",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.16.0"
+    },
+    {
+      "affected_module_count": 18,
+      "affected_modules": [
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/agent/tools/inspect-repository.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/evals/redundant-tool-calls/sonnet-5.eval.ts",
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/evals/stale-todo-work/gpt-5.6.eval.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/agent/tools/inspect-repository.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/agent/tools/advance-checkpoint.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/agent/tools/advance-checkpoint.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/agent/agent.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/evals/stale-todo-work/opus-4.8.eval.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/agent/tools/perform-source-analysis.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/agent/tools/perform-source-analysis.ts",
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/agent/tools/advance-checkpoint.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/agent/tools/inspect-repository.ts",
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/agent/tools/perform-source-analysis.ts",
+        "e2e/fixtures/agent-compaction-regressions-sonnet-5/evals/stale-todo-work/sonnet-5.eval.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/evals/redundant-tool-calls/opus-4.8.eval.ts",
+        "e2e/fixtures/agent-compaction-regressions-opus-4-8/agent/agent.ts",
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/agent/agent.ts",
+        "e2e/fixtures/agent-compaction-regressions-gpt-5-6/evals/redundant-tool-calls/gpt-5.6.eval.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "@eve/e2e-compaction-regression-shared",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "workspace:*"
+    },
+    {
+      "affected_module_count": 17,
+      "affected_modules": [
+        "packages/eve/test/tui-client/lib/theme.ts",
+        "packages/eve/src/cli/commands/extension-init.ts",
+        "packages/eve/src/setup/vercel-project.ts",
+        "packages/eve/src/cli/ui/live-row.ts",
+        "packages/eve/src/cli/banner.ts",
+        "packages/eve/src/setup/flows/model.test.ts",
+        "packages/eve/src/setup/prompter.ts",
+        "packages/eve/src/cli/commands/extension-build.ts",
+        "packages/eve/src/setup/cli/select-component.ts",
+        "packages/eve/src/setup/flows/model.ts",
+        "packages/eve/src/cli/dev/tui/prompt-command-handler.test.ts",
+        "packages/eve/src/setup/flows/provider.ts",
+        "packages/eve/src/setup/flows/link.ts",
+        "packages/eve/src/setup/boxes/one-shot-next-steps.ts",
+        "packages/eve/src/cli/commands/init.ts",
+        "packages/eve/src/cli/dev/tui/remote-auth.test.ts",
+        "packages/eve/src/cli/dev/tui/remote-auth.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "picocolors",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 16,
+      "affected_modules": [
+        "apps/templates/web-chat-next/next.config.ts",
+        "apps/docs/app/[lang]/templates/page.tsx",
+        "apps/frameworks/next-multi-agent/next.config.ts",
+        "apps/frameworks/next/next.config.ts",
+        "apps/docs/next.config.ts",
+        "packages/eve/src/public/next/index.ts",
+        "apps/docs/app/[lang]/layout.tsx",
+        "apps/docs/app/[lang]/integrations/[slug]/page.tsx",
+        "apps/docs/app/sitemap.ts",
+        "apps/frameworks/next/app/layout.tsx",
+        "apps/frameworks/next-multi-agent/app/layout.tsx",
+        "apps/docs/app/[lang]/(home)/components/home-content.tsx",
+        "apps/docs/app/robots.ts",
+        "apps/docs/app/[lang]/integrations/page.tsx",
+        "apps/templates/web-chat-next/app/layout.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/page.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "next",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 10,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ui/tooltip.tsx",
+        "apps/templates/web-chat-next/components/ui/badge.tsx",
+        "apps/templates/web-chat-next/components/ui/hover-card.tsx",
+        "apps/templates/web-chat-next/components/ui/collapsible.tsx",
+        "apps/templates/web-chat-next/components/ui/separator.tsx",
+        "apps/templates/web-chat-next/components/ui/select.tsx",
+        "apps/templates/web-chat-next/components/ui/button.tsx",
+        "apps/templates/web-chat-next/components/ui/dropdown-menu.tsx",
+        "apps/templates/web-chat-next/components/ui/dialog.tsx",
+        "apps/templates/web-chat-next/components/ui/button-group.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "radix-ui",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.4.3"
+    },
+    {
+      "affected_module_count": 8,
+      "affected_modules": [
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/paint-system.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/back-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/debug-passes.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/scene-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/cubemap.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/pipelines.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/light-composite-pass.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/bloom-pass.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": true,
+      "note": "No compatibility mapping available.",
+      "package": "@vgpu/render",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.0.7"
+    },
+    {
+      "affected_module_count": 613,
+      "affected_modules": [
+        "packages/eve/src/harness/workflow-sandbox.test.ts",
+        "packages/eve/src/internal/application/build-profile.test.ts",
+        "packages/eve/src/internal/workflow-bundle/vercel-workflow-output.scenario.test.ts",
+        "packages/eve/src/execution/subagent-tool.test.ts",
+        "packages/eve/src/evals/loaders/yaml.integration.test.ts",
+        "packages/eve/src/execution/eve-workflow-attributes.test.ts",
+        "packages/eve/src/cli/ui/output.test.ts",
+        "packages/eve/src/internal/application/package.test.ts",
+        "packages/eve/test/write-file-tool.test.ts",
+        "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.test.ts",
+        "packages/eve/src/public/channels/slack/defaults.test.ts",
+        "packages/eve/src/channel/send.test.ts",
+        "packages/eve/src/setup/scaffold/workspace-glob.test.ts",
+        "packages/eve/src/internal/nitro/routes/runtime-artifacts.test.ts",
+        "packages/eve/src/context/build-base-tool-context.integration.test.ts",
+        "packages/eve/src/public/next/index.integration.test.ts",
+        "packages/eve/src/setup/project-resolution.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox.test.ts",
+        "packages/eve/src/execution/subagent-usage-span.test.ts",
+        "packages/eve/src/public/instrumentation/index.test.ts",
+        "packages/eve/src/shared/rename-with-retry.test.ts",
+        "packages/eve/src/public/channels/github/pr-context.test.ts",
+        "packages/eve/src/harness/input-extraction.integration.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-server-state.integration.test.ts",
+        "packages/eve/src/svelte/use-eve-agent.test.ts",
+        "packages/eve/src/setup/onboarding.test.ts",
+        "packages/eve/src/public/channels/slack/limits.test.ts",
+        "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.test.ts",
+        "packages/eve/src/execution/sandbox/bash-tool.test.ts",
+        "packages/eve/src/setup/boxes/select-chat.test.ts",
+        "packages/eve/src/setup/vercel-project.integration.test.ts",
+        "packages/eve/test/scenarios/vercel-build-prewarm.scenario.test.ts",
+        "packages/eve/src/shared/skill-paths.test.ts",
+        "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts",
+        "packages/eve/src/shared/tool-schema.test.ts",
+        "packages/eve/src/cli/commands/deploy.integration.test.ts",
+        "packages/eve/src/evals/define-eval-config.test.ts",
+        "packages/eve/src/setup/boxes/scaffold.test.ts",
+        "packages/eve/src/cli/commands/channels.integration.test.ts",
+        "packages/eve/src/services/dev-client/runtime-artifacts.test.ts",
+        "packages/eve/src/internal/nitro/routes/index.test.ts",
+        "packages/eve/src/cli/ui/live-row.test.ts",
+        "packages/eve/src/context/serialize.test.ts",
+        "packages/eve/src/execution/workflow-steps.test.ts",
+        "packages/eve/src/harness/ordered-stream-emitter.test.ts",
+        "packages/eve/src/setup/cli/prompt-ui.test.ts",
+        "packages/eve/src/runtime/skills/sandbox-access.test.ts",
+        "packages/eve/src/internal/workflow-bundle/nitro-step-entry.scenario.test.ts",
+        "packages/eve/src/setup/node-engine.test.ts",
+        "packages/eve/src/runtime/framework-tools/ask-question.test.ts",
+        "packages/eve/test/discover-filesystem.test.ts",
+        "packages/eve/src/public/channels/telegram/inbound.test.ts",
+        "packages/eve/src/setup/with-spinner.test.ts",
+        "packages/eve/src/compiler/compile-from-memory.test.ts",
+        "packages/eve/src/compiler/normalize-manifest.test.ts",
+        "packages/eve/src/execution/session-callback-step.test.ts",
+        "packages/eve/src/internal/nitro/host/create-application-nitro.scenario.test.ts",
+        "packages/eve/src/harness/subagent-token-budget.test.ts",
+        "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.test.ts",
+        "packages/eve/src/public/channels/slack/slackChannel.test.ts",
+        "packages/eve/src/react/use-eve-agent.test.ts",
+        "packages/eve/test/bin-bootstrap.test.ts",
+        "packages/eve/src/internal/workflow/world-compatibility.test.ts",
+        "packages/eve/src/runtime/framework-tools/todo.test.ts",
+        "packages/eve/src/shared/guards.test.ts",
+        "packages/eve/src/cli/dev/tui/setup-issues.test.ts",
+        "packages/eve/src/internal/bundler/extension-scope-plugin.integration.test.ts",
+        "packages/eve/src/internal/nitro/host/extension-state-usage.integration.test.ts",
+        "packages/eve/src/public/channels/teams/defaults.test.ts",
+        "packages/eve/src/cli/dev/tui/terminal-renderer.test.ts",
+        "packages/eve/src/runtime/durable-compiled-artifacts-source.test.ts",
+        "packages/eve/test/runtime-subagent-registry.test.ts",
+        "packages/eve/src/internal/nitro/host/dispatch-schedule-in-dev.test.ts",
+        "packages/eve/test/tool-defaults.test.ts",
+        "packages/eve/src/internal/testing/mocks/mock-skill.integration.test.ts",
+        "packages/eve/src/setup/ask.test.ts",
+        "packages/eve/src/evals/runner/reporters/console.test.ts",
+        "packages/eve/src/setup/flows/login.test.ts",
+        "packages/eve/src/internal/dev-boot-progress.test.ts",
+        "packages/eve/src/setup/scaffold/index.integration.test.ts",
+        "packages/eve/src/source-change/apply-model-name.test.ts",
+        "packages/eve/src/cli/dev/tui/status-line.test.ts",
+        "packages/eve/src/evals/runner/reporters/junit.test.ts",
+        "packages/eve/src/client/client.test.ts",
+        "packages/eve/src/services/dev-client/request-headers.test.ts",
+        "packages/eve/src/public/channels/linear/linearChannel.test.ts",
+        "packages/eve/src/discover/filesystem.test.ts",
+        "packages/eve/src/internal/classify-model-routing.test.ts",
+        "packages/eve/src/internal/workflow/queue-namespace.test.ts",
+        "packages/eve/src/runtime/hooks/registry.test.ts",
+        "packages/eve/src/internal/attachments/sandbox-refs.test.ts",
+        "packages/eve/src/cli/dev/tui/agent-header.test.ts",
+        "packages/eve/src/cli/dev/tui/markdown.test.ts",
+        "packages/eve/src/setup/vercel-deployment.test.ts",
+        "packages/eve/src/internal/application/paths.integration.test.ts",
+        "packages/eve/src/evals/mock-model.test.ts",
+        "packages/eve/src/public/nuxt/vercel-json.integration.test.ts",
+        "packages/eve/src/setup/boxes/resolve-target.test.ts",
+        "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "packages/eve/src/vue/use-eve-agent.test.ts",
+        "packages/eve/test/scenarios/cli.scenario.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/local-template-prune.test.ts",
+        "packages/eve/src/execution/sandbox/truncate-output.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-workspace-extensions.integration.test.ts",
+        "packages/eve/src/execution/turn-dispatch.test.ts",
+        "packages/eve/test/runtime-schedule-registration.test.ts",
+        "packages/eve/test/scenarios/runtime-sandbox-keys.scenario.test.ts",
+        "packages/eve/test/scenarios/bin-build-output.scenario.test.ts",
+        "packages/eve/src/internal/helpers/gray-matter.test.ts",
+        "packages/eve/src/internal/nitro/host/start-development-server.test.ts",
+        "packages/eve/test/scenarios/dev-server-chaos.scenario.test.ts",
+        "packages/eve/src/public/channels/github/checkout.test.ts",
+        "packages/eve/src/harness/tool-loop-cancellation.integration.test.ts",
+        "packages/eve/src/public/channels/telegram/telegramChannel.test.ts",
+        "packages/eve/src/setup/quit-guard.test.ts",
+        "packages/eve/src/compiler/extension-compatibility.test.ts",
+        "packages/eve/src/internal/nitro/dev-client-address.test.ts",
+        "packages/eve/src/shared/skill-package.test.ts",
+        "packages/eve/src/execution/sandbox/development-cleanup.test.ts",
+        "packages/eve/src/public/sveltekit/dev-server.integration.test.ts",
+        "packages/eve/src/public/nuxt/routing.test.ts",
+        "packages/eve/src/cli/dev/tui/mcp-connection-status.test.ts",
+        "packages/eve/src/public/channels/teams/teamsChannel.test.ts",
+        "packages/eve/src/harness/workflow-lifecycle.test.ts",
+        "packages/eve/src/harness/stale-input-responses.test.ts",
+        "packages/eve/src/services/dev-client/vercel-auth-error.test.ts",
+        "packages/eve/src/setup/boxes/detect-ai-gateway.integration.test.ts",
+        "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts",
+        "packages/eve/src/harness/workflow-continuation-security.test.ts",
+        "packages/eve/test/scenarios/dev-server.scenario.test.ts",
+        "packages/eve/src/context/accessors.integration.test.ts",
+        "packages/eve/src/compiler/normalize-hook.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox.scenario.test.ts",
+        "packages/eve/src/public/channels/slack/action-status.test.ts",
+        "packages/eve/src/runtime/attributes/emit.drift.test.ts",
+        "packages/eve/src/setup/vercel-project-framework.test.ts",
+        "packages/eve/src/execution/subagent-hitl-proxy.test.ts",
+        "packages/eve/src/evals/runner/discover.integration.test.ts",
+        "packages/eve/src/internal/nitro/host/cron-handler-route.test.ts",
+        "packages/eve/src/execution/turn-cancellation-control.test.ts",
+        "packages/eve/src/cli/commands/init-git.scenario.test.ts",
+        "packages/eve/src/shared/atomic-write-file.integration.test.ts",
+        "packages/eve/src/setup/boxes/preflight.test.ts",
+        "packages/eve/src/channel/schedule.test.ts",
+        "packages/eve/src/internal/workflow-bundle/workflow-builders.test.ts",
+        "packages/eve/src/public/channels/teams/inbound.test.ts",
+        "packages/eve/src/context/dynamic-skill-lifecycle.test.ts",
+        "packages/eve/src/setup/boxes/add-connections.test.ts",
+        "packages/eve/src/setup/scaffold/update/update-connection-connector.integration.test.ts",
+        "packages/eve/test/scenarios/runtime-model-resolution.scenario.test.ts",
+        "packages/eve/src/protocol/message.test.ts",
+        "packages/eve/src/public/definitions/extension.test.ts",
+        "packages/eve/src/setup/scaffold/version-tokens.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/docker-options.test.ts",
+        "packages/eve/src/harness/workflow-sandbox.scenario.test.ts",
+        "packages/eve/src/evals/target.test.ts",
+        "packages/eve/test/dev-send-message.test.ts",
+        "packages/eve/test/grep-tool.test.ts",
+        "packages/eve/src/internal/compiled-manifest-fingerprint.test.ts",
+        "packages/eve/src/execution/durable-session-store.integration.test.ts",
+        "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts",
+        "packages/eve/src/setup/flows/channels.test.ts",
+        "packages/eve/src/internal/nitro/host/artifacts-config.test.ts",
+        "packages/eve/src/cli/commands/info.test.ts",
+        "packages/eve/src/internal/resolve-model-endpoint-status.test.ts",
+        "packages/eve/src/setup/package-manager.test.ts",
+        "packages/eve/src/internal/nitro/routes/channel-dispatch.test.ts",
+        "packages/eve/src/internal/nitro/routes/dev-schedule-dispatch.test.ts",
+        "packages/eve/src/cli/dev/tui/live-region.test.ts",
+        "packages/eve/src/public/models/openai/chatgpt/transport.test.ts",
+        "packages/eve/src/shared/json.test.ts",
+        "packages/eve/test/glob-tool.test.ts",
+        "packages/eve/src/shared/atomic-write-file.test.ts",
+        "packages/eve/test/scenarios/agent-info-route.scenario.test.ts",
+        "packages/eve/test/scenarios/framework-next-build.scenario.test.ts",
+        "packages/eve/test/scenarios/verify-oidc.scenario.test.ts",
+        "packages/eve/test/vercel/vercel-sandbox-bundling.vercel.test.ts",
+        "packages/eve/src/cli/commands/extension-init.integration.test.ts",
+        "packages/eve/test/normalize-sandbox.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/docker.scenario.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts",
+        "packages/eve/src/public/channels/github/limits.test.ts",
+        "packages/eve/src/execution/create-session-step.test.ts",
+        "packages/eve/test/scenarios/schedule-trigger.scenario.test.ts",
+        "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts",
+        "packages/eve/src/cli/commands/link.integration.test.ts",
+        "packages/eve/src/harness/provider-tools.test.ts",
+        "packages/eve/test/scenarios/bundle-module-evaluation.scenario.test.ts",
+        "packages/eve/src/public/channels/twilio/twilioChannel.test.ts",
+        "packages/eve/src/execution/sandbox/multiplexed-command.test.ts",
+        "packages/eve/src/internal/workflow/development-world-codec.test.ts",
+        "packages/eve/test/scenarios/app-runtime-dependencies.scenario.test.ts",
+        "packages/eve/test/runtime-agent-graph.test.ts",
+        "packages/eve/src/internal/testing/mocks/mocks.test.ts",
+        "packages/eve/src/harness/tool-input-validation.integration.test.ts",
+        "packages/eve/src/public/sveltekit/routing.test.ts",
+        "packages/eve/src/runtime/workspace/spec.test.ts",
+        "packages/eve/src/context/dynamic-resolve-context.test.ts",
+        "packages/eve/src/public/nuxt/dev-server.integration.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-watcher-log.test.ts",
+        "packages/eve/src/context/key.test.ts",
+        "packages/eve/src/setup/primitives/run-vercel.test.ts",
+        "packages/eve/src/runtime/connections/mcp-client.test.ts",
+        "packages/eve/src/internal/nitro/host/compiled-sandbox-backend-prune-plugin.test.ts",
+        "packages/eve/src/internal/application/compiled-artifacts.test.ts",
+        "packages/eve/src/setup/flows/connections.test.ts",
+        "packages/eve/src/runtime/session-callback-route.test.ts",
+        "packages/eve/src/internal/attachments/data.test.ts",
+        "packages/eve/src/discover/extensions.test.ts",
+        "packages/eve/src/setup/flows/provider.test.ts",
+        "packages/eve/src/public/channels/eve.test.ts",
+        "packages/eve/src/internal/nitro/host/build-application.scenario.test.ts",
+        "packages/eve/test/scenarios/mounted-extension-installed.scenario.test.ts",
+        "packages/eve/src/execution/workflow-callback-url.test.ts",
+        "packages/eve/src/harness/attachment-staging.test.ts",
+        "packages/eve/src/setup/scaffold/extension-peer-compatibility.scenario.test.ts",
+        "packages/eve/src/internal/helpers/markdown.test.ts",
+        "packages/eve/src/public/channels/github/api.test.ts",
+        "packages/eve/src/discover/subagent.integration.test.ts",
+        "packages/eve/src/internal/nitro/dev-runtime-artifacts.integration.test.ts",
+        "packages/eve/src/execution/turn-control-receiver.test.ts",
+        "packages/eve/src/discover/grammar.test.ts",
+        "packages/eve/src/cli/run.test.ts",
+        "packages/eve/src/execution/durable-session-migrations/turn-workflow.test.ts",
+        "packages/eve/src/internal/application/paths.test.ts",
+        "packages/eve/src/harness/instrumentation-config.test.ts",
+        "packages/eve/test/scenarios/eval-command-environment.scenario.test.ts",
+        "packages/eve/test/setup/workflow-setup.ts",
+        "packages/eve/src/context/key.registry.test.ts",
+        "packages/eve/src/cli/dev/tui/prompt-commands.test.ts",
+        "packages/eve/src/internal/authored-directive-prologue.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.test.ts",
+        "packages/eve/src/execution/sandbox/session.test.ts",
+        "packages/eve/src/setup/vercel-project-api.test.ts",
+        "packages/eve/test/scenarios/dev-command-url.scenario.test.ts",
+        "packages/eve/test/runtime-tool-registry.test.ts",
+        "packages/eve/src/cli/commands/init-repl.integration.test.ts",
+        "packages/eve/src/public/channels/slack/connections.test.ts",
+        "packages/eve/src/harness/attachment-staging.integration.test.ts",
+        "packages/eve/src/internal/workflow/development-world-server.integration.test.ts",
+        "packages/eve/src/runtime/connections/principal.test.ts",
+        "packages/eve/src/setup/slackbot.test.ts",
+        "packages/eve/test/scenarios/dev-server-bun.scenario.test.ts",
+        "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts",
+        "packages/eve/src/execution/context.test.ts",
+        "packages/eve/src/channel/websocket-upgrade-server.test.ts",
+        "packages/eve/src/discover/agent.integration.test.ts",
+        "packages/eve/test/scenarios/compile-agent.scenario.test.ts",
+        "packages/eve/src/discover/project-source.test.ts",
+        "packages/eve/src/public/tool-result-narrowing.test.ts",
+        "packages/eve/src/cli/dev/tui/setup-issues.integration.test.ts",
+        "packages/eve/src/execution/ndjson-stream.test.ts",
+        "packages/eve/src/setup/vercel-project.test.ts",
+        "packages/eve/src/execution/compaction.test.ts",
+        "packages/eve/src/internal/nitro/host/create-application-nitro.test.ts",
+        "packages/eve/src/internal/nitro/host/prepare-application-host.scenario.test.ts",
+        "packages/eve/src/public/channels/slack/thread.test.ts",
+        "packages/eve/src/execution/sandbox/logging-session.test.ts",
+        "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts",
+        "packages/eve/src/execution/subagent-auth-proxy.integration.test.ts",
+        "packages/eve/src/setup/validate-gateway-key.test.ts",
+        "packages/eve/src/internal/testing/fake-prompter.ts",
+        "packages/eve/src/execution/skills/instructions.test.ts",
+        "packages/eve/src/runtime/agent/mock-model-adapter.test.ts",
+        "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts",
+        "packages/eve/src/public/models/openai/chatgpt/auth.test.ts",
+        "packages/eve/src/public/definitions/exact.test.ts",
+        "packages/eve/src/evals/cli/eval-client.test.ts",
+        "packages/eve/src/runtime/connections/callback-route.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/vercel.test.ts",
+        "packages/eve/src/setup/primitives/open-url.test.ts",
+        "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts",
+        "packages/eve/src/compiler/model-catalog.test.ts",
+        "packages/eve/test/scenarios/post-build-scripts.scenario.test.ts",
+        "packages/eve/src/harness/messages.test.ts",
+        "packages/eve/src/runtime/connections/openapi-spec.test.ts",
+        "packages/eve/src/public/channels/twilio/api.test.ts",
+        "packages/eve/test/read-file-tool.test.ts",
+        "packages/eve/test/define-write-file-tool.test.ts",
+        "packages/eve/test/define-bash-tool.test.ts",
+        "packages/eve/test/scenarios/hooks-end-to-end.scenario.test.ts",
+        "packages/eve/src/runtime/sandbox/keys.test.ts",
+        "packages/eve/src/setup/verified-remote-client.test.ts",
+        "packages/eve/src/execution/sandbox/abort-bound-session.test.ts",
+        "packages/eve/src/harness/compaction.test.ts",
+        "packages/eve/src/discover/project.integration.test.ts",
+        "packages/eve/src/context/dynamic-model-lifecycle.test.ts",
+        "packages/eve/src/public/sveltekit/dev-server.test.ts",
+        "packages/eve/src/setup/primitives/coding-agent-env.test.ts",
+        "packages/eve/src/channel/session.test.ts",
+        "packages/eve/src/runtime/connections/scoped-authorization.test.ts",
+        "packages/eve/src/public/channels/telegram/attachments.test.ts",
+        "packages/eve/src/cli/dev/tui/command-typeahead.test.ts",
+        "packages/eve/src/runtime/resolve-connection.test.ts",
+        "packages/eve/test/runtime-sandbox-registry.test.ts",
+        "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.test.ts",
+        "packages/eve/src/execution/subagent-adapter.test.ts",
+        "packages/eve/src/execution/turn-execution-cursor.test.ts",
+        "packages/eve/src/context/dynamic-instruction-lifecycle.test.ts",
+        "packages/eve/src/setup/flows/model.test.ts",
+        "packages/eve/src/public/channels/upload-policy.test.ts",
+        "packages/eve/src/execution/tool-auth.integration.test.ts",
+        "packages/eve/src/cli/commands/agent-instructions.test.ts",
+        "packages/eve/src/shared/vercel-project.test.ts",
+        "packages/eve/src/execution/delegated-parent-notification.test.ts",
+        "packages/eve/test/scenarios/public-api-portability.scenario.test.ts",
+        "packages/eve/src/internal/nitro/host/channel-routes.test.ts",
+        "packages/eve/src/setup/cli/rail-log.test.ts",
+        "packages/eve/src/public/channels/teams/hitl.test.ts",
+        "packages/eve/src/internal/testing/memory-agent-source.test.ts",
+        "packages/eve/src/execution/workflow-entry.integration.test.ts",
+        "packages/eve/src/internal/workflow-bundle/builder-support.integration.test.ts",
+        "packages/eve/src/harness/runtime-actions.test.ts",
+        "packages/eve/src/evals/runner/resolve-git-metadata.integration.test.ts",
+        "packages/eve/src/compiler/normalize-extension.test.ts",
+        "packages/eve/src/execution/workflow-runtime.test.ts",
+        "packages/eve/src/internal/authored-definition/connection.test.ts",
+        "packages/eve/src/harness/workflow-runtime-action-state.test.ts",
+        "packages/eve/src/setup/scaffold/create/project.test.ts",
+        "packages/eve/src/harness/workflow-tool-description.test.ts",
+        "packages/eve/src/internal/bundler/extension-scope-plugin.test.ts",
+        "packages/eve/test/scenarios/compiled-vendor-assets.scenario.test.ts",
+        "packages/eve/src/internal/nitro/host/drained-nitro-dev-server.scenario.test.ts",
+        "packages/eve/src/runtime/framework-tools/index.test.ts",
+        "packages/eve/src/runtime/input/types.test.ts",
+        "packages/eve/src/shared/eve-server-health.test.ts",
+        "packages/eve/src/internal/testing/use-temporary-app-roots.ts",
+        "packages/eve/src/cli/dev/tui/agent-info-probe.test.ts",
+        "packages/eve/src/public/channels/slack/inbound.test.ts",
+        "packages/eve/src/protocol/cancel-turn.test.ts",
+        "packages/eve/src/services/dev-client/credential-gate.test.ts",
+        "packages/eve/test/scenarios/sandbox-workspace-folders.scenario.test.ts",
+        "packages/eve/src/cli/dev/tui/blocks.test.ts",
+        "packages/eve/src/setup/project-name.test.ts",
+        "packages/eve/test/client.test.ts",
+        "packages/eve/src/harness/workflow-stream-error.test.ts",
+        "packages/eve/src/public/definitions/state.test.ts",
+        "packages/eve/src/shared/continuation-token.test.ts",
+        "packages/eve/src/client/session.test.ts",
+        "packages/eve/src/channel/schedule-auth.test.ts",
+        "packages/eve/src/execution/turn-cancellation.integration.test.ts",
+        "packages/eve/src/execution/durable-session-store.test.ts",
+        "packages/eve/src/client/message-reducer.test.ts",
+        "packages/eve/src/execution/sandbox/prewarm.test.ts",
+        "packages/eve/src/setup/boxes/one-shot-next-steps.test.ts",
+        "packages/eve/test/scenarios/load-agent-info-data.scenario.test.ts",
+        "packages/eve/src/cli/dev/tui/setup-selection-input.test.ts",
+        "packages/eve/test/define-glob-tool.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/local.test.ts",
+        "packages/eve/src/client/client-error.test.ts",
+        "packages/eve/src/setup/flows/install-vercel-cli.test.ts",
+        "packages/eve/src/public/channels/github/verify.test.ts",
+        "packages/eve/src/compiler/manifest.test.ts",
+        "packages/eve/src/shared/errors.test.ts",
+        "packages/eve/src/execution/task-model-retry.integration.test.ts",
+        "packages/eve/src/evals/runner/run-evals.test.ts",
+        "packages/eve/src/channel/instrumentation.test.ts",
+        "packages/eve/src/internal/testing/unit-guard.ts",
+        "packages/eve/test/scenarios/turn-cancellation.scenario.test.ts",
+        "packages/eve/src/execution/session.test.ts",
+        "packages/eve/src/context/dynamic-tool-lifecycle.test.ts",
+        "packages/eve/src/internal/workflow-bundle/builder.scenario.test.ts",
+        "packages/eve/test/package-identity.test.ts",
+        "packages/eve/src/public/models/openai/index.test.ts",
+        "packages/eve/src/cli/dev/tui/setup-panel.test.ts",
+        "packages/eve/src/cli/dev/tui/tui-prompter.test.ts",
+        "packages/eve/src/context/providers/sandbox.test.ts",
+        "packages/eve/src/runtime/framework-channels/index.test.ts",
+        "packages/eve/src/cli/dev/tui/vercel-status.test.ts",
+        "packages/eve/src/public/next/index.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-environment-watcher.integration.test.ts",
+        "packages/eve/test/build-profile-report.test.ts",
+        "packages/eve/src/cli/dev/tui/target.test.ts",
+        "packages/eve/src/cli/format-elapsed.test.ts",
+        "packages/eve/src/internal/authored-definition/schema-backed.test.ts",
+        "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts",
+        "packages/eve/src/internal/authored-definition/openapi-connection.test.ts",
+        "packages/eve/src/setup/cli/option-row.test.ts",
+        "packages/eve/src/public/channels/slack/hitl.test.ts",
+        "packages/eve/src/internal/testing/scenario-app.scenario.test.ts",
+        "packages/eve/src/cli/dev/tui/log-display-mode.test.ts",
+        "packages/eve/src/client/agent-host.test.ts",
+        "packages/eve/src/evals/runner/execute-eval.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/just-bash.integration.test.ts",
+        "packages/eve/src/setup/cli/select-state.test.ts",
+        "packages/eve/src/runtime/connections/authorization-tokens.test.ts",
+        "packages/eve/test/discover-diagnostics.test.ts",
+        "packages/eve/src/setup/primitives/pm/run.scenario.test.ts",
+        "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.test.ts",
+        "packages/eve/src/runtime/connections/openapi-client.test.ts",
+        "packages/eve/src/cli/dev/tui/dev-rebuild-status.test.ts",
+        "packages/eve/src/execution/remote-agent-dispatch.test.ts",
+        "packages/eve/src/execution/turn-workflow.test.ts",
+        "packages/eve/src/public/channels/auth.test.ts",
+        "packages/eve/src/client/output-schema.test.ts",
+        "packages/eve/src/setup/flows/deploy.test.ts",
+        "packages/eve/src/public/channels/discord/hitl.test.ts",
+        "packages/eve/src/setup/ai-gateway-api-key.test.ts",
+        "packages/eve/src/cli/dev/tui/line-editor.test.ts",
+        "packages/eve/src/internal/application/output-publication.integration.test.ts",
+        "packages/eve/src/cli/commands/init-repl.test.ts",
+        "packages/eve/src/internal/nitro/host/nitro-bundler-config.test.ts",
+        "packages/eve/src/cli/agent-detection.test.ts",
+        "packages/eve/src/runtime/framework-tools/skill.test.ts",
+        "packages/eve/test/runtime-agent-framework-tools.test.ts",
+        "packages/eve/src/execution/cancel-descendant-turns-step.test.ts",
+        "packages/eve/src/public/channels/discord/discordChannel.test.ts",
+        "packages/eve/src/execution/node-step.test.ts",
+        "packages/eve/src/public/channels/slack/attachments.test.ts",
+        "packages/eve/src/shared/empty-delivery.test.ts",
+        "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts",
+        "packages/eve/src/setup/primitives/run-pnpm.test.ts",
+        "packages/eve/test/dev-request-headers.test.ts",
+        "packages/eve/src/setup/connection-connector.integration.test.ts",
+        "packages/eve/src/internal/nitro/routes/agent-info/build-agent-info-response.test.ts",
+        "packages/eve/src/cli/dev/tui/setup-commands.test.ts",
+        "packages/eve/src/execution/workflow-entry.test.ts",
+        "packages/eve/src/internal/node-esm-compat-banner.test.ts",
+        "packages/eve/src/runtime/agent/resolve-model.test.ts",
+        "packages/eve/src/setup/boxes/link-project.test.ts",
+        "packages/eve/src/setup/scaffold/channels-catalog.test.ts",
+        "packages/eve/src/internal/testing/scenario-app.ts",
+        "packages/eve/src/public/channels/discord/api.test.ts",
+        "packages/eve/src/harness/emission.test.ts",
+        "packages/eve/src/setup/boxes/deploy-project.test.ts",
+        "packages/eve/src/public/definitions/skill.test.ts",
+        "packages/eve/test/scenarios/compiled-artifacts-bootstrap.scenario.test.ts",
+        "packages/eve/src/channel/subagent-emitter.test.ts",
+        "packages/eve/src/channel/cross-channel-receive.test.ts",
+        "packages/eve/src/execution/subagent-hitl-proxy.integration.test.ts",
+        "packages/eve/src/harness/advertised-tools.test.ts",
+        "packages/eve/src/harness/input-requests.test.ts",
+        "packages/eve/src/internal/nitro/host/build-extension.scenario.test.ts",
+        "packages/eve/src/public/channels/teams/api.test.ts",
+        "packages/eve/src/public/next/server.integration.test.ts",
+        "packages/eve/src/channel/cancel.test.ts",
+        "packages/eve/src/evals/runner/reporters/braintrust.test.ts",
+        "packages/eve/src/public/models/openai/chatgpt/model.test.ts",
+        "packages/eve/src/cli/commands/init.integration.test.ts",
+        "packages/eve/test/scenarios/eve-init.scenario.test.ts",
+        "packages/eve/src/services/dev-client.test.ts",
+        "packages/eve/src/internal/nitro/dev-generation-artifacts.scenario.test.ts",
+        "packages/eve/test/eve-run-stream-channel.test.ts",
+        "packages/eve/test/scenarios/dev-environment.scenario.test.ts",
+        "packages/eve/src/evals/runner/execute-task.test.ts",
+        "packages/eve/src/public/channels/github/auth.test.ts",
+        "packages/eve/src/setup/scaffold/connections/catalog.test.ts",
+        "packages/eve/src/evals/runner/verdict.test.ts",
+        "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts",
+        "packages/eve/src/setup/boxes/select-model.test.ts",
+        "packages/eve/src/compiler/normalize-agent-config.test.ts",
+        "packages/eve/src/harness/tools.test.ts",
+        "packages/eve/src/harness/model-call-error.test.ts",
+        "packages/eve/src/execution/reconcile-session-continuation-token.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox-runtime.test.ts",
+        "packages/eve/src/internal/application/optional-package-install.test.ts",
+        "packages/eve/src/cli/commands/extension-build.integration.test.ts",
+        "packages/eve/src/runtime/connections/define-interactive-authorization.test.ts",
+        "packages/eve/src/public/channels/discord/verify.test.ts",
+        "packages/eve/src/cli/dev/tui/stream-format.test.ts",
+        "packages/eve/src/setup/boxes/add-channels.test.ts",
+        "packages/eve/src/shared/result.test.ts",
+        "packages/eve/src/harness/prompt-cache.test.ts",
+        "packages/eve/src/public/channels/slack/verify.test.ts",
+        "packages/eve/src/harness/prompt-cache-accounting.test.ts",
+        "packages/eve/src/internal/aisdk-provider-contract.test.ts",
+        "packages/eve/src/setup/vercel-api-failure.test.ts",
+        "packages/eve/src/cli/dev/tui/remote-connection.test.ts",
+        "packages/eve/src/setup/boxes/resolve-provisioning.test.ts",
+        "packages/eve/src/cli/dev/tui/prompt-command-handler.test.ts",
+        "packages/eve/src/execution/harness-tool-execution.integration.test.ts",
+        "packages/eve/src/harness/tool-loop.test.ts",
+        "packages/eve/src/harness/instrumentation-runtime-context.test.ts",
+        "packages/eve/src/channel/adapter.test.ts",
+        "packages/eve/src/public/sveltekit/index.test.ts",
+        "packages/eve/test/resolve-agent.test.ts",
+        "packages/eve/src/runtime/cache-key.scenario.test.ts",
+        "packages/eve/src/cli/dev/tui/tool-format.test.ts",
+        "packages/eve/src/internal/application/import-specifier.test.ts",
+        "packages/eve/src/internal/instrumentation.test.ts",
+        "packages/eve/src/harness/compaction-prompt.test.ts",
+        "packages/eve/src/public/channels/telegram/verify.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/docker.integration.test.ts",
+        "packages/eve/src/harness/action-result-helpers.test.ts",
+        "packages/eve/src/public/definitions/channel.test.ts",
+        "packages/eve/src/harness/proxy-input-requests.test.ts",
+        "packages/eve/src/compiler/module-map.test.ts",
+        "packages/eve/src/internal/nitro/host/vercel-build-output-config.test.ts",
+        "packages/eve/src/public/channels/linear/hitl.test.ts",
+        "packages/eve/src/public/channels/slack/blocks.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.scenario.test.ts",
+        "packages/eve/src/setup/headless.test.ts",
+        "packages/eve/src/setup/primitives/process-abort.test.ts",
+        "packages/eve/src/cli/dev/url.test.ts",
+        "packages/eve/src/harness/tool-interrupts.test.ts",
+        "packages/eve/test/define-read-file-tool.test.ts",
+        "packages/eve/src/execution/web-fetch/tool.test.ts",
+        "packages/eve/src/evals/assertions/run.test.ts",
+        "packages/eve/src/setup/runner.test.ts",
+        "packages/eve/src/internal/nitro/routes/info.test.ts",
+        "packages/eve/src/execution/durable-session-migrations/snapshot.test.ts",
+        "packages/eve/src/internal/logging.test.ts",
+        "packages/eve/src/evals/loaders/json.integration.test.ts",
+        "packages/eve/src/execution/durable-session-migrations/chain.test.ts",
+        "packages/eve/src/harness/input-extraction.test.ts",
+        "packages/eve/src/public/definitions/connections/openapi.test.ts",
+        "packages/eve/src/execution/sandbox/ensure.test.ts",
+        "packages/eve/src/source-change/static-source-change.integration.test.ts",
+        "packages/eve/src/setup/flows/link.test.ts",
+        "packages/eve/src/internal/nitro/host/schedule-task-routes.test.ts",
+        "packages/eve/src/internal/runtime-model.test.ts",
+        "packages/eve/src/public/sveltekit/vercel-json.integration.test.ts",
+        "packages/eve/src/setup/scaffold/update/connections.integration.test.ts",
+        "packages/eve/src/internal/nitro/development-generation.test.ts",
+        "packages/eve/src/internal/nitro/host/extension-distribution.integration.test.ts",
+        "packages/eve/src/harness/turn-cancellation.test.ts",
+        "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "packages/eve/src/public/definitions/connections/mcp.test.ts",
+        "packages/eve/src/harness/ai-sdk-approval-resume.integration.test.ts",
+        "packages/eve/src/internal/nitro/host/build-extension.integration.test.ts",
+        "packages/eve/test/discover-manifest.test.ts",
+        "packages/eve/src/internal/workflow/validate-world.test.ts",
+        "packages/eve/src/public/channels/slack/model-context.test.ts",
+        "packages/eve/src/public/channels/discord/inbound.test.ts",
+        "packages/eve/src/public/channels/telegram/api.test.ts",
+        "packages/eve/src/internal/nitro/routes/dev-runtime-artifacts.test.ts",
+        "packages/eve/src/execution/sandbox/development-prewarm.test.ts",
+        "packages/eve/src/execution/runtime-context.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox-platform.test.ts",
+        "packages/eve/src/harness/active-turn-id.test.ts",
+        "packages/eve/src/setup/boxes/select-setup-mode.test.ts",
+        "packages/eve/src/internal/nitro/host/start-production-server.test.ts",
+        "packages/eve/src/internal/testing/unit-guard.test.ts",
+        "packages/eve/src/runtime/framework-tools/connection-search-dynamic.test.ts",
+        "packages/eve/test/define-grep-tool.test.ts",
+        "packages/eve/src/harness/turn-tag-state.test.ts",
+        "packages/eve/test/scenarios/mounted-extension-authored-source.scenario.test.ts",
+        "packages/eve/src/runtime/actions/keys.test.ts",
+        "packages/eve-catalog/src/index.test.ts",
+        "packages/eve/src/cli/dev/tui/terminal-text.test.ts",
+        "packages/eve/src/services/dev-client/client-options.test.ts",
+        "packages/eve/src/cli/dev/tui/errors.test.ts",
+        "packages/eve/src/internal/attachments/errors.test.ts",
+        "packages/eve/src/internal/authored-definition/core.test.ts",
+        "packages/eve/src/context/hook-lifecycle.integration.test.ts",
+        "packages/eve/test/scenarios/mounted-extension-no-config.scenario.test.ts",
+        "packages/eve/src/client/client.integration.test.ts",
+        "packages/eve/src/public/definitions/tool-auth.test.ts",
+        "packages/eve/src/public/next/resolve-eve-binary.integration.test.ts",
+        "packages/eve/src/internal/bundler/nitro-rolldown.integration.test.ts",
+        "packages/eve/src/public/channels/teams/verify.test.ts",
+        "packages/eve/src/setup/boxes/select-channels.test.ts",
+        "packages/eve/src/harness/session-limit-continuation.test.ts",
+        "packages/eve/src/evals/define-eval.test.ts",
+        "packages/eve/src/internal/structural-tests/file-length.test.ts",
+        "packages/eve/test/runtime-prompt-compose.test.ts",
+        "packages/eve/src/public/channels/github/githubChannel.test.ts",
+        "packages/eve/src/public/channels/twilio/verify.test.ts",
+        "packages/eve/src/public/channels/github/inbound.test.ts",
+        "packages/eve/src/internal/testing/route-harness.ts",
+        "packages/eve/src/discover/skills.integration.test.ts",
+        "packages/eve/src/discover/sandbox.integration.test.ts",
+        "packages/eve/src/harness/cancelled-turn-emission.test.ts",
+        "packages/eve/src/setup/cli/select-option-codec.test.ts",
+        "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts",
+        "packages/eve/test/scenarios/compiler-model-catalog.scenario.test.ts",
+        "packages/eve/src/public/nuxt/dev-server.test.ts",
+        "packages/eve/src/runtime/attributes/emit.test.ts",
+        "packages/eve/test/runtime-schedule-resolution.test.ts",
+        "packages/eve/src/client/url.test.ts",
+        "packages/eve/src/public/channels/slack/interactions.test.ts",
+        "packages/eve/src/harness/workflow-subagent-limit.test.ts",
+        "packages/eve/src/internal/attachments/refs.test.ts",
+        "packages/eve/src/cli/dev/tui/tui.test.ts",
+        "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts",
+        "packages/eve/src/internal/testing/events.test.ts",
+        "packages/eve/src/runtime/connections/registry.test.ts",
+        "packages/eve/src/harness/provider-tool-history.test.ts",
+        "packages/eve/src/public/channels/linear/verify.test.ts",
+        "packages/eve/test/scenarios/cross-channel-receive.scenario.test.ts",
+        "packages/eve/src/public/channels/slack/mrkdwn.test.ts",
+        "packages/eve/src/evals/runner/artifacts.test.ts",
+        "packages/eve/src/setup/cli/select-component.test.ts",
+        "packages/eve/src/shared/network-address.test.ts",
+        "packages/eve/src/runtime/channels/registry.test.ts",
+        "packages/eve/test/file-tool-compaction.test.ts",
+        "packages/eve/src/public/channels/slack/api.test.ts",
+        "packages/eve/src/public/connections/errors.test.ts",
+        "packages/eve/src/internal/testing/mocks/mock-skill.ts",
+        "packages/eve/src/cli/dev/tui/remote-auth.test.ts",
+        "packages/eve/src/channel/resolve-text.test.ts",
+        "packages/eve/src/runtime/resolve-hook.test.ts",
+        "packages/eve/src/evals/runner/derive-run-facts.test.ts",
+        "packages/eve/test/scenarios/runtime-loaders.scenario.test.ts",
+        "packages/eve/src/runtime/connections/validate-authorization.test.ts",
+        "packages/eve/src/execution/sandbox/bindings/vercel-user-agent.test.ts",
+        "packages/eve/src/internal/workflow-bundle/builder-support.test.ts",
+        "packages/eve/src/runtime/loaders/bundled-artifacts.test.ts",
+        "packages/eve/src/setup/slack-connect.test.ts",
+        "packages/eve/src/execution/session-delivery-hook.test.ts",
+        "packages/eve/src/evals/expect/index.test.ts",
+        "packages/eve/src/execution/workflow-errors.test.ts",
+        "packages/eve/src/internal/authored-module-loader.scenario.test.ts",
+        "packages/eve/test/scenarios/mounted-extension-directory-override.scenario.test.ts",
+        "packages/eve/src/execution/sandbox/active-handles.test.ts",
+        "packages/eve/src/public/channels/telegram/hitl.test.ts",
+        "packages/eve/src/harness/tool-loop-stream-retry.integration.test.ts",
+        "packages/eve/src/shared/extension-package-contract.test.ts",
+        "packages/eve/src/internal/nitro/host/dev-host-fingerprint.integration.test.ts",
+        "packages/eve/test/default-backend.test.ts",
+        "packages/eve/src/discover/extension-specifier.test.ts",
+        "packages/eve/src/cli/dev/tui/runner.test.ts"
+      ],
+      "compatibility": "partial",
+      "effort": "moderate",
+      "equivalent": "criterion",
+      "guidance": "Best match: `criterion` (similarity 27%). Statistics-driven micro-benchmarking framework for Rust",
+      "is_high_impact": false,
+      "package": "vitest",
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 72,
+      "affected_modules": [
+        "e2e/fixtures/extensions/agent/tools/local_ping.ts",
+        "packages/eve/src/setup/slack-connect-lifecycle.ts",
+        "packages/eve/src/shared/tool-schema.test.ts",
+        "apps/templates/web-chat-next/agent/tools/randomize.ts",
+        "e2e/fixtures/toolkit-extension/extension/tools/toolkit_lookup.ts",
+        "e2e/fixtures/agent-tools-sandbox/agent/tools/run_python.ts",
+        "packages/eve/src/services/dev-client/request-headers.ts",
+        "e2e/fixtures/agent-schedules/agent/tools/lookup-step-a.ts",
+        "packages/eve/src/internal/testing/scenario-apps/weather-agent.ts",
+        "e2e/fixtures/agent-tools/agent/tools/dynamic-channel-metadata.ts",
+        "e2e/fixtures/agent-tools/agent/tools/dynamic-echo.ts",
+        "e2e/fixtures/gizmo-extension/extension/tools/gizmo_budget.ts",
+        "e2e/fixtures/compaction-regression-shared/src/advance-checkpoint.ts",
+        "apps/frameworks/next-multi-agent/agents/research/tools/identify_agent.ts",
+        "e2e/fixtures/agent-tools/agent/tools/dynamic-nested.ts",
+        "e2e/fixtures/agent-tools/agent/tools/read-dynamic-dependency.ts",
+        "packages/eve/src/internal/testing/scenario-apps/tool-overrides.ts",
+        "packages/eve/src/setup/vercel-project.ts",
+        "packages/eve/src/public/definitions/extension.test.ts",
+        "e2e/fixtures/agent-tools/agent/tools/structured-echo.ts",
+        "e2e/fixtures/compaction-regression-shared/src/perform-source-analysis.ts",
+        "e2e/fixtures/extensions/agent/extensions/toolkit/tools/toolkit_ping.ts",
+        "e2e/fixtures/agent-cancellation/agent/subagents/sleeper/tools/wait-for-cancellation.ts",
+        "apps/fixtures/weather-agent/agent/tools/get_weather.ts",
+        "packages/eve/src/setup/vercel-deployment.ts",
+        "e2e/fixtures/agent-tools-hitl/agent/tools/gate.ts",
+        "packages/eve/src/cli/dev/tui/vercel-trusted-sources.ts",
+        "e2e/fixtures/gizmo-extension/extension/tools/gizmo_search.ts",
+        "e2e/fixtures/agent-basic-runtime/evals/runtime/output-schema-turn.eval.ts",
+        "e2e/fixtures/agent-tools/agent/tools/always-throws.ts",
+        "e2e/fixtures/agent-tools-hitl/agent/tools/guarded-slow-echo.ts",
+        "e2e/fixtures/agent-tools/agent/tools/dynamic-model-output.ts",
+        "packages/eve/src/harness/input-extraction.ts",
+        "e2e/fixtures/agent-tools/agent/tools/lookup-step-b.ts",
+        "e2e/fixtures/gadget-extension/extension/tools/gadget_echo.ts",
+        "e2e/fixtures/toolkit-extension/extension/extension.ts",
+        "e2e/fixtures/toolkit-extension/extension/tools/toolkit_budget.ts",
+        "apps/frameworks/next-multi-agent/agents/billing/tools/identify_agent.ts",
+        "apps/frameworks/next/agent/tools/whoami.ts",
+        "e2e/fixtures/agent-prompt-cache/agent/tools/fetch-archive-page.ts",
+        "packages/eve/test/scenarios/turn-cancellation.scenario.test.ts",
+        "e2e/fixtures/agent-schedules/agent/tools/record-heartbeat.ts",
+        "e2e/fixtures/agent-tools-sandbox/agent/tools/network-probe.ts",
+        "packages/eve/src/setup/vercel-api-failure.ts",
+        "e2e/fixtures/toolkit-extension/extension/tools/toolkit_forecast.ts",
+        "packages/eve/scripts/vendor-compiled/declarations/zod.d.ts",
+        "packages/eve/src/internal/testing/scenario-apps/verbose-bundling.ts",
+        "e2e/fixtures/compaction-regression-shared/src/inspect-repository.ts",
+        "packages/eve/src/setup/vercel-project-framework.ts",
+        "e2e/fixtures/agent-tools-hitl-openai/agent/tools/guarded-echo.ts",
+        "packages/eve/src/evals/runner/execute-task.test.ts",
+        "packages/eve/src/setup/scaffold/create/extension.ts",
+        "packages/eve/src/setup/slack-connect.ts",
+        "packages/eve/src/setup/vercel-project-api.ts",
+        "e2e/fixtures/agent-tools/agent/tools/streamed-action.ts",
+        "packages/eve/src/setup/project-resolution.ts",
+        "e2e/fixtures/agent-tools/agent/tools/dynamic-messages.ts",
+        "e2e/fixtures/agent-tools/agent/tools/dynamic-channel-action-narration.ts",
+        "e2e/fixtures/agent-schedules/agent/tools/lookup-step-b.ts",
+        "e2e/fixtures/toolkit-extension/extension/tools/toolkit_ping.ts",
+        "apps/frameworks/next-multi-agent/agents/support/tools/identify_agent.ts",
+        "apps/docs/lib/templates/sources.ts",
+        "packages/eve/src/harness/ai-sdk-approval-resume.integration.test.ts",
+        "apps/frameworks/sveltekit/agent/tools/get_weather.ts",
+        "e2e/fixtures/agent-cancellation/agent/tools/wait-for-cancellation.ts",
+        "e2e/fixtures/agent-tools/agent/tools/lookup-step-a.ts",
+        "e2e/fixtures/agent-tools-hitl/agent/tools/guarded-echo.ts",
+        "e2e/fixtures/agent-tools-hitl/agent/tools/dynamic-guarded-echo.ts",
+        "apps/frameworks/nuxt/agent/tools/get_weather.ts",
+        "e2e/fixtures/agent-subagents-hitl/agent/subagents/stock-price/tools/get_stock_price.ts",
+        "apps/docs/app/[lang]/(home)/components/file-tree.tsx",
+        "e2e/fixtures/agent-schedules/agent/tools/check-alerts.ts"
+      ],
+      "compatibility": "partial",
+      "effort": "moderate",
+      "equivalent": "serde_json",
+      "guidance": "Best match: `serde_json` (similarity 30%). JSON serialization and deserialization library for Rust",
+      "is_high_impact": false,
+      "package": "zod",
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 5,
+      "affected_modules": [
+        "packages/eve/src/internal/nitro/routes/index.ts",
+        "packages/eve/src/internal/nitro/routes/channel-dispatch.ts",
+        "packages/eve/src/internal/nitro/routes/health.ts",
+        "packages/eve/src/internal/nitro/routes/channel-dispatch.test.ts",
+        "packages/eve/test/scenarios/agent-info-route.scenario.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "nitro",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.0.260610-beta"
+    },
+    {
+      "affected_module_count": 4,
+      "affected_modules": [
+        "apps/docs/components/geistdocs/edit-on-github.tsx",
+        "apps/docs/app/[lang]/templates/[slug]/template-actions.tsx",
+        "apps/docs/components/geistdocs/footer.tsx",
+        "apps/docs/app/[lang]/(home)/components/architecture.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@icons-pack/react-simple-icons",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "13.13.0"
+    },
+    {
+      "affected_module_count": 4,
+      "affected_modules": [
+        "apps/docs/lib/integrations/data.ts",
+        "packages/eve/src/setup/scaffold/channels-catalog.test.ts",
+        "packages/eve/src/setup/scaffold/connections/catalog.test.ts",
+        "packages/eve/src/setup/scaffold/channels-catalog.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/eve-catalog",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "workspace:*"
+    },
+    {
+      "affected_module_count": 4,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ui/badge.tsx",
+        "apps/templates/web-chat-next/components/ui/button.tsx",
+        "apps/templates/web-chat-next/components/ui/input-group.tsx",
+        "apps/templates/web-chat-next/components/ui/button-group.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "class-variance-authority",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.7.1"
+    },
+    {
+      "affected_module_count": 4,
+      "affected_modules": [
+        "packages/eve/src/execution/sandbox/bindings/microsandbox-platform.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox-process.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox.ts",
+        "packages/eve/src/execution/sandbox/bindings/microsandbox-runtime.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "microsandbox",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.5.5"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "packages/eve/src/internal/classify-model-routing.test.ts",
+        "e2e/fixtures/agent-prompt-cache/agent/agent.ts",
+        "packages/eve/src/internal/aisdk-provider-contract.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/anthropic",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "packages/eve/src/setup/cli/prompt-ui.ts",
+        "packages/eve/src/setup/prompter.ts",
+        "packages/eve/src/setup/cli/select-component.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@clack/core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.3.1"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "apps/docs/app/[lang]/integrations/components/markdown.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@streamdown/code",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.1.1"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "apps/docs/components/geistdocs/installer.tsx",
+        "apps/docs/components/geistdocs/provider.tsx",
+        "apps/docs/app/[lang]/(home)/components/install-switcher.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/analytics",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.0.1"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "packages/eve/src/evals/judge.ts",
+        "packages/eve/src/evals/autoevals-client.ts",
+        "packages/eve/src/evals/expect/index.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "autoevals",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.0.132"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "packages/eve/test/scenarios/verify-oidc.scenario.test.ts",
+        "packages/eve/src/public/channels/auth.test.ts",
+        "packages/eve/src/public/channels/teams/verify.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "jose",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "6.2.3"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "apps/docs/app/[lang]/integrations/components/markdown.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "streamdown",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 3,
+      "affected_modules": [
+        "apps/frameworks/sveltekit/vite.config.ts",
+        "packages/eve/src/public/sveltekit/index.ts",
+        "packages/eve/src/public/sveltekit/index.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "vite",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^8.0.0"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/chain-of-thought.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@radix-ui/react-use-controllable-state",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.2.2"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@streamdown/cjk",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.0.3"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@streamdown/math",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.0.2"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/message.tsx",
+        "apps/templates/web-chat-next/components/ai-elements/reasoning.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@streamdown/mermaid",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.0.2"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/frameworks/sveltekit/vite.config.ts",
+        "apps/frameworks/nuxt/nuxt.config.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@tailwindcss/vite",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^4.0.0"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/docs/lib/integrations/data.ts",
+        "apps/frameworks/next/lib/auth.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/connect",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "packages/eve/src/cli/dev/tui/vercel-trusted-sources.ts",
+        "packages/eve/src/cli/dev/tui/vercel-trusted-sources.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/sdk",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.28.1"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/shaders.ts",
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/cubemap.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vgpu/wgsl",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.0.7"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "packages/eve/src/internal/application/compiled-artifacts.ts",
+        "packages/eve/src/internal/workflow/development-world-protocol.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/utils",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.6"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "packages/eve/test/setup/workflow-global-setup.ts",
+        "packages/eve/test/setup/workflow-setup.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/world-local",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.29"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/docs/lib/utils.ts",
+        "apps/templates/web-chat-next/lib/utils.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "clsx",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.1.1"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "e2e/fixtures/extensions/agent/extensions/gizmo.ts",
+        "e2e/fixtures/dist-extensions/agent/extensions/gizmo.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "gizmo-extension",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "workspace:*"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "packages/eve/src/execution/sandbox/bindings/just-bash-runtime.ts",
+        "packages/eve/src/execution/sandbox/bindings/just-bash.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "just-bash",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.0.1"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "apps/docs/lib/utils.ts",
+        "apps/templates/web-chat-next/lib/utils.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "tailwind-merge",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.6.0"
+    },
+    {
+      "affected_module_count": 2,
+      "affected_modules": [
+        "packages/eve/src/vue/use-eve-agent.test.ts",
+        "packages/eve/src/vue/use-eve-agent.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "vue",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^3.5.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/src/internal/aisdk-provider-contract.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/google",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/src/internal/aisdk-provider-contract.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/openai",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/frameworks/next/lib/auth.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@auth/core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.41.2"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/src/internal/workflow-bundle/vercel-workflow-output.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@chat-adapter/slack",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.31.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/lib/integrations/data.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@chat-adapter/state-memory",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.31.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "e2e/fixtures/agent-tools/agent/tools/read-dynamic-dependency.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@eve-e2e/dynamic-import-dependency",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "file:./fixtures/dynamic-import-dependency"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/src/public/nuxt/module.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@nuxt/kit",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^4.0.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/frameworks/sveltekit/vite.config.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@sveltejs/kit",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^2.0.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "e2e/provision/tools-sandbox.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/sandbox",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/components/geistdocs/provider.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/speed-insights",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.0.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/scripts/render-eve-5.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vgpu/adapter-node",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.0.7"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/src/runtime/attributes/emit.drift.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/world",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.21"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ui/command.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "cmdk",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.1.1"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/test/tui-client/tui-connection-auth-user.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "emulate",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.6.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/app/[lang]/rss.xml/route.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "feed",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.2.1"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "e2e/fixtures/dist-extensions/agent/extensions/gadget.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "gadget-extension",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "file:../gadget-extension"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "e2e/fixtures/extensions/agent/extensions/javascript.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "js-only-extension",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "workspace:*"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx"
+      ],
+      "compatibility": "full",
+      "effort": "trivial",
+      "equivalent": "uuid",
+      "guidance": "Best match: `uuid` (similarity 60%). UUID generation and comparison library for Rust",
+      "is_high_impact": false,
+      "package": "nanoid",
+      "version": "5.1.11"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/index.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "phase",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/scripts/eve-render/report.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "pngjs",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^7.0.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/app/[lang]/(home)/components/eve-logo-shader/index.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "react-dom",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "packages/eve/src/react/use-eve-agent.test.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "react-test-renderer",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "19.2.6"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/code-block.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "shiki",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.1.0"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "e2e/fixtures/gadget-extension/extension/tools/gadget_echo.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "slugify",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.6.6"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/docs/components/geistdocs/installer.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "sonner",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.0.7"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "e2e/fixtures/extensions/agent/extensions/toolkit/extension.ts"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "toolkit-extension",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "workspace:*"
+    },
+    {
+      "affected_module_count": 1,
+      "affected_modules": [
+        "apps/templates/web-chat-next/components/ai-elements/conversation.tsx"
+      ],
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "use-stick-to-bottom",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.1.4"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/mcp",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/otel",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/provider",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/provider-utils",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@ai-sdk/react",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.0.193"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@changesets/cli",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.31.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@chat-adapter/twilio",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.31.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@opentelemetry/core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.6.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@opentelemetry/sdk-trace-base",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.6.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@orama/tokenizers",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.1.18"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@shikijs/core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.1.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@shikijs/engine-javascript",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.1.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@shikijs/engine-oniguruma",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.1.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@standard-schema/spec",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.1.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@sveltejs/adapter-vercel",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^6.3.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@tailwindcss/postcss",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.3.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/json-schema",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "7.0.15"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/mdx",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.0.13"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/node",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/pngjs",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^6.0.5"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/react",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/react-dom",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@types/react-test-renderer",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "19.1.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/agent-readability",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.4.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/detect-agent",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.2.3"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/oidc",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.5.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@vercel/otel",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.1.2"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@webgpu/types",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^0.1.69"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.35"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/errors",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.11"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/serde",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.2"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "@workflow/world-vercel",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0-beta.31"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "chat",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.31.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "chokidar",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "full",
+      "effort": "trivial",
+      "equivalent": "clap",
+      "guidance": "Best match: `clap` (similarity 65%). Command line argument parser with derive macro support",
+      "is_high_impact": false,
+      "package": "commander",
+      "version": "14.0.3"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "dexie",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.4.2"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "dexie-react-hooks",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.4.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "env-runner",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.1.12"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "eslint",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "10.4.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "eslint-config-next",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "16.3.0-preview.6"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "eventsource-parser",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.0.8"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "experimental-ai-sdk-code-mode",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.0.16"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "fumadocs-core",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "16.9.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "fumadocs-mdx",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "14.0.4"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "fumadocs-ui",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "16.9.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "gray-matter",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.0.3"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "jotai",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.20.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "jsonc-parser",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.3.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "konsistent",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.0.0-beta.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "lil-gui",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.21.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "mermaid",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "11.15.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "motion",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "12.40.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "next-themes",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.4.6"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "nuxt",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^4.0.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "oxfmt",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "0.58.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "oxlint",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.73.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "postcss",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "8.5.15"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "react-player",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.4.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "semver",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "7.8.4"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "simple-git-hooks",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.13.1"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "svelte",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^5.0.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "syncpack",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "15.3.2"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "tailwindcss",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "4.3.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "tsx",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "^4.21.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "turbo",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "2.9.18"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "turndown",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "7.2.4"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "tw-animate-css",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.4.0"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "typescript",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "catalog:"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "vaul",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "1.1.2"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "vercel",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "54.14.2"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "vue-tsc",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "3.3.6"
+    },
+    {
+      "affected_module_count": 0,
+      "compatibility": "unknown",
+      "effort": "unknown",
+      "is_high_impact": false,
+      "note": "No compatibility mapping available.",
+      "package": "zod-validation-error",
+      "risk_tags": [
+        "unmapped"
+      ],
+      "version": "5.0.0"
+    }
+  ],
+  "heavy_count": 0,
+  "source_language": "typescript",
+  "target_language": "rust",
+  "unmapped_count": 136
+}

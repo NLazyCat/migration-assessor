@@ -1,0 +1,37 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "createEveCronHandlerRoute",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveCronHandlerRoute() -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        56
+      ],
+      "name": "applyEveCronHandlerRoute",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function applyEveCronHandlerRoute(nitro: Nitro) -> void"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/cron-handler-route.ts"
+}

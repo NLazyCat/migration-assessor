@@ -1,0 +1,78 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        82,
+        135
+      ],
+      "name": "parseBlockActionsPayload",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown> | SlackBlockActionsPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParsedBlockActionsPayload | null",
+      "signature": "export function parseBlockActionsPayload(body: Record<string, unknown> | SlackBlockActionsPayload) -> ParsedBlockActionsPayload | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        328,
+        330
+      ],
+      "name": "InteractionHandlerDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InteractionHandlerDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        329,
+        329
+      ],
+      "name": "config",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackChannelConfig",
+      "signature": "config: : SlackChannelConfig"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        339,
+        438
+      ],
+      "name": "handleInteractionPost",
+      "params": [
+        {
+          "name": "rawBody",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{\r\n    send: SendFn<SlackChannelState>;\r\n    waitUntil: (task: Promise<unknown>) => void;\r\n  }"
+        },
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "InteractionHandlerDeps"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function handleInteractionPost(rawBody: string, ctx: {\r\n    send: SendFn<SlackChannelState>;\r\n    waitUntil: (task: Promise<unknown>) => void;\r\n  }, deps: InteractionHandlerDeps) -> Promise<Response>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/interactions.ts"
+}

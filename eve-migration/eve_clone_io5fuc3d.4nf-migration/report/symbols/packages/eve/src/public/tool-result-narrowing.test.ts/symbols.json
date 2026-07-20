@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/public/tool-result-narrowing.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/tool-result-narrowing.test.ts:toolResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        30
+      ],
+      "name": "toolResult",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "output",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "isError",
+          "optional": true,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionResult",
+      "signature": "export function toolResult(toolName: string, output: unknown, isError: boolean) -> RuntimeActionResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/tool-result-narrowing.test.ts:subagentResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "subagentResult",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionResult",
+      "signature": "export function subagentResult() -> RuntimeActionResult",
+      "visibility": "Private"
+    }
+  ]
+}

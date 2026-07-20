@@ -1,0 +1,101 @@
+{
+  "module": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts:require",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "require",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts:NextEveProxyDescriptorOptions:installDependencies",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "installDependencies",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts:NextEveProxyDescriptorOptions:vercelVersion",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "vercelVersion",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts:NextEveProxyDescriptorOptions",
+      "kind": "interface",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "NextEveProxyDescriptorOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts:createNextEveProxyDescriptor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        58
+      ],
+      "name": "createNextEveProxyDescriptor",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "NextEveProxyDescriptorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ScenarioAppDescriptor",
+      "signature": "export function createNextEveProxyDescriptor(options: NextEveProxyDescriptorOptions) -> ScenarioAppDescriptor",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/scenario-apps/next-eve-proxy.ts:resolveInstalledPackageVersion",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        73
+      ],
+      "name": "resolveInstalledPackageVersion",
+      "params": [
+        {
+          "name": "packageName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveInstalledPackageVersion(packageName: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

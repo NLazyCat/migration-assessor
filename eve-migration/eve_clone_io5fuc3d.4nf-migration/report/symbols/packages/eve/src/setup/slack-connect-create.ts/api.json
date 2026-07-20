@@ -1,0 +1,100 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        22
+      ],
+      "name": "SlackConnectorCreateDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackConnectorCreateDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "captureVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof captureVercel",
+      "signature": "captureVercel: : typeof captureVercel"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "runVercelCaptureStdout",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof runVercelCaptureStdout",
+      "signature": "runVercelCaptureStdout: : typeof runVercelCaptureStdout"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "delay",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (ms: number, signal?: AbortSignal) => Promise<void>",
+      "signature": "delay?: : (ms: number, signal?: AbortSignal) => Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "now",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => number",
+      "signature": "now?: : () => number"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        33
+      ],
+      "name": "SlackConnectorCreateResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorCreateResult = | { state: \"created\"; via: \"cli\"; ref: SlackConnectorRef }\r\n  | {\r\n      state: \"created\";\r\n      via: \"workspace\";\r\n      ref: SlackConnectorRef;\r\n      workspace: SlackWorkspaceConnection;\r\n    }\r\n  | { state: \"failed\" }\r\n  | { state: \"unresolved\" };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        85,
+        227
+      ],
+      "name": "createSlackConnector",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  deps: SlackConnectorCreateDeps;\r\n  projectRoot: string;\r\n  orgId: string | undefined;\r\n  slug: string;\r\n  onOutput: ProcessOutputHandler;\r\n  signal: AbortSignal | undefined;\r\n  phase: Phase;\r\n  onCreated: (ref: SlackConnectorRef) => void;\r\n  waitForWorkspace: (\r\n    ref: SlackConnectorRef,\r\n    signal: AbortSignal,\r\n  ) => Promise<SlackWorkspaceConnection | undefined>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorCreateResult>",
+      "signature": "export function createSlackConnector(input: {\r\n  deps: SlackConnectorCreateDeps;\r\n  projectRoot: string;\r\n  orgId: string | undefined;\r\n  slug: string;\r\n  onOutput: ProcessOutputHandler;\r\n  signal: AbortSignal | undefined;\r\n  phase: Phase;\r\n  onCreated: (ref: SlackConnectorRef) => void;\r\n  waitForWorkspace: (\r\n    ref: SlackConnectorRef,\r\n    signal: AbortSignal,\r\n  ) => Promise<SlackWorkspaceConnection | undefined>;\r\n}) -> Promise<SlackConnectorCreateResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/slack-connect-create.ts"
+}

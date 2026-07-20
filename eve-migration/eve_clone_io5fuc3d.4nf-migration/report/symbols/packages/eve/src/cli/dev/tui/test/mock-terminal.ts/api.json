@@ -1,0 +1,449 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        8,
+        73
+      ],
+      "name": "MockUserInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class MockUserInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        14,
+        17
+      ],
+      "name": "setRawMode",
+      "params": [
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockUserInput::setRawMode(mode: boolean) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        19,
+        22
+      ],
+      "name": "resume",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::resume() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        24,
+        27
+      ],
+      "name": "pause",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::pause() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        29,
+        31
+      ],
+      "name": "type",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockUserInput::type(text: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        34,
+        36
+      ],
+      "name": "send",
+      "params": [
+        {
+          "name": "sequence",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockUserInput::send(sequence: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        38,
+        40
+      ],
+      "name": "enter",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::enter() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        42,
+        44
+      ],
+      "name": "backspace",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::backspace() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        46,
+        48
+      ],
+      "name": "up",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::up() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        50,
+        52
+      ],
+      "name": "down",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::down() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        54,
+        56
+      ],
+      "name": "left",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::left() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        58,
+        60
+      ],
+      "name": "right",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::right() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        62,
+        64
+      ],
+      "name": "ctrlC",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::ctrlC() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        66,
+        68
+      ],
+      "name": "ctrlN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::ctrlN() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        70,
+        72
+      ],
+      "name": "ctrlP",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockUserInput::ctrlP() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        75,
+        316
+      ],
+      "name": "MockScreen",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ columns: number; rows: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class MockScreen { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        90,
+        94
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ columns: number; rows: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::constructor(_: { columns: number; rows: number }) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        96,
+        112
+      ],
+      "name": "write",
+      "params": [
+        {
+          "name": "chunk",
+          "optional": false,
+          "type": "string | Uint8Array"
+        },
+        {
+          "name": "encodingOrCallback",
+          "optional": true,
+          "type": "BufferEncoding | ((error?: Error | null) => void)"
+        },
+        {
+          "name": "callback",
+          "optional": true,
+          "type": "(error?: Error | null) => void"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::write(chunk: string | Uint8Array, encodingOrCallback: BufferEncoding | ((error?: Error | null) => void), callback: (error?: Error | null) => void) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        114,
+        118
+      ],
+      "name": "resize",
+      "params": [
+        {
+          "name": "columns",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "rows",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::resize(columns: number, rows: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        120,
+        122
+      ],
+      "name": "snapshot",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockScreen::snapshot() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        124,
+        126
+      ],
+      "name": "rawOutput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockScreen::rawOutput() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        128,
+        147
+      ],
+      "name": "waitForText",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "getDebugOutput",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::waitForText(text: string, timeoutMs: unknown, getDebugOutput: unknown) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        149,
+        161
+      ],
+      "name": "#resolveWaiters",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "MockScreen::#resolveWaiters() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        163,
+        196
+      ],
+      "name": "#apply",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::#apply(input: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        206,
+        264
+      ],
+      "name": "#applyEscape",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "startIndex",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::#applyEscape(input: string, startIndex: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        266,
+        287
+      ],
+      "name": "#eraseInDisplay",
+      "params": [
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::#eraseInDisplay(mode: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        289,
+        305
+      ],
+      "name": "#eraseInLine",
+      "params": [
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::#eraseInLine(mode: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        307,
+        315
+      ],
+      "name": "#writeCharacter",
+      "params": [
+        {
+          "name": "character",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "MockScreen::#writeCharacter(character: string) -> void"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/test/mock-terminal.ts"
+}

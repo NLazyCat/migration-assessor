@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        61
+      ],
+      "name": "copyDevelopmentSourceSnapshot",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "DevelopmentSourceSnapshotPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyDevelopmentSourceSnapshot(plan: DevelopmentSourceSnapshotPlan) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/dev-runtime-source-snapshot-copy.ts"
+}

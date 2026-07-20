@@ -1,0 +1,214 @@
+{
+  "module": "packages/eve/src/compiler/normalize-agent-config.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:Mutable",
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "Mutable",
+      "partial_analysis": false,
+      "value": "{ -readonly [K in keyof T]: T[K] };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:compileAgentConfig",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        161
+      ],
+      "name": "compileAgentConfig",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "ManifestCompileContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledAgentDefinition>",
+      "signature": "export function compileAgentConfig(manifest: AgentSourceManifest, context: ManifestCompileContext) -> Promise<CompiledAgentDefinition>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:normalizeExperimentalDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        179
+      ],
+      "name": "normalizeExperimentalDefinition",
+      "params": [
+        {
+          "name": "experimental",
+          "optional": false,
+          "type": "CompiledAgentDefinition[\"experimental\"] | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentDefinition[\"experimental\"] | undefined",
+      "signature": "export function normalizeExperimentalDefinition(experimental: CompiledAgentDefinition[\"experimental\"] | undefined) -> CompiledAgentDefinition[\"experimental\"] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:normalizeAuthoredModelReference",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        181,
+        262
+      ],
+      "name": "normalizeAuthoredModelReference",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly modelCatalog: ManifestCompileContext[\"modelCatalog\"];\r\n  readonly purpose: string;\r\n  readonly contextWindowTokens?: number;\r\n  readonly providerOptions?: Record<string, JsonObject>;\r\n  readonly source?: ModuleSourceRef;\r\n  readonly sourcePath?: string;\r\n  readonly value: PublicAgentStaticModelDefinition;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledRuntimeModelReference>",
+      "signature": "export function normalizeAuthoredModelReference(input: {\r\n  readonly modelCatalog: ManifestCompileContext[\"modelCatalog\"];\r\n  readonly purpose: string;\r\n  readonly contextWindowTokens?: number;\r\n  readonly providerOptions?: Record<string, JsonObject>;\r\n  readonly source?: ModuleSourceRef;\r\n  readonly sourcePath?: string;\r\n  readonly value: PublicAgentStaticModelDefinition;\r\n}) -> Promise<CompiledRuntimeModelReference>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:formatAgentConfigModulePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        264,
+        270
+      ],
+      "name": "formatAgentConfigModulePath",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        },
+        {
+          "name": "configModule",
+          "optional": false,
+          "type": "ModuleSourceRef"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatAgentConfigModulePath(manifest: AgentSourceManifest, configModule: ModuleSourceRef) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:resolveTopLevelAgentRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        272,
+        282
+      ],
+      "name": "resolveTopLevelAgentRoot",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "AgentSourceManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveTopLevelAgentRoot(manifest: AgentSourceManifest) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:isPathInsideOrEqual",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        284,
+        288
+      ],
+      "name": "isPathInsideOrEqual",
+      "params": [
+        {
+          "name": "parentPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "childPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathInsideOrEqual(parentPath: string, childPath: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:withCompiledRuntimeModelLimits",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        290,
+        326
+      ],
+      "name": "withCompiledRuntimeModelLimits",
+      "params": [
+        {
+          "name": "model",
+          "optional": false,
+          "type": "CompiledRuntimeModelReference"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly modelCatalog: ManifestCompileContext[\"modelCatalog\"];\r\n    readonly purpose: string;\r\n    readonly contextWindowTokens?: number;\r\n    readonly source?: ModuleSourceRef;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledRuntimeModelReference>",
+      "signature": "export function withCompiledRuntimeModelLimits(model: CompiledRuntimeModelReference, input: {\r\n    readonly modelCatalog: ManifestCompileContext[\"modelCatalog\"];\r\n    readonly purpose: string;\r\n    readonly contextWindowTokens?: number;\r\n    readonly source?: ModuleSourceRef;\r\n  }) -> Promise<CompiledRuntimeModelReference>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-agent-config.ts:parseProviderOptionsRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        328,
+        342
+      ],
+      "name": "parseProviderOptionsRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "Record<string, JsonObject> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, JsonObject> | undefined",
+      "signature": "export function parseProviderOptionsRecord(value: Record<string, JsonObject> | undefined) -> Record<string, JsonObject> | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

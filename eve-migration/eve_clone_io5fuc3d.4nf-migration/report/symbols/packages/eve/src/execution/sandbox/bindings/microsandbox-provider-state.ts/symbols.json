@@ -1,0 +1,152 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts:isMicrosandboxNotFoundError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        12
+      ],
+      "name": "isMicrosandboxNotFoundError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isMicrosandboxNotFoundError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts:isMicrosandboxStillRunningError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        19
+      ],
+      "name": "isMicrosandboxStillRunningError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isMicrosandboxStillRunningError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts:isMicrosandboxSnapshotSourceRunningError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        26
+      ],
+      "name": "isMicrosandboxSnapshotSourceRunningError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isMicrosandboxSnapshotSourceRunningError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts:snapshotExists",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        28,
+        38
+      ],
+      "name": "snapshotExists",
+      "params": [
+        {
+          "name": "module",
+          "optional": false,
+          "type": "MicrosandboxModule"
+        },
+        {
+          "name": "snapshotName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function snapshotExists(module: MicrosandboxModule, snapshotName: string) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts:sandboxExists",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        40,
+        53
+      ],
+      "name": "sandboxExists",
+      "params": [
+        {
+          "name": "module",
+          "optional": false,
+          "type": "MicrosandboxModule"
+        },
+        {
+          "name": "sandboxName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function sandboxExists(module: MicrosandboxModule, sandboxName: string) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-provider-state.ts:removeSnapshotIfExists",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        55,
+        66
+      ],
+      "name": "removeSnapshotIfExists",
+      "params": [
+        {
+          "name": "module",
+          "optional": false,
+          "type": "MicrosandboxModule"
+        },
+        {
+          "name": "snapshotName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function removeSnapshotIfExists(module: MicrosandboxModule, snapshotName: string) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

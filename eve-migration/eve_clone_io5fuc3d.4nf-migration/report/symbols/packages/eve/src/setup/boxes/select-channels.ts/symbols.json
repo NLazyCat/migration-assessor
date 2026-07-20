@@ -1,0 +1,144 @@
+{
+  "module": "packages/eve/src/setup/boxes/select-channels.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.ts:SLACK_REQUIRES_VERCEL",
+      "kind": "variable",
+      "line_range": [
+        8,
+        9
+      ],
+      "name": "SLACK_REQUIRES_VERCEL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.ts:CHANNELS_PROMPT_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "CHANNELS_PROMPT_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.ts:TUI_PICKER_VALUE",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "TUI_PICKER_VALUE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.ts:ChannelPickerValue",
+      "kind": "type_alias",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "ChannelPickerValue",
+      "partial_analysis": false,
+      "value": "ChannelKind | typeof TUI_PICKER_VALUE;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-channels.ts:SelectChannelsOptions:asker",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "asker",
+          "partial_analysis": false,
+          "return_type": ": Asker",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-channels.ts:SelectChannelsOptions:presetChannels",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "presetChannels",
+          "partial_analysis": false,
+          "return_type": ": ChannelKind[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-channels.ts:SelectChannelsOptions:variant",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "variant",
+          "partial_analysis": false,
+          "return_type": ": \"onboarding\" | \"in-project\" | \"channels-add\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-channels.ts:SelectChannelsOptions:disabledChannelReasons",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "disabledChannelReasons",
+          "partial_analysis": false,
+          "return_type": ": DisabledChannelReasons",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/select-channels.ts:SelectChannelsOptions",
+      "kind": "interface",
+      "line_range": [
+        24,
+        53
+      ],
+      "name": "SelectChannelsOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.ts:selectChannels",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        163
+      ],
+      "name": "selectChannels",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SelectChannelsOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ChannelKind[], ChannelKind[]>",
+      "signature": "export function selectChannels(options: SelectChannelsOptions) -> SetupBox<SetupState, ChannelKind[], ChannelKind[]>",
+      "visibility": "Public"
+    }
+  ]
+}

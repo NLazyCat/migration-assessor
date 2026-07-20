@@ -1,0 +1,59 @@
+{
+  "module": "packages/eve/src/compiler/normalize-channel.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-channel.ts:compileChannelDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        24,
+        63
+      ],
+      "name": "compileChannelDefinition",
+      "params": [
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ChannelSourceRef"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ModuleBackedDefinitionLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledChannelEntry | readonly CompiledChannelEntry[]>",
+      "signature": "export function compileChannelDefinition(agentRoot: string, source: ChannelSourceRef, options: ModuleBackedDefinitionLoadOptions) -> Promise<CompiledChannelEntry | readonly CompiledChannelEntry[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-channel.ts:extractAdapterKind",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        71
+      ],
+      "name": "extractAdapterKind",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractAdapterKind(adapter: unknown) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

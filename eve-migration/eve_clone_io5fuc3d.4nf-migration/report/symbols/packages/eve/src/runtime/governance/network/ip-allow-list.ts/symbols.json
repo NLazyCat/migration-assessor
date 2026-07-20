@@ -1,0 +1,137 @@
+{
+  "module": "packages/eve/src/runtime/governance/network/ip-allow-list.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:RuntimeIpAllowList:blockList",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "blockList",
+          "partial_analysis": false,
+          "return_type": ": BlockList",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:RuntimeIpAllowList:entries",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "entries",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:RuntimeIpAllowList",
+      "kind": "interface",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "RuntimeIpAllowList",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:createRuntimeIpAllowList",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        54
+      ],
+      "name": "createRuntimeIpAllowList",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeIpAllowList",
+      "signature": "export function createRuntimeIpAllowList(entries: readonly string[]) -> RuntimeIpAllowList",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:isRuntimeIpAllowed",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        65
+      ],
+      "name": "isRuntimeIpAllowed",
+      "params": [
+        {
+          "name": "address",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "allowList",
+          "optional": false,
+          "type": "RuntimeIpAllowList"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRuntimeIpAllowed(address: string, allowList: RuntimeIpAllowList) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:normalizeIpAddress",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        81
+      ],
+      "name": "normalizeIpAddress",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeIpAddress(value: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/network/ip-allow-list.ts:getIpFamily",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        92
+      ],
+      "name": "getIpFamily",
+      "params": [
+        {
+          "name": "address",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"ipv4\" | \"ipv6\"",
+      "signature": "export function getIpFamily(address: string) -> \"ipv4\" | \"ipv6\"",
+      "visibility": "Private"
+    }
+  ]
+}

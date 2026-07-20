@@ -1,0 +1,174 @@
+{
+  "DOCKER_SANDBOX_LABEL": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 45
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:DOCKER_SANDBOX_LABEL"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 46
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:DOCKER_SANDBOX_LABEL"
+    }
+  ],
+  "DockerUnavailableError": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 56
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-cli.ts:DockerUnavailableError"
+    }
+  ],
+  "EVE_DEVELOPMENT_SANDBOX_METADATA_PATH_TAG": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 94
+      },
+      "symbol": "packages/eve/src/execution/sandbox/development-run.ts:EVE_DEVELOPMENT_SANDBOX_METADATA_PATH_TAG"
+    }
+  ],
+  "EVE_DEVELOPMENT_SANDBOX_RUN_ID_TAG": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 41,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 46
+      },
+      "symbol": "packages/eve/src/execution/sandbox/development-run.ts:EVE_DEVELOPMENT_SANDBOX_RUN_ID_TAG"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 7,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 84
+      },
+      "symbol": "packages/eve/src/execution/sandbox/development-run.ts:EVE_DEVELOPMENT_SANDBOX_RUN_ID_TAG"
+    }
+  ],
+  "MICROSANDBOX_METADATA_VERSION": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 121
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:MICROSANDBOX_METADATA_VERSION"
+    }
+  ],
+  "createDockerCli": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 43
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-cli.ts:createDockerCli"
+    }
+  ],
+  "createProviderName": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 111
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-runtime.ts:createProviderName"
+    }
+  ],
+  "loadMicrosandboxWithoutInstall": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 76
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-runtime.ts:loadMicrosandboxWithoutInstall"
+    }
+  ],
+  "readSessionMetadata": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 102
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:readSessionMetadata"
+    }
+  ],
+  "removeSnapshotIfExists": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 124
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-runtime.ts:removeSnapshotIfExists"
+    }
+  ],
+  "stopAndSnapshotMicrosandboxSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 115
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-runtime.ts:stopAndSnapshotMicrosandboxSandbox"
+    }
+  ],
+  "stopDockerContainerIfRunning": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 38,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 67
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:stopDockerContainerIfRunning"
+    }
+  ],
+  "toErrorMessage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 67,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/shared/errors.ts:toErrorMessage"
+    }
+  ],
+  "writeSessionMetadata": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/execution/sandbox/development-cleanup.ts",
+        "line": 116
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/microsandbox-metadata.ts:writeSessionMetadata"
+    }
+  ]
+}

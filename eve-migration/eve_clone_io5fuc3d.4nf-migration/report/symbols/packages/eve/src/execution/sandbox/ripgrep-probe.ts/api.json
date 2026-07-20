@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        36
+      ],
+      "name": "ripgrepIsAvailable",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "SandboxSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function ripgrepIsAvailable(session: SandboxSession) -> Promise<boolean>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/ripgrep-probe.ts"
+}

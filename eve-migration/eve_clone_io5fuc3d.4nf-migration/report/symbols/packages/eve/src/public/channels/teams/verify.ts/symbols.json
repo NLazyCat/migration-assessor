@@ -1,0 +1,378 @@
+{
+  "module": "packages/eve/src/public/channels/teams/verify.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:log",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:DEFAULT_BOT_CONNECTOR_OPENID_METADATA_URL",
+      "kind": "variable",
+      "line_range": [
+        18,
+        19
+      ],
+      "name": "DEFAULT_BOT_CONNECTOR_OPENID_METADATA_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:BOT_CONNECTOR_ISSUER",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "BOT_CONNECTOR_ISSUER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsWebhookVerifier",
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "TeamsWebhookVerifier",
+      "partial_analysis": false,
+      "value": "(request: Request, body: string) => unknown | Promise<unknown>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions:appId",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "appId",
+          "partial_analysis": false,
+          "return_type": ": TeamsAppId",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions:fetch",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "fetch",
+          "partial_analysis": false,
+          "return_type": ": TeamsFetch",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions:jwksUrl",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "jwksUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions:maxSkewSeconds",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "maxSkewSeconds",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions:openIdMetadataUrl",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "openIdMetadataUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions:webhookVerifier",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "webhookVerifier",
+          "partial_analysis": false,
+          "return_type": ": TeamsWebhookVerifier",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsVerifyOptions",
+      "kind": "interface",
+      "line_range": [
+        34,
+        42
+      ],
+      "name": "TeamsVerifyOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsJwtVerifyOptions:appId",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "appId",
+          "partial_analysis": false,
+          "return_type": ": TeamsAppId",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsJwtVerifyOptions:fetch",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "fetch",
+          "partial_analysis": false,
+          "return_type": ": TeamsFetch",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsJwtVerifyOptions:jwksUrl",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "jwksUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsJwtVerifyOptions:maxSkewSeconds",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "maxSkewSeconds",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsJwtVerifyOptions:openIdMetadataUrl",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "openIdMetadataUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:TeamsJwtVerifyOptions",
+      "kind": "interface",
+      "line_range": [
+        45,
+        52
+      ],
+      "name": "TeamsJwtVerifyOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:verifyTeamsRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        63,
+        85
+      ],
+      "name": "verifyTeamsRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "TeamsVerifyOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function verifyTeamsRequest(request: Request, options: TeamsVerifyOptions) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:verifyTeamsJwt",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        110
+      ],
+      "name": "verifyTeamsJwt",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "TeamsJwtVerifyOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<JWTPayload>",
+      "signature": "export function verifyTeamsJwt(token: string, options: TeamsJwtVerifyOptions) -> Promise<JWTPayload>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:readBearerToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        116
+      ],
+      "name": "readBearerToken",
+      "params": [
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function readBearerToken(authorization: string) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:loadJwks",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        118,
+        132
+      ],
+      "name": "loadJwks",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "TeamsJwtVerifyOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly Record<string, unknown>[]>",
+      "signature": "export function loadJwks(options: TeamsJwtVerifyOptions) -> Promise<readonly Record<string, unknown>[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:loadJwksUrl",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        134,
+        145
+      ],
+      "name": "loadJwksUrl",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "TeamsJwtVerifyOptions"
+        },
+        {
+          "name": "apiFetch",
+          "optional": false,
+          "type": "TeamsFetch"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function loadJwksUrl(options: TeamsJwtVerifyOptions, apiFetch: TeamsFetch) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/verify.ts:selectJwk",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        147,
+        163
+      ],
+      "name": "selectJwk",
+      "params": [
+        {
+          "name": "keys",
+          "optional": false,
+          "type": "readonly Record<string, unknown>[]"
+        },
+        {
+          "name": "header",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function selectJwk(keys: readonly Record<string, unknown>[], header: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        83
+      ],
+      "name": "McpClientConnectionDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface McpClientConnectionDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionAuthDefinition",
+      "signature": "auth?: : ConnectionAuthDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "approval",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Approval",
+      "signature": "approval?: : Approval"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "headers",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HeadersDefinition",
+      "signature": "headers?: : HeadersDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ToolFilterDefinition",
+      "signature": "tools?: : ToolFilterDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        102
+      ],
+      "name": "defineMcpClientConnection",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "McpClientConnectionDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "McpClientConnectionDefinition",
+      "signature": "export function defineMcpClientConnection(definition: McpClientConnectionDefinition) -> McpClientConnectionDefinition"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/connections/mcp.ts"
+}

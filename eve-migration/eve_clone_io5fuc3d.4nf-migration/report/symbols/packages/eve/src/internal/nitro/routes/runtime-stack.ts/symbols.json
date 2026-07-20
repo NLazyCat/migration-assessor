@@ -1,0 +1,66 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/runtime-stack.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/runtime-stack.ts:NitroChannelRuntimeBundle:channels",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "channels",
+          "partial_analysis": false,
+          "return_type": ": readonly ResolvedChannelDefinition[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/runtime-stack.ts:NitroChannelRuntimeBundle:runtime",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "runtime",
+          "partial_analysis": false,
+          "return_type": ": Runtime",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/routes/runtime-stack.ts:NitroChannelRuntimeBundle",
+      "kind": "interface",
+      "line_range": [
+        19,
+        22
+      ],
+      "name": "NitroChannelRuntimeBundle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/runtime-stack.ts:resolveNitroChannelRuntimeBundle",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        33,
+        45
+      ],
+      "name": "resolveNitroChannelRuntimeBundle",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<NitroChannelRuntimeBundle>",
+      "signature": "export function resolveNitroChannelRuntimeBundle(config: NitroArtifactsConfig) -> Promise<NitroChannelRuntimeBundle>",
+      "visibility": "Public"
+    }
+  ]
+}

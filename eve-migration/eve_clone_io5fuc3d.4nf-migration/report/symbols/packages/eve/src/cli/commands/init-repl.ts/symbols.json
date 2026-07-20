@@ -1,0 +1,426 @@
+{
+  "module": "packages/eve/src/cli/commands/init-repl.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:positional",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "positional",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:CODING_AGENT_REPLS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        23
+      ],
+      "name": "CODING_AGENT_REPLS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:WINDOWS_EXECUTABLE_EXTENSIONS",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "WINDOWS_EXECUTABLE_EXTENSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:CodingAgentReplDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "CodingAgentReplDefinition",
+      "partial_analysis": false,
+      "value": "(typeof CODING_AGENT_REPLS)[number];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:CodingAgentRepl",
+      "kind": "type_alias",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "CodingAgentRepl",
+      "partial_analysis": false,
+      "value": "CodingAgentReplDefinition[\"command\"];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:InitHandoff",
+      "kind": "type_alias",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "InitHandoff",
+      "partial_analysis": false,
+      "value": "\"eve-dev\" | CodingAgentRepl;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:InitReplDependencies",
+      "kind": "interface",
+      "line_range": [
+        38,
+        42
+      ],
+      "name": "InitReplDependencies",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:defaultDependencies",
+      "kind": "variable",
+      "line_range": [
+        44,
+        48
+      ],
+      "name": "defaultDependencies",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:executableNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        57
+      ],
+      "name": "executableNames",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function executableNames(command: string) -> readonly string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:isExecutable",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        59,
+        67
+      ],
+      "name": "isExecutable",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isExecutable(filePath: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:resolveCodingAgentRepl",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        70,
+        82
+      ],
+      "name": "resolveCodingAgentRepl",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "CodingAgentRepl"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function resolveCodingAgentRepl(command: CodingAgentRepl) -> Promise<string | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:isCodingAgentReplAvailable",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        85,
+        87
+      ],
+      "name": "isCodingAgentReplAvailable",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "CodingAgentRepl"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isCodingAgentReplAvailable(command: CodingAgentRepl) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:handoffOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        91,
+        107
+      ],
+      "name": "handoffOptions",
+      "params": [
+        {
+          "name": "availableRepls",
+          "optional": false,
+          "type": "readonly CodingAgentReplDefinition[]"
+        },
+        {
+          "name": "agentName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOption<InitHandoff>[]",
+      "signature": "export function handoffOptions(availableRepls: readonly CodingAgentReplDefinition[], agentName: string) -> SelectOption<InitHandoff>[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:selectInitHandoff",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        114,
+        132
+      ],
+      "name": "selectInitHandoff",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  agentName: string;\r\n  deps?: Partial<InitReplDependencies>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<InitHandoff>",
+      "signature": "export function selectInitHandoff(input: {\r\n  agentName: string;\r\n  deps?: Partial<InitReplDependencies>;\r\n}) -> Promise<InitHandoff>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:codingAgentRepl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        134,
+        140
+      ],
+      "name": "codingAgentRepl",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "CodingAgentRepl"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CodingAgentReplDefinition",
+      "signature": "export function codingAgentRepl(command: CodingAgentRepl) -> CodingAgentReplDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:isDirectlySpawnable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        144,
+        148
+      ],
+      "name": "isDirectlySpawnable",
+      "params": [
+        {
+          "name": "resolvedPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "platform",
+          "optional": false,
+          "type": "NodeJS.Platform"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isDirectlySpawnable(resolvedPath: string, platform: NodeJS.Platform) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/init-repl.ts:ReplSpawnPlan:file",
+          "kind": "property",
+          "line_range": [
+            151,
+            151
+          ],
+          "name": "file",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/init-repl.ts:ReplSpawnPlan:args",
+          "kind": "property",
+          "line_range": [
+            152,
+            152
+          ],
+          "name": "args",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/init-repl.ts:ReplSpawnPlan:shell",
+          "kind": "property",
+          "line_range": [
+            153,
+            153
+          ],
+          "name": "shell",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/init-repl.ts:ReplSpawnPlan:seeded",
+          "kind": "property",
+          "line_range": [
+            155,
+            155
+          ],
+          "name": "seeded",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:ReplSpawnPlan",
+      "kind": "interface",
+      "line_range": [
+        150,
+        156
+      ],
+      "name": "ReplSpawnPlan",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:replSpawnPlan",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        166,
+        181
+      ],
+      "name": "replSpawnPlan",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "CodingAgentRepl"
+        },
+        {
+          "name": "resolvedPath",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "platform",
+          "optional": false,
+          "type": "NodeJS.Platform"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReplSpawnPlan",
+      "signature": "export function replSpawnPlan(command: CodingAgentRepl, resolvedPath: string | null, prompt: string, platform: NodeJS.Platform) -> ReplSpawnPlan",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init-repl.ts:spawnCodingAgentRepl",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        184,
+        213
+      ],
+      "name": "spawnCodingAgentRepl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  command: CodingAgentRepl;\r\n  cwd: string;\r\n  prompt: string;\r\n  /** Surfaces the prompt when it could not be seeded into the REPL's argv. */\r\n  onPromptUnseeded?: (prompt: string) => void;\r\n  resolvePath?: (command: CodingAgentRepl) => Promise<string | null>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function spawnCodingAgentRepl(input: {\r\n  command: CodingAgentRepl;\r\n  cwd: string;\r\n  prompt: string;\r\n  /** Surfaces the prompt when it could not be seeded into the REPL's argv. */\r\n  onPromptUnseeded?: (prompt: string) => void;\r\n  resolvePath?: (command: CodingAgentRepl) => Promise<string | null>;\r\n}) -> Promise<boolean>",
+      "visibility": "Public"
+    }
+  ]
+}

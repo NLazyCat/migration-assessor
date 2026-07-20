@@ -1,0 +1,139 @@
+{
+  "HarnessEmissionState": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/harness/emission.ts:HarnessEmissionState"
+    }
+  ],
+  "HarnessSession": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 107
+      },
+      "symbol": "packages/eve/src/harness/types.ts:HarnessSession"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 191
+      },
+      "symbol": "packages/eve/src/harness/types.ts:HarnessSession"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 84
+      },
+      "symbol": "packages/eve/src/harness/types.ts:HarnessSession"
+    }
+  ],
+  "JsonObject": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 85
+      },
+      "symbol": "packages/eve/src/shared/json.ts:JsonObject"
+    }
+  ],
+  "SandboxState": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 87
+      },
+      "symbol": "packages/eve/src/sandbox/state.ts:SandboxState"
+    }
+  ],
+  "SessionStateMap": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 86
+      },
+      "symbol": "packages/eve/src/harness/types.ts:SessionStateMap"
+    }
+  ],
+  "getHarnessEmissionState": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 111
+      },
+      "symbol": "packages/eve/src/harness/emission.ts:getHarnessEmissionState"
+    }
+  ],
+  "getRun": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 138
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:getRun"
+    }
+  ],
+  "hasProxyInputRequests": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 27,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 112
+      },
+      "symbol": "packages/eve/src/harness/proxy-input-requests.ts:hasProxyInputRequests"
+    }
+  ],
+  "migrateDurableSessionSnapshot": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 135
+      },
+      "symbol": "packages/eve/src/execution/durable-session-migrations/snapshot.ts:migrateDurableSessionSnapshot"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 166
+      },
+      "symbol": "packages/eve/src/execution/durable-session-migrations/snapshot.ts:migrateDurableSessionSnapshot"
+    }
+  ],
+  "projectToDurableSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/durable-session-store.ts",
+        "line": 194
+      },
+      "symbol": "packages/eve/src/execution/session.ts:projectToDurableSession"
+    }
+  ]
+}

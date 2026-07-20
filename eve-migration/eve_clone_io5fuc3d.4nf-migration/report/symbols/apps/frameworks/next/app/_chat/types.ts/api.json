@@ -1,0 +1,948 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        16
+      ],
+      "name": "ComposeState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ComposeState = | {\r\n      readonly status: \"idle\";\r\n    }\r\n  | {\r\n      readonly status: \"sending\";\r\n    }\r\n  | {\r\n      readonly status: \"streaming\";\r\n    }\r\n  | {\r\n      readonly message: string;\r\n      readonly status: \"error\";\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        33
+      ],
+      "name": "AgentInfoState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoState = | {\r\n      readonly status: \"idle\";\r\n    }\r\n  | {\r\n      readonly status: \"loading\";\r\n    }\r\n  | {\r\n      readonly message: string;\r\n      readonly status: \"error\";\r\n    }\r\n  | {\r\n      readonly info: AgentInformation;\r\n      readonly status: \"ready\";\r\n      readonly updatedAt: number;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        39
+      ],
+      "name": "ChatSessionCursor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChatSessionCursor { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "streamIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "streamIndex: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        46
+      ],
+      "name": "TranscriptMessageReceivedEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TranscriptMessageReceivedEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        44
+      ],
+      "name": "data",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly message: string;\r\n  }",
+      "signature": "data: : {\r\n    readonly message: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"message.received\"",
+      "signature": "type: : \"message.received\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        48,
+        54
+      ],
+      "name": "TranscriptMessageCompletedEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TranscriptMessageCompletedEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "data",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly finishReason?: string;\r\n    readonly message: string | null;\r\n  }",
+      "signature": "data: : {\r\n    readonly finishReason?: string;\r\n    readonly message: string | null;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"message.completed\"",
+      "signature": "type: : \"message.completed\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        56,
+        61
+      ],
+      "name": "TranscriptSessionFailedEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TranscriptSessionFailedEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        59
+      ],
+      "name": "data",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly message: string;\r\n  }",
+      "signature": "data: : {\r\n    readonly message: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"session.failed\"",
+      "signature": "type: : \"session.failed\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        63,
+        65
+      ],
+      "name": "TranscriptEventMeta",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TranscriptEventMeta { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "at",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "at: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        67,
+        77
+      ],
+      "name": "TranscriptStreamEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TranscriptStreamEvent = (\r\n  | TranscriptMessageCompletedEvent\r\n  | TranscriptMessageReceivedEvent\r\n  | TranscriptSessionFailedEvent\r\n  | {\r\n      readonly data?: unknown;\r\n      readonly type: string;\r\n    }\r\n) & {\r\n  readonly meta?: TranscriptEventMeta;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "TraceStepStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TraceStepStatus = \"aborted\" | \"completed\" | \"failed\" | \"running\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        90,
+        95
+      ],
+      "name": "TraceStepUsage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TraceStepUsage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "cacheReadTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cacheReadTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "cacheWriteTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cacheWriteTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "inputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "inputTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        94,
+        94
+      ],
+      "name": "outputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "outputTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        100,
+        100
+      ],
+      "name": "TraceActionKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TraceActionKind = \"load-skill\" | \"subagent-call\" | \"tool-call\" | \"unknown\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        110,
+        110
+      ],
+      "name": "TraceActionStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TraceActionStatus = \"aborted\" | \"completed\" | \"failed\" | \"requested\" | \"running\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        115,
+        118
+      ],
+      "name": "TraceActionError",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TraceActionError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        116,
+        116
+      ],
+      "name": "code",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "code: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        117,
+        117
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        123,
+        134
+      ],
+      "name": "TraceAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TraceAction { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        124,
+        124
+      ],
+      "name": "callId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "callId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "durationMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "durationMs?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        126,
+        126
+      ],
+      "name": "endTime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "endTime?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        127,
+        127
+      ],
+      "name": "error",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TraceActionError",
+      "signature": "error?: : TraceActionError"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        128,
+        128
+      ],
+      "name": "input",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "input?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        129,
+        129
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TraceActionKind",
+      "signature": "kind: : TraceActionKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        131,
+        131
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "output?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        132,
+        132
+      ],
+      "name": "startTime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "startTime?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        133,
+        133
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TraceActionStatus",
+      "signature": "status: : TraceActionStatus"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        139,
+        154
+      ],
+      "name": "TraceStep",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TraceStep { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        140,
+        140
+      ],
+      "name": "actions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TraceAction[]",
+      "signature": "actions: : readonly TraceAction[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        141,
+        141
+      ],
+      "name": "actionCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "actionCount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        142,
+        142
+      ],
+      "name": "durationMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "durationMs?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        143,
+        143
+      ],
+      "name": "endTime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "endTime?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        144,
+        144
+      ],
+      "name": "errorMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "errorMessage?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        145,
+        145
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TranscriptStreamEvent[]",
+      "signature": "events: : readonly TranscriptStreamEvent[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        146,
+        146
+      ],
+      "name": "finishReason",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "finishReason?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        147,
+        147
+      ],
+      "name": "reasoningText",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reasoningText?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        148,
+        148
+      ],
+      "name": "responseText",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "responseText?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "startTime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "startTime?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TraceStepStatus",
+      "signature": "status: : TraceStepStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        151,
+        151
+      ],
+      "name": "stepIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "stepIndex: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "subagentCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "subagentCount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        153,
+        153
+      ],
+      "name": "usage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TraceStepUsage",
+      "signature": "usage?: : TraceStepUsage"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        159,
+        159
+      ],
+      "name": "TraceTimelineRowStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TraceTimelineRowStatus = \"aborted\" | \"active\" | \"failed\" | \"normal\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "TraceTurnStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TraceTurnStatus = \"completed\" | \"failed\" | \"running\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        166,
+        178
+      ],
+      "name": "TraceTurn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TraceTurn { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "assistantMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "assistantMessage?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "durationMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "durationMs?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        169,
+        169
+      ],
+      "name": "endTime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "endTime?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        170,
+        170
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TranscriptStreamEvent[]",
+      "signature": "events: : readonly TranscriptStreamEvent[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        171,
+        171
+      ],
+      "name": "sequence",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "sequence?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        172,
+        172
+      ],
+      "name": "startTime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "startTime?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "steps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TraceStep[]",
+      "signature": "steps: : readonly TraceStep[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        174,
+        174
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TraceTurnStatus",
+      "signature": "status: : TraceTurnStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        175,
+        175
+      ],
+      "name": "subagentCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "subagentCount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        176,
+        176
+      ],
+      "name": "turnId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "turnId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        177,
+        177
+      ],
+      "name": "userMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "userMessage?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        184,
+        189
+      ],
+      "name": "ThreadState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ThreadState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        185,
+        185
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        186,
+        186
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        187,
+        187
+      ],
+      "name": "streamIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "streamIndex: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        188,
+        188
+      ],
+      "name": "turns",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TraceTurn[]",
+      "signature": "turns: : readonly TraceTurn[]"
+    }
+  ],
+  "module": "apps/frameworks/next/app/_chat/types.ts"
+}

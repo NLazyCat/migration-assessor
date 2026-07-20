@@ -1,3 +1,4 @@
+pub mod javascript;
 pub mod module_map;
 pub mod rust;
 pub mod typescript;
@@ -32,6 +33,7 @@ pub fn resolve_dependencies(
     match source_language {
         SourceLanguage::TypeScript => typescript::resolve(root),
         SourceLanguage::Rust => rust::resolve(root),
+        SourceLanguage::JavaScript => javascript::resolve(root),
     }
 }
 

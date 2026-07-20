@@ -1,0 +1,1343 @@
+{
+  "Logger": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/internal/instrumentation.test.ts",
+        "line": 10
+      },
+      "symbol": "packages/eve/src/internal/instrumentation.test.ts:Logger"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/internal/instrumentation.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/internal/instrumentation.ts:Logger"
+    }
+  ],
+  "createErrorId": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/subagent-adapter.ts",
+        "line": 142
+      },
+      "symbol": "packages/eve/src/execution/subagent-adapter.ts:createErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/subagent-adapter.ts",
+        "line": 169
+      },
+      "symbol": "packages/eve/src/execution/subagent-adapter.ts:createErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 1108
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:createErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 1127
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:createErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 11
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 12
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createErrorId"
+    }
+  ],
+  "createLogger": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/channel/adapter.ts",
+        "line": 10
+      },
+      "symbol": "packages/eve/src/channel/adapter.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/channel/instrumentation.ts",
+        "line": 9
+      },
+      "symbol": "packages/eve/src/channel/instrumentation.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/channel/send.ts",
+        "line": 11
+      },
+      "symbol": "packages/eve/src/channel/send.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/cli/commands/extension-build.ts",
+        "line": 15
+      },
+      "symbol": "packages/eve/src/cli/commands/extension-build.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/cli/commands/extension-init.ts",
+        "line": 62
+      },
+      "symbol": "packages/eve/src/cli/commands/extension-init.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/cli/commands/init.ts",
+        "line": 88
+      },
+      "symbol": "packages/eve/src/cli/commands/init.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/cli/run.ts",
+        "line": 92
+      },
+      "symbol": "packages/eve/src/cli/run.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/context/build-dynamic-tools.ts",
+        "line": 14
+      },
+      "symbol": "packages/eve/src/context/build-dynamic-tools.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/context/dynamic-instruction-lifecycle.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/context/dynamic-instruction-lifecycle.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/context/dynamic-model-lifecycle.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/context/dynamic-model-lifecycle.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/context/dynamic-skill-lifecycle.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/context/dynamic-skill-lifecycle.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/context/dynamic-tool-lifecycle.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/context/dynamic-tool-lifecycle.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/context/serialize.ts",
+        "line": 6
+      },
+      "symbol": "packages/eve/src/context/serialize.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/cancel-descendant-turns-step.ts",
+        "line": 21
+      },
+      "symbol": "packages/eve/src/execution/cancel-descendant-turns-step.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/dispatch-runtime-actions-step.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/execution/dispatch-runtime-actions-step.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/node-step.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/execution/node-step.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/session-callback-step.ts",
+        "line": 9
+      },
+      "symbol": "packages/eve/src/execution/session-callback-step.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/subagent-adapter.ts",
+        "line": 12
+      },
+      "symbol": "packages/eve/src/execution/subagent-adapter.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/subagent-usage-span.ts",
+        "line": 6
+      },
+      "symbol": "packages/eve/src/execution/subagent-usage-span.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/terminal-session-failure-step.ts",
+        "line": 12
+      },
+      "symbol": "packages/eve/src/execution/terminal-session-failure-step.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/workflow-runtime.ts",
+        "line": 74
+      },
+      "symbol": "packages/eve/src/execution/workflow-runtime.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/harness/attachment-staging.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/harness/attachment-staging.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/harness/instrumentation-runtime-context.ts",
+        "line": 27
+      },
+      "symbol": "packages/eve/src/harness/instrumentation-runtime-context.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 201
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/harness/workflow-lifecycle.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/harness/workflow-lifecycle.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 93
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 99
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 107
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 129
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 135
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 166
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 178
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 188
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 198
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 222
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 237
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/public/channels/auth.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/public/channels/auth.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/discord/discordChannel.ts",
+        "line": 53
+      },
+      "symbol": "packages/eve/src/public/channels/discord/discordChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/discord/verify.ts",
+        "line": 13
+      },
+      "symbol": "packages/eve/src/public/channels/discord/verify.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/discord/verifyInbound.ts",
+        "line": 5
+      },
+      "symbol": "packages/eve/src/public/channels/discord/verifyInbound.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/eve.ts",
+        "line": 43
+      },
+      "symbol": "packages/eve/src/public/channels/eve.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 20
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/github/dispatch.ts",
+        "line": 44
+      },
+      "symbol": "packages/eve/src/public/channels/github/dispatch.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/github/githubChannel.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/public/channels/github/githubChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/github/verify.ts",
+        "line": 9
+      },
+      "symbol": "packages/eve/src/public/channels/github/verify.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/linear/linearChannel.ts",
+        "line": 41
+      },
+      "symbol": "packages/eve/src/public/channels/linear/linearChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/linear/verify.ts",
+        "line": 10
+      },
+      "symbol": "packages/eve/src/public/channels/linear/verify.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/slack/api.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/public/channels/slack/api.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/slack/attachments.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/public/channels/slack/attachments.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/slack/defaults.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/public/channels/slack/defaults.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/slack/interactions.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/public/channels/slack/interactions.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/teams/attachments.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/public/channels/teams/attachments.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/teams/teamsChannel.ts",
+        "line": 60
+      },
+      "symbol": "packages/eve/src/public/channels/teams/teamsChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/teams/verify.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/public/channels/teams/verify.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/telegram/attachments.ts",
+        "line": 19
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/attachments.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/telegram/telegramChannel.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/telegramChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/telegram/verify.ts",
+        "line": 14
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/verify.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/twilio/routing.ts",
+        "line": 5
+      },
+      "symbol": "packages/eve/src/public/channels/twilio/routing.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/public/channels/twilio/twilioChannel.ts",
+        "line": 53
+      },
+      "symbol": "packages/eve/src/public/channels/twilio/twilioChannel.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/runtime/connections/openapi-client.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/runtime/connections/openapi-client.ts:createLogger"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:createLogger"
+    }
+  ],
+  "extractErrorId": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts",
+        "line": 526
+      },
+      "symbol": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/discord/defaults.ts",
+        "line": 79
+      },
+      "symbol": "packages/eve/src/public/channels/discord/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/discord/defaults.ts",
+        "line": 92
+      },
+      "symbol": "packages/eve/src/public/channels/discord/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 102
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 114
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/public/channels/linear/defaults.ts",
+        "line": 154
+      },
+      "symbol": "packages/eve/src/public/channels/linear/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/public/channels/linear/defaults.ts",
+        "line": 168
+      },
+      "symbol": "packages/eve/src/public/channels/linear/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/slack/defaults.ts",
+        "line": 206
+      },
+      "symbol": "packages/eve/src/public/channels/slack/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/slack/defaults.ts",
+        "line": 219
+      },
+      "symbol": "packages/eve/src/public/channels/slack/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/teams/defaults.ts",
+        "line": 89
+      },
+      "symbol": "packages/eve/src/public/channels/teams/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/teams/defaults.ts",
+        "line": 102
+      },
+      "symbol": "packages/eve/src/public/channels/teams/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/telegram/defaults.ts",
+        "line": 89
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/telegram/defaults.ts",
+        "line": 102
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/twilio/defaults.ts",
+        "line": 79
+      },
+      "symbol": "packages/eve/src/public/channels/twilio/defaults.ts:extractErrorId"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/twilio/defaults.ts",
+        "line": 92
+      },
+      "symbol": "packages/eve/src/public/channels/twilio/defaults.ts:extractErrorId"
+    }
+  ],
+  "formatError": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/terminal-session-failure-step.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/execution/terminal-session-failure-step.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/harness/instrumentation-runtime-context.ts",
+        "line": 154
+      },
+      "symbol": "packages/eve/src/harness/instrumentation-runtime-context.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/harness/instrumentation-runtime-context.ts",
+        "line": 195
+      },
+      "symbol": "packages/eve/src/harness/instrumentation-runtime-context.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 1380
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/internal/instrumentation.ts",
+        "line": 67
+      },
+      "symbol": "packages/eve/src/internal/instrumentation.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/internal/instrumentation.ts",
+        "line": 77
+      },
+      "symbol": "packages/eve/src/internal/instrumentation.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/internal/instrumentation.ts",
+        "line": 97
+      },
+      "symbol": "packages/eve/src/internal/instrumentation.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 42
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 53
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:formatError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 63
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:formatError"
+    }
+  ],
+  "formatErrorHint": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts",
+        "line": 525
+      },
+      "symbol": "packages/eve/src/public/channels/chat-sdk/chatSdkChannel.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/discord/defaults.ts",
+        "line": 78
+      },
+      "symbol": "packages/eve/src/public/channels/discord/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/discord/defaults.ts",
+        "line": 91
+      },
+      "symbol": "packages/eve/src/public/channels/discord/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 101
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 113
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/public/channels/linear/defaults.ts",
+        "line": 153
+      },
+      "symbol": "packages/eve/src/public/channels/linear/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/public/channels/linear/defaults.ts",
+        "line": 167
+      },
+      "symbol": "packages/eve/src/public/channels/linear/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/slack/defaults.ts",
+        "line": 205
+      },
+      "symbol": "packages/eve/src/public/channels/slack/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/slack/defaults.ts",
+        "line": 218
+      },
+      "symbol": "packages/eve/src/public/channels/slack/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/teams/defaults.ts",
+        "line": 88
+      },
+      "symbol": "packages/eve/src/public/channels/teams/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/teams/defaults.ts",
+        "line": 101
+      },
+      "symbol": "packages/eve/src/public/channels/teams/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/telegram/defaults.ts",
+        "line": 88
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/telegram/defaults.ts",
+        "line": 101
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/twilio/defaults.ts",
+        "line": 78
+      },
+      "symbol": "packages/eve/src/public/channels/twilio/defaults.ts:formatErrorHint"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/channels/twilio/defaults.ts",
+        "line": 91
+      },
+      "symbol": "packages/eve/src/public/channels/twilio/defaults.ts:formatErrorHint"
+    }
+  ],
+  "isLogLevelEnabled": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/cli/commands/extension-init.ts",
+        "line": 227
+      },
+      "symbol": "packages/eve/src/cli/commands/extension-init.ts:isLogLevelEnabled"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/cli/commands/init.ts",
+        "line": 316
+      },
+      "symbol": "packages/eve/src/cli/commands/init.ts:isLogLevelEnabled"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 44,
+        "file": "packages/eve/src/cli/ui/live-row.ts",
+        "line": 88
+      },
+      "symbol": "packages/eve/src/cli/ui/live-row.ts:isLogLevelEnabled"
+    }
+  ],
+  "logError": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/context/serialize.ts",
+        "line": 21
+      },
+      "symbol": "packages/eve/src/context/serialize.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/context/serialize.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/context/serialize.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/execution/cancel-descendant-turns-step.ts",
+        "line": 35
+      },
+      "symbol": "packages/eve/src/execution/cancel-descendant-turns-step.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/execution/cancel-descendant-turns-step.ts",
+        "line": 83
+      },
+      "symbol": "packages/eve/src/execution/cancel-descendant-turns-step.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/execution/cancel-descendant-turns-step.ts",
+        "line": 109
+      },
+      "symbol": "packages/eve/src/execution/cancel-descendant-turns-step.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/dispatch-runtime-actions-step.ts",
+        "line": 148
+      },
+      "symbol": "packages/eve/src/execution/dispatch-runtime-actions-step.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/dispatch-runtime-actions-step.ts",
+        "line": 195
+      },
+      "symbol": "packages/eve/src/execution/dispatch-runtime-actions-step.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/workflow-runtime.ts",
+        "line": 150
+      },
+      "symbol": "packages/eve/src/execution/workflow-runtime.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/workflow-runtime.ts",
+        "line": 193
+      },
+      "symbol": "packages/eve/src/execution/workflow-runtime.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/workflow-runtime.ts",
+        "line": 217
+      },
+      "symbol": "packages/eve/src/execution/workflow-runtime.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 215
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 896
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 2265
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 223
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/internal/logging.test.ts",
+        "line": 239
+      },
+      "symbol": "packages/eve/src/internal/logging.test.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts",
+        "line": 91
+      },
+      "symbol": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts",
+        "line": 134
+      },
+      "symbol": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts",
+        "line": 277
+      },
+      "symbol": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/public/channels/discord/discordChannel.ts",
+        "line": 398
+      },
+      "symbol": "packages/eve/src/public/channels/discord/discordChannel.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/public/channels/eve.ts",
+        "line": 342
+      },
+      "symbol": "packages/eve/src/public/channels/eve.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/public/channels/eve.ts",
+        "line": 485
+      },
+      "symbol": "packages/eve/src/public/channels/eve.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 88
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/public/channels/github/defaults.ts",
+        "line": 152
+      },
+      "symbol": "packages/eve/src/public/channels/github/defaults.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/public/channels/github/dispatch.ts",
+        "line": 290
+      },
+      "symbol": "packages/eve/src/public/channels/github/dispatch.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/public/channels/github/dispatch.ts",
+        "line": 331
+      },
+      "symbol": "packages/eve/src/public/channels/github/dispatch.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/public/channels/github/dispatch.ts",
+        "line": 355
+      },
+      "symbol": "packages/eve/src/public/channels/github/dispatch.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/public/channels/slack/api.ts",
+        "line": 437
+      },
+      "symbol": "packages/eve/src/public/channels/slack/api.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/public/channels/slack/api.ts",
+        "line": 454
+      },
+      "symbol": "packages/eve/src/public/channels/slack/api.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/public/channels/teams/teamsChannel.ts",
+        "line": 415
+      },
+      "symbol": "packages/eve/src/public/channels/teams/teamsChannel.ts:logError"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/public/channels/telegram/telegramChannel.ts",
+        "line": 432
+      },
+      "symbol": "packages/eve/src/public/channels/telegram/telegramChannel.ts:logError"
+    }
+  ],
+  "recordErrorOnSpan": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/harness/tool-loop.ts",
+        "line": 1090
+      },
+      "symbol": "packages/eve/src/harness/tool-loop.ts:recordErrorOnSpan"
+    }
+  ]
+}

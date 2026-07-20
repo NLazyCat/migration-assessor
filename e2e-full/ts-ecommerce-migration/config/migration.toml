@@ -1,0 +1,30 @@
+[project]
+source = "C:/Users/16017/Documents/AI/migration-assessor/e2e-full/../ts-ecommerce"
+source_repo = ""
+source_branch = "master"
+source_version = "5778d9d"
+source_language = "typescript"
+target_language = "rust"
+strict = false
+
+[skip]
+framework = false
+
+[output]
+directory = "report"
+split_by_directory = true
+
+[compatibility]
+# overrides_file = ".migration-assessor-compat.toml"
+
+[scoring.weights]
+in_degree = 30
+complexity = 25
+compatibility = 20
+cycles = 15
+tests = 10
+
+[mapping]
+# override_list = [
+#     { from = "src/utils.ts", to = "new/src/utils.rs" },
+# ]

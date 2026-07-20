@@ -1,0 +1,37 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        3,
+        6
+      ],
+      "name": "eveSandboxUserAgentToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function eveSandboxUserAgentToken() -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        28
+      ],
+      "name": "withEveSandboxUserAgent",
+      "params": [
+        {
+          "name": "inner",
+          "optional": false,
+          "type": "typeof globalThis.fetch"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "typeof globalThis.fetch",
+      "signature": "export function withEveSandboxUserAgent(inner: typeof globalThis.fetch) -> typeof globalThis.fetch"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel-user-agent.ts"
+}

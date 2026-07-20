@@ -1,0 +1,80 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "CancelTurnStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CancelTurnStatus = \"accepted\" | \"no_active_turn\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        11
+      ],
+      "name": "CancelTurnResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CancelTurnResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "ok",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "ok: : true"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CancelTurnStatus",
+      "signature": "status: : CancelTurnStatus"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "CancelTurnResponseSchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CancelTurnResponseSchema: unknown"
+    }
+  ],
+  "module": "packages/eve/src/protocol/cancel-turn.ts"
+}

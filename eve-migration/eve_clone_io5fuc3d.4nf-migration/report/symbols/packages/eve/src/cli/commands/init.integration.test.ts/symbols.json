@@ -1,0 +1,109 @@
+{
+  "module": "packages/eve/src/cli/commands/init.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init.integration.test.ts:BASE_VERSIONS",
+      "kind": "variable",
+      "line_range": [
+        32,
+        38
+      ],
+      "name": "BASE_VERSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init.integration.test.ts:RELEASE_AGE_POLICY",
+      "kind": "variable",
+      "line_range": [
+        40,
+        41
+      ],
+      "name": "RELEASE_AGE_POLICY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init.integration.test.ts:WEB_VERSIONS",
+      "kind": "variable",
+      "line_range": [
+        43,
+        51
+      ],
+      "name": "WEB_VERSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init.integration.test.ts:logger",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        62
+      ],
+      "name": "logger",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "InitCliLogger & { messages: string[]; errors: string[] }",
+      "signature": "export function logger() -> InitCliLogger & { messages: string[]; errors: string[] }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init.integration.test.ts:dependencies",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        114
+      ],
+      "name": "dependencies",
+      "params": [
+        {
+          "name": "gitResult",
+          "optional": false,
+          "type": "GitInitResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InitCommandDependencies & {\r\n  detectInvokingPackageManager: ReturnType<\r\n    typeof vi.fn<InitCommandDependencies[\"detectInvokingPackageManager\"]>\r\n  >;\r\n  isCodingAgentLaunch: ReturnType<typeof vi.fn<InitCommandDependencies[\"isCodingAgentLaunch\"]>>;\r\n  now: ReturnType<typeof vi.fn<InitCommandDependencies[\"now\"]>>;\r\n  runPackageManagerInstall: ReturnType<\r\n    typeof vi.fn<InitCommandDependencies[\"runPackageManagerInstall\"]>\r\n  >;\r\n  selectInitHandoff: ReturnType<typeof vi.fn<InitCommandDependencies[\"selectInitHandoff\"]>>;\r\n  spawnCodingAgentRepl: ReturnType<typeof vi.fn<InitCommandDependencies[\"spawnCodingAgentRepl\"]>>;\r\n  spawnPackageManager: ReturnType<typeof vi.fn<InitCommandDependencies[\"spawnPackageManager\"]>>;\r\n  tryInitializeGit: ReturnType<typeof vi.fn<InitCommandDependencies[\"tryInitializeGit\"]>>;\r\n}",
+      "signature": "export function dependencies(gitResult: GitInitResult) -> InitCommandDependencies & {\r\n  detectInvokingPackageManager: ReturnType<\r\n    typeof vi.fn<InitCommandDependencies[\"detectInvokingPackageManager\"]>\r\n  >;\r\n  isCodingAgentLaunch: ReturnType<typeof vi.fn<InitCommandDependencies[\"isCodingAgentLaunch\"]>>;\r\n  now: ReturnType<typeof vi.fn<InitCommandDependencies[\"now\"]>>;\r\n  runPackageManagerInstall: ReturnType<\r\n    typeof vi.fn<InitCommandDependencies[\"runPackageManagerInstall\"]>\r\n  >;\r\n  selectInitHandoff: ReturnType<typeof vi.fn<InitCommandDependencies[\"selectInitHandoff\"]>>;\r\n  spawnCodingAgentRepl: ReturnType<typeof vi.fn<InitCommandDependencies[\"spawnCodingAgentRepl\"]>>;\r\n  spawnPackageManager: ReturnType<typeof vi.fn<InitCommandDependencies[\"spawnPackageManager\"]>>;\r\n  tryInitializeGit: ReturnType<typeof vi.fn<InitCommandDependencies[\"tryInitializeGit\"]>>;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/init.integration.test.ts:createHostProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        117,
+        130
+      ],
+      "name": "createHostProject",
+      "params": [
+        {
+          "name": "parentDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "packageJson",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createHostProject(parentDirectory: string, packageJson: Record<string, unknown>) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

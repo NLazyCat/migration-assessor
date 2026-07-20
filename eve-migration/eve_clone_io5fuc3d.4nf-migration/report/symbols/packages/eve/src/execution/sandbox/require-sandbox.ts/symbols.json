@@ -1,0 +1,49 @@
+{
+  "module": "packages/eve/src/execution/sandbox/require-sandbox.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/require-sandbox.ts:requireSandboxSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        16,
+        33
+      ],
+      "name": "requireSandboxSession",
+      "params": [
+        {
+          "name": "abortSignal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SandboxSession>",
+      "signature": "export function requireSandboxSession(abortSignal: AbortSignal) -> Promise<SandboxSession>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/require-sandbox.ts:validateAbsoluteFilePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        46
+      ],
+      "name": "validateAbsoluteFilePath",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function validateAbsoluteFilePath(filePath: string) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

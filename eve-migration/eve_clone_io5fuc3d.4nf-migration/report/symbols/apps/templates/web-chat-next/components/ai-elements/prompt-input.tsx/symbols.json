@@ -1,0 +1,1687 @@
+{
+  "module": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:convertBlobUrlToDataUrl",
+      "is_async": true,
+      "kind": "variable",
+      "line_range": [
+        66,
+        83
+      ],
+      "name": "convertBlobUrlToDataUrl",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:captureScreenshot",
+      "is_async": true,
+      "kind": "variable",
+      "line_range": [
+        85,
+        157
+      ],
+      "name": "captureScreenshot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<File | null>",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext:files",
+          "kind": "property",
+          "line_range": [
+            164,
+            164
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": (FileUIPart & { id: string })[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext:add",
+          "kind": "property",
+          "line_range": [
+            165,
+            165
+          ],
+          "name": "add",
+          "partial_analysis": false,
+          "return_type": ": (files: File[] | FileList) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext:remove",
+          "kind": "property",
+          "line_range": [
+            166,
+            166
+          ],
+          "name": "remove",
+          "partial_analysis": false,
+          "return_type": ": (id: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext:clear",
+          "kind": "property",
+          "line_range": [
+            167,
+            167
+          ],
+          "name": "clear",
+          "partial_analysis": false,
+          "return_type": ": () => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext:openFileDialog",
+          "kind": "property",
+          "line_range": [
+            168,
+            168
+          ],
+          "name": "openFileDialog",
+          "partial_analysis": false,
+          "return_type": ": () => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext:fileInputRef",
+          "kind": "property",
+          "line_range": [
+            169,
+            169
+          ],
+          "name": "fileInputRef",
+          "partial_analysis": false,
+          "return_type": ": RefObject<HTMLInputElement | null>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:AttachmentsContext",
+      "kind": "interface",
+      "line_range": [
+        163,
+        170
+      ],
+      "name": "AttachmentsContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:TextInputContext:value",
+          "kind": "property",
+          "line_range": [
+            173,
+            173
+          ],
+          "name": "value",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:TextInputContext:setInput",
+          "kind": "property",
+          "line_range": [
+            174,
+            174
+          ],
+          "name": "setInput",
+          "partial_analysis": false,
+          "return_type": ": (v: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:TextInputContext:clear",
+          "kind": "property",
+          "line_range": [
+            175,
+            175
+          ],
+          "name": "clear",
+          "partial_analysis": false,
+          "return_type": ": () => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:TextInputContext",
+      "kind": "interface",
+      "line_range": [
+        172,
+        176
+      ],
+      "name": "TextInputContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputControllerProps:textInput",
+          "kind": "property",
+          "line_range": [
+            179,
+            179
+          ],
+          "name": "textInput",
+          "partial_analysis": false,
+          "return_type": ": TextInputContext",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputControllerProps:attachments",
+          "kind": "property",
+          "line_range": [
+            180,
+            180
+          ],
+          "name": "attachments",
+          "partial_analysis": false,
+          "return_type": ": AttachmentsContext",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputControllerProps:__registerFileInput",
+          "kind": "property",
+          "line_range": [
+            182,
+            182
+          ],
+          "name": "__registerFileInput",
+          "partial_analysis": false,
+          "return_type": ": (ref: RefObject<HTMLInputElement | null>, open: () => void) => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputControllerProps",
+      "kind": "interface",
+      "line_range": [
+        178,
+        183
+      ],
+      "name": "PromptInputControllerProps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputController",
+      "kind": "variable",
+      "line_range": [
+        185,
+        185
+      ],
+      "name": "PromptInputController",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:ProviderAttachmentsContext",
+      "kind": "variable",
+      "line_range": [
+        186,
+        186
+      ],
+      "name": "ProviderAttachmentsContext",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:usePromptInputController",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        188,
+        196
+      ],
+      "name": "usePromptInputController",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:useOptionalPromptInputController",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        199,
+        199
+      ],
+      "name": "useOptionalPromptInputController",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:useProviderAttachments",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        201,
+        209
+      ],
+      "name": "useProviderAttachments",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:useOptionalProviderAttachments",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        211,
+        211
+      ],
+      "name": "useOptionalProviderAttachments",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputProviderProps",
+      "kind": "type_alias",
+      "line_range": [
+        213,
+        215
+      ],
+      "name": "PromptInputProviderProps",
+      "partial_analysis": false,
+      "value": "PropsWithChildren<{\r\n  initialInput?: string;\r\n}>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputProvider",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        221,
+        337
+      ],
+      "name": "PromptInputProvider",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputProviderProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:LocalAttachmentsContext",
+      "kind": "variable",
+      "line_range": [
+        343,
+        343
+      ],
+      "name": "LocalAttachmentsContext",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:usePromptInputAttachments",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        345,
+        356
+      ],
+      "name": "usePromptInputAttachments",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:ReferencedSourcesContext:sources",
+          "kind": "property",
+          "line_range": [
+            363,
+            363
+          ],
+          "name": "sources",
+          "partial_analysis": false,
+          "return_type": ": (SourceDocumentUIPart & { id: string })[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:ReferencedSourcesContext:add",
+          "kind": "property",
+          "line_range": [
+            364,
+            364
+          ],
+          "name": "add",
+          "partial_analysis": false,
+          "return_type": ": (sources: SourceDocumentUIPart[] | SourceDocumentUIPart) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:ReferencedSourcesContext:remove",
+          "kind": "property",
+          "line_range": [
+            365,
+            365
+          ],
+          "name": "remove",
+          "partial_analysis": false,
+          "return_type": ": (id: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:ReferencedSourcesContext:clear",
+          "kind": "property",
+          "line_range": [
+            366,
+            366
+          ],
+          "name": "clear",
+          "partial_analysis": false,
+          "return_type": ": () => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:ReferencedSourcesContext",
+      "kind": "interface",
+      "line_range": [
+        362,
+        367
+      ],
+      "name": "ReferencedSourcesContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:LocalReferencedSourcesContext",
+      "kind": "variable",
+      "line_range": [
+        369,
+        369
+      ],
+      "name": "LocalReferencedSourcesContext",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:usePromptInputReferencedSources",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        371,
+        379
+      ],
+      "name": "usePromptInputReferencedSources",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionAddAttachmentsProps",
+      "kind": "type_alias",
+      "line_range": [
+        381,
+        383
+      ],
+      "name": "PromptInputActionAddAttachmentsProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof DropdownMenuItem> & {\r\n  label?: string;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionAddAttachments",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        385,
+        404
+      ],
+      "name": "PromptInputActionAddAttachments",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputActionAddAttachmentsProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionAddScreenshotProps",
+      "kind": "type_alias",
+      "line_range": [
+        406,
+        408
+      ],
+      "name": "PromptInputActionAddScreenshotProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof DropdownMenuItem> & {\r\n  label?: string;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionAddScreenshot",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        410,
+        448
+      ],
+      "name": "PromptInputActionAddScreenshot",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputActionAddScreenshotProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputMessage:text",
+          "kind": "property",
+          "line_range": [
+            451,
+            451
+          ],
+          "name": "text",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputMessage:files",
+          "kind": "property",
+          "line_range": [
+            452,
+            452
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": FileUIPart[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputMessage",
+      "kind": "interface",
+      "line_range": [
+        450,
+        453
+      ],
+      "name": "PromptInputMessage",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputProps",
+      "kind": "type_alias",
+      "line_range": [
+        455,
+        472
+      ],
+      "name": "PromptInputProps",
+      "partial_analysis": false,
+      "value": "Omit<HTMLAttributes<HTMLFormElement>, \"onSubmit\" | \"onError\"> & {\r\n  // e.g., \"image/*\" or leave undefined for any\r\n  accept?: string;\r\n  multiple?: boolean;\r\n  // When true, accepts drops anywhere on document. Default false (opt-in).\r\n  globalDrop?: boolean;\r\n  // Render a hidden input with given name and keep it in sync for native form posts. Default false.\r\n  syncHiddenInput?: boolean;\r\n  // Minimal constraints\r\n  maxFiles?: number;\r\n  // bytes\r\n  maxFileSize?: number;\r\n  onError?: (err: { code: \"max_files\" | \"max_file_size\" | \"accept\"; message: string }) => void;\r\n  onSubmit: (\r\n    message: PromptInputMessage,\r\n    event: FormEvent<HTMLFormElement>,\r\n  ) => void | Promise<void>;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInput",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        474,
+        890
+      ],
+      "name": "PromptInput",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputBodyProps",
+      "kind": "type_alias",
+      "line_range": [
+        892,
+        892
+      ],
+      "name": "PromptInputBodyProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLDivElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputBody",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        894,
+        896
+      ],
+      "name": "PromptInputBody",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputBodyProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTextareaProps",
+      "kind": "type_alias",
+      "line_range": [
+        898,
+        898
+      ],
+      "name": "PromptInputTextareaProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof InputGroupTextarea>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTextarea",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        900,
+        1009
+      ],
+      "name": "PromptInputTextarea",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputTextareaProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHeaderProps",
+      "kind": "type_alias",
+      "line_range": [
+        1011,
+        1011
+      ],
+      "name": "PromptInputHeaderProps",
+      "partial_analysis": false,
+      "value": "Omit<ComponentProps<typeof InputGroupAddon>, \"align\">;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHeader",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1013,
+        1019
+      ],
+      "name": "PromptInputHeader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputHeaderProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputFooterProps",
+      "kind": "type_alias",
+      "line_range": [
+        1021,
+        1021
+      ],
+      "name": "PromptInputFooterProps",
+      "partial_analysis": false,
+      "value": "Omit<ComponentProps<typeof InputGroupAddon>, \"align\">;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputFooter",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1023,
+        1029
+      ],
+      "name": "PromptInputFooter",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputFooterProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputToolsProps",
+      "kind": "type_alias",
+      "line_range": [
+        1031,
+        1031
+      ],
+      "name": "PromptInputToolsProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLDivElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTools",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1033,
+        1035
+      ],
+      "name": "PromptInputTools",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputToolsProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputButtonTooltip",
+      "kind": "type_alias",
+      "line_range": [
+        1037,
+        1043
+      ],
+      "name": "PromptInputButtonTooltip",
+      "partial_analysis": false,
+      "value": "| string\r\n  | {\r\n      content: ReactNode;\r\n      shortcut?: string;\r\n      side?: ComponentProps<typeof TooltipContent>[\"side\"];\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputButtonProps",
+      "kind": "type_alias",
+      "line_range": [
+        1045,
+        1047
+      ],
+      "name": "PromptInputButtonProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof InputGroupButton> & {\r\n  tooltip?: PromptInputButtonTooltip;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputButton",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1049,
+        1085
+      ],
+      "name": "PromptInputButton",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputButtonProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuProps",
+      "kind": "type_alias",
+      "line_range": [
+        1087,
+        1087
+      ],
+      "name": "PromptInputActionMenuProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof DropdownMenu>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenu",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1088,
+        1090
+      ],
+      "name": "PromptInputActionMenu",
+      "params": [
+        {
+          "name": "props",
+          "optional": false,
+          "type": "PromptInputActionMenuProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuTriggerProps",
+      "kind": "type_alias",
+      "line_range": [
+        1092,
+        1092
+      ],
+      "name": "PromptInputActionMenuTriggerProps",
+      "partial_analysis": false,
+      "value": "PromptInputButtonProps;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuTrigger",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1094,
+        1104
+      ],
+      "name": "PromptInputActionMenuTrigger",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputActionMenuTriggerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuContentProps",
+      "kind": "type_alias",
+      "line_range": [
+        1106,
+        1106
+      ],
+      "name": "PromptInputActionMenuContentProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof DropdownMenuContent>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuContent",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1107,
+        1112
+      ],
+      "name": "PromptInputActionMenuContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputActionMenuContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuItemProps",
+      "kind": "type_alias",
+      "line_range": [
+        1114,
+        1114
+      ],
+      "name": "PromptInputActionMenuItemProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof DropdownMenuItem>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputActionMenuItem",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1115,
+        1118
+      ],
+      "name": "PromptInputActionMenuItem",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputActionMenuItemProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSubmitProps",
+      "kind": "type_alias",
+      "line_range": [
+        1123,
+        1126
+      ],
+      "name": "PromptInputSubmitProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof InputGroupButton> & {\r\n  status?: ChatStatus;\r\n  onStop?: () => void;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSubmit",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1128,
+        1175
+      ],
+      "name": "PromptInputSubmit",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputSubmitProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectProps",
+      "kind": "type_alias",
+      "line_range": [
+        1177,
+        1177
+      ],
+      "name": "PromptInputSelectProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof Select>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelect",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1179,
+        1179
+      ],
+      "name": "PromptInputSelect",
+      "params": [
+        {
+          "name": "props",
+          "optional": false,
+          "type": "PromptInputSelectProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectTriggerProps",
+      "kind": "type_alias",
+      "line_range": [
+        1181,
+        1181
+      ],
+      "name": "PromptInputSelectTriggerProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof SelectTrigger>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectTrigger",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1183,
+        1195
+      ],
+      "name": "PromptInputSelectTrigger",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputSelectTriggerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectContentProps",
+      "kind": "type_alias",
+      "line_range": [
+        1197,
+        1197
+      ],
+      "name": "PromptInputSelectContentProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof SelectContent>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectContent",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1199,
+        1202
+      ],
+      "name": "PromptInputSelectContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputSelectContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectItemProps",
+      "kind": "type_alias",
+      "line_range": [
+        1204,
+        1204
+      ],
+      "name": "PromptInputSelectItemProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof SelectItem>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectItem",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1206,
+        1208
+      ],
+      "name": "PromptInputSelectItem",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputSelectItemProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectValueProps",
+      "kind": "type_alias",
+      "line_range": [
+        1210,
+        1210
+      ],
+      "name": "PromptInputSelectValueProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof SelectValue>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputSelectValue",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1212,
+        1214
+      ],
+      "name": "PromptInputSelectValue",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputSelectValueProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHoverCardProps",
+      "kind": "type_alias",
+      "line_range": [
+        1216,
+        1216
+      ],
+      "name": "PromptInputHoverCardProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof HoverCard>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHoverCard",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1218,
+        1224
+      ],
+      "name": "PromptInputHoverCard",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputHoverCardProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHoverCardTriggerProps",
+      "kind": "type_alias",
+      "line_range": [
+        1226,
+        1226
+      ],
+      "name": "PromptInputHoverCardTriggerProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof HoverCardTrigger>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHoverCardTrigger",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1228,
+        1230
+      ],
+      "name": "PromptInputHoverCardTrigger",
+      "params": [
+        {
+          "name": "props",
+          "optional": false,
+          "type": "PromptInputHoverCardTriggerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHoverCardContentProps",
+      "kind": "type_alias",
+      "line_range": [
+        1232,
+        1232
+      ],
+      "name": "PromptInputHoverCardContentProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof HoverCardContent>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputHoverCardContent",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1234,
+        1237
+      ],
+      "name": "PromptInputHoverCardContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputHoverCardContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabsListProps",
+      "kind": "type_alias",
+      "line_range": [
+        1239,
+        1239
+      ],
+      "name": "PromptInputTabsListProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLDivElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabsList",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1241,
+        1243
+      ],
+      "name": "PromptInputTabsList",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputTabsListProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabProps",
+      "kind": "type_alias",
+      "line_range": [
+        1245,
+        1245
+      ],
+      "name": "PromptInputTabProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLDivElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTab",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1247,
+        1249
+      ],
+      "name": "PromptInputTab",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputTabProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabLabelProps",
+      "kind": "type_alias",
+      "line_range": [
+        1251,
+        1251
+      ],
+      "name": "PromptInputTabLabelProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLHeadingElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabLabel",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1253,
+        1257
+      ],
+      "name": "PromptInputTabLabel",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputTabLabelProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabBodyProps",
+      "kind": "type_alias",
+      "line_range": [
+        1259,
+        1259
+      ],
+      "name": "PromptInputTabBodyProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLDivElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabBody",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1261,
+        1263
+      ],
+      "name": "PromptInputTabBody",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputTabBodyProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabItemProps",
+      "kind": "type_alias",
+      "line_range": [
+        1265,
+        1265
+      ],
+      "name": "PromptInputTabItemProps",
+      "partial_analysis": false,
+      "value": "HTMLAttributes<HTMLDivElement>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputTabItem",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1267,
+        1272
+      ],
+      "name": "PromptInputTabItem",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputTabItemProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandProps",
+      "kind": "type_alias",
+      "line_range": [
+        1274,
+        1274
+      ],
+      "name": "PromptInputCommandProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof Command>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommand",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1276,
+        1278
+      ],
+      "name": "PromptInputCommand",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandInputProps",
+      "kind": "type_alias",
+      "line_range": [
+        1280,
+        1280
+      ],
+      "name": "PromptInputCommandInputProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof CommandInput>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandInput",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1282,
+        1284
+      ],
+      "name": "PromptInputCommandInput",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandInputProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandListProps",
+      "kind": "type_alias",
+      "line_range": [
+        1286,
+        1286
+      ],
+      "name": "PromptInputCommandListProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof CommandList>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandList",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1288,
+        1290
+      ],
+      "name": "PromptInputCommandList",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandListProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandEmptyProps",
+      "kind": "type_alias",
+      "line_range": [
+        1292,
+        1292
+      ],
+      "name": "PromptInputCommandEmptyProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof CommandEmpty>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandEmpty",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1294,
+        1296
+      ],
+      "name": "PromptInputCommandEmpty",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandEmptyProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandGroupProps",
+      "kind": "type_alias",
+      "line_range": [
+        1298,
+        1298
+      ],
+      "name": "PromptInputCommandGroupProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof CommandGroup>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandGroup",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1300,
+        1302
+      ],
+      "name": "PromptInputCommandGroup",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandGroupProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandItemProps",
+      "kind": "type_alias",
+      "line_range": [
+        1304,
+        1304
+      ],
+      "name": "PromptInputCommandItemProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof CommandItem>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandItem",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1306,
+        1308
+      ],
+      "name": "PromptInputCommandItem",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandItemProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandSeparatorProps",
+      "kind": "type_alias",
+      "line_range": [
+        1310,
+        1310
+      ],
+      "name": "PromptInputCommandSeparatorProps",
+      "partial_analysis": false,
+      "value": "ComponentProps<typeof CommandSeparator>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/prompt-input.tsx:PromptInputCommandSeparator",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        1312,
+        1315
+      ],
+      "name": "PromptInputCommandSeparator",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PromptInputCommandSeparatorProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

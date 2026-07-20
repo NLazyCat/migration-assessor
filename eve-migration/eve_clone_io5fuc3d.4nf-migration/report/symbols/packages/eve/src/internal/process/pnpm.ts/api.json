@@ -1,0 +1,75 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "PnpmInvocation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PnpmInvocation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "args",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "args: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "command",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "command: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "shell",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "shell?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        70
+      ],
+      "name": "resolvePnpmInvocation",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PnpmInvocation",
+      "signature": "export function resolvePnpmInvocation(args: readonly string[]) -> PnpmInvocation"
+    }
+  ],
+  "module": "packages/eve/src/internal/process/pnpm.ts"
+}

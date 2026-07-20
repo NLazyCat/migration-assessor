@@ -1,0 +1,603 @@
+{
+  "module": "packages/eve/src/context/keys.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:SessionAuth:current",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "current",
+          "partial_analysis": false,
+          "return_type": ": SessionAuthContext | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:SessionAuth:initiator",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "initiator",
+          "partial_analysis": false,
+          "return_type": ": SessionAuthContext | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/keys.ts:SessionAuth",
+      "kind": "interface",
+      "line_range": [
+        36,
+        39
+      ],
+      "name": "SessionAuth",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:Session:auth",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "auth",
+          "partial_analysis": false,
+          "return_type": ": SessionAuth",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:Session:parent",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "parent",
+          "partial_analysis": false,
+          "return_type": ": SessionParent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:Session:sessionId",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:Session:turn",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "turn",
+          "partial_analysis": false,
+          "return_type": ": SessionTurn",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/keys.ts:Session",
+      "kind": "interface",
+      "line_range": [
+        49,
+        54
+      ],
+      "name": "Session",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:AuthKey",
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "AuthKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:InitiatorAuthKey",
+      "kind": "variable",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "InitiatorAuthKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SessionIdKey",
+      "kind": "variable",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "SessionIdKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:ContinuationTokenKey",
+      "kind": "variable",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "ContinuationTokenKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:ChannelRequestIdKey",
+      "kind": "variable",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "ChannelRequestIdKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:ChannelInstrumentationKey",
+      "kind": "variable",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "ChannelInstrumentationKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:ModeKey",
+      "kind": "variable",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "ModeKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:ParentSessionKey",
+      "kind": "variable",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "ParentSessionKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SubagentDepthKey",
+      "kind": "variable",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "SubagentDepthKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:CapabilitiesKey",
+      "kind": "variable",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "CapabilitiesKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SessionCallbackKey",
+      "kind": "variable",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "SessionCallbackKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SessionKey",
+      "kind": "variable",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "SessionKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SandboxKey",
+      "kind": "variable",
+      "line_range": [
+        89,
+        89
+      ],
+      "name": "SandboxKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SessionDynamicModelReferenceKey",
+      "kind": "variable",
+      "line_range": [
+        96,
+        98
+      ],
+      "name": "SessionDynamicModelReferenceKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:TurnDynamicModelReferenceKey",
+      "kind": "variable",
+      "line_range": [
+        101,
+        103
+      ],
+      "name": "TurnDynamicModelReferenceKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:LiveDynamicModelSelection:model",
+          "kind": "property",
+          "line_range": [
+            107,
+            107
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": LanguageModel",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:LiveDynamicModelSelection:reference",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "reference",
+          "partial_analysis": false,
+          "return_type": ": RuntimeModelReference",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/keys.ts:LiveDynamicModelSelection",
+      "kind": "interface",
+      "line_range": [
+        105,
+        109
+      ],
+      "name": "LiveDynamicModelSelection",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:LiveStepDynamicModelSelectionKey",
+      "kind": "variable",
+      "line_range": [
+        112,
+        114
+      ],
+      "name": "LiveStepDynamicModelSelectionKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:name",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:description",
+          "kind": "property",
+          "line_range": [
+            122,
+            122
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:inputSchema",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "inputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:outputSchema",
+          "kind": "property",
+          "line_range": [
+            124,
+            124
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:resolverSlug",
+          "kind": "property",
+          "line_range": [
+            125,
+            125
+          ],
+          "name": "resolverSlug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:entryKey",
+          "kind": "property",
+          "line_range": [
+            126,
+            126
+          ],
+          "name": "entryKey",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:executeStepFnName",
+          "kind": "property",
+          "line_range": [
+            127,
+            127
+          ],
+          "name": "executeStepFnName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:approvalStepFnName",
+          "kind": "property",
+          "line_range": [
+            128,
+            128
+          ],
+          "name": "approvalStepFnName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata:closureVars",
+          "kind": "property",
+          "line_range": [
+            129,
+            129
+          ],
+          "name": "closureVars",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/keys.ts:DurableDynamicToolMetadata",
+      "kind": "interface",
+      "line_range": [
+        120,
+        130
+      ],
+      "name": "DurableDynamicToolMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SessionDynamicToolMetadataKey",
+      "kind": "variable",
+      "line_range": [
+        136,
+        138
+      ],
+      "name": "SessionDynamicToolMetadataKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:TurnDynamicToolMetadataKey",
+      "kind": "variable",
+      "line_range": [
+        144,
+        146
+      ],
+      "name": "TurnDynamicToolMetadataKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:LiveStepToolsKey",
+      "kind": "variable",
+      "line_range": [
+        154,
+        156
+      ],
+      "name": "LiveStepToolsKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicSkillMetadata:name",
+          "kind": "property",
+          "line_range": [
+            166,
+            166
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/keys.ts:DurableDynamicSkillMetadata:description",
+          "kind": "property",
+          "line_range": [
+            167,
+            167
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/keys.ts:DurableDynamicSkillMetadata",
+      "kind": "interface",
+      "line_range": [
+        165,
+        168
+      ],
+      "name": "DurableDynamicSkillMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:DynamicSkillManifestKey",
+      "kind": "variable",
+      "line_range": [
+        175,
+        177
+      ],
+      "name": "DynamicSkillManifestKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:SessionDynamicInstructionsKey",
+      "kind": "variable",
+      "line_range": [
+        187,
+        189
+      ],
+      "name": "SessionDynamicInstructionsKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/keys.ts:TurnDynamicInstructionsKey",
+      "kind": "variable",
+      "line_range": [
+        195,
+        197
+      ],
+      "name": "TurnDynamicInstructionsKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

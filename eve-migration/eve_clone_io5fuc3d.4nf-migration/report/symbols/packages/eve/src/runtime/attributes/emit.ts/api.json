@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        79
+      ],
+      "name": "setEveAttributes",
+      "params": [
+        {
+          "name": "attrs",
+          "optional": false,
+          "type": "Record<string, EveAttributeValue>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function setEveAttributes(attrs: Record<string, EveAttributeValue>) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/attributes/emit.ts"
+}

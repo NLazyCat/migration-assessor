@@ -1,0 +1,251 @@
+{
+  "module": "packages/eve/src/harness/instrumentation-runtime-context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:log",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput:eveVersion",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "eveVersion",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput:authored",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "authored",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationDefinition | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput:emissionState",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "emissionState",
+          "partial_analysis": false,
+          "return_type": ": HarnessEmissionState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput:environment",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "environment",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput:modelInput",
+          "kind": "property",
+          "line_range": [
+            34,
+            37
+          ],
+          "name": "modelInput",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly instructions: string | SystemModelMessage | undefined;\r\n    readonly messages: readonly ModelMessage[];\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput:session",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": HarnessSession",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:BuildTelemetryRuntimeContextInput",
+      "kind": "interface",
+      "line_range": [
+        29,
+        39
+      ],
+      "name": "BuildTelemetryRuntimeContextInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:buildTelemetryRuntimeContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        69
+      ],
+      "name": "buildTelemetryRuntimeContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "BuildTelemetryRuntimeContextInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown> | undefined",
+      "signature": "export function buildTelemetryRuntimeContext(input: BuildTelemetryRuntimeContextInput) -> Record<string, unknown> | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:buildInstrumentationStepStartedInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        99
+      ],
+      "name": "buildInstrumentationStepStartedInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Omit<BuildTelemetryRuntimeContextInput, \"authored\" | \"eveVersion\" | \"environment\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InstrumentationStepStartedEventInput",
+      "signature": "export function buildInstrumentationStepStartedInput(input: Omit<BuildTelemetryRuntimeContextInput, \"authored\" | \"eveVersion\" | \"environment\">) -> InstrumentationStepStartedEventInput",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:filterAuthoredRuntimeContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        106,
+        120
+      ],
+      "name": "filterAuthoredRuntimeContext",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "JsonObject"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InstrumentationRuntimeContext | undefined",
+      "signature": "export function filterAuthoredRuntimeContext(value: JsonObject, source: string) -> InstrumentationRuntimeContext | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:resolveStepStartedRuntimeContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        122,
+        161
+      ],
+      "name": "resolveStepStartedRuntimeContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "BuildTelemetryRuntimeContextInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InstrumentationRuntimeContext | undefined",
+      "signature": "export function resolveStepStartedRuntimeContext(input: BuildTelemetryRuntimeContextInput) -> InstrumentationRuntimeContext | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:projectSessionAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        173
+      ],
+      "name": "projectSessionAuth",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "AlsContext | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly current: SessionAuthContext | null;\r\n  readonly initiator: SessionAuthContext | null;\r\n}",
+      "signature": "export function projectSessionAuth(context: AlsContext | undefined) -> {\r\n  readonly current: SessionAuthContext | null;\r\n  readonly initiator: SessionAuthContext | null;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-runtime-context.ts:snapshotForInstrumentation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        185,
+        200
+      ],
+      "name": "snapshotForInstrumentation",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "T"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T | undefined",
+      "signature": "export function snapshotForInstrumentation(value: T, source: string) -> T | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

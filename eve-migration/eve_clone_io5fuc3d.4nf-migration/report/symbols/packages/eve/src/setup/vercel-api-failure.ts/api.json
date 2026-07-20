@@ -1,0 +1,81 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        42
+      ],
+      "name": "normalizeVercelApiResult",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "VercelCaptureResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureResult",
+      "signature": "export function normalizeVercelApiResult(result: VercelCaptureResult) -> VercelCaptureResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        45,
+        47
+      ],
+      "name": "isNotFoundApiFailure",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNotFoundApiFailure(failure: VercelCaptureFailure) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        52
+      ],
+      "name": "isConflictApiFailure",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isConflictApiFailure(failure: VercelCaptureFailure) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        59
+      ],
+      "name": "isForbiddenApiFailure",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isForbiddenApiFailure(failure: VercelCaptureFailure) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/setup/vercel-api-failure.ts"
+}

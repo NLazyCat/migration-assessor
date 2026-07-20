@@ -1,0 +1,231 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        1,
+        7
+      ],
+      "name": "PromptCommandExtensionName",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type PromptCommandExtensionName = | \"model\"\r\n  | \"channels\"\r\n  | \"connect\"\r\n  | \"deploy\"\r\n  | \"vc:install\"\r\n  | \"vc:login\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "PromptCommand",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type PromptCommand = | { type: \"new\" }\r\n  | { type: \"exit\" }\r\n  | { type: \"help\" }\r\n  | { type: \"loglevel\"; argument: string }\r\n  | { type: \"extension\"; name: PromptCommandExtensionName; argument: string };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        36
+      ],
+      "name": "PromptCommandSpec",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PromptCommandSpec { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "aliases",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "aliases: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "argumentHint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "argumentHint?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "takesArgument",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "takesArgument: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "build",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (argument: string) => PromptCommand",
+      "signature": "build: : (argument: string) => PromptCommand"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        134,
+        134
+      ],
+      "name": "PROMPT_COMMANDS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROMPT_COMMANDS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        136,
+        140
+      ],
+      "name": "promptCommandsFor",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "PromptCommandTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly PromptCommandSpec[]",
+      "signature": "export function promptCommandsFor(target: PromptCommandTarget) -> readonly PromptCommandSpec[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        143,
+        150
+      ],
+      "name": "isPromptCommandAvailableFor",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "PromptCommandExtensionName"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "PromptCommandTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPromptCommandAvailableFor(name: PromptCommandExtensionName, target: PromptCommandTarget) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        158,
+        171
+      ],
+      "name": "parsePromptCommand",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptCommand | null",
+      "signature": "export function parsePromptCommand(prompt: string) -> PromptCommand | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        174,
+        176
+      ],
+      "name": "isPromptControlCommand",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPromptControlCommand(prompt: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        182,
+        192
+      ],
+      "name": "formatPromptCommandHelp",
+      "params": [
+        {
+          "name": "commands",
+          "optional": false,
+          "type": "readonly PromptCommandSpec[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPromptCommandHelp(commands: readonly PromptCommandSpec[]) -> string"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/prompt-commands.ts"
+}

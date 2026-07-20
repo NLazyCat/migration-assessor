@@ -1,0 +1,785 @@
+{
+  "module": "packages/eve/src/harness/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:SessionToolDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "SessionToolDefinition",
+      "partial_analysis": false,
+      "value": "Readonly<InternalToolDefinition>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:SessionStateMap",
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "SessionStateMap",
+      "partial_analysis": false,
+      "value": "Readonly<Record<string, unknown>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:CompactionConfig:lastKnownInputTokens",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "lastKnownInputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:CompactionConfig:lastKnownPromptMessageCount",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "lastKnownPromptMessageCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:CompactionConfig:recentWindowSize",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "recentWindowSize",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:CompactionConfig:threshold",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "threshold",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:CompactionConfig",
+      "kind": "interface",
+      "line_range": [
+        30,
+        35
+      ],
+      "name": "CompactionConfig",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionAgent:compactionModelReference",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "compactionModelReference",
+          "partial_analysis": false,
+          "return_type": ": RuntimeModelReference",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionAgent:dynamicModelDefaultReference",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "dynamicModelDefaultReference",
+          "partial_analysis": false,
+          "return_type": ": RuntimeModelReference",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionAgent:modelReference",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "modelReference",
+          "partial_analysis": false,
+          "return_type": ": RuntimeModelReference",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionAgent:reasoning",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "reasoning",
+          "partial_analysis": false,
+          "return_type": ": AgentReasoningDefinition",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionAgent:system",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "system",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionAgent:tools",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": readonly SessionToolDefinition[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:SessionAgent",
+      "kind": "interface",
+      "line_range": [
+        40,
+        53
+      ],
+      "name": "SessionAgent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:agent",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "agent",
+          "partial_analysis": false,
+          "return_type": ": SessionAgent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:compaction",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "compaction",
+          "partial_analysis": false,
+          "return_type": ": CompactionConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:continuationToken",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:history",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "history",
+          "partial_analysis": false,
+          "return_type": ": ModelMessage[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:limits",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "limits",
+          "partial_analysis": false,
+          "return_type": ": SessionLimits",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:outputSchema",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:rootSessionId",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "rootSessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:sessionId",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:sandboxState",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "sandboxState",
+          "partial_analysis": false,
+          "return_type": ": SandboxState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:state",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "state",
+          "partial_analysis": false,
+          "return_type": ": SessionStateMap",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:subagentDepth",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "subagentDepth",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:HarnessSession:workflowMaxSubagents",
+          "kind": "property",
+          "line_range": [
+            90,
+            90
+          ],
+          "name": "workflowMaxSubagents",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:HarnessSession",
+      "kind": "interface",
+      "line_range": [
+        61,
+        91
+      ],
+      "name": "HarnessSession",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionLimits:maxInputTokensPerSession",
+          "kind": "property",
+          "line_range": [
+            104,
+            104
+          ],
+          "name": "maxInputTokensPerSession",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:SessionLimits:maxOutputTokensPerSession",
+          "kind": "property",
+          "line_range": [
+            109,
+            109
+          ],
+          "name": "maxOutputTokensPerSession",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:SessionLimits",
+      "kind": "interface",
+      "line_range": [
+        96,
+        110
+      ],
+      "name": "SessionLimits",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepInput:inputResponses",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "inputResponses",
+          "partial_analysis": false,
+          "return_type": ": readonly InputResponse[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepInput:message",
+          "kind": "property",
+          "line_range": [
+            124,
+            124
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string | UserContent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepInput:context",
+          "kind": "property",
+          "line_range": [
+            130,
+            130
+          ],
+          "name": "context",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepInput:outputSchema",
+          "kind": "property",
+          "line_range": [
+            135,
+            135
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepInput:runtimeActionResults",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "runtimeActionResults",
+          "partial_analysis": false,
+          "return_type": ": readonly RuntimeActionResult[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:StepInput",
+      "kind": "interface",
+      "line_range": [
+        122,
+        143
+      ],
+      "name": "StepInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepDone:done",
+          "kind": "property",
+          "line_range": [
+            149,
+            149
+          ],
+          "name": "done",
+          "partial_analysis": false,
+          "return_type": ": true",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepDone:output",
+          "kind": "property",
+          "line_range": [
+            150,
+            150
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepDone:isError",
+          "kind": "property",
+          "line_range": [
+            156,
+            156
+          ],
+          "name": "isError",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:StepDone",
+      "kind": "interface",
+      "line_range": [
+        148,
+        157
+      ],
+      "name": "StepDone",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:StepNext",
+      "kind": "type_alias",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "StepNext",
+      "partial_analysis": false,
+      "value": "StepDone | StepFn | null;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepResult:next",
+          "kind": "property",
+          "line_range": [
+            172,
+            172
+          ],
+          "name": "next",
+          "partial_analysis": false,
+          "return_type": ": StepNext",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:StepResult:session",
+          "kind": "property",
+          "line_range": [
+            173,
+            173
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": HarnessSession",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:StepResult",
+      "kind": "interface",
+      "line_range": [
+        171,
+        174
+      ],
+      "name": "StepResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:StepFn",
+      "kind": "type_alias",
+      "line_range": [
+        180,
+        180
+      ],
+      "name": "StepFn",
+      "partial_analysis": false,
+      "value": "(session: HarnessSession, input?: StepInput) => Promise<StepResult>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:HarnessToolMap",
+      "kind": "type_alias",
+      "line_range": [
+        188,
+        188
+      ],
+      "name": "HarnessToolMap",
+      "partial_analysis": false,
+      "value": "ReadonlyMap<string, HarnessToolDefinition>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:HarnessEmitFn",
+      "kind": "type_alias",
+      "line_range": [
+        197,
+        200
+      ],
+      "name": "HarnessEmitFn",
+      "partial_analysis": false,
+      "value": "(\r\n  event: HandleMessageStreamEvent,\r\n  messages?: readonly import(\"ai\").ModelMessage[],\r\n) => Promise<void>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/types.ts:HandleEventFn",
+      "kind": "type_alias",
+      "line_range": [
+        210,
+        213
+      ],
+      "name": "HandleEventFn",
+      "partial_analysis": false,
+      "value": "(\r\n  event: HandleMessageStreamEvent,\r\n  messages?: readonly import(\"ai\").ModelMessage[],\r\n) => Promise<void>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:abortSignal",
+          "kind": "property",
+          "line_range": [
+            220,
+            220
+          ],
+          "name": "abortSignal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:capabilities",
+          "kind": "property",
+          "line_range": [
+            226,
+            226
+          ],
+          "name": "capabilities",
+          "partial_analysis": false,
+          "return_type": ": SessionCapabilities",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:workflow",
+          "kind": "property",
+          "line_range": [
+            234,
+            234
+          ],
+          "name": "workflow",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:workflowMaxSubagents",
+          "kind": "property",
+          "line_range": [
+            241,
+            241
+          ],
+          "name": "workflowMaxSubagents",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:handleEvent",
+          "kind": "property",
+          "line_range": [
+            242,
+            242
+          ],
+          "name": "handleEvent",
+          "partial_analysis": false,
+          "return_type": ": HandleEventFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:mode",
+          "kind": "property",
+          "line_range": [
+            250,
+            250
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": RunMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:onCompaction",
+          "kind": "property",
+          "line_range": [
+            257,
+            257
+          ],
+          "name": "onCompaction",
+          "partial_analysis": false,
+          "return_type": ": () => readonly ModelMessage[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:dispatchDynamicModelEvent",
+          "kind": "property",
+          "line_range": [
+            258,
+            263
+          ],
+          "name": "dispatchDynamicModelEvent",
+          "partial_analysis": false,
+          "return_type": ": (input: {\r\n    readonly ctx: AlsContext;\r\n    readonly event: HandleMessageStreamEvent;\r\n    readonly fallback: RuntimeModelReference;\r\n    readonly messages: readonly ModelMessage[];\r\n  }) => Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:resolveModel",
+          "kind": "property",
+          "line_range": [
+            264,
+            264
+          ],
+          "name": "resolveModel",
+          "partial_analysis": false,
+          "return_type": ": (reference: RuntimeModelReference) => Promise<LanguageModel>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:runtimeIdentity",
+          "kind": "property",
+          "line_range": [
+            272,
+            272
+          ],
+          "name": "runtimeIdentity",
+          "partial_analysis": false,
+          "return_type": ": RuntimeIdentity",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig:tools",
+          "kind": "property",
+          "line_range": [
+            281,
+            281
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": HarnessToolMap",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/types.ts:ToolLoopHarnessConfig",
+      "kind": "interface",
+      "line_range": [
+        218,
+        282
+      ],
+      "name": "ToolLoopHarnessConfig",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

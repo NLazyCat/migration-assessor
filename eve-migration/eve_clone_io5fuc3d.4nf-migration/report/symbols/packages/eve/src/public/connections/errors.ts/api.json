@@ -1,0 +1,288 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        8,
+        44
+      ],
+      "name": "ConnectionAuthorizationChallenge",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionAuthorizationChallenge { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "userCode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "userCode?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "expiresAt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "expiresAt?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "instructions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "instructions?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "displayName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "displayName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        49,
+        55
+      ],
+      "name": "ConnectionAuthorizationRequiredErrorOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionAuthorizationRequiredErrorOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        60,
+        94
+      ],
+      "name": "ConnectionAuthorizationFailedErrorOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionAuthorizationFailedErrorOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "reason",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reason?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "retryable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "retryable?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        104,
+        112
+      ],
+      "name": "ConnectionAuthorizationRequiredError",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionAuthorizationRequiredErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ConnectionAuthorizationRequiredError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        107,
+        111
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionAuthorizationRequiredErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ConnectionAuthorizationRequiredError::constructor(connectionName: string, options: ConnectionAuthorizationRequiredErrorOptions) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        120,
+        132
+      ],
+      "name": "ConnectionAuthorizationFailedError",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionAuthorizationFailedErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ConnectionAuthorizationFailedError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        125,
+        131
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ConnectionAuthorizationFailedErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ConnectionAuthorizationFailedError::constructor(connectionName: string, options: ConnectionAuthorizationFailedErrorOptions) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        141,
+        145
+      ],
+      "name": "isConnectionAuthorizationRequiredError",
+      "params": [
+        {
+          "name": "err",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "err is ConnectionAuthorizationRequiredError",
+      "signature": "export function isConnectionAuthorizationRequiredError(err: unknown) -> err is ConnectionAuthorizationRequiredError"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        154,
+        158
+      ],
+      "name": "isConnectionAuthorizationFailedError",
+      "params": [
+        {
+          "name": "err",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "err is ConnectionAuthorizationFailedError",
+      "signature": "export function isConnectionAuthorizationFailedError(err: unknown) -> err is ConnectionAuthorizationFailedError"
+    }
+  ],
+  "module": "packages/eve/src/public/connections/errors.ts"
+}

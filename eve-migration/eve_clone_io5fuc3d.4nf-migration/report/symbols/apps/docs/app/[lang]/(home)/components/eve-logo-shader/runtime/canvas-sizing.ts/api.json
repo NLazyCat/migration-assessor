@@ -1,0 +1,140 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "DEFAULT_LOGO_ASPECT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_LOGO_ASPECT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "CanvasLayout",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CanvasLayout = {\r\n  width: number;\r\n  height: number;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "CanvasLayoutRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CanvasLayoutRef = MutableRefObject<CanvasLayout>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "DevicePixelRatioRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevicePixelRatioRef = MutableRefObject<number>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        20,
+        25
+      ],
+      "name": "getLogicalRenderSize",
+      "params": [
+        {
+          "name": "aspect",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getLogicalRenderSize(aspect: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "getBrowserDevicePixelRatio",
+      "params": [
+        {
+          "name": "devicePixelRatio",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getBrowserDevicePixelRatio(devicePixelRatio: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        31,
+        46
+      ],
+      "name": "resizeCanvas",
+      "params": [
+        {
+          "name": "canvas",
+          "optional": false,
+          "type": "HTMLCanvasElement | null"
+        },
+        {
+          "name": "canvasLayoutRef",
+          "optional": false,
+          "type": "CanvasLayoutRef"
+        },
+        {
+          "name": "devicePixelRatioRef",
+          "optional": false,
+          "type": "DevicePixelRatioRef"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function resizeCanvas(canvas: HTMLCanvasElement | null, canvasLayoutRef: CanvasLayoutRef, devicePixelRatioRef: DevicePixelRatioRef) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        58
+      ],
+      "name": "getCanvasLogicalSize",
+      "params": [
+        {
+          "name": "canvas",
+          "optional": false,
+          "type": "HTMLCanvasElement"
+        },
+        {
+          "name": "devicePixelRatio",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getCanvasLogicalSize(canvas: HTMLCanvasElement, devicePixelRatio: number) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts"
+}

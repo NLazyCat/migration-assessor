@@ -4,6 +4,78 @@ use std::collections::HashMap;
 use std::fs;
 use std::path::Path;
 
+/// Extract external npm package names from TypeScript import/export statements.
+pub fn extract_external_specifiers(source: &str) -> Vec<String> {
+    let mut packages: Vec<String> = Vec::new();
+    for line in source.lines() {
+        let trimmed = line.trim();
+        let t = match trimmed.split("//").next() {
+            Some(s) => s.trim(),
+            None => trimmed,
+        };
+        if !t.starts_with("import ") && !t.starts_with("export ") {
+            continue;
+        }
+        let from_idx = match t.rfind(" from ") {
+            Some(i) => i,
+            None => {
+                if let Some(start) = t.find('"')
+                    && let Some(end) = t[start + 1..].find('"')
+                {
+                    let spec = &t[start + 1..start + 1 + end];
+                    push_package(&mut packages, spec);
+                }
+                if let Some(start) = t.find('\'')
+                    && let Some(end) = t[start + 1..].find('\'')
+                {
+                    let spec = &t[start + 1..start + 1 + end];
+                    push_package(&mut packages, spec);
+                }
+                continue;
+            }
+        };
+        let after = &t[from_idx + 6..];
+        if let Some(start) = after.find('"')
+            && let Some(end) = after[start + 1..].find('"')
+        {
+            let spec = &after[start + 1..start + 1 + end];
+            push_package(&mut packages, spec);
+        } else if let Some(start) = after.find('\'')
+            && let Some(end) = after[start + 1..].find('\'')
+        {
+            let spec = &after[start + 1..start + 1 + end];
+            push_package(&mut packages, spec);
+        }
+    }
+    packages
+}
+
+fn push_package(packages: &mut Vec<String>, spec: &str) {
+    if is_relative_or_alias(spec) {
+        return;
+    }
+    let name = if spec.starts_with('@') {
+        let parts: Vec<&str> = spec.split('/').collect();
+        if parts.len() >= 2 {
+            format!("{}/{}", parts[0], parts[1])
+        } else {
+            spec.to_string()
+        }
+    } else {
+        spec.split('/').next().unwrap_or(spec).to_string()
+    };
+    if !packages.contains(&name) {
+        packages.push(name);
+    }
+}
+
+fn is_relative_or_alias(spec: &str) -> bool {
+    spec.starts_with('.')
+        || spec.starts_with('/')
+        || spec.starts_with('#')
+        || (spec.contains('/') && !spec.starts_with('@'))
+}
+
 #[derive(Debug, Clone, Default)]
 struct PackageJson {
     dependencies: HashMap<String, String>,
@@ -197,7 +269,8 @@ fn extract_package_name(pkg_path: &str, info: &Value) -> String {
 }
 
 fn read_package_json(path: &Path) -> anyhow::Result<PackageJson> {
-    let content = fs::read_to_string(path)?;
+    let bytes = fs::read(path)?;
+    let (content, _encoding, _had_errors) = encoding_rs::UTF_8.decode(&bytes);
     let value: Value = serde_json::from_str(&content)?;
 
     Ok(PackageJson {

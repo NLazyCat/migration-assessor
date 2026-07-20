@@ -1,0 +1,112 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "ChannelsFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChannelsFlowDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "detectDeployment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectDeployment",
+      "signature": "detectDeployment: : typeof detectDeployment"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "inspectExistingChannelRegistrations",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof inspectExistingChannelRegistrations",
+      "signature": "inspectExistingChannelRegistrations: : typeof inspectExistingChannelRegistrations"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "getVercelAuthStatus",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof getVercelAuthStatus",
+      "signature": "getVercelAuthStatus: : typeof getVercelAuthStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "addChannels",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AddChannelsDeps",
+      "signature": "addChannels?: : AddChannelsDeps"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        38,
+        57
+      ],
+      "name": "ChannelsFlowResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelsFlowResult = | {\r\n      kind: \"done\";\r\n      addedChannels: readonly string[];\r\n    }\r\n  | {\r\n      /**\r\n       * The user chose \"Deploy and chat\" on the post-Slack \"See it live\"\r\n       * prompt. The caller deploys, then points them at this workspace.\r\n       */\r\n      kind: \"deploy-and-chat\";\r\n      addedChannels: readonly string[];\r\n      chat: { chatUrl?: string; workspaceName?: string };\r\n    }\r\n  | { kind: \"cancelled\" }\r\n  | {\r\n      kind: \"failed\";\r\n      addedChannels: readonly string[];\r\n      message: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "SEE_IT_LIVE_MESSAGE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SEE_IT_LIVE_MESSAGE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        242,
+        369
+      ],
+      "name": "runChannelsFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<ChannelsFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ChannelsFlowResult>",
+      "signature": "export function runChannelsFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<ChannelsFlowDeps>;\r\n}) -> Promise<ChannelsFlowResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/flows/channels.ts"
+}

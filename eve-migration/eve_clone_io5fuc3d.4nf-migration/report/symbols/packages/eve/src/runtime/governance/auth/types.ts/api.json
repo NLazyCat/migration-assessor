@@ -1,0 +1,561 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "RouteAuthAttributes",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RouteAuthAttributes = RuntimeSessionAuthAttributes;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        16,
+        24
+      ],
+      "name": "AuthenticatedCallerPrincipal",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AuthenticatedCallerPrincipal { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "attributes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RouteAuthAttributes",
+      "signature": "attributes: : RouteAuthAttributes"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "authenticator",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeSessionAuthenticator",
+      "signature": "authenticator: : RuntimeSessionAuthenticator"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "claims",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RouteAuthAttributes",
+      "signature": "claims: : RouteAuthAttributes"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "principalId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "principalId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "principalType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeSessionPrincipalType",
+      "signature": "principalType: : RuntimeSessionPrincipalType"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "subject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "subject?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "ResolvedTokenClaimMatchers",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedTokenClaimMatchers { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "claims",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, readonly string[]>>",
+      "signature": "claims?: : Readonly<Record<string, readonly string[]>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "subjects",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "subjects?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "CurrentVercelProject",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CurrentVercelProject { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "environment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "environment?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "projectId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        43,
+        47
+      ],
+      "name": "ResolvedHttpBasicAuthStrategy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedHttpBasicAuthStrategy { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"http-basic\"",
+      "signature": "kind: : \"http-basic\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "password",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "password: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "username",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "username: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        52,
+        59
+      ],
+      "name": "ResolvedJwtHmacAuthStrategy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedJwtHmacAuthStrategy { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "algorithm",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"HS256\" | \"HS384\" | \"HS512\"",
+      "signature": "algorithm: : \"HS256\" | \"HS384\" | \"HS512\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "audiences",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "audiences: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "clockSkewSeconds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "clockSkewSeconds: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"jwt-hmac\"",
+      "signature": "kind: : \"jwt-hmac\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "secret",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "secret: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        64,
+        71
+      ],
+      "name": "ResolvedJwtEcdsaAuthStrategy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedJwtEcdsaAuthStrategy { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "algorithm",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"ES256\" | \"ES384\" | \"ES512\"",
+      "signature": "algorithm: : \"ES256\" | \"ES384\" | \"ES512\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "audiences",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "audiences: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "clockSkewSeconds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "clockSkewSeconds: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"jwt-ecdsa\"",
+      "signature": "kind: : \"jwt-ecdsa\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "publicKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "publicKey: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        76,
+        102
+      ],
+      "name": "ResolvedOidcAuthStrategy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedOidcAuthStrategy { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "acceptCurrentVercelProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "acceptCurrentVercelProject: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "audiences",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "audiences: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "clockSkewSeconds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "clockSkewSeconds: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "currentVercelProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CurrentVercelProject",
+      "signature": "currentVercelProject?: : CurrentVercelProject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        99,
+        99
+      ],
+      "name": "discoveryUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "discoveryUrl: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        100,
+        100
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"oidc\"",
+      "signature": "kind: : \"oidc\""
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        107,
+        121
+      ],
+      "name": "RouteStrategyAuthenticationResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RouteStrategyAuthenticationResult = | {\r\n      readonly kind: \"authenticated\";\r\n      readonly principal: AuthenticatedCallerPrincipal;\r\n    }\r\n  | {\r\n      readonly kind: \"caller-not-allowed\";\r\n    }\r\n  | {\r\n      readonly kind: \"misconfigured\";\r\n      readonly message: string;\r\n    }\r\n  | {\r\n      readonly kind: \"not-authenticated\";\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        127,
+        138
+      ],
+      "name": "createRuntimeSessionAuthContext",
+      "params": [
+        {
+          "name": "principal",
+          "optional": false,
+          "type": "AuthenticatedCallerPrincipal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSessionAuthContext",
+      "signature": "export function createRuntimeSessionAuthContext(principal: AuthenticatedCallerPrincipal) -> RuntimeSessionAuthContext"
+    }
+  ],
+  "module": "packages/eve/src/runtime/governance/auth/types.ts"
+}

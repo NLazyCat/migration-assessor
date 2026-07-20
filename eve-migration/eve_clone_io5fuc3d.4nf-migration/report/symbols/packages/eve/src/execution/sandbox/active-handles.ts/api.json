@@ -1,0 +1,81 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "ShutdownCapableSandboxHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ShutdownCapableSandboxHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "trackActiveSandboxHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly handle: ShutdownCapableSandboxHandle;\r\n  readonly sessionKey: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function trackActiveSandboxHandle(input: {\r\n  readonly backendName: string;\r\n  readonly handle: ShutdownCapableSandboxHandle;\r\n  readonly sessionKey: string;\r\n}) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        64
+      ],
+      "name": "shutdownActiveSandboxHandles",
+      "params": [
+        {
+          "name": "input",
+          "optional": true,
+          "type": "{\r\n  readonly log?: (message: string) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function shutdownActiveSandboxHandles(input: {\r\n  readonly log?: (message: string) => void;\r\n}) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        69
+      ],
+      "name": "countActiveSandboxHandles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function countActiveSandboxHandles() -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "clearActiveSandboxHandlesForTest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function clearActiveSandboxHandlesForTest() -> void"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/active-handles.ts"
+}

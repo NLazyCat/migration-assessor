@@ -1,0 +1,49 @@
+{
+  "module": "packages/eve/src/discover/extension-specifier.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extension-specifier.ts:escapeRegExp",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1,
+        3
+      ],
+      "name": "escapeRegExp",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function escapeRegExp(value: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/extension-specifier.ts:parseExtensionMountSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        53
+      ],
+      "name": "parseExtensionMountSpecifier",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function parseExtensionMountSpecifier(source: string) -> string | null",
+      "visibility": "Public"
+    }
+  ]
+}

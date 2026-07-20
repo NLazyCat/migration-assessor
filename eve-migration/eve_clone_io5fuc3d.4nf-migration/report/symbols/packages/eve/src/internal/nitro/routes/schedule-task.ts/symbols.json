@@ -1,0 +1,85 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/schedule-task.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/schedule-task.ts:dispatchScheduleTask",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        25
+      ],
+      "name": "dispatchScheduleTask",
+      "params": [
+        {
+          "name": "taskName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ scheduleId: string; sessionIds: readonly string[] }>",
+      "signature": "export function dispatchScheduleTask(taskName: string, config: NitroArtifactsConfig) -> Promise<{ scheduleId: string; sessionIds: readonly string[] }>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/schedule-task.ts:dispatchScheduleTaskFromArtifacts",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        68
+      ],
+      "name": "dispatchScheduleTaskFromArtifacts",
+      "params": [
+        {
+          "name": "taskName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "compiledArtifactsSource",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ scheduleId: string; sessionIds: readonly string[] }>",
+      "signature": "export function dispatchScheduleTaskFromArtifacts(taskName: string, compiledArtifactsSource: RuntimeCompiledArtifactsSource) -> Promise<{ scheduleId: string; sessionIds: readonly string[] }>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/schedule-task.ts:loadScheduleRun",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        70,
+        91
+      ],
+      "name": "loadScheduleRun",
+      "params": [
+        {
+          "name": "schedule",
+          "optional": false,
+          "type": "Awaited<ReturnType<typeof loadResolvedCompiledScheduleByTaskName>>"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "Awaited<ReturnType<typeof getCompiledRuntimeAgentBundle>>[\"moduleMap\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function loadScheduleRun(schedule: Awaited<ReturnType<typeof loadResolvedCompiledScheduleByTaskName>>, moduleMap: Awaited<ReturnType<typeof getCompiledRuntimeAgentBundle>>[\"moduleMap\"]) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

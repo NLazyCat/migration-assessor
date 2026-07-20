@@ -1,0 +1,46 @@
+{
+  "TraceTurn": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 27,
+        "file": "apps/frameworks/next/app/_chat/App.tsx",
+        "line": 12
+      },
+      "symbol": "apps/frameworks/next/app/_chat/types.ts:TraceTurn"
+    }
+  ],
+  "resolveTurnFailureMessage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 55,
+        "file": "apps/frameworks/next/app/_chat/App.tsx",
+        "line": 33
+      },
+      "symbol": "apps/frameworks/next/app/_chat/turn-content.ts:resolveTurnFailureMessage"
+    }
+  ],
+  "shouldRenderAssistantTurn": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "apps/frameworks/next/app/_chat/App.tsx",
+        "line": 29
+      },
+      "symbol": "apps/frameworks/next/app/_chat/turn-content.ts:shouldRenderAssistantTurn"
+    }
+  ],
+  "traceReducer": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "apps/frameworks/next/app/_chat/App.tsx",
+        "line": 60
+      },
+      "symbol": "apps/frameworks/next/app/_chat/trace-reducer.ts:traceReducer"
+    }
+  ]
+}

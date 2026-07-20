@@ -1,0 +1,99 @@
+{
+  "module": "packages/eve/src/channel/send.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.ts:log",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.ts:createSendFn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        85
+      ],
+      "name": "createSendFn",
+      "params": [
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "Runtime"
+        },
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter<any>"
+        },
+        {
+          "name": "channelName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "{ readonly requestId?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SendFn<TState>",
+      "signature": "export function createSendFn(runtime: Runtime, adapter: ChannelAdapter<any>, channelName: string, metadata: { readonly requestId?: string }) -> SendFn<TState>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.ts:serializeUrlFilePartsInMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        107
+      ],
+      "name": "serializeUrlFilePartsInMessage",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string | UserContent | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent | undefined",
+      "signature": "export function serializeUrlFilePartsInMessage(message: string | UserContent | undefined) -> string | UserContent | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/send.ts:normalizeSendInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        109,
+        119
+      ],
+      "name": "normalizeSendInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string | UserContent | SendPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SendPayload",
+      "signature": "export function normalizeSendInput(input: string | UserContent | SendPayload) -> SendPayload",
+      "visibility": "Private"
+    }
+  ]
+}

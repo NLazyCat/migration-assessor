@@ -13,8 +13,7 @@ fn test_e2e_init_creates_project_structure() {
     let mut cmd = Command::new(&bin);
     cmd.current_dir(&project_root)
         .arg("init")
-        .arg("calc-migration")
-        .arg("--target-lang=rust");
+        .arg("calc-migration");
 
     cmd.assert()
         .success()

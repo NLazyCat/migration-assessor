@@ -1,0 +1,63 @@
+{
+  "module": "e2e/fixtures/agent-tools/evals/channel-metadata/shared.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-metadata/shared.ts:METADATA_TOOL",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "METADATA_TOOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-metadata/shared.ts:PROMPT",
+      "kind": "variable",
+      "line_range": [
+        12,
+        14
+      ],
+      "name": "PROMPT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-metadata/shared.ts:startChannelSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        16,
+        36
+      ],
+      "name": "startChannelSession",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTargetHandle"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function startChannelSession(target: EveEvalTargetHandle, path: string, body: Record<string, unknown>) -> Promise<string>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "module": "packages/eve/src/execution/node-step.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.test.ts:setupMockAgentForToolExecution",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        97
+      ],
+      "name": "setupMockAgentForToolExecution",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setupMockAgentForToolExecution(toolName: string, args: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.test.ts:setupMockAgentForToolCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        171
+      ],
+      "name": "setupMockAgentForToolCall",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setupMockAgentForToolCall(toolName: string, args: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.test.ts:createEmptyToolRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        173,
+        178
+      ],
+      "name": "createEmptyToolRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolRegistry",
+      "signature": "export function createEmptyToolRegistry() -> RuntimeToolRegistry",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.test.ts:createTestTurnAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        180,
+        189
+      ],
+      "name": "createTestTurnAgent",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Partial<RuntimeTurnAgent>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeTurnAgent",
+      "signature": "export function createTestTurnAgent(overrides: Partial<RuntimeTurnAgent>) -> RuntimeTurnAgent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.test.ts:createTestNode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        191,
+        215
+      ],
+      "name": "createTestNode",
+      "params": [
+        {
+          "name": "turnAgent",
+          "optional": true,
+          "type": "RuntimeTurnAgent"
+        },
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<ResolvedRuntimeAgentNode>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedRuntimeAgentNode",
+      "signature": "export function createTestNode(turnAgent: RuntimeTurnAgent, overrides: Partial<ResolvedRuntimeAgentNode>) -> ResolvedRuntimeAgentNode",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/node-step.test.ts:createNoopRuntime",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        217,
+        227
+      ],
+      "name": "createNoopRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Runtime",
+      "signature": "export function createNoopRuntime() -> Runtime",
+      "visibility": "Private"
+    }
+  ]
+}

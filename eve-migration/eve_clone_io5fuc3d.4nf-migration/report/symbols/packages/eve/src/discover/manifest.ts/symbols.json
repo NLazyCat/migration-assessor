@@ -1,0 +1,1495 @@
+{
+  "module": "packages/eve/src/discover/manifest.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:AGENT_SOURCE_MANIFEST_KIND",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "AGENT_SOURCE_MANIFEST_KIND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:AGENT_SOURCE_MANIFEST_VERSION",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "AGENT_SOURCE_MANIFEST_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:ChannelSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "ChannelSourceRef",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ConnectionSourceRef:connectionName",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "connectionName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:ConnectionSourceRef",
+      "kind": "interface",
+      "line_range": [
+        36,
+        43
+      ],
+      "name": "ConnectionSourceRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:HookSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "HookSourceRef",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:InstructionsSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "InstructionsSourceRef",
+      "partial_analysis": false,
+      "value": "MarkdownSourceRef<InstructionsDefinition> | ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:SkillSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        62
+      ],
+      "name": "SkillSourceRef",
+      "partial_analysis": false,
+      "value": "| MarkdownSourceRef<SkillDefinition>\r\n  | ModuleSourceRef\r\n  | (NamedSkillDefinition & SkillPackageSourceRef);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:ToolSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "ToolSourceRef",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef:entryPath",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "entryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef:logicalPath",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef:manifest",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": AgentSourceManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef:rootPath",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "rootPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef:sourceId",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef:subagentId",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "subagentId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:LocalSubagentSourceRef",
+      "kind": "interface",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "LocalSubagentSourceRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:ScheduleSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "ScheduleSourceRef",
+      "partial_analysis": false,
+      "value": "MarkdownSourceRef<ScheduleDefinition> | ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:SandboxSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "SandboxSourceRef",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:SandboxWorkspaceFolderSourceRef:logicalPath",
+          "kind": "property",
+          "line_range": [
+            111,
+            111
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:SandboxWorkspaceFolderSourceRef:rootEntries",
+          "kind": "property",
+          "line_range": [
+            117,
+            117
+          ],
+          "name": "rootEntries",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:SandboxWorkspaceFolderSourceRef:sourceId",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:SandboxWorkspaceFolderSourceRef:sourcePath",
+          "kind": "property",
+          "line_range": [
+            125,
+            125
+          ],
+          "name": "sourcePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:SandboxWorkspaceFolderSourceRef",
+      "kind": "interface",
+      "line_range": [
+        106,
+        126
+      ],
+      "name": "SandboxWorkspaceFolderSourceRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:LibSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        131,
+        131
+      ],
+      "name": "LibSourceRef",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:ExtensionSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        138,
+        138
+      ],
+      "name": "ExtensionSourceRef",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:namespace",
+          "kind": "property",
+          "line_range": [
+            147,
+            147
+          ],
+          "name": "namespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:specifier",
+          "kind": "property",
+          "line_range": [
+            149,
+            149
+          ],
+          "name": "specifier",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:packageName",
+          "kind": "property",
+          "line_range": [
+            151,
+            151
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:packageRoot",
+          "kind": "property",
+          "line_range": [
+            153,
+            153
+          ],
+          "name": "packageRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:sourceRoot",
+          "kind": "property",
+          "line_range": [
+            155,
+            155
+          ],
+          "name": "sourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:manifest",
+          "kind": "property",
+          "line_range": [
+            157,
+            157
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": AgentSourceManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount:overrides",
+          "kind": "property",
+          "line_range": [
+            164,
+            164
+          ],
+          "name": "overrides",
+          "partial_analysis": false,
+          "return_type": ": AgentSourceManifest",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:ResolvedExtensionMount",
+      "kind": "interface",
+      "line_range": [
+        145,
+        165
+      ],
+      "name": "ResolvedExtensionMount",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:SubagentSourceRef",
+      "kind": "type_alias",
+      "line_range": [
+        170,
+        170
+      ],
+      "name": "SubagentSourceRef",
+      "partial_analysis": false,
+      "value": "LocalSubagentSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateConnectionSourceRefInput:connectionName",
+          "kind": "property",
+          "line_range": [
+            176,
+            176
+          ],
+          "name": "connectionName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:CreateConnectionSourceRefInput",
+      "kind": "interface",
+      "line_range": [
+        175,
+        177
+      ],
+      "name": "CreateConnectionSourceRefInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:agentId",
+          "kind": "property",
+          "line_range": [
+            183,
+            183
+          ],
+          "name": "agentId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:agentRoot",
+          "kind": "property",
+          "line_range": [
+            184,
+            184
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:appRoot",
+          "kind": "property",
+          "line_range": [
+            185,
+            185
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:channels",
+          "kind": "property",
+          "line_range": [
+            186,
+            186
+          ],
+          "name": "channels",
+          "partial_analysis": false,
+          "return_type": ": ChannelSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:connections",
+          "kind": "property",
+          "line_range": [
+            187,
+            187
+          ],
+          "name": "connections",
+          "partial_analysis": false,
+          "return_type": ": ConnectionSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:configModule",
+          "kind": "property",
+          "line_range": [
+            188,
+            188
+          ],
+          "name": "configModule",
+          "partial_analysis": false,
+          "return_type": ": ModuleSourceRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:diagnosticsSummary",
+          "kind": "property",
+          "line_range": [
+            189,
+            189
+          ],
+          "name": "diagnosticsSummary",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnosticsSummary",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:extensions",
+          "kind": "property",
+          "line_range": [
+            195,
+            195
+          ],
+          "name": "extensions",
+          "partial_analysis": false,
+          "return_type": ": ExtensionSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:resolvedExtensions",
+          "kind": "property",
+          "line_range": [
+            201,
+            201
+          ],
+          "name": "resolvedExtensions",
+          "partial_analysis": false,
+          "return_type": ": ResolvedExtensionMount[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:hooks",
+          "kind": "property",
+          "line_range": [
+            202,
+            202
+          ],
+          "name": "hooks",
+          "partial_analysis": false,
+          "return_type": ": ModuleSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:lib",
+          "kind": "property",
+          "line_range": [
+            203,
+            203
+          ],
+          "name": "lib",
+          "partial_analysis": false,
+          "return_type": ": LibSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:kind",
+          "kind": "property",
+          "line_range": [
+            204,
+            204
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": typeof AGENT_SOURCE_MANIFEST_KIND",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:instructions",
+          "kind": "property",
+          "line_range": [
+            215,
+            215
+          ],
+          "name": "instructions",
+          "partial_analysis": false,
+          "return_type": ": InstructionsSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:sandbox",
+          "kind": "property",
+          "line_range": [
+            221,
+            221
+          ],
+          "name": "sandbox",
+          "partial_analysis": false,
+          "return_type": ": SandboxSourceRef | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:sandboxWorkspaces",
+          "kind": "property",
+          "line_range": [
+            227,
+            227
+          ],
+          "name": "sandboxWorkspaces",
+          "partial_analysis": false,
+          "return_type": ": SandboxWorkspaceFolderSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:schedules",
+          "kind": "property",
+          "line_range": [
+            228,
+            228
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": ScheduleSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:skills",
+          "kind": "property",
+          "line_range": [
+            229,
+            229
+          ],
+          "name": "skills",
+          "partial_analysis": false,
+          "return_type": ": SkillSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:tools",
+          "kind": "property",
+          "line_range": [
+            230,
+            230
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": ModuleSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:version",
+          "kind": "property",
+          "line_range": [
+            231,
+            231
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": typeof AGENT_SOURCE_MANIFEST_VERSION",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest:subagents",
+          "kind": "property",
+          "line_range": [
+            232,
+            232
+          ],
+          "name": "subagents",
+          "partial_analysis": false,
+          "return_type": ": SubagentSourceRef[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:AgentSourceManifest",
+      "kind": "interface",
+      "line_range": [
+        182,
+        233
+      ],
+      "name": "AgentSourceManifest",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:agentId",
+          "kind": "property",
+          "line_range": [
+            239,
+            239
+          ],
+          "name": "agentId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:agentRoot",
+          "kind": "property",
+          "line_range": [
+            240,
+            240
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:appRoot",
+          "kind": "property",
+          "line_range": [
+            241,
+            241
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:channels",
+          "kind": "property",
+          "line_range": [
+            242,
+            242
+          ],
+          "name": "channels",
+          "partial_analysis": false,
+          "return_type": ": readonly ChannelSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:connections",
+          "kind": "property",
+          "line_range": [
+            243,
+            243
+          ],
+          "name": "connections",
+          "partial_analysis": false,
+          "return_type": ": readonly ConnectionSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:configModule",
+          "kind": "property",
+          "line_range": [
+            244,
+            244
+          ],
+          "name": "configModule",
+          "partial_analysis": false,
+          "return_type": ": ModuleSourceRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:diagnostics",
+          "kind": "property",
+          "line_range": [
+            245,
+            245
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": readonly DiscoverDiagnostic[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:extensions",
+          "kind": "property",
+          "line_range": [
+            246,
+            246
+          ],
+          "name": "extensions",
+          "partial_analysis": false,
+          "return_type": ": readonly ExtensionSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:resolvedExtensions",
+          "kind": "property",
+          "line_range": [
+            247,
+            247
+          ],
+          "name": "resolvedExtensions",
+          "partial_analysis": false,
+          "return_type": ": readonly ResolvedExtensionMount[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:hooks",
+          "kind": "property",
+          "line_range": [
+            248,
+            248
+          ],
+          "name": "hooks",
+          "partial_analysis": false,
+          "return_type": ": readonly ModuleSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:lib",
+          "kind": "property",
+          "line_range": [
+            249,
+            249
+          ],
+          "name": "lib",
+          "partial_analysis": false,
+          "return_type": ": readonly LibSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:packageName",
+          "kind": "property",
+          "line_range": [
+            256,
+            256
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:instructions",
+          "kind": "property",
+          "line_range": [
+            257,
+            257
+          ],
+          "name": "instructions",
+          "partial_analysis": false,
+          "return_type": ": readonly InstructionsSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:sandbox",
+          "kind": "property",
+          "line_range": [
+            258,
+            258
+          ],
+          "name": "sandbox",
+          "partial_analysis": false,
+          "return_type": ": SandboxSourceRef | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:sandboxWorkspaces",
+          "kind": "property",
+          "line_range": [
+            259,
+            259
+          ],
+          "name": "sandboxWorkspaces",
+          "partial_analysis": false,
+          "return_type": ": readonly SandboxWorkspaceFolderSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:schedules",
+          "kind": "property",
+          "line_range": [
+            260,
+            260
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": readonly ScheduleSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:skills",
+          "kind": "property",
+          "line_range": [
+            261,
+            261
+          ],
+          "name": "skills",
+          "partial_analysis": false,
+          "return_type": ": readonly SkillSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:tools",
+          "kind": "property",
+          "line_range": [
+            262,
+            262
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": readonly ModuleSourceRef[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput:subagents",
+          "kind": "property",
+          "line_range": [
+            263,
+            263
+          ],
+          "name": "subagents",
+          "partial_analysis": false,
+          "return_type": ": readonly SubagentSourceRef[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:CreateAgentSourceManifestInput",
+      "kind": "interface",
+      "line_range": [
+        238,
+        264
+      ],
+      "name": "CreateAgentSourceManifestInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:assetsPath",
+          "kind": "property",
+          "line_range": [
+            270,
+            270
+          ],
+          "name": "assetsPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:description",
+          "kind": "property",
+          "line_range": [
+            271,
+            271
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:license",
+          "kind": "property",
+          "line_range": [
+            272,
+            272
+          ],
+          "name": "license",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:logicalPath",
+          "kind": "property",
+          "line_range": [
+            273,
+            273
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:markdown",
+          "kind": "property",
+          "line_range": [
+            274,
+            274
+          ],
+          "name": "markdown",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:metadata",
+          "kind": "property",
+          "line_range": [
+            275,
+            275
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:name",
+          "kind": "property",
+          "line_range": [
+            276,
+            276
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:referencesPath",
+          "kind": "property",
+          "line_range": [
+            277,
+            277
+          ],
+          "name": "referencesPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:rootPath",
+          "kind": "property",
+          "line_range": [
+            278,
+            278
+          ],
+          "name": "rootPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:scriptsPath",
+          "kind": "property",
+          "line_range": [
+            279,
+            279
+          ],
+          "name": "scriptsPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:skillFilePath",
+          "kind": "property",
+          "line_range": [
+            280,
+            280
+          ],
+          "name": "skillFilePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:skillId",
+          "kind": "property",
+          "line_range": [
+            281,
+            281
+          ],
+          "name": "skillId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput:sourceId",
+          "kind": "property",
+          "line_range": [
+            282,
+            282
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:CreateSkillPackageSourceRefInput",
+      "kind": "interface",
+      "line_range": [
+        269,
+        283
+      ],
+      "name": "CreateSkillPackageSourceRefInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateModuleSourceRefInput:exportName",
+          "kind": "property",
+          "line_range": [
+            289,
+            289
+          ],
+          "name": "exportName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateModuleSourceRefInput:logicalPath",
+          "kind": "property",
+          "line_range": [
+            290,
+            290
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateModuleSourceRefInput:sourceId",
+          "kind": "property",
+          "line_range": [
+            291,
+            291
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:CreateModuleSourceRefInput",
+      "kind": "interface",
+      "line_range": [
+        288,
+        292
+      ],
+      "name": "CreateModuleSourceRefInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput:entryPath",
+          "kind": "property",
+          "line_range": [
+            298,
+            298
+          ],
+          "name": "entryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput:logicalPath",
+          "kind": "property",
+          "line_range": [
+            299,
+            299
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput:manifest",
+          "kind": "property",
+          "line_range": [
+            300,
+            300
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": AgentSourceManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput:rootPath",
+          "kind": "property",
+          "line_range": [
+            301,
+            301
+          ],
+          "name": "rootPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput:sourceId",
+          "kind": "property",
+          "line_range": [
+            302,
+            302
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput:subagentId",
+          "kind": "property",
+          "line_range": [
+            303,
+            303
+          ],
+          "name": "subagentId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/manifest.ts:CreateLocalSubagentSourceRefInput",
+      "kind": "interface",
+      "line_range": [
+        297,
+        304
+      ],
+      "name": "CreateLocalSubagentSourceRefInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:createAgentSourceManifest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        309,
+        341
+      ],
+      "name": "createAgentSourceManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateAgentSourceManifestInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentSourceManifest",
+      "signature": "export function createAgentSourceManifest(input: CreateAgentSourceManifestInput) -> AgentSourceManifest",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:deriveAgentIdFromRoots",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        350,
+        366
+      ],
+      "name": "deriveAgentIdFromRoots",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "packageName",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function deriveAgentIdFromRoots(appRoot: string, agentRoot: string, packageName: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:createPathDerivedSourceId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        371,
+        373
+      ],
+      "name": "createPathDerivedSourceId",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createPathDerivedSourceId(logicalPath: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:createModuleSourceRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        378,
+        391
+      ],
+      "name": "createModuleSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateModuleSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModuleSourceRef",
+      "signature": "export function createModuleSourceRef(input: CreateModuleSourceRefInput) -> ModuleSourceRef",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:createConnectionSourceRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        396,
+        403
+      ],
+      "name": "createConnectionSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateConnectionSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSourceRef",
+      "signature": "export function createConnectionSourceRef(input: CreateConnectionSourceRefInput) -> ConnectionSourceRef",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:createLocalSubagentSourceRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        408,
+        421
+      ],
+      "name": "createLocalSubagentSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateLocalSubagentSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LocalSubagentSourceRef",
+      "signature": "export function createLocalSubagentSourceRef(input: CreateLocalSubagentSourceRefInput) -> LocalSubagentSourceRef",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/manifest.ts:createSkillPackageSourceRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        426,
+        447
+      ],
+      "name": "createSkillPackageSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateSkillPackageSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NamedSkillDefinition & SkillPackageSourceRef",
+      "signature": "export function createSkillPackageSourceRef(input: CreateSkillPackageSourceRefInput) -> NamedSkillDefinition & SkillPackageSourceRef",
+      "visibility": "Public"
+    }
+  ]
+}

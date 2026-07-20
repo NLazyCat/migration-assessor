@@ -1,0 +1,118 @@
+{
+  "module": "packages/eve/src/runtime/connections/principal.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/principal.ts:principalKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        38
+      ],
+      "name": "principalKey",
+      "params": [
+        {
+          "name": "principal",
+          "optional": false,
+          "type": "ConnectionPrincipal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function principalKey(principal: ConnectionPrincipal) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/principal.ts:resolveConnectionPrincipal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        113
+      ],
+      "name": "resolveConnectionPrincipal",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "AuthorizationDefinition"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionPrincipal",
+      "signature": "export function resolveConnectionPrincipal(connectionName: string, authorization: AuthorizationDefinition, ctx: AlsContext | undefined) -> ConnectionPrincipal",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/principal.ts:isVercelDevelopmentUser",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        122
+      ],
+      "name": "isVercelDevelopmentUser",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "SessionAuthContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isVercelDevelopmentUser(current: SessionAuthContext) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/principal.ts:buildUserPrincipalRequiredMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        124,
+        148
+      ],
+      "name": "buildUserPrincipalRequiredMessage",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "AuthorizationDefinition"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext | undefined"
+        },
+        {
+          "name": "current",
+          "optional": false,
+          "type": "SessionAuthContext | null | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function buildUserPrincipalRequiredMessage(connectionName: string, authorization: AuthorizationDefinition, ctx: AlsContext | undefined, current: SessionAuthContext | null | undefined) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

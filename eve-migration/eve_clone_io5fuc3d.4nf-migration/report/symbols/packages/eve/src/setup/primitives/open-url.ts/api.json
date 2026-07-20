@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        20,
+        26
+      ],
+      "name": "parseWebUrl",
+      "params": [
+        {
+          "name": "candidate",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function parseWebUrl(candidate: string) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        47
+      ],
+      "name": "openUrl",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function openUrl(url: string) -> void"
+    }
+  ],
+  "module": "packages/eve/src/setup/primitives/open-url.ts"
+}

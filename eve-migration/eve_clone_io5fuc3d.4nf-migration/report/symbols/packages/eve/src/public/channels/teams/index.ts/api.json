@@ -1,0 +1,56 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        13
+      ],
+      "name": "TeamsInstrumentationMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TeamsInstrumentationMetadata { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "channelId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "conversationType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "conversationType: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "teamId: : string | null"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/teams/index.ts"
+}

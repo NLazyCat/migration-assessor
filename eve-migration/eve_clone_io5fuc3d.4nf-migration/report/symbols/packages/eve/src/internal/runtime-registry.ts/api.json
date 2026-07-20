@@ -1,0 +1,264 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "RuntimeRegistryEntryLocation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeRegistryEntryLocation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        21,
+        45
+      ],
+      "name": "RuntimeRegistryError",
+      "params": [
+        {
+          "name": "registry",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RuntimeRegistryEntryLocation & { readonly entryName?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class RuntimeRegistryError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        27,
+        44
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "registry",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RuntimeRegistryEntryLocation & { readonly entryName?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "RuntimeRegistryError::constructor(registry: string, message: string, context: RuntimeRegistryEntryLocation & { readonly entryName?: string }) -> void"
+    },
+    {
+      "generics": [
+        "TEntry"
+      ],
+      "kind": "class",
+      "line_range": [
+        70,
+        136
+      ],
+      "name": "RuntimeRegistry",
+      "params": [
+        {
+          "name": "registry",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "reserved",
+          "optional": false,
+          "type": "Iterable<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class RuntimeRegistry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        75,
+        78
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "registry",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "reserved",
+          "optional": false,
+          "type": "Iterable<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "RuntimeRegistry::constructor(registry: string, reserved: Iterable<string>) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        80,
+        82
+      ],
+      "name": "size",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "RuntimeRegistry::size() -> number"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        84,
+        86
+      ],
+      "name": "has",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "RuntimeRegistry::has(name: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "get",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TEntry | null",
+      "signature": "RuntimeRegistry::get(name: string) -> TEntry | null"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        96,
+        98
+      ],
+      "name": "asMap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ReadonlyMap<string, TEntry>",
+      "signature": "RuntimeRegistry::asMap() -> ReadonlyMap<string, TEntry>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        105,
+        125
+      ],
+      "name": "register",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "TEntry"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RuntimeRegistryRegisterOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "RuntimeRegistry::register(name: string, entry: TEntry, options: RuntimeRegistryRegisterOptions) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        132,
+        135
+      ],
+      "name": "set",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "TEntry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "RuntimeRegistry::set(name: string, entry: TEntry) -> void"
+    }
+  ],
+  "module": "packages/eve/src/internal/runtime-registry.ts"
+}

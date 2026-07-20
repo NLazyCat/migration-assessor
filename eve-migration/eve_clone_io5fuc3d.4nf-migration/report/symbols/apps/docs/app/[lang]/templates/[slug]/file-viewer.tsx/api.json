@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        18,
+        22
+      ],
+      "name": "HighlightedTemplateFile",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HighlightedTemplateFile { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "code",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ReactNode",
+      "signature": "code: : ReactNode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "language",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TemplateFile[\"language\"]",
+      "signature": "language: : TemplateFile[\"language\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "relativePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "relativePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        114,
+        252
+      ],
+      "name": "FileViewer",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "FileViewerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const FileViewer: unknown"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/templates/[slug]/file-viewer.tsx"
+}

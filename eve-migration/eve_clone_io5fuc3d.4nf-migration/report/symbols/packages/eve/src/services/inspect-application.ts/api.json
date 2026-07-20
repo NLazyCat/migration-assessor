@@ -1,0 +1,126 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        21
+      ],
+      "name": "ApplicationInspectionMessaging",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ApplicationInspectionMessaging { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "createSessionRoutePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "createSessionRoutePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "continueSessionRoutePattern",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continueSessionRoutePattern: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "streamRoutePattern",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "streamRoutePattern: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        30
+      ],
+      "name": "ApplicationInspection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ApplicationInspection { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "application",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ApplicationInfo",
+      "signature": "application: : ApplicationInfo"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "compiledState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompileAgentResult | null",
+      "signature": "compiledState: : CompileAgentResult | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "messaging",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ApplicationInspectionMessaging",
+      "signature": "messaging: : ApplicationInspectionMessaging"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        49
+      ],
+      "name": "inspectApplication",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ApplicationInspection>",
+      "signature": "export function inspectApplication(appRoot: string) -> Promise<ApplicationInspection>"
+    }
+  ],
+  "module": "packages/eve/src/services/inspect-application.ts"
+}

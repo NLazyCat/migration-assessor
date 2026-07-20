@@ -1,0 +1,86 @@
+{
+  "module": "packages/eve/src/runtime/connections/validate-authorization.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/validate-authorization.ts:validateAuthorizationSpec",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        67
+      ],
+      "name": "validateAuthorizationSpec",
+      "params": [
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "fieldName",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function validateAuthorizationSpec(authorization: unknown, fieldName: unknown) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/validate-authorization.ts:normalizeAuthorizationSpec",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        114
+      ],
+      "name": "normalizeAuthorizationSpec",
+      "params": [
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "fieldName",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthorizationDefinition",
+      "signature": "export function normalizeAuthorizationSpec(authorization: unknown, prefix: string, fieldName: unknown) -> AuthorizationDefinition",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/validate-authorization.ts:extractVercelConnectMarker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        136
+      ],
+      "name": "extractVercelConnectMarker",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly connector: string } | undefined",
+      "signature": "export function extractVercelConnectMarker(value: unknown) -> { readonly connector: string } | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "module": "packages/eve/src/client/message-reducer-types.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageData:messages",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "messages",
+          "partial_analysis": false,
+          "return_type": ": readonly EveMessage[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageData",
+      "kind": "interface",
+      "line_range": [
+        7,
+        9
+      ],
+      "name": "EveMessageData",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessage:id",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessage:metadata",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": EveMessageMetadata",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessage:parts",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "parts",
+          "partial_analysis": false,
+          "return_type": ": readonly EveMessagePart[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessage:role",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "role",
+          "partial_analysis": false,
+          "return_type": ": \"assistant\" | \"user\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveMessage",
+      "kind": "interface",
+      "line_range": [
+        14,
+        19
+      ],
+      "name": "EveMessage",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageMetadata:optimistic",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "optimistic",
+          "partial_analysis": false,
+          "return_type": ": true",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageMetadata:result",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageMetadata:status",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": \"complete\" | \"failed\" | \"streaming\" | \"submitted\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageMetadata:turnId",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageMetadata",
+      "kind": "interface",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "EveMessageMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveMessagePart",
+      "kind": "type_alias",
+      "line_range": [
+        47,
+        74
+      ],
+      "name": "EveMessagePart",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly providerMetadata?: Record<string, unknown>;\r\n      readonly state?: \"done\" | \"streaming\";\r\n      readonly stepIndex?: number;\r\n      readonly text: string;\r\n      readonly type: \"text\";\r\n    }\r\n  | {\r\n      readonly providerMetadata?: Record<string, unknown>;\r\n      readonly state?: \"done\" | \"streaming\";\r\n      readonly stepIndex?: number;\r\n      readonly text: string;\r\n      readonly type: \"reasoning\";\r\n    }\r\n  | {\r\n      readonly filename?: string;\r\n      readonly mediaType: string;\r\n      readonly size?: number;\r\n      readonly stepIndex?: number;\r\n      readonly type: \"file\";\r\n      readonly url?: string;\r\n    }\r\n  | {\r\n      readonly type: \"step-start\";\r\n    }\r\n  | EveAuthorizationPart\r\n  | EveDynamicToolPart;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationChallenge:displayName",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "displayName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationChallenge:expiresAt",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "expiresAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationChallenge:instructions",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "instructions",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationChallenge:url",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationChallenge:userCode",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "userCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationChallenge",
+      "kind": "interface",
+      "line_range": [
+        81,
+        87
+      ],
+      "name": "EveAuthorizationChallenge",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "EveAuthorizationOutcome",
+      "partial_analysis": false,
+      "value": "AuthorizationOutcome;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveAuthorizationPart",
+      "kind": "type_alias",
+      "line_range": [
+        99,
+        118
+      ],
+      "name": "EveAuthorizationPart",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly authorization?: EveAuthorizationChallenge;\r\n  readonly description: string;\r\n  readonly displayName: string;\r\n  readonly name: string;\r\n  readonly stepIndex: number;\r\n  readonly turnId: string;\r\n  readonly type: \"authorization\";\r\n} & (\r\n  | {\r\n      readonly outcome?: never;\r\n      readonly reason?: never;\r\n      readonly state: \"required\";\r\n    }\r\n  | {\r\n      readonly outcome: EveAuthorizationOutcome;\r\n      readonly reason?: string;\r\n      readonly state: \"completed\";\r\n    }\r\n);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveDynamicToolPart",
+      "kind": "type_alias",
+      "line_range": [
+        130,
+        211
+      ],
+      "name": "EveDynamicToolPart",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly stepIndex?: number;\r\n  readonly toolCallId: string;\r\n  readonly toolMetadata?: EveMessageToolMetadata;\r\n  readonly toolName: string;\r\n  readonly type: \"dynamic-tool\";\r\n} & (\r\n  | {\r\n      readonly approval?: never;\r\n      readonly errorText?: never;\r\n      readonly input: unknown | undefined;\r\n      readonly output?: never;\r\n      readonly state: \"input-streaming\";\r\n    }\r\n  | {\r\n      readonly approval?: never;\r\n      readonly errorText?: never;\r\n      readonly input: unknown;\r\n      readonly output?: never;\r\n      readonly state: \"input-available\";\r\n    }\r\n  | {\r\n      readonly approval: {\r\n        readonly id: string;\r\n        readonly approved?: never;\r\n        readonly reason?: never;\r\n        readonly isAutomatic?: boolean;\r\n      };\r\n      readonly errorText?: never;\r\n      readonly input: unknown;\r\n      readonly output?: never;\r\n      readonly state: \"approval-requested\";\r\n    }\r\n  | {\r\n      readonly approval: {\r\n        readonly id: string;\r\n        readonly approved?: boolean;\r\n        readonly reason?: string;\r\n        readonly isAutomatic?: boolean;\r\n      };\r\n      readonly errorText?: never;\r\n      readonly input: unknown;\r\n      readonly output?: never;\r\n      readonly state: \"approval-responded\";\r\n    }\r\n  | {\r\n      readonly approval?: {\r\n        readonly id: string;\r\n        readonly approved: true;\r\n        readonly reason?: string;\r\n        readonly isAutomatic?: boolean;\r\n      };\r\n      readonly errorText?: never;\r\n      readonly input: unknown;\r\n      readonly output: unknown;\r\n      readonly state: \"output-available\";\r\n    }\r\n  | {\r\n      readonly approval?: {\r\n        readonly id: string;\r\n        readonly approved: true;\r\n        readonly reason?: string;\r\n        readonly isAutomatic?: boolean;\r\n      };\r\n      readonly errorText: string;\r\n      readonly input: unknown | undefined;\r\n      readonly output?: never;\r\n      readonly state: \"output-error\";\r\n    }\r\n  | {\r\n      readonly approval: {\r\n        readonly id: string;\r\n        readonly approved: false;\r\n        readonly reason?: string;\r\n        readonly isAutomatic?: boolean;\r\n      };\r\n      readonly errorText?: never;\r\n      readonly input: unknown;\r\n      readonly output?: never;\r\n      readonly state: \"output-denied\";\r\n    }\r\n);",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageToolMetadata:eve",
+          "kind": "property",
+          "line_range": [
+            221,
+            226
+          ],
+          "name": "eve",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly inputRequest?: EveMessageInputRequest;\r\n    readonly inputResponse?: InputResponse;\r\n    readonly kind: \"load-skill\" | \"subagent-call\" | \"tool-call\" | \"unknown\";\r\n    readonly name: string;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageToolMetadata",
+      "kind": "interface",
+      "line_range": [
+        220,
+        227
+      ],
+      "name": "EveMessageToolMetadata",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageInputRequest:allowFreeform",
+          "kind": "property",
+          "line_range": [
+            238,
+            238
+          ],
+          "name": "allowFreeform",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageInputRequest:display",
+          "kind": "property",
+          "line_range": [
+            239,
+            239
+          ],
+          "name": "display",
+          "partial_analysis": false,
+          "return_type": ": \"confirmation\" | \"select\" | \"text\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageInputRequest:options",
+          "kind": "property",
+          "line_range": [
+            240,
+            245
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": readonly {\r\n    readonly description?: string;\r\n    readonly id: string;\r\n    readonly label: string;\r\n    readonly style?: \"danger\" | \"default\" | \"primary\";\r\n  }[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageInputRequest:prompt",
+          "kind": "property",
+          "line_range": [
+            246,
+            246
+          ],
+          "name": "prompt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageInputRequest:requestId",
+          "kind": "property",
+          "line_range": [
+            247,
+            247
+          ],
+          "name": "requestId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/message-reducer-types.ts:EveMessageInputRequest",
+      "kind": "interface",
+      "line_range": [
+        237,
+        248
+      ],
+      "name": "EveMessageInputRequest",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

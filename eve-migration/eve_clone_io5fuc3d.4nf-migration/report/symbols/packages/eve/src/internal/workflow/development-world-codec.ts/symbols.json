@@ -1,0 +1,372 @@
+{
+  "module": "packages/eve/src/internal/workflow/development-world-codec.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:VALUE_TYPE_KEY",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "VALUE_TYPE_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:DATE_MARKER",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "DATE_MARKER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:OBJECT_MARKER",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "OBJECT_MARKER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:UINT8_ARRAY_MARKER",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "UINT8_ARRAY_MARKER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:UNDEFINED_MARKER",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "UNDEFINED_MARKER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-codec.ts:EncodedValue:[expr]",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-codec.ts:EncodedValue:data",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:EncodedValue",
+      "kind": "interface",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "EncodedValue",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-codec.ts:SerializedDevelopmentWorldError:details",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "details",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, unknown>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-codec.ts:SerializedDevelopmentWorldError:message",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-codec.ts:SerializedDevelopmentWorldError:name",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-codec.ts:SerializedDevelopmentWorldError:stack",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "stack",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:SerializedDevelopmentWorldError",
+      "kind": "interface",
+      "line_range": [
+        17,
+        22
+      ],
+      "name": "SerializedDevelopmentWorldError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:encodeDevelopmentWorldValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        26
+      ],
+      "name": "encodeDevelopmentWorldValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function encodeDevelopmentWorldValue(value: unknown) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:decodeDevelopmentWorldValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "decodeDevelopmentWorldValue",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function decodeDevelopmentWorldValue(source: string) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:decodeDevelopmentWorldJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        33,
+        35
+      ],
+      "name": "decodeDevelopmentWorldJson",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function decodeDevelopmentWorldJson(source: string) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:serializeDevelopmentWorldError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        47
+      ],
+      "name": "serializeDevelopmentWorldError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SerializedDevelopmentWorldError",
+      "signature": "export function serializeDevelopmentWorldError(error: unknown) -> SerializedDevelopmentWorldError",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:deserializeDevelopmentWorldError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        63
+      ],
+      "name": "deserializeDevelopmentWorldError",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error | undefined",
+      "signature": "export function deserializeDevelopmentWorldError(value: unknown) -> Error | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:encodeValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        93
+      ],
+      "name": "encodeValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function encodeValue(value: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:decodeTransportValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        95,
+        117
+      ],
+      "name": "decodeTransportValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function decodeTransportValue(value: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:decodeWorkflowJsonValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        119,
+        136
+      ],
+      "name": "decodeWorkflowJsonValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function decodeWorkflowJsonValue(value: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-codec.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        138,
+        140
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "WORKFLOW_TOOL_NAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const WORKFLOW_TOOL_NAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "WorkflowSandboxInterrupt",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WorkflowSandboxInterrupt = CodeModeModule.CodeModeInterrupt;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "WorkflowSandboxLifecycle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WorkflowSandboxLifecycle = NonNullable<CodeModeModule.CodeModeOptions[\"lifecycle\"]>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        30
+      ],
+      "name": "WorkflowSandboxContinuationSecurity",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WorkflowSandboxContinuationSecurity = CodeModeModule.CodeModeContinuationSecurityOptions;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        34,
+        36
+      ],
+      "name": "installWorkflowSandboxModule",
+      "params": [
+        {
+          "name": "module",
+          "optional": false,
+          "type": "WorkflowSandboxModule"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installWorkflowSandboxModule(module: WorkflowSandboxModule) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        38,
+        48
+      ],
+      "name": "createWorkflowSandboxTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly continuationSecurity: WorkflowSandboxContinuationSecurity;\r\n  readonly hostTools: ToolSet;\r\n  readonly lifecycle?: WorkflowSandboxLifecycle;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ToolSet[string]>",
+      "signature": "export function createWorkflowSandboxTool(input: {\r\n  readonly continuationSecurity: WorkflowSandboxContinuationSecurity;\r\n  readonly hostTools: ToolSet;\r\n  readonly lifecycle?: WorkflowSandboxLifecycle;\r\n}) -> Promise<ToolSet[string]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        58
+      ],
+      "name": "requestWorkflowSandboxInterrupt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly kind: string;\r\n  readonly runtimeAction: unknown;\r\n  readonly toolInput: unknown;\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function requestWorkflowSandboxInterrupt(input: {\r\n  readonly kind: string;\r\n  readonly runtimeAction: unknown;\r\n  readonly toolInput: unknown;\r\n  readonly toolName: string;\r\n}) -> Promise<unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        60,
+        66
+      ],
+      "name": "getWorkflowSandboxInterrupt",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "continuationSecurity",
+          "optional": false,
+          "type": "WorkflowSandboxContinuationSecurity"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkflowSandboxInterrupt | undefined>",
+      "signature": "export function getWorkflowSandboxInterrupt(result: unknown, continuationSecurity: WorkflowSandboxContinuationSecurity) -> Promise<WorkflowSandboxInterrupt | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        68,
+        82
+      ],
+      "name": "continueWorkflowSandboxInterrupt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly continuationSecurity: WorkflowSandboxContinuationSecurity;\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly lifecycle?: WorkflowSandboxLifecycle;\r\n  readonly resolution: unknown;\r\n  readonly tools: ToolSet;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function continueWorkflowSandboxInterrupt(input: {\r\n  readonly continuationSecurity: WorkflowSandboxContinuationSecurity;\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly lifecycle?: WorkflowSandboxLifecycle;\r\n  readonly resolution: unknown;\r\n  readonly tools: ToolSet;\r\n}) -> Promise<unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        84,
+        95
+      ],
+      "name": "unwrapWorkflowSandboxResult",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "continuationSecurity",
+          "optional": false,
+          "type": "WorkflowSandboxContinuationSecurity"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<\r\n  | { readonly output: unknown; readonly status: \"completed\" }\r\n  | { readonly interrupt: WorkflowSandboxInterrupt; readonly status: \"interrupted\" }\r\n>",
+      "signature": "export function unwrapWorkflowSandboxResult(value: unknown, continuationSecurity: WorkflowSandboxContinuationSecurity) -> Promise<\r\n  | { readonly output: unknown; readonly status: \"completed\" }\r\n  | { readonly interrupt: WorkflowSandboxInterrupt; readonly status: \"interrupted\" }\r\n>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        97,
+        102
+      ],
+      "name": "readWorkflowSandboxResolution",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function readWorkflowSandboxResolution(options: unknown) -> unknown"
+    }
+  ],
+  "module": "packages/eve/src/shared/workflow-sandbox.ts"
+}

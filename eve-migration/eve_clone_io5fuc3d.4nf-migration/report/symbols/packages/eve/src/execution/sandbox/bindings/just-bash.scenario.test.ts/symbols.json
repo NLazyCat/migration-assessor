@@ -1,0 +1,99 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts:createJustBashBackend",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "createJustBashBackend",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function createJustBashBackend() -> SandboxBackend",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts:createTemporaryCacheDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        23,
+        29
+      ],
+      "name": "createTemporaryCacheDirectory",
+      "params": [
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createTemporaryCacheDirectory(label: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts:createPrewarmedLocalHandle",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        47
+      ],
+      "name": "createPrewarmedLocalHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly sessionKey: string;\r\n  readonly templateKey: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPrewarmedLocalHandle(input: {\r\n  readonly appRoot: string;\r\n  readonly sessionKey: string;\r\n  readonly templateKey: string;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/just-bash.scenario.test.ts:collectStream",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        49,
+        64
+      ],
+      "name": "collectStream",
+      "params": [
+        {
+          "name": "stream",
+          "optional": false,
+          "type": "ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function collectStream(stream: ReadableStream<Uint8Array>) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

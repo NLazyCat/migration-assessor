@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        5,
+        11
+      ],
+      "name": "streamToBuffer",
+      "params": [
+        {
+          "name": "stream",
+          "optional": false,
+          "type": "ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Buffer>",
+      "signature": "export function streamToBuffer(stream: ReadableStream<Uint8Array>) -> Promise<Buffer>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        23
+      ],
+      "name": "bufferToStream",
+      "params": [
+        {
+          "name": "buf",
+          "optional": false,
+          "type": "Uint8Array"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadableStream<Uint8Array>",
+      "signature": "export function bufferToStream(buf: Uint8Array) -> ReadableStream<Uint8Array>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/stream-utils.ts"
+}

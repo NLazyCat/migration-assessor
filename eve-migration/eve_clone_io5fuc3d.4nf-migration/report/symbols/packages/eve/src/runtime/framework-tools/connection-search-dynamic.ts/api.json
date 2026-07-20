@@ -1,0 +1,50 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        337,
+        368
+      ],
+      "name": "extractDiscoveredTools",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSearchResultItem[]",
+      "signature": "export function extractDiscoveredTools(messages: readonly ModelMessage[]) -> ConnectionSearchResultItem[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        378,
+        501
+      ],
+      "name": "createConnectionSearchEvents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "DynamicToolEvents",
+      "signature": "export function createConnectionSearchEvents() -> DynamicToolEvents"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        508,
+        518
+      ],
+      "name": "createConnectionSearchResolver",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ResolvedDynamicToolResolver",
+      "signature": "export function createConnectionSearchResolver() -> ResolvedDynamicToolResolver"
+    }
+  ],
+  "module": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts"
+}

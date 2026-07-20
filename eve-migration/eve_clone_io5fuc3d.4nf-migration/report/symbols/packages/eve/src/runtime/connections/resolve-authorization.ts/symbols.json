@@ -1,0 +1,120 @@
+{
+  "module": "packages/eve/src/runtime/connections/resolve-authorization.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/resolve-authorization.ts:ResolvedAuthorization",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "ResolvedAuthorization",
+      "partial_analysis": false,
+      "value": "Readonly<AuthorizationDefinition> | undefined;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/resolve-authorization.ts:AuthorizationResolverCache",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "AuthorizationResolverCache",
+      "partial_analysis": false,
+      "value": "Map<ResolvedConnectionDefinition, Promise<ResolvedAuthorization>>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/resolve-authorization.ts:ConnectionAuthorizationResolversKey",
+      "kind": "variable",
+      "line_range": [
+        12,
+        14
+      ],
+      "name": "ConnectionAuthorizationResolversKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/resolve-authorization.ts:resolveConnectionAuthorization",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        21,
+        42
+      ],
+      "name": "resolveConnectionAuthorization",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        },
+        {
+          "name": "ctx",
+          "optional": true,
+          "type": "SessionContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedAuthorization>",
+      "signature": "export function resolveConnectionAuthorization(connection: ResolvedConnectionDefinition, ctx: SessionContext) -> Promise<ResolvedAuthorization>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/resolve-authorization.ts:resolveDynamicAuthorization",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        44,
+        57
+      ],
+      "name": "resolveDynamicAuthorization",
+      "params": [
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        },
+        {
+          "name": "ctx",
+          "optional": true,
+          "type": "SessionContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedAuthorization>",
+      "signature": "export function resolveDynamicAuthorization(connection: ResolvedConnectionDefinition, ctx: SessionContext) -> Promise<ResolvedAuthorization>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/resolve-authorization.ts:getResolverCache",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        66
+      ],
+      "name": "getResolverCache",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthorizationResolverCache",
+      "signature": "export function getResolverCache(ctx: AlsContext) -> AuthorizationResolverCache",
+      "visibility": "Private"
+    }
+  ]
+}

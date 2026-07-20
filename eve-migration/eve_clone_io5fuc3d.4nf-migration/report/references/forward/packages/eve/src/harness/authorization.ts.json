@@ -1,0 +1,106 @@
+{
+  "AuthorizationCallback": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 75
+      },
+      "symbol": "packages/eve/src/runtime/connections/types.ts:AuthorizationCallback"
+    }
+  ],
+  "ConnectionAuthorizationChallenge": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 50
+      },
+      "symbol": "packages/eve/src/public/connections/errors.ts:ConnectionAuthorizationChallenge"
+    }
+  ],
+  "ContextKey": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 49,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 218
+      },
+      "symbol": "packages/eve/src/context/key.ts:ContextKey"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 38,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 227
+      },
+      "symbol": "packages/eve/src/context/key.ts:ContextKey"
+    }
+  ],
+  "JsonValue": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 56
+      },
+      "symbol": "packages/eve/src/public/types/json.ts:JsonValue"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 74
+      },
+      "symbol": "packages/eve/src/public/types/json.ts:JsonValue"
+    }
+  ],
+  "SessionIdKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 141
+      },
+      "symbol": "packages/eve/src/context/keys.ts:SessionIdKey"
+    }
+  ],
+  "createEveConnectionCallbackRoutePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 145
+      },
+      "symbol": "packages/eve/src/protocol/routes.ts:createEveConnectionCallbackRoutePath"
+    }
+  ],
+  "loadContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 122
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/harness/authorization.ts",
+        "line": 140
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    }
+  ]
+}

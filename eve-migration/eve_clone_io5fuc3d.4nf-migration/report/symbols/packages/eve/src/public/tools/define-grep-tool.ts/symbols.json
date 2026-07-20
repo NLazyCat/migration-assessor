@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/public/tools/define-grep-tool.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/tools/define-grep-tool.ts:DefineGrepToolInput:description",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/tools/define-grep-tool.ts:DefineGrepToolInput",
+      "kind": "interface",
+      "line_range": [
+        8,
+        14
+      ],
+      "name": "DefineGrepToolInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/tools/define-grep-tool.ts:defineGrepTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        35
+      ],
+      "name": "defineGrepTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DefineGrepToolInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolDefinition",
+      "signature": "export function defineGrepTool(input: DefineGrepToolInput) -> ToolDefinition",
+      "visibility": "Public"
+    }
+  ]
+}

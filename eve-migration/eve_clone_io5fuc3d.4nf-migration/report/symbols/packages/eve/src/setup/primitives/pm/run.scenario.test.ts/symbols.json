@@ -1,0 +1,88 @@
+{
+  "module": "packages/eve/src/setup/primitives/pm/run.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/pm/run.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/pm/run.scenario.test.ts:writeJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        20
+      ],
+      "name": "writeJson",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeJson(filePath: string, value: unknown) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/pm/run.scenario.test.ts:writeWorkspaceRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        22,
+        32
+      ],
+      "name": "writeWorkspaceRoot",
+      "params": [
+        {
+          "name": "root",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "packageJson",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeWorkspaceRoot(root: string, packageJson: Record<string, unknown>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/pm/run.scenario.test.ts:collectOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        37
+      ],
+      "name": "collectOutput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ lines: string[]; onOutput: (line: { text: string }) => void }",
+      "signature": "export function collectOutput() -> { lines: string[]; onOutput: (line: { text: string }) => void }",
+      "visibility": "Private"
+    }
+  ]
+}

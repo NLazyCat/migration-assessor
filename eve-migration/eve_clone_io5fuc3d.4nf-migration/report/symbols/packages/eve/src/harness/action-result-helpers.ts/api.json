@@ -1,0 +1,100 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        72
+      ],
+      "name": "createRuntimeToolResultFromValue",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callId: string;\r\n  readonly toolName: string;\r\n  readonly output: unknown;\r\n  readonly isError?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolResultActionResult",
+      "signature": "export function createRuntimeToolResultFromValue(input: {\r\n  readonly callId: string;\r\n  readonly toolName: string;\r\n  readonly output: unknown;\r\n  readonly isError?: boolean;\r\n}) -> RuntimeToolResultActionResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        79,
+        87
+      ],
+      "name": "createRuntimeToolResultFromStepResult",
+      "params": [
+        {
+          "name": "toolResult",
+          "optional": false,
+          "type": "TypedToolResult<ToolSet>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolResultActionResult",
+      "signature": "export function createRuntimeToolResultFromStepResult(toolResult: TypedToolResult<ToolSet>) -> RuntimeToolResultActionResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        102
+      ],
+      "name": "createRuntimeToolResultFromToolError",
+      "params": [
+        {
+          "name": "toolError",
+          "optional": false,
+          "type": "TypedToolError<ToolSet>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolResultActionResult",
+      "signature": "export function createRuntimeToolResultFromToolError(toolError: TypedToolError<ToolSet>) -> RuntimeToolResultActionResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        108,
+        117
+      ],
+      "name": "createToolResultMessagePartFromToolError",
+      "params": [
+        {
+          "name": "toolError",
+          "optional": false,
+          "type": "TypedToolError<ToolSet>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolResultPart",
+      "signature": "export function createToolResultMessagePartFromToolError(toolError: TypedToolError<ToolSet>) -> ToolResultPart"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        126,
+        139
+      ],
+      "name": "createRuntimeToolResultFromMessagePart",
+      "params": [
+        {
+          "name": "part",
+          "optional": false,
+          "type": "ToolResultPart"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolResultActionResult",
+      "signature": "export function createRuntimeToolResultFromMessagePart(part: ToolResultPart) -> RuntimeToolResultActionResult"
+    }
+  ],
+  "module": "packages/eve/src/harness/action-result-helpers.ts"
+}

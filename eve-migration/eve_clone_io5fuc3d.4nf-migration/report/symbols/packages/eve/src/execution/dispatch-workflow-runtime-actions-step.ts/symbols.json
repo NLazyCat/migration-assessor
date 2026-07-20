@@ -1,0 +1,62 @@
+{
+  "module": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts:log",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts:dispatchWorkflowRuntimeActionsStep",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        27,
+        102
+      ],
+      "name": "dispatchWorkflowRuntimeActionsStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callbackBaseUrl?: string;\r\n  readonly parentContinuationToken?: string;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly sessionState: DurableSessionState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly results: readonly RuntimeSubagentResultActionResult[];\r\n  readonly sessionState: DurableSessionState;\r\n}>",
+      "signature": "export function dispatchWorkflowRuntimeActionsStep(input: {\r\n  readonly callbackBaseUrl?: string;\r\n  readonly parentContinuationToken?: string;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly sessionState: DurableSessionState;\r\n}) -> Promise<{\r\n  readonly results: readonly RuntimeSubagentResultActionResult[];\r\n  readonly sessionState: DurableSessionState;\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/dispatch-workflow-runtime-actions-step.ts:createWorkflowSubagentLimitResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        123
+      ],
+      "name": "createWorkflowSubagentLimitResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly action: RuntimeActionRequest;\r\n  readonly plan: WorkflowSubagentDispatchPlan;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSubagentResultActionResult",
+      "signature": "export function createWorkflowSubagentLimitResult(input: {\r\n  readonly action: RuntimeActionRequest;\r\n  readonly plan: WorkflowSubagentDispatchPlan;\r\n}) -> RuntimeSubagentResultActionResult",
+      "visibility": "Private"
+    }
+  ]
+}

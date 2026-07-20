@@ -550,11 +550,26 @@ fn is_git_repo(path: &Path) -> bool {
 }
 
 fn resolve_source_path(src: &str, project_root: &Path) -> std::path::PathBuf {
-    let p = std::path::Path::new(src);
-    if p.is_absolute() {
-        p.to_path_buf()
+    let expanded = if src.starts_with('~') {
+        if let Some(home) = dirs::home_dir() {
+            if src.len() == 1 {
+                home
+            } else {
+                let trimmed = src.strip_prefix("~/").unwrap_or(
+                    src.strip_prefix('~').unwrap_or(src),
+                );
+                home.join(trimmed)
+            }
+        } else {
+            std::path::PathBuf::from(src)
+        }
     } else {
-        project_root.join(p)
+        std::path::PathBuf::from(src)
+    };
+    if expanded.is_absolute() {
+        expanded
+    } else {
+        project_root.join(expanded)
     }
 }
 
@@ -599,6 +614,10 @@ fn detect_dependency_changes(
         }
         Some("rust") | Some("rs") => {
             migration_core::deps::resolve_dependencies(source_dir, SourceLanguage::Rust)
+                .unwrap_or_default()
+        }
+        Some("javascript") | Some("js") => {
+            migration_core::deps::resolve_dependencies(source_dir, SourceLanguage::JavaScript)
                 .unwrap_or_default()
         }
         _ => {

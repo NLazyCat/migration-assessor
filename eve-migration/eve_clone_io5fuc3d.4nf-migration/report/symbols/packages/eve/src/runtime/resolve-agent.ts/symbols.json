@@ -1,0 +1,123 @@
+{
+  "module": "packages/eve/src/runtime/resolve-agent.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/resolve-agent.ts:ResolveAgentInput:manifest",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentNodeManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/resolve-agent.ts:ResolveAgentInput:moduleMap",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "moduleMap",
+          "partial_analysis": false,
+          "return_type": ": CompiledModuleMap",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/resolve-agent.ts:ResolveAgentInput:nodeId",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "nodeId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/resolve-agent.ts:ResolveAgentInput",
+      "kind": "interface",
+      "line_range": [
+        31,
+        35
+      ],
+      "name": "ResolveAgentInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-agent.ts:resolveAgent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        40,
+        135
+      ],
+      "name": "resolveAgent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ResolveAgentInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedAgent>",
+      "signature": "export function resolveAgent(input: ResolveAgentInput) -> Promise<ResolvedAgent>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-agent.ts:createResolvedInstructionsDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        151
+      ],
+      "name": "createResolvedInstructionsDefinition",
+      "params": [
+        {
+          "name": "instructions",
+          "optional": false,
+          "type": "CompiledInstructionsDefinition | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedInstructionsDefinition | undefined",
+      "signature": "export function createResolvedInstructionsDefinition(instructions: CompiledInstructionsDefinition | undefined) -> ResolvedInstructionsDefinition | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-agent.ts:createResolvedAgentConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        153,
+        256
+      ],
+      "name": "createResolvedAgentConfig",
+      "params": [
+        {
+          "name": "manifest",
+          "optional": false,
+          "type": "CompiledAgentNodeManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedAgent[\"config\"]",
+      "signature": "export function createResolvedAgentConfig(manifest: CompiledAgentNodeManifest) -> ResolvedAgent[\"config\"]",
+      "visibility": "Private"
+    }
+  ]
+}

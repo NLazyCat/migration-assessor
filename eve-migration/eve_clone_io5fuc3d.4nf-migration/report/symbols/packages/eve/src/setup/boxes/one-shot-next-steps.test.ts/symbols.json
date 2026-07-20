@@ -1,0 +1,56 @@
+{
+  "module": "packages/eve/src/setup/boxes/one-shot-next-steps.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/one-shot-next-steps.test.ts:silentSink",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "silentSink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/one-shot-next-steps.test.ts:notingPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "notingPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{ prompter: Prompter; note: ReturnType<typeof vi.fn> }",
+      "signature": "export function notingPrompter() -> { prompter: Prompter; note: ReturnType<typeof vi.fn> }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/one-shot-next-steps.test.ts:scaffoldedState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        26
+      ],
+      "name": "scaffoldedState",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ mode: SetupMode; inPlace: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function scaffoldedState(options: { mode: SetupMode; inPlace: boolean }) -> SetupState",
+      "visibility": "Private"
+    }
+  ]
+}

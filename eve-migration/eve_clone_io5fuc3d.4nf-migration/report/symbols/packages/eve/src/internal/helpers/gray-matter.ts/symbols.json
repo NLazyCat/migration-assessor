@@ -1,0 +1,109 @@
+{
+  "module": "packages/eve/src/internal/helpers/gray-matter.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/helpers/gray-matter.ts:rejectJavaScriptFrontmatter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        15
+      ],
+      "name": "rejectJavaScriptFrontmatter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function rejectJavaScriptFrontmatter() -> never",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/helpers/gray-matter.ts:SAFE_GRAY_MATTER_OPTIONS",
+      "kind": "variable",
+      "line_range": [
+        17,
+        23
+      ],
+      "name": "SAFE_GRAY_MATTER_OPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/helpers/gray-matter.ts:ParseFrontmatterOptions:allowCodeEngines",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "allowCodeEngines",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/helpers/gray-matter.ts:ParseFrontmatterOptions",
+      "kind": "interface",
+      "line_range": [
+        26,
+        35
+      ],
+      "name": "ParseFrontmatterOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/helpers/gray-matter.ts:parseFrontmatter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        52
+      ],
+      "name": "parseFrontmatter",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ParseFrontmatterOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GrayMatterFile<string>",
+      "signature": "export function parseFrontmatter(source: string, options: ParseFrontmatterOptions) -> GrayMatterFile<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/helpers/gray-matter.ts:hasFrontmatter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        57
+      ],
+      "name": "hasFrontmatter",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasFrontmatter(source: string) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

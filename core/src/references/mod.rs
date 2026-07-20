@@ -1,3 +1,4 @@
+pub mod javascript;
 pub mod rust;
 pub mod typescript;
 
@@ -75,6 +76,7 @@ pub fn parse_import_bindings(
     match ext {
         "ts" | "tsx" | "mts" | "cts" => typescript::parse_import_bindings(source, file_path),
         "rs" => rust::parse_import_bindings(source),
+        "js" | "jsx" | "mjs" | "cjs" => crate::parser::javascript::parse_import_bindings(source, file_path),
         _ => Ok(Vec::new()),
     }
 }

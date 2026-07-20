@@ -1,0 +1,1743 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "GitHubConversationKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubConversationKind = \"issue\" | \"pull_request\" | \"review_thread\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        13
+      ],
+      "name": "GitHubRepositoryRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubRepositoryRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "fullName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "fullName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "owner",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "owner: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "private",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "private: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "GitHubUser",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubUser { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "htmlUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "htmlUrl: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "login",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "login: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "type: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "url: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "GitHubDelivery",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubDelivery { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "event",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "event: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "hookId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "hookId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        36
+      ],
+      "name": "GitHubConversationRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubConversationRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "issueNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "issueNumber: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationKind",
+      "signature": "kind: : GitHubConversationKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "pullRequestNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "pullRequestNumber: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        43,
+        50
+      ],
+      "name": "GitHubComment",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubComment { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "author",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubUser | undefined",
+      "signature": "author: : GitHubUser | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "body: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "htmlUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "htmlUrl: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "url: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        53,
+        62
+      ],
+      "name": "GitHubIssueComment",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubIssueComment { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "author",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubUser | undefined",
+      "signature": "author: : GitHubUser | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "body: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "htmlUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "htmlUrl: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "issueNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "issueNumber: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "pullRequestNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "pullRequestNumber: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "url: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        75
+      ],
+      "name": "GitHubPullRequestReviewComment",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestReviewComment { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "author",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubUser | undefined",
+      "signature": "author: : GitHubUser | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "body: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "htmlUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "htmlUrl: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "inReplyToId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "inReplyToId: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "pullRequestNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "pullRequestNumber: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "reviewThreadRootCommentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "reviewThreadRootCommentId: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "url: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        81,
+        90
+      ],
+      "name": "GitHubIssueAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubIssueAction = | \"assigned\"\r\n  | \"closed\"\r\n  | \"edited\"\r\n  | \"labeled\"\r\n  | \"opened\"\r\n  | \"reopened\"\r\n  | \"unassigned\"\r\n  | \"unlabeled\"\r\n  | (string & {});"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        93,
+        102
+      ],
+      "name": "GitHubPullRequestAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubPullRequestAction = | \"closed\"\r\n  | \"edited\"\r\n  | \"labeled\"\r\n  | \"opened\"\r\n  | \"ready_for_review\"\r\n  | \"reopened\"\r\n  | \"synchronize\"\r\n  | \"unlabeled\"\r\n  | (string & {});"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        105,
+        109
+      ],
+      "name": "GitHubIssueEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubIssueEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        106,
+        106
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubIssueAction",
+      "signature": "action: : GitHubIssueAction"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        107,
+        107
+      ],
+      "name": "issueNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "issueNumber: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        108,
+        108
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        112,
+        117
+      ],
+      "name": "GitHubPullRequestEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        113,
+        113
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestAction",
+      "signature": "action: : GitHubPullRequestAction"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        115,
+        115
+      ],
+      "name": "pullRequestNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "pullRequestNumber: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        116,
+        116
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        120,
+        122
+      ],
+      "name": "GitHubAppRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubAppRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "slug: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        125,
+        133
+      ],
+      "name": "GitHubCiEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCiEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        126,
+        126
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "action: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        127,
+        127
+      ],
+      "name": "app",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubAppRef",
+      "signature": "app: : GitHubAppRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        128,
+        128
+      ],
+      "name": "conclusion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "conclusion: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        129,
+        129
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "pullRequests",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly number[]",
+      "signature": "pullRequests: : readonly number[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        131,
+        131
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        132,
+        132
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "status: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        136,
+        138
+      ],
+      "name": "GitHubCheckSuiteEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckSuiteEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        137,
+        137
+      ],
+      "name": "checkSuiteId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "checkSuiteId: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        141,
+        143
+      ],
+      "name": "GitHubCheckRunEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckRunEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        142,
+        142
+      ],
+      "name": "checkRunId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "checkRunId: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        146,
+        148
+      ],
+      "name": "GitHubWorkflowRunEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubWorkflowRunEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        147,
+        147
+      ],
+      "name": "workflowRunId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "workflowRunId: : number"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        151,
+        151
+      ],
+      "name": "GitHubCiPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubCiPayload = GitHubCheckRunEvent | GitHubCheckSuiteEvent | GitHubWorkflowRunEvent;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        153,
+        159
+      ],
+      "name": "GitHubInboundEventBase",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubInboundEventBase { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        154,
+        154
+      ],
+      "name": "delivery",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubDelivery",
+      "signature": "delivery: : GitHubDelivery"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        155,
+        155
+      ],
+      "name": "installationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "installationId: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        156,
+        156
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "raw: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        157,
+        157
+      ],
+      "name": "repository",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubRepositoryRef",
+      "signature": "repository: : GitHubRepositoryRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        158,
+        158
+      ],
+      "name": "sender",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubUser",
+      "signature": "sender: : GitHubUser"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        161,
+        163
+      ],
+      "name": "GitHubPingEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPingEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        162,
+        162
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"ping\"",
+      "signature": "kind: : \"ping\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        165,
+        175
+      ],
+      "name": "GitHubIssueCommentEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubIssueCommentEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "action: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "baseRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "baseSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        169,
+        169
+      ],
+      "name": "comment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubIssueComment",
+      "signature": "comment: : GitHubIssueComment"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        170,
+        170
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        171,
+        171
+      ],
+      "name": "defaultBranch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "defaultBranch: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        172,
+        172
+      ],
+      "name": "headRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        174,
+        174
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"issue_comment\"",
+      "signature": "kind: : \"issue_comment\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        177,
+        187
+      ],
+      "name": "GitHubPullRequestReviewCommentEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestReviewCommentEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        178,
+        178
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "action: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        179,
+        179
+      ],
+      "name": "baseRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        180,
+        180
+      ],
+      "name": "baseSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        181,
+        181
+      ],
+      "name": "comment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestReviewComment",
+      "signature": "comment: : GitHubPullRequestReviewComment"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        182,
+        182
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        183,
+        183
+      ],
+      "name": "defaultBranch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "defaultBranch: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "headRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        185,
+        185
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        186,
+        186
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"pull_request_review_comment\"",
+      "signature": "kind: : \"pull_request_review_comment\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        189,
+        194
+      ],
+      "name": "GitHubIssueWebhookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubIssueWebhookEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        190,
+        190
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "action: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        191,
+        191
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        192,
+        192
+      ],
+      "name": "issue",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubIssueEvent",
+      "signature": "issue: : GitHubIssueEvent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        193,
+        193
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"issues\"",
+      "signature": "kind: : \"issues\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        196,
+        206
+      ],
+      "name": "GitHubPullRequestWebhookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestWebhookEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        197,
+        197
+      ],
+      "name": "action",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "action: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        198,
+        198
+      ],
+      "name": "baseRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        199,
+        199
+      ],
+      "name": "baseSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        200,
+        200
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        201,
+        201
+      ],
+      "name": "defaultBranch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "defaultBranch: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        202,
+        202
+      ],
+      "name": "headRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        203,
+        203
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        204,
+        204
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"pull_request\"",
+      "signature": "kind: : \"pull_request\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        205,
+        205
+      ],
+      "name": "pullRequest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestEvent",
+      "signature": "pullRequest: : GitHubPullRequestEvent"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        208,
+        212
+      ],
+      "name": "GitHubCheckSuiteWebhookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckSuiteWebhookEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        209,
+        209
+      ],
+      "name": "checkSuite",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubCheckSuiteEvent",
+      "signature": "checkSuite: : GitHubCheckSuiteEvent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        210,
+        210
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        211,
+        211
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"check_suite\"",
+      "signature": "kind: : \"check_suite\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        214,
+        218
+      ],
+      "name": "GitHubCheckRunWebhookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckRunWebhookEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        215,
+        215
+      ],
+      "name": "checkRun",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubCheckRunEvent",
+      "signature": "checkRun: : GitHubCheckRunEvent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        216,
+        216
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        217,
+        217
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"check_run\"",
+      "signature": "kind: : \"check_run\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        220,
+        224
+      ],
+      "name": "GitHubWorkflowRunWebhookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubWorkflowRunWebhookEvent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        221,
+        221
+      ],
+      "name": "conversation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubConversationRef",
+      "signature": "conversation: : GitHubConversationRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        222,
+        222
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"workflow_run\"",
+      "signature": "kind: : \"workflow_run\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        223,
+        223
+      ],
+      "name": "workflowRun",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubWorkflowRunEvent",
+      "signature": "workflowRun: : GitHubWorkflowRunEvent"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        227,
+        230
+      ],
+      "name": "GitHubCiWebhookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubCiWebhookEvent = | GitHubCheckRunWebhookEvent\r\n  | GitHubCheckSuiteWebhookEvent\r\n  | GitHubWorkflowRunWebhookEvent;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        233,
+        241
+      ],
+      "name": "GitHubInboundEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubInboundEvent = | GitHubCheckRunWebhookEvent\r\n  | GitHubCheckSuiteWebhookEvent\r\n  | GitHubIssueCommentEvent\r\n  | GitHubIssueWebhookEvent\r\n  | GitHubPingEvent\r\n  | GitHubPullRequestReviewCommentEvent\r\n  | GitHubPullRequestWebhookEvent\r\n  | GitHubWorkflowRunWebhookEvent;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        244,
+        248
+      ],
+      "name": "GitHubCommentTrigger",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCommentTrigger { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        245,
+        245
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"mention\"",
+      "signature": "kind: : \"mention\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        246,
+        246
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        247,
+        247
+      ],
+      "name": "token",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "token: : string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/inbound-types.ts"
+}

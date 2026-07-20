@@ -1,0 +1,33 @@
+{
+  "ContextKey": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/public/definitions/state.ts",
+        "line": 50
+      },
+      "symbol": "packages/eve/src/context/key.ts:ContextKey"
+    }
+  ],
+  "loadContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/public/definitions/state.ts",
+        "line": 54
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/public/definitions/state.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    }
+  ]
+}

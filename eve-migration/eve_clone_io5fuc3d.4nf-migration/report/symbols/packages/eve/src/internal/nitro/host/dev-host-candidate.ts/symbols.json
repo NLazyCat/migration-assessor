@@ -1,0 +1,101 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts:CANDIDATE_BUILD_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "CANDIDATE_BUILD_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts:DevelopmentWorkerPayload:entry",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "entry",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts:DevelopmentWorkerPayload:workerData",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "workerData",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, unknown>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts:DevelopmentWorkerPayload",
+      "kind": "interface",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "DevelopmentWorkerPayload",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts:buildDevelopmentHostCandidate",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        21,
+        74
+      ],
+      "name": "buildDevelopmentHostCandidate",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly host: PreparedDevelopmentApplicationHost;\r\n  readonly nitro: Nitro;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentWorkerPayload>",
+      "signature": "export function buildDevelopmentHostCandidate(input: {\r\n  readonly host: PreparedDevelopmentApplicationHost;\r\n  readonly nitro: Nitro;\r\n}) -> Promise<DevelopmentWorkerPayload>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-candidate.ts:waitForSignal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        76,
+        91
+      ],
+      "name": "waitForSignal",
+      "params": [
+        {
+          "name": "signalled",
+          "optional": false,
+          "type": "Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForSignal(signalled: Promise<void>) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

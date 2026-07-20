@@ -1,0 +1,185 @@
+{
+  "module": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createScenarioAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        487,
+        571
+      ],
+      "name": "createScenarioAppRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createScenarioAppRoot() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createDefaultGraphAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        573,
+        659
+      ],
+      "name": "createDefaultGraphAppRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly rootSandbox?: boolean;\r\n    readonly subagentSandboxes?: boolean;\r\n    readonly subagentNames?: readonly string[];\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createDefaultGraphAppRoot(input: {\r\n    readonly rootSandbox?: boolean;\r\n    readonly subagentSandboxes?: boolean;\r\n    readonly subagentNames?: readonly string[];\r\n  }) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createAuthoredOverrideAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        661,
+        722
+      ],
+      "name": "createAuthoredOverrideAppRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly withSkills?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createAuthoredOverrideAppRoot(input: { readonly withSkills?: boolean }) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createSkillOnlyAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        724,
+        750
+      ],
+      "name": "createSkillOnlyAppRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly skillBody: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createSkillOnlyAppRoot(input: { readonly skillBody: string }) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createBootstrapRevalidationKeyAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        752,
+        790
+      ],
+      "name": "createBootstrapRevalidationKeyAppRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly bootstrapCommand?: string;\r\n  readonly revalidationKeyExpression: string | undefined;\r\n  readonly skillBody: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createBootstrapRevalidationKeyAppRoot(input: {\r\n  readonly bootstrapCommand?: string;\r\n  readonly revalidationKeyExpression: string | undefined;\r\n  readonly skillBody: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:writeBootstrapRevalidationKeySandbox",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        792,
+        815
+      ],
+      "name": "writeBootstrapRevalidationKeySandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly bootstrapCommand?: string;\r\n  readonly revalidationKeyExpression: string | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeBootstrapRevalidationKeySandbox(input: {\r\n  readonly appRoot: string;\r\n  readonly bootstrapCommand?: string;\r\n  readonly revalidationKeyExpression: string | undefined;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createRecordingDispatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        817,
+        889
+      ],
+      "name": "createRecordingDispatch",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "ReturnType<typeof createPrewarmEvents>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ readonly reused?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createRecordingDispatch(events: ReturnType<typeof createPrewarmEvents>, options: { readonly reused?: boolean }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.scenario.test.ts:createPrewarmEvents",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        891,
+        899
+      ],
+      "name": "createPrewarmEvents",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createPrewarmEvents() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

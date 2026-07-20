@@ -1,0 +1,31 @@
+{
+  "module": "packages/eve/src/compiler/remote-agent-node.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/remote-agent-node.ts:CompiledRemoteAgentNode",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        25
+      ],
+      "name": "CompiledRemoteAgentNode",
+      "partial_analysis": false,
+      "value": "Readonly<\r\n  ModuleSourceRef &\r\n    Node & {\r\n      description: string;\r\n      entryPath: string;\r\n      name: string;\r\n      outputSchema?: JsonObject;\r\n      path: string;\r\n      rootPath: string;\r\n      // Absent when the definition's `url` is a function the runtime resolves.\r\n      url?: string;\r\n    }\r\n>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/remote-agent-node.ts:compiledRemoteAgentNodeSchema",
+      "kind": "variable",
+      "line_range": [
+        30,
+        45
+      ],
+      "name": "compiledRemoteAgentNodeSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

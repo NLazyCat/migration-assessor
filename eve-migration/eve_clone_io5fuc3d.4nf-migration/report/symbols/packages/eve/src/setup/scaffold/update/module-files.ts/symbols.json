@@ -1,0 +1,67 @@
+{
+  "module": "packages/eve/src/setup/scaffold/update/module-files.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/module-files.ts:SUPPORTED_AUTHORED_MODULE_FILE_EXTENSIONS",
+      "kind": "variable",
+      "line_range": [
+        1,
+        8
+      ],
+      "name": "SUPPORTED_AUTHORED_MODULE_FILE_EXTENSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/module-files.ts:getSupportedModuleBaseName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        18
+      ],
+      "name": "getSupportedModuleBaseName",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function getSupportedModuleBaseName(name: string) -> string | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/module-files.ts:matchesSupportedModuleBaseName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        22
+      ],
+      "name": "matchesSupportedModuleBaseName",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "baseName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function matchesSupportedModuleBaseName(name: string, baseName: string) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

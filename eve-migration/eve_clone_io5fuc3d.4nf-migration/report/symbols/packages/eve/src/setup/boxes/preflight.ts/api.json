@@ -1,0 +1,125 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "PreflightInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PreflightInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "model",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "model: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "PreflightDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PreflightDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "fetchGatewayModelIds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof fetchGatewayModelIds",
+      "signature": "fetchGatewayModelIds: : typeof fetchGatewayModelIds"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        30
+      ],
+      "name": "PreflightOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PreflightOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "cwd",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "cwd: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PreflightDeps",
+      "signature": "deps?: : PreflightDeps"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        65
+      ],
+      "name": "preflight",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "PreflightOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, PreflightInput, null>",
+      "signature": "export function preflight(options: PreflightOptions) -> SetupBox<SetupState, PreflightInput, null>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/preflight.ts"
+}
