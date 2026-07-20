@@ -1,0 +1,426 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "NitroBuildSurface",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type NitroBuildSurface = \"all\" | \"app\" | \"flow\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        16,
+        24
+      ],
+      "name": "ApplicationBuildOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ApplicationBuildOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "profileOutputPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "profileOutputPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "skipVercelSandboxPrewarm",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "skipVercelSandboxPrewarm: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "vercelServiceOutput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly hostOutputDirectory: string;\r\n    readonly serviceOutputDirectory: string;\r\n  }",
+      "signature": "vercelServiceOutput?: : {\r\n    readonly hostOutputDirectory: string;\r\n    readonly serviceOutputDirectory: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        31
+      ],
+      "name": "StartedDevelopmentServer",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface StartedDevelopmentServer { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"started\"",
+      "signature": "kind: : \"started\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        34,
+        38
+      ],
+      "name": "ExistingDevelopmentServer",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExistingDevelopmentServer { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"existing\"",
+      "signature": "kind: : \"existing\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "DevelopmentServerHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevelopmentServerHandle = StartedDevelopmentServer | ExistingDevelopmentServer;"
+    },
+    {
+      "generics": [
+        "H"
+      ],
+      "kind": "interface",
+      "line_range": [
+        53,
+        56
+      ],
+      "name": "DevelopmentServer",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentServer { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        58,
+        63
+      ],
+      "name": "DevelopmentServerOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentServerOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "existing",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"attach-if-unconfigured\" | \"reject\"",
+      "signature": "existing?: : \"attach-if-unconfigured\" | \"reject\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "host",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "host?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "onBootProgress",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevBootProgressReporter",
+      "signature": "onBootProgress?: : DevBootProgressReporter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "port",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "port?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        68,
+        72
+      ],
+      "name": "ProductionServerHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProductionServerHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        74,
+        81
+      ],
+      "name": "PreparedApplicationHost",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PreparedApplicationHost { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "compileResult",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompileAgentResult",
+      "signature": "compileResult: : CompileAgentResult"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "compiledArtifacts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GeneratedCompiledArtifactsFiles",
+      "signature": "compiledArtifacts: : GeneratedCompiledArtifactsFiles"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "scheduleRegistrations",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ScheduleRegistration[]",
+      "signature": "scheduleRegistrations: : readonly ScheduleRegistration[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "schedules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ResolvedScheduleDefinition[]",
+      "signature": "schedules: : readonly ResolvedScheduleDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "workflowBuildDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workflowBuildDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        83,
+        87
+      ],
+      "name": "PreparedDevelopmentApplicationHost",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PreparedDevelopmentApplicationHost { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "generation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevelopmentGeneration",
+      "signature": "generation: : DevelopmentGeneration"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "workspaceExtensions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly DevelopmentWorkspaceExtension[]",
+      "signature": "workspaceExtensions: : readonly DevelopmentWorkspaceExtension[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "workspace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevelopmentHostWorkspace",
+      "signature": "workspace: : DevelopmentHostWorkspace"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/types.ts"
+}

@@ -1,0 +1,50 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        46,
+        50
+      ],
+      "name": "getFrameworkToolDefinitions",
+      "params": [
+        {
+          "name": "_config",
+          "optional": true,
+          "type": "{\r\n  readonly hasConnections?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly ResolvedToolDefinition[]",
+      "signature": "export function getFrameworkToolDefinitions(_config: {\r\n  readonly hasConnections?: boolean;\r\n}) -> readonly ResolvedToolDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        56,
+        58
+      ],
+      "name": "getAllFrameworkToolDefinitions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "readonly ResolvedToolDefinition[]",
+      "signature": "export function getAllFrameworkToolDefinitions() -> readonly ResolvedToolDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "getAllFrameworkToolNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getAllFrameworkToolNames() -> ReadonlySet<string>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/framework-tools/index.ts"
+}

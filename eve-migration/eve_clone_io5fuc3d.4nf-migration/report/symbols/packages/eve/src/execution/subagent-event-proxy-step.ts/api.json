@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        42,
+        59
+      ],
+      "name": "runProxySubagentEventStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly hookPayload: SubagentEventHookPayload;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly sessionState: DurableSessionState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProxySubagentEventResult>",
+      "signature": "export function runProxySubagentEventStep(input: {\r\n  readonly hookPayload: SubagentEventHookPayload;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly sessionState: DurableSessionState;\r\n}) -> Promise<ProxySubagentEventResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        125
+      ],
+      "name": "emitProxiedSubagentEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ctx: ContextContainer;\r\n  readonly durableSession: DurableSession;\r\n  readonly hookPayload: SubagentEventHookPayload;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProxySubagentEventResult>",
+      "signature": "export function emitProxiedSubagentEvent(input: {\r\n  readonly ctx: ContextContainer;\r\n  readonly durableSession: DurableSession;\r\n  readonly hookPayload: SubagentEventHookPayload;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n}) -> Promise<ProxySubagentEventResult>"
+    }
+  ],
+  "module": "packages/eve/src/execution/subagent-event-proxy-step.ts"
+}

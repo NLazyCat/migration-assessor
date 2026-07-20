@@ -1,0 +1,199 @@
+{
+  "ChannelInstrumentationProjection": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 59
+      },
+      "symbol": "packages/eve/src/channel/types.ts:ChannelInstrumentationProjection"
+    }
+  ],
+  "HarnessSession": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 70
+      },
+      "symbol": "packages/eve/src/harness/types.ts:HarnessSession"
+    }
+  ],
+  "RunInput": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 43
+      },
+      "symbol": "packages/eve/src/channel/types.ts:RunInput"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 107
+      },
+      "symbol": "packages/eve/src/channel/types.ts:RunInput"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 37,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 107
+      },
+      "symbol": "packages/eve/src/channel/types.ts:RunInput"
+    }
+  ],
+  "RunSessionLimits": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 98
+      },
+      "symbol": "packages/eve/src/channel/types.ts:RunSessionLimits"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 45,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 98
+      },
+      "symbol": "packages/eve/src/channel/types.ts:RunSessionLimits"
+    }
+  ],
+  "RuntimeSubagentCallActionRequest": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 50
+      },
+      "symbol": "packages/eve/src/runtime/actions/types.ts:RuntimeSubagentCallActionRequest"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 151
+      },
+      "symbol": "packages/eve/src/runtime/actions/types.ts:RuntimeSubagentCallActionRequest"
+    }
+  ],
+  "SUBAGENT_ADAPTER_KIND": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 110
+      },
+      "symbol": "packages/eve/src/execution/subagent-adapter.ts:SUBAGENT_ADAPTER_KIND"
+    }
+  ],
+  "SessionAuthContext": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/channel/types.ts:SessionAuthContext"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 67
+      },
+      "symbol": "packages/eve/src/channel/types.ts:SessionAuthContext"
+    }
+  ],
+  "SessionCapabilities": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/channel/types.ts:SessionCapabilities"
+    }
+  ],
+  "formatSubagentInput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 158
+      },
+      "symbol": "packages/eve/src/execution/subagent-invocation.ts:formatSubagentInput"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 165
+      },
+      "symbol": "packages/eve/src/execution/subagent-invocation.ts:formatSubagentInput"
+    }
+  ],
+  "isJsonObjectValue": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 102
+      },
+      "symbol": "packages/eve/src/shared/json.ts:isJsonObjectValue"
+    }
+  ],
+  "mintSubagentContinuationToken": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 33,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 84
+      },
+      "symbol": "packages/eve/src/execution/session.ts:mintSubagentContinuationToken"
+    }
+  ],
+  "resolveRemainingSessionTokenLimits": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 99
+      },
+      "symbol": "packages/eve/src/harness/subagent-token-budget.ts:resolveRemainingSessionTokenLimits"
+    }
+  ],
+  "resolveSubagentDepth": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/execution/subagent-tool.ts",
+        "line": 96
+      },
+      "symbol": "packages/eve/src/harness/subagent-depth.ts:resolveSubagentDepth"
+    }
+  ]
+}

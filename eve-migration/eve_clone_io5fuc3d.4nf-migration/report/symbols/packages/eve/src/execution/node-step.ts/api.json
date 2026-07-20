@@ -1,0 +1,171 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        36,
+        39
+      ],
+      "name": "CreateRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CreateRuntime = (config: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly nodeId?: string;\r\n}) => Runtime;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        44,
+        68
+      ],
+      "name": "CreateExecutionNodeStepInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateExecutionNodeStepInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "abortSignal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "abortSignal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "capabilities",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionCapabilities",
+      "signature": "capabilities?: : SessionCapabilities"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "createRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CreateRuntime",
+      "signature": "createRuntime: : CreateRuntime"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "handleEvent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HandleEventFn",
+      "signature": "handleEvent?: : HandleEventFn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RunMode",
+      "signature": "mode: : RunMode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "modelResolutionScope",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeModelResolutionScope",
+      "signature": "modelResolutionScope: : RuntimeModelResolutionScope"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "node",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolvedRuntimeAgentNode",
+      "signature": "node: : ResolvedRuntimeAgentNode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "workflowMaxSubagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "workflowMaxSubagents?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        74,
+        97
+      ],
+      "name": "createExecutionNodeStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateExecutionNodeStepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepFn",
+      "signature": "export function createExecutionNodeStep(input: CreateExecutionNodeStepInput) -> StepFn"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        163,
+        197
+      ],
+      "name": "createNodeHarnessTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly node: ResolvedRuntimeAgentNode;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolMap",
+      "signature": "export function createNodeHarnessTools(input: {\r\n  readonly node: ResolvedRuntimeAgentNode;\r\n}) -> HarnessToolMap"
+    }
+  ],
+  "module": "packages/eve/src/execution/node-step.ts"
+}

@@ -1,0 +1,94 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        90,
+        369
+      ],
+      "name": "discoverAgent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverAgentInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoverAgentResult>",
+      "signature": "export function discoverAgent(input: DiscoverAgentInput) -> Promise<DiscoverAgentResult>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        376,
+        387
+      ],
+      "name": "ExtensionMountDescriptor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionMountDescriptor { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        378,
+        378
+      ],
+      "name": "namespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "namespace: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        380,
+        380
+      ],
+      "name": "mountRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ExtensionSourceRef",
+      "signature": "mountRef: : ExtensionSourceRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        386,
+        386
+      ],
+      "name": "overridesRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "overridesRoot?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        393,
+        424
+      ],
+      "name": "discoverExtensionMountDeclarations",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly source?: ProjectSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  mounts: ExtensionMountDescriptor[];\r\n}>",
+      "signature": "export function discoverExtensionMountDeclarations(input: {\r\n  readonly agentRoot: string;\r\n  readonly source?: ProjectSource;\r\n}) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  mounts: ExtensionMountDescriptor[];\r\n}>"
+    }
+  ],
+  "module": "packages/eve/src/discover/discover-agent.ts"
+}

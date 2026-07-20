@@ -1,0 +1,242 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        55
+      ],
+      "name": "MockSandboxInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockSandboxInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "initialFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "initialFiles?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "commands",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, SandboxCommandResult>>",
+      "signature": "commands?: : Readonly<Record<string, SandboxCommandResult>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        54
+      ],
+      "name": "run",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (\r\n    options: SandboxRunOptions,\r\n  ) => Promise<SandboxCommandResult> | SandboxCommandResult",
+      "signature": "run?: : (\r\n    options: SandboxRunOptions,\r\n  ) => Promise<SandboxCommandResult> | SandboxCommandResult"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        63,
+        66
+      ],
+      "name": "MockSandboxWrite",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockSandboxWrite { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | Uint8Array",
+      "signature": "content: : string | Uint8Array"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        75,
+        109
+      ],
+      "name": "MockSandbox",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockSandbox { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "access",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxAccess",
+      "signature": "access: : SandboxAccess"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSession",
+      "signature": "session: : SandboxSession"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "commandLog",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "commandLog: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "removedPaths",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "removedPaths: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "networkPolicyUpdates",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SandboxNetworkPolicy[]",
+      "signature": "networkPolicyUpdates: : readonly SandboxNetworkPolicy[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        94,
+        94
+      ],
+      "name": "files",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Map<string, string>",
+      "signature": "files: : Map<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "fileBytes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Map<string, Buffer>",
+      "signature": "fileBytes: : Map<string, Buffer>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        108,
+        108
+      ],
+      "name": "writes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly MockSandboxWrite[]",
+      "signature": "writes: : readonly MockSandboxWrite[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        114,
+        267
+      ],
+      "name": "mockSandbox",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockSandboxInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MockSandbox",
+      "signature": "export function mockSandbox(input: MockSandboxInput) -> MockSandbox"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/mocks/mock-sandbox.ts"
+}

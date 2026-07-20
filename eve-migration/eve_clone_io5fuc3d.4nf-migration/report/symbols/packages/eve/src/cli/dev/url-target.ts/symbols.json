@@ -1,0 +1,265 @@
+{
+  "module": "packages/eve/src/cli/dev/url-target.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentRequestHeaders",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "DevelopmentRequestHeaders",
+      "partial_analysis": false,
+      "value": "Readonly<Record<string, string>>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTargetOptions:header",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "header",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentRequestHeaders",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTargetOptions:host",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTargetOptions:port",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "port",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTargetOptions:ui",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "ui",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTargetOptions:url",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTargetOptions",
+      "kind": "interface",
+      "line_range": [
+        6,
+        12
+      ],
+      "name": "DevelopmentUrlTargetOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTarget:headers",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "headers",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentRequestHeaders",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTarget:serverUrl",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "serverUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/url-target.ts:DevelopmentUrlTarget",
+      "kind": "interface",
+      "line_range": [
+        14,
+        17
+      ],
+      "name": "DevelopmentUrlTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url-target.ts:parseDevelopmentHeaderOption",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        36
+      ],
+      "name": "parseDevelopmentHeaderOption",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "previous",
+          "optional": false,
+          "type": "DevelopmentRequestHeaders"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRequestHeaders",
+      "signature": "export function parseDevelopmentHeaderOption(value: string, previous: DevelopmentRequestHeaders) -> DevelopmentRequestHeaders",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url-target.ts:resolveDevelopmentUrlTarget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        74
+      ],
+      "name": "resolveDevelopmentUrlTarget",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DevelopmentUrlTargetOptions"
+        },
+        {
+          "name": "positionalUrl",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentUrlTarget | undefined",
+      "signature": "export function resolveDevelopmentUrlTarget(options: DevelopmentUrlTargetOptions, positionalUrl: string | undefined) -> DevelopmentUrlTarget | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url-target.ts:mergeDevelopmentHeaders",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        94
+      ],
+      "name": "mergeDevelopmentHeaders",
+      "params": [
+        {
+          "name": "base",
+          "optional": false,
+          "type": "DevelopmentRequestHeaders | undefined"
+        },
+        {
+          "name": "override",
+          "optional": false,
+          "type": "DevelopmentRequestHeaders | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRequestHeaders | undefined",
+      "signature": "export function mergeDevelopmentHeaders(base: DevelopmentRequestHeaders | undefined, override: DevelopmentRequestHeaders | undefined) -> DevelopmentRequestHeaders | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url-target.ts:extractDevelopmentUrlHeaders",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        106
+      ],
+      "name": "extractDevelopmentUrlHeaders",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "URL"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRequestHeaders | undefined",
+      "signature": "export function extractDevelopmentUrlHeaders(url: URL) -> DevelopmentRequestHeaders | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url-target.ts:decodeUrlUserInfo",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        108,
+        114
+      ],
+      "name": "decodeUrlUserInfo",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "\"username\" | \"password\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function decodeUrlUserInfo(value: string, label: \"username\" | \"password\") -> string",
+      "visibility": "Private"
+    }
+  ]
+}

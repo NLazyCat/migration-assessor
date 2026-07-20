@@ -1,0 +1,614 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:BUILTIN_STEP_NAMES",
+      "kind": "variable",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "BUILTIN_STEP_NAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:WorkflowDirectiveMode",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "WorkflowDirectiveMode",
+      "partial_analysis": false,
+      "value": "\"workflow\" | \"step\" | \"client\" | false;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:DirectiveFunction",
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        45
+      ],
+      "name": "DirectiveFunction",
+      "partial_analysis": false,
+      "value": "{\r\n  directive: \"use workflow\" | \"use step\";\r\n  directiveEnd: number;\r\n  directiveStart: number;\r\n  /**\r\n   * `\"export \"` when the function was declared with `export async\r\n   * function foo()`. Empty otherwise — including when the function is\r\n   * re-exported via a trailing `export { foo }` aggregate. The inline\r\n   * replacement path preserves that aggregate, so the rewritten `var`\r\n   * binding becomes visible through it; emitting a second `export `\r\n   * keyword would produce a duplicate-export error.\r\n   */\r\n  exportPrefix: string;\r\n  /**\r\n   * `true` when the function's binding is reachable from any consumer\r\n   * — either declared with `export ` or referenced from a trailing\r\n   * `export { name }` aggregate. The step-only proxy path drops the\r\n   * original source (and the aggregate with it), so the synthesized\r\n   * stub must carry its own `export ` keyword whenever this is set.\r\n   */\r\n  exported: boolean;\r\n  name: string;\r\n  rangeEnd: number;\r\n  rangeStart: number;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:AstProgram",
+      "kind": "type_alias",
+      "line_range": [
+        47,
+        49
+      ],
+      "name": "AstProgram",
+      "partial_analysis": false,
+      "value": "{\r\n  body?: AstNode[];\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:AstNode",
+      "kind": "type_alias",
+      "line_range": [
+        51,
+        73
+      ],
+      "name": "AstNode",
+      "partial_analysis": false,
+      "value": "{\r\n  argument?: AstNode | null;\r\n  async?: boolean;\r\n  body?: AstNode[] | { body?: AstNode[] };\r\n  declaration?: AstNode | null;\r\n  declarations?: AstNode[];\r\n  directive?: string;\r\n  end?: number;\r\n  exported?: { name?: string } | null;\r\n  expression?: AstNode | null;\r\n  expressions?: AstNode[];\r\n  id?: { name?: string } | null;\r\n  importKind?: string;\r\n  init?: AstNode | null;\r\n  kind?: string;\r\n  local?: { name?: string } | null;\r\n  name?: string;\r\n  source?: AstNode | null;\r\n  start?: number;\r\n  specifiers?: AstNode[];\r\n  type?: string;\r\n  value?: unknown;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:transformWorkflowDirectives",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        75,
+        195
+      ],
+      "name": "transformWorkflowDirectives",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  filename: string;\r\n  mode: WorkflowDirectiveMode;\r\n  moduleSpecifier: string | undefined;\r\n  source: string;\r\n  /**\r\n   * Package-qualified module specifier without the `@<pkg.version>`\r\n   * stamp. Used to mint workflow ids for functions named in\r\n   * {@link transformWorkflowDirectives.input.stableWorkflowNames} so\r\n   * the bundled id matches the runtime reference on every deployment.\r\n   */\r\n  stableModuleSpecifier?: string | undefined;\r\n  /**\r\n   * Workflow function names whose bundled id should be emitted without\r\n   * the package version stamp. See `STABLE_WORKFLOW_NAMES` in\r\n   * `workflow-runtime.ts` for the canonical set eve itself uses.\r\n   */\r\n  stableWorkflowNames?: ReadonlySet<string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  code: string;\r\n  workflowManifest: WorkflowManifest;\r\n}>",
+      "signature": "export function transformWorkflowDirectives(input: {\r\n  filename: string;\r\n  mode: WorkflowDirectiveMode;\r\n  moduleSpecifier: string | undefined;\r\n  source: string;\r\n  /**\r\n   * Package-qualified module specifier without the `@<pkg.version>`\r\n   * stamp. Used to mint workflow ids for functions named in\r\n   * {@link transformWorkflowDirectives.input.stableWorkflowNames} so\r\n   * the bundled id matches the runtime reference on every deployment.\r\n   */\r\n  stableModuleSpecifier?: string | undefined;\r\n  /**\r\n   * Workflow function names whose bundled id should be emitted without\r\n   * the package version stamp. See `STABLE_WORKFLOW_NAMES` in\r\n   * `workflow-runtime.ts` for the canonical set eve itself uses.\r\n   */\r\n  stableWorkflowNames?: ReadonlySet<string>;\r\n}) -> Promise<{\r\n  code: string;\r\n  workflowManifest: WorkflowManifest;\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:parseWorkflowSource",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        197,
+        199
+      ],
+      "name": "parseWorkflowSource",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AstProgram>",
+      "signature": "export function parseWorkflowSource(filename: string, source: string) -> Promise<AstProgram>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:createWorkflowStepProxySource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        201,
+        222
+      ],
+      "name": "createWorkflowStepProxySource",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstProgram"
+        },
+        {
+          "name": "functions",
+          "optional": false,
+          "type": "readonly DirectiveFunction[]"
+        },
+        {
+          "name": "idBase",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createWorkflowStepProxySource(source: string, ast: AstProgram, functions: readonly DirectiveFunction[], idBase: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:findDirectiveFunctions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        224,
+        270
+      ],
+      "name": "findDirectiveFunctions",
+      "params": [
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstProgram"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DirectiveFunction[]",
+      "signature": "export function findDirectiveFunctions(ast: AstProgram) -> DirectiveFunction[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:collectLocalNamesReExportedAtModuleLevel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        272,
+        302
+      ],
+      "name": "collectLocalNamesReExportedAtModuleLevel",
+      "params": [
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstProgram"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Set<string>",
+      "signature": "export function collectLocalNamesReExportedAtModuleLevel(ast: AstProgram) -> Set<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:readTopLevelFunctionDeclaration",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        304,
+        319
+      ],
+      "name": "readTopLevelFunctionDeclaration",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  end: number;\r\n  exported: boolean;\r\n  fn: AstNode;\r\n  start: number;\r\n} | null",
+      "signature": "export function readTopLevelFunctionDeclaration(node: AstNode) -> {\r\n  end: number;\r\n  exported: boolean;\r\n  fn: AstNode;\r\n  start: number;\r\n} | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:readFunctionDeclarationRange",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        321,
+        341
+      ],
+      "name": "readFunctionDeclarationRange",
+      "params": [
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "AstNode"
+        },
+        {
+          "name": "exported",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "rangeNode",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ end: number; exported: boolean; fn: AstNode; start: number } | null",
+      "signature": "export function readFunctionDeclarationRange(fn: AstNode, exported: boolean, rangeNode: AstNode) -> { end: number; exported: boolean; fn: AstNode; start: number } | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:readBlockStatements",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        343,
+        349
+      ],
+      "name": "readBlockStatements",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "AstNode[\"body\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AstNode[] | undefined",
+      "signature": "export function readBlockStatements(block: AstNode[\"body\"]) -> AstNode[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:readFunctionDirective",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        351,
+        369
+      ],
+      "name": "readFunctionDirective",
+      "params": [
+        {
+          "name": "statement",
+          "optional": false,
+          "type": "AstNode | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ end: number; start: number; value: \"use workflow\" | \"use step\" } | null",
+      "signature": "export function readFunctionDirective(statement: AstNode | undefined) -> { end: number; start: number; value: \"use workflow\" | \"use step\" } | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:applySourceReplacements",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        371,
+        385
+      ],
+      "name": "applySourceReplacements",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "replacements",
+          "optional": false,
+          "type": "readonly { end: number; start: number; text: string }[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function applySourceReplacements(source: string, replacements: readonly { end: number; start: number; text: string }[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:stripUnusedValueImports",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        387,
+        405
+      ],
+      "name": "stripUnusedValueImports",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function stripUnusedValueImports(filename: string, source: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:findExportedLiteralValueDeclarations",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        407,
+        466
+      ],
+      "name": "findExportedLiteralValueDeclarations",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstProgram"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function findExportedLiteralValueDeclarations(source: string, ast: AstProgram) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:collectLocalReExportAliases",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        468,
+        489
+      ],
+      "name": "collectLocalReExportAliases",
+      "params": [
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstProgram"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Map<string, string[]>",
+      "signature": "export function collectLocalReExportAliases(ast: AstProgram) -> Map<string, string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:isLiteralValueDeclarator",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        491,
+        493
+      ],
+      "name": "isLiteralValueDeclarator",
+      "params": [
+        {
+          "name": "declarator",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLiteralValueDeclarator(declarator: AstNode) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:isLiteralValueExpression",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        495,
+        530
+      ],
+      "name": "isLiteralValueExpression",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode | null | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLiteralValueExpression(node: AstNode | null | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:readValueImportBindings",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        532,
+        541
+      ],
+      "name": "readValueImportBindings",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function readValueImportBindings(node: AstNode) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:collectReferencedIdentifiers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        543,
+        553
+      ],
+      "name": "collectReferencedIdentifiers",
+      "params": [
+        {
+          "name": "ast",
+          "optional": false,
+          "type": "AstProgram"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Set<string>",
+      "signature": "export function collectReferencedIdentifiers(ast: AstProgram) -> Set<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:visitAstNode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        555,
+        573
+      ],
+      "name": "visitAstNode",
+      "params": [
+        {
+          "name": "node",
+          "optional": false,
+          "type": "AstNode"
+        },
+        {
+          "name": "visitor",
+          "optional": false,
+          "type": "(node: AstNode) => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function visitAstNode(node: AstNode, visitor: (node: AstNode) => void) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:isAstNode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        575,
+        577
+      ],
+      "name": "isAstNode",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is AstNode",
+      "signature": "export function isAstNode(value: unknown) -> value is AstNode",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:extendRemovalEnd",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        579,
+        595
+      ],
+      "name": "extendRemovalEnd",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "end",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function extendRemovalEnd(source: string, end: number) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:stripJavaScriptExtension",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        597,
+        599
+      ],
+      "name": "stripJavaScriptExtension",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripJavaScriptExtension(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/workflow-transformer.ts:createStepId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        601,
+        607
+      ],
+      "name": "createStepId",
+      "params": [
+        {
+          "name": "idBase",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "functionName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createStepId(idBase: string, functionName: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

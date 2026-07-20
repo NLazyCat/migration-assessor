@@ -1,0 +1,54 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "CodexModelOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CodexModelOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "model",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "model: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        18,
+        47
+      ],
+      "name": "createCodexSubscriptionModel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CodexModelOptions"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "CodexTransportOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LanguageModelV4",
+      "signature": "export function createCodexSubscriptionModel(input: CodexModelOptions, options: CodexTransportOptions) -> LanguageModelV4"
+    }
+  ],
+  "module": "packages/eve/src/public/models/openai/chatgpt/model.ts"
+}

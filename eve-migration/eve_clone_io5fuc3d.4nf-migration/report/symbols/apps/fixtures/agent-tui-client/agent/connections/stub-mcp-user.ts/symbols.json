@@ -1,0 +1,144 @@
+{
+  "module": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:url",
+      "kind": "variable",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "url",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:userAuthEnabled",
+      "kind": "variable",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "userAuthEnabled",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:CLIENT_ID",
+      "kind": "variable",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "CLIENT_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:CLIENT_SECRET",
+      "kind": "variable",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "CLIENT_SECRET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:OAuthState",
+      "kind": "type_alias",
+      "line_range": [
+        44,
+        48
+      ],
+      "name": "OAuthState",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly [key: string]: string;\r\n  readonly verifier: string;\r\n  readonly state: string;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:exchangedTokens",
+      "kind": "variable",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "exchangedTokens",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:pendingTokenExchanges",
+      "kind": "variable",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "pendingTokenExchanges",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:principalTokens",
+      "kind": "variable",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "principalTokens",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:definition",
+      "kind": "variable",
+      "line_range": [
+        73,
+        77
+      ],
+      "name": "definition",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/fixtures/agent-tui-client/agent/connections/stub-mcp-user.ts:exchangeAuthorizationCode",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        165,
+        204
+      ],
+      "name": "exchangeAuthorizationCode",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callbackUrl: string;\r\n  readonly code: string;\r\n  readonly verifier: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function exchangeAuthorizationCode(input: {\r\n  readonly callbackUrl: string;\r\n  readonly code: string;\r\n  readonly verifier: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

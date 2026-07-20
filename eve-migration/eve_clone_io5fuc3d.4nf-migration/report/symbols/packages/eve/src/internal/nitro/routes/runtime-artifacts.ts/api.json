@@ -1,0 +1,138 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        14,
+        26
+      ],
+      "name": "DevelopmentNitroArtifactsConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentNitroArtifactsConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "devRuntimeArtifactsPointerPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "devRuntimeArtifactsPointerPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "durableArtifactsReference",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"development-generation\"",
+      "signature": "durableArtifactsReference?: : \"development-generation\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"development\"",
+      "signature": "kind: : \"development\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "moduleMapLoaderPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "moduleMapLoaderPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "ProductionNitroArtifactsConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProductionNitroArtifactsConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"production\"",
+      "signature": "kind: : \"production\""
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "NitroArtifactsConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type NitroArtifactsConfig = DevelopmentNitroArtifactsConfig | ProductionNitroArtifactsConfig;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        38,
+        58
+      ],
+      "name": "resolveNitroCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeCompiledArtifactsSource",
+      "signature": "export function resolveNitroCompiledArtifactsSource(config: NitroArtifactsConfig) -> RuntimeCompiledArtifactsSource"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/runtime-artifacts.ts"
+}

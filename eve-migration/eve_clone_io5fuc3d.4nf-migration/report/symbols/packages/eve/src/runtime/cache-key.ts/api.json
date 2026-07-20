@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        15,
+        47
+      ],
+      "name": "resolveRuntimeCompiledArtifactsVersionedCacheKey",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveRuntimeCompiledArtifactsVersionedCacheKey(source: RuntimeCompiledArtifactsSource) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/cache-key.ts"
+}

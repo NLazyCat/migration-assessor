@@ -1,0 +1,1377 @@
+{
+  "module": "packages/eve/src/compiler/manifest.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:COMPILED_AGENT_MANIFEST_KIND",
+      "kind": "variable",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "COMPILED_AGENT_MANIFEST_KIND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:ROOT_COMPILED_AGENT_NODE_ID",
+      "kind": "variable",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "ROOT_COMPILED_AGENT_NODE_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:COMPILED_AGENT_MANIFEST_VERSION",
+      "kind": "variable",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "COMPILED_AGENT_MANIFEST_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelEntry",
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "CompiledChannelEntry",
+      "partial_analysis": false,
+      "value": "CompiledChannelDefinition | DisabledCompiledChannelEntry;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:kind",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"channel\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:name",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:logicalPath",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:method",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": ChannelRouteMethod",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:urlPath",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "urlPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:sourceId",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:sourceKind",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "sourceKind",
+          "partial_analysis": false,
+          "return_type": ": \"module\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:exportName",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "exportName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:adapterKind",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "adapterKind",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition:cors",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "cors",
+          "partial_analysis": false,
+          "return_type": ": NormalizedChannelCorsOptions",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledChannelDefinition",
+      "kind": "interface",
+      "line_range": [
+        54,
+        78
+      ],
+      "name": "CompiledChannelDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:DisabledCompiledChannelEntry:kind",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"disabled\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:DisabledCompiledChannelEntry:name",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:DisabledCompiledChannelEntry:logicalPath",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:DisabledCompiledChannelEntry",
+      "kind": "interface",
+      "line_range": [
+        84,
+        88
+      ],
+      "name": "DisabledCompiledChannelEntry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledRuntimeModelReference",
+      "kind": "type_alias",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "CompiledRuntimeModelReference",
+      "partial_analysis": false,
+      "value": "InternalAgentModelDefinition & {\r\n  routing: ModelRouting;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicModelDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        107,
+        109
+      ],
+      "name": "CompiledDynamicModelDefinition",
+      "partial_analysis": false,
+      "value": "ModuleSourceRef & {\r\n  readonly eventNames: readonly string[];\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledAgentBuildDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "CompiledAgentBuildDefinition",
+      "partial_analysis": false,
+      "value": "AgentBuildDefinition;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledAgentCompactionDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        120,
+        122
+      ],
+      "name": "CompiledAgentCompactionDefinition",
+      "partial_analysis": false,
+      "value": "Omit<InternalAgentCompactionDefinition, \"model\"> & {\r\n  model?: CompiledRuntimeModelReference;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledAgentDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        127,
+        131
+      ],
+      "name": "CompiledAgentDefinition",
+      "partial_analysis": false,
+      "value": "Omit<InternalAgentDefinition, \"model\" | \"compaction\"> & {\r\n  model: CompiledRuntimeModelReference;\r\n  compaction?: CompiledAgentCompactionDefinition;\r\n  dynamicModel?: CompiledDynamicModelDefinition;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledInstructionsDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        137,
+        138
+      ],
+      "name": "CompiledInstructionsDefinition",
+      "partial_analysis": false,
+      "value": "InternalInstructionsDefinition &\r\n  (Omit<MarkdownSourceRef<undefined>, \"definition\"> | Omit<ModuleSourceRef, \"exportName\">);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledSkillDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        143,
+        144
+      ],
+      "name": "CompiledSkillDefinition",
+      "partial_analysis": false,
+      "value": "NamedSkillDefinition &\r\n  (Omit<MarkdownSourceRef<undefined>, \"definition\"> | ModuleSourceRef | SkillPackageSourceRef);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledScheduleDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "CompiledScheduleDefinition",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledScheduleDefinitionSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledSandboxDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        154,
+        154
+      ],
+      "name": "CompiledSandboxDefinition",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledSandboxDefinitionSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledSandboxWorkspace",
+      "kind": "type_alias",
+      "line_range": [
+        162,
+        162
+      ],
+      "name": "CompiledSandboxWorkspace",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledSandboxWorkspaceSchema>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledWorkspaceResourceRoot",
+      "kind": "type_alias",
+      "line_range": [
+        168,
+        168
+      ],
+      "name": "CompiledWorkspaceResourceRoot",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledWorkspaceResourceRootSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledConnectionDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "CompiledConnectionDefinition",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledConnectionDefinitionSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledToolDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        178,
+        178
+      ],
+      "name": "CompiledToolDefinition",
+      "partial_analysis": false,
+      "value": "InternalToolDefinition & ModuleSourceRef;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledWorkflowToolDefinition:maxSubagents",
+          "kind": "property",
+          "line_range": [
+            184,
+            184
+          ],
+          "name": "maxSubagents",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledWorkflowToolDefinition",
+      "kind": "interface",
+      "line_range": [
+        183,
+        185
+      ],
+      "name": "CompiledWorkflowToolDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicToolDefinition:slug",
+          "kind": "property",
+          "line_range": [
+            193,
+            193
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicToolDefinition:eventNames",
+          "kind": "property",
+          "line_range": [
+            194,
+            194
+          ],
+          "name": "eventNames",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicToolDefinition:extensionNamespace",
+          "kind": "property",
+          "line_range": [
+            201,
+            201
+          ],
+          "name": "extensionNamespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicToolDefinition",
+      "kind": "interface",
+      "line_range": [
+        192,
+        202
+      ],
+      "name": "CompiledDynamicToolDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicSkillDefinition:slug",
+          "kind": "property",
+          "line_range": [
+            210,
+            210
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicSkillDefinition:eventNames",
+          "kind": "property",
+          "line_range": [
+            211,
+            211
+          ],
+          "name": "eventNames",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicSkillDefinition:extensionNamespace",
+          "kind": "property",
+          "line_range": [
+            216,
+            216
+          ],
+          "name": "extensionNamespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicSkillDefinition",
+      "kind": "interface",
+      "line_range": [
+        209,
+        217
+      ],
+      "name": "CompiledDynamicSkillDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicInstructionsDefinition:slug",
+          "kind": "property",
+          "line_range": [
+            224,
+            224
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicInstructionsDefinition:eventNames",
+          "kind": "property",
+          "line_range": [
+            225,
+            225
+          ],
+          "name": "eventNames",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledDynamicInstructionsDefinition",
+      "kind": "interface",
+      "line_range": [
+        223,
+        226
+      ],
+      "name": "CompiledDynamicInstructionsDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledHookDefinition:slug",
+          "kind": "property",
+          "line_range": [
+            241,
+            241
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledHookDefinition",
+      "kind": "interface",
+      "line_range": [
+        235,
+        242
+      ],
+      "name": "CompiledHookDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledAgentNodeManifest",
+      "kind": "type_alias",
+      "line_range": [
+        248,
+        248
+      ],
+      "name": "CompiledAgentNodeManifest",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledAgentNodeManifestSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledSubagentNode",
+      "kind": "type_alias",
+      "line_range": [
+        254,
+        263
+      ],
+      "name": "CompiledSubagentNode",
+      "partial_analysis": false,
+      "value": "Readonly<\r\n  ModuleSourceRef &\r\n    Node & {\r\n      agent: CompiledAgentNodeManifest;\r\n      description: string;\r\n      entryPath: string;\r\n      name: string;\r\n      rootPath: string;\r\n    }\r\n>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledSubagentEdge:childNodeId",
+          "kind": "property",
+          "line_range": [
+            271,
+            271
+          ],
+          "name": "childNodeId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledSubagentEdge:parentNodeId",
+          "kind": "property",
+          "line_range": [
+            272,
+            272
+          ],
+          "name": "parentNodeId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledSubagentEdge",
+      "kind": "interface",
+      "line_range": [
+        270,
+        273
+      ],
+      "name": "CompiledSubagentEdge",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledAgentManifest",
+      "kind": "type_alias",
+      "line_range": [
+        278,
+        278
+      ],
+      "name": "CompiledAgentManifest",
+      "partial_analysis": false,
+      "value": "z.infer<typeof compiledAgentManifestSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:moduleSourceRefSchema",
+      "kind": "variable",
+      "line_range": [
+        280,
+        287
+      ],
+      "name": "moduleSourceRefSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledDynamicModelDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        289,
+        297
+      ],
+      "name": "compiledDynamicModelDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:channelMethodSchema",
+      "kind": "variable",
+      "line_range": [
+        299,
+        306
+      ],
+      "name": "channelMethodSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledChannelCorsSchema",
+      "kind": "variable",
+      "line_range": [
+        308,
+        323
+      ],
+      "name": "compiledChannelCorsSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledChannelDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        325,
+        338
+      ],
+      "name": "compiledChannelDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:disabledCompiledChannelEntrySchema",
+      "kind": "variable",
+      "line_range": [
+        340,
+        346
+      ],
+      "name": "disabledCompiledChannelEntrySchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledChannelEntrySchema",
+      "kind": "variable",
+      "line_range": [
+        348,
+        351
+      ],
+      "name": "compiledChannelEntrySchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:modelRoutingSchema",
+      "kind": "variable",
+      "line_range": [
+        353,
+        367
+      ],
+      "name": "modelRoutingSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledRuntimeModelReferenceSchema",
+      "kind": "variable",
+      "line_range": [
+        369,
+        377
+      ],
+      "name": "compiledRuntimeModelReferenceSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentBuildDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        379,
+        383
+      ],
+      "name": "compiledAgentBuildDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentWorkflowWorldDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        385,
+        385
+      ],
+      "name": "compiledAgentWorkflowWorldDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentWorkflowDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        387,
+        391
+      ],
+      "name": "compiledAgentWorkflowDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentCompactionDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        393,
+        398
+      ],
+      "name": "compiledAgentCompactionDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:sessionTokenLimitSchema",
+      "kind": "variable",
+      "line_range": [
+        400,
+        400
+      ],
+      "name": "sessionTokenLimitSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentLimitsDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        402,
+        407
+      ],
+      "name": "compiledAgentLimitsDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledWorkflowToolDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        409,
+        413
+      ],
+      "name": "compiledWorkflowToolDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentConfigSchema",
+      "kind": "variable",
+      "line_range": [
+        415,
+        436
+      ],
+      "name": "compiledAgentConfigSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledInstructionsSchema",
+      "kind": "variable",
+      "line_range": [
+        438,
+        446
+      ],
+      "name": "compiledInstructionsSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledSkillBaseFields",
+      "kind": "variable",
+      "line_range": [
+        448,
+        456
+      ],
+      "name": "compiledSkillBaseFields",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledSkillSourceSchema",
+      "kind": "variable",
+      "line_range": [
+        458,
+        487
+      ],
+      "name": "compiledSkillSourceSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledScheduleDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        489,
+        499
+      ],
+      "name": "compiledScheduleDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledSandboxDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        501,
+        520
+      ],
+      "name": "compiledSandboxDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledSandboxWorkspaceSchema",
+      "kind": "variable",
+      "line_range": [
+        522,
+        529
+      ],
+      "name": "compiledSandboxWorkspaceSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledWorkspaceResourceRootSchema",
+      "kind": "variable",
+      "line_range": [
+        531,
+        537
+      ],
+      "name": "compiledWorkspaceResourceRootSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledConnectionDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        539,
+        573
+      ],
+      "name": "compiledConnectionDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledToolDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        575,
+        586
+      ],
+      "name": "compiledToolDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledDynamicToolDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        588,
+        598
+      ],
+      "name": "compiledDynamicToolDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledDynamicSkillDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        600,
+        610
+      ],
+      "name": "compiledDynamicSkillDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledDynamicInstructionsDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        612,
+        622
+      ],
+      "name": "compiledDynamicInstructionsDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledHookDefinitionSchema",
+      "kind": "variable",
+      "line_range": [
+        624,
+        632
+      ],
+      "name": "compiledHookDefinitionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentNodeManifestSchema",
+      "kind": "variable",
+      "line_range": [
+        637,
+        660
+      ],
+      "name": "compiledAgentNodeManifestSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledSubagentNodeSchema",
+      "kind": "variable",
+      "line_range": [
+        662,
+        675
+      ],
+      "name": "compiledSubagentNodeSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledSubagentEdgeSchema",
+      "kind": "variable",
+      "line_range": [
+        677,
+        682
+      ],
+      "name": "compiledSubagentEdgeSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount:namespace",
+          "kind": "property",
+          "line_range": [
+            691,
+            691
+          ],
+          "name": "namespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount:packageName",
+          "kind": "property",
+          "line_range": [
+            692,
+            692
+          ],
+          "name": "packageName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount:packageNamespace",
+          "kind": "property",
+          "line_range": [
+            698,
+            698
+          ],
+          "name": "packageNamespace",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount:sourceRoot",
+          "kind": "property",
+          "line_range": [
+            704,
+            704
+          ],
+          "name": "sourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount:mountSourceId",
+          "kind": "property",
+          "line_range": [
+            705,
+            705
+          ],
+          "name": "mountSourceId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount:mountLogicalPath",
+          "kind": "property",
+          "line_range": [
+            706,
+            706
+          ],
+          "name": "mountLogicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/manifest.ts:CompiledExtensionMount",
+      "kind": "interface",
+      "line_range": [
+        689,
+        707
+      ],
+      "name": "CompiledExtensionMount",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledExtensionMountSchema",
+      "kind": "variable",
+      "line_range": [
+        709,
+        718
+      ],
+      "name": "compiledExtensionMountSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:compiledAgentManifestSchema",
+      "kind": "variable",
+      "line_range": [
+        723,
+        751
+      ],
+      "name": "compiledAgentManifestSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:createCompiledAgentNodeManifest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        756,
+        869
+      ],
+      "name": "createCompiledAgentNodeManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicInstructions?: readonly CompiledDynamicInstructionsDefinition[];\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly workspaceResourceRoot?: CompiledWorkspaceResourceRoot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentNodeManifest",
+      "signature": "export function createCompiledAgentNodeManifest(input: {\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicInstructions?: readonly CompiledDynamicInstructionsDefinition[];\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly workspaceResourceRoot?: CompiledWorkspaceResourceRoot;\r\n}) -> CompiledAgentNodeManifest",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:deriveResourceRootEntries",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        879,
+        892
+      ],
+      "name": "deriveResourceRootEntries",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function deriveResourceRootEntries(input: {\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n}) -> readonly string[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:createCompiledSubagentNodeId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        898,
+        904
+      ],
+      "name": "createCompiledSubagentNodeId",
+      "params": [
+        {
+          "name": "parentNodeId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "sourceId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createCompiledSubagentNodeId(parentNodeId: string, sourceId: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:createCompiledAgentManifest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        909,
+        940
+      ],
+      "name": "createCompiledAgentManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly subagentEdges?: readonly CompiledSubagentEdge[];\r\n  readonly subagents?: readonly CompiledSubagentNode[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly extensionMounts?: readonly CompiledExtensionMount[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledAgentManifest",
+      "signature": "export function createCompiledAgentManifest(input: {\r\n  readonly agentRoot: string;\r\n  readonly appRoot: string;\r\n  readonly channels?: readonly CompiledChannelEntry[];\r\n  readonly config: CompiledAgentDefinition;\r\n  readonly connections?: readonly CompiledConnectionDefinition[];\r\n  readonly diagnosticsSummary?: DiscoverDiagnosticsSummary;\r\n  readonly disabledFrameworkTools?: readonly string[];\r\n  readonly workflowTool?: CompiledWorkflowToolDefinition;\r\n  readonly dynamicSkills?: readonly CompiledDynamicSkillDefinition[];\r\n  readonly dynamicTools?: readonly CompiledDynamicToolDefinition[];\r\n  readonly hooks?: readonly CompiledHookDefinition[];\r\n  readonly remoteAgents?: readonly CompiledRemoteAgentNode[];\r\n  readonly sandbox?: CompiledSandboxDefinition | null;\r\n  readonly sandboxWorkspaces?: readonly CompiledSandboxWorkspace[];\r\n  readonly schedules?: readonly CompiledScheduleDefinition[];\r\n  readonly skills?: readonly CompiledSkillDefinition[];\r\n  readonly subagentEdges?: readonly CompiledSubagentEdge[];\r\n  readonly subagents?: readonly CompiledSubagentNode[];\r\n  readonly instructions?: CompiledInstructionsDefinition;\r\n  readonly tools?: readonly CompiledToolDefinition[];\r\n  readonly extensionMounts?: readonly CompiledExtensionMount[];\r\n}) -> CompiledAgentManifest",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:cloneCompiledRuntimeModelReference",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        942,
+        959
+      ],
+      "name": "cloneCompiledRuntimeModelReference",
+      "params": [
+        {
+          "name": "model",
+          "optional": false,
+          "type": "CompiledRuntimeModelReference"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledRuntimeModelReference",
+      "signature": "export function cloneCompiledRuntimeModelReference(model: CompiledRuntimeModelReference) -> CompiledRuntimeModelReference",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/manifest.ts:cloneModelRouting",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        961,
+        968
+      ],
+      "name": "cloneModelRouting",
+      "params": [
+        {
+          "name": "routing",
+          "optional": false,
+          "type": "ModelRouting"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelRouting",
+      "signature": "export function cloneModelRouting(routing: ModelRouting) -> ModelRouting",
+      "visibility": "Private"
+    }
+  ]
+}

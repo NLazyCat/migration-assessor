@@ -1,0 +1,88 @@
+{
+  "module": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:DevelopmentCompiledArtifactsSelector:kind",
+          "kind": "property",
+          "line_range": [
+            5,
+            5
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"development\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:DevelopmentCompiledArtifactsSelector",
+      "kind": "interface",
+      "line_range": [
+        4,
+        6
+      ],
+      "name": "DevelopmentCompiledArtifactsSelector",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:DurableCompiledArtifactsSource",
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "DurableCompiledArtifactsSource",
+      "partial_analysis": false,
+      "value": "| RuntimeCompiledArtifactsSource\r\n  | DevelopmentCompiledArtifactsSelector;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:serializeDurableCompiledArtifactsSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        23
+      ],
+      "name": "serializeDurableCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableCompiledArtifactsSource",
+      "signature": "export function serializeDurableCompiledArtifactsSource(source: RuntimeCompiledArtifactsSource) -> DurableCompiledArtifactsSource",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:resolveDurableCompiledArtifactsSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        38
+      ],
+      "name": "resolveDurableCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "DurableCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeCompiledArtifactsSource",
+      "signature": "export function resolveDurableCompiledArtifactsSource(source: DurableCompiledArtifactsSource) -> RuntimeCompiledArtifactsSource",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "module": "packages/eve/src/harness/instrumentation-config.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-config.ts:INSTRUMENTATION_CONFIG_GLOBAL_KEY",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "INSTRUMENTATION_CONFIG_GLOBAL_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/instrumentation-config.ts:InstrumentationConfigGlobal:[expr]",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationDefinition",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/instrumentation-config.ts:InstrumentationConfigGlobal",
+      "kind": "interface",
+      "line_range": [
+        24,
+        26
+      ],
+      "name": "InstrumentationConfigGlobal",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-config.ts:globalContainer",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "globalContainer",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-config.ts:registerInstrumentationConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        47
+      ],
+      "name": "registerInstrumentationConfig",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "InstrumentationDefinition"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "InstrumentationSetupContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerInstrumentationConfig(config: InstrumentationDefinition, context: InstrumentationSetupContext) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/instrumentation-config.ts:getInstrumentationConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        57
+      ],
+      "name": "getInstrumentationConfig",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "InstrumentationDefinition | undefined",
+      "signature": "export function getInstrumentationConfig() -> InstrumentationDefinition | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

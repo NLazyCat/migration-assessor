@@ -1,0 +1,70 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        51,
+        63
+      ],
+      "name": "HarnessStepResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HarnessStepResult = Pick<\r\n  StepResult<ToolSet>,\r\n  | \"content\"\r\n  | \"finishReason\"\r\n  | \"providerMetadata\"\r\n  | \"response\"\r\n  | \"text\"\r\n  | \"toolCalls\"\r\n  | \"toolResults\"\r\n  | \"usage\"\r\n> & {\r\n  readonly invalidInputToolCallIds?: ReadonlySet<string>;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        139,
+        188
+      ],
+      "name": "buildStepHooks",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "StepHooksInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepHooks",
+      "signature": "export function buildStepHooks(input: StepHooksInput) -> StepHooks"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        209,
+        313
+      ],
+      "name": "emitStepActions",
+      "params": [
+        {
+          "name": "emitFn",
+          "optional": false,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        },
+        {
+          "name": "step",
+          "optional": false,
+          "type": "HarnessStepResult"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly emittedActionCallIds?: ReadonlySet<string>;\r\n    readonly excludedActionCallIds?: ReadonlySet<string>;\r\n    readonly excludedActionToolNames: ReadonlySet<string>;\r\n    readonly handledInlineToolResultCallIds?: ReadonlySet<string>;\r\n    readonly tools: ToolLoopHarnessConfig[\"tools\"];\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitStepActions(emitFn: HarnessEmitFn, state: HarnessEmissionState, step: HarnessStepResult, options: {\r\n    readonly emittedActionCallIds?: ReadonlySet<string>;\r\n    readonly excludedActionCallIds?: ReadonlySet<string>;\r\n    readonly excludedActionToolNames: ReadonlySet<string>;\r\n    readonly handledInlineToolResultCallIds?: ReadonlySet<string>;\r\n    readonly tools: ToolLoopHarnessConfig[\"tools\"];\r\n  }) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/harness/step-hooks.ts"
+}

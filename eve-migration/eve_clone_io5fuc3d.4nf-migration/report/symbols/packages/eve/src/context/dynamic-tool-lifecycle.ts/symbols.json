@@ -1,0 +1,311 @@
+{
+  "module": "packages/eve/src/context/dynamic-tool-lifecycle.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:log",
+      "kind": "variable",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:toHarnessToolDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        53
+      ],
+      "name": "toHarnessToolDefinition",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "DynamicToolEntry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolDefinition",
+      "signature": "export function toHarnessToolDefinition(name: string, entry: DynamicToolEntry) -> HarnessToolDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:qualifyDynamicToolNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        81
+      ],
+      "name": "qualifyDynamicToolNames",
+      "params": [
+        {
+          "name": "resolver",
+          "optional": false,
+          "type": "ResolvedDynamicToolResolver"
+        },
+        {
+          "name": "isSingle",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "Readonly<Record<string, DynamicToolEntry>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Array<{ name: string; entryKey: string; entry: DynamicToolEntry }>",
+      "signature": "export function qualifyDynamicToolNames(resolver: ResolvedDynamicToolResolver, isSingle: boolean, entries: Readonly<Record<string, DynamicToolEntry>>) -> Array<{ name: string; entryKey: string; entry: DynamicToolEntry }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:replayDynamicSessionTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        128
+      ],
+      "name": "replayDynamicSessionTools",
+      "params": [
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "readonly DurableDynamicToolMetadata[]"
+        },
+        {
+          "name": "_resolvers",
+          "optional": false,
+          "type": "readonly ResolvedDynamicToolResolver[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly HarnessToolDefinition[]",
+      "signature": "export function replayDynamicSessionTools(metadata: readonly DurableDynamicToolMetadata[], _resolvers: readonly ResolvedDynamicToolResolver[]) -> readonly HarnessToolDefinition[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:getStepRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        134,
+        143
+      ],
+      "name": "getStepRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Map<string, Function>",
+      "signature": "export function getStepRegistry() -> Map<string, Function>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:lookupStepFunction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        145,
+        152
+      ],
+      "name": "lookupStepFunction",
+      "params": [
+        {
+          "name": "stepId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "((...args: unknown[]) => unknown) | null",
+      "signature": "export function lookupStepFunction(stepId: string) -> ((...args: unknown[]) => unknown) | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:registerStepFunction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        154,
+        156
+      ],
+      "name": "registerStepFunction",
+      "params": [
+        {
+          "name": "stepId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "Function"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerStepFunction(stepId: string, fn: Function) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:safeSerialize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        158,
+        164
+      ],
+      "name": "safeSerialize",
+      "params": [
+        {
+          "name": "obj",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function safeSerialize(obj: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:durableKeyForEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        181
+      ],
+      "name": "durableKeyForEvent",
+      "params": [
+        {
+          "name": "eventType",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextKey<readonly DurableDynamicToolMetadata[]> | undefined",
+      "signature": "export function durableKeyForEvent(eventType: string) -> ContextKey<readonly DurableDynamicToolMetadata[]> | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:ResolveResult:metadata",
+          "kind": "property",
+          "line_range": [
+            198,
+            198
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": readonly DurableDynamicToolMetadata[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:ResolveResult:liveTools",
+          "kind": "property",
+          "line_range": [
+            199,
+            199
+          ],
+          "name": "liveTools",
+          "partial_analysis": false,
+          "return_type": ": readonly HarnessToolDefinition[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:ResolveResult",
+      "kind": "interface",
+      "line_range": [
+        197,
+        200
+      ],
+      "name": "ResolveResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:resolveToolsFromEvent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        202,
+        317
+      ],
+      "name": "resolveToolsFromEvent",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ContextContainer"
+        },
+        {
+          "name": "resolvers",
+          "optional": false,
+          "type": "readonly ResolvedDynamicToolResolver[]"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolveResult>",
+      "signature": "export function resolveToolsFromEvent(ctx: ContextContainer, resolvers: readonly ResolvedDynamicToolResolver[], event: HandleMessageStreamEvent, messages: readonly ModelMessage[]) -> Promise<ResolveResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.ts:dispatchDynamicToolEvent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        329,
+        361
+      ],
+      "name": "dispatchDynamicToolEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ctx: ContextContainer;\r\n  readonly resolvers: readonly ResolvedDynamicToolResolver[];\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly messages: readonly ModelMessage[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchDynamicToolEvent(input: {\r\n  readonly ctx: ContextContainer;\r\n  readonly resolvers: readonly ResolvedDynamicToolResolver[];\r\n  readonly event: HandleMessageStreamEvent;\r\n  readonly messages: readonly ModelMessage[];\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

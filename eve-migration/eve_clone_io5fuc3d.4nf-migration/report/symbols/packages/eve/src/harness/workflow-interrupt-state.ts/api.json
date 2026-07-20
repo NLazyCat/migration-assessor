@@ -1,0 +1,100 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "PendingWorkflowInterrupt",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PendingWorkflowInterrupt { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "interrupt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WorkflowSandboxInterrupt",
+      "signature": "interrupt: : WorkflowSandboxInterrupt"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "responseMessages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ModelMessage[]",
+      "signature": "responseMessages: : readonly ModelMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        26
+      ],
+      "name": "getPendingWorkflowInterrupt",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PendingWorkflowInterrupt | undefined",
+      "signature": "export function getPendingWorkflowInterrupt(state: SessionStateMap | undefined) -> PendingWorkflowInterrupt | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        43
+      ],
+      "name": "setPendingWorkflowInterrupt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setPendingWorkflowInterrupt(input: {\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        45,
+        54
+      ],
+      "name": "clearPendingWorkflowInterrupt",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function clearPendingWorkflowInterrupt(session: HarnessSession) -> HarnessSession"
+    }
+  ],
+  "module": "packages/eve/src/harness/workflow-interrupt-state.ts"
+}

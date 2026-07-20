@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/extension-capability-requirements.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/extension-capability-requirements.ts:deriveExtensionCapabilityRequirements",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        71
+      ],
+      "name": "deriveExtensionCapabilityRequirements",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ExtensionCapabilityRequirements>",
+      "signature": "export function deriveExtensionCapabilityRequirements(input: {\r\n  readonly declarationModule: ModuleSourceRef;\r\n  readonly manifest: AgentSourceManifest;\r\n  readonly runtimeDependencies: readonly string[];\r\n  readonly sourceRoot: string;\r\n}) -> Promise<ExtensionCapabilityRequirements>",
+      "visibility": "Public"
+    }
+  ]
+}

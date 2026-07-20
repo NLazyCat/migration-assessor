@@ -1,0 +1,142 @@
+{
+  "module": "packages/eve/src/evals/runner/artifacts.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/artifacts.ts:resolveArtifactDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "resolveArtifactDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveArtifactDirectory(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/artifacts.ts:writeArtifacts",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        20,
+        50
+      ],
+      "name": "writeArtifacts",
+      "params": [
+        {
+          "name": "artifactDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "summary",
+          "optional": false,
+          "type": "EveEvalRunSummary"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeArtifacts(artifactDir: string, summary: EveEvalRunSummary) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/artifacts.ts:buildSummaryArtifact",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        77
+      ],
+      "name": "buildSummaryArtifact",
+      "params": [
+        {
+          "name": "summary",
+          "optional": false,
+          "type": "EveEvalRunSummary"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function buildSummaryArtifact(summary: EveEvalRunSummary) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/artifacts.ts:buildResultLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        79,
+        89
+      ],
+      "name": "buildResultLine",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "EveEvalResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function buildResultLine(result: EveEvalResult) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/artifacts.ts:buildEvalArtifact",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        91,
+        108
+      ],
+      "name": "buildEvalArtifact",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "EveEvalResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function buildEvalArtifact(result: EveEvalResult) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/artifacts.ts:sanitizeArtifactPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        114,
+        119
+      ],
+      "name": "sanitizeArtifactPath",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sanitizeArtifactPath(id: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

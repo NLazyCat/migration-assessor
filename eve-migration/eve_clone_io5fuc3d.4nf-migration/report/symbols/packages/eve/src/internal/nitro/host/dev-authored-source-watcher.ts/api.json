@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        43,
+        47
+      ],
+      "name": "AuthoredSourceWatcherHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AuthoredSourceWatcherHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        176
+      ],
+      "name": "startAuthoredSourceWatcher",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  coordinator: DevelopmentAuthoredRebuildCoordinator;\r\n  preparedHost: PreparedDevelopmentApplicationHost;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AuthoredSourceWatcherHandle>",
+      "signature": "export function startAuthoredSourceWatcher(input: {\r\n  coordinator: DevelopmentAuthoredRebuildCoordinator;\r\n  preparedHost: PreparedDevelopmentApplicationHost;\r\n}) -> Promise<AuthoredSourceWatcherHandle>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-authored-source-watcher.ts"
+}

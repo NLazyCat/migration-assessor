@@ -1,0 +1,173 @@
+{
+  "module": "packages/eve/src/shared/text-boundaries.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/shared/text-boundaries.ts:GraphemeSpan:text",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "text",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/shared/text-boundaries.ts:GraphemeSpan:start",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "start",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/shared/text-boundaries.ts:GraphemeSpan:end",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "end",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/shared/text-boundaries.ts:GraphemeSpan",
+      "kind": "interface",
+      "line_range": [
+        7,
+        11
+      ],
+      "name": "GraphemeSpan",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/text-boundaries.ts:graphemeSegmenter",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "graphemeSegmenter",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/text-boundaries.ts:graphemes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        22
+      ],
+      "name": "graphemes",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GraphemeSpan[]",
+      "signature": "export function graphemes(text: string) -> GraphemeSpan[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/text-boundaries.ts:previousGraphemeBoundary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "previousGraphemeBoundary",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function previousGraphemeBoundary(text: string, offset: number) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/text-boundaries.ts:nextGraphemeBoundary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        37
+      ],
+      "name": "nextGraphemeBoundary",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function nextGraphemeBoundary(text: string, offset: number) -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/shared/text-boundaries.ts:graphemeBoundaryAtOrAfter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        46
+      ],
+      "name": "graphemeBoundaryAtOrAfter",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "offset",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function graphemeBoundaryAtOrAfter(text: string, offset: number) -> number",
+      "visibility": "Public"
+    }
+  ]
+}

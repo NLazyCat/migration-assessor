@@ -1,0 +1,56 @@
+{
+  "module": "packages/eve/src/evals/define-eval.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/define-eval.test.ts:TEST_MODEL",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "TEST_MODEL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/define-eval.test.ts:defineInvalidEval",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "defineInvalidEval",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Partial<EveEvalInputFields> & Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function defineInvalidEval(input: Partial<EveEvalInputFields> & Record<string, unknown>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/define-eval.test.ts:typeOnlyFixtures",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        122
+      ],
+      "name": "typeOnlyFixtures",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function typeOnlyFixtures() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "module": "packages/eve/src/public/instrumentation/index.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/instrumentation/index.test.ts:SupportMetadata",
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        10
+      ],
+      "name": "SupportMetadata",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly priority: \"high\";\r\n  readonly queueId: string | null;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/instrumentation/index.test.ts:createSupportChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "createSupportChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createSupportChannel() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/instrumentation/index.test.ts:supportChannel",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "supportChannel",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/instrumentation/index.test.ts:stampSupportChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        23
+      ],
+      "name": "stampSupportChannel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function stampSupportChannel() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "module": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:STREAMED_ACTION_TOOL",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "STREAMED_ACTION_TOOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:ChannelSessionResponse:sessionId",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:ChannelSessionResponse",
+      "kind": "interface",
+      "line_range": [
+        9,
+        11
+      ],
+      "name": "ChannelSessionResponse",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:firstNonEmptyLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        19
+      ],
+      "name": "firstNonEmptyLine",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function firstNonEmptyLine(message: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:preToolNarration",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        42
+      ],
+      "name": "preToolNarration",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function preToolNarration(events: readonly HandleMessageStreamEvent[]) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:narratedStreamedActionOrder",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        72
+      ],
+      "name": "narratedStreamedActionOrder",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function narratedStreamedActionOrder(events: readonly HandleMessageStreamEvent[]) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/channel-events/pre-tool-narration.eval.ts:postChannel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        74,
+        97
+      ],
+      "name": "postChannel",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "EveEvalTargetHandle"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ChannelSessionResponse>",
+      "signature": "export function postChannel(target: EveEvalTargetHandle, path: string, body: Record<string, unknown>) -> Promise<ChannelSessionResponse>",
+      "visibility": "Private"
+    }
+  ]
+}

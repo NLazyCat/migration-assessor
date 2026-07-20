@@ -1,0 +1,80 @@
+{
+  "module": "packages/eve/src/runtime/attributes/normalize.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/attributes/normalize.ts:EVE_ATTRIBUTE_VALUE_MAX_BYTES",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "EVE_ATTRIBUTE_VALUE_MAX_BYTES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/attributes/normalize.ts:EveAttributeValue",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "EveAttributeValue",
+      "partial_analysis": false,
+      "value": "string | number | undefined;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/attributes/normalize.ts:truncateForTag",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        17,
+        43
+      ],
+      "name": "truncateForTag",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "maxBytes",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function truncateForTag(value: string, maxBytes: unknown) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/attributes/normalize.ts:normalizeEveAttributes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        58
+      ],
+      "name": "normalizeEveAttributes",
+      "params": [
+        {
+          "name": "attrs",
+          "optional": false,
+          "type": "Record<string, EveAttributeValue>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, string>",
+      "signature": "export function normalizeEveAttributes(attrs: Record<string, EveAttributeValue>) -> Record<string, string>",
+      "visibility": "Public"
+    }
+  ]
+}

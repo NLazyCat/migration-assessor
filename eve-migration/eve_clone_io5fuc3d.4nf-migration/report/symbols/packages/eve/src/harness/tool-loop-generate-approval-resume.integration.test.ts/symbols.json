@@ -1,0 +1,87 @@
+{
+  "module": "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts:usage",
+      "kind": "variable",
+      "line_range": [
+        9,
+        21
+      ],
+      "name": "usage",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts:toolCall",
+      "kind": "variable",
+      "line_range": [
+        23,
+        28
+      ],
+      "name": "toolCall",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts:approvalRequest",
+      "kind": "variable",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "approvalRequest",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts:createPendingApprovalSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        82
+      ],
+      "name": "createPendingApprovalSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createPendingApprovalSession() -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-generate-approval-resume.integration.test.ts:findPart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        84,
+        99
+      ],
+      "name": "findPart",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "type",
+          "optional": false,
+          "type": "\"tool-approval-response\" | \"tool-call\" | \"tool-result\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function findPart(messages: readonly ModelMessage[], type: \"tool-approval-response\" | \"tool-call\" | \"tool-result\") -> unknown",
+      "visibility": "Private"
+    }
+  ]
+}

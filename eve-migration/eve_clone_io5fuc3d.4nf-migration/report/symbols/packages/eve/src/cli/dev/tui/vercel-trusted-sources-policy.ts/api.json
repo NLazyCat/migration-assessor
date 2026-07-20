@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "TrustedSourceEnvironmentRule",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TrustedSourceEnvironmentRule = UpdateProjectCustomAllow;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        8,
+        11
+      ],
+      "name": "TrustedSourceProject",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TrustedSourceProject { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "projectId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "customEnvironmentSlugs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "customEnvironmentSlugs: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        84
+      ],
+      "name": "planTrustedSourceAccess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly project: TrustedSourceProject;\r\n  readonly targetEnvironment: string;\r\n  readonly trustedSources?: UpdateProjectTrustedSources;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TrustedSourceAccessPlan",
+      "signature": "export function planTrustedSourceAccess(input: {\r\n  readonly project: TrustedSourceProject;\r\n  readonly targetEnvironment: string;\r\n  readonly trustedSources?: UpdateProjectTrustedSources;\r\n}) -> TrustedSourceAccessPlan"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/vercel-trusted-sources-policy.ts"
+}

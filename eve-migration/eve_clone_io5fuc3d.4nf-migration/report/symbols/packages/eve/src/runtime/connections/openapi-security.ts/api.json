@@ -1,0 +1,80 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        21
+      ],
+      "name": "SecurityPlacement",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SecurityPlacement = | { readonly kind: \"bearer\" }\r\n  | { readonly kind: \"basic\" }\r\n  | { readonly kind: \"apiKey\"; readonly in: \"header\" | \"query\" | \"cookie\"; readonly name: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        67
+      ],
+      "name": "resolveSecurity",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SecurityPlacement | undefined",
+      "signature": "export function resolveSecurity(document: Record<string, unknown>, operation: Record<string, unknown>) -> SecurityPlacement | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        113,
+        142
+      ],
+      "name": "applySecurity",
+      "params": [
+        {
+          "name": "placement",
+          "optional": false,
+          "type": "SecurityPlacement | undefined"
+        },
+        {
+          "name": "connection",
+          "optional": false,
+          "type": "ResolvedConnectionDefinition"
+        },
+        {
+          "name": "headers",
+          "optional": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "query",
+          "optional": false,
+          "type": "URLSearchParams"
+        },
+        {
+          "name": "cookies",
+          "optional": false,
+          "type": "string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function applySecurity(placement: SecurityPlacement | undefined, connection: ResolvedConnectionDefinition, headers: Record<string, string>, query: URLSearchParams, cookies: string[]) -> void"
+    }
+  ],
+  "module": "packages/eve/src/runtime/connections/openapi-security.ts"
+}

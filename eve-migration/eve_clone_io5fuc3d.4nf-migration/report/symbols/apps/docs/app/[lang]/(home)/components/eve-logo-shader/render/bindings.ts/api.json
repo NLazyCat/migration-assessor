@@ -1,0 +1,281 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        9,
+        30
+      ],
+      "name": "createEnvParamsBinding",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "cubemap",
+          "optional": false,
+          "type": "StudioCubemap"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createEnvParamsBinding(device: Device, pipeline: GPURenderPipeline, cubemap: StudioCubemap, label: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        53
+      ],
+      "name": "createBackParamsBinding",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "cubemap",
+          "optional": false,
+          "type": "StudioCubemap"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createBackParamsBinding(device: Device, pipeline: GPURenderPipeline, cubemap: StudioCubemap, label: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        71
+      ],
+      "name": "createUniformParamsBinding",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createUniformParamsBinding(device: Device, pipeline: GPURenderPipeline, label: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        73,
+        90
+      ],
+      "name": "createPaintDecayBindGroup",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "paintView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "staticNoiseView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "paintParamsBuffer",
+          "optional": false,
+          "type": "Buffer"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPaintDecayBindGroup(device: Device, pipeline: GPURenderPipeline, paintView: GPUTextureView, staticNoiseView: GPUTextureView, paintParamsBuffer: Buffer, label: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        103
+      ],
+      "name": "createPaintDebugBindGroup",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "paintView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPaintDebugBindGroup(device: Device, pipeline: GPURenderPipeline, paintView: GPUTextureView, label: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        105,
+        169
+      ],
+      "name": "createParamsBinding",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "cubemap",
+          "optional": false,
+          "type": "StudioCubemap"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "backMaterialView",
+          "optional": true,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "backDepthView",
+          "optional": true,
+          "type": "GPUTextureView"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createParamsBinding(device: Device, pipeline: GPURenderPipeline, cubemap: StudioCubemap, label: string, backMaterialView: GPUTextureView, backDepthView: GPUTextureView) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        171,
+        197
+      ],
+      "name": "createParamsBindGroup",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "pipeline",
+          "optional": false,
+          "type": "GPURenderPipeline"
+        },
+        {
+          "name": "cubemap",
+          "optional": false,
+          "type": "StudioCubemap"
+        },
+        {
+          "name": "buffer",
+          "optional": false,
+          "type": "Buffer"
+        },
+        {
+          "name": "backMaterialView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "backDepthView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "paintView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "voronoiValueView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "voronoiEdgeView",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createParamsBindGroup(device: Device, pipeline: GPURenderPipeline, cubemap: StudioCubemap, buffer: Buffer, backMaterialView: GPUTextureView, backDepthView: GPUTextureView, paintView: GPUTextureView, voronoiValueView: GPUTextureView, voronoiEdgeView: GPUTextureView, label: string) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/bindings.ts"
+}

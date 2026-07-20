@@ -1,0 +1,57 @@
+{
+  "GLOB_INPUT_SCHEMA": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/tools/define-glob-tool.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/glob.ts:GLOB_INPUT_SCHEMA"
+    }
+  ],
+  "GLOB_OUTPUT_SCHEMA": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/public/tools/define-glob-tool.ts",
+        "line": 33
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/glob.ts:GLOB_OUTPUT_SCHEMA"
+    }
+  ],
+  "GlobInput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 66,
+        "file": "packages/eve/src/public/tools/define-glob-tool.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/execution/sandbox/glob-tool.ts:GlobInput"
+    }
+  ],
+  "ToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 65,
+        "file": "packages/eve/src/public/tools/define-glob-tool.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/public/definitions/tool.ts:ToolDefinition"
+    }
+  ],
+  "executeGlobOnSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/public/tools/define-glob-tool.ts",
+        "line": 30
+      },
+      "symbol": "packages/eve/src/execution/sandbox/glob-tool.ts:executeGlobOnSandbox"
+    }
+  ]
+}

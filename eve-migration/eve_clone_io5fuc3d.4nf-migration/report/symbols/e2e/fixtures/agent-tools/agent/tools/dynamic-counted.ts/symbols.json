@@ -1,0 +1,34 @@
+{
+  "module": "e2e/fixtures/agent-tools/agent/tools/dynamic-counted.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/tools/dynamic-counted.ts:ioCallCount",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "ioCallCount",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/agent/tools/dynamic-counted.ts:simulateIo",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "simulateIo",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<{ label: string }>",
+      "signature": "export function simulateIo() -> Promise<{ label: string }>",
+      "visibility": "Private"
+    }
+  ]
+}

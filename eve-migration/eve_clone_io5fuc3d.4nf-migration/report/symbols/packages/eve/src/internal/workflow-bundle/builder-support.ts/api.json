@@ -1,0 +1,654 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "WORKFLOW_VIRTUAL_ENTRY_ID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const WORKFLOW_VIRTUAL_ENTRY_ID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        28
+      ],
+      "name": "WorkflowBundleBuilderOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkflowBundleBuilderOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "agentName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "compiledArtifactsBootstrapPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "compiledArtifactsBootstrapPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "outDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "outDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "rootDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "watch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "watch: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "includeTestFixtures",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "includeTestFixtures?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        72
+      ],
+      "name": "WorkflowBundleBuilderConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkflowBundleBuilderConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "buildTarget",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"standalone\"",
+      "signature": "buildTarget: : \"standalone\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "dirs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "dirs: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "externalPackages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "externalPackages: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "projectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "watch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "watch: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "workingDir",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workingDir: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        74,
+        78
+      ],
+      "name": "WorkflowBundleDiscoveredEntries",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkflowBundleDiscoveredEntries { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "discoveredSerdeFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "discoveredSerdeFiles: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "discoveredSteps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "discoveredSteps: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "discoveredWorkflows",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "discoveredWorkflows: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        80,
+        88
+      ],
+      "name": "WorkflowBundleCreateWorkflowsBundleOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkflowBundleCreateWorkflowsBundleOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "bundleFinalOutput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "bundleFinalOutput?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "discoveredEntries",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WorkflowBundleDiscoveredEntries",
+      "signature": "discoveredEntries?: : WorkflowBundleDiscoveredEntries"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "format",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"cjs\" | \"esm\"",
+      "signature": "format?: : \"cjs\" | \"esm\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "inputFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "inputFiles: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "keepInterimBundleContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "keepInterimBundleContext?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "outfile",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "outfile: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "tsconfigPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "tsconfigPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        90,
+        94
+      ],
+      "name": "WorkflowBundleCreateWorkflowsBundleResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkflowBundleCreateWorkflowsBundleResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "bundleFinal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (interimBundleResult: string) => Promise<void>",
+      "signature": "bundleFinal?: : (interimBundleResult: string) => Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "interimBundleCtx",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": undefined",
+      "signature": "interimBundleCtx?: : undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WorkflowManifest",
+      "signature": "manifest: : WorkflowManifest"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        108,
+        150
+      ],
+      "name": "collectWorkflowInputFiles",
+      "params": [
+        {
+          "name": "root",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function collectWorkflowInputFiles(root: string) -> Promise<string[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        152,
+        160
+      ],
+      "name": "createWorkflowImport",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createWorkflowImport(filePath: string, workingDir: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        162,
+        184
+      ],
+      "name": "createWorkflowVirtualEntryPlugin",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowRolldownPlugin",
+      "signature": "export function createWorkflowVirtualEntryPlugin(source: string) -> WorkflowRolldownPlugin"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        186,
+        207
+      ],
+      "name": "createWorkflowPseudoPackagePlugin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "WorkflowRolldownPlugin",
+      "signature": "export function createWorkflowPseudoPackagePlugin() -> WorkflowRolldownPlugin"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        209,
+        220
+      ],
+      "name": "createWorkflowRuntimeAliasPlugin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "WorkflowRolldownPlugin",
+      "signature": "export function createWorkflowRuntimeAliasPlugin() -> WorkflowRolldownPlugin"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        222,
+        259
+      ],
+      "name": "createEvePackageImportsPlugin",
+      "params": [
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ workflowCondition?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowRolldownPlugin",
+      "signature": "export function createEvePackageImportsPlugin(workingDir: string, options: { workflowCondition?: boolean }) -> WorkflowRolldownPlugin"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        261,
+        300
+      ],
+      "name": "createWorkflowTransformPlugin",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  manifest: WorkflowManifest;\r\n  mode?: \"step\" | \"workflow\";\r\n  projectRoot: string;\r\n  sideEffectFiles?: readonly string[];\r\n  workingDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowRolldownPlugin",
+      "signature": "export function createWorkflowTransformPlugin(input: {\r\n  manifest: WorkflowManifest;\r\n  mode?: \"step\" | \"workflow\";\r\n  projectRoot: string;\r\n  sideEffectFiles?: readonly string[];\r\n  workingDir: string;\r\n}) -> WorkflowRolldownPlugin"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        302,
+        357
+      ],
+      "name": "bundleWorkflowStepRegistrations",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  builtinsPath: string;\r\n  discoveredEntries: WorkflowBundleDiscoveredEntries;\r\n  outfile: string;\r\n  projectRoot: string;\r\n  tsconfigPath?: string;\r\n  workingDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function bundleWorkflowStepRegistrations(input: {\r\n  builtinsPath: string;\r\n  discoveredEntries: WorkflowBundleDiscoveredEntries;\r\n  outfile: string;\r\n  projectRoot: string;\r\n  tsconfigPath?: string;\r\n  workingDir: string;\r\n}) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        365,
+        385
+      ],
+      "name": "createWorkflowNodeBuiltinGuardPlugin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "WorkflowRolldownPlugin",
+      "signature": "export function createWorkflowNodeBuiltinGuardPlugin() -> WorkflowRolldownPlugin"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        387,
+        423
+      ],
+      "name": "bundleFinalWorkflowOutput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  bundleFinalOutput: boolean;\r\n  code: string;\r\n  format: \"cjs\" | \"esm\";\r\n  outfile: string;\r\n  queueNamespace: string;\r\n  workingDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function bundleFinalWorkflowOutput(input: {\r\n  bundleFinalOutput: boolean;\r\n  code: string;\r\n  format: \"cjs\" | \"esm\";\r\n  outfile: string;\r\n  queueNamespace: string;\r\n  workingDir: string;\r\n}) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        425,
+        437
+      ],
+      "name": "convertStepsManifest",
+      "params": [
+        {
+          "name": "steps",
+          "optional": false,
+          "type": "WorkflowManifest[\"steps\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function convertStepsManifest(steps: WorkflowManifest[\"steps\"]) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        439,
+        456
+      ],
+      "name": "convertWorkflowsManifest",
+      "params": [
+        {
+          "name": "workflows",
+          "optional": false,
+          "type": "WorkflowManifest[\"workflows\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function convertWorkflowsManifest(workflows: WorkflowManifest[\"workflows\"]) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        458,
+        472
+      ],
+      "name": "convertClassesManifest",
+      "params": [
+        {
+          "name": "classes",
+          "optional": false,
+          "type": "WorkflowManifest[\"classes\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function convertClassesManifest(classes: WorkflowManifest[\"classes\"]) -> Record<string, unknown>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/builder-support.ts"
+}

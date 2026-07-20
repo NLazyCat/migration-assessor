@@ -1,0 +1,149 @@
+{
+  "module": "packages/eve/src/setup/vercel-api-failure.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:VercelApiErrorSchema",
+      "kind": "variable",
+      "line_range": [
+        4,
+        11
+      ],
+      "name": "VercelApiErrorSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:apiErrorFromStdout",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        20
+      ],
+      "name": "apiErrorFromStdout",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function apiErrorFromStdout(stdout: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:apiFailureText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "apiFailureText",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function apiFailureText(failure: VercelCaptureFailure) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:normalizeVercelApiResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        42
+      ],
+      "name": "normalizeVercelApiResult",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "VercelCaptureResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureResult",
+      "signature": "export function normalizeVercelApiResult(result: VercelCaptureResult) -> VercelCaptureResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:isNotFoundApiFailure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        47
+      ],
+      "name": "isNotFoundApiFailure",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNotFoundApiFailure(failure: VercelCaptureFailure) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:isConflictApiFailure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        52
+      ],
+      "name": "isConflictApiFailure",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isConflictApiFailure(failure: VercelCaptureFailure) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.ts:isForbiddenApiFailure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        55,
+        59
+      ],
+      "name": "isForbiddenApiFailure",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isForbiddenApiFailure(failure: VercelCaptureFailure) -> boolean",
+      "visibility": "Public"
+    }
+  ]
+}

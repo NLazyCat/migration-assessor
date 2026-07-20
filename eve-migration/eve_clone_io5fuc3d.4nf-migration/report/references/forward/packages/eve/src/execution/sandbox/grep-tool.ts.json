@@ -1,0 +1,124 @@
+{
+  "MAX_OUTPUT_BYTES": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 236
+      },
+      "symbol": "packages/eve/src/execution/sandbox/truncate-output.ts:MAX_OUTPUT_BYTES"
+    }
+  ],
+  "SandboxSession": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxSession"
+    }
+  ],
+  "capLineLength": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 233
+      },
+      "symbol": "packages/eve/src/execution/sandbox/truncate-output.ts:capLineLength"
+    }
+  ],
+  "normalizeModelPath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/file-state.ts:normalizeModelPath"
+    }
+  ],
+  "ripgrepIsAvailable": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 62
+      },
+      "symbol": "packages/eve/src/execution/sandbox/ripgrep-probe.ts:ripgrepIsAvailable"
+    }
+  ],
+  "shellQuote": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 146
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 156
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 157
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 181
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 191
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 192
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    }
+  ],
+  "validateAbsoluteFilePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/src/execution/sandbox/grep-tool.ts",
+        "line": 56
+      },
+      "symbol": "packages/eve/src/execution/sandbox/require-sandbox.ts:validateAbsoluteFilePath"
+    }
+  ]
+}

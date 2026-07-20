@@ -1,0 +1,164 @@
+{
+  "module": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:MotionHTMLProps",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "MotionHTMLProps",
+      "partial_analysis": false,
+      "value": "MotionProps & Record<string, unknown>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:motionComponentCache",
+      "kind": "variable",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "motionComponentCache",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:getMotionComponent",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "getMotionComponent",
+      "params": [
+        {
+          "name": "element",
+          "optional": false,
+          "type": "keyof JSX.IntrinsicElements"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:TextShimmerProps:children",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "children",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:TextShimmerProps:as",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "as",
+          "partial_analysis": false,
+          "return_type": ": ElementType",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:TextShimmerProps:className",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "className",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:TextShimmerProps:duration",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "duration",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:TextShimmerProps:spread",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "spread",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:TextShimmerProps",
+      "kind": "interface",
+      "line_range": [
+        26,
+        32
+      ],
+      "name": "TextShimmerProps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:ShimmerComponent",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        34,
+        70
+      ],
+      "name": "ShimmerComponent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "TextShimmerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ai-elements/shimmer.tsx:Shimmer",
+      "kind": "variable",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "Shimmer",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

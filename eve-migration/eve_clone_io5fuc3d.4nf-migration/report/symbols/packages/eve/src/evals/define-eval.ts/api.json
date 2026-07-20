@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        21,
+        28
+      ],
+      "name": "defineEval",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EveEvalInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalDefinition",
+      "signature": "export function defineEval(input: EveEvalInput) -> EveEvalDefinition"
+    }
+  ],
+  "module": "packages/eve/src/evals/define-eval.ts"
+}

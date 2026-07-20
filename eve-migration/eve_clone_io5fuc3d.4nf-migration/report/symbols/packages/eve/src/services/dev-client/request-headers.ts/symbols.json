@@ -1,0 +1,263 @@
+{
+  "module": "packages/eve/src/services/dev-client/request-headers.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:VercelOidcClaimsSchema",
+      "kind": "variable",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "VercelOidcClaimsSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:LocalDevelopmentUserOidcClaimsSchema",
+      "kind": "variable",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "LocalDevelopmentUserOidcClaimsSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client/request-headers.ts:DevelopmentOidcTarget:ownerId",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "ownerId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client/request-headers.ts:DevelopmentOidcTarget:projectId",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/dev-client/request-headers.ts:DevelopmentOidcTarget:forceRefresh",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "forceRefresh",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:DevelopmentOidcTarget",
+      "kind": "interface",
+      "line_range": [
+        17,
+        22
+      ],
+      "name": "DevelopmentOidcTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:VercelOidcClaimName",
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "VercelOidcClaimName",
+      "partial_analysis": false,
+      "value": "keyof z.infer<typeof VercelOidcClaimsSchema>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:InvalidVercelOidcClaim",
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "InvalidVercelOidcClaim",
+      "partial_analysis": false,
+      "value": "VercelOidcClaimName | \"claims\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:DevelopmentOidcTokenFailure",
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        41
+      ],
+      "name": "DevelopmentOidcTokenFailure",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"resolution-failed\"; readonly message: string }\r\n  | {\r\n      readonly kind: \"malformed-token\";\r\n      readonly reason: \"missing-payload\" | \"invalid-json-payload\";\r\n    }\r\n  | {\r\n      readonly kind: \"invalid-claims\";\r\n      readonly invalidClaims: readonly InvalidVercelOidcClaim[];\r\n    }\r\n  | {\r\n      readonly kind: \"target-mismatch\";\r\n      readonly mismatchedClaims: readonly VercelOidcClaimName[];\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:DevelopmentOidcTokenResolution",
+      "kind": "type_alias",
+      "line_range": [
+        44,
+        46
+      ],
+      "name": "DevelopmentOidcTokenResolution",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"resolved\"; readonly token: string }\r\n  | DevelopmentOidcTokenFailure;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:resolveDevelopmentOidcToken",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        53,
+        67
+      ],
+      "name": "resolveDevelopmentOidcToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DevelopmentOidcTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentOidcTokenResolution>",
+      "signature": "export function resolveDevelopmentOidcToken(input: DevelopmentOidcTarget) -> Promise<DevelopmentOidcTokenResolution>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:resolveLinkedDevelopmentOidcToken",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        76,
+        95
+      ],
+      "name": "resolveLinkedDevelopmentOidcToken",
+      "params": [
+        {
+          "name": "workspaceRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveLinkedDevelopmentOidcToken(workspaceRoot: string) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:isLocalDevelopmentUserToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        100
+      ],
+      "name": "isLocalDevelopmentUserToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLocalDevelopmentUserToken(token: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:validateDevelopmentOidcToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        102,
+        131
+      ],
+      "name": "validateDevelopmentOidcToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DevelopmentOidcTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Exclude<DevelopmentOidcTokenResolution, { readonly kind: \"resolution-failed\" }>",
+      "signature": "export function validateDevelopmentOidcToken(token: string, input: DevelopmentOidcTarget) -> Exclude<DevelopmentOidcTokenResolution, { readonly kind: \"resolution-failed\" }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:decodeOidcPayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        133,
+        141
+      ],
+      "name": "decodeOidcPayload",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown | undefined",
+      "signature": "export function decodeOidcPayload(token: string) -> unknown | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/request-headers.ts:VERCEL_PROTECTION_BYPASS_HEADER",
+      "kind": "variable",
+      "line_range": [
+        148,
+        148
+      ],
+      "name": "VERCEL_PROTECTION_BYPASS_HEADER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

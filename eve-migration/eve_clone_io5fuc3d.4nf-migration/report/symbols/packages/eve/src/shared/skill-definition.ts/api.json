@@ -1,0 +1,119 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "SkillFileContent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SkillFileContent = string | Uint8Array;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "SkillPackageDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SkillPackageDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "license",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "license?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "metadata?: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "files",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, SkillFileContent>>",
+      "signature": "files?: : Readonly<Record<string, SkillFileContent>>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        26
+      ],
+      "name": "NamedSkillDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface NamedSkillDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    }
+  ],
+  "module": "packages/eve/src/shared/skill-definition.ts"
+}

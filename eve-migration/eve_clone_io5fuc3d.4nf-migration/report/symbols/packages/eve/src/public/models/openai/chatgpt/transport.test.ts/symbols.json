@@ -1,0 +1,123 @@
+{
+  "module": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:CODEX_ENDPOINT",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "CODEX_ENDPOINT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:ISSUER",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "ISSUER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:RecordedRequest:body",
+          "kind": "property",
+          "line_range": [
+            203,
+            203
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:RecordedRequest:headers",
+          "kind": "property",
+          "line_range": [
+            204,
+            204
+          ],
+          "name": "headers",
+          "partial_analysis": false,
+          "return_type": ": Headers",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:RecordedRequest:method",
+          "kind": "property",
+          "line_range": [
+            205,
+            205
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:RecordedRequest:url",
+          "kind": "property",
+          "line_range": [
+            206,
+            206
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:RecordedRequest",
+      "kind": "interface",
+      "line_range": [
+        202,
+        207
+      ],
+      "name": "RecordedRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/transport.test.ts:createRecordingFetch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        209,
+        222
+      ],
+      "name": "createRecordingFetch",
+      "params": [
+        {
+          "name": "requests",
+          "optional": false,
+          "type": "RecordedRequest[]"
+        },
+        {
+          "name": "responseForUrl",
+          "optional": false,
+          "type": "(url: string) => Response | Promise<Response>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "typeof fetch",
+      "signature": "export function createRecordingFetch(requests: RecordedRequest[], responseForUrl: (url: string) => Response | Promise<Response>) -> typeof fetch",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const metadata: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        27,
+        35
+      ],
+      "name": "RootLayout",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ readonly children: ReactNode }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function RootLayout(_: { readonly children: ReactNode }) -> void"
+    }
+  ],
+  "module": "apps/templates/web-chat-next/app/layout.tsx"
+}

@@ -1,0 +1,91 @@
+{
+  "module": "apps/docs/app/[lang]/integrations/components/gallery.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/gallery.tsx:Filter",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "Filter",
+      "partial_analysis": false,
+      "value": "\"all\" | IntegrationType;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/gallery.tsx:FILTERS",
+      "kind": "variable",
+      "line_range": [
+        13,
+        17
+      ],
+      "name": "FILTERS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/gallery.tsx:TYPE_DESCRIPTIONS",
+      "kind": "variable",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "TYPE_DESCRIPTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/integrations/components/gallery.tsx:GalleryProps:integrations",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "integrations",
+          "partial_analysis": false,
+          "return_type": ": Integration[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/integrations/components/gallery.tsx:GalleryProps",
+      "kind": "interface",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "GalleryProps",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/integrations/components/gallery.tsx:Gallery",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        30,
+        102
+      ],
+      "name": "Gallery",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "GalleryProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

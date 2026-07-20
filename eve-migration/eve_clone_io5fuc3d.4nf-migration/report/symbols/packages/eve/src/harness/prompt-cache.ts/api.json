@@ -1,0 +1,165 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "PromptCachePath",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type PromptCachePath = | { readonly kind: \"gateway-auto\" }\r\n  | { readonly kind: \"anthropic-direct\" }\r\n  | { readonly kind: \"none\" };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        24
+      ],
+      "name": "AnthropicCacheMarker",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AnthropicCacheMarker { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        23
+      ],
+      "name": "anthropic",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly cacheControl: { readonly type: \"ephemeral\" };\r\n  }",
+      "signature": "anthropic: : {\r\n    readonly cacheControl: { readonly type: \"ephemeral\" };\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        52
+      ],
+      "name": "detectPromptCachePath",
+      "params": [
+        {
+          "name": "model",
+          "optional": false,
+          "type": "LanguageModel"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptCachePath",
+      "signature": "export function detectPromptCachePath(model: LanguageModel) -> PromptCachePath"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        60
+      ],
+      "name": "getAnthropicCacheMarker",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AnthropicCacheMarker",
+      "signature": "export function getAnthropicCacheMarker() -> AnthropicCacheMarker"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        89
+      ],
+      "name": "mergeGatewayAutoCaching",
+      "params": [
+        {
+          "name": "base",
+          "optional": false,
+          "type": "Readonly<Record<string, unknown>> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function mergeGatewayAutoCaching(base: Readonly<Record<string, unknown>> | undefined) -> Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        100,
+        130
+      ],
+      "name": "applyLastToolCacheBreakpoint",
+      "params": [
+        {
+          "name": "tools",
+          "optional": false,
+          "type": "ToolSet"
+        },
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "AnthropicCacheMarker"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolSet",
+      "signature": "export function applyLastToolCacheBreakpoint(tools: ToolSet, marker: AnthropicCacheMarker) -> ToolSet"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        141,
+        157
+      ],
+      "name": "applySystemCacheBreakpoint",
+      "params": [
+        {
+          "name": "instructions",
+          "optional": false,
+          "type": "readonly SystemModelMessage[]"
+        },
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "AnthropicCacheMarker"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SystemModelMessage[]",
+      "signature": "export function applySystemCacheBreakpoint(instructions: readonly SystemModelMessage[], marker: AnthropicCacheMarker) -> SystemModelMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        181,
+        215
+      ],
+      "name": "applyConversationCacheControl",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "AnthropicCacheMarker"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelMessage[]",
+      "signature": "export function applyConversationCacheControl(messages: readonly ModelMessage[], marker: AnthropicCacheMarker) -> ModelMessage[]"
+    }
+  ],
+  "module": "packages/eve/src/harness/prompt-cache.ts"
+}

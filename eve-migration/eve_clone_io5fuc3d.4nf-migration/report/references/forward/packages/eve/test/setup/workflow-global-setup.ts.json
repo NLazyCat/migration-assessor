@@ -1,0 +1,170 @@
+{
+  "WorkflowBundleBuilder": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 33
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder"
+    }
+  ],
+  "WorkflowBundleDiscoveredEntries": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 50,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 55
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/builder-support.ts:WorkflowBundleDiscoveredEntries"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 61
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/builder-support.ts:WorkflowBundleDiscoveredEntries"
+    }
+  ],
+  "bundleWorkflowStepRegistrations": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 44
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/builder-support.ts:bundleWorkflowStepRegistrations"
+    }
+  ],
+  "collectWorkflowInputFiles": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/builder-support.ts:collectWorkflowInputFiles"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/builder-support.ts:collectWorkflowInputFiles"
+    }
+  ],
+  "detectWorkflowPatterns": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 69
+      },
+      "symbol": "packages/eve/src/internal/workflow-bundle/workflow-builders.ts:detectWorkflowPatterns"
+    }
+  ],
+  "installEveWorkflowQueueNamespace": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/internal/workflow/queue-namespace.ts:installEveWorkflowQueueNamespace"
+    }
+  ],
+  "resolveLocalWorkflowWorldDataDirectory": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/internal/workflow/local-world-data-directory.ts:resolveLocalWorkflowWorldDataDirectory"
+    }
+  ],
+  "resolvePackageRoot": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageRoot"
+    }
+  ],
+  "resolvePackageSourceDirectoryPath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 40,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceDirectoryPath"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 40,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 58
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceDirectoryPath"
+    }
+  ],
+  "resolvePackageSourceFilePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 41,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceFilePath"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 59
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceFilePath"
+    }
+  ],
+  "resolveWorkflowModulePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 45
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolveWorkflowModulePath"
+    }
+  ],
+  "resolveWorkflowTestOutputDirectory": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/test/setup/workflow-global-setup.ts",
+        "line": 27
+      },
+      "symbol": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:resolveWorkflowTestOutputDirectory"
+    }
+  ]
+}

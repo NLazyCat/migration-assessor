@@ -1,0 +1,173 @@
+{
+  "module": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:WORKFLOW_TEST_OUTPUT_DIR",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "WORKFLOW_TEST_OUTPUT_DIR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:Plugin:name",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:Plugin:config",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "config",
+          "partial_analysis": false,
+          "return_type": ": () => unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:Plugin:transform",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "transform",
+          "partial_analysis": false,
+          "return_type": ": (code: string, id: string) => unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:Plugin",
+      "kind": "interface",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "Plugin",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:workflow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        35
+      ],
+      "name": "workflow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Plugin[]",
+      "signature": "export function workflow() -> Plugin[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:createWorkflowTransformPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        72
+      ],
+      "name": "createWorkflowTransformPlugin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Plugin",
+      "signature": "export function createWorkflowTransformPlugin() -> Plugin",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:createRelativeTransformFilename",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        94
+      ],
+      "name": "createRelativeTransformFilename",
+      "params": [
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRelativeTransformFilename(workingDir: string, filePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:isJavaScriptLikePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        98
+      ],
+      "name": "isJavaScriptLikePath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isJavaScriptLikePath(path: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/workflow-vitest-plugin.ts:resolveWorkflowTestOutputDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        100,
+        102
+      ],
+      "name": "resolveWorkflowTestOutputDirectory",
+      "params": [
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkflowTestOutputDirectory(workingDir: string) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

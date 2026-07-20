@@ -1,0 +1,289 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "UseEveAgentStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type UseEveAgentStatus = EveAgentStoreStatus;"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "UseEveAgentSnapshot",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type UseEveAgentSnapshot = EveAgentStoreSnapshot<TData>;"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "interface",
+      "line_range": [
+        39,
+        46
+      ],
+      "name": "UseEveAgentHelpers",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface UseEveAgentHelpers { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "reset",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => void",
+      "signature": "reset: : () => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "send",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": <TOutput = unknown>(input: SendTurnPayload<TOutput>) => Promise<void>",
+      "signature": "send: : <TOutput = unknown>(input: SendTurnPayload<TOutput>) => Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "stop",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => void",
+      "signature": "stop: : () => void"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "interface",
+      "line_range": [
+        58,
+        93
+      ],
+      "name": "UseEveAgentOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface UseEveAgentOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "agent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agent?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ClientAuth",
+      "signature": "auth?: : ClientAuth"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "headers",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HeadersValue",
+      "signature": "headers?: : HeadersValue"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "host",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "host?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "initialEvents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly HandleMessageStreamEvent[]",
+      "signature": "initialEvents?: : readonly HandleMessageStreamEvent[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "initialSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionState",
+      "signature": "initialSession?: : SessionState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "maxReconnectAttempts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "maxReconnectAttempts?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        90,
+        90
+      ],
+      "name": "optimistic",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "optimistic?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "reducer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveAgentReducer<TData>",
+      "signature": "reducer?: : EveAgentReducer<TData>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ClientSession",
+      "signature": "session?: : ClientSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        95,
+        97
+      ],
+      "name": "useEveAgent",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "UseEveAgentOptions<EveMessageData>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UseEveAgentHelpers<EveMessageData>",
+      "signature": "export function useEveAgent(options: UseEveAgentOptions<EveMessageData>) -> UseEveAgentHelpers<EveMessageData>"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "function",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "useEveAgent",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "UseEveAgentOptions<TData> & { readonly reducer: EveAgentReducer<TData> }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UseEveAgentHelpers<TData>",
+      "signature": "export function useEveAgent(options: UseEveAgentOptions<TData> & { readonly reducer: EveAgentReducer<TData> }) -> UseEveAgentHelpers<TData>"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "function",
+      "line_range": [
+        118,
+        175
+      ],
+      "name": "useEveAgent",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "UseEveAgentOptions<TData>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UseEveAgentHelpers<TData>",
+      "signature": "export function useEveAgent(options: UseEveAgentOptions<TData>) -> UseEveAgentHelpers<TData>"
+    }
+  ],
+  "module": "packages/eve/src/react/use-eve-agent.ts"
+}

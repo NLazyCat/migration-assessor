@@ -1,0 +1,63 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        102
+      ],
+      "name": "dispatchChannelRequest",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "H3Event"
+        },
+        {
+          "name": "routeKey",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function dispatchChannelRequest(event: H3Event, routeKey: string, config: NitroArtifactsConfig) -> Promise<Response>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        104,
+        144
+      ],
+      "name": "dispatchChannelWebSocketRequest",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "H3Event"
+        },
+        {
+          "name": "routeKey",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WebSocketRouteHooks>",
+      "signature": "export function dispatchChannelWebSocketRequest(event: H3Event, routeKey: string, config: NitroArtifactsConfig) -> Promise<WebSocketRouteHooks>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/channel-dispatch.ts"
+}

@@ -1,7 +1,9 @@
 use clap::Args;
 use migration_core::language::LanguageRegistry;
 use migration_core::output_paths;
+use migration_core::align;
 use serde_json::Value;
+use std::path::Path;
 
 use crate::commands::context::ProjectContext;
 use crate::commands::resolve_project_path;
@@ -52,20 +54,48 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     }
 
     let source_repo = config.project.source_repo.clone();
+    let source_path = config.project.source.clone();
     let from_version = config.project.source_version.clone();
     let new_version = if args.auto {
-        let repo = source_repo
-            .as_deref()
-            .ok_or_else(|| anyhow::anyhow!("--auto requires source_repo in migration.toml"))?;
-        let latest = fetch_latest_version(repo)?;
-        println!("  Auto-detected latest version: {}", latest);
-        latest
+        let repo = source_repo.as_deref().or(source_path.as_deref());
+        match repo {
+            Some(r) if r.contains("://") || r.starts_with("git@") => {
+                let latest = fetch_latest_version(r)?;
+                println!("  Auto-detected latest version: {}", latest);
+                latest
+            }
+            Some(r) => {
+                // Local git repo — find latest tag
+                let candidate = if Path::new(r).is_absolute() {
+                    std::path::PathBuf::from(r)
+                } else {
+                    project_root.join(r)
+                };
+                let latest = crate::commands::run_git_cmd(
+                    &candidate,
+                    &["tag", "--sort=-version:refname"],
+                )
+                .and_then(|tags| {
+                    tags.lines().next().map(|t| t.to_string())
+                })
+                .ok_or_else(|| {
+                    anyhow::anyhow!(
+                        "No tags found in local repo {}. Specify --new-version manually.",
+                        candidate.display()
+                    )
+                })?;
+                println!("  Auto-detected latest tag: {}", latest);
+                latest
+            }
+            None => anyhow::bail!(
+                "Either source_repo or source must be configured in migration.toml for --auto"
+            ),
+        }
     } else {
         args.new_version
             .clone()
             .ok_or_else(|| anyhow::anyhow!("Either --new-version or --auto is required"))?
     };
-    let source_path = config.project.source.clone();
 
     println!("Running AST-based diff analysis...");
     if let Some(r) = &source_repo {
@@ -81,7 +111,7 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         .ok_or_else(|| anyhow::anyhow!("Cannot detect project language"))?;
     let language = lang_registry.get_language(&lang_name).unwrap();
 
-    let diff_result = logic::run_ast_diff(
+    let mut diff_result = logic::run_ast_diff(
         &project_root,
         source_repo.as_deref(),
         from_version.as_deref().unwrap_or("HEAD"),
@@ -89,6 +119,15 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         source_path.as_deref(),
         language,
     )?;
+
+    // Resolve target-side symbols via alignment (real-time, no DB needed)
+    let target_path = config.project.target.as_deref().map(Path::new);
+    align::resolve_all(
+        &mut diff_result.file_changes,
+        target_path,
+        "typescript",
+        "rust",
+    );
 
     if diff_result.file_changes.is_empty() {
         println!("No differences between versions.");

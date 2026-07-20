@@ -1,0 +1,227 @@
+{
+  "module": "packages/eve/src/client/open-stream.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:STREAM_OPEN_RETRY_ATTEMPTS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "STREAM_OPEN_RETRY_ATTEMPTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:STREAM_OPEN_RETRY_DELAY_MS",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "STREAM_OPEN_RETRY_DELAY_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:STREAM_OPEN_RETRYABLE_STATUS",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "STREAM_OPEN_RETRYABLE_STATUS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:host",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:maxReconnectAttempts",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "maxReconnectAttempts",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:resolveHeaders",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "resolveHeaders",
+          "partial_analysis": false,
+          "return_type": ": () => Promise<Headers>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:redirect",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "redirect",
+          "partial_analysis": false,
+          "return_type": ": ClientRedirectPolicy",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:sessionId",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:signal",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput:startIndex",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "startIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/client/open-stream.ts:OpenStreamInput",
+      "kind": "interface",
+      "line_range": [
+        15,
+        23
+      ],
+      "name": "OpenStreamInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:OpenStreamBodyInput",
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "OpenStreamBodyInput",
+      "partial_analysis": false,
+      "value": "Omit<OpenStreamInput, \"maxReconnectAttempts\">;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:openStreamIterable",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        64
+      ],
+      "name": "openStreamIterable",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "OpenStreamInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncGenerator<HandleMessageStreamEvent>",
+      "signature": "export function openStreamIterable(input: OpenStreamInput) -> AsyncGenerator<HandleMessageStreamEvent>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:openStreamBody",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        71,
+        126
+      ],
+      "name": "openStreamBody",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "OpenStreamBodyInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ReadableStream<Uint8Array>>",
+      "signature": "export function openStreamBody(input: OpenStreamBodyInput) -> Promise<ReadableStream<Uint8Array>>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/open-stream.ts:sleep",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        128,
+        130
+      ],
+      "name": "sleep",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function sleep(ms: number) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[project]
+source = "C:/Users/16017/AppData/Local/Temp/eve_clone_io5fuc3d.4nf"
+source_repo = "https://github.com/vercel/eve.git"
+source_branch = "main"
+source_version = "c61f8ca"
+source_language = "typescript"
+target_language = "rust"
+strict = false
+
+[skip]
+framework = false
+
+[output]
+directory = "report"
+split_by_directory = true
+
+[compatibility]
+# overrides_file = ".migration-assessor-compat.toml"
+
+[scoring.weights]
+in_degree = 30
+complexity = 25
+compatibility = 20
+cycles = 15
+tests = 10
+
+[mapping]
+# override_list = [
+#     { from = "src/utils.ts", to = "new/src/utils.rs" },
+# ]

@@ -1,0 +1,153 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        28
+      ],
+      "name": "WorkspaceRootMutation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkspaceRootMutation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"package-json\" | \"workspace-config\"",
+      "signature": "kind: : \"package-json\" | \"workspace-config\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "nodeEngineOverride",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": NodeEngineOverride",
+      "signature": "nodeEngineOverride?: : NodeEngineOverride"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        30,
+        33
+      ],
+      "name": "WorkspaceRootPackageJsonPatchResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkspaceRootPackageJsonPatchResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        103,
+        109
+      ],
+      "name": "isPackageManagerWorkspaceMember",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPackageManagerWorkspaceMember(packageManager: PackageManagerKind, projectRoot: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        193,
+        223
+      ],
+      "name": "patchWorkspaceRootPackageJson",
+      "params": [
+        {
+          "name": "packageManager",
+          "optional": false,
+          "type": "PackageManagerKind"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly aiPackageVersion?: string;\r\n    readonly nodeEngineRequirement?: string;\r\n    readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkspaceRootPackageJsonPatchResult>",
+      "signature": "export function patchWorkspaceRootPackageJson(packageManager: PackageManagerKind, projectRoot: string, input: {\r\n    readonly aiPackageVersion?: string;\r\n    readonly nodeEngineRequirement?: string;\r\n    readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n  }) -> Promise<WorkspaceRootPackageJsonPatchResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        226,
+        259
+      ],
+      "name": "applyPackageManagerWorkspaceConfiguration",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly packageManager: PackageManagerKind;\r\n  readonly projectRoot: string;\r\n  readonly workspaceProbeRoot?: string;\r\n  readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  filesSkipped: string[];\r\n  filesWritten: string[];\r\n}>",
+      "signature": "export function applyPackageManagerWorkspaceConfiguration(input: {\r\n  readonly packageManager: PackageManagerKind;\r\n  readonly projectRoot: string;\r\n  readonly workspaceProbeRoot?: string;\r\n  readonly onWorkspaceRootMutation?: (mutation: WorkspaceRootMutation) => void | Promise<void>;\r\n}) -> Promise<{\r\n  filesSkipped: string[];\r\n  filesWritten: string[];\r\n}>"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/workspace-root.ts"
+}

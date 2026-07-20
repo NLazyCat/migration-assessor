@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/src/internal/testing/mocks/mock-model.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-model.ts:MockModelInput:id",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-model.ts:MockModelInput",
+      "kind": "interface",
+      "line_range": [
+        7,
+        13
+      ],
+      "name": "MockModelInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/mocks/mock-model.ts:MockModel:id",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/mocks/mock-model.ts:MockModel",
+      "kind": "interface",
+      "line_range": [
+        18,
+        26
+      ],
+      "name": "MockModel",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/mocks/mock-model.ts:mockModel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        43
+      ],
+      "name": "mockModel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "MockModelInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MockModel",
+      "signature": "export function mockModel(input: MockModelInput) -> MockModel",
+      "visibility": "Public"
+    }
+  ]
+}

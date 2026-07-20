@@ -1,0 +1,75 @@
+{
+  "getWorld": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 60
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:getWorld"
+    }
+  ],
+  "resumeHook": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 29
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:resumeHook"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:resumeHook"
+    }
+  ],
+  "sessionDeliveryHookWorkflow": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/internal/testing/session-delivery-hook-workflow.ts:sessionDeliveryHookWorkflow"
+    }
+  ],
+  "start": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:start"
+    }
+  ],
+  "waitForHook": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 23
+      },
+      "symbol": "packages/eve/src/internal/testing/workflow-test-helpers.ts:waitForHook"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/session-delivery-hook.integration.test.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/internal/testing/workflow-test-helpers.ts:waitForHook"
+    }
+  ]
+}

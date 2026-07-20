@@ -1,0 +1,66 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/install-switcher.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/install-switcher.tsx:HUMAN_COMMAND",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "HUMAN_COMMAND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/install-switcher.tsx:AGENT_COMMAND",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "AGENT_COMMAND",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/install-switcher.tsx:InstallAudience",
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "InstallAudience",
+      "partial_analysis": false,
+      "value": "\"humans\" | \"agents\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/install-switcher.tsx:InstallSwitcher",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        27,
+        69
+      ],
+      "name": "InstallSwitcher",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  className?: string;\r\n  value?: InstallAudience;\r\n  onValueChange?: (value: InstallAudience) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JSX.Element",
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "module": "packages/eve/src/execution/sandbox/write-file-tool.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileInput:content",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "content",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileInput:filePath",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "filePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileInput",
+      "kind": "interface",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "WriteFileInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileResult:existed",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "existed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileResult:path",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileResult",
+      "kind": "interface",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "WriteFileResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/write-file-tool.ts:executeWriteFileOnSandbox",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        44,
+        114
+      ],
+      "name": "executeWriteFileOnSandbox",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "WriteFileInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WriteFileResult>",
+      "signature": "export function executeWriteFileOnSandbox(sandbox: SandboxSession, args: WriteFileInput) -> Promise<WriteFileResult>",
+      "visibility": "Public"
+    }
+  ]
+}

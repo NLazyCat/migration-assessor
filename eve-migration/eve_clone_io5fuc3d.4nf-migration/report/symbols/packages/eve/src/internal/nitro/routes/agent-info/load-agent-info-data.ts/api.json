@@ -1,0 +1,151 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        27
+      ],
+      "name": "AgentInfoData",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoData { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "agent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolvedAgent",
+      "signature": "agent: : ResolvedAgent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledAgentManifest",
+      "signature": "manifest: : CompiledAgentManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "schedules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ResolvedScheduleDefinition[]",
+      "signature": "schedules: : readonly ResolvedScheduleDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "AgentInfoManifestData",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoManifestData { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledAgentManifest",
+      "signature": "manifest: : CompiledAgentManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "schedules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ResolvedScheduleDefinition[]",
+      "signature": "schedules: : readonly ResolvedScheduleDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        37,
+        41
+      ],
+      "name": "loadAgentInfoData",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoData>",
+      "signature": "export function loadAgentInfoData(input: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}) -> Promise<AgentInfoData>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        47,
+        61
+      ],
+      "name": "loadAgentInfoManifestData",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoManifestData>",
+      "signature": "export function loadAgentInfoManifestData(input: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}) -> Promise<AgentInfoManifestData>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        71
+      ],
+      "name": "resolveAgentInfoCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeCompiledArtifactsSource",
+      "signature": "export function resolveAgentInfoCompiledArtifactsSource(input: NitroArtifactsConfig) -> RuntimeCompiledArtifactsSource"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts"
+}

@@ -1,0 +1,239 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "SandboxRunOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxRunOptions = Parameters<AiSdkSandbox[\"run\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "SandboxCommandResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxCommandResult = Awaited<ReturnType<AiSdkSandbox[\"run\"]>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "SandboxSpawnOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxSpawnOptions = Parameters<AiSdkSandbox[\"spawn\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "SandboxProcess",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxProcess = Awaited<ReturnType<AiSdkSandbox[\"spawn\"]>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "SandboxReadFileOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxReadFileOptions = Parameters<AiSdkSandbox[\"readFile\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "SandboxReadBinaryFileOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxReadBinaryFileOptions = Parameters<AiSdkSandbox[\"readBinaryFile\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "SandboxReadTextFileOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxReadTextFileOptions = Parameters<AiSdkSandbox[\"readTextFile\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "SandboxWriteFileOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxWriteFileOptions = Parameters<AiSdkSandbox[\"writeFile\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "SandboxWriteBinaryFileOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxWriteBinaryFileOptions = Parameters<AiSdkSandbox[\"writeBinaryFile\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "SandboxWriteTextFileOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxWriteTextFileOptions = Parameters<AiSdkSandbox[\"writeTextFile\"]>[0];"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        72,
+        77
+      ],
+      "name": "SandboxRemovePathOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxRemovePathOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "abortSignal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "abortSignal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "force",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "force?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "recursive",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "recursive?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        93,
+        144
+      ],
+      "name": "SandboxSession",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxSession { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        160,
+        172
+      ],
+      "name": "InternalSandboxSession",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InternalSandboxSession { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    }
+  ],
+  "module": "packages/eve/src/shared/sandbox-session.ts"
+}

@@ -1,0 +1,481 @@
+{
+  "module": "packages/eve/src/evals/assertions/collector.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionOutcome:score",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "score",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionOutcome:message",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionOutcome:metadata",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, unknown>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/assertions/collector.ts:AssertionOutcome",
+      "kind": "interface",
+      "line_range": [
+        14,
+        18
+      ],
+      "name": "AssertionOutcome",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:RunAssertion:name",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/assertions/collector.ts:RunAssertion",
+      "kind": "interface",
+      "line_range": [
+        24,
+        27
+      ],
+      "name": "RunAssertion",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:name",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:severity",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "severity",
+          "partial_analysis": false,
+          "return_type": ": AssertionSeverity",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:threshold",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "threshold",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:kind",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"deferred\" | \"resolved\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:spec",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "spec",
+          "partial_analysis": false,
+          "return_type": ": RunAssertion",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:selectSubject",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "selectSubject",
+          "partial_analysis": false,
+          "return_type": ": (result: EveEvalTaskResult) => EveEvalAssertionSubject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:score",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "score",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:message",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:metadata",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, unknown>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry:failed",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "failed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/assertions/collector.ts:MutableEntry",
+      "kind": "interface",
+      "line_range": [
+        29,
+        41
+      ],
+      "name": "MutableEntry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:#entries",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "#entries",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:#pending",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "#pending",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:hasEntries",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            55,
+            57
+          ],
+          "name": "hasEntries",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:recordScoped",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            60,
+            77
+          ],
+          "name": "recordScoped",
+          "params": [
+            {
+              "name": "spec",
+              "optional": false,
+              "type": "RunAssertion"
+            },
+            {
+              "name": "selectSubject",
+              "optional": false,
+              "type": "(result: EveEvalTaskResult) => EveEvalAssertionSubject"
+            },
+            {
+              "name": "severity",
+              "optional": false,
+              "type": "AssertionSeverity"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "AssertionHandle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:recordValue",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            80,
+            100
+          ],
+          "name": "recordValue",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly name: string;\r\n    readonly severity: AssertionSeverity;\r\n    readonly threshold?: number;\r\n    readonly score: () => Promise<AssertionOutcome>;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "AssertionHandle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:recordOutcome",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            103,
+            116
+          ],
+          "name": "recordOutcome",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{ readonly name: string; readonly outcome: AssertionOutcome }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:recordRequirement",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            119,
+            135
+          ],
+          "name": "recordRequirement",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly name: string;\r\n    readonly threshold?: number;\r\n    readonly score: () => Promise<AssertionOutcome>;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<boolean>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector:finalize",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            141,
+            163
+          ],
+          "name": "finalize",
+          "params": [
+            {
+              "name": "result",
+              "optional": false,
+              "type": "EveEvalTaskResult"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<readonly AssertionResult[]>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/assertions/collector.ts:AssertionCollector",
+      "kind": "class",
+      "line_range": [
+        50,
+        164
+      ],
+      "name": "AssertionCollector",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/collector.ts:computePassed",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        180
+      ],
+      "name": "computePassed",
+      "params": [
+        {
+          "name": "severity",
+          "optional": false,
+          "type": "AssertionSeverity"
+        },
+        {
+          "name": "threshold",
+          "optional": false,
+          "type": "number | undefined"
+        },
+        {
+          "name": "score",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "failed",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function computePassed(severity: AssertionSeverity, threshold: number | undefined, score: number, failed: boolean) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/collector.ts:settleEntry",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        182,
+        200
+      ],
+      "name": "settleEntry",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "MutableEntry"
+        },
+        {
+          "name": "score",
+          "optional": false,
+          "type": "() => Promise<AssertionOutcome>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function settleEntry(entry: MutableEntry, score: () => Promise<AssertionOutcome>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/assertions/collector.ts:makeHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        202,
+        221
+      ],
+      "name": "makeHandle",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "MutableEntry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AssertionHandle",
+      "signature": "export function makeHandle(entry: MutableEntry) -> AssertionHandle",
+      "visibility": "Private"
+    }
+  ]
+}

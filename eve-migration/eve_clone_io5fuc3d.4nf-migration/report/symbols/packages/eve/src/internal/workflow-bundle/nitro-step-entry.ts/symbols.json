@@ -1,0 +1,262 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:NitroStepEntrypointDiscoveredEntries:discoveredSerdeFiles",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "discoveredSerdeFiles",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:NitroStepEntrypointDiscoveredEntries:discoveredSteps",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "discoveredSteps",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:NitroStepEntrypointDiscoveredEntries",
+      "kind": "interface",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "NitroStepEntrypointDiscoveredEntries",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:writeNitroStepEntrypoint",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        19,
+        72
+      ],
+      "name": "writeNitroStepEntrypoint",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly builtinsPath?: string;\r\n  readonly discoveredEntries: NitroStepEntrypointDiscoveredEntries;\r\n  readonly outfile: string;\r\n  readonly preferAbsoluteFileImports?: boolean;\r\n  readonly projectRoot: string;\r\n  readonly sideEffectFiles: readonly string[];\r\n  readonly workingDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkflowManifest>",
+      "signature": "export function writeNitroStepEntrypoint(input: {\r\n  readonly builtinsPath?: string;\r\n  readonly discoveredEntries: NitroStepEntrypointDiscoveredEntries;\r\n  readonly outfile: string;\r\n  readonly preferAbsoluteFileImports?: boolean;\r\n  readonly projectRoot: string;\r\n  readonly sideEffectFiles: readonly string[];\r\n  readonly workingDir: string;\r\n}) -> Promise<WorkflowManifest>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:createEntrypointImportLines",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        108
+      ],
+      "name": "createEntrypointImportLines",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly builtinsImportSpecifier: string;\r\n  readonly outfileDirectory: string;\r\n  readonly preferAbsoluteFileImports: boolean;\r\n  readonly serdeOnlyFiles: readonly string[];\r\n  readonly sideEffectFiles: readonly string[];\r\n  readonly stepFiles: readonly string[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function createEntrypointImportLines(input: {\r\n  readonly builtinsImportSpecifier: string;\r\n  readonly outfileDirectory: string;\r\n  readonly preferAbsoluteFileImports: boolean;\r\n  readonly serdeOnlyFiles: readonly string[];\r\n  readonly sideEffectFiles: readonly string[];\r\n  readonly stepFiles: readonly string[];\r\n}) -> readonly string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:createFileImportSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        120
+      ],
+      "name": "createFileImportSpecifier",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly outfileDirectory: string;\r\n  readonly preferAbsoluteFileImports: boolean;\r\n  readonly targetPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createFileImportSpecifier(input: {\r\n  readonly outfileDirectory: string;\r\n  readonly preferAbsoluteFileImports: boolean;\r\n  readonly targetPath: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:collectNitroStepManifest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        122,
+        146
+      ],
+      "name": "collectNitroStepManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly projectRoot: string;\r\n  readonly serdeOnlyFiles: readonly string[];\r\n  readonly stepFiles: readonly string[];\r\n  readonly workingDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkflowManifest>",
+      "signature": "export function collectNitroStepManifest(input: {\r\n  readonly projectRoot: string;\r\n  readonly serdeOnlyFiles: readonly string[];\r\n  readonly stepFiles: readonly string[];\r\n  readonly workingDir: string;\r\n}) -> Promise<WorkflowManifest>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:mergeWorkflowManifest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        148,
+        152
+      ],
+      "name": "mergeWorkflowManifest",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "WorkflowManifest"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "WorkflowManifest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function mergeWorkflowManifest(target: WorkflowManifest, source: WorkflowManifest) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:mergeWorkflowManifestSection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        154,
+        173
+      ],
+      "name": "mergeWorkflowManifestSection",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "TSection"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "TSection"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TSection",
+      "signature": "export function mergeWorkflowManifestSection(target: TSection, source: TSection) -> TSection",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:createManifestRelativeFilepath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        175,
+        188
+      ],
+      "name": "createManifestRelativeFilepath",
+      "params": [
+        {
+          "name": "workingDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "absolutePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createManifestRelativeFilepath(workingDir: string, absolutePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:createRelativeImportSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        190,
+        198
+      ],
+      "name": "createRelativeImportSpecifier",
+      "params": [
+        {
+          "name": "fromDirectoryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRelativeImportSpecifier(fromDirectoryPath: string, targetPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/nitro-step-entry.ts:readTextFileIfPresent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        200,
+        210
+      ],
+      "name": "readTextFileIfPresent",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function readTextFileIfPresent(filePath: string) -> Promise<string | null>",
+      "visibility": "Private"
+    }
+  ]
+}

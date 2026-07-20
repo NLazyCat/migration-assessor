@@ -1,0 +1,41 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        18
+      ],
+      "name": "SourceEdit",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SourceEdit = | {\r\n      readonly kind: \"applied\";\r\n      readonly from: string;\r\n      readonly to: string;\r\n      readonly nextSource: string;\r\n    }\r\n  | {\r\n      readonly kind: \"bail\";\r\n      readonly reason: string;\r\n      readonly line: number;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        75,
+        124
+      ],
+      "name": "applyModelNameToSource",
+      "params": [
+        {
+          "name": "sourceText",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "modelName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SourceEdit>",
+      "signature": "export function applyModelNameToSource(sourceText: string, modelName: string) -> Promise<SourceEdit>"
+    }
+  ],
+  "module": "packages/eve/src/source-change/apply-model-name.ts"
+}

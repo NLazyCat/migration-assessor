@@ -1,0 +1,441 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        11,
+        20
+      ],
+      "name": "TwilioTextMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TwilioTextMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "from",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "from: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "to",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "to: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "body: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "messageSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "messageSid: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "accountSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "accountSid: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "media",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly TwilioMediaPayload[]",
+      "signature": "media?: : readonly TwilioMediaPayload[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": URLSearchParams",
+      "signature": "raw: : URLSearchParams"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        29
+      ],
+      "name": "TwilioVoiceCall",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TwilioVoiceCall { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "from",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "from: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "to",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "to: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "callSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "callSid: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "accountSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "accountSid: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": URLSearchParams",
+      "signature": "raw: : URLSearchParams"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        40
+      ],
+      "name": "TwilioVoiceTranscription",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TwilioVoiceTranscription { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "from",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "from: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "to",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "to: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "callSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "callSid: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "confidence",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "confidence: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "transcriptionSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "transcriptionSid: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": URLSearchParams",
+      "signature": "raw: : URLSearchParams"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        48,
+        54
+      ],
+      "name": "TwilioInboundContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TwilioInboundContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "from",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "from: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "to",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "to?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "messageSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "messageSid?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "callSid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "callSid?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "channel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"text\" | \"voice\"",
+      "signature": "channel: : \"text\" | \"voice\""
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        72
+      ],
+      "name": "parseTwilioTextMessage",
+      "params": [
+        {
+          "name": "params",
+          "optional": false,
+          "type": "URLSearchParams"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioTextMessage | null",
+      "signature": "export function parseTwilioTextMessage(params: URLSearchParams) -> TwilioTextMessage | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        75,
+        88
+      ],
+      "name": "parseTwilioVoiceCall",
+      "params": [
+        {
+          "name": "params",
+          "optional": false,
+          "type": "URLSearchParams"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioVoiceCall | null",
+      "signature": "export function parseTwilioVoiceCall(params: URLSearchParams) -> TwilioVoiceCall | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        96,
+        113
+      ],
+      "name": "parseTwilioVoiceTranscription",
+      "params": [
+        {
+          "name": "params",
+          "optional": false,
+          "type": "URLSearchParams"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioVoiceTranscription | null",
+      "signature": "export function parseTwilioVoiceTranscription(params: URLSearchParams) -> TwilioVoiceTranscription | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        116,
+        129
+      ],
+      "name": "formatTwilioContextBlock",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "TwilioInboundContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatTwilioContextBlock(context: TwilioInboundContext) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/twilio/inbound.ts"
+}

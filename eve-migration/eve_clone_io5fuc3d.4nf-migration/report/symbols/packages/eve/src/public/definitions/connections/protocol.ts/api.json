@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        19
+      ],
+      "name": "stampConnectionProtocol",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "object"
+        },
+        {
+          "name": "protocol",
+          "optional": false,
+          "type": "ConnectionProtocol"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function stampConnectionProtocol(definition: object, protocol: ConnectionProtocol) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        26,
+        34
+      ],
+      "name": "readConnectionProtocol",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionProtocol",
+      "signature": "export function readConnectionProtocol(definition: unknown) -> ConnectionProtocol"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/connections/protocol.ts"
+}

@@ -1,0 +1,203 @@
+{
+  "module": "packages/eve/src/context/key.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:KEY_REGISTRY_GLOBAL_KEY",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "KEY_REGISTRY_GLOBAL_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:KeyRegistryGlobal",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        20
+      ],
+      "name": "KeyRegistryGlobal",
+      "partial_analysis": false,
+      "value": "typeof globalThis & {\r\n  [KEY_REGISTRY_GLOBAL_KEY]?: Map<string, ContextKey<unknown>>;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:globalKeyRegistryContainer",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "globalKeyRegistryContainer",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:keyRegistry",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "keyRegistry",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:ContextReader",
+      "kind": "interface",
+      "line_range": [
+        36,
+        40
+      ],
+      "name": "ContextReader",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:ContextAccessor",
+      "kind": "interface",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "ContextAccessor",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:ContextKeyCodec",
+      "kind": "interface",
+      "line_range": [
+        60,
+        63
+      ],
+      "name": "ContextKeyCodec",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/key.ts:ContextKeyOptions:codec",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "codec",
+          "partial_analysis": false,
+          "return_type": ": ContextKeyCodec<T>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/key.ts:ContextKeyOptions",
+      "kind": "interface",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "ContextKeyOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/context/key.ts:ContextKey:name",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/key.ts:ContextKey:codec",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "codec",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/context/key.ts:ContextKey:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            76,
+            98
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "optional": false,
+              "type": "ContextKeyOptions<T>"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/context/key.ts:ContextKey",
+      "kind": "class",
+      "line_range": [
+        72,
+        99
+      ],
+      "name": "ContextKey",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/key.ts:resolveKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        106
+      ],
+      "name": "resolveKey",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextKey<unknown> | undefined",
+      "signature": "export function resolveKey(name: string) -> ContextKey<unknown> | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

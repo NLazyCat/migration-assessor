@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        44,
+        50
+      ],
+      "name": "findClosestLinkedVercelDirectory",
+      "params": [
+        {
+          "name": "start",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function findClosestLinkedVercelDirectory(start: string) -> Promise<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        58
+      ],
+      "name": "findClosestVercelOutputDirectory",
+      "params": [
+        {
+          "name": "start",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function findClosestVercelOutputDirectory(start: string) -> Promise<string | undefined>"
+    }
+  ],
+  "module": "packages/eve/src/shared/vercel-output-directory.ts"
+}

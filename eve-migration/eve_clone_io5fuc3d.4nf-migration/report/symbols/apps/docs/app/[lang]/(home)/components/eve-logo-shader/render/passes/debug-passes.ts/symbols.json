@@ -1,0 +1,122 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/debug-passes.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/debug-passes.ts:renderTargetPreview",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        54
+      ],
+      "name": "renderTargetPreview",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        },
+        {
+          "name": "view",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "targets",
+          "optional": false,
+          "type": "BloomTargets"
+        },
+        {
+          "name": "controls",
+          "optional": false,
+          "type": "RenderControls"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderTargetPreview(device: Device, resources: RendererResources, mesh: MeshData, view: GPUTextureView, targets: BloomTargets, controls: RenderControls) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/passes/debug-passes.ts:renderThicknessDebug",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        106
+      ],
+      "name": "renderThicknessDebug",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        },
+        {
+          "name": "view",
+          "optional": false,
+          "type": "GPUTextureView"
+        },
+        {
+          "name": "backMaterial",
+          "optional": false,
+          "type": "GPUTexture"
+        },
+        {
+          "name": "backDepth",
+          "optional": false,
+          "type": "GPUTexture"
+        },
+        {
+          "name": "paintTexture",
+          "optional": false,
+          "type": "GPUTexture"
+        },
+        {
+          "name": "controls",
+          "optional": false,
+          "type": "RenderControls"
+        },
+        {
+          "name": "logicalWidth",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "logicalHeight",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "projectionPaddingRadius",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderThicknessDebug(device: Device, resources: RendererResources, mesh: MeshData, view: GPUTextureView, backMaterial: GPUTexture, backDepth: GPUTexture, paintTexture: GPUTexture, controls: RenderControls, logicalWidth: number, logicalHeight: number, projectionPaddingRadius: unknown) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

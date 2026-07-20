@@ -1,0 +1,98 @@
+{
+  "module": "packages/eve/src/public/channels/teams/teamsChannel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/teamsChannel.test.ts:asCompiled",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        7,
+        12
+      ],
+      "name": "asCompiled",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledChannel<T>",
+      "signature": "export function asCompiled(channel: unknown) -> CompiledChannel<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/teamsChannel.test.ts:firePost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        14,
+        60
+      ],
+      "name": "firePost",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly response: Response;\r\n  readonly send: ReturnType<typeof vi.fn>;\r\n  readonly waitUntil: ReturnType<typeof vi.fn>;\r\n}>",
+      "signature": "export function firePost(channel: unknown, body: Record<string, unknown>) -> Promise<{\r\n  readonly response: Response;\r\n  readonly send: ReturnType<typeof vi.fn>;\r\n  readonly waitUntil: ReturnType<typeof vi.fn>;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/teamsChannel.test.ts:messageActivity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        281,
+        295
+      ],
+      "name": "messageActivity",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly conversationType: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function messageActivity(input: { readonly conversationType: string }) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/teamsChannel.test.ts:baseActivity",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        297,
+        310
+      ],
+      "name": "baseActivity",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly conversationType: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function baseActivity(input: { readonly conversationType: string }) -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

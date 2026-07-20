@@ -1,0 +1,96 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts:createGpuMesh",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        40
+      ],
+      "name": "createGpuMesh",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GpuMesh",
+      "signature": "export function createGpuMesh(device: Device, mesh: MeshData) -> GpuMesh",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts:normalizedMeshBounds",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        59
+      ],
+      "name": "normalizedMeshBounds",
+      "params": [
+        {
+          "name": "bounds",
+          "optional": false,
+          "type": "Bounds"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Bounds",
+      "signature": "export function normalizedMeshBounds(bounds: Bounds) -> Bounds",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts:normalizeMeshForGpu",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        78
+      ],
+      "name": "normalizeMeshForGpu",
+      "params": [
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function normalizeMeshForGpu(mesh: MeshData) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/mesh-gpu.ts:triangleIndicesToLineIndices",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        94
+      ],
+      "name": "triangleIndicesToLineIndices",
+      "params": [
+        {
+          "name": "indices",
+          "optional": false,
+          "type": "Uint32Array"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function triangleIndicesToLineIndices(indices: Uint32Array) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

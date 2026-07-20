@@ -1,0 +1,381 @@
+{
+  "module": "packages/eve/src/setup/build.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:SETUP_ROOT",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "SETUP_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:REPO_ROOT",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "REPO_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:SOURCE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "SOURCE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:OUTPUT_PATH",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "OUTPUT_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:SOURCE_ONLY_ROOT_ENTRIES",
+      "kind": "variable",
+      "line_range": [
+        18,
+        28
+      ],
+      "name": "SOURCE_ONLY_ROOT_ENTRIES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:WEB_CHANNEL_SOURCE_PATH",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "WEB_CHANNEL_SOURCE_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:FILE_TRANSFORMS",
+      "kind": "variable",
+      "line_range": [
+        31,
+        42
+      ],
+      "name": "FILE_TRANSFORMS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:applyDeclaredTransforms",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        57
+      ],
+      "name": "applyDeclaredTransforms",
+      "params": [
+        {
+          "name": "relativePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function applyDeclaredTransforms(relativePath: string, source: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:shouldCopySourcePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        73
+      ],
+      "name": "shouldCopySourcePath",
+      "params": [
+        {
+          "name": "relativePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldCopySourcePath(relativePath: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:discoverSourceFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        75,
+        91
+      ],
+      "name": "discoverSourceFiles",
+      "params": [
+        {
+          "name": "relativeDirectory",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function discoverSourceFiles(relativeDirectory: unknown) -> Promise<string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:quoteSourceFile",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        100
+      ],
+      "name": "quoteSourceFile",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function quoteSourceFile(content: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:renderFileEntry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        102,
+        107
+      ],
+      "name": "renderFileEntry",
+      "params": [
+        {
+          "name": "relativePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderFileEntry(relativePath: string, content: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:renderPropertyKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        109,
+        111
+      ],
+      "name": "renderPropertyKey",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderPropertyKey(key: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:renderStringRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        118
+      ],
+      "name": "renderStringRecord",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "record",
+          "optional": false,
+          "type": "Record<string, string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderStringRecord(name: string, record: Record<string, string>) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/build.ts:PackageTemplate:scripts",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "scripts",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/build.ts:PackageTemplate:dependencies",
+          "kind": "property",
+          "line_range": [
+            122,
+            122
+          ],
+          "name": "dependencies",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/build.ts:PackageTemplate:devDependencies",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "devDependencies",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/build.ts:PackageTemplate",
+      "kind": "interface",
+      "line_range": [
+        120,
+        124
+      ],
+      "name": "PackageTemplate",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:parsePackageTemplate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        126,
+        143
+      ],
+      "name": "parsePackageTemplate",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PackageTemplate",
+      "signature": "export function parsePackageTemplate(source: string) -> PackageTemplate",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:renderGeneratedModule",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        145,
+        172
+      ],
+      "name": "renderGeneratedModule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function renderGeneratedModule() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:mode",
+      "kind": "variable",
+      "line_range": [
+        174,
+        174
+      ],
+      "name": "mode",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/build.ts:generated",
+      "kind": "variable",
+      "line_range": [
+        179,
+        179
+      ],
+      "name": "generated",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    }
+  ]
+}

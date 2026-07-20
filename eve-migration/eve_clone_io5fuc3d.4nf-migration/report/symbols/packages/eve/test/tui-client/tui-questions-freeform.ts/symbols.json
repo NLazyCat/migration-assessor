@@ -1,0 +1,77 @@
+{
+  "module": "packages/eve/test/tui-client/tui-questions-freeform.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions-freeform.ts:FREEFORM_ANSWER",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "FREEFORM_ANSWER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions-freeform.ts:assistantReplyAfter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        122
+      ],
+      "name": "assistantReplyAfter",
+      "params": [
+        {
+          "name": "snapshot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "afterMarker",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "needle",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function assistantReplyAfter(snapshot: string, afterMarker: string, needle: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-questions-freeform.ts:waitForCondition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        124,
+        135
+      ],
+      "name": "waitForCondition",
+      "params": [
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "() => boolean"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ timeoutMs: number; label: string; intervalMs?: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForCondition(predicate: () => boolean, options: { timeoutMs: number; label: string; intervalMs?: number }) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        44,
+        236
+      ],
+      "name": "createRemoteConnectionController",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RemoteConnectionControllerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RemoteConnectionController",
+      "signature": "export function createRemoteConnectionController(options: RemoteConnectionControllerOptions) -> RemoteConnectionController"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/remote-connection.ts"
+}

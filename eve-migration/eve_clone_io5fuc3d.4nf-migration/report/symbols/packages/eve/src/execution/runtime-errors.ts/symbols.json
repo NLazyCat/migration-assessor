@@ -1,0 +1,85 @@
+{
+  "module": "packages/eve/src/execution/runtime-errors.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/runtime-errors.ts:RuntimeNoActiveSessionError:code",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/runtime-errors.ts:RuntimeNoActiveSessionError:continuationToken",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/runtime-errors.ts:RuntimeNoActiveSessionError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            11,
+            15
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "continuationToken",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/runtime-errors.ts:RuntimeNoActiveSessionError",
+      "kind": "class",
+      "line_range": [
+        7,
+        16
+      ],
+      "name": "RuntimeNoActiveSessionError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/runtime-errors.ts:isRuntimeNoActiveSessionError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        23
+      ],
+      "name": "isRuntimeNoActiveSessionError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "error is RuntimeNoActiveSessionError",
+      "signature": "export function isRuntimeNoActiveSessionError(error: unknown) -> error is RuntimeNoActiveSessionError",
+      "visibility": "Public"
+    }
+  ]
+}

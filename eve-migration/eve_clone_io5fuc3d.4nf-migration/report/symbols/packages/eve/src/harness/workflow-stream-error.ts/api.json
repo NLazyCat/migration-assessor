@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        48
+      ],
+      "name": "extractWorkflowStreamWriteErrorDetails",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject | null",
+      "signature": "export function extractWorkflowStreamWriteErrorDetails(error: unknown) -> JsonObject | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        56,
+        58
+      ],
+      "name": "isWorkflowStreamWriteError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isWorkflowStreamWriteError(error: unknown) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/harness/workflow-stream-error.ts"
+}

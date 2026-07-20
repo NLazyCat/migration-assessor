@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "FINAL_OUTPUT_TOOL_NAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FINAL_OUTPUT_TOOL_NAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        22,
+        29
+      ],
+      "name": "buildFinalOutputTool",
+      "params": [
+        {
+          "name": "schema",
+          "optional": false,
+          "type": "JsonObject"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Tool",
+      "signature": "export function buildFinalOutputTool(schema: JsonObject) -> Tool"
+    }
+  ],
+  "module": "packages/eve/src/runtime/framework-tools/final-output.ts"
+}

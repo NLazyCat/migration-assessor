@@ -1,0 +1,523 @@
+{
+  "module": "packages/eve/src/public/channels/github/dispatch.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:log",
+      "kind": "variable",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:GitHubTurnEvent",
+      "kind": "type_alias",
+      "line_range": [
+        46,
+        51
+      ],
+      "name": "GitHubTurnEvent",
+      "partial_analysis": false,
+      "value": "| GitHubCiWebhookEvent\r\n  | GitHubIssueCommentEvent\r\n  | GitHubIssueWebhookEvent\r\n  | GitHubPullRequestReviewCommentEvent\r\n  | GitHubPullRequestWebhookEvent;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchIssueComment",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        54,
+        77
+      ],
+      "name": "dispatchIssueComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly botName: string | undefined;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubIssueCommentEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onComment\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchIssueComment(input: {\r\n  readonly botName: string | undefined;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubIssueCommentEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onComment\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchPullRequestReviewComment",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        80,
+        103
+      ],
+      "name": "dispatchPullRequestReviewComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly botName: string | undefined;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubPullRequestReviewCommentEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onComment\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchPullRequestReviewComment(input: {\r\n  readonly botName: string | undefined;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubPullRequestReviewCommentEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onComment\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchIssue",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        106,
+        121
+      ],
+      "name": "dispatchIssue",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubIssueWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onIssue\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchIssue(input: {\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubIssueWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onIssue\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchPullRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        124,
+        139
+      ],
+      "name": "dispatchPullRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubPullRequestWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onPullRequest\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchPullRequest(input: {\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubPullRequestWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onPullRequest\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchCheckSuite",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        142,
+        154
+      ],
+      "name": "dispatchCheckSuite",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCheckSuiteWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onCheckSuite\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchCheckSuite(input: {\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCheckSuiteWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onCheckSuite\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchCheckRun",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        157,
+        169
+      ],
+      "name": "dispatchCheckRun",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCheckRunWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onCheckRun\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchCheckRun(input: {\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCheckRunWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onCheckRun\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchWorkflowRun",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        172,
+        184
+      ],
+      "name": "dispatchWorkflowRun",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubWorkflowRunWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onWorkflowRun\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchWorkflowRun(input: {\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubWorkflowRunWebhookEvent;\r\n  readonly handler: NonNullable<GitHubChannelConfig[\"onWorkflowRun\"]>;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchCiEvent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        186,
+        218
+      ],
+      "name": "dispatchCiEvent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly ci: GitHubCiPayload;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCiWebhookEvent;\r\n  readonly handlerResult: (ctx: GitHubInboundContext) => GitHubInboundResultOrPromise;\r\n  readonly label: string;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchCiEvent(input: {\r\n  readonly ci: GitHubCiPayload;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCiWebhookEvent;\r\n  readonly handlerResult: (ctx: GitHubInboundContext) => GitHubInboundResultOrPromise;\r\n  readonly label: string;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchWebhookEventTurn",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        220,
+        245
+      ],
+      "name": "dispatchWebhookEventTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCiWebhookEvent | GitHubIssueWebhookEvent | GitHubPullRequestWebhookEvent;\r\n  readonly handlerResult: () => GitHubInboundResultOrPromise;\r\n  readonly message: string;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n  readonly state: GitHubChannelState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchWebhookEventTurn(input: {\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubCiWebhookEvent | GitHubIssueWebhookEvent | GitHubPullRequestWebhookEvent;\r\n  readonly handlerResult: () => GitHubInboundResultOrPromise;\r\n  readonly message: string;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n  readonly state: GitHubChannelState;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:dispatchCommentTurn",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        247,
+        281
+      ],
+      "name": "dispatchCommentTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly body: string;\r\n  readonly botName: string | undefined;\r\n  readonly commentUrl: string | undefined;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubIssueCommentEvent | GitHubPullRequestReviewCommentEvent;\r\n  readonly handlerResult: () => GitHubInboundResultOrPromise;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n  readonly state: GitHubChannelState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function dispatchCommentTurn(input: {\r\n  readonly body: string;\r\n  readonly botName: string | undefined;\r\n  readonly commentUrl: string | undefined;\r\n  readonly config: GitHubChannelConfig;\r\n  readonly event: GitHubIssueCommentEvent | GitHubPullRequestReviewCommentEvent;\r\n  readonly handlerResult: () => GitHubInboundResultOrPromise;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n  readonly state: GitHubChannelState;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:runInboundHandler",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        283,
+        295
+      ],
+      "name": "runInboundHandler",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly event: GitHubTurnEvent;\r\n  readonly handlerResult: () => GitHubInboundResultOrPromise;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubInboundResult | undefined>",
+      "signature": "export function runInboundHandler(input: {\r\n  readonly event: GitHubTurnEvent;\r\n  readonly handlerResult: () => GitHubInboundResultOrPromise;\r\n}) -> Promise<GitHubInboundResult | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:sendGitHubTurn",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        297,
+        335
+      ],
+      "name": "sendGitHubTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly commentUrl?: string;\r\n  readonly event: GitHubTurnEvent;\r\n  readonly logMessage?: string;\r\n  readonly message: string;\r\n  readonly context: readonly string[] | undefined;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n  readonly state: GitHubChannelState;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function sendGitHubTurn(input: {\r\n  readonly auth: SessionAuthContext | null;\r\n  readonly commentUrl?: string;\r\n  readonly event: GitHubTurnEvent;\r\n  readonly logMessage?: string;\r\n  readonly message: string;\r\n  readonly context: readonly string[] | undefined;\r\n  readonly send: SendFn<GitHubChannelState>;\r\n  readonly state: GitHubChannelState;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:buildPullRequestContext",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        337,
+        358
+      ],
+      "name": "buildPullRequestContext",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "GitHubChannelConfig"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "GitHubChannelState"
+        },
+        {
+          "name": "deliveryId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly string[] | undefined>",
+      "signature": "export function buildPullRequestContext(config: GitHubChannelConfig, state: GitHubChannelState, deliveryId: string) -> Promise<readonly string[] | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:buildInboundContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        360,
+        388
+      ],
+      "name": "buildInboundContext",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "GitHubChannelConfig"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "| GitHubCiWebhookEvent\r\n    | GitHubIssueCommentEvent\r\n    | GitHubIssueWebhookEvent\r\n    | GitHubPullRequestWebhookEvent\r\n    | GitHubPullRequestReviewCommentEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitHubInboundContext",
+      "signature": "export function buildInboundContext(config: GitHubChannelConfig, event: | GitHubCiWebhookEvent\r\n    | GitHubIssueCommentEvent\r\n    | GitHubIssueWebhookEvent\r\n    | GitHubPullRequestWebhookEvent\r\n    | GitHubPullRequestReviewCommentEvent) -> GitHubInboundContext",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:toGitHubComment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        390,
+        401
+      ],
+      "name": "toGitHubComment",
+      "params": [
+        {
+          "name": "comment",
+          "optional": false,
+          "type": "GitHubIssueComment | GitHubPullRequestReviewComment"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitHubComment",
+      "signature": "export function toGitHubComment(comment: GitHubIssueComment | GitHubPullRequestReviewComment) -> GitHubComment",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:formatIssueEventMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        403,
+        406
+      ],
+      "name": "formatIssueEventMessage",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "GitHubIssueWebhookEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatIssueEventMessage(event: GitHubIssueWebhookEvent) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:formatPullRequestEventMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        408,
+        413
+      ],
+      "name": "formatPullRequestEventMessage",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "GitHubPullRequestWebhookEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPullRequestEventMessage(event: GitHubPullRequestWebhookEvent) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:formatCiEventMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        415,
+        418
+      ],
+      "name": "formatCiEventMessage",
+      "params": [
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "GitHubCiPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatCiEventMessage(label: string, event: GitHubCiPayload) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:ciEventId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        420,
+        424
+      ],
+      "name": "ciEventId",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "GitHubCiPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function ciEventId(event: GitHubCiPayload) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:isIgnoredInboundComment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        426,
+        435
+      ],
+      "name": "isIgnoredInboundComment",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "author",
+          "optional": false,
+          "type": "GitHubUser | undefined"
+        },
+        {
+          "name": "botName",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isIgnoredInboundComment(body: string, author: GitHubUser | undefined, botName: string | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/dispatch.ts:readString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        437,
+        439
+      ],
+      "name": "readString",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readString(value: unknown) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

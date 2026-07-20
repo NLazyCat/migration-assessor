@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        84
+      ],
+      "name": "areTokenClaimMatchersSatisfied",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "JWTPayload"
+        },
+        {
+          "name": "matchers",
+          "optional": false,
+          "type": "ResolvedTokenClaimMatchers"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function areTokenClaimMatchersSatisfied(payload: JWTPayload, matchers: ResolvedTokenClaimMatchers) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        89,
+        117
+      ],
+      "name": "createJwtAuthenticatedCallerPrincipal",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authenticator: AuthenticatedCallerPrincipal[\"authenticator\"];\r\n  readonly issuerClaims?: readonly string[];\r\n  readonly payload: JWTPayload;\r\n  readonly principalType: AuthenticatedCallerPrincipal[\"principalType\"];\r\n  readonly subjectClaim?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthenticatedCallerPrincipal",
+      "signature": "export function createJwtAuthenticatedCallerPrincipal(input: {\r\n  readonly authenticator: AuthenticatedCallerPrincipal[\"authenticator\"];\r\n  readonly issuerClaims?: readonly string[];\r\n  readonly payload: JWTPayload;\r\n  readonly principalType: AuthenticatedCallerPrincipal[\"principalType\"];\r\n  readonly subjectClaim?: string;\r\n}) -> AuthenticatedCallerPrincipal"
+    }
+  ],
+  "module": "packages/eve/src/runtime/governance/auth/token-claims.ts"
+}

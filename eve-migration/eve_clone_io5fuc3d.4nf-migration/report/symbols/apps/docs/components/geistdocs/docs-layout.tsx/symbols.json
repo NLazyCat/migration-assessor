@@ -1,0 +1,65 @@
+{
+  "module": "apps/docs/components/geistdocs/docs-layout.tsx",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/components/geistdocs/docs-layout.tsx:DocsLayoutProps:children",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "children",
+          "partial_analysis": false,
+          "return_type": ": ReactNode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/components/geistdocs/docs-layout.tsx:DocsLayoutProps:tree",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "tree",
+          "partial_analysis": false,
+          "return_type": ": ComponentProps<typeof PackageDocsLayout>[\"tree\"]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/components/geistdocs/docs-layout.tsx:DocsLayoutProps",
+      "kind": "interface",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "DocsLayoutProps",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/components/geistdocs/docs-layout.tsx:DocsLayout",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        10,
+        20
+      ],
+      "name": "DocsLayout",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "DocsLayoutProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

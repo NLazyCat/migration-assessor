@@ -1,0 +1,52 @@
+{
+  "module": "apps/docs/app/[lang]/og/[...slug]/route.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/og/[...slug]/route.tsx:GET",
+      "is_async": true,
+      "kind": "variable",
+      "line_range": [
+        7,
+        84
+      ],
+      "name": "GET",
+      "params": [
+        {
+          "name": "_request",
+          "optional": false,
+          "type": "NextRequest"
+        },
+        {
+          "name": "_",
+          "optional": false,
+          "type": "RouteContext<\"/[lang]/og/[...slug]\">"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/og/[...slug]/route.tsx:generateStaticParams",
+      "is_async": true,
+      "kind": "variable",
+      "line_range": [
+        86,
+        93
+      ],
+      "name": "generateStaticParams",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "RouteContext<\"/[lang]/og/[...slug]\">"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

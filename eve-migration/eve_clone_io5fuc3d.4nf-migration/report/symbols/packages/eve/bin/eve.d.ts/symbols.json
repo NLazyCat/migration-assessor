@@ -1,0 +1,323 @@
+{
+  "module": "packages/eve/bin/eve.d.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapOptions:cliEntrypointPath",
+          "kind": "property",
+          "line_range": [
+            5,
+            5
+          ],
+          "name": "cliEntrypointPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapOptions:packageRoot",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "packageRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapOptions:postBuildScriptPaths",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "postBuildScriptPaths",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapOptions:tscCliPath",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "tscCliPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/bin/eve.d.ts:BootstrapOptions",
+      "kind": "interface",
+      "line_range": [
+        1,
+        21
+      ],
+      "name": "BootstrapOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapCommandOptions:cwd",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "cwd",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/bin/eve.d.ts:BootstrapCommandOptions",
+      "kind": "interface",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "BootstrapCommandOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapBuildDependencies:exists",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "exists",
+          "partial_analysis": false,
+          "return_type": ": (path: string) => Promise<boolean>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapBuildDependencies:getLatestBuildInputMtimeMs",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "getLatestBuildInputMtimeMs",
+          "partial_analysis": false,
+          "return_type": ": (input: { packageRoot: string }) => Promise<number>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapBuildDependencies:getPathMtimeMs",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "getPathMtimeMs",
+          "partial_analysis": false,
+          "return_type": ": (path: string) => Promise<number | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapBuildDependencies:runCommand",
+          "kind": "property",
+          "line_range": [
+            31,
+            35
+          ],
+          "name": "runCommand",
+          "partial_analysis": false,
+          "return_type": ": (\r\n    command: string,\r\n    args: readonly string[],\r\n    options: BootstrapCommandOptions,\r\n  ) => Promise<void>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/bin/eve.d.ts:BootstrapBuildDependencies",
+      "kind": "interface",
+      "line_range": [
+        27,
+        36
+      ],
+      "name": "BootstrapBuildDependencies",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/bin/eve.d.ts:BootstrapCliModule",
+      "kind": "interface",
+      "line_range": [
+        38,
+        40
+      ],
+      "name": "BootstrapCliModule",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapSemverModule:default",
+          "kind": "property",
+          "line_range": [
+            43,
+            46
+          ],
+          "name": "default",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    validRange(range: string | undefined): string | null;\r\n    satisfies(version: string, range: string): boolean;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/bin/eve.d.ts:BootstrapSemverModule",
+      "kind": "interface",
+      "line_range": [
+        42,
+        47
+      ],
+      "name": "BootstrapSemverModule",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapDependencies:importBootstrapModule",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "importBootstrapModule",
+          "partial_analysis": false,
+          "return_type": ": (specifier: string) => Promise<BootstrapSemverModule>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapDependencies:importModule",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "importModule",
+          "partial_analysis": false,
+          "return_type": ": (specifier: string) => Promise<BootstrapCliModule>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapDependencies:nodeVersion",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "nodeVersion",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/bin/eve.d.ts:BootstrapDependencies:nodeEngineRequirement",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "nodeEngineRequirement",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/bin/eve.d.ts:BootstrapDependencies",
+      "kind": "interface",
+      "line_range": [
+        49,
+        63
+      ],
+      "name": "BootstrapDependencies",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/bin/eve.d.ts:ensureBuiltCli",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        68,
+        71
+      ],
+      "name": "ensureBuiltCli",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "BootstrapOptions"
+        },
+        {
+          "name": "dependencies",
+          "optional": true,
+          "type": "BootstrapBuildDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function ensureBuiltCli(overrides: BootstrapOptions, dependencies: BootstrapBuildDependencies) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/bin/eve.d.ts:runEveCli",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        80
+      ],
+      "name": "runEveCli",
+      "params": [
+        {
+          "name": "argv",
+          "optional": true,
+          "type": "string[]"
+        },
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "BootstrapOptions"
+        },
+        {
+          "name": "dependencies",
+          "optional": true,
+          "type": "BootstrapDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runEveCli(argv: string[], overrides: BootstrapOptions, dependencies: BootstrapDependencies) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

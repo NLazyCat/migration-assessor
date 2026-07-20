@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/execution/turn-cancellation-token.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-cancellation-token.ts:sessionCancelHookToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        2,
+        4
+      ],
+      "name": "sessionCancelHookToken",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sessionCancelHookToken(sessionId: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-cancellation-token.ts:TurnCancelPayload:turnId",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/turn-cancellation-token.ts:TurnCancelPayload",
+      "kind": "interface",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "TurnCancelPayload",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

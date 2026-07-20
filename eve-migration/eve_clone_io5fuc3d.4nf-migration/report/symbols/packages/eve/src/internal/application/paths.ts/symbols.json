@@ -1,0 +1,355 @@
+{
+  "module": "packages/eve/src/internal/application/paths.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:EVE_INTERNAL_BUILD_OUTPUT_DIRECTORY_ENV",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "EVE_INTERNAL_BUILD_OUTPUT_DIRECTORY_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:EVE_INTERNAL_HOST_BUILD_OUTPUT_DIRECTORY_ENV",
+      "kind": "variable",
+      "line_range": [
+        14,
+        15
+      ],
+      "name": "EVE_INTERNAL_HOST_BUILD_OUTPUT_DIRECTORY_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/paths.ts:ApplicationInfo:appRoot",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/paths.ts:ApplicationInfo:outputDir",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "outputDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/paths.ts:ApplicationInfo:workflowId",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "workflowId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/paths.ts:ApplicationInfo:workflowBuildDir",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "workflowBuildDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/paths.ts:ApplicationInfo:workflowSourceDir",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "workflowSourceDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/paths.ts:ApplicationInfo",
+      "kind": "interface",
+      "line_range": [
+        17,
+        23
+      ],
+      "name": "ApplicationInfo",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveApplicationRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "resolveApplicationRoot",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveApplicationRoot(cwd: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:getWorkflowBuildCacheKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "getWorkflowBuildCacheKey",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function getWorkflowBuildCacheKey(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:isVercelBuildEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        43
+      ],
+      "name": "isVercelBuildEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isVercelBuildEnvironment() -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveNitroBuildDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        59
+      ],
+      "name": "resolveNitroBuildDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "NitroBuildSurface"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveNitroBuildDirectory(appRoot: string, surface: NitroBuildSurface) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveApplicationHostArtifactsDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        63
+      ],
+      "name": "resolveApplicationHostArtifactsDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveApplicationHostArtifactsDirectory(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveNitroSurfaceOutputDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        68,
+        73
+      ],
+      "name": "resolveNitroSurfaceOutputDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "Exclude<NitroBuildSurface, \"all\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveNitroSurfaceOutputDirectory(appRoot: string, surface: Exclude<NitroBuildSurface, \"all\">) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveWorkflowBuildDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        93
+      ],
+      "name": "resolveWorkflowBuildDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkflowBuildDirectory(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:pruneStaleWorkflowCacheSiblings",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        130
+      ],
+      "name": "pruneStaleWorkflowCacheSiblings",
+      "params": [
+        {
+          "name": "workflowCacheRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function pruneStaleWorkflowCacheSiblings(workflowCacheRoot: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveSandboxCacheDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        135,
+        137
+      ],
+      "name": "resolveSandboxCacheDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveSandboxCacheDirectory(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:resolveOutputDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        142,
+        148
+      ],
+      "name": "resolveOutputDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveOutputDirectory(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/paths.ts:getApplicationInfo",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        153,
+        161
+      ],
+      "name": "getApplicationInfo",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ApplicationInfo",
+      "signature": "export function getApplicationInfo(appRoot: string) -> ApplicationInfo",
+      "visibility": "Public"
+    }
+  ]
+}

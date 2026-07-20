@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel-errors.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-errors.ts:isVercelSnapshotUnavailableError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1,
+        13
+      ],
+      "name": "isVercelSnapshotUnavailableError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isVercelSnapshotUnavailableError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-errors.ts:isVercelSandboxMissingError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        27
+      ],
+      "name": "isVercelSandboxMissingError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isVercelSandboxMissingError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-errors.ts:walkErrorChain",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        37
+      ],
+      "name": "walkErrorChain",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Generator<unknown>",
+      "signature": "export function walkErrorChain(error: unknown) -> Generator<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

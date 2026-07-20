@@ -1,0 +1,650 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        38,
+        55
+      ],
+      "name": "ThemeColors",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ThemeColors { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "reset",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "reset: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "bold",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "bold: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "dim",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "dim: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "inverse",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "inverse: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "italic",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "italic: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "white",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "white: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "gray",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "gray: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "cyan",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "cyan: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "green",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "green: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "red",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "red: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "yellow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "yellow: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "magenta",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "magenta: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "blue",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "blue: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "orange",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Style",
+      "signature": "orange: : Style"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        61,
+        106
+      ],
+      "name": "ThemeGlyphs",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ThemeGlyphs { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "brand",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "brand: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "user",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "user: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "reasoning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reasoning: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "success",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "success: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "error",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "error: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "warning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "warning: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "subagent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "subagent: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "rule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rule: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "question",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "question: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "connection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connection: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "arrow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "arrow: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "pointer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "pointer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "selectedPointer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "selectedPointer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        89,
+        89
+      ],
+      "name": "option",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "option: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "prompt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "prompt: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "elbow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "elbow: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "hrule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "hrule: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "caret",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "caret: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        99,
+        99
+      ],
+      "name": "dot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "dot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "ellipsis",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ellipsis: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "arrowUp",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "arrowUp: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        105,
+        105
+      ],
+      "name": "arrowDown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "arrowDown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        161,
+        167
+      ],
+      "name": "Theme",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface Theme { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        162,
+        162
+      ],
+      "name": "color",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "color: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        163,
+        163
+      ],
+      "name": "unicode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "unicode: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "colors",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ThemeColors",
+      "signature": "colors: : ThemeColors"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        165,
+        165
+      ],
+      "name": "glyph",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ThemeGlyphs",
+      "signature": "glyph: : ThemeGlyphs"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "spinner",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "spinner: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        169,
+        174
+      ],
+      "name": "CreateThemeOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateThemeOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        171,
+        171
+      ],
+      "name": "color",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "color?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "unicode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "unicode?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        181,
+        207
+      ],
+      "name": "createTheme",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "CreateThemeOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Theme",
+      "signature": "export function createTheme(options: CreateThemeOptions) -> Theme"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        214,
+        225
+      ],
+      "name": "detectUnicode",
+      "params": [
+        {
+          "name": "env",
+          "optional": false,
+          "type": "NodeJS.ProcessEnv"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function detectUnicode(env: NodeJS.ProcessEnv) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/theme.ts"
+}

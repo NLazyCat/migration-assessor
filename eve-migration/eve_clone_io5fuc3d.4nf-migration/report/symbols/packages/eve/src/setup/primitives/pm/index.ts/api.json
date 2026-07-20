@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        25
+      ],
+      "name": "getPackageManagerStrategy",
+      "params": [
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "PackageManagerKind"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PackageManagerStrategy",
+      "signature": "export function getPackageManagerStrategy(kind: PackageManagerKind) -> PackageManagerStrategy"
+    }
+  ],
+  "module": "packages/eve/src/setup/primitives/pm/index.ts"
+}

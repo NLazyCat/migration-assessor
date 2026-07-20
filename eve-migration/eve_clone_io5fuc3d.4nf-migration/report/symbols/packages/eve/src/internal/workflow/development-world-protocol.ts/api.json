@@ -1,0 +1,158 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "DEVELOPMENT_WORKFLOW_WORLD_ROUTE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORKFLOW_WORLD_ROUTE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        15,
+        22
+      ],
+      "name": "usesParentDevelopmentWorkflowWorld",
+      "params": [
+        {
+          "name": "configuredWorld",
+          "optional": false,
+          "type": "AgentWorkflowWorldDefinition | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function usesParentDevelopmentWorkflowWorld(configuredWorld: AgentWorkflowWorldDefinition | undefined) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "DEVELOPMENT_WORKFLOW_SECRET_ENV",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORKFLOW_SECRET_ENV: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "DEVELOPMENT_WORKER_APP_ROOT_ENV",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORKER_APP_ROOT_ENV: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "DEVELOPMENT_WORKFLOW_STREAM_ROUTE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORKFLOW_STREAM_ROUTE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "DEVELOPMENT_WORKFLOW_TRANSPORT_HEADER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORKFLOW_TRANSPORT_HEADER: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "DEVELOPMENT_WORKFLOW_DELIVERY_HEADER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORKFLOW_DELIVERY_HEADER: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        38,
+        60
+      ],
+      "name": "DEVELOPMENT_WORLD_OPERATIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEVELOPMENT_WORLD_OPERATIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "DevelopmentWorldOperation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DevelopmentWorldOperation = (typeof DEVELOPMENT_WORLD_OPERATIONS)[number];"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        64,
+        67
+      ],
+      "name": "DevelopmentWorldCall",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DevelopmentWorldCall { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "arguments",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly unknown[]",
+      "signature": "arguments: : readonly unknown[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "operation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DevelopmentWorldOperation",
+      "signature": "operation: : DevelopmentWorldOperation"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow/development-world-protocol.ts"
+}

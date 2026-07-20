@@ -1,0 +1,411 @@
+{
+  "module": "packages/eve/src/setup/slack-connect.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListClient:uid",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "uid",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListClient:id",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListClient:type",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListClient:createdAt",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "createdAt",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListClient:projects",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "projects",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListClient",
+      "kind": "interface",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "VercelConnectListClient",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListResponse:connectors",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "connectors",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListResponse:clients",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "clients",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slack-connect.ts:VercelConnectListResponse",
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "VercelConnectListResponse",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:NonEmptyStringSchema",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "NonEmptyStringSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:SlackConnectorRefSchema",
+      "kind": "variable",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "SlackConnectorRefSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:SlackConnectorDetailsSchema",
+      "kind": "variable",
+      "line_range": [
+        33,
+        45
+      ],
+      "name": "SlackConnectorDetailsSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:SlackConnectorRef",
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "SlackConnectorRef",
+      "partial_analysis": false,
+      "value": "z.infer<typeof SlackConnectorRefSchema>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:SlackWorkspaceConnection:workspaceUrl",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "workspaceUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:SlackWorkspaceConnection:workspaceName",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "workspaceName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slack-connect.ts:SlackWorkspaceConnection",
+      "kind": "interface",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "SlackWorkspaceConnection",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:SlackConnectorDetails:ref",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "ref",
+          "partial_analysis": false,
+          "return_type": ": SlackConnectorRef",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:SlackConnectorDetails:workspace",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "workspace",
+          "partial_analysis": false,
+          "return_type": ": SlackWorkspaceConnection",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slack-connect.ts:SlackConnectorDetails",
+      "kind": "interface",
+      "line_range": [
+        57,
+        60
+      ],
+      "name": "SlackConnectorDetails",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:parseSlackConnectorDetails",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        85
+      ],
+      "name": "parseSlackConnectorDetails",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorDetails | undefined",
+      "signature": "export function parseSlackConnectorDetails(body: unknown) -> SlackConnectorDetails | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:parseCreatedSlackConnector",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        102
+      ],
+      "name": "parseCreatedSlackConnector",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorRef | undefined",
+      "signature": "export function parseCreatedSlackConnector(stdout: string) -> SlackConnectorRef | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:pickSlackConnector",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        107,
+        141
+      ],
+      "name": "pickSlackConnector",
+      "params": [
+        {
+          "name": "listJson",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "projectId",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "expectedUid",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorRef | undefined",
+      "signature": "export function pickSlackConnector(listJson: unknown, projectId: string | undefined, expectedUid: string | undefined) -> SlackConnectorRef | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:slackMessageDeepLink",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        150,
+        162
+      ],
+      "name": "slackMessageDeepLink",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function slackMessageDeepLink(url: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:RawSlackConnector:uid",
+          "kind": "property",
+          "line_range": [
+            166,
+            166
+          ],
+          "name": "uid",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/slack-connect.ts:RawSlackConnector:projectIds",
+          "kind": "property",
+          "line_range": [
+            167,
+            167
+          ],
+          "name": "projectIds",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/slack-connect.ts:RawSlackConnector",
+      "kind": "interface",
+      "line_range": [
+        165,
+        168
+      ],
+      "name": "RawSlackConnector",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/slack-connect.ts:parseSlackConnectors",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        191
+      ],
+      "name": "parseSlackConnectors",
+      "params": [
+        {
+          "name": "listJson",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RawSlackConnector[]",
+      "signature": "export function parseSlackConnectors(listJson: unknown) -> RawSlackConnector[]",
+      "visibility": "Public"
+    }
+  ]
+}

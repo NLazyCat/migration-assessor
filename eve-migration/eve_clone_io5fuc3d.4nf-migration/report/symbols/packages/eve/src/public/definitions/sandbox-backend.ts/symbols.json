@@ -1,0 +1,83 @@
+{
+  "module": "packages/eve/src/public/definitions/sandbox-backend.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxTemplateNotProvisionedError:backendName",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "backendName",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxTemplateNotProvisionedError:templateKey",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "templateKey",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxTemplateNotProvisionedError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            23,
+            30
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{ readonly backendName: string; readonly templateKey: string }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxTemplateNotProvisionedError:is",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            33,
+            42
+          ],
+          "name": "is",
+          "params": [
+            {
+              "name": "error",
+              "optional": false,
+              "type": "unknown"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "error is SandboxTemplateNotProvisionedError",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/sandbox-backend.ts:SandboxTemplateNotProvisionedError",
+      "kind": "class",
+      "line_range": [
+        19,
+        43
+      ],
+      "name": "SandboxTemplateNotProvisionedError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

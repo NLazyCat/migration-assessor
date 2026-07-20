@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/src/compiler/normalize-helpers.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/normalize-helpers.ts:ManifestCompileContext:modelCatalog",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "modelCatalog",
+          "partial_analysis": false,
+          "return_type": ": CompiledRuntimeModelCatalogLoader",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/normalize-helpers.ts:ManifestCompileContext",
+      "kind": "interface",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "ManifestCompileContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/normalize-helpers.ts:ModuleBackedDefinitionLoadOptions:externalDependencies",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "externalDependencies",
+          "partial_analysis": false,
+          "return_type": ": AuthoredModuleLoadOptions[\"externalDependencies\"]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/normalize-helpers.ts:ModuleBackedDefinitionLoadOptions",
+      "kind": "interface",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "ModuleBackedDefinitionLoadOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-helpers.ts:loadModuleBackedDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        40,
+        60
+      ],
+      "name": "loadModuleBackedDefinition",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agentRoot: string;\r\n  readonly displayPath?: string;\r\n  readonly externalDependencies?: ModuleBackedDefinitionLoadOptions[\"externalDependencies\"];\r\n  readonly kind: string;\r\n  readonly source: ModuleSourceRef;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function loadModuleBackedDefinition(input: {\r\n  readonly agentRoot: string;\r\n  readonly displayPath?: string;\r\n  readonly externalDependencies?: ModuleBackedDefinitionLoadOptions[\"externalDependencies\"];\r\n  readonly kind: string;\r\n  readonly source: ModuleSourceRef;\r\n}) -> Promise<unknown>",
+      "visibility": "Public"
+    }
+  ]
+}

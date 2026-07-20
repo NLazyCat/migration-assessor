@@ -1,0 +1,228 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        22
+      ],
+      "name": "ResolveTargetDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolveTargetDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "pathExists",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof pathExists",
+      "signature": "pathExists: : typeof pathExists"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "isEveProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof isEveProject",
+      "signature": "isEveProject: : typeof isEveProject"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        50
+      ],
+      "name": "ResolveTargetOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolveTargetOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "asker",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Asker",
+      "signature": "asker: : Asker"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "presetName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "presetName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "targetDirectory",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "targetDirectory?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "inPlace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "inPlace?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "resumeExisting",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "resumeExisting?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolveTargetDeps",
+      "signature": "deps?: : ResolveTargetDeps"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        53,
+        56
+      ],
+      "name": "ResolveTargetInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolveTargetInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "agentName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "inPlace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "inPlace: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        58,
+        61
+      ],
+      "name": "ResolveTargetPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolveTargetPayload { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "agentName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "projectPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Extract<ResolvedProjectPath, { kind: \"resolved\" }>",
+      "signature": "projectPath: : Extract<ResolvedProjectPath, { kind: \"resolved\" }>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        232
+      ],
+      "name": "resolveTarget",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolveTargetOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ResolveTargetInput, ResolveTargetPayload>",
+      "signature": "export function resolveTarget(options: ResolveTargetOptions) -> SetupBox<SetupState, ResolveTargetInput, ResolveTargetPayload>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/resolve-target.ts"
+}

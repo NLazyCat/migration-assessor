@@ -1,0 +1,70 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        2,
+        4
+      ],
+      "name": "OutputSink",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface OutputSink { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "WizardCancelledError",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class WizardCancelledError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "constructor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "WizardCancelledError::constructor() -> void"
+    },
+    {
+      "generics": [
+        "State",
+        "Input",
+        "Payload"
+      ],
+      "kind": "interface",
+      "line_range": [
+        30,
+        59
+      ],
+      "name": "SetupBox",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SetupBox { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    }
+  ],
+  "module": "packages/eve/src/setup/step.ts"
+}

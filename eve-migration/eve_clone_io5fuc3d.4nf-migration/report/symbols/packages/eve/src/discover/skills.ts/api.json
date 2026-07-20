@@ -1,0 +1,84 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "DISCOVER_SKILLS_DIRECTORY_INVALID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_SKILLS_DIRECTORY_INVALID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "DISCOVER_SKILL_COLLISION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_SKILL_COLLISION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "DISCOVER_SKILL_ENTRY_NOT_DIRECTORY",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_SKILL_ENTRY_NOT_DIRECTORY: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "DISCOVER_SKILL_FRONTMATTER_INVALID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_SKILL_FRONTMATTER_INVALID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "DISCOVER_SKILL_MARKDOWN_MISSING",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_SKILL_MARKDOWN_MISSING: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        142
+      ],
+      "name": "discoverSkills",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverSkillsInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoverSkillsResult>",
+      "signature": "export function discoverSkills(input: DiscoverSkillsInput) -> Promise<DiscoverSkillsResult>"
+    }
+  ],
+  "module": "packages/eve/src/discover/skills.ts"
+}

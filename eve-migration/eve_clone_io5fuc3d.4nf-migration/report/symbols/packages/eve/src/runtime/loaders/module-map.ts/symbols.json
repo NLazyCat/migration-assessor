@@ -1,0 +1,187 @@
+{
+  "module": "packages/eve/src/runtime/loaders/module-map.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:BUNDLED_MODULE_MAP_SOURCE",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "BUNDLED_MODULE_MAP_SOURCE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/module-map.ts:LoadCompiledModuleMapInput:compiledArtifactsSource",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "compiledArtifactsSource",
+          "partial_analysis": false,
+          "return_type": ": RuntimeCompiledArtifactsSource",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:LoadCompiledModuleMapInput",
+      "kind": "interface",
+      "line_range": [
+        13,
+        15
+      ],
+      "name": "LoadCompiledModuleMapInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/module-map.ts:LoadCompiledModuleMapError:moduleMapPath",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "moduleMapPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/module-map.ts:LoadCompiledModuleMapError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            23,
+            30
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "moduleMapPath",
+              "optional": true,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:LoadCompiledModuleMapError",
+      "kind": "class",
+      "line_range": [
+        20,
+        31
+      ],
+      "name": "LoadCompiledModuleMapError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:loadCompiledModuleMap",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        36,
+        72
+      ],
+      "name": "loadCompiledModuleMap",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "LoadCompiledModuleMapInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledModuleMap>",
+      "signature": "export function loadCompiledModuleMap(input: LoadCompiledModuleMapInput) -> Promise<CompiledModuleMap>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:parseCompiledModuleMap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        85
+      ],
+      "name": "parseCompiledModuleMap",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "moduleMapPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledModuleMap",
+      "signature": "export function parseCompiledModuleMap(value: unknown, moduleMapPath: string) -> CompiledModuleMap",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:formatLoadErrorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        93
+      ],
+      "name": "formatLoadErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatLoadErrorMessage(error: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/module-map.ts:createFileImportSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        95,
+        107
+      ],
+      "name": "createFileImportSpecifier",
+      "params": [
+        {
+          "name": "moduleMapPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createFileImportSpecifier(moduleMapPath: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

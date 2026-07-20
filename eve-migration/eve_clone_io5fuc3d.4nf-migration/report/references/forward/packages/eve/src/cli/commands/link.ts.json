@@ -1,0 +1,57 @@
+{
+  "LinkFlowDeps": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/cli/commands/link.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/setup/flows/link.ts:LinkFlowDeps"
+    }
+  ],
+  "Prompter": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/cli/commands/link.ts",
+        "line": 14
+      },
+      "symbol": "packages/eve/src/setup/prompter.ts:Prompter"
+    }
+  ],
+  "createPrompter": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 54,
+        "file": "packages/eve/src/cli/commands/link.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/setup/prompter.ts:createPrompter"
+    }
+  ],
+  "isEveProject": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/src/cli/commands/link.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/setup/scaffold/index.ts:isEveProject"
+    }
+  ],
+  "runLinkFlow": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/cli/commands/link.ts",
+        "line": 55
+      },
+      "symbol": "packages/eve/src/setup/flows/link.ts:runLinkFlow"
+    }
+  ]
+}

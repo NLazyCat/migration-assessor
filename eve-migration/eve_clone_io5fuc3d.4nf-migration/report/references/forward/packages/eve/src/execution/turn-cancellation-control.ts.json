@@ -1,0 +1,86 @@
+{
+  "TurnCancelPayload": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 78
+      },
+      "symbol": "packages/eve/src/execution/turn-cancellation-token.ts:TurnCancelPayload"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/execution/turn-cancellation-token.ts:TurnCancelPayload"
+    },
+    {
+      "kind": "property_access",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 90
+      },
+      "symbol": "packages/eve/src/execution/turn-cancellation-token.ts:TurnCancelPayload"
+    }
+  ],
+  "TurnCancelledError": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/harness/turn-cancellation.ts:TurnCancelledError"
+    }
+  ],
+  "claimHookOwnership": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 47
+      },
+      "symbol": "packages/eve/src/execution/hook-ownership.ts:claimHookOwnership"
+    }
+  ],
+  "disposeHook": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 70
+      },
+      "symbol": "packages/eve/src/execution/hook-ownership.ts:disposeHook"
+    }
+  ],
+  "isHookConflictError": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 49
+      },
+      "symbol": "packages/eve/src/execution/hook-ownership.ts:isHookConflictError"
+    }
+  ],
+  "sessionCancelHookToken": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/turn-cancellation-control.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/execution/turn-cancellation-token.ts:sessionCancelHookToken"
+    }
+  ]
+}

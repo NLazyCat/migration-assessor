@@ -1,0 +1,72 @@
+{
+  "module": "packages/eve/src/setup/boxes/link-project.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/link-project.test.ts:silentSink",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "silentSink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/link-project.test.ts:fakeDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        23
+      ],
+      "name": "fakeDeps",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<LinkProjectDeps>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LinkProjectDeps",
+      "signature": "export function fakeDeps(overrides: Partial<LinkProjectDeps>) -> LinkProjectDeps",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/link-project.test.ts:createPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        27
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createPrompter() -> Prompter",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/link-project.test.ts:resolvedState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        34
+      ],
+      "name": "resolvedState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function resolvedState() -> SetupState",
+      "visibility": "Private"
+    }
+  ]
+}

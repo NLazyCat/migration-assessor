@@ -1,0 +1,331 @@
+{
+  "module": "packages/eve/src/discover/project.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:DiscoveryProjectLayout",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DiscoveryProjectLayout",
+      "partial_analysis": false,
+      "value": "\"flat\" | \"nested\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project.ts:ResolvedDiscoveryProject:agentRoot",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project.ts:ResolvedDiscoveryProject:appRoot",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project.ts:ResolvedDiscoveryProject:layout",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "layout",
+          "partial_analysis": false,
+          "return_type": ": DiscoveryProjectLayout",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/project.ts:ResolvedDiscoveryProject",
+      "kind": "interface",
+      "line_range": [
+        24,
+        28
+      ],
+      "name": "ResolvedDiscoveryProject",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project.ts:DiscoveryProjectResolutionError:diagnostic",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "diagnostic",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/project.ts:DiscoveryProjectResolutionError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            37,
+            41
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "diagnostic",
+              "optional": false,
+              "type": "DiscoverDiagnostic"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/project.ts:DiscoveryProjectResolutionError",
+      "kind": "class",
+      "line_range": [
+        34,
+        42
+      ],
+      "name": "DiscoveryProjectResolutionError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:resolveDiscoveryProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        52,
+        103
+      ],
+      "name": "resolveDiscoveryProject",
+      "params": [
+        {
+          "name": "startPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ source?: ProjectSource }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedDiscoveryProject>",
+      "signature": "export function resolveDiscoveryProject(startPath: string, options: { source?: ProjectSource }) -> Promise<ResolvedDiscoveryProject>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:resolveSearchDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        105,
+        114
+      ],
+      "name": "resolveSearchDirectory",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "startPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveSearchDirectory(source: ProjectSource, startPath: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:tryResolveNestedProjectFromAgentDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        116,
+        135
+      ],
+      "name": "tryResolveNestedProjectFromAgentDirectory",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedDiscoveryProject | null>",
+      "signature": "export function tryResolveNestedProjectFromAgentDirectory(source: ProjectSource, directoryPath: string) -> Promise<ResolvedDiscoveryProject | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:tryResolveNestedProjectFromAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        137,
+        156
+      ],
+      "name": "tryResolveNestedProjectFromAppRoot",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedDiscoveryProject | null>",
+      "signature": "export function tryResolveNestedProjectFromAppRoot(source: ProjectSource, directoryPath: string) -> Promise<ResolvedDiscoveryProject | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:isFlatAgentRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        158,
+        167
+      ],
+      "name": "isFlatAgentRoot",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isFlatAgentRoot(source: ProjectSource, directoryPath: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:hasProjectMarkers",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        169,
+        175
+      ],
+      "name": "hasProjectMarkers",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function hasProjectMarkers(source: ProjectSource, directoryPath: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:readDirectoryEntryTypes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        177,
+        192
+      ],
+      "name": "readDirectoryEntryTypes",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Map<string, DirectoryEntryType>>",
+      "signature": "export function readDirectoryEntryTypes(source: ProjectSource, directoryPath: string) -> Promise<Map<string, DirectoryEntryType>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/project.ts:directoryExists",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        194,
+        196
+      ],
+      "name": "directoryExists",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function directoryExists(source: ProjectSource, directoryPath: string) -> Promise<boolean>",
+      "visibility": "Private"
+    }
+  ]
+}

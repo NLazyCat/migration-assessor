@@ -1,0 +1,49 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "EnsureVercelJsonResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EnsureVercelJsonResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "servicePrefix",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "servicePrefix: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        135
+      ],
+      "name": "ensureEveVercelJson",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly eveBuildCommand: string;\r\n  readonly servicePrefix: string;\r\n  readonly svelteKitRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EnsureVercelJsonResult>",
+      "signature": "export function ensureEveVercelJson(input: {\r\n  readonly appRoot: string;\r\n  readonly eveBuildCommand: string;\r\n  readonly servicePrefix: string;\r\n  readonly svelteKitRoot: string;\r\n}) -> Promise<EnsureVercelJsonResult>"
+    }
+  ],
+  "module": "packages/eve/src/public/sveltekit/vercel-json.ts"
+}

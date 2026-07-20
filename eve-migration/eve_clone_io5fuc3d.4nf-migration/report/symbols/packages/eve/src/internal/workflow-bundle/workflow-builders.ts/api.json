@@ -1,0 +1,141 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        33
+      ],
+      "name": "WorkflowManifest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WorkflowManifest = {\r\n  steps?: {\r\n    [relativeFileName: string]: {\r\n      [functionName: string]: {\r\n        stepId: string;\r\n      };\r\n    };\r\n  };\r\n  workflows?: {\r\n    [relativeFileName: string]: {\r\n      [functionName: string]: {\r\n        workflowId: string;\r\n      };\r\n    };\r\n  };\r\n  classes?: {\r\n    [relativeFileName: string]: {\r\n      [className: string]: {\r\n        classId: string;\r\n      };\r\n    };\r\n  };\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        43
+      ],
+      "name": "createEveWorkflowQueueTrigger",
+      "params": [
+        {
+          "name": "agentName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createEveWorkflowQueueTrigger(agentName: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        88
+      ],
+      "name": "applyWorkflowTransform",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "\"workflow\" | \"step\" | \"client\" | false"
+        },
+        {
+          "name": "absolutePath",
+          "optional": true,
+          "type": "string"
+        },
+        {
+          "name": "projectRoot",
+          "optional": true,
+          "type": "string"
+        },
+        {
+          "name": "stableWorkflowNames",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  code: string;\r\n  workflowManifest: WorkflowManifest;\r\n}>",
+      "signature": "export function applyWorkflowTransform(filename: string, source: string, mode: \"workflow\" | \"step\" | \"client\" | false, absolutePath: string, projectRoot: string, stableWorkflowNames: ReadonlySet<string>) -> Promise<{\r\n  code: string;\r\n  workflowManifest: WorkflowManifest;\r\n}>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        90,
+        104
+      ],
+      "name": "detectWorkflowPatterns",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  hasSerde: boolean;\r\n  hasUseStep: boolean;\r\n  hasUseWorkflow: boolean;\r\n}",
+      "signature": "export function detectWorkflowPatterns(source: string) -> {\r\n  hasSerde: boolean;\r\n  hasUseStep: boolean;\r\n  hasUseWorkflow: boolean;\r\n}"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        106,
+        139
+      ],
+      "name": "getImportPath",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ importPath: string; isPackage: boolean }",
+      "signature": "export function getImportPath(filePath: string, projectRoot: string) -> { importPath: string; isPackage: boolean }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        441,
+        443
+      ],
+      "name": "readSourceFile",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readSourceFile(path: string) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/workflow-builders.ts"
+}

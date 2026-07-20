@@ -1,0 +1,911 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "GitHubJsonObject",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubJsonObject = JsonObject;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "GitHubApiMethod",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubApiMethod = \"DELETE\" | \"GET\" | \"PATCH\" | \"POST\" | \"PUT\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "GitHubApiOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubApiOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "GitHubRequestOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubRequestOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "auth?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "headers",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "headers?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "installationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "installationId?: : number"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        40,
+        44
+      ],
+      "name": "GitHubApiResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubApiResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": T",
+      "signature": "body: : T"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "ok",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "ok: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "status: : number"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        47,
+        66
+      ],
+      "name": "GitHubApiError",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly body: unknown;\r\n    readonly method: string;\r\n    readonly path: string;\r\n    readonly status: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class GitHubApiError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        53,
+        65
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly body: unknown;\r\n    readonly method: string;\r\n    readonly path: string;\r\n    readonly status: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "GitHubApiError::constructor(input: {\r\n    readonly body: unknown;\r\n    readonly method: string;\r\n    readonly path: string;\r\n    readonly status: number;\r\n  }) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "GitHubCommentBody",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCommentBody { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "body: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        78,
+        83
+      ],
+      "name": "GitHubPostedComment",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPostedComment { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "htmlUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "htmlUrl: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "raw: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "url: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        86,
+        94
+      ],
+      "name": "GitHubReactionContent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubReactionContent = | \"+1\"\r\n  | \"-1\"\r\n  | \"confused\"\r\n  | \"eyes\"\r\n  | \"heart\"\r\n  | \"hooray\"\r\n  | \"laugh\"\r\n  | \"rocket\";"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        108,
+        154
+      ],
+      "name": "callGitHubApi",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly api?: GitHubApiOptions;\r\n  readonly body?: GitHubJsonObject;\r\n  readonly credentials?: GitHubChannelCredentials;\r\n  readonly installationId?: number;\r\n  readonly method: GitHubApiMethod;\r\n  readonly path: string;\r\n  readonly options?: GitHubRequestOptions;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubApiResponse<T>>",
+      "signature": "export function callGitHubApi(input: {\r\n  readonly api?: GitHubApiOptions;\r\n  readonly body?: GitHubJsonObject;\r\n  readonly credentials?: GitHubChannelCredentials;\r\n  readonly installationId?: number;\r\n  readonly method: GitHubApiMethod;\r\n  readonly path: string;\r\n  readonly options?: GitHubRequestOptions;\r\n}) -> Promise<GitHubApiResponse<T>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        157,
+        174
+      ],
+      "name": "createGitHubIssueComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly issueNumber: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubPostedComment>",
+      "signature": "export function createGitHubIssueComment(input: GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly issueNumber: number;\r\n  }) -> Promise<GitHubPostedComment>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        177,
+        194
+      ],
+      "name": "updateGitHubIssueComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly commentId: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubPostedComment>",
+      "signature": "export function updateGitHubIssueComment(input: GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly commentId: number;\r\n  }) -> Promise<GitHubPostedComment>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        197,
+        215
+      ],
+      "name": "createGitHubReviewCommentReply",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly commentId: number;\r\n    readonly pullRequestNumber: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubPostedComment>",
+      "signature": "export function createGitHubReviewCommentReply(input: GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly commentId: number;\r\n    readonly pullRequestNumber: number;\r\n  }) -> Promise<GitHubPostedComment>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        218,
+        235
+      ],
+      "name": "updateGitHubPullRequestReviewComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly commentId: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubPostedComment>",
+      "signature": "export function updateGitHubPullRequestReviewComment(input: GitHubResourceInput & {\r\n    readonly body: string | GitHubCommentBody;\r\n    readonly commentId: number;\r\n  }) -> Promise<GitHubPostedComment>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        238,
+        254
+      ],
+      "name": "createGitHubPullRequestReview",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly body: GitHubJsonObject;\r\n    readonly pullRequestNumber: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubApiResponse>",
+      "signature": "export function createGitHubPullRequestReview(input: GitHubResourceInput & {\r\n    readonly body: GitHubJsonObject;\r\n    readonly pullRequestNumber: number;\r\n  }) -> Promise<GitHubApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        257,
+        274
+      ],
+      "name": "createGitHubPullRequestReviewComment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly body: GitHubJsonObject;\r\n    readonly pullRequestNumber: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubPostedComment>",
+      "signature": "export function createGitHubPullRequestReviewComment(input: GitHubResourceInput & {\r\n    readonly body: GitHubJsonObject;\r\n    readonly pullRequestNumber: number;\r\n  }) -> Promise<GitHubPostedComment>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        277,
+        293
+      ],
+      "name": "GitHubPullRequestDetails",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestDetails { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        278,
+        278
+      ],
+      "name": "additions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "additions: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        279,
+        279
+      ],
+      "name": "author",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestUser | undefined",
+      "signature": "author: : GitHubPullRequestUser | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        280,
+        280
+      ],
+      "name": "base",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestRefDetails",
+      "signature": "base: : GitHubPullRequestRefDetails"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        281,
+        281
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "body: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        282,
+        282
+      ],
+      "name": "changedFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "changedFiles: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        283,
+        283
+      ],
+      "name": "defaultBranch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "defaultBranch: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        284,
+        284
+      ],
+      "name": "deletions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "deletions: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        285,
+        285
+      ],
+      "name": "draft",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "draft: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        286,
+        286
+      ],
+      "name": "head",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestRefDetails",
+      "signature": "head: : GitHubPullRequestRefDetails"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        287,
+        287
+      ],
+      "name": "htmlUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "htmlUrl: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        288,
+        288
+      ],
+      "name": "mergeable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean | null | undefined",
+      "signature": "mergeable: : boolean | null | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        289,
+        289
+      ],
+      "name": "number",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "number: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        290,
+        290
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "raw: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        291,
+        291
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "state: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        292,
+        292
+      ],
+      "name": "title",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "title: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        296,
+        300
+      ],
+      "name": "GitHubPullRequestUser",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestUser { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        297,
+        297
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        298,
+        298
+      ],
+      "name": "login",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "login: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        299,
+        299
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "type: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        303,
+        307
+      ],
+      "name": "GitHubPullRequestRefDetails",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestRefDetails { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        304,
+        304
+      ],
+      "name": "ref",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "ref: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        305,
+        305
+      ],
+      "name": "repoFullName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "repoFullName: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        306,
+        306
+      ],
+      "name": "sha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "sha: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        310,
+        325
+      ],
+      "name": "getGitHubPullRequest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly pullRequestNumber: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubPullRequestDetails>",
+      "signature": "export function getGitHubPullRequest(input: GitHubResourceInput & {\r\n    readonly pullRequestNumber: number;\r\n  }) -> Promise<GitHubPullRequestDetails>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        328,
+        335
+      ],
+      "name": "GitHubPullRequestFile",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestFile { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        329,
+        329
+      ],
+      "name": "additions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "additions: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        330,
+        330
+      ],
+      "name": "changes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "changes: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        331,
+        331
+      ],
+      "name": "deletions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "deletions: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        332,
+        332
+      ],
+      "name": "filename",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "filename: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        333,
+        333
+      ],
+      "name": "patch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "patch: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        334,
+        334
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "status: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        338,
+        355
+      ],
+      "name": "listGitHubPullRequestFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly perPage?: number;\r\n    readonly pullRequestNumber: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly GitHubPullRequestFile[]>",
+      "signature": "export function listGitHubPullRequestFiles(input: GitHubResourceInput & {\r\n    readonly perPage?: number;\r\n    readonly pullRequestNumber: number;\r\n  }) -> Promise<readonly GitHubPullRequestFile[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        358,
+        372
+      ],
+      "name": "listGitHubCompareFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly baseSha: string;\r\n    readonly headSha: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly GitHubPullRequestFile[]>",
+      "signature": "export function listGitHubCompareFiles(input: GitHubResourceInput & {\r\n    readonly baseSha: string;\r\n    readonly headSha: string;\r\n  }) -> Promise<readonly GitHubPullRequestFile[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        375,
+        396
+      ],
+      "name": "createGitHubReaction",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & {\r\n    readonly commentId: number;\r\n    readonly content: GitHubReactionContent;\r\n    readonly subject: \"issue_comment\" | \"pull_request_review_comment\";\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubApiResponse>",
+      "signature": "export function createGitHubReaction(input: GitHubResourceInput & {\r\n    readonly commentId: number;\r\n    readonly content: GitHubReactionContent;\r\n    readonly subject: \"issue_comment\" | \"pull_request_review_comment\";\r\n  }) -> Promise<GitHubApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        399,
+        414
+      ],
+      "name": "getGitHubRepository",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubResourceInput & { readonly auth?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly id: number; readonly defaultBranch: string | undefined }>",
+      "signature": "export function getGitHubRepository(input: GitHubResourceInput & { readonly auth?: boolean }) -> Promise<{ readonly id: number; readonly defaultBranch: string | undefined }>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/api.ts"
+}

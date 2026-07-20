@@ -1,0 +1,203 @@
+{
+  "module": "e2e/fixtures/compaction-regression-shared/src/agent.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:TEST_CONTEXT_WINDOW_TOKENS",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "TEST_CONTEXT_WINDOW_TOKENS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:MAX_TOOL_CALLS",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "MAX_TOOL_CALLS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:ModelFamily",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "ModelFamily",
+      "partial_analysis": false,
+      "value": "\"gpt-5.6\" | \"opus-4.8\" | \"sonnet-5\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:RegressionCase",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "RegressionCase",
+      "partial_analysis": false,
+      "value": "\"redundant-tool-calls\" | \"stale-todo-work\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:ActiveRegression:regressionCase",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "regressionCase",
+          "partial_analysis": false,
+          "return_type": ": RegressionCase",
+          "visibility": "Public"
+        }
+      ],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:ActiveRegression",
+      "kind": "interface",
+      "line_range": [
+        12,
+        14
+      ],
+      "name": "ActiveRegression",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:createCompactionRegressionAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        113
+      ],
+      "name": "createCompactionRegressionAgent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compactionModel: string;\r\n  readonly modelFamily: ModelFamily;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentDefinition",
+      "signature": "export function createCompactionRegressionAgent(input: {\r\n  readonly compactionModel: string;\r\n  readonly modelFamily: ModelFamily;\r\n}) -> AgentDefinition",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:findInitialRegression",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        127
+      ],
+      "name": "findInitialRegression",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "MockModelRequest"
+        },
+        {
+          "name": "modelFamily",
+          "optional": false,
+          "type": "ModelFamily"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActiveRegression | undefined",
+      "signature": "export function findInitialRegression(request: MockModelRequest, modelFamily: ModelFamily) -> ActiveRegression | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:regressionCaseFromText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        129,
+        133
+      ],
+      "name": "regressionCaseFromText",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RegressionCase | undefined",
+      "signature": "export function regressionCaseFromText(text: string) -> RegressionCase | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:completionMarker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        135,
+        139
+      ],
+      "name": "completionMarker",
+      "params": [
+        {
+          "name": "regressionCase",
+          "optional": false,
+          "type": "RegressionCase"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function completionMarker(regressionCase: RegressionCase) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/agent.ts:checkpointContains",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        150
+      ],
+      "name": "checkpointContains",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "MockModelRequest[\"messages\"]"
+        },
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function checkpointContains(messages: MockModelRequest[\"messages\"], marker: string) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/web-fetch.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/web-fetch.ts:executeWebFetch",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        7,
+        9
+      ],
+      "name": "executeWebFetch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ToolExecuteOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function executeWebFetch(input: unknown, options: ToolExecuteOptions) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/web-fetch.ts:WEB_FETCH_INPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        11,
+        22
+      ],
+      "name": "WEB_FETCH_INPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/web-fetch.ts:WEB_FETCH_OUTPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        24,
+        29
+      ],
+      "name": "WEB_FETCH_OUTPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/web-fetch.ts:WEB_FETCH_TOOL_DEFINITION",
+      "kind": "variable",
+      "line_range": [
+        31,
+        50
+      ],
+      "name": "WEB_FETCH_TOOL_DEFINITION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

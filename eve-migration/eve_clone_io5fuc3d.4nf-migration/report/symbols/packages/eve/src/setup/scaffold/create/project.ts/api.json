@@ -1,0 +1,442 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "CURRENT_DIRECTORY_PROJECT_NAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CURRENT_DIRECTORY_PROJECT_NAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "DEFAULT_AI_PACKAGE_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_AI_PACKAGE_VERSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "DEFAULT_CONNECT_PACKAGE_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_CONNECT_PACKAGE_VERSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "DEFAULT_ZOD_PACKAGE_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_ZOD_PACKAGE_VERSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        37
+      ],
+      "name": "EvePackageContract",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EvePackageContract { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "version",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "version: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "nodeEngine",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nodeEngine: : string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        39,
+        42
+      ],
+      "name": "DEFAULT_EVE_PACKAGE_CONTRACT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_EVE_PACKAGE_CONTRACT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        45,
+        52
+      ],
+      "name": "resolveEvePackageContract",
+      "params": [
+        {
+          "name": "contract",
+          "optional": false,
+          "type": "EvePackageContract"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EvePackageContract",
+      "signature": "export function resolveEvePackageContract(contract: EvePackageContract) -> EvePackageContract"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        73,
+        76
+      ],
+      "name": "modelProviderSlug",
+      "params": [
+        {
+          "name": "modelId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function modelProviderSlug(modelId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        85,
+        90
+      ],
+      "name": "byokProviderEnvVar",
+      "params": [
+        {
+          "name": "modelId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function byokProviderEnvVar(modelId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        97,
+        103
+      ],
+      "name": "agentTemplateFiles",
+      "params": [
+        {
+          "name": "model",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, string>",
+      "signature": "export function agentTemplateFiles(model: string) -> Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        120,
+        124
+      ],
+      "name": "formatEveDependencySpecifier",
+      "params": [
+        {
+          "name": "versionOrSpecifier",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatEveDependencySpecifier(versionOrSpecifier: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        216,
+        220
+      ],
+      "name": "ROOT_ONLY_PACKAGE_JSON_TEMPLATE_SUFFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const ROOT_ONLY_PACKAGE_JSON_TEMPLATE_SUFFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        311,
+        341
+      ],
+      "name": "ScaffoldBaseProjectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScaffoldBaseProjectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        312,
+        312
+      ],
+      "name": "projectName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        313,
+        313
+      ],
+      "name": "model",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "model: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        319,
+        319
+      ],
+      "name": "packageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PackageManagerKind",
+      "signature": "packageManager?: : PackageManagerKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        320,
+        320
+      ],
+      "name": "targetDirectory",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "targetDirectory?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        321,
+        321
+      ],
+      "name": "overwriteExisting",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "overwriteExisting?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        322,
+        322
+      ],
+      "name": "onOverwriteFile",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (filePath: string) => void | Promise<void>",
+      "signature": "onOverwriteFile?: : (filePath: string) => void | Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        323,
+        323
+      ],
+      "name": "evePackage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EvePackageContract",
+      "signature": "evePackage?: : EvePackageContract"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        324,
+        324
+      ],
+      "name": "aiPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "aiPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        325,
+        325
+      ],
+      "name": "connectPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        326,
+        326
+      ],
+      "name": "zodPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "zodPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        327,
+        327
+      ],
+      "name": "typescriptPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "typescriptPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        333,
+        333
+      ],
+      "name": "workspaceProbeDirectory",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workspaceProbeDirectory?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        334,
+        334
+      ],
+      "name": "onWorkspaceRootMutation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (mutation: WorkspaceRootMutation) => void | Promise<void>",
+      "signature": "onWorkspaceRootMutation?: : (mutation: WorkspaceRootMutation) => void | Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        340,
+        340
+      ],
+      "name": "byokProvider",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "byokProvider?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        343,
+        420
+      ],
+      "name": "scaffoldBaseProject",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ScaffoldBaseProjectOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function scaffoldBaseProject(options: ScaffoldBaseProjectOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        422,
+        432
+      ],
+      "name": "isEveProject",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isEveProject(projectRoot: string) -> Promise<boolean>"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/create/project.ts"
+}

@@ -1,0 +1,119 @@
+{
+  "module": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:VercelOidcProjectResolver",
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        6
+      ],
+      "name": "VercelOidcProjectResolver",
+      "partial_analysis": false,
+      "value": "() =>\r\n  | CurrentVercelProject\r\n  | undefined\r\n  | Promise<CurrentVercelProject | undefined>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:VERCEL_OIDC_PROJECT_RESOLVERS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "VERCEL_OIDC_PROJECT_RESOLVERS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:VercelOidcProjectResolverGlobal",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "VercelOidcProjectResolverGlobal",
+      "partial_analysis": false,
+      "value": "typeof globalThis & {\r\n  [VERCEL_OIDC_PROJECT_RESOLVERS]?: WeakMap<Request, VercelOidcProjectResolver>;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:globalResolverRegistry",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "globalResolverRegistry",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:projectResolvers",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "projectResolvers",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:withVercelOidcProjectResolver",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        26,
+        44
+      ],
+      "name": "withVercelOidcProjectResolver",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly request: Request;\r\n    readonly resolveCurrentProject: VercelOidcProjectResolver;\r\n  }"
+        },
+        {
+          "name": "callback",
+          "optional": false,
+          "type": "() => Promise<T> | T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withVercelOidcProjectResolver(input: {\r\n    readonly request: Request;\r\n    readonly resolveCurrentProject: VercelOidcProjectResolver;\r\n  }, callback: () => Promise<T> | T) -> Promise<T>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/vercel-oidc-project.ts:resolveVercelOidcCurrentProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        46,
+        51
+      ],
+      "name": "resolveVercelOidcCurrentProject",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CurrentVercelProject | undefined>",
+      "signature": "export function resolveVercelOidcCurrentProject(request: Request) -> Promise<CurrentVercelProject | undefined>",
+      "visibility": "Public"
+    }
+  ]
+}

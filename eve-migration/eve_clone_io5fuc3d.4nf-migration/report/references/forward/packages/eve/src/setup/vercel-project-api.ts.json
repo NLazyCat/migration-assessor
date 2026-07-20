@@ -1,0 +1,44 @@
+{
+  "HumanActionRequiredError": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 12,
+        "file": "packages/eve/src/setup/vercel-project-api.ts",
+        "line": 95
+      },
+      "symbol": "packages/eve/src/setup/human-action.ts:HumanActionRequiredError"
+    }
+  ],
+  "VercelCaptureFailure": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 49,
+        "file": "packages/eve/src/setup/vercel-project-api.ts",
+        "line": 92
+      },
+      "symbol": "packages/eve/src/setup/primitives/index.ts:VercelCaptureFailure"
+    }
+  ],
+  "captureVercel": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/setup/vercel-project-api.ts",
+        "line": 109
+      },
+      "symbol": "packages/eve/src/setup/primitives/index.ts:captureVercel"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/setup/vercel-project-api.ts",
+        "line": 140
+      },
+      "symbol": "packages/eve/src/setup/primitives/index.ts:captureVercel"
+    }
+  ]
+}

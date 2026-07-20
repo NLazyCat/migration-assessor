@@ -1,0 +1,93 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "WebSearchBackend",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WebSearchBackend = \"anthropic\" | \"google\" | \"openai\" | \"parallel\";"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        46,
+        48
+      ],
+      "name": "resolveFrameworkToolFromUpstreamType",
+      "params": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function resolveFrameworkToolFromUpstreamType(type: string) -> string | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        54,
+        65
+      ],
+      "name": "resolveWebSearchOutputSchema",
+      "params": [
+        {
+          "name": "backend",
+          "optional": false,
+          "type": "WebSearchBackend"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject",
+      "signature": "export function resolveWebSearchOutputSchema(backend: WebSearchBackend) -> JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        96
+      ],
+      "name": "resolveWebSearchBackend",
+      "params": [
+        {
+          "name": "modelRef",
+          "optional": false,
+          "type": "RuntimeModelReference"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WebSearchBackend | null",
+      "signature": "export function resolveWebSearchBackend(modelRef: RuntimeModelReference) -> WebSearchBackend | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        105,
+        136
+      ],
+      "name": "resolveWebSearchProviderTool",
+      "params": [
+        {
+          "name": "backend",
+          "optional": false,
+          "type": "WebSearchBackend"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ToolSet[string]>",
+      "signature": "export function resolveWebSearchProviderTool(backend: WebSearchBackend) -> Promise<ToolSet[string]>"
+    }
+  ],
+  "module": "packages/eve/src/harness/provider-tools.ts"
+}

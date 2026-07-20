@@ -1,0 +1,179 @@
+{
+  "module": "packages/eve/src/runtime/connections/openapi-spec.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:parseSpecDocument",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        23
+      ],
+      "name": "parseSpecDocument",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function parseSpecDocument(text: string) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:extractServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "extractServerUrl",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "specSource",
+          "optional": false,
+          "type": "string | Record<string, unknown> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractServerUrl(document: Record<string, unknown>, specSource: string | Record<string, unknown> | undefined) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:extractOpenApiServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        76
+      ],
+      "name": "extractOpenApiServerUrl",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "specSource",
+          "optional": false,
+          "type": "string | Record<string, unknown> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractOpenApiServerUrl(document: Record<string, unknown>, specSource: string | Record<string, unknown> | undefined) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:extractSwaggerBaseUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        79,
+        102
+      ],
+      "name": "extractSwaggerBaseUrl",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        },
+        {
+          "name": "specSource",
+          "optional": false,
+          "type": "string | Record<string, unknown> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractSwaggerBaseUrl(document: Record<string, unknown>, specSource: string | Record<string, unknown> | undefined) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:extractSwaggerScheme",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        105,
+        116
+      ],
+      "name": "extractSwaggerScheme",
+      "params": [
+        {
+          "name": "document",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"http\" | \"https\" | undefined",
+      "signature": "export function extractSwaggerScheme(document: Record<string, unknown>) -> \"http\" | \"https\" | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:normalizeBasePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        118,
+        124
+      ],
+      "name": "normalizeBasePath",
+      "params": [
+        {
+          "name": "basePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeBasePath(basePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-spec.ts:substituteServerVariables",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        135
+      ],
+      "name": "substituteServerVariables",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "variables",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function substituteServerVariables(url: string, variables: Record<string, unknown>) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

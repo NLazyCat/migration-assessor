@@ -1,0 +1,141 @@
+{
+  "module": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:createTestSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        33
+      ],
+      "name": "createTestSession",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Partial<HarnessSession>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createTestSession(overrides: Partial<HarnessSession>) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:createTestConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        52
+      ],
+      "name": "createTestConfig",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Partial<ToolLoopHarnessConfig>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolLoopHarnessConfig",
+      "signature": "export function createTestConfig(overrides: Partial<ToolLoopHarnessConfig>) -> ToolLoopHarnessConfig",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:MockAgentSettings",
+      "kind": "type_alias",
+      "line_range": [
+        54,
+        57
+      ],
+      "name": "MockAgentSettings",
+      "partial_analysis": false,
+      "value": "{\r\n  onStepFinish?: (step: unknown) => Promise<void> | void;\r\n  prepareStep?: (input: unknown) => Promise<unknown> | unknown;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:MockAgentConstructor",
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        62
+      ],
+      "name": "MockAgentConstructor",
+      "partial_analysis": false,
+      "value": "ConstructorParameters<typeof ToolLoopAgent> extends [infer S]\r\n    ? (settings: S) => ToolLoopAgent\r\n    : never;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:getMockResponseMessages",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        75
+      ],
+      "name": "getMockResponseMessages",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[]",
+      "signature": "export function getMockResponseMessages(result: Record<string, unknown>) -> unknown[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:setupMockAgentSequence",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        77,
+        114
+      ],
+      "name": "setupMockAgentSequence",
+      "params": [
+        {
+          "name": "results",
+          "optional": false,
+          "type": "readonly Record<string, unknown>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setupMockAgentSequence(results: readonly Record<string, unknown>[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop-compaction-accounting.test.ts:expectStepFn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        116,
+        122
+      ],
+      "name": "expectStepFn",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "StepNext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepFn",
+      "signature": "export function expectStepFn(value: StepNext) -> StepFn",
+      "visibility": "Private"
+    }
+  ]
+}

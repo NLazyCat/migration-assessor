@@ -1,0 +1,618 @@
+{
+  "module": "packages/eve/src/discover/named-source-directory.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:directoryName",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "directoryName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:invalidDirectoryCode",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "invalidDirectoryCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:invalidDirectoryMessage",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "invalidDirectoryMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:rootEntries",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "rootEntries",
+          "partial_analysis": false,
+          "return_type": ": readonly ProjectSourceEntry[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:rootPath",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "rootPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:source",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": ProjectSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:recursive",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "recursive",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:validateSegment",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "validateSegment",
+          "partial_analysis": false,
+          "return_type": ": (segment: string, sourcePath: string) => DiscoverDiagnostic | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:unsupportedFileCode",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "unsupportedFileCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:unsupportedFileMessage",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "unsupportedFileMessage",
+          "partial_analysis": false,
+          "return_type": ": (sourcePath: string, directoryName: string) => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:unsupportedEntryCode",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "unsupportedEntryCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput:unsupportedEntryMessage",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "unsupportedEntryMessage",
+          "partial_analysis": false,
+          "return_type": ": (sourcePath: string, directoryName: string) => string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryBaseInput",
+      "kind": "interface",
+      "line_range": [
+        31,
+        77
+      ],
+      "name": "DiscoverNamedSourceDirectoryBaseInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryModuleInput:allowMarkdown",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "allowMarkdown",
+          "partial_analysis": false,
+          "return_type": ": false",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryModuleInput",
+      "kind": "interface",
+      "line_range": [
+        82,
+        84
+      ],
+      "name": "DiscoverNamedSourceDirectoryModuleInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryWithMarkdownInput:allowMarkdown",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "allowMarkdown",
+          "partial_analysis": false,
+          "return_type": ": true",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryWithMarkdownInput:markdownLowerer",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "markdownLowerer",
+          "partial_analysis": false,
+          "return_type": ": (markdown: string, input: { name: string }) => TDefinition",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/named-source-directory.ts:DiscoverNamedSourceDirectoryWithMarkdownInput",
+      "kind": "interface",
+      "line_range": [
+        90,
+        95
+      ],
+      "name": "DiscoverNamedSourceDirectoryWithMarkdownInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:discoverNamedSourceDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        109,
+        114
+      ],
+      "name": "discoverNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverNamedSourceDirectoryModuleInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: ModuleSourceRef[];\r\n}>",
+      "signature": "export function discoverNamedSourceDirectory(input: DiscoverNamedSourceDirectoryModuleInput) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: ModuleSourceRef[];\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:discoverNamedSourceDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        115,
+        120
+      ],
+      "name": "discoverNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>",
+      "signature": "export function discoverNamedSourceDirectory(input: DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:discoverNamedSourceDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        121,
+        173
+      ],
+      "name": "discoverNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "| DiscoverNamedSourceDirectoryModuleInput\r\n    | DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>",
+      "signature": "export function discoverNamedSourceDirectory(input: | DiscoverNamedSourceDirectoryModuleInput\r\n    | DiscoverNamedSourceDirectoryWithMarkdownInput<TDefinition>) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  sources: (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[];\r\n}>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:allowMarkdown",
+          "kind": "property",
+          "line_range": [
+            176,
+            176
+          ],
+          "name": "allowMarkdown",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:diagnostics",
+          "kind": "property",
+          "line_range": [
+            177,
+            177
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnostic[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:markdownLowerer",
+          "kind": "property",
+          "line_range": [
+            178,
+            178
+          ],
+          "name": "markdownLowerer",
+          "partial_analysis": false,
+          "return_type": ": (markdown: string, input: { name: string }) => TDefinition",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:projectSource",
+          "kind": "property",
+          "line_range": [
+            179,
+            179
+          ],
+          "name": "projectSource",
+          "partial_analysis": false,
+          "return_type": ": ProjectSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:recursive",
+          "kind": "property",
+          "line_range": [
+            180,
+            180
+          ],
+          "name": "recursive",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:relativeDirectory",
+          "kind": "property",
+          "line_range": [
+            186,
+            186
+          ],
+          "name": "relativeDirectory",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:rootDirectoryPath",
+          "kind": "property",
+          "line_range": [
+            190,
+            190
+          ],
+          "name": "rootDirectoryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:sources",
+          "kind": "property",
+          "line_range": [
+            191,
+            191
+          ],
+          "name": "sources",
+          "partial_analysis": false,
+          "return_type": ": (MarkdownSourceRef<TDefinition> | ModuleSourceRef)[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:subdirectoryRelative",
+          "kind": "property",
+          "line_range": [
+            196,
+            196
+          ],
+          "name": "subdirectoryRelative",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:unsupportedEntryCode",
+          "kind": "property",
+          "line_range": [
+            197,
+            197
+          ],
+          "name": "unsupportedEntryCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:unsupportedEntryMessage",
+          "kind": "property",
+          "line_range": [
+            198,
+            198
+          ],
+          "name": "unsupportedEntryMessage",
+          "partial_analysis": false,
+          "return_type": ": (sourcePath: string, directoryName: string) => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:unsupportedFileCode",
+          "kind": "property",
+          "line_range": [
+            199,
+            199
+          ],
+          "name": "unsupportedFileCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:unsupportedFileMessage",
+          "kind": "property",
+          "line_range": [
+            200,
+            200
+          ],
+          "name": "unsupportedFileMessage",
+          "partial_analysis": false,
+          "return_type": ": (sourcePath: string, directoryName: string) => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput:validateSegment",
+          "kind": "property",
+          "line_range": [
+            201,
+            201
+          ],
+          "name": "validateSegment",
+          "partial_analysis": false,
+          "return_type": ": (segment: string, sourcePath: string) => DiscoverDiagnostic | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/named-source-directory.ts:WalkNamedSourceDirectoryInput",
+      "kind": "interface",
+      "line_range": [
+        175,
+        202
+      ],
+      "name": "WalkNamedSourceDirectoryInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:walkNamedSourceDirectory",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        204,
+        225
+      ],
+      "name": "walkNamedSourceDirectory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "WalkNamedSourceDirectoryInput<TDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function walkNamedSourceDirectory(input: WalkNamedSourceDirectoryInput<TDefinition>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:walkSubdirectories",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        227,
+        267
+      ],
+      "name": "walkSubdirectories",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "WalkNamedSourceDirectoryInput<TDefinition>"
+        },
+        {
+          "name": "directoryEntries",
+          "optional": false,
+          "type": "readonly ProjectSourceEntry[]"
+        },
+        {
+          "name": "absoluteDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function walkSubdirectories(input: WalkNamedSourceDirectoryInput<TDefinition>, directoryEntries: readonly ProjectSourceEntry[], absoluteDirectory: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:emitUnsupportedLeafDiagnostics",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        269,
+        322
+      ],
+      "name": "emitUnsupportedLeafDiagnostics",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "WalkNamedSourceDirectoryInput<TDefinition>"
+        },
+        {
+          "name": "directoryEntries",
+          "optional": false,
+          "type": "readonly ProjectSourceEntry[]"
+        },
+        {
+          "name": "absoluteDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function emitUnsupportedLeafDiagnostics(input: WalkNamedSourceDirectoryInput<TDefinition>, directoryEntries: readonly ProjectSourceEntry[], absoluteDirectory: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/named-source-directory.ts:collectLeafSources",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        324,
+        411
+      ],
+      "name": "collectLeafSources",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "WalkNamedSourceDirectoryInput<TDefinition>"
+        },
+        {
+          "name": "directoryEntries",
+          "optional": false,
+          "type": "readonly ProjectSourceEntry[]"
+        },
+        {
+          "name": "absoluteDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function collectLeafSources(input: WalkNamedSourceDirectoryInput<TDefinition>, directoryEntries: readonly ProjectSourceEntry[], absoluteDirectory: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

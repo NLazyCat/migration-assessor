@@ -1,0 +1,446 @@
+{
+  "module": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:scenarioApp",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "scenarioApp",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:PROCESS_DEADLINE_MS",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "PROCESS_DEADLINE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:SCENARIO_DEADLINE_MS",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "SCENARIO_DEADLINE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:ProcessResult:code",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:ProcessResult:signal",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": NodeJS.Signals | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:ProcessResult:stderr",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:ProcessResult:stdout",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:ProcessResult",
+      "kind": "interface",
+      "line_range": [
+        28,
+        33
+      ],
+      "name": "ProcessResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningProcess:child",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "child",
+          "partial_analysis": false,
+          "return_type": ": ChildProcessByStdio<null, Readable, Readable>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningProcess:result",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": Promise<ProcessResult>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningProcess:stderr",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningProcess:stdout",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningProcess",
+      "kind": "interface",
+      "line_range": [
+        35,
+        41
+      ],
+      "name": "RunningProcess",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningDevServer:url",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:RunningDevServer",
+      "kind": "interface",
+      "line_range": [
+        43,
+        45
+      ],
+      "name": "RunningDevServer",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:startEveProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        121
+      ],
+      "name": "startEveProcess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly args: readonly string[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RunningProcess",
+      "signature": "export function startEveProcess(input: {\r\n  readonly appRoot: string;\r\n  readonly args: readonly string[];\r\n}) -> RunningProcess",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:stripAnsi",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        123,
+        128
+      ],
+      "name": "stripAnsi",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripAnsi(text: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:parseServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        130,
+        132
+      ],
+      "name": "parseServerUrl",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function parseServerUrl(stdout: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:startEveDev",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        134,
+        203
+      ],
+      "name": "startEveDev",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RunningDevServer>",
+      "signature": "export function startEveDev(appRoot: string) -> Promise<RunningDevServer>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:expectHealthy",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        205,
+        219
+      ],
+      "name": "expectHealthy",
+      "params": [
+        {
+          "name": "server",
+          "optional": false,
+          "type": "RunningDevServer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function expectHealthy(server: RunningDevServer) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:observeConcurrentBuildWorkspaces",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        221,
+        320
+      ],
+      "name": "observeConcurrentBuildWorkspaces",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly builds: readonly RunningProcess[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly string[]>",
+      "signature": "export function observeConcurrentBuildWorkspaces(input: {\r\n  readonly appRoot: string;\r\n  readonly builds: readonly RunningProcess[];\r\n}) -> Promise<readonly string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:watchActiveDevHostWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        322,
+        350
+      ],
+      "name": "watchActiveDevHostWorkspace",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly events: readonly string[];\r\n  readonly initialHash: string;\r\n  readonly name: string;\r\n  readonly path: string;\r\n  close(): void;\r\n}>",
+      "signature": "export function watchActiveDevHostWorkspace(appRoot: string) -> Promise<{\r\n  readonly events: readonly string[];\r\n  readonly initialHash: string;\r\n  readonly name: string;\r\n  readonly path: string;\r\n  close(): void;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:hashPath",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        352,
+        377
+      ],
+      "name": "hashPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function hashPath(path: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:listBuildWorkspaces",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        379,
+        388
+      ],
+      "name": "listBuildWorkspaces",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly string[]>",
+      "signature": "export function listBuildWorkspaces(appRoot: string) -> Promise<readonly string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:PublishedCompilationState:sourceGraphHash",
+          "kind": "property",
+          "line_range": [
+            391,
+            391
+          ],
+          "name": "sourceGraphHash",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:PublishedCompilationState",
+      "kind": "interface",
+      "line_range": [
+        390,
+        392
+      ],
+      "name": "PublishedCompilationState",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/production-build-isolation.scenario.test.ts:readPublishedCompilationState",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        394,
+        426
+      ],
+      "name": "readPublishedCompilationState",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PublishedCompilationState>",
+      "signature": "export function readPublishedCompilationState(appRoot: string) -> Promise<PublishedCompilationState>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "InstrumentationChannelMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstrumentationChannelMetadata = Readonly<Record<string, unknown>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        57
+      ],
+      "name": "InstrumentationChannelKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstrumentationChannelKind = | \"http\"\r\n  | \"schedule\"\r\n  | \"subagent\"\r\n  | \"unknown\"\r\n  | `channel:${string}`;"
+    },
+    {
+      "generics": [
+        "K"
+      ],
+      "kind": "interface",
+      "line_range": [
+        62,
+        65
+      ],
+      "name": "InstrumentationChannelForKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstrumentationChannelForKind { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": K",
+      "signature": "kind: : K"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstrumentationChannelMetadata",
+      "signature": "metadata: : InstrumentationChannelMetadata"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "InstrumentationChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstrumentationChannel = InstrumentationChannelForKind<InstrumentationChannelKind>;"
+    },
+    {
+      "generics": [
+        "TChannel"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        76,
+        81
+      ],
+      "name": "InstrumentationChannelForChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstrumentationChannelForChannel = Omit<\r\n  InstrumentationChannelForKind<`channel:${string}`>,\r\n  \"metadata\"\r\n> & {\r\n  readonly metadata: InferChannelMetadata<TChannel>;\r\n};"
+    },
+    {
+      "generics": [
+        "TChannel"
+      ],
+      "kind": "function",
+      "line_range": [
+        92,
+        97
+      ],
+      "name": "isChannel",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "InstrumentationChannel | { readonly kind?: string }"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "TChannel"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "channel is InstrumentationChannelForChannel<TChannel>",
+      "signature": "export function isChannel(channel: InstrumentationChannel | { readonly kind?: string }, target: TChannel) -> channel is InstrumentationChannelForChannel<TChannel>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/index.ts"
+}

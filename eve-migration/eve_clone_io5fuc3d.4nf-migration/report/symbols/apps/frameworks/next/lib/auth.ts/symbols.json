@@ -1,0 +1,113 @@
+{
+  "module": "apps/frameworks/next/lib/auth.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/frameworks/next/lib/auth.ts:AuthJsSession:providerId",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "providerId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/lib/auth.ts:AuthJsSession:issuer",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "issuer",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/frameworks/next/lib/auth.ts:AuthJsSession:profile",
+          "kind": "property",
+          "line_range": [
+            8,
+            13
+          ],
+          "name": "profile",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    sub: string;\r\n    name?: string;\r\n    email?: string;\r\n    image?: string;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/frameworks/next/lib/auth.ts:AuthJsSession",
+      "kind": "interface",
+      "line_range": [
+        5,
+        14
+      ],
+      "name": "AuthJsSession",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/lib/auth.ts:authConfig",
+      "kind": "variable",
+      "line_range": [
+        16,
+        70
+      ],
+      "name": "authConfig",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/lib/auth.ts:getAuthJsSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        72,
+        86
+      ],
+      "name": "getAuthJsSession",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request | { headers: Headers | Record<string, string> }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AuthJsSession | null>",
+      "signature": "export function getAuthJsSession(request: Request | { headers: Headers | Record<string, string> }) -> Promise<AuthJsSession | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/frameworks/next/lib/auth.ts:authMiddleware",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "authMiddleware",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function authMiddleware(request: Request) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        99
+      ],
+      "name": "normalizeMcpClientConnectionDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "McpClientConnectionDefinition",
+      "signature": "export function normalizeMcpClientConnectionDefinition(value: unknown, message: string) -> McpClientConnectionDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        108,
+        161
+      ],
+      "name": "normalizeOpenApiConnectionDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OpenAPIConnectionDefinition",
+      "signature": "export function normalizeOpenApiConnectionDefinition(value: unknown, message: string) -> OpenAPIConnectionDefinition"
+    }
+  ],
+  "module": "packages/eve/src/internal/authored-definition/connection.ts"
+}

@@ -8,7 +8,7 @@ use oxc_ast::ast::{
     ExportDefaultDeclarationKind, ExportNamedDeclaration, Expression, Function,
     MethodDefinitionKind, PropertyKey, Statement,
 };
-use oxc_parser::Parser;
+use oxc_parser::{Parser, ParserReturn};
 
 /// Extract symbols and API contracts from a TypeScript file.
 pub fn extract(
@@ -19,7 +19,12 @@ pub fn extract(
     let source_type = util::detect_source_type(file_path);
 
     let allocator = Allocator::default();
-    let ret = Parser::new(&allocator, source, source_type).parse();
+    let ParserReturn { program, panicked, .. } =
+        Parser::new(&allocator, source, source_type).parse();
+
+    if panicked {
+        return Ok((SymbolIndex { module: module.to_string(), symbols: vec![] }, ApiContract { module: module.to_string(), exports: vec![] }));
+    }
 
     let mut extractor = SymbolExtractor {
         module: module.to_string(),
@@ -28,9 +33,7 @@ pub fn extract(
         exports: Vec::new(),
     };
 
-    
-
-    for stmt in &ret.program.body {
+    for stmt in &program.body {
         extractor.handle_statement(stmt);
     }
 

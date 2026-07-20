@@ -1,0 +1,282 @@
+{
+  "module": "packages/eve/src/cli/ui/live-row.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRow",
+      "kind": "interface",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "CliLiveRow",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowLogger",
+      "kind": "interface",
+      "line_range": [
+        17,
+        19
+      ],
+      "name": "CliLiveRowLogger",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowOutput:columns",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "columns",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowOutput:isTTY",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "isTTY",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowOutput",
+      "kind": "interface",
+      "line_range": [
+        21,
+        25
+      ],
+      "name": "CliLiveRowOutput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowOptions:output",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": CliLiveRowOutput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowOptions:pulseSequence",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "pulseSequence",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/ui/live-row.ts:CliLiveRowOptions",
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "CliLiveRowOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:REDRAW_PROGRESS_ROW",
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "REDRAW_PROGRESS_ROW",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:validatePulseSequence",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        34,
+        41
+      ],
+      "name": "validatePulseSequence",
+      "params": [
+        {
+          "name": "sequence",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function validatePulseSequence(sequence: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:pulseStepDurationMs",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        43,
+        47
+      ],
+      "name": "pulseStepDurationMs",
+      "params": [
+        {
+          "name": "index",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "stepCount",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function pulseStepDurationMs(index: number, stepCount: number) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:sanitizeProgressText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        51
+      ],
+      "name": "sanitizeProgressText",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function sanitizeProgressText(input: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:fitProgressText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        58
+      ],
+      "name": "fitProgressText",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function fitProgressText(input: string, width: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:renderProgressRow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        78
+      ],
+      "name": "renderProgressRow",
+      "params": [
+        {
+          "name": "glyph",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "detail",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "columns",
+          "optional": false,
+          "type": "number | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderProgressRow(glyph: string, message: string, detail: string, columns: number | undefined) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/ui/live-row.ts:startCliLiveRow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        152
+      ],
+      "name": "startCliLiveRow",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliLiveRowLogger"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "CliLiveRowOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CliLiveRow",
+      "signature": "export function startCliLiveRow(logger: CliLiveRowLogger, options: CliLiveRowOptions) -> CliLiveRow",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ pub mod diff;
 pub mod init;
 pub mod report;
 pub mod summary;
+pub mod verify;
 
 use migration_core::util;
 use std::path::{Path, PathBuf};
@@ -13,8 +14,25 @@ use std::path::{Path, PathBuf};
 /// Resolve a user-supplied path to an absolute path WITHOUT using
 /// `canonicalize()` (which on Windows produces `\\?\` extended-length
 /// paths that break TOML strings and path-prefix operations).
+/// Supports `~` for the user's home directory.
 fn resolve_project_path(input: &str) -> PathBuf {
-    let p = std::path::Path::new(input);
+    let expanded = if input.starts_with('~') {
+        if let Some(home) = dirs::home_dir() {
+            if input.len() == 1 {
+                home
+            } else {
+                let trimmed = input.strip_prefix("~/").unwrap_or(
+                    input.strip_prefix('~').unwrap_or(input),
+                );
+                home.join(trimmed)
+            }
+        } else {
+            PathBuf::from(input)
+        }
+    } else {
+        PathBuf::from(input)
+    };
+    let p = expanded.as_path();
     let resolved = if p.is_absolute() {
         p.to_path_buf()
     } else {

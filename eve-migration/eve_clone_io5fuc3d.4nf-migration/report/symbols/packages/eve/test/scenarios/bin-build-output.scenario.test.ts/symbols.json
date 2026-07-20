@@ -1,0 +1,184 @@
+{
+  "module": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:EVE_BIN_PATH",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "EVE_BIN_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:ProcessResult:code",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:ProcessResult:signal",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": NodeJS.Signals | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:ProcessResult:stderr",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "stderr",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:ProcessResult:stdout",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "stdout",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:ProcessResult",
+      "kind": "interface",
+      "line_range": [
+        13,
+        18
+      ],
+      "name": "ProcessResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:stripAnsi",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        31
+      ],
+      "name": "stripAnsi",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripAnsi(text: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:removeRolldownPluginTimingWarningBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        33,
+        60
+      ],
+      "name": "removeRolldownPluginTimingWarningBlock",
+      "params": [
+        {
+          "name": "stderr",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function removeRolldownPluginTimingWarningBlock(stderr: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:createTemporaryAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        62,
+        98
+      ],
+      "name": "createTemporaryAppRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  /**\r\n   * When `true`, omit the authored `instructions.md` so discovery fails with\r\n   * `DISCOVER_REQUIRED_INSTRUCTIONS_MISSING`. Used to exercise build failure\r\n   * diagnostics output.\r\n   */\r\n  omitInstructionsSource?: boolean;\r\n  prefix: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createTemporaryAppRoot(input: {\r\n  /**\r\n   * When `true`, omit the authored `instructions.md` so discovery fails with\r\n   * `DISCOVER_REQUIRED_INSTRUCTIONS_MISSING`. Used to exercise build failure\r\n   * diagnostics output.\r\n   */\r\n  omitInstructionsSource?: boolean;\r\n  prefix: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/bin-build-output.scenario.test.ts:runEveBuild",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        100,
+        162
+      ],
+      "name": "runEveBuild",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProcessResult>",
+      "signature": "export function runEveBuild(appRoot: string) -> Promise<ProcessResult>",
+      "visibility": "Private"
+    }
+  ]
+}

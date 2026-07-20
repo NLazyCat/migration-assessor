@@ -1,0 +1,105 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "WriteFileInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WriteFileInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "content: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "filePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "filePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        31
+      ],
+      "name": "WriteFileResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WriteFileResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "existed",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "existed: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        44,
+        114
+      ],
+      "name": "executeWriteFileOnSandbox",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "WriteFileInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WriteFileResult>",
+      "signature": "export function executeWriteFileOnSandbox(sandbox: SandboxSession, args: WriteFileInput) -> Promise<WriteFileResult>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/write-file-tool.ts"
+}

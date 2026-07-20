@@ -1,0 +1,41 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TState"
+      ],
+      "kind": "function",
+      "line_range": [
+        13,
+        85
+      ],
+      "name": "createSendFn",
+      "params": [
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "Runtime"
+        },
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter<any>"
+        },
+        {
+          "name": "channelName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "optional": false,
+          "type": "{ readonly requestId?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SendFn<TState>",
+      "signature": "export function createSendFn(runtime: Runtime, adapter: ChannelAdapter<any>, channelName: string, metadata: { readonly requestId?: string }) -> SendFn<TState>"
+    }
+  ],
+  "module": "packages/eve/src/channel/send.ts"
+}

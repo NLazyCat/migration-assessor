@@ -1,0 +1,840 @@
+{
+  "module": "packages/eve/src/cli/run.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:CliLogger",
+      "kind": "interface",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "CliLogger",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:assistantResponseStats",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "assistantResponseStats",
+          "partial_analysis": false,
+          "return_type": ": AssistantResponseStatsMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:connectionAuth",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "connectionAuth",
+          "partial_analysis": false,
+          "return_type": ": TerminalPartDisplayMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:contextSize",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "contextSize",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:header",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "header",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentRequestHeaders",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:host",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:input",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:logs",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "logs",
+          "partial_analysis": false,
+          "return_type": ": LogDisplayMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:name",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:port",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "port",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:reasoning",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "reasoning",
+          "partial_analysis": false,
+          "return_type": ": TerminalPartDisplayMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:subagents",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "subagents",
+          "partial_analysis": false,
+          "return_type": ": TerminalPartDisplayMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:tools",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": TerminalPartDisplayMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:ui",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "ui",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions:url",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/run.ts:DevelopmentCliOptions",
+      "kind": "interface",
+      "line_range": [
+        40,
+        55
+      ],
+      "name": "DevelopmentCliOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:ProductionCliOptions:host",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:ProductionCliOptions:port",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "port",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/run.ts:ProductionCliOptions",
+      "kind": "interface",
+      "line_range": [
+        57,
+        60
+      ],
+      "name": "ProductionCliOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:CliRuntimeDependencies:buildHost",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "buildHost",
+          "partial_analysis": false,
+          "return_type": ": BuildHost",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/run.ts:CliRuntimeDependencies",
+      "kind": "interface",
+      "line_range": [
+        62,
+        88
+      ],
+      "name": "CliRuntimeDependencies",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:CliRuntimeOverrides",
+      "kind": "type_alias",
+      "line_range": [
+        90,
+        90
+      ],
+      "name": "CliRuntimeOverrides",
+      "partial_analysis": false,
+      "value": "Partial<CliRuntimeDependencies>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:devBootLog",
+      "kind": "variable",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "devBootLog",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:createDevBootProgressReporter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        115
+      ],
+      "name": "createDevBootProgressReporter",
+      "params": [
+        {
+          "name": "row",
+          "optional": false,
+          "type": "ReturnType<typeof startCliLiveRow> | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevBootProgressReporter",
+      "signature": "export function createDevBootProgressReporter(row: ReturnType<typeof startCliLiveRow> | undefined) -> DevBootProgressReporter",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:json",
+          "kind": "property",
+          "line_range": [
+            118,
+            118
+          ],
+          "name": "json",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:junit",
+          "kind": "property",
+          "line_range": [
+            119,
+            119
+          ],
+          "name": "junit",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:list",
+          "kind": "property",
+          "line_range": [
+            120,
+            120
+          ],
+          "name": "list",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:maxConcurrency",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "maxConcurrency",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:skipReport",
+          "kind": "property",
+          "line_range": [
+            122,
+            122
+          ],
+          "name": "skipReport",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:strict",
+          "kind": "property",
+          "line_range": [
+            123,
+            123
+          ],
+          "name": "strict",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:tag",
+          "kind": "property",
+          "line_range": [
+            124,
+            124
+          ],
+          "name": "tag",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:timeout",
+          "kind": "property",
+          "line_range": [
+            125,
+            125
+          ],
+          "name": "timeout",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:url",
+          "kind": "property",
+          "line_range": [
+            126,
+            126
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/run.ts:EvalCliOptions:verbose",
+          "kind": "property",
+          "line_range": [
+            127,
+            127
+          ],
+          "name": "verbose",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/run.ts:EvalCliOptions",
+      "kind": "interface",
+      "line_range": [
+        117,
+        128
+      ],
+      "name": "EvalCliOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:loadPrintApplicationInfo",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        130,
+        132
+      ],
+      "name": "loadPrintApplicationInfo",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<CliRuntimeDependencies[\"printApplicationInfo\"]>",
+      "signature": "export function loadPrintApplicationInfo() -> Promise<CliRuntimeDependencies[\"printApplicationInfo\"]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:loadRunDevelopmentTui",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        134,
+        136
+      ],
+      "name": "loadRunDevelopmentTui",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<CliRuntimeDependencies[\"runDevelopmentTui\"]>",
+      "signature": "export function loadRunDevelopmentTui() -> Promise<CliRuntimeDependencies[\"runDevelopmentTui\"]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:loadRunEvalCommand",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        138,
+        140
+      ],
+      "name": "loadRunEvalCommand",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<CliRuntimeDependencies[\"runEvalCommand\"]>",
+      "signature": "export function loadRunEvalCommand() -> Promise<CliRuntimeDependencies[\"runEvalCommand\"]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:loadStartHost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        142,
+        144
+      ],
+      "name": "loadStartHost",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<CliRuntimeDependencies[\"startHost\"]>",
+      "signature": "export function loadStartHost() -> Promise<CliRuntimeDependencies[\"startHost\"]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:loadIsActiveDevelopmentServerForApp",
+      "is_async": true,
+      "kind": "variable",
+      "line_range": [
+        146,
+        147
+      ],
+      "name": "loadIsActiveDevelopmentServerForApp",
+      "params": [],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:loadStartProductionHost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        149,
+        151
+      ],
+      "name": "loadStartProductionHost",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<CliRuntimeDependencies[\"startProductionHost\"]>",
+      "signature": "export function loadStartProductionHost() -> Promise<CliRuntimeDependencies[\"startProductionHost\"]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:shouldPrintCliBootBanner",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        153,
+        159
+      ],
+      "name": "shouldPrintCliBootBanner",
+      "params": [
+        {
+          "name": "actionCommand",
+          "optional": false,
+          "type": "Command"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldPrintCliBootBanner(actionCommand: Command) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:waitForShutdownSignal",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        161,
+        183
+      ],
+      "name": "waitForShutdownSignal",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ close(): Promise<void> }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForShutdownSignal(input: { close(): Promise<void> }) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:waitForProductionServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        185,
+        192
+      ],
+      "name": "waitForProductionServer",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ProductionServerHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForProductionServer(input: ProductionServerHandle) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:parsePortOption",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        194,
+        206
+      ],
+      "name": "parsePortOption",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function parsePortOption(value: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:DISPLAY_MODES",
+      "kind": "variable",
+      "line_range": [
+        208,
+        208
+      ],
+      "name": "DISPLAY_MODES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:STATS_MODES",
+      "kind": "variable",
+      "line_range": [
+        209,
+        209
+      ],
+      "name": "STATS_MODES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:parseDisplayMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        211,
+        219
+      ],
+      "name": "parseDisplayMode",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TerminalPartDisplayMode",
+      "signature": "export function parseDisplayMode(value: string) -> TerminalPartDisplayMode",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:parseStatsMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        221,
+        229
+      ],
+      "name": "parseStatsMode",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AssistantResponseStatsMode",
+      "signature": "export function parseStatsMode(value: string) -> AssistantResponseStatsMode",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:parseLogsMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        231,
+        240
+      ],
+      "name": "parseLogsMode",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LogDisplayMode",
+      "signature": "export function parseLogsMode(value: string) -> LogDisplayMode",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:parseContextSizeOption",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        242,
+        250
+      ],
+      "name": "parseContextSizeOption",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function parseContextSizeOption(value: string) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:hasInteractiveTerminal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        252,
+        254
+      ],
+      "name": "hasInteractiveTerminal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasInteractiveTerminal() -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:createCliProgram",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        256,
+        621
+      ],
+      "name": "createCliProgram",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliLogger"
+        },
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "CliRuntimeOverrides"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Command",
+      "signature": "export function createCliProgram(logger: CliLogger, runtime: CliRuntimeOverrides) -> Command",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/run.ts:runCli",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        626,
+        661
+      ],
+      "name": "runCli",
+      "params": [
+        {
+          "name": "argv",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliLogger"
+        },
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "CliRuntimeOverrides"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runCli(argv: string[], logger: CliLogger, runtime: CliRuntimeOverrides) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

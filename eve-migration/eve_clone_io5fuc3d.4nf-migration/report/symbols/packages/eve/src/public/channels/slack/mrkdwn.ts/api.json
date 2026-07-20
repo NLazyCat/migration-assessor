@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "gfmToSlackMrkdwn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function gfmToSlackMrkdwn(input: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        21
+      ],
+      "name": "slackMrkdwnToGfm",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function slackMrkdwnToGfm(input: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/mrkdwn.ts"
+}

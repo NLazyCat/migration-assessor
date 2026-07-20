@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        27
+      ],
+      "name": "resolveDevelopmentServerRouteUrl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  routePath: string;\r\n  serverUrl: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "URL",
+      "signature": "export function resolveDevelopmentServerRouteUrl(input: {\r\n  routePath: string;\r\n  serverUrl: string;\r\n}) -> URL"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        47
+      ],
+      "name": "resolveDevelopmentServerResourceUrl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  resource: string;\r\n  serverUrl: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "URL",
+      "signature": "export function resolveDevelopmentServerResourceUrl(input: {\r\n  resource: string;\r\n  serverUrl: string;\r\n}) -> URL"
+    }
+  ],
+  "module": "packages/eve/test/dev-client-harness/url.ts"
+}

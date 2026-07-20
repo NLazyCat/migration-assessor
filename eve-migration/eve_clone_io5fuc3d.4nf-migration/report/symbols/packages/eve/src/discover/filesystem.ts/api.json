@@ -1,0 +1,328 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        14
+      ],
+      "name": "SUPPORTED_AUTHORED_MODULE_FILE_EXTENSIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SUPPORTED_AUTHORED_MODULE_FILE_EXTENSIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "PROJECT_MARKER_FILE_NAMES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROJECT_MARKER_FILE_NAMES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "DirectoryEntryType",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DirectoryEntryType = \"directory\" | \"file\" | \"other\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        39,
+        57
+      ],
+      "name": "AgentRootEntryKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentRootEntryKind = | \"agent-config-module\"\r\n  | \"channels-directory\"\r\n  | \"connections-directory\"\r\n  | \"extensions-directory\"\r\n  | \"hooks-directory\"\r\n  | \"ignored-directory\"\r\n  | \"instructions-directory\"\r\n  | \"instructions-markdown\"\r\n  | \"instructions-module\"\r\n  | \"lib-directory\"\r\n  | \"sandbox-directory\"\r\n  | \"schedules-directory\"\r\n  | \"skills-directory\"\r\n  | \"system-markdown\"\r\n  | \"system-module\"\r\n  | \"tools-directory\"\r\n  | \"unknown\"\r\n  | \"subagents-directory\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        62,
+        78
+      ],
+      "name": "LocalSubagentEntryKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LocalSubagentEntryKind = | \"agent-config-module\"\r\n  | \"connections-directory\"\r\n  | \"hooks-directory\"\r\n  | \"ignored-directory\"\r\n  | \"instructions-directory\"\r\n  | \"instructions-markdown\"\r\n  | \"instructions-module\"\r\n  | \"invalid-schedules-directory\"\r\n  | \"lib-directory\"\r\n  | \"sandbox-directory\"\r\n  | \"skills-directory\"\r\n  | \"system-markdown\"\r\n  | \"system-module\"\r\n  | \"tools-directory\"\r\n  | \"unknown\"\r\n  | \"subagents-directory\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        83,
+        88
+      ],
+      "name": "SkillPackageEntryKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SkillPackageEntryKind = | \"skill-assets-directory\"\r\n  | \"skill-markdown\"\r\n  | \"skill-references-directory\"\r\n  | \"skill-resource\"\r\n  | \"skill-scripts-directory\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        93,
+        98
+      ],
+      "name": "SkillsDirectoryEntryKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SkillsDirectoryEntryKind = | \"flat-skill-markdown\"\r\n  | \"flat-skill-module\"\r\n  | \"ignored-declaration\"\r\n  | \"skill-package-directory\"\r\n  | \"unknown\";"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        103,
+        115
+      ],
+      "name": "getDirectoryEntryType",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "Pick<Dirent, \"isDirectory\" | \"isFile\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DirectoryEntryType",
+      "signature": "export function getDirectoryEntryType(entry: Pick<Dirent, \"isDirectory\" | \"isFile\">) -> DirectoryEntryType"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        120,
+        122
+      ],
+      "name": "isProjectMarkerEntry",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entryType",
+          "optional": false,
+          "type": "DirectoryEntryType"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isProjectMarkerEntry(name: string, entryType: DirectoryEntryType) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        127,
+        206
+      ],
+      "name": "classifyAgentRootEntry",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entryType",
+          "optional": false,
+          "type": "DirectoryEntryType"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentRootEntryKind",
+      "signature": "export function classifyAgentRootEntry(name: string, entryType: DirectoryEntryType) -> AgentRootEntryKind"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        211,
+        282
+      ],
+      "name": "classifyLocalSubagentEntry",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entryType",
+          "optional": false,
+          "type": "DirectoryEntryType"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LocalSubagentEntryKind",
+      "signature": "export function classifyLocalSubagentEntry(name: string, entryType: DirectoryEntryType) -> LocalSubagentEntryKind"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        287,
+        314
+      ],
+      "name": "classifySkillPackageEntry",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entryType",
+          "optional": false,
+          "type": "DirectoryEntryType"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SkillPackageEntryKind",
+      "signature": "export function classifySkillPackageEntry(name: string, entryType: DirectoryEntryType) -> SkillPackageEntryKind"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        319,
+        342
+      ],
+      "name": "classifySkillsDirectoryEntry",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entryType",
+          "optional": false,
+          "type": "DirectoryEntryType"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SkillsDirectoryEntryKind",
+      "signature": "export function classifySkillsDirectoryEntry(name: string, entryType: DirectoryEntryType) -> SkillsDirectoryEntryKind"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        347,
+        349
+      ],
+      "name": "normalizeLogicalPath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeLogicalPath(input: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        355,
+        367
+      ],
+      "name": "getSupportedModuleBaseName",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function getSupportedModuleBaseName(name: string) -> string | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        370,
+        372
+      ],
+      "name": "isTypeScriptDeclarationFileName",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isTypeScriptDeclarationFileName(name: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        377,
+        379
+      ],
+      "name": "matchesSupportedModuleBaseName",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "baseName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function matchesSupportedModuleBaseName(name: string, baseName: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        384,
+        394
+      ],
+      "name": "stripLogicalPathExtension",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripLogicalPathExtension(input: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/discover/filesystem.ts"
+}

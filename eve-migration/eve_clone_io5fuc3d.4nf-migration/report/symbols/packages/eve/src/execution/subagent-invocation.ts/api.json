@@ -1,0 +1,49 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        9
+      ],
+      "name": "FormattedSubagentInvocation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FormattedSubagentInvocation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        69,
+        84
+      ],
+      "name": "formatSubagentInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SubagentInputFormatRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "FormattedSubagentInvocation",
+      "signature": "export function formatSubagentInput(input: SubagentInputFormatRequest) -> FormattedSubagentInvocation"
+    }
+  ],
+  "module": "packages/eve/src/execution/subagent-invocation.ts"
+}

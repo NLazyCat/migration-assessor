@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        30
+      ],
+      "name": "armProcessAbort",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "ChildProcess"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function armProcessAbort(child: ChildProcess, signal: AbortSignal | undefined) -> () => void"
+    }
+  ],
+  "module": "packages/eve/src/setup/primitives/process-abort.ts"
+}

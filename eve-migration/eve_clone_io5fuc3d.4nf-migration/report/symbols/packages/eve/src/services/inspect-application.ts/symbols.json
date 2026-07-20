@@ -1,0 +1,153 @@
+{
+  "module": "packages/eve/src/services/inspect-application.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspectionMessaging:createSessionRoutePath",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "createSessionRoutePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspectionMessaging:continueSessionRoutePattern",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "continueSessionRoutePattern",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspectionMessaging:streamRoutePattern",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "streamRoutePattern",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspectionMessaging",
+      "kind": "interface",
+      "line_range": [
+        17,
+        21
+      ],
+      "name": "ApplicationInspectionMessaging",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspection:application",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "application",
+          "partial_analysis": false,
+          "return_type": ": ApplicationInfo",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspection:compiledState",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "compiledState",
+          "partial_analysis": false,
+          "return_type": ": CompileAgentResult | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspection:messaging",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "messaging",
+          "partial_analysis": false,
+          "return_type": ": ApplicationInspectionMessaging",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/services/inspect-application.ts:ApplicationInspection",
+      "kind": "interface",
+      "line_range": [
+        26,
+        30
+      ],
+      "name": "ApplicationInspection",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/inspect-application.ts:inspectApplication",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        36,
+        49
+      ],
+      "name": "inspectApplication",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ApplicationInspection>",
+      "signature": "export function inspectApplication(appRoot: string) -> Promise<ApplicationInspection>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/inspect-application.ts:loadCompiledApplicationState",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        51,
+        67
+      ],
+      "name": "loadCompiledApplicationState",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileAgentResult | null>",
+      "signature": "export function loadCompiledApplicationState(appRoot: string) -> Promise<CompileAgentResult | null>",
+      "visibility": "Private"
+    }
+  ]
+}

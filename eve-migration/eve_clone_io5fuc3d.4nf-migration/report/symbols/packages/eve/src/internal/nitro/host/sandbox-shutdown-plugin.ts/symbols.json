@@ -1,0 +1,219 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:SHUTDOWN_SIGNALS",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "SHUTDOWN_SIGNALS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:ShutdownSignal",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "ShutdownSignal",
+      "partial_analysis": false,
+      "value": "(typeof SHUTDOWN_SIGNALS)[number];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:SANDBOX_SHUTDOWN_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "SANDBOX_SHUTDOWN_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:installed",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "installed",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:SandboxShutdownProcess:env",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "env",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string | undefined>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:SandboxShutdownProcess",
+      "kind": "interface",
+      "line_range": [
+        16,
+        20
+      ],
+      "name": "SandboxShutdownProcess",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:NitroAppLike:hooks",
+          "kind": "property",
+          "line_range": [
+            23,
+            25
+          ],
+          "name": "hooks",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    hook(name: \"close\", handler: () => Promise<void>): unknown;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:NitroAppLike",
+      "kind": "interface",
+      "line_range": [
+        22,
+        26
+      ],
+      "name": "NitroAppLike",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:shouldInstallSandboxShutdown",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        48
+      ],
+      "name": "shouldInstallSandboxShutdown",
+      "params": [
+        {
+          "name": "env",
+          "optional": false,
+          "type": "Record<string, string | undefined>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldInstallSandboxShutdown(env: Record<string, string | undefined>) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:runSandboxShutdown",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        54,
+        69
+      ],
+      "name": "runSandboxShutdown",
+      "params": [
+        {
+          "name": "log",
+          "optional": false,
+          "type": "(message: string) => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runSandboxShutdown(log: (message: string) => void) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:exitCodeForSignal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "exitCodeForSignal",
+      "params": [
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "ShutdownSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function exitCodeForSignal(signal: ShutdownSignal) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:installSandboxShutdownHandlers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        101
+      ],
+      "name": "installSandboxShutdownHandlers",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly log: (message: string) => void;\r\n  readonly nitroApp?: NitroAppLike;\r\n  readonly process: SandboxShutdownProcess;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installSandboxShutdownHandlers(input: {\r\n  readonly log: (message: string) => void;\r\n  readonly nitroApp?: NitroAppLike;\r\n  readonly process: SandboxShutdownProcess;\r\n}) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.ts:sandboxShutdownPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        113
+      ],
+      "name": "sandboxShutdownPlugin",
+      "params": [
+        {
+          "name": "nitroApp",
+          "optional": true,
+          "type": "NitroAppLike"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function sandboxShutdownPlugin(nitroApp: NitroAppLike) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

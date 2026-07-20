@@ -1,0 +1,106 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "ExtensionScope",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionScope { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "sourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "packageNamespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageNamespace: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        30
+      ],
+      "name": "ExtensionScopeBundlerPlugin",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExtensionScopeBundlerPlugin { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        120,
+        139
+      ],
+      "name": "createExtensionScopePlugin",
+      "params": [
+        {
+          "name": "scopes",
+          "optional": false,
+          "type": "readonly ExtensionScope[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionScopeBundlerPlugin | null",
+      "signature": "export function createExtensionScopePlugin(scopes: readonly ExtensionScope[]) -> ExtensionScopeBundlerPlugin | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        148,
+        150
+      ],
+      "name": "createFixedNamespaceScopePlugin",
+      "params": [
+        {
+          "name": "namespace",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ExtensionScopeBundlerPlugin",
+      "signature": "export function createFixedNamespaceScopePlugin(namespace: string) -> ExtensionScopeBundlerPlugin"
+    }
+  ],
+  "module": "packages/eve/src/internal/bundler/extension-scope-plugin.ts"
+}

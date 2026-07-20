@@ -20,6 +20,22 @@ pub fn get_changed_files(
     Ok(files)
 }
 
+/// List files with uncommitted changes (staged + unstaged) compared to HEAD.
+pub fn get_uncommitted_files(project_root: &Path) -> anyhow::Result<Vec<String>> {
+    let output = std::process::Command::new("git")
+        .args(["diff", "--name-only", "HEAD"])
+        .current_dir(project_root)
+        .output()?;
+
+    let files: Vec<String> = String::from_utf8_lossy(&output.stdout)
+        .lines()
+        .map(|s| s.to_string())
+        .filter(|s| !s.is_empty())
+        .collect();
+
+    Ok(files)
+}
+
 /// Get the content of a file at a specific git revision.
 pub fn get_file_at_version(
     project_root: &Path,

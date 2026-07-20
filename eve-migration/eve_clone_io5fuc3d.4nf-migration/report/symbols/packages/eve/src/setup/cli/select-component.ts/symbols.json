@@ -1,0 +1,392 @@
+{
+  "module": "packages/eve/src/setup/cli/select-component.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-component.ts:SelectGuard",
+      "kind": "interface",
+      "line_range": [
+        31,
+        33
+      ],
+      "name": "SelectGuard",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-component.ts:toPromptState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        37
+      ],
+      "name": "toPromptState",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "State"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptState",
+      "signature": "export function toPromptState(state: State) -> PromptState",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:options",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:multiple",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "multiple",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:search",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "search",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:searchAction",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "searchAction",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:required",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "required",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:filter",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "filter",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:optionCursor",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "optionCursor",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:selectedSet",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "selectedSet",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            56,
+            97
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    options: PromptOption<string>[];\r\n    multiple: boolean;\r\n    search: boolean;\r\n    searchAction?: SearchActionOption;\r\n    required: boolean;\r\n    initial: SelectState;\r\n    render: (this: Omit<SelectComponent, \"prompt\">) => string | undefined;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:visibleOptions",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            99,
+            101
+          ],
+          "name": "visibleOptions",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "PromptOption<string>[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:onSubmitRow",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            104,
+            106
+          ],
+          "name": "onSubmitRow",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:submitLabel",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            114,
+            121
+          ],
+          "name": "submitLabel",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "\"Submit\" | \"Skip\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:_shouldSubmit",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            129,
+            137
+          ],
+          "name": "_shouldSubmit",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:selectedValues",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            140,
+            144
+          ],
+          "name": "selectedValues",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:submitDisplay",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            147,
+            156
+          ],
+          "name": "submitDisplay",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:labelForValue",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            158,
+            164
+          ],
+          "name": "labelForValue",
+          "params": [
+            {
+              "name": "value",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:submitError",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            166,
+            175
+          ],
+          "name": "submitError",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:apply",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            177,
+            187
+          ],
+          "name": "apply",
+          "params": [
+            {
+              "name": "event",
+              "optional": false,
+              "type": "SelectEvent"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent:refreshValue",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            189,
+            193
+          ],
+          "name": "refreshValue",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/select-component.ts:SelectComponent",
+      "kind": "class",
+      "line_range": [
+        46,
+        194
+      ],
+      "name": "SelectComponent",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-component.ts:renderSelectComponent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        197,
+        248
+      ],
+      "name": "renderSelectComponent",
+      "params": [
+        {
+          "name": "self",
+          "optional": false,
+          "type": "SelectComponent"
+        },
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "{ message: string; placeholder?: string }"
+        },
+        {
+          "name": "leadingRail",
+          "optional": false,
+          "type": "\"white\" | \"green\""
+        },
+        {
+          "name": "footerNote",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderSelectComponent(self: SelectComponent, opts: { message: string; placeholder?: string }, leadingRail: \"white\" | \"green\", footerNote: string | undefined) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-component.ts:runSelectComponent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        261,
+        319
+      ],
+      "name": "runSelectComponent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  message: string;\r\n  options: readonly PromptOption<T>[];\r\n  multiple: boolean;\r\n  search: boolean;\r\n  searchAction?: { label(query: string): string; value(query: string): T };\r\n  required: boolean;\r\n  placeholder?: string;\r\n  defaultValue?: T;\r\n  initialValues?: readonly T[];\r\n  leadingRail: \"white\" | \"green\";\r\n  attachGuard?: (prompt: SelectComponent) => SelectGuard;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T | T[] | symbol>",
+      "signature": "export function runSelectComponent(input: {\r\n  message: string;\r\n  options: readonly PromptOption<T>[];\r\n  multiple: boolean;\r\n  search: boolean;\r\n  searchAction?: { label(query: string): string; value(query: string): T };\r\n  required: boolean;\r\n  placeholder?: string;\r\n  defaultValue?: T;\r\n  initialValues?: readonly T[];\r\n  leadingRail: \"white\" | \"green\";\r\n  attachGuard?: (prompt: SelectComponent) => SelectGuard;\r\n}) -> Promise<T | T[] | symbol>",
+      "visibility": "Public"
+    }
+  ]
+}

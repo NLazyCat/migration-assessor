@@ -1,0 +1,26 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        19,
+        73
+      ],
+      "name": "parseNdjsonStream",
+      "params": [
+        {
+          "name": "createByteStream",
+          "optional": false,
+          "type": "() => ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadableStream<T>",
+      "signature": "export function parseNdjsonStream(createByteStream: () => ReadableStream<Uint8Array>) -> ReadableStream<T>"
+    }
+  ],
+  "module": "packages/eve/src/execution/ndjson-stream.ts"
+}

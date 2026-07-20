@@ -1,0 +1,118 @@
+{
+  "module": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialDeps:appendEnv",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "appendEnv",
+          "partial_analysis": false,
+          "return_type": ": typeof appendEnv",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialDeps:runVercelEnvPull",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "runVercelEnvPull",
+          "partial_analysis": false,
+          "return_type": ": typeof runVercelEnvPull",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialDeps:detectAiGatewayResolution",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "detectAiGatewayResolution",
+          "partial_analysis": false,
+          "return_type": ": typeof detectAiGatewayResolution",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialDeps",
+      "kind": "interface",
+      "line_range": [
+        22,
+        26
+      ],
+      "name": "ApplyAiGatewayCredentialDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialOptions:prompter",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "prompter",
+          "partial_analysis": false,
+          "return_type": ": Prompter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialOptions:deps",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "deps",
+          "partial_analysis": false,
+          "return_type": ": ApplyAiGatewayCredentialDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:ApplyAiGatewayCredentialOptions",
+      "kind": "interface",
+      "line_range": [
+        28,
+        32
+      ],
+      "name": "ApplyAiGatewayCredentialOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.ts:applyAiGatewayCredential",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        117
+      ],
+      "name": "applyAiGatewayCredential",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ApplyAiGatewayCredentialOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, null, ResolvedAiGatewayCredentials>",
+      "signature": "export function applyAiGatewayCredential(options: ApplyAiGatewayCredentialOptions) -> SetupBox<SetupState, null, ResolvedAiGatewayCredentials>",
+      "visibility": "Public"
+    }
+  ]
+}

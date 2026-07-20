@@ -4,7 +4,9 @@ use std::path::Path;
 
 fn main() {
     let data_dir = Path::new("compatibility_data");
+    let naming_dir = Path::new("naming_data");
     println!("cargo:rerun-if-changed=compatibility_data/");
+    println!("cargo:rerun-if-changed=naming_data/");
 
     let out_dir = env::var("OUT_DIR").unwrap();
     let out_path = Path::new(&out_dir);
@@ -16,6 +18,15 @@ fn main() {
         }
         let merged = merge_toml_dir(&dir);
         fs::write(out_path.join(format!("{lang_dir}.toml")), &merged).unwrap();
+    }
+
+    for naming_pair in &["ts_to_rust", "rust_to_ts"] {
+        let dir = naming_dir.join(naming_pair);
+        if !dir.is_dir() {
+            continue;
+        }
+        let merged = merge_toml_dir(&dir);
+        fs::write(out_path.join(format!("{naming_pair}.toml")), &merged).unwrap();
     }
 }
 

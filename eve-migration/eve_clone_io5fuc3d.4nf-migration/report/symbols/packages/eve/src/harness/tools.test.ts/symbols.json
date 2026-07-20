@@ -1,0 +1,130 @@
+{
+  "module": "packages/eve/src/harness/tools.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tools.test.ts:getJsonSchema",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "getJsonSchema",
+      "params": [
+        {
+          "name": "tool",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function getJsonSchema(tool: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tools.test.ts:getOutputJsonSchema",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "getOutputJsonSchema",
+      "params": [
+        {
+          "name": "tool",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function getOutputJsonSchema(tool: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tools.test.ts:resolveApproval",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        54
+      ],
+      "name": "resolveApproval",
+      "params": [
+        {
+          "name": "tools",
+          "optional": false,
+          "type": "ReturnType<typeof buildToolSet>"
+        },
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "session",
+          "optional": false,
+          "type": "Session"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function resolveApproval(tools: ReturnType<typeof buildToolSet>, toolName: string, input: unknown, session: Session) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tools.test.ts:executeSdkTool",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        56,
+        76
+      ],
+      "name": "executeSdkTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly abortSignal?: AbortSignal;\r\n  readonly tool: unknown;\r\n  readonly toolCallId?: string;\r\n  readonly toolInput?: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function executeSdkTool(input: {\r\n  readonly abortSignal?: AbortSignal;\r\n  readonly tool: unknown;\r\n  readonly toolCallId?: string;\r\n  readonly toolInput?: unknown;\r\n}) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tools.test.ts:projectSdkToolOutput",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        78,
+        98
+      ],
+      "name": "projectSdkToolOutput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly output: unknown;\r\n  readonly tool: unknown;\r\n  readonly toolCallId?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function projectSdkToolOutput(input: {\r\n  readonly output: unknown;\r\n  readonly tool: unknown;\r\n  readonly toolCallId?: string;\r\n}) -> Promise<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        46
+      ],
+      "name": "HookEventMap",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HookEventMap { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"action.result\">",
+      "signature": "[expr]: : ProtocolEvent<\"action.result\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"actions.requested\">",
+      "signature": "[expr]: : ProtocolEvent<\"actions.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"authorization.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"authorization.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"authorization.required\">",
+      "signature": "[expr]: : ProtocolEvent<\"authorization.required\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"compaction.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"compaction.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"compaction.requested\">",
+      "signature": "[expr]: : ProtocolEvent<\"compaction.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"input.requested\">",
+      "signature": "[expr]: : ProtocolEvent<\"input.requested\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"message.appended\">",
+      "signature": "[expr]: : ProtocolEvent<\"message.appended\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"message.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"message.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"message.received\">",
+      "signature": "[expr]: : ProtocolEvent<\"message.received\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"reasoning.appended\">",
+      "signature": "[expr]: : ProtocolEvent<\"reasoning.appended\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"reasoning.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"reasoning.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"result.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"result.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"session.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"session.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"session.failed\">",
+      "signature": "[expr]: : ProtocolEvent<\"session.failed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"session.started\">",
+      "signature": "[expr]: : ProtocolEvent<\"session.started\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"session.waiting\">",
+      "signature": "[expr]: : ProtocolEvent<\"session.waiting\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"step.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"step.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"step.failed\">",
+      "signature": "[expr]: : ProtocolEvent<\"step.failed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"step.started\">",
+      "signature": "[expr]: : ProtocolEvent<\"step.started\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"subagent.called\">",
+      "signature": "[expr]: : ProtocolEvent<\"subagent.called\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"subagent.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"subagent.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"subagent.event\">",
+      "signature": "[expr]: : ProtocolEvent<\"subagent.event\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"subagent.started\">",
+      "signature": "[expr]: : ProtocolEvent<\"subagent.started\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"turn.cancelled\">",
+      "signature": "[expr]: : ProtocolEvent<\"turn.cancelled\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"turn.completed\">",
+      "signature": "[expr]: : ProtocolEvent<\"turn.completed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"turn.failed\">",
+      "signature": "[expr]: : ProtocolEvent<\"turn.failed\">"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "[expr]",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProtocolEvent<\"turn.started\">",
+      "signature": "[expr]: : ProtocolEvent<\"turn.started\">"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "HookEventType",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HookEventType = keyof HookEventMap;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "HookEventKey",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HookEventKey = HookEventType | \"*\";"
+    },
+    {
+      "generics": [
+        "TKey"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        57
+      ],
+      "name": "HookEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HookEvent = HookEventType> = TKey extends HookEventType\r\n  ? HookEventMap[TKey]\r\n  : HookEventMap[HookEventType];"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        74
+      ],
+      "name": "HookContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HookContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        69
+      ],
+      "name": "agent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly name: string;\r\n    readonly nodeId?: string;\r\n  }",
+      "signature": "agent: : {\r\n    readonly name: string;\r\n    readonly nodeId?: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        73
+      ],
+      "name": "channel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly kind?: string;\r\n    readonly continuationToken?: string;\r\n  }",
+      "signature": "channel: : {\r\n    readonly kind?: string;\r\n    readonly continuationToken?: string;\r\n  }"
+    },
+    {
+      "generics": [
+        "TEvent"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "StreamEventHook",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type StreamEventHook = (event: TEvent, ctx: HookContext) => void | Promise<void>;"
+    },
+    {
+      "generics": [
+        "TKey"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        91,
+        93
+      ],
+      "name": "StreamEventHooks",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type StreamEventHooks = HookEventKey> = {\r\n  readonly [TKey_ in TKey]?: StreamEventHook<HookEvent<TKey_>>;\r\n};"
+    },
+    {
+      "generics": [
+        "TKey"
+      ],
+      "kind": "interface",
+      "line_range": [
+        104,
+        106
+      ],
+      "name": "HookDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HookDefinition { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        105,
+        105
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": StreamEventHooks<TKey>",
+      "signature": "events?: : StreamEventHooks<TKey>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        120,
+        124
+      ],
+      "name": "defineHook",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<T, HookDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HookDefinition<DefinedHookEventKeys<T>>",
+      "signature": "export function defineHook(definition: ExactDefinition<T, HookDefinition>) -> HookDefinition<DefinedHookEventKeys<T>>"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/hook.ts"
+}

@@ -1,0 +1,129 @@
+{
+  "createBundledRuntimeCompiledArtifactsSource": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 16
+      },
+      "symbol": "packages/eve/src/runtime/compiled-artifacts-source.ts:createBundledRuntimeCompiledArtifactsSource"
+    }
+  ],
+  "createTestRuntime": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/internal/testing/app-harness.ts:createTestRuntime"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 48
+      },
+      "symbol": "packages/eve/src/internal/testing/app-harness.ts:createTestRuntime"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 69
+      },
+      "symbol": "packages/eve/src/internal/testing/app-harness.ts:createTestRuntime"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 70
+      },
+      "symbol": "packages/eve/src/internal/testing/app-harness.ts:createTestRuntime"
+    }
+  ],
+  "getActiveRuntimeSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 55
+      },
+      "symbol": "packages/eve/src/runtime/sessions/runtime-session.ts:getActiveRuntimeSession"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 27,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 62
+      },
+      "symbol": "packages/eve/src/runtime/sessions/runtime-session.ts:getActiveRuntimeSession"
+    }
+  ],
+  "start": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:start"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 74
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:start"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 87
+      },
+      "symbol": "packages/eve/src/internal/workflow/runtime.ts:start"
+    }
+  ],
+  "workflowEntry": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 28
+      },
+      "symbol": "packages/eve/src/execution/workflow-entry.ts:workflowEntry"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 74
+      },
+      "symbol": "packages/eve/src/execution/workflow-entry.ts:workflowEntry"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/internal/testing/app-harness.integration.test.ts",
+        "line": 87
+      },
+      "symbol": "packages/eve/src/execution/workflow-entry.ts:workflowEntry"
+    }
+  ]
+}

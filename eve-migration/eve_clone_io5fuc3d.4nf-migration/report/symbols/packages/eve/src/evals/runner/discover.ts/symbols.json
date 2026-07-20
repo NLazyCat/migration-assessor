@@ -1,0 +1,343 @@
+{
+  "module": "packages/eve/src/evals/runner/discover.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:EVAL_FILE_SUFFIX",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "EVAL_FILE_SUFFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:EVAL_CONFIG_FILE",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "EVAL_CONFIG_FILE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:ARRAY_INDEX_PAD",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "ARRAY_INDEX_PAD",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:discoverEvalFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        21,
+        36
+      ],
+      "name": "discoverEvalFiles",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function discoverEvalFiles(appRoot: string) -> Promise<string[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:findMisplacedEvalDirs",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        47,
+        61
+      ],
+      "name": "findMisplacedEvalDirs",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function findMisplacedEvalDirs(appRoot: string) -> Promise<string[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:deriveEvalId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        68,
+        77
+      ],
+      "name": "deriveEvalId",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function deriveEvalId(appRoot: string, filePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:matchesEvalFilter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        85,
+        88
+      ],
+      "name": "matchesEvalFilter",
+      "params": [
+        {
+          "name": "evalId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filters",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function matchesEvalFilter(evalId: string, filters: readonly string[]) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:importEvalFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        99,
+        124
+      ],
+      "name": "importEvalFile",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveEval[]>",
+      "signature": "export function importEvalFile(appRoot: string, filePath: string) -> Promise<EveEval[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:discoverAndImportEvals",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        133,
+        164
+      ],
+      "name": "discoverAndImportEvals",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "evalIds",
+          "optional": true,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveEval[]>",
+      "signature": "export function discoverAndImportEvals(appRoot: string, evalIds: readonly string[]) -> Promise<EveEval[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:discoverEvalConfig",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        173,
+        199
+      ],
+      "name": "discoverEvalConfig",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveEvalConfig>",
+      "signature": "export function discoverEvalConfig(appRoot: string) -> Promise<EveEvalConfig>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:isEveEvalConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        201,
+        208
+      ],
+      "name": "isEveEvalConfig",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is EveEvalConfig",
+      "signature": "export function isEveEvalConfig(value: unknown) -> value is EveEvalConfig",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:isEveEvalDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        210,
+        217
+      ],
+      "name": "isEveEvalDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is EveEvalDefinition",
+      "signature": "export function isEveEvalDefinition(value: unknown) -> value is EveEvalDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:collectEvalFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        219,
+        231
+      ],
+      "name": "collectEvalFiles",
+      "params": [
+        {
+          "name": "dir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "files",
+          "optional": false,
+          "type": "string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function collectEvalFiles(dir: string, files: string[]) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:collectMisplacedEvalDirs",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        233,
+        247
+      ],
+      "name": "collectMisplacedEvalDirs",
+      "params": [
+        {
+          "name": "dir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dirs",
+          "optional": false,
+          "type": "Set<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function collectMisplacedEvalDirs(dir: string, appRoot: string, dirs: Set<string>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/discover.ts:isNoEntryError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        249,
+        256
+      ],
+      "name": "isNoEntryError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNoEntryError(error: unknown) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        33
+      ],
+      "name": "AddConnectionsDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AddConnectionsDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "ensureConnection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof ensureConnection",
+      "signature": "ensureConnection: : typeof ensureConnection"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "listAuthoredConnections",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof listAuthoredConnections",
+      "signature": "listAuthoredConnections: : typeof listAuthoredConnections"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "readProjectLink",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof readProjectLink",
+      "signature": "readProjectLink: : typeof readProjectLink"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "setupConnectionConnector",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof setupConnectionConnector",
+      "signature": "setupConnectionConnector: : typeof setupConnectionConnector"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "cleanupCreatedConnectionConnector",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof cleanupCreatedConnectionConnector",
+      "signature": "cleanupCreatedConnectionConnector: : typeof cleanupCreatedConnectionConnector"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        40
+      ],
+      "name": "AddConnectionsOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AddConnectionsOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "prompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Prompter",
+      "signature": "prompter: : Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "signal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "signal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AddConnectionsDeps",
+      "signature": "deps?: : AddConnectionsDeps"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        193
+      ],
+      "name": "addConnections",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AddConnectionsOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, null, ProjectResolution>",
+      "signature": "export function addConnections(options: AddConnectionsOptions) -> SetupBox<SetupState, null, ProjectResolution>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/add-connections.ts"
+}

@@ -1,0 +1,127 @@
+{
+  "module": "packages/eve/src/public/channels/linear/auth.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/auth.ts:LinearAccessToken",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "LinearAccessToken",
+      "partial_analysis": false,
+      "value": "string | (() => string | Promise<string>);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/auth.ts:LinearWebhookSecret",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "LinearWebhookSecret",
+      "partial_analysis": false,
+      "value": "string | (() => string | Promise<string>);",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/auth.ts:LinearChannelCredentials:accessToken",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "accessToken",
+          "partial_analysis": false,
+          "return_type": ": LinearAccessToken",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/auth.ts:LinearChannelCredentials:webhookSecret",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "webhookSecret",
+          "partial_analysis": false,
+          "return_type": ": LinearWebhookSecret",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/linear/auth.ts:LinearChannelCredentials:webhookVerifier",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "webhookVerifier",
+          "partial_analysis": false,
+          "return_type": ": import(\"#public/channels/linear/verify.js\").LinearWebhookVerifier",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/linear/auth.ts:LinearChannelCredentials",
+      "kind": "interface",
+      "line_range": [
+        12,
+        22
+      ],
+      "name": "LinearChannelCredentials",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/auth.ts:resolveLinearAccessToken",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        24,
+        44
+      ],
+      "name": "resolveLinearAccessToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "LinearAccessToken | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveLinearAccessToken(token: LinearAccessToken | undefined) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/linear/auth.ts:resolveLinearWebhookSecret",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        46,
+        60
+      ],
+      "name": "resolveLinearWebhookSecret",
+      "params": [
+        {
+          "name": "secret",
+          "optional": false,
+          "type": "LinearWebhookSecret | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveLinearWebhookSecret(secret: LinearWebhookSecret | undefined) -> Promise<string>",
+      "visibility": "Public"
+    }
+  ]
+}

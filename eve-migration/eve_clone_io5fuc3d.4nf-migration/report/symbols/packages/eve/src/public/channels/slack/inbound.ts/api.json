@@ -1,0 +1,525 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        28,
+        34
+      ],
+      "name": "SlackAuthor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackAuthor { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "userId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "userId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "userName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "userName: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "fullName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "fullName: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "isBot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "isBot: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "isMe",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "isMe: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        48
+      ],
+      "name": "SlackAttachment",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackAttachment { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"image\" | \"file\" | \"video\" | \"audio\"",
+      "signature": "type: : \"image\" | \"file\" | \"video\" | \"audio\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "url: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "name: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "mimeType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "mimeType: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "size",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | undefined",
+      "signature": "size: : number | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        57,
+        76
+      ],
+      "name": "SlackMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "ts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ts: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "threadTs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "threadTs: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "teamId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "author",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackAuthor | undefined",
+      "signature": "author: : SlackAuthor | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "attachments",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SlackAttachment[]",
+      "signature": "attachments: : readonly SlackAttachment[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "raw: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        120,
+        127
+      ],
+      "name": "SlackEventCallback",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackEventCallback { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"event_callback\"",
+      "signature": "type: : \"event_callback\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        122,
+        122
+      ],
+      "name": "team_id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "team_id?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        123,
+        123
+      ],
+      "name": "event",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": { readonly type?: string } & Record<string, unknown>",
+      "signature": "event?: : { readonly type?: string } & Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        124,
+        124
+      ],
+      "name": "event_id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "event_id?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "event_time",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "event_time?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        140
+      ],
+      "name": "parseAppMentionEvent",
+      "params": [
+        {
+          "name": "envelope",
+          "optional": false,
+          "type": "SlackEventCallback"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackMessage | null",
+      "signature": "export function parseAppMentionEvent(envelope: SlackEventCallback) -> SlackMessage | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        155,
+        172
+      ],
+      "name": "parseDirectMessageEvent",
+      "params": [
+        {
+          "name": "envelope",
+          "optional": false,
+          "type": "SlackEventCallback"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackMessage | null",
+      "signature": "export function parseDirectMessageEvent(envelope: SlackEventCallback) -> SlackMessage | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        174,
+        200
+      ],
+      "name": "slackMessageFromWebhookPayload",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "SlackAppMentionPayload | SlackDirectMessagePayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackMessage | null",
+      "signature": "export function slackMessageFromWebhookPayload(payload: SlackAppMentionPayload | SlackDirectMessagePayload) -> SlackMessage | null"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        303,
+        310
+      ],
+      "name": "SlackInboundContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackInboundContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        304,
+        304
+      ],
+      "name": "userId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "userId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        305,
+        305
+      ],
+      "name": "userName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "userName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        306,
+        306
+      ],
+      "name": "fullName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "fullName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        307,
+        307
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        308,
+        308
+      ],
+      "name": "threadTs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "threadTs: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        309,
+        309
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "teamId?: : string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/inbound.ts"
+}

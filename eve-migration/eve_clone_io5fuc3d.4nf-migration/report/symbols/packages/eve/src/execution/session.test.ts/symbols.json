@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/execution/session.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.test.ts:createTestTurnAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        38
+      ],
+      "name": "createTestTurnAgent",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Partial<RuntimeTurnAgent>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeTurnAgent",
+      "signature": "export function createTestTurnAgent(overrides: Partial<RuntimeTurnAgent>) -> RuntimeTurnAgent",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        8,
+        14
+      ],
+      "name": "getCurrentTheme",
+      "params": [
+        {
+          "name": "prefersDarkTheme",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"light\" | \"dark\"",
+      "signature": "export function getCurrentTheme(prefersDarkTheme: boolean) -> \"light\" | \"dark\""
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        39
+      ],
+      "name": "useResolvedTheme",
+      "params": [
+        {
+          "name": "prefersDarkTheme",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function useResolvedTheme(prefersDarkTheme: boolean) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/hooks.ts"
+}

@@ -1,0 +1,243 @@
+{
+  "ApplicationBuildWorkspace": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 109
+      },
+      "symbol": "packages/eve/src/internal/application/build-workspace.ts:ApplicationBuildWorkspace"
+    }
+  ],
+  "BuiltInWorkflowWorldTarget": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 49,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 150
+      },
+      "symbol": "packages/eve/src/internal/application/compiled-artifacts.ts:BuiltInWorkflowWorldTarget"
+    }
+  ],
+  "CompileAgentResult": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 135
+      },
+      "symbol": "packages/eve/src/compiler/compile-agent.ts:CompileAgentResult"
+    }
+  ],
+  "DevelopmentWorkspaceExtension": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 43,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.ts:DevelopmentWorkspaceExtension"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 43
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.ts:DevelopmentWorkspaceExtension"
+    }
+  ],
+  "PreparedApplicationHost": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 110
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 136
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 139
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost"
+    }
+  ],
+  "PreparedDevelopmentApplicationHost": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/types.ts:PreparedDevelopmentApplicationHost"
+    }
+  ],
+  "ResolvedScheduleDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 137
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedScheduleDefinition"
+    }
+  ],
+  "compileAgentInWorkspace": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 56
+      },
+      "symbol": "packages/eve/src/compiler/compile-agent.ts:compileAgentInWorkspace"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 111
+      },
+      "symbol": "packages/eve/src/compiler/compile-agent.ts:compileAgentInWorkspace"
+    }
+  ],
+  "createDevelopmentHostWorkspace": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:createDevelopmentHostWorkspace"
+    }
+  ],
+  "createScheduleRegistrations": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 27,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 144
+      },
+      "symbol": "packages/eve/src/runtime/schedules/register.ts:createScheduleRegistrations"
+    }
+  ],
+  "discardDevelopmentGeneration": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 84
+      },
+      "symbol": "packages/eve/src/internal/nitro/development-generation.ts:discardDevelopmentGeneration"
+    }
+  ],
+  "prepareDevelopmentWorkspaceExtensions": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.ts:prepareDevelopmentWorkspaceExtensions"
+    }
+  ],
+  "removeDevelopmentHostWorkspace": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 48,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 82
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:removeDevelopmentHostWorkspace"
+    }
+  ],
+  "resolveSchedules": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 63
+      },
+      "symbol": "packages/eve/src/runtime/schedules/resolve-schedule.ts:resolveSchedules"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 118
+      },
+      "symbol": "packages/eve/src/runtime/schedules/resolve-schedule.ts:resolveSchedules"
+    }
+  ],
+  "stageDevelopmentGeneration": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 44,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 53
+      },
+      "symbol": "packages/eve/src/internal/nitro/development-generation.ts:stageDevelopmentGeneration"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 64
+      },
+      "symbol": "packages/eve/src/internal/nitro/development-generation.ts:stageDevelopmentGeneration"
+    }
+  ],
+  "writeCompiledArtifactsFiles": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 120
+      },
+      "symbol": "packages/eve/src/internal/application/compiled-artifacts.ts:writeCompiledArtifactsFiles"
+    }
+  ],
+  "writeDevelopmentCompiledArtifactsFiles": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/internal/nitro/host/prepare-application-host.ts",
+        "line": 65
+      },
+      "symbol": "packages/eve/src/internal/application/compiled-artifacts.ts:writeDevelopmentCompiledArtifactsFiles"
+    }
+  ]
+}

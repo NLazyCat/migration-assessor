@@ -1,0 +1,370 @@
+{
+  "module": "packages/eve/src/setup/flows/channels.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/channels.ts:ChannelsFlowDeps:detectDeployment",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "detectDeployment",
+          "partial_analysis": false,
+          "return_type": ": typeof detectDeployment",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/channels.ts:ChannelsFlowDeps:inspectExistingChannelRegistrations",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "inspectExistingChannelRegistrations",
+          "partial_analysis": false,
+          "return_type": ": typeof inspectExistingChannelRegistrations",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/channels.ts:ChannelsFlowDeps:getVercelAuthStatus",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "getVercelAuthStatus",
+          "partial_analysis": false,
+          "return_type": ": typeof getVercelAuthStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/channels.ts:ChannelsFlowDeps:addChannels",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "addChannels",
+          "partial_analysis": false,
+          "return_type": ": AddChannelsDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/channels.ts:ChannelsFlowDeps",
+      "kind": "interface",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "ChannelsFlowDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:ChannelsFlowResult",
+      "kind": "type_alias",
+      "line_range": [
+        38,
+        57
+      ],
+      "name": "ChannelsFlowResult",
+      "partial_analysis": false,
+      "value": "| {\r\n      kind: \"done\";\r\n      addedChannels: readonly string[];\r\n    }\r\n  | {\r\n      /**\r\n       * The user chose \"Deploy and chat\" on the post-Slack \"See it live\"\r\n       * prompt. The caller deploys, then points them at this workspace.\r\n       */\r\n      kind: \"deploy-and-chat\";\r\n      addedChannels: readonly string[];\r\n      chat: { chatUrl?: string; workspaceName?: string };\r\n    }\r\n  | { kind: \"cancelled\" }\r\n  | {\r\n      kind: \"failed\";\r\n      addedChannels: readonly string[];\r\n      message: string;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:SEE_IT_LIVE_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "SEE_IT_LIVE_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:promptSeeItLive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        69,
+        82
+      ],
+      "name": "promptSeeItLive",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<\"deploy\" | \"later\">",
+      "signature": "export function promptSeeItLive(prompter: Prompter) -> Promise<\"deploy\" | \"later\">",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:ChannelListRow",
+      "kind": "type_alias",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "ChannelListRow",
+      "partial_analysis": false,
+      "value": "ChannelKind | \"done\" | \"repl\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:channelAlreadyAdded",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        92
+      ],
+      "name": "channelAlreadyAdded",
+      "params": [
+        {
+          "name": "registrations",
+          "optional": false,
+          "type": "ExistingChannelRegistrations"
+        },
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "ChannelKind"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function channelAlreadyAdded(registrations: ExistingChannelRegistrations, channel: ChannelKind) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:appendChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        96
+      ],
+      "name": "appendChannel",
+      "params": [
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly ChannelKind[]"
+        },
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "ChannelKind"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ChannelKind[]",
+      "signature": "export function appendChannel(channels: readonly ChannelKind[], channel: ChannelKind) -> ChannelKind[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:ChannelPickResult",
+      "kind": "type_alias",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "ChannelPickResult",
+      "partial_analysis": false,
+      "value": "{ kind: \"picked\"; value: ChannelListRow } | { kind: \"cancelled\" };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:pickChannel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        100,
+        125
+      ],
+      "name": "pickChannel",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "registrations",
+          "optional": false,
+          "type": "ExistingChannelRegistrations"
+        },
+        {
+          "name": "projectLinked",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "authStatus",
+          "optional": false,
+          "type": "VercelAuthStatus"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ChannelPickResult>",
+      "signature": "export function pickChannel(prompter: Prompter, registrations: ExistingChannelRegistrations, projectLinked: boolean, authStatus: VercelAuthStatus) -> Promise<ChannelPickResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:channelLandedDuringSubflow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        133
+      ],
+      "name": "channelLandedDuringSubflow",
+      "params": [
+        {
+          "name": "before",
+          "optional": false,
+          "type": "ExistingChannelRegistrations"
+        },
+        {
+          "name": "after",
+          "optional": false,
+          "type": "ExistingChannelRegistrations"
+        },
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "ChannelKind"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function channelLandedDuringSubflow(before: ExistingChannelRegistrations, after: ExistingChannelRegistrations, channel: ChannelKind) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:deployAndChatDetails",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        135,
+        143
+      ],
+      "name": "deployAndChatDetails",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Readonly<SetupState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  chatUrl?: string;\r\n  workspaceName?: string;\r\n}",
+      "signature": "export function deployAndChatDetails(state: Readonly<SetupState>) -> {\r\n  chatUrl?: string;\r\n  workspaceName?: string;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:vercelChannelBlocker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        161,
+        169
+      ],
+      "name": "vercelChannelBlocker",
+      "params": [
+        {
+          "name": "authStatus",
+          "optional": false,
+          "type": "VercelAuthStatus"
+        },
+        {
+          "name": "projectLinked",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function vercelChannelBlocker(authStatus: VercelAuthStatus, projectLinked: boolean) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:channelListRows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        221
+      ],
+      "name": "channelListRows",
+      "params": [
+        {
+          "name": "registrations",
+          "optional": false,
+          "type": "ExistingChannelRegistrations"
+        },
+        {
+          "name": "projectLinked",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "authStatus",
+          "optional": false,
+          "type": "VercelAuthStatus"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOption<ChannelListRow>[]",
+      "signature": "export function channelListRows(registrations: ExistingChannelRegistrations, projectLinked: boolean, authStatus: VercelAuthStatus) -> SelectOption<ChannelListRow>[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/channels.ts:runChannelsFlow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        242,
+        369
+      ],
+      "name": "runChannelsFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<ChannelsFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ChannelsFlowResult>",
+      "signature": "export function runChannelsFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<ChannelsFlowDeps>;\r\n}) -> Promise<ChannelsFlowResult>",
+      "visibility": "Public"
+    }
+  ]
+}

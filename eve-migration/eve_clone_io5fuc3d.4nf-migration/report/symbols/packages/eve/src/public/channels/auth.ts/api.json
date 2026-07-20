@@ -1,0 +1,1063 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        43
+      ],
+      "name": "VerifyResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VerifyResult = | { readonly ok: true; readonly sessionAuth: SessionAuthContext }\r\n  | { readonly ok: false };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "HttpBasicCredentials",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HttpBasicCredentials { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "username",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "username: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "password",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "password: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        89
+      ],
+      "name": "verifyHttpBasic",
+      "params": [
+        {
+          "name": "authorizationHeader",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "credentials",
+          "optional": false,
+          "type": "HttpBasicCredentials"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VerifyResult",
+      "signature": "export function verifyHttpBasic(authorizationHeader: string | null, credentials: HttpBasicCredentials) -> VerifyResult"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        100,
+        119
+      ],
+      "name": "VerifyJwtHmacConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VerifyJwtHmacConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        101,
+        101
+      ],
+      "name": "algorithm",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"HS256\" | \"HS384\" | \"HS512\"",
+      "signature": "algorithm: : \"HS256\" | \"HS384\" | \"HS512\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "audiences",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "audiences: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        104,
+        104
+      ],
+      "name": "secret",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "secret: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        108,
+        108
+      ],
+      "name": "clockSkewSeconds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "clockSkewSeconds?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        113,
+        113
+      ],
+      "name": "subjects",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "subjects?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        118,
+        118
+      ],
+      "name": "claims",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, readonly string[]>>",
+      "signature": "claims?: : Readonly<Record<string, readonly string[]>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        127,
+        155
+      ],
+      "name": "verifyJwtHmac",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "VerifyJwtHmacConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VerifyResult>",
+      "signature": "export function verifyJwtHmac(token: string | null, config: VerifyJwtHmacConfig) -> Promise<VerifyResult>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        164,
+        186
+      ],
+      "name": "VerifyJwtEcdsaConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VerifyJwtEcdsaConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        165,
+        165
+      ],
+      "name": "algorithm",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"ES256\" | \"ES384\" | \"ES512\"",
+      "signature": "algorithm: : \"ES256\" | \"ES384\" | \"ES512\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "audiences",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "audiences: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        171,
+        171
+      ],
+      "name": "publicKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "publicKey: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        175,
+        175
+      ],
+      "name": "clockSkewSeconds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "clockSkewSeconds?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        180,
+        180
+      ],
+      "name": "subjects",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "subjects?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        185,
+        185
+      ],
+      "name": "claims",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, readonly string[]>>",
+      "signature": "claims?: : Readonly<Record<string, readonly string[]>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        195,
+        223
+      ],
+      "name": "verifyJwtEcdsa",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "VerifyJwtEcdsaConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VerifyResult>",
+      "signature": "export function verifyJwtEcdsa(token: string | null, config: VerifyJwtEcdsaConfig) -> Promise<VerifyResult>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        232,
+        255
+      ],
+      "name": "VerifyOidcConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VerifyOidcConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        233,
+        233
+      ],
+      "name": "audiences",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "audiences: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        234,
+        234
+      ],
+      "name": "issuer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "issuer: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        240,
+        240
+      ],
+      "name": "discoveryUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "discoveryUrl?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        244,
+        244
+      ],
+      "name": "clockSkewSeconds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "clockSkewSeconds?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        249,
+        249
+      ],
+      "name": "subjects",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "subjects?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        254,
+        254
+      ],
+      "name": "claims",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, readonly string[]>>",
+      "signature": "claims?: : Readonly<Record<string, readonly string[]>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        265,
+        277
+      ],
+      "name": "verifyOidc",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "VerifyOidcConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VerifyResult>",
+      "signature": "export function verifyOidc(token: string | null, config: VerifyOidcConfig) -> Promise<VerifyResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        326,
+        333
+      ],
+      "name": "extractBearerToken",
+      "params": [
+        {
+          "name": "authorizationHeader",
+          "optional": false,
+          "type": "string | null"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function extractBearerToken(authorizationHeader: string | null) -> string | null"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        343,
+        343
+      ],
+      "name": "IpAllowList",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type IpAllowList = RuntimeIpAllowList;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        350,
+        352
+      ],
+      "name": "createIpAllowList",
+      "params": [
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "IpAllowList",
+      "signature": "export function createIpAllowList(entries: readonly string[]) -> IpAllowList"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        358,
+        363
+      ],
+      "name": "isIpAllowed",
+      "params": [
+        {
+          "name": "ip",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "allowList",
+          "optional": false,
+          "type": "IpAllowList"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isIpAllowed(ip: string | null, allowList: IpAllowList) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        374,
+        377
+      ],
+      "name": "UnauthorizedChallenge",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface UnauthorizedChallenge { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        375,
+        375
+      ],
+      "name": "scheme",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"Basic\" | \"Bearer\"",
+      "signature": "scheme: : \"Basic\" | \"Bearer\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        376,
+        376
+      ],
+      "name": "parameters",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "parameters?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        382,
+        402
+      ],
+      "name": "UnauthorizedResponseOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface UnauthorizedResponseOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        387,
+        387
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": 401 | 403",
+      "signature": "status?: : 401 | 403"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        392,
+        392
+      ],
+      "name": "code",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "code?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        397,
+        397
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        401,
+        401
+      ],
+      "name": "challenges",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly UnauthorizedChallenge[]",
+      "signature": "challenges?: : readonly UnauthorizedChallenge[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        409,
+        432
+      ],
+      "name": "createUnauthorizedResponse",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "UnauthorizedResponseOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createUnauthorizedResponse(opts: UnauthorizedResponseOptions) -> Response"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        451,
+        451
+      ],
+      "name": "AuthErrorOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AuthErrorOptions = Omit<UnauthorizedResponseOptions, \"status\">;"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        458,
+        466
+      ],
+      "name": "UnauthenticatedError",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "AuthErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class UnauthenticatedError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        461,
+        465
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "AuthErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "UnauthenticatedError::constructor(opts: AuthErrorOptions) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        473,
+        481
+      ],
+      "name": "ForbiddenError",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "AuthErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ForbiddenError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        476,
+        480
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "AuthErrorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ForbiddenError::constructor(opts: AuthErrorOptions) -> void"
+    },
+    {
+      "generics": [
+        "TEvent"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        494,
+        496
+      ],
+      "name": "AuthFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AuthFn = Request> = (\r\n  event: TEvent,\r\n) => SessionAuthContext | null | undefined | Promise<SessionAuthContext | null | undefined>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        508,
+        534
+      ],
+      "name": "routeAuth",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "AuthFn<Request> | readonly AuthFn<Request>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SessionAuthContext | Response>",
+      "signature": "export function routeAuth(request: Request, auth: AuthFn<Request> | readonly AuthFn<Request>[]) -> Promise<SessionAuthContext | Response>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        548,
+        560
+      ],
+      "name": "placeholderAuth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function placeholderAuth() -> AuthFn<Request>"
+    },
+    {
+      "generics": [
+        "TEvent"
+      ],
+      "kind": "function",
+      "line_range": [
+        577,
+        579
+      ],
+      "name": "none",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AuthFn<TEvent>",
+      "signature": "export function none() -> AuthFn<TEvent>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        607,
+        617
+      ],
+      "name": "localDev",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function localDev() -> AuthFn<Request>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        640,
+        658
+      ],
+      "name": "isLoopbackRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLoopbackRequest(request: Request) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        691,
+        709
+      ],
+      "name": "VerifyVercelOidcOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VerifyVercelOidcOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        697,
+        700
+      ],
+      "name": "currentVercelProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly environment?: string;\r\n    readonly projectId: string;\r\n  }",
+      "signature": "currentVercelProject?: : {\r\n    readonly environment?: string;\r\n    readonly projectId: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        708,
+        708
+      ],
+      "name": "subjects",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "subjects?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        736,
+        805
+      ],
+      "name": "verifyVercelOidc",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "VerifyVercelOidcOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VerifyResult>",
+      "signature": "export function verifyVercelOidc(token: string | null, opts: VerifyVercelOidcOptions) -> Promise<VerifyResult>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        826,
+        826
+      ],
+      "name": "VercelSubjectEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelSubjectEnvironment = \"production\" | \"preview\" | \"development\" | \"*\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        837,
+        859
+      ],
+      "name": "VercelSubjectInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VercelSubjectInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        846,
+        846
+      ],
+      "name": "teamSlug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "teamSlug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        852,
+        852
+      ],
+      "name": "projectName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        858,
+        858
+      ],
+      "name": "environment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": VercelSubjectEnvironment",
+      "signature": "environment?: : VercelSubjectEnvironment"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        884,
+        899
+      ],
+      "name": "vercelSubject",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "VercelSubjectInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function vercelSubject(input: VercelSubjectInput) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        917,
+        931
+      ],
+      "name": "vercelOidc",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "VerifyVercelOidcOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function vercelOidc(opts: VerifyVercelOidcOptions) -> AuthFn<Request>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        942,
+        947
+      ],
+      "name": "httpBasic",
+      "params": [
+        {
+          "name": "credentials",
+          "optional": false,
+          "type": "HttpBasicCredentials"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function httpBasic(credentials: HttpBasicCredentials) -> AuthFn<Request>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        950,
+        956
+      ],
+      "name": "jwtHmac",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "VerifyJwtHmacConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function jwtHmac(config: VerifyJwtHmacConfig) -> AuthFn<Request>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        959,
+        965
+      ],
+      "name": "jwtEcdsa",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "VerifyJwtEcdsaConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function jwtEcdsa(config: VerifyJwtEcdsaConfig) -> AuthFn<Request>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        973,
+        979
+      ],
+      "name": "oidc",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "VerifyOidcConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthFn<Request>",
+      "signature": "export function oidc(config: VerifyOidcConfig) -> AuthFn<Request>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/auth.ts"
+}

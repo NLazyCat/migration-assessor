@@ -1,0 +1,57 @@
+{
+  "BASH_INPUT_SCHEMA": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/public/tools/define-bash-tool.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/bash.ts:BASH_INPUT_SCHEMA"
+    }
+  ],
+  "BASH_OUTPUT_SCHEMA": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/public/tools/define-bash-tool.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/bash.ts:BASH_OUTPUT_SCHEMA"
+    }
+  ],
+  "BashInput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 66,
+        "file": "packages/eve/src/public/tools/define-bash-tool.ts",
+        "line": 29
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bash-tool.ts:BashInput"
+    }
+  ],
+  "ToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 65,
+        "file": "packages/eve/src/public/tools/define-bash-tool.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/public/definitions/tool.ts:ToolDefinition"
+    }
+  ],
+  "executeBashOnSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/public/tools/define-bash-tool.ts",
+        "line": 29
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bash-tool.ts:executeBashOnSandbox"
+    }
+  ]
+}

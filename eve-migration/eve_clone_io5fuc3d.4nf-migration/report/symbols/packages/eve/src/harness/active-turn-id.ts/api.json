@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        14
+      ],
+      "name": "activeTurnId",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HarnessEmissionState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function activeTurnId(state: HarnessEmissionState) -> string"
+    }
+  ],
+  "module": "packages/eve/src/harness/active-turn-id.ts"
+}

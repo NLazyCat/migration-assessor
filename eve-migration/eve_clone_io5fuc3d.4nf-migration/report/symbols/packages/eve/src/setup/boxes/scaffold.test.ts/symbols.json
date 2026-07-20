@@ -1,0 +1,85 @@
+{
+  "module": "packages/eve/src/setup/boxes/scaffold.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/scaffold.test.ts:silentSink",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "silentSink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/scaffold.test.ts:TEST_EVE_PACKAGE",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "TEST_EVE_PACKAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/scaffold.test.ts:fakeDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        20
+      ],
+      "name": "fakeDeps",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<ScaffoldDeps>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ScaffoldDeps",
+      "signature": "export function fakeDeps(overrides: Partial<ScaffoldDeps>) -> ScaffoldDeps",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/scaffold.test.ts:createPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        22,
+        24
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createPrompter() -> Prompter",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/scaffold.test.ts:resolvedState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        33
+      ],
+      "name": "resolvedState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function resolvedState() -> SetupState",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "StandardExecutablePackageManager",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type StandardExecutablePackageManager = \"bun\" | \"npm\" | \"yarn\";"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        8,
+        29
+      ],
+      "name": "resolveStandardInvocation",
+      "params": [
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "StandardExecutablePackageManager"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PackageManagerInvocation",
+      "signature": "export function resolveStandardInvocation(kind: StandardExecutablePackageManager, args: readonly string[]) -> PackageManagerInvocation"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "applyNoProjectConfiguration",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  filesSkipped: [];\r\n  filesWritten: [];\r\n}>",
+      "signature": "export function applyNoProjectConfiguration() -> Promise<{\r\n  filesSkipped: [];\r\n  filesWritten: [];\r\n}>"
+    }
+  ],
+  "module": "packages/eve/src/setup/primitives/pm/shared.ts"
+}

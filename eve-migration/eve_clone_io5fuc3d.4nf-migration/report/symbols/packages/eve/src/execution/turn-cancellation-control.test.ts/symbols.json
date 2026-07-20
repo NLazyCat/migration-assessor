@@ -1,0 +1,62 @@
+{
+  "module": "packages/eve/src/execution/turn-cancellation-control.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-cancellation-control.test.ts:createHookMock",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "createHookMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-cancellation-control.test.ts:installCancelHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        36
+      ],
+      "name": "installCancelHook",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n  readonly conflict?: { readonly runId: string } | null;\r\n  readonly payloads?: readonly unknown[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ dispose: ReturnType<typeof vi.fn> }",
+      "signature": "export function installCancelHook(options: {\r\n  readonly conflict?: { readonly runId: string } | null;\r\n  readonly payloads?: readonly unknown[];\r\n}) -> { dispose: ReturnType<typeof vi.fn> }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-cancellation-control.test.ts:settles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        38,
+        43
+      ],
+      "name": "settles",
+      "params": [
+        {
+          "name": "promise",
+          "optional": false,
+          "type": "Promise<unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function settles(promise: Promise<unknown>) -> Promise<boolean>",
+      "visibility": "Private"
+    }
+  ]
+}

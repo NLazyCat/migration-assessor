@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "defineEvalConfig",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EveEvalConfigInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalConfig",
+      "signature": "export function defineEvalConfig(input: EveEvalConfigInput) -> EveEvalConfig"
+    }
+  ],
+  "module": "packages/eve/src/evals/define-eval-config.ts"
+}

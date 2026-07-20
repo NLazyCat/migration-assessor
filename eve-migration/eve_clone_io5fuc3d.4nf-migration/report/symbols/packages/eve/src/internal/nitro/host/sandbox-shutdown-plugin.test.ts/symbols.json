@@ -1,0 +1,39 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.test.ts:SignalListener",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "SignalListener",
+      "partial_analysis": false,
+      "value": "() => void;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/sandbox-shutdown-plugin.test.ts:createFakeProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        30
+      ],
+      "name": "createFakeProcess",
+      "params": [
+        {
+          "name": "env",
+          "optional": false,
+          "type": "Record<string, string | undefined>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createFakeProcess(env: Record<string, string | undefined>) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        84,
+        105
+      ],
+      "name": "resolveRuntimeAgentGraph",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ResolveRuntimeAgentGraphInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedAgentGraphBundle>",
+      "signature": "export function resolveRuntimeAgentGraph(input: ResolveRuntimeAgentGraphInput) -> Promise<ResolvedAgentGraphBundle>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/resolve-agent-graph.ts"
+}

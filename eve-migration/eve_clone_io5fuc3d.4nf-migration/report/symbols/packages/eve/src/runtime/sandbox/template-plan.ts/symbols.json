@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/runtime/sandbox/template-plan.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/template-plan.ts:RuntimeSandboxTemplatePlan",
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        21
+      ],
+      "name": "RuntimeSandboxTemplatePlan",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly kind: \"none\";\r\n    }\r\n  | {\r\n      readonly contentHash?: string;\r\n      readonly kind: \"workspace-content\";\r\n    }\r\n  | {\r\n      readonly contentHash?: string;\r\n      readonly kind: \"bootstrap\";\r\n      readonly revalidationKey?: string;\r\n      readonly sourceHash: string;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/sandbox/template-plan.ts:createRuntimeSandboxTemplatePlan",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        56
+      ],
+      "name": "createRuntimeSandboxTemplatePlan",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly definition: ResolvedSandboxDefinition;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSandboxTemplatePlan",
+      "signature": "export function createRuntimeSandboxTemplatePlan(input: {\r\n  readonly definition: ResolvedSandboxDefinition;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}) -> RuntimeSandboxTemplatePlan",
+      "visibility": "Public"
+    }
+  ]
+}

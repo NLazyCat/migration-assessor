@@ -1,0 +1,137 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        36,
+        40
+      ],
+      "name": "ContextReader",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ContextReader { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "ContextAccessor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ContextAccessor { ... }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        60,
+        63
+      ],
+      "name": "ContextKeyCodec",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ContextKeyCodec { ... }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "ContextKeyOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ContextKeyOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "codec",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ContextKeyCodec<T>",
+      "signature": "codec?: : ContextKeyCodec<T>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "class",
+      "line_range": [
+        72,
+        99
+      ],
+      "name": "ContextKey",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ContextKeyOptions<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ContextKey { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        76,
+        98
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ContextKeyOptions<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ContextKey::constructor(name: string, options: ContextKeyOptions<T>) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        104,
+        106
+      ],
+      "name": "resolveKey",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextKey<unknown> | undefined",
+      "signature": "export function resolveKey(name: string) -> ContextKey<unknown> | undefined"
+    }
+  ],
+  "module": "packages/eve/src/context/key.ts"
+}

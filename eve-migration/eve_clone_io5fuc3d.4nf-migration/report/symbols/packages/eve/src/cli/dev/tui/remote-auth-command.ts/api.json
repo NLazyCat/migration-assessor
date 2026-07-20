@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        70,
+        129
+      ],
+      "name": "runRemoteAuthCommand",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "RemoteAuthCommandInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function runRemoteAuthCommand(input: RemoteAuthCommandInput) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/remote-auth-command.ts"
+}

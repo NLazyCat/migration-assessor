@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/internal/authored-definition/schema-backed.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/schema-backed.ts:NormalizedAuthoredTool",
+      "kind": "type_alias",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "NormalizedAuthoredTool",
+      "partial_analysis": false,
+      "value": "Readonly<Omit<InternalToolDefinitionWithExecuteFn, \"name\">>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/schema-backed.ts:MutableNormalizedAuthoredTool",
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        33
+      ],
+      "name": "MutableNormalizedAuthoredTool",
+      "partial_analysis": false,
+      "value": "{\r\n  -readonly [K in keyof NormalizedAuthoredTool]: NormalizedAuthoredTool[K];\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/schema-backed.ts:NormalizedToolEntry",
+      "kind": "type_alias",
+      "line_range": [
+        42,
+        49
+      ],
+      "name": "NormalizedToolEntry",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"tool\"; readonly definition: NormalizedAuthoredTool }\r\n  | { readonly kind: \"disabled\" }\r\n  | { readonly kind: \"workflow-tool\"; readonly maxSubagents?: number }\r\n  | {\r\n      readonly kind: \"dynamic-tool\";\r\n      readonly eventNames: readonly DynamicToolEventName[];\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/schema-backed.ts:normalizeToolDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        124
+      ],
+      "name": "normalizeToolDefinition",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NormalizedToolEntry",
+      "signature": "export function normalizeToolDefinition(value: unknown, message: string) -> NormalizedToolEntry",
+      "visibility": "Public"
+    }
+  ]
+}

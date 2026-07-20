@@ -1,0 +1,275 @@
+{
+  "module": "packages/eve/src/setup/scaffold/update/package-json.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch:dependencies",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "dependencies",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch:devDependencies",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "devDependencies",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch:overrides",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "overrides",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch:resolutions",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "resolutions",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch:scripts",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "scripts",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch:nodeEngineRequirement",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "nodeEngineRequirement",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatch",
+      "kind": "interface",
+      "line_range": [
+        5,
+        18
+      ],
+      "name": "PackageJsonPatch",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatchResult:changed",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "changed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatchResult:nodeEngineOverride",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "nodeEngineOverride",
+          "partial_analysis": false,
+          "return_type": ": NodeEngineOverride",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonPatchResult",
+      "kind": "interface",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "PackageJsonPatchResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape:dependencies",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "dependencies",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape:devDependencies",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "devDependencies",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape:overrides",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "overrides",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape:resolutions",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "resolutions",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape:scripts",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "scripts",
+          "partial_analysis": false,
+          "return_type": ": Record<string, string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape:engines",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "engines",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/update/package-json.ts:PackageJsonShape",
+      "kind": "interface",
+      "line_range": [
+        25,
+        33
+      ],
+      "name": "PackageJsonShape",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/package-json.ts:isJsonObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        37
+      ],
+      "name": "isJsonObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isJsonObject(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/package-json.ts:patchPackageJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        39,
+        89
+      ],
+      "name": "patchPackageJson",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "patch",
+          "optional": false,
+          "type": "PackageJsonPatch"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageJsonPatchResult>",
+      "signature": "export function patchPackageJson(path: string, patch: PackageJsonPatch) -> Promise<PackageJsonPatchResult>",
+      "visibility": "Public"
+    }
+  ]
+}

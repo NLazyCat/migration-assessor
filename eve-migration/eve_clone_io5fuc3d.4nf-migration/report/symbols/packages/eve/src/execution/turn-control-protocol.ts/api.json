@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        6,
+        12
+      ],
+      "name": "TurnInboxPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TurnInboxPayload = | Exclude<HookPayload, DeliverHookPayload>\r\n  | {\r\n      readonly delivery: DeliverHookPayload;\r\n      readonly kind: \"driver-delivery\";\r\n      readonly requestId: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        30
+      ],
+      "name": "TurnControlPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TurnControlPayload = | {\r\n      readonly action: NextDriverAction;\r\n      readonly bufferedDeliveries?: readonly DeliverHookPayload[];\r\n      readonly kind: \"turn-result\";\r\n    }\r\n  | { readonly kind: \"turn-error\"; readonly error: unknown }\r\n  | { readonly continuationToken: string; readonly kind: \"turn-continuation-token\" }\r\n  | {\r\n      readonly continuationToken: string;\r\n      readonly inboxToken: string;\r\n      readonly kind: \"turn-delivery-request\";\r\n      readonly requestId: string;\r\n    }\r\n  | { readonly kind: \"turn-delivery-accepted\"; readonly requestId: string }\r\n  | { readonly kind: \"turn-delivery-cancelled\"; readonly requestId: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        33,
+        40
+      ],
+      "name": "sendTurnControlStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly controlToken: string;\r\n  readonly payload: TurnControlPayload;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function sendTurnControlStep(input: {\r\n  readonly controlToken: string;\r\n  readonly payload: TurnControlPayload;\r\n}) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/execution/turn-control-protocol.ts"
+}

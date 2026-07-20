@@ -1,0 +1,60 @@
+{
+  "module": "packages/eve/src/public/channels/teams/defaults.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/defaults.test.ts:sessionCtx",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "sessionCtx",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/defaults.test.ts:buildChannelStub",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        29
+      ],
+      "name": "buildChannelStub",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "Partial<TeamsChannelState>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function buildChannelStub(state: Partial<TeamsChannelState>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/teams/defaults.test.ts:authRequiredEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        40
+      ],
+      "name": "authRequiredEvent",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "{ displayName?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function authRequiredEvent(overrides: { displayName?: string }) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

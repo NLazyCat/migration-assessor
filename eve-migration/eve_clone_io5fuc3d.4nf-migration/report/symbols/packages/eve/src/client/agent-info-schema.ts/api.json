@@ -1,0 +1,233 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        122,
+        185
+      ],
+      "name": "AgentInfoResultSchema",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const AgentInfoResultSchema: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        193,
+        193
+      ],
+      "name": "AgentInfoSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoSource = ReadonlyDeep<z.output<typeof source>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        194,
+        194
+      ],
+      "name": "AgentInfoEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoEntry = ReadonlyDeep<z.output<typeof entry>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "AgentInfoToolEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoToolEntry = ReadonlyDeep<z.output<typeof tool>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        196,
+        196
+      ],
+      "name": "AgentInfoFrameworkToolEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoFrameworkToolEntry = ReadonlyDeep<z.output<typeof frameworkTool>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        197,
+        197
+      ],
+      "name": "AgentInfoDynamicResolverEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoDynamicResolverEntry = ReadonlyDeep<z.output<typeof dynamicResolver>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        198,
+        198
+      ],
+      "name": "AgentInfoTools",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoTools = AgentInfoResult[\"tools\"];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        199,
+        199
+      ],
+      "name": "AgentInfoSkillEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoSkillEntry = ReadonlyDeep<z.output<typeof skill>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        200,
+        200
+      ],
+      "name": "AgentInfoInstructionsEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoInstructionsEntry = ReadonlyDeep<z.output<typeof instructions>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        201,
+        201
+      ],
+      "name": "AgentInfoInstructions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoInstructions = AgentInfoResult[\"instructions\"];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        202,
+        202
+      ],
+      "name": "AgentInfoScheduleEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoScheduleEntry = ReadonlyDeep<z.output<typeof schedule>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        203,
+        203
+      ],
+      "name": "AgentInfoSubagentEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoSubagentEntry = ReadonlyDeep<z.output<typeof subagent>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        204,
+        204
+      ],
+      "name": "AgentInfoChannelEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoChannelEntry = ReadonlyDeep<z.output<typeof channel>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        205,
+        205
+      ],
+      "name": "AgentInfoFrameworkChannelEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoFrameworkChannelEntry = ReadonlyDeep<z.output<typeof frameworkChannel>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        206,
+        206
+      ],
+      "name": "AgentInfoChannels",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoChannels = AgentInfoResult[\"channels\"];"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        207,
+        207
+      ],
+      "name": "AgentInfoConnectionEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoConnectionEntry = ReadonlyDeep<z.output<typeof connection>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        208,
+        208
+      ],
+      "name": "AgentInfoHookEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoHookEntry = ReadonlyDeep<z.output<typeof hook>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        209,
+        209
+      ],
+      "name": "AgentInfoSandboxEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoSandboxEntry = ReadonlyDeep<z.output<typeof sandbox>>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        210,
+        210
+      ],
+      "name": "AgentInfoResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoResult = ReadonlyDeep<z.output<typeof AgentInfoResultSchema>>;"
+    }
+  ],
+  "module": "packages/eve/src/client/agent-info-schema.ts"
+}

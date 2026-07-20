@@ -1,0 +1,380 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "SO"
+      ],
+      "kind": "interface",
+      "line_range": [
+        11,
+        22
+      ],
+      "name": "SandboxBackendHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackendHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSession",
+      "signature": "session: : SandboxSession"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "useSessionFn",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSessionUseFn<SO>",
+      "signature": "useSessionFn: : SandboxSessionUseFn<SO>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        36
+      ],
+      "name": "SandboxBackendSessionState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackendSessionState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "backendName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "backendName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "metadata: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "sessionKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionKey: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        44
+      ],
+      "name": "SandboxSeedFile",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxSeedFile { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | Buffer",
+      "signature": "content: : string | Buffer"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "SandboxBackendTags",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxBackendTags = Readonly<Record<string, string>>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "SandboxBackendRuntimeContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackendRuntimeContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        73,
+        89
+      ],
+      "name": "SandboxBackendCreateInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackendCreateInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "templateKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "templateKey: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "sessionKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionKey: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "existingMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "existingMetadata?: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "tags",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxBackendTags",
+      "signature": "tags?: : SandboxBackendTags"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "runtimeContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxBackendRuntimeContext",
+      "signature": "runtimeContext: : SandboxBackendRuntimeContext"
+    },
+    {
+      "generics": [
+        "BO"
+      ],
+      "kind": "interface",
+      "line_range": [
+        101,
+        110
+      ],
+      "name": "SandboxBackendPrewarmInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackendPrewarmInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        102,
+        102
+      ],
+      "name": "templateKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "templateKey: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "bootstrap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (input: SandboxBootstrapContext<BO>) => void | Promise<void>",
+      "signature": "bootstrap?: : (input: SandboxBootstrapContext<BO>) => void | Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        107,
+        107
+      ],
+      "name": "log",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (message: string) => void",
+      "signature": "log?: : (message: string) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        108,
+        108
+      ],
+      "name": "runtimeContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxBackendRuntimeContext",
+      "signature": "runtimeContext: : SandboxBackendRuntimeContext"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        109,
+        109
+      ],
+      "name": "seedFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ReadonlyArray<SandboxSeedFile>",
+      "signature": "seedFiles: : ReadonlyArray<SandboxSeedFile>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        119,
+        125
+      ],
+      "name": "SandboxBackendPrewarmResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackendPrewarmResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        124,
+        124
+      ],
+      "name": "reused",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "reused: : boolean"
+    },
+    {
+      "generics": [
+        "BO",
+        "SO"
+      ],
+      "kind": "interface",
+      "line_range": [
+        143,
+        170
+      ],
+      "name": "SandboxBackend",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxBackend { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    }
+  ],
+  "module": "packages/eve/src/shared/sandbox-backend.ts"
+}

@@ -1,0 +1,44 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/types.ts:TerminalPartDisplayMode",
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "TerminalPartDisplayMode",
+      "partial_analysis": false,
+      "value": "\"full\" | \"collapsed\" | \"auto-collapsed\" | \"hidden\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/types.ts:AssistantResponseStatsMode",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "AssistantResponseStatsMode",
+      "partial_analysis": false,
+      "value": "\"tokens\" | \"tokensPerSecond\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/types.ts:TuiDisplayOptions",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        77
+      ],
+      "name": "TuiDisplayOptions",
+      "partial_analysis": false,
+      "value": "{\r\n  /**\r\n   * The title shown in the terminal UI.\r\n   */\r\n  name?: string;\r\n\r\n  /**\r\n   * How tool calls should render.\r\n   */\r\n  tools?: TerminalPartDisplayMode;\r\n\r\n  /**\r\n   * How reasoning parts should render.\r\n   */\r\n  reasoning?: TerminalPartDisplayMode;\r\n\r\n  /**\r\n   * How subagent sections should render. `full` shows every nested child\r\n   * event line and the subagent's output; `auto-collapsed` collapses the\r\n   * section once the subagent reaches `done`; `collapsed` always shows\r\n   * only the header; `hidden` skips the section entirely.\r\n   */\r\n  subagents?: TerminalPartDisplayMode;\r\n\r\n  /**\r\n   * How MCP connection authorization sections should render. `full`\r\n   * shows the challenge URL and any user code; `auto-collapsed`\r\n   * collapses the section once authorization reaches a terminal\r\n   * outcome (`authorized`, `declined`, `failed`, `timed-out`);\r\n   * `collapsed` always shows only the header. `hidden` is supported\r\n   * but strongly discouraged: a hidden auth challenge looks identical\r\n   * to a hung turn from the user's perspective.\r\n   */\r\n  connectionAuth?: TerminalPartDisplayMode;\r\n\r\n  /**\r\n   * Which statistic to show in assistant response headers.\r\n   *\r\n   * @default \"tokensPerSecond\"\r\n   */\r\n  assistantResponseStats?: AssistantResponseStatsMode;\r\n\r\n  /**\r\n   * The model context window size in tokens.\r\n   *\r\n   * When provided, the terminal UI shows the current total token usage as a\r\n   * percentage of this context window.\r\n   */\r\n  contextSize?: number;\r\n\r\n  /**\r\n   * Which captured output (stdout, stderr, sandbox lifecycle lines) to\r\n   * surface as inline regions. Output is always captured and buffered so it\r\n   * cannot corrupt the frame; this only controls what is rendered. The\r\n   * `/loglevel` command switches the mode at runtime, retroactively hiding or\r\n   * restoring buffered lines. `TerminalRenderer` defaults to `none`; the\r\n   * `eve dev` CLI defaults to `stderr`.\r\n   */\r\n  logs?: LogDisplayMode;\r\n};",
+      "visibility": "Public"
+    }
+  ]
+}

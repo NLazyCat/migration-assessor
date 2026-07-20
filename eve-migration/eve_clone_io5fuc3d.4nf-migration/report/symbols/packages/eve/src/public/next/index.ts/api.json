@@ -1,0 +1,259 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "EVE_NEXT_SERVICE_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_NEXT_SERVICE_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "EveNextRewriteRule",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveNextRewriteRule = ArrayElement<NextRewrites>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "EveNextRewrites",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveNextRewrites = NextRewrites;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        39,
+        46
+      ],
+      "name": "EveNextRewriteSections",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveNextRewriteSections = Extract<\r\n  NextRewrites,\r\n  {\r\n    readonly afterFiles?: EveNextRewriteRule[];\r\n    readonly beforeFiles?: EveNextRewriteRule[];\r\n    readonly fallback?: EveNextRewriteRule[];\r\n  }\r\n>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "EveNextConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveNextConfig = NextConfig;"
+    },
+    {
+      "generics": [
+        "TConfig"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        64
+      ],
+      "name": "EveNextConfigFunction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveNextConfigFunction = EveNextConfig> = (\r\n  phase: string,\r\n  context: {\r\n    readonly defaultConfig: TConfig;\r\n  },\r\n) => TConfig | Promise<TConfig>;"
+    },
+    {
+      "generics": [
+        "TConfig"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "EveNextConfigInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveNextConfigInput = EveNextConfig> =\r\n  | EveNextConfigFunction<TConfig>\r\n  | TConfig;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        76,
+        93
+      ],
+      "name": "WithEveAgentOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WithEveAgentOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "root",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "root: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "buildCommand",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "buildCommand?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "servicePrefix",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "servicePrefix?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "WithEveAgentsConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type WithEveAgentsConfig = Record<string, string | WithEveAgentOptions>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        103,
+        139
+      ],
+      "name": "WithEveOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WithEveOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        109,
+        109
+      ],
+      "name": "devServerTimeoutMs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "devServerTimeoutMs?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "eveRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "eveRoot?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        122,
+        122
+      ],
+      "name": "agents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WithEveAgentsConfig",
+      "signature": "agents?: : WithEveAgentsConfig"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "eveBuildCommand",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "eveBuildCommand?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        138,
+        138
+      ],
+      "name": "servicePrefix",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "servicePrefix?: : string"
+    },
+    {
+      "generics": [
+        "TConfig"
+      ],
+      "kind": "function",
+      "line_range": [
+        400,
+        470
+      ],
+      "name": "withEve",
+      "params": [
+        {
+          "name": "configOrFunction",
+          "optional": false,
+          "type": "EveNextConfigInput<TConfig>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "WithEveOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveNextConfigFunction<TConfig>",
+      "signature": "export function withEve(configOrFunction: EveNextConfigInput<TConfig>, options: WithEveOptions) -> EveNextConfigFunction<TConfig>"
+    }
+  ],
+  "module": "packages/eve/src/public/next/index.ts"
+}

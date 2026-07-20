@@ -1,0 +1,280 @@
+{
+  "module": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:runFile",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "runFile",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:EVE_PACKAGE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "EVE_PACKAGE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:REPO_ROOT",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "REPO_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:ROOT_TYPE_DEFINITIONS",
+      "kind": "variable",
+      "line_range": [
+        25,
+        27
+      ],
+      "name": "ROOT_TYPE_DEFINITIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:TSC_BIN_PATH",
+      "kind": "variable",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "TSC_BIN_PATH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:COMPILED_VENDOR_TYPES",
+      "kind": "variable",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "COMPILED_VENDOR_TYPES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PORTABILITY_TEST_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "PORTABILITY_TEST_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PortabilityCase:descriptor",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "descriptor",
+          "partial_analysis": false,
+          "return_type": ": ScenarioAppDescriptor",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PortabilityCase:include",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "include",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PortabilityCase:name",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PortabilityCase:packageExports",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "packageExports",
+          "partial_analysis": false,
+          "return_type": ": Record<string, { readonly types: string }>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PortabilityCase",
+      "kind": "interface",
+      "line_range": [
+        34,
+        39
+      ],
+      "name": "PortabilityCase",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:PORTABILITY_CASES",
+      "kind": "variable",
+      "line_range": [
+        41,
+        168
+      ],
+      "name": "PORTABILITY_CASES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:expectPortableFixtureToTypecheck",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        182,
+        286
+      ],
+      "name": "expectPortableFixtureToTypecheck",
+      "params": [
+        {
+          "name": "testCase",
+          "optional": false,
+          "type": "PortabilityCase"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function expectPortableFixtureToTypecheck(testCase: PortabilityCase) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:writeDescriptorAppFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        288,
+        299
+      ],
+      "name": "writeDescriptorAppFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly descriptor: ScenarioAppDescriptor;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeDescriptorAppFiles(input: {\r\n  readonly appRoot: string;\r\n  readonly descriptor: ScenarioAppDescriptor;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:copyCompiledVendorTypes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        301,
+        303
+      ],
+      "name": "copyCompiledVendorTypes",
+      "params": [
+        {
+          "name": "destRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyCompiledVendorTypes(destRoot: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/public-api-portability.scenario.test.ts:copyDtsRecursive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        305,
+        317
+      ],
+      "name": "copyDtsRecursive",
+      "params": [
+        {
+          "name": "src",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dest",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function copyDtsRecursive(src: string, dest: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

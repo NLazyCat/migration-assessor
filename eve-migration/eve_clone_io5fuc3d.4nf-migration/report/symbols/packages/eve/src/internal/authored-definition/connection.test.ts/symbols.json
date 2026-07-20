@@ -1,0 +1,61 @@
+{
+  "module": "packages/eve/src/internal/authored-definition/connection.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/connection.test.ts:MSG",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "MSG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/connection.test.ts:validInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        21
+      ],
+      "name": "validInput",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function validInput(overrides: Record<string, unknown>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/authored-definition/connection.test.ts:authProvider",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        28
+      ],
+      "name": "authProvider",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "ConnectionAuthDefinition | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionAuthProvider",
+      "signature": "export function authProvider(auth: ConnectionAuthDefinition | undefined) -> ConnectionAuthProvider",
+      "visibility": "Private"
+    }
+  ]
+}

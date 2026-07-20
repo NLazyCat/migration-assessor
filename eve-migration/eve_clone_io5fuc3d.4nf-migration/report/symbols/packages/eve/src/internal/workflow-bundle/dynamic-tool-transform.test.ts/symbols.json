@@ -1,0 +1,37 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/dynamic-tool-transform.test.ts:transformAndEval",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        19,
+        68
+      ],
+      "name": "transformAndEval",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handlerArgs",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  code: string;\r\n  registry: Map<string, Function>;\r\n  callHandler: () => Promise<Record<string, unknown>>;\r\n}>",
+      "signature": "export function transformAndEval(filename: string, source: string, handlerArgs: Record<string, unknown>) -> Promise<{\r\n  code: string;\r\n  registry: Map<string, Function>;\r\n  callHandler: () => Promise<Record<string, unknown>>;\r\n}>",
+      "visibility": "Private"
+    }
+  ]
+}

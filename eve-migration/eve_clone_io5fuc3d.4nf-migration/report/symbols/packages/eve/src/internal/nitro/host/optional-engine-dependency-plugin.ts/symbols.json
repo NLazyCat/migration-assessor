@@ -1,0 +1,66 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.ts:OPTIONAL_ENGINE_PACKAGES_BY_BACKEND_NAME",
+      "kind": "variable",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "OPTIONAL_ENGINE_PACKAGES_BY_BACKEND_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.ts:BundlerPluginShape:name",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.ts:BundlerPluginShape",
+      "kind": "interface",
+      "line_range": [
+        15,
+        21
+      ],
+      "name": "BundlerPluginShape",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/optional-engine-dependency-plugin.ts:createOptionalEngineDependencyPlugin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        51
+      ],
+      "name": "createOptionalEngineDependencyPlugin",
+      "params": [
+        {
+          "name": "unconfiguredPackages",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BundlerPluginShape | null",
+      "signature": "export function createOptionalEngineDependencyPlugin(unconfiguredPackages: readonly string[]) -> BundlerPluginShape | null",
+      "visibility": "Public"
+    }
+  ]
+}

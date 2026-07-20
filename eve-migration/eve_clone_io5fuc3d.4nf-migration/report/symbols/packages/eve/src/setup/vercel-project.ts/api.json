@@ -1,0 +1,522 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        44
+      ],
+      "name": "PickProjectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PickProjectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "allowCreateWhenEmpty",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "allowCreateWhenEmpty?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        46,
+        49
+      ],
+      "name": "PickTeamOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PickTeamOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "selectMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (currentTeam: string) => string",
+      "signature": "selectMessage?: : (currentTeam: string) => string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "LinkProjectOperationOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinkProjectOperationOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        55
+      ],
+      "name": "unresolvedProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function unresolvedProject() -> ProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        60
+      ],
+      "name": "projectIdFromResolution",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function projectIdFromResolution(project: ProjectResolution) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        71,
+        97
+      ],
+      "name": "resolveProjectByNameOrId",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectNameOrId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectIdentity | null>",
+      "signature": "export function resolveProjectByNameOrId(projectRoot: string, team: string, projectNameOrId: string, options: VercelProjectOperationOptions) -> Promise<VercelProjectIdentity | null>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        103,
+        113
+      ],
+      "name": "assertNewProjectNameAvailable",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function assertNewProjectNameAvailable(projectRoot: string, team: string, projectName: string, options: VercelProjectOperationOptions) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        121,
+        128
+      ],
+      "name": "requireVercelLogin",
+      "params": [
+        {
+          "name": "failure",
+          "optional": true,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function requireVercelLogin(failure: VercelCaptureFailure) -> never"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        169,
+        184
+      ],
+      "name": "requireVercelAuth",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function requireVercelAuth(failure: VercelCaptureFailure) -> never"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        193,
+        193
+      ],
+      "name": "VercelAuthStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelAuthStatus = \"authenticated\" | \"logged-out\" | \"cli-missing\" | \"unavailable\";"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        196,
+        211
+      ],
+      "name": "vercelAuthBlockerReason",
+      "params": [
+        {
+          "name": "authStatus",
+          "optional": false,
+          "type": "VercelAuthStatus"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function vercelAuthBlockerReason(authStatus: VercelAuthStatus) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        213,
+        222
+      ],
+      "name": "getVercelAuthStatus",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelAuthStatus>",
+      "signature": "export function getVercelAuthStatus(projectRoot: string, options: VercelProjectOperationOptions) -> Promise<VercelAuthStatus>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        229,
+        246
+      ],
+      "name": "requireAuth",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "prompter",
+          "optional": true,
+          "type": "Prompter"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function requireAuth(projectRoot: string, prompter: Prompter, options: VercelProjectOperationOptions) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        253,
+        258
+      ],
+      "name": "isVercelAuthenticated",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isVercelAuthenticated(projectRoot: string, options: VercelProjectOperationOptions) -> Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        277,
+        285
+      ],
+      "name": "resolveTeam",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveTeam(projectRoot: string, team: string | undefined, options: VercelProjectOperationOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        298,
+        312
+      ],
+      "name": "validateTeam",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function validateTeam(prompter: Prompter, projectRoot: string, team: string | undefined, options: VercelProjectOperationOptions) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        319,
+        348
+      ],
+      "name": "pickTeam",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "presetTeam",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "PickTeamOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function pickTeam(prompter: Prompter, projectRoot: string, presetTeam: string | undefined, options: PickTeamOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        394,
+        498
+      ],
+      "name": "pickProject",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "PickProjectOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedVercelProjectSpec>",
+      "signature": "export function pickProject(prompter: Prompter, projectRoot: string, team: string, options: PickProjectOptions) -> Promise<ResolvedVercelProjectSpec>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        501,
+        540
+      ],
+      "name": "pickNewProjectName",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "defaultProjectName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function pickNewProjectName(prompter: Prompter, projectRoot: string, team: string, defaultProjectName: string, options: VercelProjectOperationOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        550,
+        607
+      ],
+      "name": "linkProject",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "spec",
+          "optional": false,
+          "type": "ResolvedVercelProjectSpec"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ReturnType<typeof createPromptCommandOutput>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "LinkProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectIdentity | undefined>",
+      "signature": "export function linkProject(prompter: Prompter, projectRoot: string, spec: ResolvedVercelProjectSpec, onOutput: ReturnType<typeof createPromptCommandOutput>, options: LinkProjectOperationOptions) -> Promise<VercelProjectIdentity | undefined>"
+    }
+  ],
+  "module": "packages/eve/src/setup/vercel-project.ts"
+}

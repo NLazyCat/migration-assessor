@@ -1,0 +1,44 @@
+{
+  "ContextKey": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/runtime/framework-tools/todo.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/context/key.ts:ContextKey"
+    }
+  ],
+  "ResolvedToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 35,
+        "file": "packages/eve/src/runtime/framework-tools/todo.ts",
+        "line": 133
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedToolDefinition"
+    }
+  ],
+  "loadContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/runtime/framework-tools/todo.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 14,
+        "file": "packages/eve/src/runtime/framework-tools/todo.ts",
+        "line": 89
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    }
+  ]
+}

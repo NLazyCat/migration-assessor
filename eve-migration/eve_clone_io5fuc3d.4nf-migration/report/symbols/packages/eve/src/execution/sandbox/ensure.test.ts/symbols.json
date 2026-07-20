@@ -1,0 +1,113 @@
+{
+  "module": "packages/eve/src/execution/sandbox/ensure.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ensure.test.ts:mocks",
+      "kind": "variable",
+      "line_range": [
+        27,
+        31
+      ],
+      "name": "mocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ensure.test.ts:createTestRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        43,
+        62
+      ],
+      "name": "createTestRegistry",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "Partial<ResolvedSandboxDefinition>"
+        },
+        {
+          "name": "backend",
+          "optional": false,
+          "type": "SandboxBackend"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSandboxRegistry",
+      "signature": "export function createTestRegistry(definition: Partial<ResolvedSandboxDefinition>, backend: SandboxBackend) -> RuntimeSandboxRegistry",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ensure.test.ts:createBackend",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        80
+      ],
+      "name": "createBackend",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function createBackend() -> SandboxBackend",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ensure.test.ts:ensure",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        82,
+        99
+      ],
+      "name": "ensure",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource?: RuntimeCompiledArtifactsSource;\r\n  readonly runOnSession?: (callback: () => Promise<void>) => Promise<void>;\r\n  readonly registry: RuntimeSandboxRegistry;\r\n  readonly state?: SandboxState;\r\n  readonly tags?: Record<string, string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function ensure(input: {\r\n  readonly compiledArtifactsSource?: RuntimeCompiledArtifactsSource;\r\n  readonly runOnSession?: (callback: () => Promise<void>) => Promise<void>;\r\n  readonly registry: RuntimeSandboxRegistry;\r\n  readonly state?: SandboxState;\r\n  readonly tags?: Record<string, string>;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ensure.test.ts:createSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        116
+      ],
+      "name": "createSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Session",
+      "signature": "export function createSession() -> Session",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ensure.test.ts:createDeferred",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        387,
+        395
+      ],
+      "name": "createDeferred",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createDeferred() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

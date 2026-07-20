@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "DOCKER_BACKEND_NAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DOCKER_BACKEND_NAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        57,
+        61
+      ],
+      "name": "CreateDockerSandboxBackendInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateDockerSandboxBackendInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "createOptions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerSandboxCreateOptions",
+      "signature": "createOptions?: : DockerSandboxCreateOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "dockerCli",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerCli",
+      "signature": "dockerCli?: : DockerCli"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        287
+      ],
+      "name": "createDockerSandboxBackend",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateDockerSandboxBackendInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function createDockerSandboxBackend(input: CreateDockerSandboxBackendInput) -> SandboxBackend"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/docker.ts"
+}

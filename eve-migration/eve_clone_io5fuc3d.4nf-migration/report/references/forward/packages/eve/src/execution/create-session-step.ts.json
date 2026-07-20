@@ -1,0 +1,110 @@
+{
+  "DurableCompiledArtifactsSource": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 36,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 32
+      },
+      "symbol": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:DurableCompiledArtifactsSource"
+    }
+  ],
+  "DurableSessionState": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 22
+      },
+      "symbol": "packages/eve/src/execution/durable-session-store.ts:DurableSessionState"
+    }
+  ],
+  "JsonObject": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 35
+      },
+      "symbol": "packages/eve/src/shared/json.ts:JsonObject"
+    }
+  ],
+  "RunSessionLimits": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 34
+      },
+      "symbol": "packages/eve/src/channel/types.ts:RunSessionLimits"
+    }
+  ],
+  "createDurableSessionState": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 77
+      },
+      "symbol": "packages/eve/src/execution/durable-session-store.ts:createDurableSessionState"
+    }
+  ],
+  "createSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 18,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/execution/session.ts:createSession"
+    }
+  ],
+  "getCompiledRuntimeAgentBundle": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 43
+      },
+      "symbol": "packages/eve/src/runtime/sessions/compiled-agent-cache.ts:getCompiledRuntimeAgentBundle"
+    }
+  ],
+  "resolveDurableCompiledArtifactsSource": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 44
+      },
+      "symbol": "packages/eve/src/runtime/durable-compiled-artifacts-source.ts:resolveDurableCompiledArtifactsSource"
+    }
+  ],
+  "resolveInheritedTokenLimit": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 60
+      },
+      "symbol": "packages/eve/src/execution/run-session-limits.ts:resolveInheritedTokenLimit"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 33,
+        "file": "packages/eve/src/execution/create-session-step.ts",
+        "line": 64
+      },
+      "symbol": "packages/eve/src/execution/run-session-limits.ts:resolveInheritedTokenLimit"
+    }
+  ]
+}

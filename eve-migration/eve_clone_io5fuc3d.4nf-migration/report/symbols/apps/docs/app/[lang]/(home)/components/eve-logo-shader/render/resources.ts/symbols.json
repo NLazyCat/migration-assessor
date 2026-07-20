@@ -1,0 +1,96 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts:createResources",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        153
+      ],
+      "name": "createResources",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "format",
+          "optional": false,
+          "type": "GPUTextureFormat"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    thicknessScale?: number;\r\n    theme?: \"light\" | \"dark\";\r\n    paddingRadius?: number;\r\n    bloom?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createResources(device: Device, format: GPUTextureFormat, mesh: MeshData, options: {\r\n    thicknessScale?: number;\r\n    theme?: \"light\" | \"dark\";\r\n    paddingRadius?: number;\r\n    bloom?: boolean;\r\n  }) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts:RendererResources",
+      "kind": "type_alias",
+      "line_range": [
+        155,
+        155
+      ],
+      "name": "RendererResources",
+      "partial_analysis": false,
+      "value": "ReturnType<typeof createResources>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts:destroyParamsBinding",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        157,
+        171
+      ],
+      "name": "destroyParamsBinding",
+      "params": [
+        {
+          "name": "binding",
+          "optional": false,
+          "type": "{\r\n  buffer: { destroy(): void };\r\n  fallbackBackMaterial?: GPUTexture;\r\n  fallbackBackDepth?: GPUTexture;\r\n  fallbackPaint?: GPUTexture;\r\n  fallbackVoronoiValue?: GPUTexture;\r\n  fallbackVoronoiEdge?: GPUTexture;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function destroyParamsBinding(binding: {\r\n  buffer: { destroy(): void };\r\n  fallbackBackMaterial?: GPUTexture;\r\n  fallbackBackDepth?: GPUTexture;\r\n  fallbackPaint?: GPUTexture;\r\n  fallbackVoronoiValue?: GPUTexture;\r\n  fallbackVoronoiEdge?: GPUTexture;\r\n}) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts:disposeResources",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        173,
+        190
+      ],
+      "name": "disposeResources",
+      "params": [
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function disposeResources(resources: RendererResources) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

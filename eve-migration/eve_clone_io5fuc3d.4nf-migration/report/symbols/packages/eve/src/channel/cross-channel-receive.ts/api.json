@@ -1,0 +1,196 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TTarget"
+      ],
+      "kind": "interface",
+      "line_range": [
+        17,
+        21
+      ],
+      "name": "CrossChannelReceiveOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CrossChannelReceiveOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | UserContent",
+      "signature": "message: : string | UserContent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "target",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TTarget",
+      "signature": "target: : TTarget"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionAuthContext | null",
+      "signature": "auth: : SessionAuthContext | null"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "CrossChannelReceiveFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CrossChannelReceiveFn = <TChannel>(\r\n  channel: TChannel,\r\n  options: CrossChannelReceiveOptions<InferReceiveTarget<TChannel>>,\r\n) => Promise<Session>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        44
+      ],
+      "name": "CrossChannelTarget",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CrossChannelTarget { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "definition",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledChannel",
+      "signature": "definition: : CompiledChannel"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "receive",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledChannel[\"receive\"]",
+      "signature": "receive?: : CompiledChannel[\"receive\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "adapter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelAdapter",
+      "signature": "adapter?: : ChannelAdapter"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        68
+      ],
+      "name": "toCrossChannelTargets",
+      "params": [
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly ResolvedChannelDefinition[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly CrossChannelTarget[]",
+      "signature": "export function toCrossChannelTargets(channels: readonly ResolvedChannelDefinition[]) -> readonly CrossChannelTarget[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        97
+      ],
+      "name": "createCrossChannelReceiveFn",
+      "params": [
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "Runtime"
+        },
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly CrossChannelTarget[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CrossChannelReceiveFn",
+      "signature": "export function createCrossChannelReceiveFn(runtime: Runtime, channels: readonly CrossChannelTarget[]) -> CrossChannelReceiveFn"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        117,
+        126
+      ],
+      "name": "invokeChannelReceive",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "InvokeChannelReceiveInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Session>",
+      "signature": "export function invokeChannelReceive(args: InvokeChannelReceiveInput) -> Promise<Session>"
+    }
+  ],
+  "module": "packages/eve/src/channel/cross-channel-receive.ts"
+}

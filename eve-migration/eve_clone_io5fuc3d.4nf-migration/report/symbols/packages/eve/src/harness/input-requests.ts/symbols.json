@@ -1,0 +1,836 @@
+{
+  "module": "packages/eve/src/harness/input-requests.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:PENDING_INPUT_BATCH_KEY",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "PENDING_INPUT_BATCH_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:APPROVED_TOOLS_KEY",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "APPROVED_TOOLS_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:DEFERRED_STEP_INPUT_KEY",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DEFERRED_STEP_INPUT_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:IGNORED_INPUT_REASON",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "IGNORED_INPUT_REASON",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:TOOL_EXECUTION_DENIED_CODE",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "TOOL_EXECUTION_DENIED_CODE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:TOOL_EXECUTION_DENIED_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "TOOL_EXECUTION_DENIED_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:TOOL_EXECUTION_INVALID_APPROVAL_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "TOOL_EXECUTION_INVALID_APPROVAL_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:ToolResponsePart",
+      "kind": "type_alias",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "ToolResponsePart",
+      "partial_analysis": false,
+      "value": "Extract<ModelMessage, { role: \"tool\" }>[\"content\"][number];",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatchEvent:sequence",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "sequence",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatchEvent:stepIndex",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "stepIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatchEvent:turnId",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatchEvent",
+      "kind": "interface",
+      "line_range": [
+        33,
+        37
+      ],
+      "name": "PendingInputBatchEvent",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatch:event",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "event",
+          "partial_analysis": false,
+          "return_type": ": PendingInputBatchEvent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatch:requests",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "requests",
+          "partial_analysis": false,
+          "return_type": ": readonly InputRequest[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatch:responseMessages",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "responseMessages",
+          "partial_analysis": false,
+          "return_type": ": readonly ModelMessage[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/input-requests.ts:PendingInputBatch",
+      "kind": "interface",
+      "line_range": [
+        42,
+        46
+      ],
+      "name": "PendingInputBatch",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:RejectedActionBatch:event",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "event",
+          "partial_analysis": false,
+          "return_type": ": PendingInputBatchEvent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/input-requests.ts:RejectedActionBatch:results",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "results",
+          "partial_analysis": false,
+          "return_type": ": readonly RuntimeToolResultActionResult[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/input-requests.ts:RejectedActionBatch",
+      "kind": "interface",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "RejectedActionBatch",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:ApprovalTerminalStatus",
+      "kind": "type_alias",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "ApprovalTerminalStatus",
+      "partial_analysis": false,
+      "value": "\"approved\" | \"denied\" | \"ignored\" | \"invalid\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:hasStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        68
+      ],
+      "name": "hasStepInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": true,
+          "type": "StepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasStepInput(input: StepInput) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:consumeDeferredStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        107
+      ],
+      "name": "consumeDeferredStepInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}",
+      "signature": "export function consumeDeferredStepInput(input: {\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}) -> {\r\n  readonly input?: StepInput;\r\n  readonly session: HarnessSession;\r\n}",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:hasDeferredStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        115
+      ],
+      "name": "hasDeferredStepInput",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasDeferredStepInput(session: HarnessSession) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:resolvePendingInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        132,
+        248
+      ],
+      "name": "resolvePendingInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly history?: readonly ModelMessage[];\r\n  readonly resolveApprovalKey?: (request: InputRequest) => string | undefined;\r\n  readonly session: HarnessSession;\r\n  readonly stepInput?: StepInput;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvePendingInputResult",
+      "signature": "export function resolvePendingInput(input: {\r\n  readonly history?: readonly ModelMessage[];\r\n  readonly resolveApprovalKey?: (request: InputRequest) => string | undefined;\r\n  readonly session: HarnessSession;\r\n  readonly stepInput?: StepInput;\r\n}) -> ResolvePendingInputResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:resolveTextMessageInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        250,
+        269
+      ],
+      "name": "resolveTextMessageInput",
+      "params": [
+        {
+          "name": "pendingBatch",
+          "optional": false,
+          "type": "PendingInputBatch"
+        },
+        {
+          "name": "stepInput",
+          "optional": false,
+          "type": "StepInput | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(StepInput & { readonly messageConsumed?: boolean }) | undefined",
+      "signature": "export function resolveTextMessageInput(pendingBatch: PendingInputBatch, stepInput: StepInput | undefined) -> (StepInput & { readonly messageConsumed?: boolean }) | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:compactStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        271,
+        303
+      ],
+      "name": "compactStepInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "(StepInput & { readonly messageConsumed?: boolean }) | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepInput & { readonly messageConsumed?: boolean }",
+      "signature": "export function compactStepInput(input: (StepInput & { readonly messageConsumed?: boolean }) | undefined) -> StepInput & { readonly messageConsumed?: boolean }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:hasUnansweredApproval",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        305,
+        313
+      ],
+      "name": "hasUnansweredApproval",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly pendingBatch: PendingInputBatch;\r\n  readonly responses: readonly InputResponse[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasUnansweredApproval(input: {\r\n  readonly pendingBatch: PendingInputBatch;\r\n  readonly responses: readonly InputResponse[];\r\n}) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:ResolvePendingInputResult",
+      "kind": "type_alias",
+      "line_range": [
+        315,
+        329
+      ],
+      "name": "ResolvePendingInputResult",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly consumedMessage?: boolean;\r\n  readonly deferredContext?: boolean;\r\n  readonly deferredMessage?: boolean;\r\n  /**\r\n   * Present when the resolved batch answered a session-limit continuation\r\n   * prompt. The tool loop grants a fresh token budget window or terminates\r\n   * the session based on `granted`.\r\n   */\r\n  readonly limitContinuation?: { readonly granted: boolean };\r\n  readonly outcome: \"resolved\" | \"continue\" | \"unresolved\";\r\n  readonly messages: ModelMessage[];\r\n  readonly rejectedActions?: RejectedActionBatch;\r\n  readonly session: HarnessSession;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:hasPendingInputBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        339,
+        341
+      ],
+      "name": "hasPendingInputBatch",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasPendingInputBatch(state: SessionStateMap | undefined) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:getPendingInputRequestIds",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        346,
+        348
+      ],
+      "name": "getPendingInputRequestIds",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getPendingInputRequestIds(state: SessionStateMap | undefined) -> ReadonlySet<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:getPendingInputBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        350,
+        364
+      ],
+      "name": "getPendingInputBatch",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PendingInputBatch | undefined",
+      "signature": "export function getPendingInputBatch(state: SessionStateMap | undefined) -> PendingInputBatch | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:setPendingInputBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        369,
+        383
+      ],
+      "name": "setPendingInputBatch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly event?: PendingInputBatchEvent;\r\n  readonly requests: readonly InputRequest[];\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setPendingInputBatch(input: {\r\n  readonly event?: PendingInputBatchEvent;\r\n  readonly requests: readonly InputRequest[];\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:clearPendingInputBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        385,
+        394
+      ],
+      "name": "clearPendingInputBatch",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function clearPendingInputBatch(session: HarnessSession) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:getDeferredStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        400,
+        402
+      ],
+      "name": "getDeferredStepInput",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepInput | undefined",
+      "signature": "export function getDeferredStepInput(session: HarnessSession) -> StepInput | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:queueDeferredStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        404,
+        414
+      ],
+      "name": "queueDeferredStepInput",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "StepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function queueDeferredStepInput(session: HarnessSession, input: StepInput) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:clearDeferredStepInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        416,
+        428
+      ],
+      "name": "clearDeferredStepInput",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function clearDeferredStepInput(session: HarnessSession) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:getApprovedTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        438,
+        446
+      ],
+      "name": "getApprovedTools",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadonlySet<string>",
+      "signature": "export function getApprovedTools(session: HarnessSession) -> ReadonlySet<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:recordApprovedTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        453,
+        477
+      ],
+      "name": "recordApprovedTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly pendingBatch: PendingInputBatch;\r\n  readonly resolveApprovalKey?: (request: InputRequest) => string | undefined;\r\n  readonly responses: readonly InputResponse[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function recordApprovedTools(input: {\r\n  readonly pendingBatch: PendingInputBatch;\r\n  readonly resolveApprovalKey?: (request: InputRequest) => string | undefined;\r\n  readonly responses: readonly InputResponse[];\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:resolveApprovalOutcome",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        487,
+        521
+      ],
+      "name": "resolveApprovalOutcome",
+      "params": [
+        {
+          "name": "response",
+          "optional": false,
+          "type": "InputResponse | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly approved: boolean;\r\n  readonly reason: string | undefined;\r\n  readonly status: ApprovalTerminalStatus;\r\n}",
+      "signature": "export function resolveApprovalOutcome(response: InputResponse | undefined) -> {\r\n  readonly approved: boolean;\r\n  readonly reason: string | undefined;\r\n  readonly status: ApprovalTerminalStatus;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:buildRejectedActionBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        527,
+        567
+      ],
+      "name": "buildRejectedActionBatch",
+      "params": [
+        {
+          "name": "batch",
+          "optional": false,
+          "type": "PendingInputBatch"
+        },
+        {
+          "name": "responses",
+          "optional": false,
+          "type": "readonly InputResponse[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RejectedActionBatch | undefined",
+      "signature": "export function buildRejectedActionBatch(batch: PendingInputBatch, responses: readonly InputResponse[]) -> RejectedActionBatch | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:buildToolResponseParts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        569,
+        580
+      ],
+      "name": "buildToolResponseParts",
+      "params": [
+        {
+          "name": "batch",
+          "optional": false,
+          "type": "PendingInputBatch"
+        },
+        {
+          "name": "responses",
+          "optional": false,
+          "type": "readonly InputResponse[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolResponsePart[]",
+      "signature": "export function buildToolResponseParts(batch: PendingInputBatch, responses: readonly InputResponse[]) -> ToolResponsePart[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:buildToolResponsePartsForRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        582,
+        644
+      ],
+      "name": "buildToolResponsePartsForRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        },
+        {
+          "name": "response",
+          "optional": false,
+          "type": "InputResponse | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolResponsePart[]",
+      "signature": "export function buildToolResponsePartsForRequest(request: InputRequest, response: InputResponse | undefined) -> ToolResponsePart[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:isApprovalRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        647,
+        653
+      ],
+      "name": "isApprovalRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isApprovalRequest(request: InputRequest) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:createRuntimeToolCallActionFromToolCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        662,
+        678
+      ],
+      "name": "createRuntimeToolCallActionFromToolCall",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly toolCall: {\r\n    readonly input: unknown;\r\n    readonly toolCallId: string;\r\n    readonly toolName: string;\r\n  };\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolCallActionRequest",
+      "signature": "export function createRuntimeToolCallActionFromToolCall(input: {\r\n  readonly toolCall: {\r\n    readonly input: unknown;\r\n    readonly toolCallId: string;\r\n    readonly toolName: string;\r\n  };\r\n}) -> RuntimeToolCallActionRequest",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/input-requests.ts:resolveToolCallInputObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        680,
+        697
+      ],
+      "name": "resolveToolCallInputObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "{ readonly callId: string; readonly toolName: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject",
+      "signature": "export function resolveToolCallInputObject(value: unknown, context: { readonly callId: string; readonly toolName: string }) -> JsonObject",
+      "visibility": "Private"
+    }
+  ]
+}

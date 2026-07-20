@@ -1,0 +1,113 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "WorkflowWorldManifest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WorkflowWorldManifest { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "dependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "dependencies?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "peerDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "peerDependencies?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "AssertWorkflowWorldCompatibilityInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AssertWorkflowWorldCompatibilityInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "worldPackageName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "worldPackageName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "worldManifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WorkflowWorldManifest",
+      "signature": "worldManifest: : WorkflowWorldManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "expectedWorkflowVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "expectedWorkflowVersion: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        123
+      ],
+      "name": "assertWorkflowWorldCompatibility",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "AssertWorkflowWorldCompatibilityInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertWorkflowWorldCompatibility(input: AssertWorkflowWorldCompatibilityInput) -> void"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow/world-compatibility.ts"
+}

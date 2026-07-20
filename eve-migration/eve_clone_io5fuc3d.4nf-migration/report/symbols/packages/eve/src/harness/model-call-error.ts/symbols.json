@@ -1,0 +1,1108 @@
+{
+  "module": "packages/eve/src/harness/model-call-error.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:RESPONSE_BODY_SNIPPET_LIMIT",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "RESPONSE_BODY_SNIPPET_LIMIT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:API_ERROR_SUMMARY_LIMIT",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "API_ERROR_SUMMARY_LIMIT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:GATEWAY_MODEL_REQUEST_REJECTED_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        8,
+        9
+      ],
+      "name": "GATEWAY_MODEL_REQUEST_REJECTED_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:GATEWAY_AUTHENTICATION_ERROR_NAME",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "GATEWAY_AUTHENTICATION_ERROR_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:GATEWAY_AUTH_FAILURE_SUMMARY_NAME",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "GATEWAY_AUTH_FAILURE_SUMMARY_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:UNSUPPORTED_TOOL_TYPE_REGEX",
+      "kind": "variable",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "UNSUPPORTED_TOOL_TYPE_REGEX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallConfigErrorSummary:name",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallConfigErrorSummary:message",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/model-call-error.ts:ModelCallConfigErrorSummary",
+      "kind": "interface",
+      "line_range": [
+        46,
+        49
+      ],
+      "name": "ModelCallConfigErrorSummary",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:apiCallError",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "apiCallError",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:apiErrorMessage",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "apiErrorMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:gatewayName",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "gatewayName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:gatewayType",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "gatewayType",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:generationId",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "generationId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:responseBodySnippet",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "responseBodySnippet",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:statusCode",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "statusCode",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:upstreamMessage",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "upstreamMessage",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:upstreamStatusCode",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "upstreamStatusCode",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals:upstreamType",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "upstreamType",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/model-call-error.ts:ModelCallErrorSignals",
+      "kind": "interface",
+      "line_range": [
+        51,
+        62
+      ],
+      "name": "ModelCallErrorSignals",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:summarizeKnownModelCallConfigError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        115
+      ],
+      "name": "summarizeKnownModelCallConfigError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelCallConfigErrorSummary | null",
+      "signature": "export function summarizeKnownModelCallConfigError(error: unknown) -> ModelCallConfigErrorSummary | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:summarizeKnownModelCallRequestError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        122,
+        171
+      ],
+      "name": "summarizeKnownModelCallRequestError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelCallConfigErrorSummary | null",
+      "signature": "export function summarizeKnownModelCallRequestError(error: unknown) -> ModelCallConfigErrorSummary | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isTransientHttpStatus",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        173,
+        175
+      ],
+      "name": "isTransientHttpStatus",
+      "params": [
+        {
+          "name": "status",
+          "optional": false,
+          "type": "number | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isTransientHttpStatus(status: number | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:extractUnsupportedProviderToolTypes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        192,
+        216
+      ],
+      "name": "extractUnsupportedProviderToolTypes",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function extractUnsupportedProviderToolTypes(error: unknown) -> readonly string[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:collectUnsupportedToolTypesFromValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        218,
+        241
+      ],
+      "name": "collectUnsupportedToolTypesFromValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "out",
+          "optional": false,
+          "type": "Set<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function collectUnsupportedToolTypesFromValue(value: unknown, out: Set<string>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:extractModelCallErrorDetails",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        249,
+        264
+      ],
+      "name": "extractModelCallErrorDetails",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject",
+      "signature": "export function extractModelCallErrorDetails(error: unknown) -> JsonObject",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readErrorName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        266,
+        274
+      ],
+      "name": "readErrorName",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readErrorName(error: unknown) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readErrorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        276,
+        284
+      ],
+      "name": "readErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function readErrorMessage(error: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/model-call-error.ts:EmptyModelResponseError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            300,
+            303
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "options",
+              "optional": true,
+              "type": "{ cause?: unknown }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/model-call-error.ts:EmptyModelResponseError",
+      "kind": "class",
+      "line_range": [
+        299,
+        304
+      ],
+      "name": "EmptyModelResponseError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:normalizeModelStreamError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        310,
+        319
+      ],
+      "name": "normalizeModelStreamError",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function normalizeModelStreamError(raw: unknown) -> Error",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isNoOutputGeneratedError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        331,
+        338
+      ],
+      "name": "isNoOutputGeneratedError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNoOutputGeneratedError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:classifyModelCallError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        343,
+        396
+      ],
+      "name": "classifyModelCallError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "\"retry\" | \"recoverable\" | \"terminal\"",
+      "signature": "export function classifyModelCallError(error: unknown) -> \"retry\" | \"recoverable\" | \"terminal\"",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:hasRetryableFlag",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        398,
+        405
+      ],
+      "name": "hasRetryableFlag",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasRetryableFlag(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isLikelyNetworkError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        407,
+        424
+      ],
+      "name": "isLikelyNetworkError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLikelyNetworkError(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readModelCallErrorSignals",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        426,
+        450
+      ],
+      "name": "readModelCallErrorSignals",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelCallErrorSignals",
+      "signature": "export function readModelCallErrorSignals(error: unknown) -> ModelCallErrorSignals",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:findGatewayError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        452,
+        461
+      ],
+      "name": "findGatewayError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function findGatewayError(error: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:findUpstreamApiCallError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        463,
+        476
+      ],
+      "name": "findUpstreamApiCallError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function findUpstreamApiCallError(error: unknown) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readGatewayErrorBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        478,
+        501
+      ],
+      "name": "readGatewayErrorBody",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "| {\r\n      readonly apiErrorMessage?: string;\r\n      readonly generationId?: string;\r\n      readonly message?: string;\r\n      readonly type?: string;\r\n    }\r\n  | undefined",
+      "signature": "export function readGatewayErrorBody(error: unknown) -> | {\r\n      readonly apiErrorMessage?: string;\r\n      readonly generationId?: string;\r\n      readonly message?: string;\r\n      readonly type?: string;\r\n    }\r\n  | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readGatewayErrorBodyFromValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        503,
+        527
+      ],
+      "name": "readGatewayErrorBodyFromValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "| {\r\n      readonly apiErrorMessage?: string;\r\n      readonly generationId?: string;\r\n      readonly message?: string;\r\n      readonly type?: string;\r\n    }\r\n  | undefined",
+      "signature": "export function readGatewayErrorBodyFromValue(value: unknown) -> | {\r\n      readonly apiErrorMessage?: string;\r\n      readonly generationId?: string;\r\n      readonly message?: string;\r\n      readonly type?: string;\r\n    }\r\n  | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readStatusCode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        529,
+        532
+      ],
+      "name": "readStatusCode",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readStatusCode(error: unknown) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:findStatusCode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        534,
+        542
+      ],
+      "name": "findStatusCode",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function findStatusCode(error: unknown) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readStringField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        544,
+        548
+      ],
+      "name": "readStringField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readStringField(value: unknown, key: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readObjectField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        550,
+        554
+      ],
+      "name": "readObjectField",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown> | undefined",
+      "signature": "export function readObjectField(value: unknown, key: string) -> Record<string, unknown> | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:readNestedApiErrorMessages",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        556,
+        568
+      ],
+      "name": "readNestedApiErrorMessages",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function readNestedApiErrorMessages(value: unknown) -> readonly string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:appendNestedApiFieldMessages",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        570,
+        581
+      ],
+      "name": "appendNestedApiFieldMessages",
+      "params": [
+        {
+          "name": "out",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function appendNestedApiFieldMessages(out: string[], value: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:appendString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        583,
+        585
+      ],
+      "name": "appendString",
+      "params": [
+        {
+          "name": "out",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function appendString(out: string[], value: string | undefined) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:firstInformativeApiMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        587,
+        594
+      ],
+      "name": "firstInformativeApiMessage",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly (string | undefined)[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function firstInformativeApiMessage(messages: readonly (string | undefined)[]) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isInformativeApiMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        596,
+        605
+      ],
+      "name": "isInformativeApiMessage",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isInformativeApiMessage(message: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:formatApiCallErrorFallback",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        607,
+        626
+      ],
+      "name": "formatApiCallErrorFallback",
+      "params": [
+        {
+          "name": "signals",
+          "optional": false,
+          "type": "ModelCallErrorSignals"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatApiCallErrorFallback(signals: ModelCallErrorSignals) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isRetryableGatewayType",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        628,
+        630
+      ],
+      "name": "isRetryableGatewayType",
+      "params": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRetryableGatewayType(type: string | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isTerminalGatewayType",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        632,
+        638
+      ],
+      "name": "isTerminalGatewayType",
+      "params": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isTerminalGatewayType(type: string | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isGatewayErrorSignal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        640,
+        642
+      ],
+      "name": "isGatewayErrorSignal",
+      "params": [
+        {
+          "name": "signals",
+          "optional": false,
+          "type": "ModelCallErrorSignals"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isGatewayErrorSignal(signals: ModelCallErrorSignals) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:isAmbiguousGatewayInternalBadRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        644,
+        651
+      ],
+      "name": "isAmbiguousGatewayInternalBadRequest",
+      "params": [
+        {
+          "name": "signals",
+          "optional": false,
+          "type": "ModelCallErrorSignals"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAmbiguousGatewayInternalBadRequest(signals: ModelCallErrorSignals) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:walkCauseChain",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        653,
+        661
+      ],
+      "name": "walkCauseChain",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Generator<unknown>",
+      "signature": "export function walkCauseChain(error: unknown) -> Generator<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:appendJsonField",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        663,
+        671
+      ],
+      "name": "appendJsonField",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "Record<string, JsonValue>"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function appendJsonField(target: Record<string, JsonValue>, key: string, value: unknown) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/model-call-error.ts:truncateSnippet",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        673,
+        678
+      ],
+      "name": "truncateSnippet",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "maxLength",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function truncateSnippet(value: string, maxLength: number) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

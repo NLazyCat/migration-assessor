@@ -1,0 +1,543 @@
+{
+  "module": "packages/eve/src/harness/runtime-actions.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:PENDING_RUNTIME_ACTION_BATCH_KEY",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "PENDING_RUNTIME_ACTION_BATCH_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:ToolResponsePart",
+      "kind": "type_alias",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "ToolResponsePart",
+      "partial_analysis": false,
+      "value": "Extract<ModelMessage, { role: \"tool\" }>[\"content\"][number];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:ToolResultPart",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "ToolResultPart",
+      "partial_analysis": false,
+      "value": "Extract<ToolResponsePart, { type: \"tool-result\" }>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionEventMetadata:sequence",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "sequence",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionEventMetadata:stepIndex",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "stepIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionEventMetadata:turnId",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionEventMetadata",
+      "kind": "interface",
+      "line_range": [
+        31,
+        35
+      ],
+      "name": "PendingRuntimeActionEventMetadata",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionBatch:actions",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "actions",
+          "partial_analysis": false,
+          "return_type": ": readonly RuntimeActionRequest[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionBatch:childContinuationTokens",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "childContinuationTokens",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionBatch:childSessionIds",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "childSessionIds",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionBatch:event",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "event",
+          "partial_analysis": false,
+          "return_type": ": PendingRuntimeActionEventMetadata",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionBatch:responseMessages",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "responseMessages",
+          "partial_analysis": false,
+          "return_type": ": readonly ModelMessage[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/runtime-actions.ts:PendingRuntimeActionBatch",
+      "kind": "interface",
+      "line_range": [
+        44,
+        50
+      ],
+      "name": "PendingRuntimeActionBatch",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:ResolvePendingRuntimeActionsResult:messages",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "messages",
+          "partial_analysis": false,
+          "return_type": ": ModelMessage[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:ResolvePendingRuntimeActionsResult:outcome",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "outcome",
+          "partial_analysis": false,
+          "return_type": ": \"continue\" | \"resolved\" | \"unresolved\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/runtime-actions.ts:ResolvePendingRuntimeActionsResult:session",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": HarnessSession",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/runtime-actions.ts:ResolvePendingRuntimeActionsResult",
+      "kind": "interface",
+      "line_range": [
+        55,
+        59
+      ],
+      "name": "ResolvePendingRuntimeActionsResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:getPendingRuntimeActionBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        83
+      ],
+      "name": "getPendingRuntimeActionBatch",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PendingRuntimeActionBatch | undefined",
+      "signature": "export function getPendingRuntimeActionBatch(state: SessionStateMap | undefined) -> PendingRuntimeActionBatch | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:hasPendingRuntimeActionBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        88,
+        90
+      ],
+      "name": "hasPendingRuntimeActionBatch",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasPendingRuntimeActionBatch(state: SessionStateMap | undefined) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:clearPendingRuntimeActionBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        99
+      ],
+      "name": "clearPendingRuntimeActionBatch",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function clearPendingRuntimeActionBatch(session: HarnessSession) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:setPendingRuntimeActionBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        118
+      ],
+      "name": "setPendingRuntimeActionBatch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly actions: readonly RuntimeActionRequest[];\r\n  readonly event: PendingRuntimeActionEventMetadata;\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setPendingRuntimeActionBatch(input: {\r\n  readonly actions: readonly RuntimeActionRequest[];\r\n  readonly event: PendingRuntimeActionEventMetadata;\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:PendingSubagentChildIdentity",
+      "kind": "type_alias",
+      "line_range": [
+        120,
+        129
+      ],
+      "name": "PendingSubagentChildIdentity",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly continuationToken: string;\r\n      readonly kind: \"local\";\r\n      readonly sessionId: string;\r\n    }\r\n  | {\r\n      readonly kind: \"remote\";\r\n      readonly sessionId: string;\r\n    };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:recordPendingSubagentChild",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        132,
+        161
+      ],
+      "name": "recordPendingSubagentChild",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callId: string;\r\n  readonly child: PendingSubagentChildIdentity;\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function recordPendingSubagentChild(input: {\r\n  readonly callId: string;\r\n  readonly child: PendingSubagentChildIdentity;\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:resolveReadyRuntimeActionResults",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        168,
+        179
+      ],
+      "name": "resolveReadyRuntimeActionResults",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly results: readonly RuntimeActionResult[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionResult[] | undefined",
+      "signature": "export function resolveReadyRuntimeActionResults(input: {\r\n  readonly results: readonly RuntimeActionResult[];\r\n  readonly session: HarnessSession;\r\n}) -> RuntimeActionResult[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:resolveRuntimeActionResultsForBatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        181,
+        189
+      ],
+      "name": "resolveRuntimeActionResultsForBatch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly batch: PendingRuntimeActionBatch;\r\n  readonly results: readonly RuntimeActionResult[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionResult[] | undefined",
+      "signature": "export function resolveRuntimeActionResultsForBatch(input: {\r\n  readonly batch: PendingRuntimeActionBatch;\r\n  readonly results: readonly RuntimeActionResult[];\r\n}) -> RuntimeActionResult[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:resolveRuntimeActionResultsForKeys",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        192,
+        222
+      ],
+      "name": "resolveRuntimeActionResultsForKeys",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly pendingKeys: readonly string[];\r\n  readonly results: readonly RuntimeActionResult[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionResult[] | undefined",
+      "signature": "export function resolveRuntimeActionResultsForKeys(input: {\r\n  readonly pendingKeys: readonly string[];\r\n  readonly results: readonly RuntimeActionResult[];\r\n}) -> RuntimeActionResult[] | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:resolvePendingRuntimeActions",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        232,
+        367
+      ],
+      "name": "resolvePendingRuntimeActions",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly emit?: HarnessEmitFn;\r\n  readonly session: HarnessSession;\r\n  readonly stepInput?: StepInput;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvePendingRuntimeActionsResult>",
+      "signature": "export function resolvePendingRuntimeActions(input: {\r\n  readonly emit?: HarnessEmitFn;\r\n  readonly session: HarnessSession;\r\n  readonly stepInput?: StepInput;\r\n}) -> Promise<ResolvePendingRuntimeActionsResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:createRuntimeActionRequestFromToolCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        372,
+        417
+      ],
+      "name": "createRuntimeActionRequestFromToolCall",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly toolCall: TypedToolCall<ToolSet>;\r\n  readonly tools: HarnessToolMap;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionRequest",
+      "signature": "export function createRuntimeActionRequestFromToolCall(input: {\r\n  readonly toolCall: TypedToolCall<ToolSet>;\r\n  readonly tools: HarnessToolMap;\r\n}) -> RuntimeActionRequest",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:resolveToolCallInputObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        424,
+        444
+      ],
+      "name": "resolveToolCallInputObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "{ readonly callId: string; readonly toolName: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonObject",
+      "signature": "export function resolveToolCallInputObject(value: unknown, context: { readonly callId: string; readonly toolName: string }) -> JsonObject",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:toToolResultOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        446,
+        472
+      ],
+      "name": "toToolResultOutput",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "RuntimeActionResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolResultPart[\"output\"]",
+      "signature": "export function toToolResultOutput(result: RuntimeActionResult) -> ToolResultPart[\"output\"]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:toMutableJsonValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        474,
+        495
+      ],
+      "name": "toMutableJsonValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "RuntimeActionResult[\"output\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MutableJsonValue",
+      "signature": "export function toMutableJsonValue(value: RuntimeActionResult[\"output\"]) -> MutableJsonValue",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/runtime-actions.ts:MutableJsonValue",
+      "kind": "type_alias",
+      "line_range": [
+        497,
+        503
+      ],
+      "name": "MutableJsonValue",
+      "partial_analysis": false,
+      "value": "| null\r\n  | boolean\r\n  | number\r\n  | string\r\n  | MutableJsonValue[]\r\n  | { [key: string]: MutableJsonValue };",
+      "visibility": "Private"
+    }
+  ]
+}

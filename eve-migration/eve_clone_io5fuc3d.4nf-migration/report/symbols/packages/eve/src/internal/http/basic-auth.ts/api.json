@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        1,
+        6
+      ],
+      "name": "encodeBasicCredentials",
+      "params": [
+        {
+          "name": "username",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function encodeBasicCredentials(username: string, password: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/internal/http/basic-auth.ts"
+}

@@ -1,0 +1,348 @@
+{
+  "module": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TURN_WORKFLOW_INPUT_VERSION",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "TURN_WORKFLOW_INPUT_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnStepInput:abortSignal",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "abortSignal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnStepInput:input",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": HookPayload | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnStepInput:parentWritable",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "parentWritable",
+          "partial_analysis": false,
+          "return_type": ": WritableStream<Uint8Array>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnStepInput:serializedContext",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "serializedContext",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnStepInput:sessionState",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "sessionState",
+          "partial_analysis": false,
+          "return_type": ": DurableSessionState",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnStepInput",
+      "kind": "interface",
+      "line_range": [
+        22,
+        29
+      ],
+      "name": "TurnStepInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput:version",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": typeof TURN_WORKFLOW_INPUT_VERSION",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput:capabilities",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "capabilities",
+          "partial_analysis": false,
+          "return_type": ": SessionCapabilities | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput:completionToken",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "completionToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput:driverCapabilities",
+          "kind": "property",
+          "line_range": [
+            39,
+            42
+          ],
+          "name": "driverCapabilities",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly turnInbox?: true;\r\n    readonly cancelledTurnSettle?: true;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput:mode",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": RunMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput:stepInput",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "stepInput",
+          "partial_analysis": false,
+          "return_type": ": TurnStepInput",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowInput",
+      "kind": "interface",
+      "line_range": [
+        31,
+        45
+      ],
+      "name": "TurnWorkflowInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:capabilities",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "capabilities",
+          "partial_analysis": false,
+          "return_type": ": SessionCapabilities | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:completionToken",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "completionToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:delivery",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "delivery",
+          "partial_analysis": false,
+          "return_type": ": HookPayload",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:mode",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": RunMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:parentWritable",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "parentWritable",
+          "partial_analysis": false,
+          "return_type": ": WritableStream<Uint8Array>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:serializedContext",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "serializedContext",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput:sessionState",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "sessionState",
+          "partial_analysis": false,
+          "return_type": ": DurableSessionState",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:TurnWorkflowDispatchInput",
+      "kind": "interface",
+      "line_range": [
+        47,
+        55
+      ],
+      "name": "TurnWorkflowDispatchInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:turnWorkflowInputMigrations",
+      "kind": "variable",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "turnWorkflowInputMigrations",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:createTurnWorkflowInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        59,
+        73
+      ],
+      "name": "createTurnWorkflowInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TurnWorkflowDispatchInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnWorkflowInput",
+      "signature": "export function createTurnWorkflowInput(input: TurnWorkflowDispatchInput) -> TurnWorkflowInput",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/durable-session-migrations/turn-workflow.ts:migrateTurnWorkflowInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        85
+      ],
+      "name": "migrateTurnWorkflowInput",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnWorkflowInput",
+      "signature": "export function migrateTurnWorkflowInput(value: unknown) -> TurnWorkflowInput",
+      "visibility": "Public"
+    }
+  ]
+}

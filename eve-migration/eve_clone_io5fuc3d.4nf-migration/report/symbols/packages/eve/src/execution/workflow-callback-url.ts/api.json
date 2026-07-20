@@ -1,0 +1,61 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        12,
+        22
+      ],
+      "name": "resolveVercelProductionCallbackBaseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function resolveVercelProductionCallbackBaseUrl() -> string | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "resolveWorkflowCallbackBaseUrl",
+      "params": [
+        {
+          "name": "metadataUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveWorkflowCallbackBaseUrl(metadataUrl: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        51
+      ],
+      "name": "createWorkflowCallbackUrl",
+      "params": [
+        {
+          "name": "baseUrl",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "callbackPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createWorkflowCallbackUrl(baseUrl: string, callbackPath: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/execution/workflow-callback-url.ts"
+}

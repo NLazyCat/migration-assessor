@@ -1,0 +1,261 @@
+{
+  "module": "packages/eve/test/dev-client-harness/live-stream.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/dev-client-harness/live-stream.ts:isDevelopmentMessageStreamDisconnectError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        4,
+        21
+      ],
+      "name": "isDevelopmentMessageStreamDisconnectError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isDevelopmentMessageStreamDisconnectError(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:DevelopmentMessageStream:resourceUrl",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "resourceUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:DevelopmentMessageStream:closed",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "closed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/dev-client-harness/live-stream.ts:DevelopmentMessageStream",
+      "kind": "interface",
+      "line_range": [
+        26,
+        50
+      ],
+      "name": "DevelopmentMessageStream",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:resourceUrl",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "resourceUrl",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:#boundaryCount",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "#boundaryCount",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:#buffer",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "#buffer",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:#closed",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "#closed",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:#decoder",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "#decoder",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:#isReading",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "#isReading",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:#reader",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "#reader",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            62,
+            75
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{ boundaryCount?: number; resourceUrl: string; response: Response }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:closed",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            77,
+            79
+          ],
+          "name": "closed",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:close",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            81,
+            97
+          ],
+          "name": "close",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream:readEvents",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            99,
+            225
+          ],
+          "name": "readEvents",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    onEvent?(event: HandleMessageStreamEvent): void;\r\n    startAfterBoundaryCount?: number;\r\n    stopWhen?(event: HandleMessageStreamEvent): boolean;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<HandleMessageStreamEvent[]>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/dev-client-harness/live-stream.ts:BufferedDevelopmentMessageStream",
+      "kind": "class",
+      "line_range": [
+        52,
+        226
+      ],
+      "name": "BufferedDevelopmentMessageStream",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/dev-client-harness/live-stream.ts:openDevelopmentMessageStream",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        231,
+        237
+      ],
+      "name": "openDevelopmentMessageStream",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  boundaryCount?: number;\r\n  resourceUrl: string;\r\n  response: Response;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentMessageStream",
+      "signature": "export function openDevelopmentMessageStream(input: {\r\n  boundaryCount?: number;\r\n  resourceUrl: string;\r\n  response: Response;\r\n}) -> DevelopmentMessageStream",
+      "visibility": "Public"
+    }
+  ]
+}

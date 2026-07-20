@@ -1,0 +1,237 @@
+{
+  "module": "packages/eve/src/execution/sandbox/truncate-output.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:MAX_OUTPUT_LINES",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "MAX_OUTPUT_LINES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:MAX_OUTPUT_BYTES",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "MAX_OUTPUT_BYTES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:MAX_LINE_LENGTH",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "MAX_LINE_LENGTH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:LINE_TRUNCATION_SUFFIX",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "LINE_TRUNCATION_SUFFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/truncate-output.ts:TruncationResult:output",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/truncate-output.ts:TruncationResult:truncated",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "truncated",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/truncate-output.ts:TruncationResult:totalLines",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "totalLines",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/truncate-output.ts:TruncationResult:outputLines",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "outputLines",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:TruncationResult",
+      "kind": "interface",
+      "line_range": [
+        35,
+        44
+      ],
+      "name": "TruncationResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:truncateHead",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        59
+      ],
+      "name": "truncateHead",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TruncationResult",
+      "signature": "export function truncateHead(text: string) -> TruncationResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:truncateTail",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "truncateTail",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TruncationResult",
+      "signature": "export function truncateTail(text: string) -> TruncationResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:truncateByDirection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        113
+      ],
+      "name": "truncateByDirection",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "direction",
+          "optional": false,
+          "type": "\"head\" | \"tail\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TruncationResult",
+      "signature": "export function truncateByDirection(text: string, direction: \"head\" | \"tail\") -> TruncationResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:capLineLength",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        124,
+        129
+      ],
+      "name": "capLineLength",
+      "params": [
+        {
+          "name": "line",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function capLineLength(line: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/truncate-output.ts:countLogicalLines",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        135,
+        140
+      ],
+      "name": "countLogicalLines",
+      "params": [
+        {
+          "name": "lines",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function countLogicalLines(lines: readonly string[]) -> number",
+      "visibility": "Private"
+    }
+  ]
+}

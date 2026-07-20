@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "generateStaticParams",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const generateStaticParams: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        34,
+        46
+      ],
+      "name": "generateMetadata",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "PageProps<\"/[lang]/integrations/[slug]\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Metadata>",
+      "signature": "export const generateMetadata: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "default_export",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "default",
+      "params": [],
+      "partial_analysis": true,
+      "signature": "export default ..."
+    }
+  ],
+  "module": "apps/docs/app/[lang]/integrations/[slug]/page.tsx"
+}

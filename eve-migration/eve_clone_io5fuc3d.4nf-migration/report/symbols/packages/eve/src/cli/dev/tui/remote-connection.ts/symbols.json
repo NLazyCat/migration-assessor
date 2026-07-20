@@ -1,0 +1,49 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/remote-connection.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-connection.ts:challengeFor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        42
+      ],
+      "name": "challengeFor",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "RemoteConnectionState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RemoteAuthChallenge",
+      "signature": "export function challengeFor(state: RemoteConnectionState) -> RemoteAuthChallenge",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-connection.ts:createRemoteConnectionController",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        236
+      ],
+      "name": "createRemoteConnectionController",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "RemoteConnectionControllerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RemoteConnectionController",
+      "signature": "export function createRemoteConnectionController(options: RemoteConnectionControllerOptions) -> RemoteConnectionController",
+      "visibility": "Public"
+    }
+  ]
+}

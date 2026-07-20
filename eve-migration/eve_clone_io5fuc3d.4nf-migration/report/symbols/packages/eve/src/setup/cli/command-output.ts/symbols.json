@@ -1,0 +1,39 @@
+{
+  "module": "packages/eve/src/setup/cli/command-output.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/command-output.ts:PromptCommandLog",
+      "kind": "interface",
+      "line_range": [
+        4,
+        6
+      ],
+      "name": "PromptCommandLog",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/command-output.ts:createPromptCommandOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "createPromptCommandOutput",
+      "params": [
+        {
+          "name": "log",
+          "optional": false,
+          "type": "PromptCommandLog"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProcessOutputHandler",
+      "signature": "export function createPromptCommandOutput(log: PromptCommandLog) -> ProcessOutputHandler",
+      "visibility": "Public"
+    }
+  ]
+}

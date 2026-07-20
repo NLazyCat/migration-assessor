@@ -1,0 +1,140 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "estimateTokens",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function estimateTokens(value: unknown) -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        58
+      ],
+      "name": "getInputTokenCount",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function getInputTokenCount(messages: readonly ModelMessage[], config: CompactionConfig) -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        72
+      ],
+      "name": "shouldCompact",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldCompact(messages: readonly ModelMessage[], config: CompactionConfig) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        80,
+        99
+      ],
+      "name": "resolveCompactionModel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compactionModelReference?: RuntimeModelReference;\r\n  readonly model: LanguageModel;\r\n  readonly modelReference: RuntimeModelReference;\r\n  readonly resolveModel: ToolLoopHarnessConfig[\"resolveModel\"];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  readonly model: LanguageModel;\r\n  readonly providerOptions: Parameters<typeof generateText>[0][\"providerOptions\"];\r\n}>",
+      "signature": "export function resolveCompactionModel(input: {\r\n  readonly compactionModelReference?: RuntimeModelReference;\r\n  readonly model: LanguageModel;\r\n  readonly modelReference: RuntimeModelReference;\r\n  readonly resolveModel: ToolLoopHarnessConfig[\"resolveModel\"];\r\n}) -> Promise<{\r\n  readonly model: LanguageModel;\r\n  readonly providerOptions: Parameters<typeof generateText>[0][\"providerOptions\"];\r\n}>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        105,
+        165
+      ],
+      "name": "compactMessages",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "ModelMessage[]"
+        },
+        {
+          "name": "model",
+          "optional": false,
+          "type": "LanguageModel"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "CompactionConfig"
+        },
+        {
+          "name": "providerOptions",
+          "optional": true,
+          "type": "Parameters<typeof generateText>[0][\"providerOptions\"]"
+        },
+        {
+          "name": "telemetry",
+          "optional": true,
+          "type": "TelemetryOptions"
+        },
+        {
+          "name": "headers",
+          "optional": true,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "abortSignal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ModelMessage[]>",
+      "signature": "export function compactMessages(messages: ModelMessage[], model: LanguageModel, config: CompactionConfig, providerOptions: Parameters<typeof generateText>[0][\"providerOptions\"], telemetry: TelemetryOptions, headers: Record<string, string>, abortSignal: AbortSignal) -> Promise<ModelMessage[]>"
+    }
+  ],
+  "module": "packages/eve/src/harness/compaction.ts"
+}

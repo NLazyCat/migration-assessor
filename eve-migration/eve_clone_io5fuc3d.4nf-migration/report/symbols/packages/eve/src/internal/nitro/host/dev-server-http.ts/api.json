@@ -1,0 +1,101 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        6,
+        28
+      ],
+      "name": "createPublicRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "IncomingMessage"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function createPublicRequest(request: IncomingMessage, signal: AbortSignal) -> Request"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        30,
+        84
+      ],
+      "name": "writeResponse",
+      "params": [
+        {
+          "name": "response",
+          "optional": false,
+          "type": "ServerResponse"
+        },
+        {
+          "name": "webResponse",
+          "optional": false,
+          "type": "Response"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeResponse(response: ServerResponse, webResponse: Response, signal: AbortSignal) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        99
+      ],
+      "name": "writeRequestError",
+      "params": [
+        {
+          "name": "response",
+          "optional": false,
+          "type": "ServerResponse"
+        },
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function writeRequestError(response: ServerResponse, error: unknown) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        101,
+        117
+      ],
+      "name": "closeServer",
+      "params": [
+        {
+          "name": "server",
+          "optional": false,
+          "type": "Server"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function closeServer(server: Server) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/dev-server-http.ts"
+}

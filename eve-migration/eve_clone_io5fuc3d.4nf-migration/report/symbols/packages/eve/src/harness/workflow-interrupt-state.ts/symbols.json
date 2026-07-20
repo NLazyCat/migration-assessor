@@ -1,0 +1,167 @@
+{
+  "module": "packages/eve/src/harness/workflow-interrupt-state.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:PENDING_KEY",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "PENDING_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/workflow-interrupt-state.ts:PendingWorkflowInterrupt:interrupt",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "interrupt",
+          "partial_analysis": false,
+          "return_type": ": WorkflowSandboxInterrupt",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/workflow-interrupt-state.ts:PendingWorkflowInterrupt:responseMessages",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "responseMessages",
+          "partial_analysis": false,
+          "return_type": ": readonly ModelMessage[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:PendingWorkflowInterrupt",
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "PendingWorkflowInterrupt",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:getPendingWorkflowInterrupt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        26
+      ],
+      "name": "getPendingWorkflowInterrupt",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PendingWorkflowInterrupt | undefined",
+      "signature": "export function getPendingWorkflowInterrupt(state: SessionStateMap | undefined) -> PendingWorkflowInterrupt | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:setPendingWorkflowInterrupt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        43
+      ],
+      "name": "setPendingWorkflowInterrupt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setPendingWorkflowInterrupt(input: {\r\n  readonly interrupt: WorkflowSandboxInterrupt;\r\n  readonly responseMessages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n}) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:clearPendingWorkflowInterrupt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        54
+      ],
+      "name": "clearPendingWorkflowInterrupt",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function clearPendingWorkflowInterrupt(session: HarnessSession) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:isWorkflowInterruptShape",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        67
+      ],
+      "name": "isWorkflowInterruptShape",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is WorkflowSandboxInterrupt",
+      "signature": "export function isWorkflowInterruptShape(value: unknown) -> value is WorkflowSandboxInterrupt",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-interrupt-state.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

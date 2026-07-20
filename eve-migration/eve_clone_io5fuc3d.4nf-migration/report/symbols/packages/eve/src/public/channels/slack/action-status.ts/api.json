@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        68,
+        79
+      ],
+      "name": "describeActionRequest",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "RuntimeActionRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function describeActionRequest(action: RuntimeActionRequest) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        91
+      ],
+      "name": "describeActionRequests",
+      "params": [
+        {
+          "name": "actions",
+          "optional": false,
+          "type": "readonly RuntimeActionRequest[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function describeActionRequests(actions: readonly RuntimeActionRequest[]) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/action-status.ts"
+}

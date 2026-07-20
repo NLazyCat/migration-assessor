@@ -1,0 +1,77 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/tui-prompter.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui-prompter.ts:TuiPrompterRenderer",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "TuiPrompterRenderer",
+      "partial_analysis": false,
+      "value": "SetupFlowPrompterRenderer;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui-prompter.ts:setupSelectRequest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        86
+      ],
+      "name": "setupSelectRequest",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "SingleSelectOptions<T> | MultiSelectOptions<T>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SetupSelectRequest[\"options\"]"
+        },
+        {
+          "name": "encode",
+          "optional": false,
+          "type": "(value: T) => string"
+        },
+        {
+          "name": "encodeOptions",
+          "optional": false,
+          "type": "(options: readonly SelectOption<T>[]) => SetupSelectRequest[\"options\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupSelectRequest",
+      "signature": "export function setupSelectRequest(opts: SingleSelectOptions<T> | MultiSelectOptions<T>, options: SetupSelectRequest[\"options\"], encode: (value: T) => string, encodeOptions: (options: readonly SelectOption<T>[]) => SetupSelectRequest[\"options\"]) -> SetupSelectRequest",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui-prompter.ts:createTuiPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        98,
+        227
+      ],
+      "name": "createTuiPrompter",
+      "params": [
+        {
+          "name": "renderer",
+          "optional": false,
+          "type": "TuiPrompterRenderer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createTuiPrompter(renderer: TuiPrompterRenderer) -> Prompter",
+      "visibility": "Public"
+    }
+  ]
+}

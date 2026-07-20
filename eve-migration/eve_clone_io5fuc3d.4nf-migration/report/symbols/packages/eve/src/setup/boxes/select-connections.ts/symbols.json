@@ -1,0 +1,360 @@
+{
+  "module": "packages/eve/src/setup/boxes/select-connections.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:CONNECT_REQUIRES_VERCEL",
+      "kind": "variable",
+      "line_range": [
+        20,
+        21
+      ],
+      "name": "CONNECT_REQUIRES_VERCEL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:PROTOCOL_LABELS",
+      "kind": "variable",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "PROTOCOL_LABELS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-connections.ts:SelectConnectionsOptions:asker",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "asker",
+          "partial_analysis": false,
+          "return_type": ": Asker",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-connections.ts:SelectConnectionsOptions:headless",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "headless",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-connections.ts:SelectConnectionsOptions:presetConnections",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "presetConnections",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:SelectConnectionsOptions",
+      "kind": "interface",
+      "line_range": [
+        28,
+        39
+      ],
+      "name": "SelectConnectionsOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:buildCatalogOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        58
+      ],
+      "name": "buildCatalogOptions",
+      "params": [
+        {
+          "name": "disabledReasons",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSelectOption[]",
+      "signature": "export function buildCatalogOptions(disabledReasons: Readonly<Record<string, string>>) -> ConnectionSelectOption[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:unknownSlugError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        64
+      ],
+      "name": "unknownSlugError",
+      "params": [
+        {
+          "name": "rawSlug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function unknownSlugError(rawSlug: string) -> Error",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:assertSupportedProtocols",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        66,
+        75
+      ],
+      "name": "assertSupportedProtocols",
+      "params": [
+        {
+          "name": "effective",
+          "optional": false,
+          "type": "readonly ConnectionProtocol[]"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "asserts effective is readonly [ConnectionProtocol, ...ConnectionProtocol[]]",
+      "signature": "export function assertSupportedProtocols(effective: readonly ConnectionProtocol[], label: string) -> asserts effective is readonly [ConnectionProtocol, ...ConnectionProtocol[]]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:resolveProtocolInteractive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        77,
+        97
+      ],
+      "name": "resolveProtocolInteractive",
+      "params": [
+        {
+          "name": "asker",
+          "optional": false,
+          "type": "Asker"
+        },
+        {
+          "name": "declared",
+          "optional": false,
+          "type": "readonly ConnectionProtocol[] | undefined"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionProtocol>",
+      "signature": "export function resolveProtocolInteractive(asker: Asker, declared: readonly ConnectionProtocol[] | undefined, label: string) -> Promise<ConnectionProtocol>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:resolveProtocolHeadless",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        111
+      ],
+      "name": "resolveProtocolHeadless",
+      "params": [
+        {
+          "name": "declared",
+          "optional": false,
+          "type": "readonly ConnectionProtocol[] | undefined"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionProtocol",
+      "signature": "export function resolveProtocolHeadless(declared: readonly ConnectionProtocol[] | undefined, label: string) -> ConnectionProtocol",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:deriveProvision",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        119,
+        124
+      ],
+      "name": "deriveProvision",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "ConnectionInput"
+        },
+        {
+          "name": "headless",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionPlan[\"provision\"]",
+      "signature": "export function deriveProvision(entry: ConnectionInput, headless: boolean) -> ConnectionPlan[\"provision\"]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:promptCustomSlug",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        126,
+        142
+      ],
+      "name": "promptCustomSlug",
+      "params": [
+        {
+          "name": "asker",
+          "optional": false,
+          "type": "Asker"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function promptCustomSlug(asker: Asker) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:planCustomInteractive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        144,
+        200
+      ],
+      "name": "planCustomInteractive",
+      "params": [
+        {
+          "name": "asker",
+          "optional": false,
+          "type": "Asker"
+        },
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionPlan>",
+      "signature": "export function planCustomInteractive(asker: Asker, slug: string) -> Promise<ConnectionPlan>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:planSelectionInteractive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        202,
+        218
+      ],
+      "name": "planSelectionInteractive",
+      "params": [
+        {
+          "name": "asker",
+          "optional": false,
+          "type": "Asker"
+        },
+        {
+          "name": "rawSlug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionPlan>",
+      "signature": "export function planSelectionInteractive(asker: Asker, rawSlug: string) -> Promise<ConnectionPlan>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:planPresetHeadless",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        220,
+        241
+      ],
+      "name": "planPresetHeadless",
+      "params": [
+        {
+          "name": "rawSlug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionPlan",
+      "signature": "export function planPresetHeadless(rawSlug: string) -> ConnectionPlan",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-connections.ts:selectConnections",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        253,
+        309
+      ],
+      "name": "selectConnections",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SelectConnectionsOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ConnectionPlan[], ConnectionPlan[]>",
+      "signature": "export function selectConnections(options: SelectConnectionsOptions) -> SetupBox<SetupState, ConnectionPlan[], ConnectionPlan[]>",
+      "visibility": "Public"
+    }
+  ]
+}

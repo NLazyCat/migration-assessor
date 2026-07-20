@@ -1,0 +1,81 @@
+{
+  "module": "packages/eve/src/evals/define-eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/define-eval.ts:defineEval",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        28
+      ],
+      "name": "defineEval",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EveEvalInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalDefinition",
+      "signature": "export function defineEval(input: EveEvalInput) -> EveEvalDefinition",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/define-eval.ts:validateEvalInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        90
+      ],
+      "name": "validateEvalInput",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EveEvalInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function validateEvalInput(input: EveEvalInput) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/define-eval.ts:rejectLegacyKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        96
+      ],
+      "name": "rejectLegacyKey",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "object"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "guidance",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function rejectLegacyKey(input: object, key: string, guidance: string) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

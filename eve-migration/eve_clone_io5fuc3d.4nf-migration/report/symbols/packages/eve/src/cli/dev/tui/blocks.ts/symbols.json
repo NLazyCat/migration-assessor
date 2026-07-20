@@ -1,0 +1,1191 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/blocks.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:ToolStatus",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "ToolStatus",
+      "partial_analysis": false,
+      "value": "\"running\" | \"done\" | \"error\" | \"denied\" | \"approval\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:BlockKind",
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        39
+      ],
+      "name": "BlockKind",
+      "partial_analysis": false,
+      "value": "| \"user\"\r\n  | \"assistant\"\r\n  | \"reasoning\"\r\n  | \"tool\"\r\n  | \"error\"\r\n  | \"notice\"\r\n  | \"warning\"\r\n  | \"result\"\r\n  | \"flow\"\r\n  | \"command\"\r\n  | \"question\"\r\n  | \"subagent\"\r\n  | \"subagent-step\"\r\n  | \"subagent-tool\"\r\n  | \"connection-auth\"\r\n  | \"sandbox\"\r\n  | \"log\"\r\n  | \"agent-header\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:kind",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": BlockKind",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:id",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:depth",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "depth",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:live",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "live",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:title",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "title",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:subtitle",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "subtitle",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:body",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:reasoning",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "reasoning",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:result",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:detail",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "detail",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:status",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": ToolStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:preformatted",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "preformatted",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:collapsed",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "collapsed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:expanded",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "expanded",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:toolInput",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "toolInput",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block:toolOutput",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "toolOutput",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:Block",
+      "kind": "interface",
+      "line_range": [
+        45,
+        81
+      ],
+      "name": "Block",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:RenderBlockContext:spinner",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "spinner",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/blocks.ts:RenderBlockContext:previous",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "previous",
+          "partial_analysis": false,
+          "return_type": ": { kind: BlockKind; title?: string }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:RenderBlockContext",
+      "kind": "interface",
+      "line_range": [
+        83,
+        93
+      ],
+      "name": "RenderBlockContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderBlockLines",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        110
+      ],
+      "name": "renderBlockLines",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderBlockLines(block: Block, width: number, theme: Theme, context: RenderBlockContext) -> string[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:nestingPrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        116,
+        120
+      ],
+      "name": "nestingPrefix",
+      "params": [
+        {
+          "name": "depth",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function nestingPrefix(depth: number, theme: Theme) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        122,
+        164
+      ],
+      "name": "renderBody",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderBody(block: Block, width: number, theme: Theme, context: RenderBlockContext) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderUser",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        166,
+        170
+      ],
+      "name": "renderUser",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderUser(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderProse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        172,
+        201
+      ],
+      "name": "renderProse",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderProse(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderReasoning",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        203,
+        208
+      ],
+      "name": "renderReasoning",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderReasoning(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderReasoningLines",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        210,
+        218
+      ],
+      "name": "renderReasoningLines",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "glyph",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderReasoningLines(text: string, width: number, theme: Theme, glyph: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        220,
+        250
+      ],
+      "name": "renderTool",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderTool(block: Block, width: number, theme: Theme, context: RenderBlockContext) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderToolExpanded",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        252,
+        268
+      ],
+      "name": "renderToolExpanded",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderToolExpanded(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:resultLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        270,
+        279
+      ],
+      "name": "resultLine",
+      "params": [
+        {
+          "name": "marker",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "color",
+          "optional": false,
+          "type": "(text: string) => string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resultLine(marker: string, text: string, width: number, theme: Theme, color: (text: string) => string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:toolGlyph",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        281,
+        299
+      ],
+      "name": "toolGlyph",
+      "params": [
+        {
+          "name": "status",
+          "optional": false,
+          "type": "ToolStatus"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ icon: string; accent: (text: string) => string }",
+      "signature": "export function toolGlyph(status: ToolStatus, theme: Theme, context: RenderBlockContext) -> { icon: string; accent: (text: string) => string }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:ERROR_DETAIL_MAX_LINES",
+      "kind": "variable",
+      "line_range": [
+        306,
+        306
+      ],
+      "name": "ERROR_DETAIL_MAX_LINES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        308,
+        317
+      ],
+      "name": "renderError",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderError(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderErrorDetail",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        325,
+        339
+      ],
+      "name": "renderErrorDetail",
+      "params": [
+        {
+          "name": "detail",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderErrorDetail(detail: string | undefined, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:URL_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        341,
+        341
+      ],
+      "name": "URL_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:colorizeError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        344,
+        352
+      ],
+      "name": "colorizeError",
+      "params": [
+        {
+          "name": "line",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function colorizeError(line: string, theme: Theme) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderNotice",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        354,
+        359
+      ],
+      "name": "renderNotice",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderNotice(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderAttentionRows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        368,
+        372
+      ],
+      "name": "renderAttentionRows",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderAttentionRows(body: string, width: number, theme: Theme) -> string[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderWarning",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        374,
+        376
+      ],
+      "name": "renderWarning",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderWarning(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:paintCommands",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        378,
+        382
+      ],
+      "name": "paintCommands",
+      "params": [
+        {
+          "name": "line",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function paintCommands(line: string, theme: Theme) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        389,
+        393
+      ],
+      "name": "renderCommand",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderCommand(block: Block, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderFlow",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        400,
+        414
+      ],
+      "name": "renderFlow",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderFlow(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        421,
+        433
+      ],
+      "name": "renderResult",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderResult(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderPreformatted",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        435,
+        457
+      ],
+      "name": "renderPreformatted",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderPreformatted(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderSandbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        459,
+        481
+      ],
+      "name": "renderSandbox",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderSandbox(block: Block, width: number, theme: Theme, context: RenderBlockContext) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderLog",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        495,
+        520
+      ],
+      "name": "renderLog",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderLog(block: Block, width: number, theme: Theme, context: RenderBlockContext) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:renderSubagentHeader",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        522,
+        527
+      ],
+      "name": "renderSubagentHeader",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderSubagentHeader(block: Block, width: number, theme: Theme) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:wrap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        529,
+        532
+      ],
+      "name": "wrap",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function wrap(text: string, width: number) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/blocks.ts:truncatePlain",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        534,
+        537
+      ],
+      "name": "truncatePlain",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "maxWidth",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function truncatePlain(text: string, maxWidth: number) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

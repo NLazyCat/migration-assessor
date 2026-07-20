@@ -1,0 +1,63 @@
+{
+  "module": "packages/eve/test/scenarios/dev-environment.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-environment.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-environment.scenario.test.ts:DEVELOPMENT_ENV_KEYS",
+      "kind": "variable",
+      "line_range": [
+        11,
+        18
+      ],
+      "name": "DEVELOPMENT_ENV_KEYS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-environment.scenario.test.ts:createEnvironmentFixture",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        20,
+        45
+      ],
+      "name": "createEnvironmentFixture",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createEnvironmentFixture() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-environment.scenario.test.ts:clearDevelopmentEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        51
+      ],
+      "name": "clearDevelopmentEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function clearDevelopmentEnvironment() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

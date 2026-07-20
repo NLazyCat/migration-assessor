@@ -1,0 +1,80 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.integration.test.ts:mocks",
+      "kind": "variable",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "mocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.integration.test.ts:temporaryDirectories",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "temporaryDirectories",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.integration.test.ts:createWorkspaceAgent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        162,
+        187
+      ],
+      "name": "createWorkspaceAgent",
+      "params": [
+        {
+          "name": "extensionNames",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createWorkspaceAgent(extensionNames: readonly string[]) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-workspace-extensions.integration.test.ts:writeText",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        189,
+        192
+      ],
+      "name": "writeText",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "contents",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeText(path: string, contents: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

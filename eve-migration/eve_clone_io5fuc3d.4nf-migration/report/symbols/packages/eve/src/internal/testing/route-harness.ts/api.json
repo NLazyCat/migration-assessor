@@ -1,0 +1,144 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "MockAgent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MockAgent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "cancelTurn",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Mock",
+      "signature": "cancelTurn: : Mock"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "run",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Mock",
+      "signature": "run: : Mock"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "deliver",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Mock",
+      "signature": "deliver: : Mock"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "getEventStream",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Mock",
+      "signature": "getEventStream: : Mock"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        48
+      ],
+      "name": "createMockAgent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "MockAgent",
+      "signature": "export function createMockAgent() -> MockAgent"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        66
+      ],
+      "name": "createRouteContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly agent: Agent;\r\n  readonly params?: Readonly<Record<string, string>>;\r\n  readonly requestIp?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RouteContext",
+      "signature": "export function createRouteContext(input: {\r\n  readonly agent: Agent;\r\n  readonly params?: Readonly<Record<string, string>>;\r\n  readonly requestIp?: string;\r\n}) -> RouteContext"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "HTTP_CREATE_ROUTE_URL",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const HTTP_CREATE_ROUTE_URL: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "HTTP_CONTINUE_ROUTE_URL",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const HTTP_CONTINUE_ROUTE_URL: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        78,
+        84
+      ],
+      "name": "createJsonMessageRequest",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Request",
+      "signature": "export function createJsonMessageRequest(body: unknown) -> Request"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/route-harness.ts"
+}

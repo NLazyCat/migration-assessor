@@ -1,0 +1,102 @@
+{
+  "module": "packages/eve/src/setup/append-env.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/append-env.ts:AppendEnvOptions:force",
+          "kind": "property",
+          "line_range": [
+            5,
+            5
+          ],
+          "name": "force",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/append-env.ts:AppendEnvOptions",
+      "kind": "interface",
+      "line_range": [
+        3,
+        6
+      ],
+      "name": "AppendEnvOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/append-env.ts:AppendEnvResult:written",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "written",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/append-env.ts:AppendEnvResult:skipped",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "skipped",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/append-env.ts:AppendEnvResult",
+      "kind": "interface",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "AppendEnvResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/append-env.ts:appendEnv",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        25,
+        62
+      ],
+      "name": "appendEnv",
+      "params": [
+        {
+          "name": "envPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "values",
+          "optional": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AppendEnvOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AppendEnvResult>",
+      "signature": "export function appendEnv(envPath: string, values: Record<string, string>, options: AppendEnvOptions) -> Promise<AppendEnvResult>",
+      "visibility": "Public"
+    }
+  ]
+}

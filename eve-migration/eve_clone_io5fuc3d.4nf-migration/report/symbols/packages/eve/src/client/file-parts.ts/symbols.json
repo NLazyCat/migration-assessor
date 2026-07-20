@@ -1,0 +1,84 @@
+{
+  "module": "packages/eve/src/client/file-parts.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/client/file-parts.ts:BASE64_CHUNK_SIZE",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "BASE64_CHUNK_SIZE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/file-parts.ts:createDataUrlFilePart",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        24
+      ],
+      "name": "createDataUrlFilePart",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly bytes: Uint8Array;\r\n  readonly filename?: string;\r\n  readonly mediaType: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "FilePart",
+      "signature": "export function createDataUrlFilePart(input: {\r\n  readonly bytes: Uint8Array;\r\n  readonly filename?: string;\r\n  readonly mediaType: string;\r\n}) -> FilePart",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/file-parts.ts:createTextWithFileContent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        38
+      ],
+      "name": "createTextWithFileContent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly bytes: Uint8Array;\r\n  readonly filename?: string;\r\n  readonly mediaType: string;\r\n  readonly text: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "UserContent",
+      "signature": "export function createTextWithFileContent(input: {\r\n  readonly bytes: Uint8Array;\r\n  readonly filename?: string;\r\n  readonly mediaType: string;\r\n  readonly text: string;\r\n}) -> UserContent",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/client/file-parts.ts:bytesToBase64",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        49
+      ],
+      "name": "bytesToBase64",
+      "params": [
+        {
+          "name": "bytes",
+          "optional": false,
+          "type": "Uint8Array"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function bytesToBase64(bytes: Uint8Array) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

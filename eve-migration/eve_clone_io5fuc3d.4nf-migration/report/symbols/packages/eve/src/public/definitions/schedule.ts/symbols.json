@@ -1,0 +1,105 @@
+{
+  "module": "packages/eve/src/public/definitions/schedule.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/schedule.ts:ScheduleHandlerArgs:receive",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "receive",
+          "partial_analysis": false,
+          "return_type": ": CrossChannelReceiveFn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/schedule.ts:ScheduleHandlerArgs:waitUntil",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "waitUntil",
+          "partial_analysis": false,
+          "return_type": ": (task: Promise<unknown>) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/schedule.ts:ScheduleHandlerArgs:appAuth",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "appAuth",
+          "partial_analysis": false,
+          "return_type": ": SessionAuthContext",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/schedule.ts:ScheduleHandlerArgs",
+      "kind": "interface",
+      "line_range": [
+        18,
+        35
+      ],
+      "name": "ScheduleHandlerArgs",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/schedule.ts:ScheduleRunHandler",
+      "kind": "type_alias",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "ScheduleRunHandler",
+      "partial_analysis": false,
+      "value": "GenericScheduleRunHandler<ScheduleHandlerArgs>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/schedule.ts:ScheduleDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "ScheduleDefinition",
+      "partial_analysis": false,
+      "value": "GenericScheduleDefinition<ScheduleHandlerArgs>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/schedule.ts:defineSchedule",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        96
+      ],
+      "name": "defineSchedule",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<TSchedule, GenericScheduleDefinitionFields<ScheduleHandlerArgs>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TSchedule",
+      "signature": "export function defineSchedule(definition: ExactDefinition<TSchedule, GenericScheduleDefinitionFields<ScheduleHandlerArgs>>) -> TSchedule",
+      "visibility": "Public"
+    }
+  ]
+}

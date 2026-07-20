@@ -1,0 +1,359 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        51
+      ],
+      "name": "ResolveProvisioningDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolveProvisioningDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "requireAuth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof requireAuth",
+      "signature": "requireAuth: : typeof requireAuth"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "isVercelAuthenticated",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof isVercelAuthenticated",
+      "signature": "isVercelAuthenticated: : typeof isVercelAuthenticated"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "detectProjectResolution",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectProjectResolution",
+      "signature": "detectProjectResolution: : typeof detectProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "pathExists",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof pathExists",
+      "signature": "pathExists: : typeof pathExists"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "validateTeam",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof validateTeam",
+      "signature": "validateTeam: : typeof validateTeam"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "resolveTeam",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof resolveTeam",
+      "signature": "resolveTeam: : typeof resolveTeam"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "pickTeam",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof pickTeam",
+      "signature": "pickTeam: : typeof pickTeam"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "pickProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof pickProject",
+      "signature": "pickProject: : typeof pickProject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "pickNewProjectName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof pickNewProjectName",
+      "signature": "pickNewProjectName: : typeof pickNewProjectName"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "assertNewProjectNameAvailable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof assertNewProjectNameAvailable",
+      "signature": "assertNewProjectNameAvailable: : typeof assertNewProjectNameAvailable"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "resolveProjectByNameOrId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof resolveProjectByNameOrId",
+      "signature": "resolveProjectByNameOrId: : typeof resolveProjectByNameOrId"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        53,
+        82
+      ],
+      "name": "ResolveProvisioningOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolveProvisioningOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "asker",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Asker",
+      "signature": "asker: : Asker"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "prompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Prompter",
+      "signature": "prompter: : Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "targetDirectory",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "targetDirectory?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProvisioningMode",
+      "signature": "mode: : ProvisioningMode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "adoptExistingLink",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "adoptExistingLink?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "projectSelection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"create-or-link\" | \"existing-only\"",
+      "signature": "projectSelection?: : \"create-or-link\" | \"existing-only\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "teamSelectMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (currentTeam: string) => string",
+      "signature": "teamSelectMessage?: : (currentTeam: string) => string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolveProvisioningDeps",
+      "signature": "deps?: : ResolveProvisioningDeps"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        85,
+        97
+      ],
+      "name": "ResolvedProvisioning",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedProvisioning { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "vercelProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolvedVercelProject",
+      "signature": "vercelProject: : ResolvedVercelProject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "aiGateway",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolvedAiGateway",
+      "signature": "aiGateway: : ResolvedAiGateway"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "modelWiring",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WiringMode",
+      "signature": "modelWiring: : WiringMode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "project",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProjectResolution",
+      "signature": "project?: : ProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        146,
+        469
+      ],
+      "name": "resolveProvisioning",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolveProvisioningOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, ResolvedProvisioning, ResolvedProvisioning>",
+      "signature": "export function resolveProvisioning(options: ResolveProvisioningOptions) -> SetupBox<SetupState, ResolvedProvisioning, ResolvedProvisioning>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/resolve-provisioning.ts"
+}

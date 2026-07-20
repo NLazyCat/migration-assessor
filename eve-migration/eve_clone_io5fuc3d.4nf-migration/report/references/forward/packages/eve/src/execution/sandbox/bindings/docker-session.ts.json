@@ -1,0 +1,206 @@
+{
+  "DockerCli": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-cli.ts:DockerCli"
+    }
+  ],
+  "InternalSandboxSession": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 55
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:InternalSandboxSession"
+    }
+  ],
+  "SandboxReadFileOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 113
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxReadFileOptions"
+    }
+  ],
+  "SandboxRemovePathOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 133
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxRemovePathOptions"
+    }
+  ],
+  "SandboxSpawnOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 77
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxSpawnOptions"
+    }
+  ],
+  "SandboxWriteFileOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 146
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxWriteFileOptions"
+    }
+  ],
+  "WORKSPACE_ROOT": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 83,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 78
+      },
+      "symbol": "packages/eve/src/runtime/workspace/types.ts:WORKSPACE_ROOT"
+    }
+  ],
+  "bufferToStream": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 131
+      },
+      "symbol": "packages/eve/src/execution/sandbox/stream-utils.ts:bufferToStream"
+    }
+  ],
+  "expectDockerSuccess": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 130
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-utils.ts:expectDockerSuccess"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 144
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-utils.ts:expectDockerSuccess"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 159
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/docker-utils.ts:expectDockerSuccess"
+    }
+  ],
+  "resolveWorkspacePath": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 76
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local-backend-utils.ts:resolveWorkspacePath"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 78
+      },
+      "symbol": "packages/eve/src/execution/sandbox/bindings/local-backend-utils.ts:resolveWorkspacePath"
+    }
+  ],
+  "shellQuote": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 91
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 92
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 93
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 114
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 155
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 73,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 155
+      },
+      "symbol": "packages/eve/src/execution/sandbox/shell-quote.ts:shellQuote"
+    }
+  ],
+  "streamToBuffer": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/execution/sandbox/bindings/docker-session.ts",
+        "line": 147
+      },
+      "symbol": "packages/eve/src/execution/sandbox/stream-utils.ts:streamToBuffer"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        44,
+        48
+      ],
+      "name": "ScopedAuthorization",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScopedAuthorization { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "scope",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "scope: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "authorization",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<AuthorizationDefinition>",
+      "signature": "authorization: : Readonly<AuthorizationDefinition>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "connection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionAuthorizationContext",
+      "signature": "connection: : ConnectionAuthorizationContext"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        84
+      ],
+      "name": "resolveScopedToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ScopedAuthorization"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TokenResult>",
+      "signature": "export function resolveScopedToken(input: ScopedAuthorization) -> Promise<TokenResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        103,
+        121
+      ],
+      "name": "evictScopedToken",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ScopedAuthorization"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function evictScopedToken(input: ScopedAuthorization) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        154
+      ],
+      "name": "completeScopedAuthorization",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ScopedAuthorization"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function completeScopedAuthorization(input: ScopedAuthorization) -> Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        164,
+        189
+      ],
+      "name": "startScopedAuthorization",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ScopedAuthorization"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AuthorizationSignal | undefined>",
+      "signature": "export function startScopedAuthorization(input: ScopedAuthorization) -> Promise<AuthorizationSignal | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        196,
+        215
+      ],
+      "name": "resolveAuthorizationCallbackUrl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authorization: Readonly<AuthorizationDefinition>;\r\n  readonly callbackUrl: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveAuthorizationCallbackUrl(input: {\r\n  readonly authorization: Readonly<AuthorizationDefinition>;\r\n  readonly callbackUrl: string;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        227,
+        234
+      ],
+      "name": "stampChallengeDisplayName",
+      "params": [
+        {
+          "name": "challenge",
+          "optional": false,
+          "type": "ConnectionAuthorizationChallenge"
+        },
+        {
+          "name": "authorization",
+          "optional": false,
+          "type": "Readonly<AuthorizationDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionAuthorizationChallenge",
+      "signature": "export function stampChallengeDisplayName(challenge: ConnectionAuthorizationChallenge, authorization: Readonly<AuthorizationDefinition>) -> ConnectionAuthorizationChallenge"
+    }
+  ],
+  "module": "packages/eve/src/runtime/connections/scoped-authorization.ts"
+}

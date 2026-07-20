@@ -1,0 +1,456 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "EveEvalValueMatcher",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveEvalValueMatcher = JsonValue | undefined> = EveEvalDeepMatcher<T>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "EveEvalCountMatcher",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveEvalCountMatcher = number | ((count: number) => boolean);"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        39,
+        48
+      ],
+      "name": "EveEvalToolCallMatchOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveEvalToolCallMatchOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "input",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<JsonObject>",
+      "signature": "input?: : EveEvalValueMatcher<JsonObject>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher",
+      "signature": "output?: : EveEvalValueMatcher"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalToolCall[\"status\"]",
+      "signature": "status?: : EveEvalToolCall[\"status\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "count",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalCountMatcher",
+      "signature": "count?: : EveEvalCountMatcher"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "EveEvalSkillLoadMatchOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveEvalSkillLoadMatchOptions = Omit<EveEvalToolCallMatchOptions, \"input\">;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        60,
+        73
+      ],
+      "name": "EveEvalSubagentCallMatchOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveEvalSubagentCallMatchOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "callId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<string | undefined>",
+      "signature": "callId?: : EveEvalValueMatcher<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "childSessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<string | undefined>",
+      "signature": "childSessionId?: : EveEvalValueMatcher<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "remoteUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<string | undefined>",
+      "signature": "remoteUrl?: : EveEvalValueMatcher<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher",
+      "signature": "output?: : EveEvalValueMatcher"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalSubagentCall[\"status\"]",
+      "signature": "status?: : EveEvalSubagentCall[\"status\"]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "count",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalCountMatcher",
+      "signature": "count?: : EveEvalCountMatcher"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        76,
+        87
+      ],
+      "name": "EveEvalInputRequestMatchOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveEvalInputRequestMatchOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "display",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<InputRequest[\"display\"]>",
+      "signature": "display?: : EveEvalValueMatcher<InputRequest[\"display\"]>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "input",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<JsonObject>",
+      "signature": "input?: : EveEvalValueMatcher<JsonObject>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "optionIds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<readonly string[]>",
+      "signature": "optionIds?: : EveEvalValueMatcher<readonly string[]>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "prompt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalValueMatcher<string>",
+      "signature": "prompt?: : EveEvalValueMatcher<string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "toolName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "toolName?: : string"
+    },
+    {
+      "generics": [
+        "TType"
+      ],
+      "kind": "type_alias",
+      "line_range": [
+        90,
+        105
+      ],
+      "name": "EveEvalEventMatch",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveEvalEventMatch = HandleMessageStreamEvent[\"type\"],\r\n> = TType extends HandleMessageStreamEvent[\"type\"]\r\n  ? {\r\n      /** Stream-event type to match. */\r\n      readonly type: TType;\r\n      /** Partial-deep matcher over the event data. */\r\n      readonly data?: EveEvalDeepMatcher<\r\n        Extract<HandleMessageStreamEvent, { type: TType }> extends { data: infer TData }\r\n          ? TData\r\n          : never\r\n      >;\r\n      /** Constraint over the matching event count. Defaults to \"at least one\". */\r\n      readonly count?: EveEvalCountMatcher;\r\n    }\r\n  : never;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        111,
+        131
+      ],
+      "name": "matchesValue",
+      "params": [
+        {
+          "name": "matcher",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function matchesValue(matcher: unknown, value: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        137,
+        147
+      ],
+      "name": "toolCallMatches",
+      "params": [
+        {
+          "name": "call",
+          "optional": false,
+          "type": "EveEvalToolCall"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveEvalToolCallMatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function toolCallMatches(call: EveEvalToolCall, options: EveEvalToolCallMatchOptions) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        153,
+        174
+      ],
+      "name": "subagentCallMatches",
+      "params": [
+        {
+          "name": "call",
+          "optional": false,
+          "type": "EveEvalSubagentCall"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveEvalSubagentCallMatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function subagentCallMatches(call: EveEvalSubagentCall, options: EveEvalSubagentCallMatchOptions) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        177,
+        199
+      ],
+      "name": "inputRequestMatches",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveEvalInputRequestMatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function inputRequestMatches(request: InputRequest, options: EveEvalInputRequestMatchOptions) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        202,
+        208
+      ],
+      "name": "eventMatches",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "matcher",
+          "optional": false,
+          "type": "EveEvalEventMatch"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function eventMatches(event: HandleMessageStreamEvent, matcher: EveEvalEventMatch) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        214,
+        230
+      ],
+      "name": "deepEquals",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function deepEquals(a: unknown, b: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        244,
+        247
+      ],
+      "name": "testRegExp",
+      "params": [
+        {
+          "name": "pattern",
+          "optional": false,
+          "type": "RegExp"
+        },
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function testRegExp(pattern: RegExp, text: string) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/evals/match.ts"
+}

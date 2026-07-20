@@ -1,0 +1,331 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/remote-auth.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:WORKSPACE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "WORKSPACE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HOST",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "HOST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:SERVER_URL",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "SERVER_URL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:OWNER_ID",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "OWNER_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:PROJECT_ID",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "PROJECT_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:SELECTED_TEAM",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "SELECTED_TEAM",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:SELECTED_PROJECT_ID",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "SELECTED_PROJECT_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:TARGET",
+      "kind": "variable",
+      "line_range": [
+        18,
+        23
+      ],
+      "name": "TARGET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:SELECTED_TARGET",
+      "kind": "variable",
+      "line_range": [
+        24,
+        29
+      ],
+      "name": "SELECTED_TARGET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:TRUSTED_SOURCE_GRANT",
+      "kind": "variable",
+      "line_range": [
+        30,
+        35
+      ],
+      "name": "TRUSTED_SOURCE_GRANT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:oidcToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        41
+      ],
+      "name": "oidcToken",
+      "params": [
+        {
+          "name": "ownerId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function oidcToken(ownerId: string, projectId: string, version: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:LoginResult",
+      "kind": "type_alias",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "LoginResult",
+      "partial_analysis": false,
+      "value": "Awaited<ReturnType<RemoteAuthFlowDeps[\"runLoginFlow\"]>>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:DeploymentResult",
+      "kind": "type_alias",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "DeploymentResult",
+      "partial_analysis": false,
+      "value": "Awaited<ReturnType<RemoteAuthFlowDeps[\"resolveVercelDeployment\"]>>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:PreparationResult",
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        47
+      ],
+      "name": "PreparationResult",
+      "partial_analysis": false,
+      "value": "Awaited<\r\n  ReturnType<RemoteAuthFlowDeps[\"prepareVercelTrustedSourceAccess\"]>\r\n>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:ApplicationResult",
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "ApplicationResult",
+      "partial_analysis": false,
+      "value": "Awaited<ReturnType<RemoteAuthFlowDeps[\"applyVercelTrustedSourceAccess\"]>>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions:logins",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "logins",
+          "partial_analysis": false,
+          "return_type": ": readonly LoginResult[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions:deployments",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "deployments",
+          "partial_analysis": false,
+          "return_type": ": readonly DeploymentResult[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions:preparation",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "preparation",
+          "partial_analysis": false,
+          "return_type": ": PreparationResult",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions:application",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "application",
+          "partial_analysis": false,
+          "return_type": ": ApplicationResult",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions:token",
+          "kind": "property",
+          "line_range": [
+            55,
+            57
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ":\r\n    | { readonly kind: \"present\"; readonly value: string }\r\n    | { readonly kind: \"missing\" }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions:configureTrustedSources",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "configureTrustedSources",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:HarnessOptions",
+      "kind": "interface",
+      "line_range": [
+        50,
+        59
+      ],
+      "name": "HarnessOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.test.ts:createHarness",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        128
+      ],
+      "name": "createHarness",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "HarnessOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createHarness(options: HarnessOptions) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

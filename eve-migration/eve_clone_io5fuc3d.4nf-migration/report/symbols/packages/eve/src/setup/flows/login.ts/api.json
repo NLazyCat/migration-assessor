@@ -1,0 +1,74 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        20
+      ],
+      "name": "LoginFlowResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LoginFlowResult = /** A `vercel whoami` already succeeds; nothing to do. */\r\n  | { kind: \"already\" }\r\n  /** `vercel login` ran and the directory is now authenticated. */\r\n  | { kind: \"logged-in\" }\r\n  /** `vercel login` exited without leaving an authenticated session. */\r\n  | { kind: \"failed\" }\r\n  /** The Vercel CLI is not installed, so login cannot start. */\r\n  | { kind: \"cli-missing\" }\r\n  /** Vercel could not be reached, so login state could not be determined. */\r\n  | { kind: \"unavailable\" }\r\n  /** The user stopped waiting (Cancel / Esc) before login completed. */\r\n  | { kind: \"cancelled\" };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        30,
+        37
+      ],
+      "name": "LoginFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LoginFlowDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "getVercelAuthStatus",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof getVercelAuthStatus",
+      "signature": "getVercelAuthStatus: : typeof getVercelAuthStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        36
+      ],
+      "name": "runVercelLogin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (input: {\r\n    cwd: string;\r\n    onOutput: ReturnType<typeof createPromptCommandOutput>;\r\n    signal?: AbortSignal;\r\n  }) => Promise<boolean>",
+      "signature": "runVercelLogin: : (input: {\r\n    cwd: string;\r\n    onOutput: ReturnType<typeof createPromptCommandOutput>;\r\n    signal?: AbortSignal;\r\n  }) => Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        107,
+        159
+      ],
+      "name": "runLoginFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  /** Run the browser login even when the account-level Vercel session is valid. */\r\n  force?: boolean;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<LoginFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<LoginFlowResult>",
+      "signature": "export function runLoginFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  /** Run the browser login even when the account-level Vercel session is valid. */\r\n  force?: boolean;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<LoginFlowDeps>;\r\n}) -> Promise<LoginFlowResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/flows/login.ts"
+}

@@ -1,0 +1,351 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        8,
+        20
+      ],
+      "name": "orbitEye",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "radius",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "yawRadians",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "pitchRadians",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Vec3",
+      "signature": "export function orbitEye(target: Vec3, radius: number, yawRadians: number, pitchRadians: number) -> Vec3"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        22,
+        28
+      ],
+      "name": "cameraBasis",
+      "params": [
+        {
+          "name": "eye",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function cameraBasis(eye: Vec3, target: Vec3) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        30,
+        39
+      ],
+      "name": "perspective",
+      "params": [
+        {
+          "name": "fovYRadians",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "aspect",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "near",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "far",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Mat4",
+      "signature": "export function perspective(fovYRadians: number, aspect: number, near: number, far: number) -> Mat4"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        69
+      ],
+      "name": "lookAt",
+      "params": [
+        {
+          "name": "eye",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "target",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "up",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Mat4",
+      "signature": "export function lookAt(eye: Vec3, target: Vec3, up: Vec3) -> Mat4"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        71,
+        83
+      ],
+      "name": "multiply",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Mat4"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "Mat4"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Mat4",
+      "signature": "export function multiply(a: Mat4, b: Mat4) -> Mat4"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        85,
+        87
+      ],
+      "name": "sub",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Vec3",
+      "signature": "export function sub(a: Vec3, b: Vec3) -> Vec3"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        89,
+        91
+      ],
+      "name": "cross",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Vec3",
+      "signature": "export function cross(a: Vec3, b: Vec3) -> Vec3"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        93,
+        95
+      ],
+      "name": "dot",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function dot(a: Vec3, b: Vec3) -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        97,
+        99
+      ],
+      "name": "clampUnit",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function clampUnit(value: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        101,
+        103
+      ],
+      "name": "mix",
+      "params": [
+        {
+          "name": "from",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "to",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function mix(from: number, to: number, amount: number) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        105,
+        107
+      ],
+      "name": "length",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function length(a: Vec3) -> number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        112
+      ],
+      "name": "normalize",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Vec3",
+      "signature": "export function normalize(a: Vec3) -> Vec3"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        114,
+        122
+      ],
+      "name": "cameraRadiusForFov",
+      "params": [
+        {
+          "name": "fovDegrees",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "baselineRadius",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "baselineFovDegrees",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function cameraRadiusForFov(fovDegrees: number, baselineRadius: unknown, baselineFovDegrees: unknown) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        124,
+        126
+      ],
+      "name": "degreesToRadians",
+      "params": [
+        {
+          "name": "degrees",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function degreesToRadians(degrees: number) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/math.ts"
+}

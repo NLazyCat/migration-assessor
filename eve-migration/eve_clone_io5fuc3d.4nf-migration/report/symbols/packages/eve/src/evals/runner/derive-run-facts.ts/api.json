@@ -1,0 +1,67 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "DeriveRunFactsOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeriveRunFactsOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        189
+      ],
+      "name": "deriveRunFacts",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "DeriveRunFactsOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalDerivedFacts",
+      "signature": "export function deriveRunFacts(events: readonly HandleMessageStreamEvent[], options: DeriveRunFactsOptions) -> EveEvalDerivedFacts"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        195,
+        206
+      ],
+      "name": "createEmptyDerivedFacts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveEvalDerivedFacts",
+      "signature": "export function createEmptyDerivedFacts() -> EveEvalDerivedFacts"
+    }
+  ],
+  "module": "packages/eve/src/evals/runner/derive-run-facts.ts"
+}

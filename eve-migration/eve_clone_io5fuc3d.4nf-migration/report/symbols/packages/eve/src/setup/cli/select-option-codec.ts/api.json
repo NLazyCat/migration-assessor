@@ -1,0 +1,53 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "interface",
+      "line_range": [
+        3,
+        8
+      ],
+      "name": "SelectOptionCodec",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SelectOptionCodec { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "options",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PromptOption<string>[]",
+      "signature": "options: : PromptOption<string>[]"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        15,
+        61
+      ],
+      "name": "createSelectOptionCodec",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<T>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOptionCodec<T>",
+      "signature": "export function createSelectOptionCodec(options: readonly PromptOption<T>[]) -> SelectOptionCodec<T>"
+    }
+  ],
+  "module": "packages/eve/src/setup/cli/select-option-codec.ts"
+}

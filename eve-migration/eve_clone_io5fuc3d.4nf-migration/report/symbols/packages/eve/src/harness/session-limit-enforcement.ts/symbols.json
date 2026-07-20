@@ -1,0 +1,193 @@
+{
+  "module": "packages/eve/src/harness/session-limit-enforcement.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:SESSION_TOKEN_LIMIT_REACHED_CODE",
+      "kind": "variable",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "SESSION_TOKEN_LIMIT_REACHED_CODE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/session-limit-enforcement.ts:SessionLimitPolicyInput:config",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "config",
+          "partial_analysis": false,
+          "return_type": ": ToolLoopHarnessConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/session-limit-enforcement.ts:SessionLimitPolicyInput:emit",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "emit",
+          "partial_analysis": false,
+          "return_type": ": ToolLoopHarnessConfig[\"handleEvent\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/session-limit-enforcement.ts:SessionLimitPolicyInput:emissionState",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "emissionState",
+          "partial_analysis": false,
+          "return_type": ": HarnessEmissionState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/session-limit-enforcement.ts:SessionLimitPolicyInput:session",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": HarnessSession",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:SessionLimitPolicyInput",
+      "kind": "interface",
+      "line_range": [
+        39,
+        44
+      ],
+      "name": "SessionLimitPolicyInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:applySessionLimitContinuation",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        59,
+        98
+      ],
+      "name": "applySessionLimitContinuation",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SessionLimitPolicyInput & {\r\n    readonly limitContinuation: { readonly granted: boolean } | undefined;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly result: StepResult | null; readonly session: HarnessSession }>",
+      "signature": "export function applySessionLimitContinuation(input: SessionLimitPolicyInput & {\r\n    readonly limitContinuation: { readonly granted: boolean } | undefined;\r\n  }) -> Promise<{ readonly result: StepResult | null; readonly session: HarnessSession }>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:enforceSessionTokenLimit",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        108,
+        125
+      ],
+      "name": "enforceSessionTokenLimit",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SessionLimitPolicyInput & { readonly messages: readonly ModelMessage[] }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<StepResult | null>",
+      "signature": "export function enforceSessionTokenLimit(input: SessionLimitPolicyInput & { readonly messages: readonly ModelMessage[] }) -> Promise<StepResult | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:parkOnSessionTokenLimit",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        133,
+        182
+      ],
+      "name": "parkOnSessionTokenLimit",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: ToolLoopHarnessConfig;\r\n  readonly emit: NonNullable<ToolLoopHarnessConfig[\"handleEvent\"]>;\r\n  readonly emissionState: HarnessEmissionState;\r\n  readonly messages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n  readonly violation: SessionTokenLimitViolation;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<StepResult>",
+      "signature": "export function parkOnSessionTokenLimit(input: {\r\n  readonly config: ToolLoopHarnessConfig;\r\n  readonly emit: NonNullable<ToolLoopHarnessConfig[\"handleEvent\"]>;\r\n  readonly emissionState: HarnessEmissionState;\r\n  readonly messages: readonly ModelMessage[];\r\n  readonly session: HarnessSession;\r\n  readonly violation: SessionTokenLimitViolation;\r\n}) -> Promise<StepResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:formatSessionTokenLimitMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        184,
+        186
+      ],
+      "name": "formatSessionTokenLimitMessage",
+      "params": [
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "SessionTokenLimitViolation[\"kind\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSessionTokenLimitMessage(kind: SessionTokenLimitViolation[\"kind\"]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/session-limit-enforcement.ts:failSessionTokenLimit",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        188,
+        222
+      ],
+      "name": "failSessionTokenLimit",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly config: ToolLoopHarnessConfig;\r\n  readonly emit?: ToolLoopHarnessConfig[\"handleEvent\"];\r\n  readonly emissionState: HarnessEmissionState;\r\n  readonly session: HarnessSession;\r\n  readonly violation: SessionTokenLimitViolation;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<StepResult>",
+      "signature": "export function failSessionTokenLimit(input: {\r\n  readonly config: ToolLoopHarnessConfig;\r\n  readonly emit?: ToolLoopHarnessConfig[\"handleEvent\"];\r\n  readonly emissionState: HarnessEmissionState;\r\n  readonly session: HarnessSession;\r\n  readonly violation: SessionTokenLimitViolation;\r\n}) -> Promise<StepResult>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/docker-container.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:DOCKER_SANDBOX_LABEL",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DOCKER_SANDBOX_LABEL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:DOCKER_KEEPALIVE_ARGS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "DOCKER_KEEPALIVE_ARGS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:startDockerContainer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        60
+      ],
+      "name": "startDockerContainer",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly cli: DockerCli;\r\n  readonly containerName: string;\r\n  readonly image: string;\r\n  readonly initialNetworkPolicy: DockerSandboxNetworkPolicy;\r\n  readonly options: ResolvedDockerSandboxOptions;\r\n  readonly role: \"session\" | \"template-build\";\r\n  readonly tags?: SandboxBackendTags;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function startDockerContainer(input: {\r\n  readonly cli: DockerCli;\r\n  readonly containerName: string;\r\n  readonly image: string;\r\n  readonly initialNetworkPolicy: DockerSandboxNetworkPolicy;\r\n  readonly options: ResolvedDockerSandboxOptions;\r\n  readonly role: \"session\" | \"template-build\";\r\n  readonly tags?: SandboxBackendTags;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:runDockerBaseSetup",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        62,
+        75
+      ],
+      "name": "runDockerBaseSetup",
+      "params": [
+        {
+          "name": "cli",
+          "optional": false,
+          "type": "DockerCli"
+        },
+        {
+          "name": "containerName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runDockerBaseSetup(cli: DockerCli, containerName: string) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-container.ts:stopDockerContainerIfRunning",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        77,
+        82
+      ],
+      "name": "stopDockerContainerIfRunning",
+      "params": [
+        {
+          "name": "cli",
+          "optional": false,
+          "type": "DockerCli"
+        },
+        {
+          "name": "containerName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function stopDockerContainerIfRunning(cli: DockerCli, containerName: string) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

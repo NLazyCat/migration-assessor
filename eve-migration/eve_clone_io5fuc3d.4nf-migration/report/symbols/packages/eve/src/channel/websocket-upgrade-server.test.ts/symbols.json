@@ -1,0 +1,106 @@
+{
+  "module": "packages/eve/src/channel/websocket-upgrade-server.test.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:UpgradeFixture:head",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "head",
+          "partial_analysis": false,
+          "return_type": ": Buffer",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:UpgradeFixture:nodeRequest",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "nodeRequest",
+          "partial_analysis": false,
+          "return_type": ": IncomingMessage",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:UpgradeFixture:request",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "request",
+          "partial_analysis": false,
+          "return_type": ": Request",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:UpgradeFixture:socket",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "socket",
+          "partial_analysis": false,
+          "return_type": ": Duplex",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:UpgradeFixture",
+      "kind": "interface",
+      "line_range": [
+        8,
+        13
+      ],
+      "name": "UpgradeFixture",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:createUpgradeFixture",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        49
+      ],
+      "name": "createUpgradeFixture",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ nodeUrl?: string | undefined; url?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createUpgradeFixture(input: { nodeUrl?: string | undefined; url?: string }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/websocket-upgrade-server.test.ts:createHooks",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        51,
+        59
+      ],
+      "name": "createHooks",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createHooks() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

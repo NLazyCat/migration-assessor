@@ -1,0 +1,172 @@
+{
+  "module": "packages/eve/src/harness/workflow-sandbox.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/workflow-sandbox.ts:WorkflowToolSet:hostTools",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "hostTools",
+          "partial_analysis": false,
+          "return_type": ": ToolSet",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/workflow-sandbox.ts:WorkflowToolSet:modelTools",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "modelTools",
+          "partial_analysis": false,
+          "return_type": ": ToolSet",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:WorkflowToolSet",
+      "kind": "interface",
+      "line_range": [
+        17,
+        20
+      ],
+      "name": "WorkflowToolSet",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:workflowInputSchema",
+      "kind": "variable",
+      "line_range": [
+        22,
+        28
+      ],
+      "name": "workflowInputSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:applyWorkflowTool",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        34,
+        68
+      ],
+      "name": "applyWorkflowTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly continuationSecurity: WorkflowSandboxContinuationSecurity;\r\n  readonly harnessTools: HarnessToolMap;\r\n  readonly lifecycle?: WorkflowSandboxLifecycle;\r\n  readonly maxSubagents?: number;\r\n  readonly tools: ToolSet;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<WorkflowToolSet>",
+      "signature": "export function applyWorkflowTool(input: {\r\n  readonly continuationSecurity: WorkflowSandboxContinuationSecurity;\r\n  readonly harnessTools: HarnessToolMap;\r\n  readonly lifecycle?: WorkflowSandboxLifecycle;\r\n  readonly maxSubagents?: number;\r\n  readonly tools: ToolSet;\r\n}) -> Promise<WorkflowToolSet>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:workflowApiReference",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        70,
+        75
+      ],
+      "name": "workflowApiReference",
+      "params": [
+        {
+          "name": "generatedDescription",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function workflowApiReference(generatedDescription: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:buildWorkflowHostTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        78,
+        80
+      ],
+      "name": "buildWorkflowHostTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly tools: HarnessToolMap }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolSet",
+      "signature": "export function buildWorkflowHostTools(input: { readonly tools: HarnessToolMap }) -> ToolSet",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:createWorkflowHostTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        93
+      ],
+      "name": "createWorkflowHostTools",
+      "params": [
+        {
+          "name": "tools",
+          "optional": false,
+          "type": "HarnessToolMap"
+        },
+        {
+          "name": "names",
+          "optional": false,
+          "type": "Iterable<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolSet",
+      "signature": "export function createWorkflowHostTools(tools: HarnessToolMap, names: Iterable<string>) -> ToolSet",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-sandbox.ts:createWorkflowRuntimeActionHostTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        95,
+        111
+      ],
+      "name": "createWorkflowRuntimeActionHostTool",
+      "params": [
+        {
+          "name": "harnessTool",
+          "optional": false,
+          "type": "HarnessToolDefinition"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolSet[string]",
+      "signature": "export function createWorkflowRuntimeActionHostTool(harnessTool: HarnessToolDefinition) -> ToolSet[string]",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        26,
+        29
+      ],
+      "name": "generateStaticParams",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "PageParams[]",
+      "signature": "export const generateStaticParams: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "dynamicParams",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const dynamicParams: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        33,
+        43
+      ],
+      "name": "generateMetadata",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  params: Promise<PageParams>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Metadata>",
+      "signature": "export const generateMetadata: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "default_export",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "default",
+      "params": [],
+      "partial_analysis": true,
+      "signature": "export default ..."
+    }
+  ],
+  "module": "apps/docs/app/[lang]/templates/[slug]/page.tsx"
+}

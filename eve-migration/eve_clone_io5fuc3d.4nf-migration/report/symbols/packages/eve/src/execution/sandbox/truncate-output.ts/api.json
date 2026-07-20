@@ -1,0 +1,174 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "MAX_OUTPUT_LINES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MAX_OUTPUT_LINES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "MAX_OUTPUT_BYTES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MAX_OUTPUT_BYTES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "MAX_LINE_LENGTH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MAX_LINE_LENGTH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "LINE_TRUNCATION_SUFFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LINE_TRUNCATION_SUFFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        44
+      ],
+      "name": "TruncationResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TruncationResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "output: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "truncated",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "truncated: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "totalLines",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "totalLines: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "outputLines",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "outputLines: : number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        59
+      ],
+      "name": "truncateHead",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TruncationResult",
+      "signature": "export function truncateHead(text: string) -> TruncationResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "truncateTail",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TruncationResult",
+      "signature": "export function truncateTail(text: string) -> TruncationResult"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        124,
+        129
+      ],
+      "name": "capLineLength",
+      "params": [
+        {
+          "name": "line",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function capLineLength(line: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/truncate-output.ts"
+}

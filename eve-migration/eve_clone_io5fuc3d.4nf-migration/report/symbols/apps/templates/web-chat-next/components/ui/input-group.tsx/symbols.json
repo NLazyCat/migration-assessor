@@ -1,0 +1,157 @@
+{
+  "module": "apps/templates/web-chat-next/components/ui/input-group.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:InputGroup",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        37
+      ],
+      "name": "InputGroup",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"div\">"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function InputGroup(_: React.ComponentProps<\"div\">) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:inputGroupAddonVariants",
+      "kind": "variable",
+      "line_range": [
+        39,
+        56
+      ],
+      "name": "inputGroupAddonVariants",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:InputGroupAddon",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        78
+      ],
+      "name": "InputGroupAddon",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"div\"> & VariantProps<typeof inputGroupAddonVariants>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function InputGroupAddon(_: React.ComponentProps<\"div\"> & VariantProps<typeof inputGroupAddonVariants>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:inputGroupButtonVariants",
+      "kind": "variable",
+      "line_range": [
+        80,
+        92
+      ],
+      "name": "inputGroupButtonVariants",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:InputGroupButton",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        111
+      ],
+      "name": "InputGroupButton",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "Omit<React.ComponentProps<typeof Button>, \"size\"> &\r\n  VariantProps<typeof inputGroupButtonVariants>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function InputGroupButton(_: Omit<React.ComponentProps<typeof Button>, \"size\"> &\r\n  VariantProps<typeof inputGroupButtonVariants>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:InputGroupText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        123
+      ],
+      "name": "InputGroupText",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"span\">"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function InputGroupText(_: React.ComponentProps<\"span\">) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:InputGroupInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        125,
+        136
+      ],
+      "name": "InputGroupInput",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"input\">"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function InputGroupInput(_: React.ComponentProps<\"input\">) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/components/ui/input-group.tsx:InputGroupTextarea",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        138,
+        149
+      ],
+      "name": "InputGroupTextarea",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "React.ComponentProps<\"textarea\">"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function InputGroupTextarea(_: React.ComponentProps<\"textarea\">) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

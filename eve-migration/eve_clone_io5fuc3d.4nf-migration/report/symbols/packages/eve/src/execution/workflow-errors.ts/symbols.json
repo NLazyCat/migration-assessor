@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/execution/workflow-errors.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-errors.ts:normalizeSerializableError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        24
+      ],
+      "name": "normalizeSerializableError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function normalizeSerializableError(error: unknown) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-errors.ts:rebuildSerializableError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        61
+      ],
+      "name": "rebuildSerializableError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function rebuildSerializableError(error: unknown) -> Error",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/workflow-errors.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        63,
+        65
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

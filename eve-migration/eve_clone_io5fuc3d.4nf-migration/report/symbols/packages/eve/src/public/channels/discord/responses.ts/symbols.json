@@ -1,0 +1,93 @@
+{
+  "module": "packages/eve/src/public/channels/discord/responses.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/responses.ts:discordDeferredJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        17
+      ],
+      "name": "discordDeferredJson",
+      "params": [
+        {
+          "name": "ephemeral",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function discordDeferredJson(ephemeral: boolean) -> Response",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/responses.ts:discordJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        35
+      ],
+      "name": "discordJson",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly content: string; readonly ephemeral?: boolean } | Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function discordJson(input: { readonly content: string; readonly ephemeral?: boolean } | Record<string, unknown>) -> Response",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/responses.ts:discordJsonBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        42
+      ],
+      "name": "discordJsonBody",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function discordJsonBody(body: Record<string, unknown>) -> Response",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/discord/responses.ts:readMessageContent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        45,
+        48
+      ],
+      "name": "readMessageContent",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readMessageContent(raw: Record<string, unknown>) -> string | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "module": "packages/eve/src/runtime/governance/auth/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:RouteAuthAttributes",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "RouteAuthAttributes",
+      "partial_analysis": false,
+      "value": "RuntimeSessionAuthAttributes;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:attributes",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "attributes",
+          "partial_analysis": false,
+          "return_type": ": RouteAuthAttributes",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:authenticator",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "authenticator",
+          "partial_analysis": false,
+          "return_type": ": RuntimeSessionAuthenticator",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:claims",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "claims",
+          "partial_analysis": false,
+          "return_type": ": RouteAuthAttributes",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:issuer",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "issuer",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:principalId",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "principalId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:principalType",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "principalType",
+          "partial_analysis": false,
+          "return_type": ": RuntimeSessionPrincipalType",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal:subject",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "subject",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:AuthenticatedCallerPrincipal",
+      "kind": "interface",
+      "line_range": [
+        16,
+        24
+      ],
+      "name": "AuthenticatedCallerPrincipal",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedTokenClaimMatchers:claims",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "claims",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, readonly string[]>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedTokenClaimMatchers:subjects",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "subjects",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedTokenClaimMatchers",
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "ResolvedTokenClaimMatchers",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:CurrentVercelProject:environment",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "environment",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:CurrentVercelProject:projectId",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:CurrentVercelProject",
+      "kind": "interface",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "CurrentVercelProject",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedHttpBasicAuthStrategy:kind",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"http-basic\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedHttpBasicAuthStrategy:password",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "password",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedHttpBasicAuthStrategy:username",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "username",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedHttpBasicAuthStrategy",
+      "kind": "interface",
+      "line_range": [
+        43,
+        47
+      ],
+      "name": "ResolvedHttpBasicAuthStrategy",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy:algorithm",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "algorithm",
+          "partial_analysis": false,
+          "return_type": ": \"HS256\" | \"HS384\" | \"HS512\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy:audiences",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "audiences",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy:clockSkewSeconds",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "clockSkewSeconds",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy:issuer",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "issuer",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy:kind",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"jwt-hmac\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy:secret",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "secret",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtHmacAuthStrategy",
+      "kind": "interface",
+      "line_range": [
+        52,
+        59
+      ],
+      "name": "ResolvedJwtHmacAuthStrategy",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy:algorithm",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "algorithm",
+          "partial_analysis": false,
+          "return_type": ": \"ES256\" | \"ES384\" | \"ES512\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy:audiences",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "audiences",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy:clockSkewSeconds",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "clockSkewSeconds",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy:issuer",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "issuer",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy:kind",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"jwt-ecdsa\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy:publicKey",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "publicKey",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedJwtEcdsaAuthStrategy",
+      "kind": "interface",
+      "line_range": [
+        64,
+        71
+      ],
+      "name": "ResolvedJwtEcdsaAuthStrategy",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:acceptCurrentVercelProject",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "acceptCurrentVercelProject",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:audiences",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "audiences",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:clockSkewSeconds",
+          "kind": "property",
+          "line_range": [
+            97,
+            97
+          ],
+          "name": "clockSkewSeconds",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:currentVercelProject",
+          "kind": "property",
+          "line_range": [
+            98,
+            98
+          ],
+          "name": "currentVercelProject",
+          "partial_analysis": false,
+          "return_type": ": CurrentVercelProject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:discoveryUrl",
+          "kind": "property",
+          "line_range": [
+            99,
+            99
+          ],
+          "name": "discoveryUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:issuer",
+          "kind": "property",
+          "line_range": [
+            100,
+            100
+          ],
+          "name": "issuer",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy:kind",
+          "kind": "property",
+          "line_range": [
+            101,
+            101
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"oidc\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:ResolvedOidcAuthStrategy",
+      "kind": "interface",
+      "line_range": [
+        76,
+        102
+      ],
+      "name": "ResolvedOidcAuthStrategy",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:RouteStrategyAuthenticationResult",
+      "kind": "type_alias",
+      "line_range": [
+        107,
+        121
+      ],
+      "name": "RouteStrategyAuthenticationResult",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly kind: \"authenticated\";\r\n      readonly principal: AuthenticatedCallerPrincipal;\r\n    }\r\n  | {\r\n      readonly kind: \"caller-not-allowed\";\r\n    }\r\n  | {\r\n      readonly kind: \"misconfigured\";\r\n      readonly message: string;\r\n    }\r\n  | {\r\n      readonly kind: \"not-authenticated\";\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/types.ts:createRuntimeSessionAuthContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        138
+      ],
+      "name": "createRuntimeSessionAuthContext",
+      "params": [
+        {
+          "name": "principal",
+          "optional": false,
+          "type": "AuthenticatedCallerPrincipal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSessionAuthContext",
+      "signature": "export function createRuntimeSessionAuthContext(principal: AuthenticatedCallerPrincipal) -> RuntimeSessionAuthContext",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "module": "packages/eve/src/cli/commands/deploy.integration.test.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:TestLogger:errors",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "errors",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:TestLogger:logs",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "logs",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:TestLogger:error",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            18,
+            20
+          ],
+          "name": "error",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:TestLogger:log",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            22,
+            24
+          ],
+          "name": "log",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:TestLogger",
+      "kind": "class",
+      "line_range": [
+        14,
+        25
+      ],
+      "name": "TestLogger",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:createAgentProject",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        27,
+        37
+      ],
+      "name": "createAgentProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function createAgentProject() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:LINKED",
+      "kind": "variable",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "LINKED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:DEPLOYED",
+      "kind": "variable",
+      "line_range": [
+        40,
+        44
+      ],
+      "name": "DEPLOYED",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/deploy.integration.test.ts:createDeployProjectDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        59
+      ],
+      "name": "createDeployProjectDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createDeployProjectDeps() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

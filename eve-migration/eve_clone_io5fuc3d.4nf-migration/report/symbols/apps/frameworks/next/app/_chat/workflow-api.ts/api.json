@@ -1,0 +1,1422 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        13,
+        17
+      ],
+      "name": "SendMessageInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SendMessageInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        22
+      ],
+      "name": "SentMessageResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SentMessageResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        29
+      ],
+      "name": "AgentInfoSource",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoSource { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "exportName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "exportName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "sourceKind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceKind: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        43
+      ],
+      "name": "AgentInfoToolEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoToolEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "hasAuth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasAuth: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "hasExecute",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasExecute: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "hasModelOutputProjection",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasModelOutputProjection: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "hasOutputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasOutputSchema: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "inputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "inputSchema: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "origin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"authored\" | \"framework\"",
+      "signature": "origin: : \"authored\" | \"framework\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "outputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "outputSchema: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "replacesFrameworkTool",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "replacesFrameworkTool: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "requiresApproval",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "requiresApproval: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        45,
+        49
+      ],
+      "name": "AgentInfoFrameworkToolEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoFrameworkToolEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "disabledByAuthor",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "disabledByAuthor: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "replacedByAuthoredTool",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "replacedByAuthoredTool: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"active\" | \"disabled\" | \"replaced\"",
+      "signature": "status: : \"active\" | \"disabled\" | \"replaced\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        55
+      ],
+      "name": "AgentInfoDynamicResolverEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoDynamicResolverEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "eventNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "eventNames: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "origin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"authored\" | \"framework\"",
+      "signature": "origin: : \"authored\" | \"framework\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        57,
+        63
+      ],
+      "name": "AgentInfoSkillEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoSkillEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "license",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "license?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "metadata?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        65,
+        68
+      ],
+      "name": "AgentInfoInstructionsEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoInstructionsEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        70,
+        75
+      ],
+      "name": "AgentInfoScheduleEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoScheduleEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "cron",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "cron: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "hasRun",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasRun: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        77,
+        92
+      ],
+      "name": "AgentInfoSubagentEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoSubagentEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "entryPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "entryPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        81,
+        81
+      ],
+      "name": "nodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nodeId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        82,
+        82
+      ],
+      "name": "rootPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        83,
+        91
+      ],
+      "name": "summary",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly channels: number;\r\n    readonly connections: number;\r\n    readonly hooks: number;\r\n    readonly instructions: boolean;\r\n    readonly schedules: number;\r\n    readonly skills: number;\r\n    readonly tools: number;\r\n  }",
+      "signature": "summary: : {\r\n    readonly channels: number;\r\n    readonly connections: number;\r\n    readonly hooks: number;\r\n    readonly instructions: boolean;\r\n    readonly schedules: number;\r\n    readonly skills: number;\r\n    readonly tools: number;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        94,
+        100
+      ],
+      "name": "AgentInfoChannelEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoChannelEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "adapterKind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "adapterKind?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "method",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "method: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        97,
+        97
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        98,
+        98
+      ],
+      "name": "origin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"authored\" | \"framework\"",
+      "signature": "origin: : \"authored\" | \"framework\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        99,
+        99
+      ],
+      "name": "urlPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "urlPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        102,
+        106
+      ],
+      "name": "AgentInfoFrameworkChannelEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoFrameworkChannelEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "disabledByAuthor",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "disabledByAuthor: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        104,
+        104
+      ],
+      "name": "replacedByAuthoredChannel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "replacedByAuthoredChannel: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        105,
+        105
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"active\" | \"disabled\" | \"replaced\"",
+      "signature": "status: : \"active\" | \"disabled\" | \"replaced\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        108,
+        117
+      ],
+      "name": "AgentInfoConnectionEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoConnectionEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        109,
+        109
+      ],
+      "name": "connectionName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectionName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        110,
+        110
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        111,
+        111
+      ],
+      "name": "hasApproval",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasApproval: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        112,
+        112
+      ],
+      "name": "hasAuthorization",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasAuthorization: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        113,
+        113
+      ],
+      "name": "hasHeaders",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasHeaders: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        114,
+        114
+      ],
+      "name": "protocol",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "protocol: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        115,
+        115
+      ],
+      "name": "toolFilter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "toolFilter?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        116,
+        116
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        119,
+        122
+      ],
+      "name": "AgentInfoHookEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoHookEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        120,
+        120
+      ],
+      "name": "eventNames",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "eventNames: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        124,
+        131
+      ],
+      "name": "AgentInfoSandboxEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInfoSandboxEntry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "backendKind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "backendKind?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        126,
+        126
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        127,
+        127
+      ],
+      "name": "hasBootstrap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasBootstrap: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        128,
+        128
+      ],
+      "name": "hasOnSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "hasOnSession: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        129,
+        129
+      ],
+      "name": "revalidationKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "revalidationKey?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "sourceHash",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceHash?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        133,
+        193
+      ],
+      "name": "AgentInformation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentInformation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        134,
+        147
+      ],
+      "name": "agent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly agentRoot: string;\r\n    readonly appRoot: string;\r\n    readonly configSource?: AgentInfoSource;\r\n    readonly description?: string;\r\n    readonly model: {\r\n      readonly contextWindowTokens?: number;\r\n      readonly id: string;\r\n      readonly providerOptions?: unknown;\r\n      readonly source?: AgentInfoSource;\r\n    };\r\n    readonly name: string;\r\n    readonly outputSchema?: unknown;\r\n  }",
+      "signature": "agent: : {\r\n    readonly agentRoot: string;\r\n    readonly appRoot: string;\r\n    readonly configSource?: AgentInfoSource;\r\n    readonly description?: string;\r\n    readonly model: {\r\n      readonly contextWindowTokens?: number;\r\n      readonly id: string;\r\n      readonly providerOptions?: unknown;\r\n      readonly source?: AgentInfoSource;\r\n    };\r\n    readonly name: string;\r\n    readonly outputSchema?: unknown;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        148,
+        153
+      ],
+      "name": "channels",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly authored: readonly AgentInfoChannelEntry[];\r\n    readonly available: readonly AgentInfoChannelEntry[];\r\n    readonly disabledFramework: readonly string[];\r\n    readonly framework: readonly AgentInfoFrameworkChannelEntry[];\r\n  }",
+      "signature": "channels: : {\r\n    readonly authored: readonly AgentInfoChannelEntry[];\r\n    readonly available: readonly AgentInfoChannelEntry[];\r\n    readonly disabledFramework: readonly string[];\r\n    readonly framework: readonly AgentInfoFrameworkChannelEntry[];\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        154,
+        154
+      ],
+      "name": "connections",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly AgentInfoConnectionEntry[]",
+      "signature": "connections: : readonly AgentInfoConnectionEntry[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        155,
+        158
+      ],
+      "name": "diagnostics",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly discoveryErrors: number;\r\n    readonly discoveryWarnings: number;\r\n  }",
+      "signature": "diagnostics: : {\r\n    readonly discoveryErrors: number;\r\n    readonly discoveryWarnings: number;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        159,
+        159
+      ],
+      "name": "hooks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly AgentInfoHookEntry[]",
+      "signature": "hooks: : readonly AgentInfoHookEntry[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        160,
+        163
+      ],
+      "name": "instructions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly dynamic: readonly AgentInfoDynamicResolverEntry[];\r\n    readonly static: AgentInfoInstructionsEntry | null;\r\n  }",
+      "signature": "instructions: : {\r\n    readonly dynamic: readonly AgentInfoDynamicResolverEntry[];\r\n    readonly static: AgentInfoInstructionsEntry | null;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"eve-agent-info\"",
+      "signature": "kind: : \"eve-agent-info\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        165,
+        165
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"development\" | \"production\"",
+      "signature": "mode: : \"development\" | \"production\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "sandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentInfoSandboxEntry | null",
+      "signature": "sandbox: : AgentInfoSandboxEntry | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "schedules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly AgentInfoScheduleEntry[]",
+      "signature": "schedules: : readonly AgentInfoScheduleEntry[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        168,
+        171
+      ],
+      "name": "skills",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly dynamic: readonly AgentInfoDynamicResolverEntry[];\r\n    readonly static: readonly AgentInfoSkillEntry[];\r\n  }",
+      "signature": "skills: : {\r\n    readonly dynamic: readonly AgentInfoDynamicResolverEntry[];\r\n    readonly static: readonly AgentInfoSkillEntry[];\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        172,
+        175
+      ],
+      "name": "subagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly local: readonly AgentInfoSubagentEntry[];\r\n    readonly total: number;\r\n  }",
+      "signature": "subagents: : {\r\n    readonly local: readonly AgentInfoSubagentEntry[];\r\n    readonly total: number;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        176,
+        183
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly authored: readonly AgentInfoToolEntry[];\r\n    readonly available: readonly AgentInfoToolEntry[];\r\n    readonly disabledFramework: readonly string[];\r\n    readonly dynamic: readonly AgentInfoDynamicResolverEntry[];\r\n    readonly framework: readonly AgentInfoFrameworkToolEntry[];\r\n    readonly reserved: readonly string[];\r\n  }",
+      "signature": "tools: : {\r\n    readonly authored: readonly AgentInfoToolEntry[];\r\n    readonly available: readonly AgentInfoToolEntry[];\r\n    readonly disabledFramework: readonly string[];\r\n    readonly dynamic: readonly AgentInfoDynamicResolverEntry[];\r\n    readonly framework: readonly AgentInfoFrameworkToolEntry[];\r\n    readonly reserved: readonly string[];\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "version",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": 1",
+      "signature": "version: : 1"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        185,
+        188
+      ],
+      "name": "workflow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly enabled: boolean;\r\n    readonly toolName: string;\r\n  }",
+      "signature": "workflow: : {\r\n    readonly enabled: boolean;\r\n    readonly toolName: string;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        189,
+        192
+      ],
+      "name": "workspace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly resourceRoot: unknown;\r\n    readonly rootEntries: readonly string[];\r\n  }",
+      "signature": "workspace: : {\r\n    readonly resourceRoot: unknown;\r\n    readonly rootEntries: readonly string[];\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "MessageTurnStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageTurnStatus = \"completed\" | \"failed\" | \"waiting\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        197,
+        202
+      ],
+      "name": "MessageTurnResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MessageTurnResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        198,
+        198
+      ],
+      "name": "eventsRead",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "eventsRead: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        199,
+        199
+      ],
+      "name": "failureMessage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "failureMessage?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        200,
+        200
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        201,
+        201
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": MessageTurnStatus",
+      "signature": "status: : MessageTurnStatus"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        577,
+        579
+      ],
+      "name": "loadAgentInformation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInformation>",
+      "signature": "export function loadAgentInformation() -> Promise<AgentInformation>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        587,
+        646
+      ],
+      "name": "sendMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendMessageInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SentMessageResult>",
+      "signature": "export function sendMessage(input: SendMessageInput) -> Promise<SentMessageResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        651,
+        797
+      ],
+      "name": "readSessionTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly onEvent?: (\r\n    event: MessageStreamEvent,\r\n    info: {\r\n      readonly eventsRead: number;\r\n    },\r\n  ) => void;\r\n  readonly sessionId: string;\r\n  readonly startIndex?: number;\r\n  readonly timeoutMs?: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MessageTurnResult>",
+      "signature": "export function readSessionTurn(input: {\r\n  readonly onEvent?: (\r\n    event: MessageStreamEvent,\r\n    info: {\r\n      readonly eventsRead: number;\r\n    },\r\n  ) => void;\r\n  readonly sessionId: string;\r\n  readonly startIndex?: number;\r\n  readonly timeoutMs?: number;\r\n}) -> Promise<MessageTurnResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        802,
+        804
+      ],
+      "name": "toErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toErrorMessage(error: unknown) -> string"
+    }
+  ],
+  "module": "apps/frameworks/next/app/_chat/workflow-api.ts"
+}

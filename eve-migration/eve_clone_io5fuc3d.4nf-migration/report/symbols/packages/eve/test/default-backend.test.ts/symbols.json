@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/test/default-backend.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/default-backend.test.ts:probes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        15
+      ],
+      "name": "probes",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<DefaultSandboxProbes>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DefaultSandboxProbes",
+      "signature": "export function probes(overrides: Partial<DefaultSandboxProbes>) -> DefaultSandboxProbes",
+      "visibility": "Private"
+    }
+  ]
+}

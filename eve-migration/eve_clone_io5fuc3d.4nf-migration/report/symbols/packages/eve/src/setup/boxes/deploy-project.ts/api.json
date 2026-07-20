@@ -1,0 +1,254 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        30
+      ],
+      "name": "DeployProjectDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeployProjectDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "runVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof runVercel",
+      "signature": "runVercel: : typeof runVercel"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "detectPackageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectPackageManager",
+      "signature": "detectPackageManager: : typeof detectPackageManager"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "runPackageManagerInstall",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof runPackageManagerInstall",
+      "signature": "runPackageManagerInstall: : typeof runPackageManagerInstall"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "detectDeployment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectDeployment",
+      "signature": "detectDeployment: : typeof detectDeployment"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "syncHostFrameworkPreset",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof syncHostFrameworkPreset",
+      "signature": "syncHostFrameworkPreset: : typeof syncHostFrameworkPreset"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        32,
+        51
+      ],
+      "name": "DeployProjectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeployProjectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "prompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": { log: ChannelSetupLog }",
+      "signature": "prompter: : { log: ChannelSetupLog }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "skip",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "skip?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "ensureLinkedProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"interactive-vercel-link\"",
+      "signature": "ensureLinkedProject?: : \"interactive-vercel-link\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DeployProjectDeps",
+      "signature": "deps?: : DeployProjectDeps"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        58,
+        60
+      ],
+      "name": "DeployProjectInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeployProjectInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "headless",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "headless: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        63,
+        67
+      ],
+      "name": "DeployProjectPayload",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeployProjectPayload { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "project",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProjectResolution",
+      "signature": "project: : ProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "deploymentPending",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "deploymentPending: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "deploymentDependenciesInstalled",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "deploymentDependenciesInstalled: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        241
+      ],
+      "name": "deployProject",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DeployProjectOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, DeployProjectInput, DeployProjectPayload>",
+      "signature": "export function deployProject(options: DeployProjectOptions) -> SetupBox<SetupState, DeployProjectInput, DeployProjectPayload>"
+    }
+  ],
+  "module": "packages/eve/src/setup/boxes/deploy-project.ts"
+}

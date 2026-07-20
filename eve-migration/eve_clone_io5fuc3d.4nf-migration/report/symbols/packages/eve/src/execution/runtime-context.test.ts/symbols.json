@@ -1,0 +1,56 @@
+{
+  "module": "packages/eve/src/execution/runtime-context.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/runtime-context.test.ts:createTestSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        13,
+        24
+      ],
+      "name": "createTestSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly auth?: SessionAuthContext | null; readonly parent?: Session[\"parent\"] }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Session",
+      "signature": "export function createTestSession(input: { readonly auth?: SessionAuthContext | null; readonly parent?: Session[\"parent\"] }) -> Session",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/runtime-context.test.ts:testAuth",
+      "kind": "variable",
+      "line_range": [
+        124,
+        129
+      ],
+      "name": "testAuth",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/runtime-context.test.ts:createMinimalBundle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        131,
+        146
+      ],
+      "name": "createMinimalBundle",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Parameters<typeof buildRunContext>[0][\"bundle\"]",
+      "signature": "export function createMinimalBundle() -> Parameters<typeof buildRunContext>[0][\"bundle\"]",
+      "visibility": "Private"
+    }
+  ]
+}

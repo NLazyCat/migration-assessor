@@ -1,0 +1,724 @@
+{
+  "module": "packages/eve/src/public/models/openai/chatgpt/auth.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthMode",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "CodexAuthMode",
+      "partial_analysis": false,
+      "value": "\"api-key\" | \"chatgpt\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthState",
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        31
+      ],
+      "name": "CodexAuthState",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly kind: \"authenticated\";\r\n      readonly accountId?: string;\r\n      readonly authMode: CodexAuthMode;\r\n      readonly authPath: string;\r\n      readonly codexHome: string;\r\n      readonly lastRefresh?: string;\r\n    }\r\n  | {\r\n      readonly kind: \"missing\";\r\n      readonly authPath: string;\r\n      readonly codexHome: string;\r\n    }\r\n  | {\r\n      readonly kind: \"invalid\";\r\n      readonly authPath: string;\r\n      readonly codexHome: string;\r\n      readonly reason: string;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:ReadCodexAuthStateOptions:codexHome",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "codexHome",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:ReadCodexAuthStateOptions",
+      "kind": "interface",
+      "line_range": [
+        33,
+        35
+      ],
+      "name": "ReadCodexAuthStateOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexApiKeyCredentials:apiKey",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "apiKey",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexApiKeyCredentials:authPath",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "authPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexApiKeyCredentials:codexHome",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "codexHome",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexApiKeyCredentials:kind",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"api-key\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexApiKeyCredentials",
+      "kind": "interface",
+      "line_range": [
+        37,
+        42
+      ],
+      "name": "CodexApiKeyCredentials",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:accessToken",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "accessToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:accountId",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "accountId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:authPath",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "authPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:codexHome",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "codexHome",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:idToken",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "idToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:kind",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"chatgpt\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:lastRefresh",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "lastRefresh",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials:refreshToken",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "refreshToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexChatGptCredentials",
+      "kind": "interface",
+      "line_range": [
+        44,
+        53
+      ],
+      "name": "CodexChatGptCredentials",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthCredentials",
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "CodexAuthCredentials",
+      "partial_analysis": false,
+      "value": "CodexApiKeyCredentials | CodexChatGptCredentials;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthSnapshot:state",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "state",
+          "partial_analysis": false,
+          "return_type": ": CodexAuthState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthSnapshot:credentials",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "credentials",
+          "partial_analysis": false,
+          "return_type": ": CodexAuthCredentials",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthSnapshot",
+      "kind": "interface",
+      "line_range": [
+        62,
+        66
+      ],
+      "name": "CodexAuthSnapshot",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexRefreshedTokens:accessToken",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "accessToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexRefreshedTokens:accountId",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "accountId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexRefreshedTokens:idToken",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "idToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexRefreshedTokens:refreshToken",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "refreshToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexRefreshedTokens",
+      "kind": "interface",
+      "line_range": [
+        68,
+        73
+      ],
+      "name": "CodexRefreshedTokens",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:TOKEN_REFRESH_SKEW_MS",
+      "kind": "variable",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "TOKEN_REFRESH_SKEW_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:codexAuthTokensSchema",
+      "kind": "variable",
+      "line_range": [
+        77,
+        84
+      ],
+      "name": "codexAuthTokensSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:codexAuthFileSchema",
+      "kind": "variable",
+      "line_range": [
+        86,
+        93
+      ],
+      "name": "codexAuthFileSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexAuthFile",
+      "kind": "type_alias",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "CodexAuthFile",
+      "partial_analysis": false,
+      "value": "z.infer<typeof codexAuthFileSchema>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:ParsedCodexAuthFile",
+      "kind": "type_alias",
+      "line_range": [
+        96,
+        98
+      ],
+      "name": "ParsedCodexAuthFile",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"parsed\"; readonly value: CodexAuthFile }\r\n  | { readonly kind: \"invalid\"; readonly reason: string };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:readCodexAuth",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        100,
+        119
+      ],
+      "name": "readCodexAuth",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ReadCodexAuthStateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CodexAuthSnapshot>",
+      "signature": "export function readCodexAuth(options: ReadCodexAuthStateOptions) -> Promise<CodexAuthSnapshot>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:readCodexAuthCredentials",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        121,
+        133
+      ],
+      "name": "readCodexAuthCredentials",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ReadCodexAuthStateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CodexAuthCredentials>",
+      "signature": "export function readCodexAuthCredentials(options: ReadCodexAuthStateOptions) -> Promise<CodexAuthCredentials>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:parseCodexAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        135,
+        198
+      ],
+      "name": "parseCodexAuth",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly authPath: string;\r\n    readonly codexHome: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CodexAuthSnapshot",
+      "signature": "export function parseCodexAuth(raw: string, input: {\r\n    readonly authPath: string;\r\n    readonly codexHome: string;\r\n  }) -> CodexAuthSnapshot",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:CodexCredentialSelection",
+      "kind": "type_alias",
+      "line_range": [
+        200,
+        210
+      ],
+      "name": "CodexCredentialSelection",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"api-key\"; readonly apiKey: string }\r\n  | {\r\n      readonly kind: \"chatgpt\";\r\n      readonly accessToken?: string;\r\n      readonly accountId?: string;\r\n      readonly idToken?: string;\r\n      readonly lastRefresh?: string;\r\n      readonly refreshToken?: string;\r\n    }\r\n  | { readonly kind: \"none\" };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:selectCodexCredentials",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        219,
+        249
+      ],
+      "name": "selectCodexCredentials",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "CodexAuthFile"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CodexCredentialSelection",
+      "signature": "export function selectCodexCredentials(auth: CodexAuthFile) -> CodexCredentialSelection",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:parseCodexAuthFile",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        251,
+        265
+      ],
+      "name": "parseCodexAuthFile",
+      "params": [
+        {
+          "name": "raw",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParsedCodexAuthFile",
+      "signature": "export function parseCodexAuthFile(raw: string) -> ParsedCodexAuthFile",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:writeCodexAuthCredentials",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        267,
+        313
+      ],
+      "name": "writeCodexAuthCredentials",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly credentials: CodexChatGptCredentials;\r\n  readonly now?: () => Date;\r\n  readonly tokens: CodexRefreshedTokens;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CodexChatGptCredentials>",
+      "signature": "export function writeCodexAuthCredentials(input: {\r\n  readonly credentials: CodexChatGptCredentials;\r\n  readonly now?: () => Date;\r\n  readonly tokens: CodexRefreshedTokens;\r\n}) -> Promise<CodexChatGptCredentials>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:assertCodexAuthStateAuthenticated",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        315,
+        329
+      ],
+      "name": "assertCodexAuthStateAuthenticated",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CodexAuthState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertCodexAuthStateAuthenticated(state: CodexAuthState) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:resolveDefaultCodexHome",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        331,
+        333
+      ],
+      "name": "resolveDefaultCodexHome",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveDefaultCodexHome() -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:readNonEmptyString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        335,
+        337
+      ],
+      "name": "readNonEmptyString",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readNonEmptyString(value: unknown) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:readCodexJwtExpirationMs",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        339,
+        343
+      ],
+      "name": "readCodexJwtExpirationMs",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readCodexJwtExpirationMs(token: string | undefined) -> number | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:isFreshCodexAccessToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        345,
+        349
+      ],
+      "name": "isFreshCodexAccessToken",
+      "params": [
+        {
+          "name": "accessToken",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "now",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isFreshCodexAccessToken(accessToken: string | undefined, now: number) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:extractCodexAccountIdFromToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        351,
+        363
+      ],
+      "name": "extractCodexAccountIdFromToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function extractCodexAccountIdFromToken(token: string | undefined) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/auth.ts:parseCodexJwtClaims",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        365,
+        372
+      ],
+      "name": "parseCodexJwtClaims",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown> | undefined",
+      "signature": "export function parseCodexJwtClaims(token: string | undefined) -> Record<string, unknown> | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

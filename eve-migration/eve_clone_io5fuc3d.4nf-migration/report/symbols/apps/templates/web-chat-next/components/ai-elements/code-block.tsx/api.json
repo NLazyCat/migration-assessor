@@ -1,0 +1,340 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        177,
+        239
+      ],
+      "name": "highlightCode",
+      "params": [
+        {
+          "name": "code",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "optional": false,
+          "type": "BundledLanguage"
+        },
+        {
+          "name": "callback",
+          "optional": true,
+          "type": "(result: TokenizedCode) => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenizedCode | null",
+      "signature": "export const highlightCode: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        290,
+        309
+      ],
+      "name": "CodeBlockContainer",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "HTMLAttributes<HTMLDivElement> & { language: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockContainer: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        311,
+        325
+      ],
+      "name": "CodeBlockHeader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "HTMLAttributes<HTMLDivElement>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockHeader: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        327,
+        335
+      ],
+      "name": "CodeBlockTitle",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "HTMLAttributes<HTMLDivElement>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockTitle: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        337,
+        345
+      ],
+      "name": "CodeBlockFilename",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "HTMLAttributes<HTMLSpanElement>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockFilename: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        347,
+        355
+      ],
+      "name": "CodeBlockActions",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "HTMLAttributes<HTMLDivElement>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockActions: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        357,
+        406
+      ],
+      "name": "CodeBlockContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  code: string;\r\n  language: BundledLanguage;\r\n  showLineNumbers?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockContent: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        408,
+        426
+      ],
+      "name": "CodeBlock",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "CodeBlockProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlock: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        428,
+        432
+      ],
+      "name": "CodeBlockCopyButtonProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodeBlockCopyButtonProps = ComponentProps<typeof Button> & {\r\n  onCopy?: () => void;\r\n  onError?: (error: Error) => void;\r\n  timeout?: number;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        434,
+        484
+      ],
+      "name": "CodeBlockCopyButton",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "CodeBlockCopyButtonProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockCopyButton: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        486,
+        486
+      ],
+      "name": "CodeBlockLanguageSelectorProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodeBlockLanguageSelectorProps = ComponentProps<typeof Select>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        488,
+        490
+      ],
+      "name": "CodeBlockLanguageSelector",
+      "params": [
+        {
+          "name": "props",
+          "optional": false,
+          "type": "CodeBlockLanguageSelectorProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockLanguageSelector: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        492,
+        492
+      ],
+      "name": "CodeBlockLanguageSelectorTriggerProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodeBlockLanguageSelectorTriggerProps = ComponentProps<typeof SelectTrigger>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        494,
+        503
+      ],
+      "name": "CodeBlockLanguageSelectorTrigger",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "CodeBlockLanguageSelectorTriggerProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockLanguageSelectorTrigger: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        505,
+        505
+      ],
+      "name": "CodeBlockLanguageSelectorValueProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodeBlockLanguageSelectorValueProps = ComponentProps<typeof SelectValue>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        507,
+        509
+      ],
+      "name": "CodeBlockLanguageSelectorValue",
+      "params": [
+        {
+          "name": "props",
+          "optional": false,
+          "type": "CodeBlockLanguageSelectorValueProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockLanguageSelectorValue: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        511,
+        511
+      ],
+      "name": "CodeBlockLanguageSelectorContentProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodeBlockLanguageSelectorContentProps = ComponentProps<typeof SelectContent>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        513,
+        516
+      ],
+      "name": "CodeBlockLanguageSelectorContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "CodeBlockLanguageSelectorContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockLanguageSelectorContent: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        518,
+        518
+      ],
+      "name": "CodeBlockLanguageSelectorItemProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CodeBlockLanguageSelectorItemProps = ComponentProps<typeof SelectItem>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        520,
+        522
+      ],
+      "name": "CodeBlockLanguageSelectorItem",
+      "params": [
+        {
+          "name": "props",
+          "optional": false,
+          "type": "CodeBlockLanguageSelectorItemProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const CodeBlockLanguageSelectorItem: unknown"
+    }
+  ],
+  "module": "apps/templates/web-chat-next/components/ai-elements/code-block.tsx"
+}

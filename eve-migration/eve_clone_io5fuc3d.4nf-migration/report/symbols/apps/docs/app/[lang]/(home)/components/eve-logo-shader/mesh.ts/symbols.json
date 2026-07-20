@@ -1,0 +1,334 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:Vec3",
+      "kind": "type_alias",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "Vec3",
+      "partial_analysis": false,
+      "value": "[number, number, number];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:GltfDocument",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        26
+      ],
+      "name": "GltfDocument",
+      "partial_analysis": false,
+      "value": "{\r\n  buffers?: Array<{ uri: string }>;\r\n  bufferViews: Array<{\r\n    buffer: number;\r\n    byteOffset?: number;\r\n    byteLength: number;\r\n    byteStride?: number;\r\n  }>;\r\n  accessors: Array<{\r\n    bufferView: number;\r\n    byteOffset?: number;\r\n    componentType: number;\r\n    count: number;\r\n  }>;\r\n  meshes?: Array<{\r\n    primitives?: Array<{\r\n      mode?: number;\r\n      attributes?: { POSITION?: number; NORMAL?: number };\r\n      indices?: number;\r\n    }>;\r\n  }>;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:GLTF_MODE_TRIANGLES",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "GLTF_MODE_TRIANGLES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:GL_FLOAT",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "GL_FLOAT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:GL_UNSIGNED_BYTE",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "GL_UNSIGNED_BYTE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:GL_UNSIGNED_SHORT",
+      "kind": "variable",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "GL_UNSIGNED_SHORT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:GL_UNSIGNED_INT",
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "GL_UNSIGNED_INT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:POSITION_COMPONENTS",
+      "kind": "variable",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "POSITION_COMPONENTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:NORMAL_COMPONENTS",
+      "kind": "variable",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "NORMAL_COMPONENTS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:decodeGltfMesh",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        36,
+        95
+      ],
+      "name": "decodeGltfMesh",
+      "params": [
+        {
+          "name": "gltf",
+          "optional": false,
+          "type": "GltfDocument"
+        },
+        {
+          "name": "loadBuffer",
+          "optional": false,
+          "type": "(uri: string) => Promise<ArrayBufferLike>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MeshData>",
+      "signature": "export function decodeGltfMesh(gltf: GltfDocument, loadBuffer: (uri: string) => Promise<ArrayBufferLike>) -> Promise<MeshData>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:meshAspect",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        101
+      ],
+      "name": "meshAspect",
+      "params": [
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function meshAspect(mesh: MeshData) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:readFloatAccessor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        103,
+        129
+      ],
+      "name": "readFloatAccessor",
+      "params": [
+        {
+          "name": "buffers",
+          "optional": false,
+          "type": "ArrayBufferLike[]"
+        },
+        {
+          "name": "gltf",
+          "optional": false,
+          "type": "GltfDocument"
+        },
+        {
+          "name": "accessor",
+          "optional": false,
+          "type": "GltfDocument[\"accessors\"][number]"
+        },
+        {
+          "name": "components",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function readFloatAccessor(buffers: ArrayBufferLike[], gltf: GltfDocument, accessor: GltfDocument[\"accessors\"][number], components: number) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:readIndexAccessor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        131,
+        146
+      ],
+      "name": "readIndexAccessor",
+      "params": [
+        {
+          "name": "buffers",
+          "optional": false,
+          "type": "ArrayBufferLike[]"
+        },
+        {
+          "name": "gltf",
+          "optional": false,
+          "type": "GltfDocument"
+        },
+        {
+          "name": "accessor",
+          "optional": false,
+          "type": "GltfDocument[\"accessors\"][number]"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function readIndexAccessor(buffers: ArrayBufferLike[], gltf: GltfDocument, accessor: GltfDocument[\"accessors\"][number]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:fallbackNormals",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        148,
+        161
+      ],
+      "name": "fallbackNormals",
+      "params": [
+        {
+          "name": "positions",
+          "optional": false,
+          "type": "Float32Array"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function fallbackNormals(positions: Float32Array) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:meshBounds",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        175
+      ],
+      "name": "meshBounds",
+      "params": [
+        {
+          "name": "positions",
+          "optional": false,
+          "type": "Float32Array"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Bounds",
+      "signature": "export function meshBounds(positions: Float32Array) -> Bounds",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:faceNormal",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        185
+      ],
+      "name": "faceNormal",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "Vec3"
+        },
+        {
+          "name": "c",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Vec3",
+      "signature": "export function faceNormal(a: Vec3, b: Vec3, c: Vec3) -> Vec3",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/mesh.ts:normalize3",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        187,
+        190
+      ],
+      "name": "normalize3",
+      "params": [
+        {
+          "name": "v",
+          "optional": false,
+          "type": "Vec3"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Vec3",
+      "signature": "export function normalize3(v: Vec3) -> Vec3",
+      "visibility": "Private"
+    }
+  ]
+}

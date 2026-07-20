@@ -1,0 +1,277 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        40,
+        42
+      ],
+      "name": "SessionIdentitySummary",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionIdentitySummary { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "nodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nodeId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        62,
+        67
+      ],
+      "name": "SessionParentLineage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionParentLineage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "callId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "callId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "rootSessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootSessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "turnId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "turnId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        74,
+        78
+      ],
+      "name": "readChannelKind",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readChannelKind(serializedContext: Record<string, unknown>) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        84,
+        98
+      ],
+      "name": "readParentLineage",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionParentLineage",
+      "signature": "export function readParentLineage(serializedContext: Record<string, unknown>) -> SessionParentLineage"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        104,
+        108
+      ],
+      "name": "readParentSessionId",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readParentSessionId(serializedContext: Record<string, unknown>) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        119,
+        121
+      ],
+      "name": "readRootSessionId",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readRootSessionId(serializedContext: Record<string, unknown>) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        128,
+        133
+      ],
+      "name": "readChannelRequestId",
+      "params": [
+        {
+          "name": "serializedContext",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readChannelRequestId(serializedContext: Record<string, unknown>) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        145,
+        145
+      ],
+      "name": "EVE_SESSION_TITLE_MAX_CHARS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_SESSION_TITLE_MAX_CHARS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        158,
+        176
+      ],
+      "name": "deriveSessionTitle",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function deriveSessionTitle(message: unknown) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        206,
+        216
+      ],
+      "name": "buildSessionAttributes",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly inputMessage: unknown;\r\n  readonly serializedContext: Record<string, unknown>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, EveAttributeValue>",
+      "signature": "export function buildSessionAttributes(input: {\r\n  readonly inputMessage: unknown;\r\n  readonly serializedContext: Record<string, unknown>;\r\n}) -> Record<string, EveAttributeValue>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        227,
+        245
+      ],
+      "name": "buildSubagentRootAttributes",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly identity: SessionIdentitySummary;\r\n  readonly parentCallId?: string;\r\n  readonly parentSessionId: string;\r\n  readonly parentTurnId?: string;\r\n  readonly rootSessionId: string;\r\n  readonly serializedContext: Record<string, unknown>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, EveAttributeValue>",
+      "signature": "export function buildSubagentRootAttributes(input: {\r\n  readonly identity: SessionIdentitySummary;\r\n  readonly parentCallId?: string;\r\n  readonly parentSessionId: string;\r\n  readonly parentTurnId?: string;\r\n  readonly rootSessionId: string;\r\n  readonly serializedContext: Record<string, unknown>;\r\n}) -> Record<string, EveAttributeValue>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        257,
+        268
+      ],
+      "name": "buildTurnAttributes",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly parentSessionId: string;\r\n  readonly requestId?: string;\r\n  readonly rootSessionId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, EveAttributeValue>",
+      "signature": "export function buildTurnAttributes(input: {\r\n  readonly parentSessionId: string;\r\n  readonly requestId?: string;\r\n  readonly rootSessionId: string;\r\n}) -> Record<string, EveAttributeValue>"
+    }
+  ],
+  "module": "packages/eve/src/execution/eve-workflow-attributes.ts"
+}

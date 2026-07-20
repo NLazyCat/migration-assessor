@@ -1,0 +1,97 @@
+{
+  "module": "packages/eve/src/execution/session-callback-step.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.ts:SESSION_CALLBACK_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "SESSION_CALLBACK_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.ts:log",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.ts:fireSessionCallbackStep",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        25,
+        84
+      ],
+      "name": "fireSessionCallbackStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly error?: unknown;\r\n  readonly output?: unknown;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly status: \"completed\" | \"failed\";\r\n  readonly usage?: TokenUsage;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function fireSessionCallbackStep(input: {\r\n  readonly error?: unknown;\r\n  readonly output?: unknown;\r\n  readonly serializedContext: Record<string, unknown>;\r\n  readonly status: \"completed\" | \"failed\";\r\n  readonly usage?: TokenUsage;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.ts:buildCompletedCallbackBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        100
+      ],
+      "name": "buildCompletedCallbackBody",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly callback: SessionCallback;\r\n  readonly output: unknown;\r\n  readonly sessionId: string;\r\n  readonly usage: TokenUsage | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function buildCompletedCallbackBody(input: {\r\n  readonly callback: SessionCallback;\r\n  readonly output: unknown;\r\n  readonly sessionId: string;\r\n  readonly usage: TokenUsage | undefined;\r\n}) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.ts:parseSerializedSessionCallback",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        102,
+        111
+      ],
+      "name": "parseSerializedSessionCallback",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionCallback",
+      "signature": "export function parseSerializedSessionCallback(value: unknown) -> SessionCallback",
+      "visibility": "Private"
+    }
+  ]
+}

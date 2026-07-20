@@ -1,0 +1,106 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:InteropFile:fileName",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "fileName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:InteropFile:lang",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "lang",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:InteropFile:code",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "code",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:InteropFile",
+      "kind": "interface",
+      "line_range": [
+        8,
+        12
+      ],
+      "name": "InteropFile",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:FILES",
+      "kind": "variable",
+      "line_range": [
+        14,
+        37
+      ],
+      "name": "FILES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:renderCode",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        39,
+        54
+      ],
+      "name": "renderCode",
+      "params": [
+        {
+          "name": "file",
+          "optional": false,
+          "type": "InteropFile"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderCode(file: InteropFile) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/nextjs-interop.tsx:NextjsInterop",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        56,
+        89
+      ],
+      "name": "NextjsInterop",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function NextjsInterop() -> void",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "module": "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts:scenarioApp",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "scenarioApp",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts:DRAIN_SCENARIO_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "DRAIN_SCENARIO_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts:DRAIN_CHANNEL_SOURCE",
+      "kind": "variable",
+      "line_range": [
+        28,
+        60
+      ],
+      "name": "DRAIN_CHANNEL_SOURCE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts:DRAIN_DESCRIPTOR",
+      "kind": "variable",
+      "line_range": [
+        62,
+        69
+      ],
+      "name": "DRAIN_DESCRIPTOR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/dev-server-drain.scenario.test.ts:triggerWorkerReplacement",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        71,
+        89
+      ],
+      "name": "triggerWorkerReplacement",
+      "params": [
+        {
+          "name": "server",
+          "optional": false,
+          "type": "RunningEveDev"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function triggerWorkerReplacement(server: RunningEveDev, appRoot: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

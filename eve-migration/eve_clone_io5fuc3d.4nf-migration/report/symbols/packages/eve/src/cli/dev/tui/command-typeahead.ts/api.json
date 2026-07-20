@@ -1,0 +1,246 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        22,
+        29
+      ],
+      "name": "CommandTypeaheadState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CommandTypeaheadState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "query",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "query: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "matches",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly PromptCommandSpec[]",
+      "signature": "matches: : readonly PromptCommandSpec[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "selectedIndex",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "selectedIndex: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "dismissed",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "dismissed: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        53
+      ],
+      "name": "typeaheadFor",
+      "params": [
+        {
+          "name": "commands",
+          "optional": false,
+          "type": "readonly PromptCommandSpec[]"
+        },
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "previous",
+          "optional": true,
+          "type": "CommandTypeaheadState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CommandTypeaheadState",
+      "signature": "export function typeaheadFor(commands: readonly PromptCommandSpec[], text: string, previous: CommandTypeaheadState) -> CommandTypeaheadState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        69
+      ],
+      "name": "isTypeaheadOpen",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CommandTypeaheadState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isTypeaheadOpen(state: CommandTypeaheadState) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        80
+      ],
+      "name": "moveTypeaheadSelection",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CommandTypeaheadState"
+        },
+        {
+          "name": "delta",
+          "optional": false,
+          "type": "1 | -1"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CommandTypeaheadState",
+      "signature": "export function moveTypeaheadSelection(state: CommandTypeaheadState, delta: 1 | -1) -> CommandTypeaheadState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "dismissTypeahead",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CommandTypeaheadState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CommandTypeaheadState",
+      "signature": "export function dismissTypeahead(state: CommandTypeaheadState) -> CommandTypeaheadState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        92
+      ],
+      "name": "selectedTypeaheadCommand",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CommandTypeaheadState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PromptCommandSpec | undefined",
+      "signature": "export function selectedTypeaheadCommand(state: CommandTypeaheadState) -> PromptCommandSpec | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "typeaheadCompletion",
+      "params": [
+        {
+          "name": "spec",
+          "optional": false,
+          "type": "PromptCommandSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function typeaheadCompletion(spec: PromptCommandSpec) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        111,
+        117
+      ],
+      "name": "inlineCommandHint",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CommandTypeaheadState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function inlineCommandHint(state: CommandTypeaheadState) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        126,
+        164
+      ],
+      "name": "renderCommandSuggestions",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "CommandTypeaheadState"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderCommandSuggestions(state: CommandTypeaheadState, theme: Theme, width: number) -> string[]"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/command-typeahead.ts"
+}

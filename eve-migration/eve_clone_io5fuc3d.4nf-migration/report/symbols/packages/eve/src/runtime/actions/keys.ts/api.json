@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        7,
+        18
+      ],
+      "name": "getRuntimeActionRequestKey",
+      "params": [
+        {
+          "name": "action",
+          "optional": false,
+          "type": "RuntimeActionRequest"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function getRuntimeActionRequestKey(action: RuntimeActionRequest) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        24,
+        33
+      ],
+      "name": "getRuntimeActionResultKey",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "RuntimeActionResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function getRuntimeActionResultKey(result: RuntimeActionResult) -> string"
+    }
+  ],
+  "module": "packages/eve/src/runtime/actions/keys.ts"
+}

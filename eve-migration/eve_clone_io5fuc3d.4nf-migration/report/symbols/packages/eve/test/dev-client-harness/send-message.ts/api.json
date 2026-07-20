@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        135,
+        258
+      ],
+      "name": "sendDevelopmentMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  headers?: DevelopmentRequestHeaders;\r\n  message: string;\r\n  onEvent?(event: HandleMessageStreamEvent): void;\r\n  onResponseStart?(response: { sessionId?: string }): void;\r\n  signal?: AbortSignal;\r\n  session: DevelopmentSessionState;\r\n  serverUrl: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  completedMessage?: string;\r\n  events: HandleMessageStreamEvent[];\r\n  sessionId?: string;\r\n  session: DevelopmentSessionState;\r\n}>",
+      "signature": "export function sendDevelopmentMessage(input: {\r\n  headers?: DevelopmentRequestHeaders;\r\n  message: string;\r\n  onEvent?(event: HandleMessageStreamEvent): void;\r\n  onResponseStart?(response: { sessionId?: string }): void;\r\n  signal?: AbortSignal;\r\n  session: DevelopmentSessionState;\r\n  serverUrl: string;\r\n}) -> Promise<{\r\n  completedMessage?: string;\r\n  events: HandleMessageStreamEvent[];\r\n  sessionId?: string;\r\n  session: DevelopmentSessionState;\r\n}>"
+    }
+  ],
+  "module": "packages/eve/test/dev-client-harness/send-message.ts"
+}

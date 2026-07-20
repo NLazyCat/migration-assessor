@@ -1,0 +1,128 @@
+{
+  "module": "packages/eve/src/execution/turn-workflow.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.ts:TASK_MODE_WAIT_ERROR_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "TASK_MODE_WAIT_ERROR_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.ts:canSettleCancelledTurnAsPark",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        39
+      ],
+      "name": "canSettleCancelledTurnAsPark",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TurnWorkflowInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function canSettleCancelledTurnAsPark(input: TurnWorkflowInput) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.ts:turnWorkflow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        52,
+        62
+      ],
+      "name": "turnWorkflow",
+      "params": [
+        {
+          "name": "rawInput",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function turnWorkflow(rawInput: unknown) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.ts:runTurnOwnedWorkflow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        64,
+        224
+      ],
+      "name": "runTurnOwnedWorkflow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TurnWorkflowInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runTurnOwnedWorkflow(input: TurnWorkflowInput) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.ts:waitForRuntimeActionResults",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        230,
+        327
+      ],
+      "name": "waitForRuntimeActionResults",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly bufferedDeliveries: DeliverHookPayload[];\r\n  readonly cancellation: TurnCancellationControl | undefined;\r\n  readonly cursor: TurnExecutionCursor;\r\n  readonly inboxToken: string;\r\n  readonly initialResults: readonly RuntimeActionResult[];\r\n  readonly iterator: AsyncIterator<TurnInboxPayload>;\r\n  readonly nextDeliveryRequestId: () => string;\r\n  readonly pendingActionKeys: readonly string[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly RuntimeActionResult[] | \"cancelled\">",
+      "signature": "export function waitForRuntimeActionResults(input: {\r\n  readonly bufferedDeliveries: DeliverHookPayload[];\r\n  readonly cancellation: TurnCancellationControl | undefined;\r\n  readonly cursor: TurnExecutionCursor;\r\n  readonly inboxToken: string;\r\n  readonly initialResults: readonly RuntimeActionResult[];\r\n  readonly iterator: AsyncIterator<TurnInboxPayload>;\r\n  readonly nextDeliveryRequestId: () => string;\r\n  readonly pendingActionKeys: readonly string[];\r\n}) -> Promise<readonly RuntimeActionResult[] | \"cancelled\">",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.ts:runLegacyTurnWorkflow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        329,
+        416
+      ],
+      "name": "runLegacyTurnWorkflow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "TurnWorkflowInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runLegacyTurnWorkflow(input: TurnWorkflowInput) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

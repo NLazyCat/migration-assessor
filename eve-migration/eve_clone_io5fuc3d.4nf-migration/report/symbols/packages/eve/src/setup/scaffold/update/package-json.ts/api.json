@@ -1,0 +1,157 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        5,
+        18
+      ],
+      "name": "PackageJsonPatch",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageJsonPatch { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "dependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "dependencies?: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "devDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "devDependencies?: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "overrides",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "overrides?: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "resolutions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "resolutions?: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "scripts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string>",
+      "signature": "scripts?: : Record<string, string>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "nodeEngineRequirement",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nodeEngineRequirement?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        23
+      ],
+      "name": "PackageJsonPatchResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageJsonPatchResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "changed",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "changed: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "nodeEngineOverride",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": NodeEngineOverride",
+      "signature": "nodeEngineOverride?: : NodeEngineOverride"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        89
+      ],
+      "name": "patchPackageJson",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "patch",
+          "optional": false,
+          "type": "PackageJsonPatch"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageJsonPatchResult>",
+      "signature": "export function patchPackageJson(path: string, patch: PackageJsonPatch) -> Promise<PackageJsonPatchResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/update/package-json.ts"
+}

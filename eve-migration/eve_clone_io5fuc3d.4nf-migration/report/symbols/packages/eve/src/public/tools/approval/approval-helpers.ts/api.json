@@ -1,0 +1,50 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "TInput"
+      ],
+      "kind": "function",
+      "line_range": [
+        7,
+        9
+      ],
+      "name": "always",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Approval<TInput>",
+      "signature": "export function always() -> Approval<TInput>"
+    },
+    {
+      "generics": [
+        "TInput"
+      ],
+      "kind": "function",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "never",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Approval<TInput>",
+      "signature": "export function never() -> Approval<TInput>"
+    },
+    {
+      "generics": [
+        "TInput"
+      ],
+      "kind": "function",
+      "line_range": [
+        26,
+        29
+      ],
+      "name": "once",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Approval<TInput>",
+      "signature": "export function once() -> Approval<TInput>"
+    }
+  ],
+  "module": "packages/eve/src/public/tools/approval/approval-helpers.ts"
+}

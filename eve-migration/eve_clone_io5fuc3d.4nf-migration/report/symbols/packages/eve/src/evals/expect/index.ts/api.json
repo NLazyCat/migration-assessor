@@ -1,0 +1,107 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        52
+      ],
+      "name": "includes",
+      "params": [
+        {
+          "name": "substring",
+          "optional": false,
+          "type": "string | RegExp"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Assertion",
+      "signature": "export function includes(substring: string | RegExp) -> Assertion"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        55,
+        62
+      ],
+      "name": "satisfies",
+      "params": [
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "(value: T) => boolean"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Assertion",
+      "signature": "export function satisfies(predicate: (value: T) => boolean, label: string) -> Assertion"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        68,
+        74
+      ],
+      "name": "equals",
+      "params": [
+        {
+          "name": "expected",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Assertion",
+      "signature": "export function equals(expected: unknown) -> Assertion"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        80,
+        89
+      ],
+      "name": "matches",
+      "params": [
+        {
+          "name": "schema",
+          "optional": false,
+          "type": "StandardSchemaV1"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Assertion",
+      "signature": "export function matches(schema: StandardSchemaV1) -> Assertion"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        97,
+        106
+      ],
+      "name": "similarity",
+      "params": [
+        {
+          "name": "expected",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Assertion",
+      "signature": "export function similarity(expected: string) -> Assertion"
+    }
+  ],
+  "module": "packages/eve/src/evals/expect/index.ts"
+}

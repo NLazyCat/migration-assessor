@@ -1,0 +1,442 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "SetupPanelOption",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SetupPanelOption = PromptOption<string>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "SetupSelectPanelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SetupSelectPanelState = SetupOptionSelectPanelState | SetupActionsPanelState;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        123,
+        131
+      ],
+      "name": "SetupTextPanelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SetupTextPanelState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        124,
+        124
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "editor",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LineState",
+      "signature": "editor: : LineState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        126,
+        126
+      ],
+      "name": "placeholder",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "placeholder?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        127,
+        127
+      ],
+      "name": "mask",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "mask: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        128,
+        128
+      ],
+      "name": "error",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "error?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "notices",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SelectNotice[]",
+      "signature": "notices?: : readonly SelectNotice[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        133,
+        136
+      ],
+      "name": "SetupAcknowledgePanelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SetupAcknowledgePanelState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        134,
+        134
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        135,
+        135
+      ],
+      "name": "lines",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "lines: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        139,
+        148
+      ],
+      "name": "FlowPanelLine",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FlowPanelLine { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        140,
+        140
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        141,
+        141
+      ],
+      "name": "tone",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"info\" | \"success\" | \"warning\" | \"error\"",
+      "signature": "tone: : \"info\" | \"success\" | \"warning\" | \"error\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        147,
+        147
+      ],
+      "name": "evidence",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "evidence?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        151,
+        154
+      ],
+      "name": "FlowPanelIndicator",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FlowPanelIndicator { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "glyph",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "glyph: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        153,
+        153
+      ],
+      "name": "color",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"green\" | \"yellow\"",
+      "signature": "color: : \"green\" | \"yellow\""
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        157,
+        164
+      ],
+      "name": "FlowPanelStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type FlowPanelStatus = | { kind: \"progress\"; text: string; indicator: FlowPanelIndicator }\r\n  | {\r\n      kind: \"external-action\";\r\n      text: string;\r\n      emphasis: string;\r\n      indicator: FlowPanelIndicator;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        166,
+        180
+      ],
+      "name": "FlowPanelContent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type FlowPanelContent = | {\r\n      kind: \"question\";\r\n      rows: readonly string[];\r\n      /** The install wait keeps its indicator above the concurrent actions. */\r\n      status?: FlowPanelStatus;\r\n    }\r\n  | {\r\n      kind: \"status\";\r\n      status: FlowPanelStatus;\r\n      /** Latest child-process output shown transiently beneath the status. */\r\n      preview?: string;\r\n    }\r\n  | { kind: \"preview\"; text: string; indicator: FlowPanelIndicator }\r\n  | { kind: \"idle\"; indicator: FlowPanelIndicator };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        183,
+        188
+      ],
+      "name": "FlowPanelState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface FlowPanelState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        185,
+        185
+      ],
+      "name": "title",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "title: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        186,
+        186
+      ],
+      "name": "lines",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly FlowPanelLine[]",
+      "signature": "lines: : readonly FlowPanelLine[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        187,
+        187
+      ],
+      "name": "content",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": FlowPanelContent",
+      "signature": "content: : FlowPanelContent"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        266,
+        314
+      ],
+      "name": "renderFlowPanel",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "FlowPanelState"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderFlowPanel(state: FlowPanelState, theme: Theme, width: number) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        717,
+        800
+      ],
+      "name": "renderSelectQuestion",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SetupSelectPanelState"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderSelectQuestion(state: SetupSelectPanelState, theme: Theme, width: number) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        803,
+        835
+      ],
+      "name": "renderTextQuestion",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SetupTextPanelState"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "caretVisible",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderTextQuestion(state: SetupTextPanelState, theme: Theme, width: number, caretVisible: boolean) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        843,
+        858
+      ],
+      "name": "renderAcknowledgeQuestion",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SetupAcknowledgePanelState"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderAcknowledgeQuestion(state: SetupAcknowledgePanelState, theme: Theme, width: number) -> string[]"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/setup-panel.ts"
+}

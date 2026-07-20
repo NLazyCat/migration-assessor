@@ -1,0 +1,155 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/channel-route-context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:AgentInfoRouteResponse",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "AgentInfoRouteResponse",
+      "partial_analysis": false,
+      "value": "() => Promise<Response>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:agentInfoRouteResponseKey",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "agentInfoRouteResponseKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:routeAgentKey",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "routeAgentKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:InternalRouteArgs",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "InternalRouteArgs",
+      "partial_analysis": false,
+      "value": "RouteHandlerArgs & {\r\n  [agentInfoRouteResponseKey]?: AgentInfoRouteResponse;\r\n  [routeAgentKey]?: Agent;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:attachAgentInfoRouteResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        21
+      ],
+      "name": "attachAgentInfoRouteResponse",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "TArgs"
+        },
+        {
+          "name": "respond",
+          "optional": false,
+          "type": "AgentInfoRouteResponse"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TArgs",
+      "signature": "export function attachAgentInfoRouteResponse(args: TArgs, respond: AgentInfoRouteResponse) -> TArgs",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:readAgentInfoRouteResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        28
+      ],
+      "name": "readAgentInfoRouteResponse",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "RouteHandlerArgs"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentInfoRouteResponse | undefined",
+      "signature": "export function readAgentInfoRouteResponse(args: RouteHandlerArgs) -> AgentInfoRouteResponse | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:attachRouteAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "attachRouteAgent",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "TArgs"
+        },
+        {
+          "name": "agent",
+          "optional": false,
+          "type": "Agent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TArgs",
+      "signature": "export function attachRouteAgent(args: TArgs, agent: Agent) -> TArgs",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/channel-route-context.ts:readRouteAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        39
+      ],
+      "name": "readRouteAgent",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "RouteHandlerArgs"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Agent | undefined",
+      "signature": "export function readRouteAgent(args: RouteHandlerArgs) -> Agent | undefined",
+      "visibility": "Public"
+    }
+  ]
+}

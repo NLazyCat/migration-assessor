@@ -1,0 +1,173 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "CHANNEL_SENTINEL",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CHANNEL_SENTINEL: unknown"
+    },
+    {
+      "generics": [
+        "TState",
+        "TReceiveTarget",
+        "TMetadata"
+      ],
+      "kind": "interface",
+      "line_range": [
+        21,
+        39
+      ],
+      "name": "CompiledChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompiledChannel { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "__kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof CHANNEL_SENTINEL",
+      "signature": "__kind: : typeof CHANNEL_SENTINEL"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "routes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly RouteDefinition<TState>[]",
+      "signature": "routes: : readonly RouteDefinition<TState>[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "adapter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelAdapter<any>",
+      "signature": "adapter: : ChannelAdapter<any>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "cors",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": NormalizedChannelCorsOptions",
+      "signature": "cors?: : NormalizedChannelCorsOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "__metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TMetadata",
+      "signature": "__metadata?: : TMetadata"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        38
+      ],
+      "name": "receive",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (\r\n    input: {\r\n      readonly message: string;\r\n      readonly target: Readonly<TReceiveTarget>;\r\n      readonly auth: SessionAuthContext | null;\r\n    },\r\n    args: { send: SendFn<TState> },\r\n  ) => Promise<Session>",
+      "signature": "receive?: : (\r\n    input: {\r\n      readonly message: string;\r\n      readonly target: Readonly<TReceiveTarget>;\r\n      readonly auth: SessionAuthContext | null;\r\n    },\r\n    args: { send: SendFn<TState> },\r\n  ) => Promise<Session>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        47
+      ],
+      "name": "isCompiledChannel",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is CompiledChannel",
+      "signature": "export function isCompiledChannel(value: unknown) -> value is CompiledChannel"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        66
+      ],
+      "name": "getChannelInstrumentationKind",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getChannelInstrumentationKind(value: unknown) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        68,
+        78
+      ],
+      "name": "setChannelInstrumentationKind",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "CompiledChannel"
+        },
+        {
+          "name": "kind",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setChannelInstrumentationKind(channel: CompiledChannel, kind: string) -> void"
+    }
+  ],
+  "module": "packages/eve/src/channel/compiled-channel.ts"
+}

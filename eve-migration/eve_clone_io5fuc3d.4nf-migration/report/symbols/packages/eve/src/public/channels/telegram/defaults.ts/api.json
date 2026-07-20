@@ -1,0 +1,60 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        44
+      ],
+      "name": "defaultTelegramAuth",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "TelegramMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext | null",
+      "signature": "export function defaultTelegramAuth(message: TelegramMessage) -> SessionAuthContext | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        47,
+        54
+      ],
+      "name": "defaultOnMessage",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "TelegramContext"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "TelegramMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<TelegramInboundResult>",
+      "signature": "export function defaultOnMessage(ctx: TelegramContext, message: TelegramMessage) -> Promise<TelegramInboundResult>"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        57,
+        112
+      ],
+      "name": "defaultEvents",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const defaultEvents: unknown"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/telegram/defaults.ts"
+}

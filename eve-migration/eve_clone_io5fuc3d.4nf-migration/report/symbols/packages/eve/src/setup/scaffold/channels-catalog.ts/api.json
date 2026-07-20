@@ -1,0 +1,94 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        49,
+        60
+      ],
+      "name": "ScaffoldableChannel",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScaffoldableChannel { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "slug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slug: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelKind",
+      "signature": "kind: : ChannelKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "label",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "label: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "hint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "hint?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "requiresVercelProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "requiresVercelProject?: : true"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "SCAFFOLDABLE_CHANNELS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SCAFFOLDABLE_CHANNELS: unknown"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/channels-catalog.ts"
+}

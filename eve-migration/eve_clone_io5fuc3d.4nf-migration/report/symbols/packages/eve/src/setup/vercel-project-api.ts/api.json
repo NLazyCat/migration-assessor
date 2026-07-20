@@ -1,0 +1,221 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "VERCEL_PROJECT_REQUEST_TIMEOUT_MS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const VERCEL_PROJECT_REQUEST_TIMEOUT_MS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "VercelProjectListEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelProjectListEntry = z.infer<typeof VercelProjectListEntrySchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "VercelProjectSearchPage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VercelProjectSearchPage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "projects",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": VercelProjectListEntry[]",
+      "signature": "projects: : VercelProjectListEntry[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "next",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "next?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        59,
+        65
+      ],
+      "name": "parseVercelJson",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function parseVercelJson(stdout: string, description: string) -> unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        100
+      ],
+      "name": "requireVercelTeamAccess",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelCaptureFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function requireVercelTeamAccess(failure: VercelCaptureFailure) -> never"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        121,
+        130
+      ],
+      "name": "listTeams",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelTeamListEntry[]>",
+      "signature": "export function listTeams(projectRoot: string, options: VercelProjectOperationOptions) -> Promise<VercelTeamListEntry[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        156,
+        162
+      ],
+      "name": "listRecentProjects",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectListEntry[]>",
+      "signature": "export function listRecentProjects(projectRoot: string, team: string, options: VercelProjectOperationOptions) -> Promise<VercelProjectListEntry[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        173,
+        181
+      ],
+      "name": "rankProjectSearchResults",
+      "params": [
+        {
+          "name": "projects",
+          "optional": false,
+          "type": "readonly VercelProjectListEntry[]"
+        },
+        {
+          "name": "query",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelProjectListEntry[]",
+      "signature": "export function rankProjectSearchResults(projects: readonly VercelProjectListEntry[], query: string) -> VercelProjectListEntry[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        184,
+        195
+      ],
+      "name": "searchProjects",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "team",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "query",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions & { readonly next?: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectSearchPage>",
+      "signature": "export function searchProjects(projectRoot: string, team: string, query: string, options: VercelProjectOperationOptions & { readonly next?: number }) -> Promise<VercelProjectSearchPage>"
+    }
+  ],
+  "module": "packages/eve/src/setup/vercel-project-api.ts"
+}

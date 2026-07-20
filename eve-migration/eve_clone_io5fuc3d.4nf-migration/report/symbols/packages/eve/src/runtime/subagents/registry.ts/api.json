@@ -1,0 +1,87 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        23
+      ],
+      "name": "RuntimeSubagentRegistry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RuntimeSubagentRegistry { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "preparedTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly PreparedRuntimeDelegationTool[]",
+      "signature": "preparedTools: : readonly PreparedRuntimeDelegationTool[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "subagentsByName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ReadonlyMap<string, RuntimeRegisteredSubagent>",
+      "signature": "subagentsByName: : ReadonlyMap<string, RuntimeRegisteredSubagent>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "subagentsByNodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ReadonlyMap<string, RuntimeRegisteredSubagent>",
+      "signature": "subagentsByNodeId: : ReadonlyMap<string, RuntimeRegisteredSubagent>"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        29,
+        41
+      ],
+      "name": "SUBAGENT_TOOL_INPUT_SCHEMA",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SUBAGENT_TOOL_INPUT_SCHEMA: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        95
+      ],
+      "name": "createRuntimeSubagentRegistry",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly reservedToolNames?: readonly string[];\r\n  readonly subagents: readonly ResolvedRuntimeDelegationNode[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeSubagentRegistry",
+      "signature": "export function createRuntimeSubagentRegistry(input: {\r\n  readonly reservedToolNames?: readonly string[];\r\n  readonly subagents: readonly ResolvedRuntimeDelegationNode[];\r\n}) -> RuntimeSubagentRegistry"
+    }
+  ],
+  "module": "packages/eve/src/runtime/subagents/registry.ts"
+}

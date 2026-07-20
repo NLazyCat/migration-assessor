@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/context/build-base-tool-context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/build-base-tool-context.ts:BaseToolContext",
+      "kind": "type_alias",
+      "line_range": [
+        7,
+        11
+      ],
+      "name": "BaseToolContext",
+      "partial_analysis": false,
+      "value": "SessionContext & {\r\n  readonly abortSignal: AbortSignal;\r\n  readonly callId: string;\r\n  readonly toolName: string;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/build-base-tool-context.ts:buildBaseToolContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        28
+      ],
+      "name": "buildBaseToolContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly options: Pick<ToolExecuteOptions, \"abortSignal\" | \"toolCallId\">;\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BaseToolContext",
+      "signature": "export function buildBaseToolContext(input: {\r\n  readonly options: Pick<ToolExecuteOptions, \"abortSignal\" | \"toolCallId\">;\r\n  readonly toolName: string;\r\n}) -> BaseToolContext",
+      "visibility": "Public"
+    }
+  ]
+}

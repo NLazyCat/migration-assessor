@@ -1,0 +1,46 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "CompiledSkillEntry",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type CompiledSkillEntry = | { readonly kind: \"skill\"; readonly definition: CompiledSkillDefinition }\r\n  | { readonly kind: \"dynamic-skill\"; readonly definition: CompiledDynamicSkillDefinition };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        121
+      ],
+      "name": "compileSkillSource",
+      "params": [
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "SkillSourceRef"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ModuleBackedDefinitionLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledSkillEntry>",
+      "signature": "export function compileSkillSource(agentRoot: string, source: SkillSourceRef, options: ModuleBackedDefinitionLoadOptions) -> Promise<CompiledSkillEntry>"
+    }
+  ],
+  "module": "packages/eve/src/compiler/normalize-skill.ts"
+}

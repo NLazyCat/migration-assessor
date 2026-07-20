@@ -1,0 +1,273 @@
+{
+  "module": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:SECRET",
+      "kind": "variable",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "SECRET",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:RUN_ID",
+      "kind": "variable",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "RUN_ID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:AGENT_NAME",
+      "kind": "variable",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "AGENT_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:QUEUE_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "QUEUE_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:originalFetch",
+      "kind": "variable",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "originalFetch",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:connectWorkerToWorld",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        325,
+        337
+      ],
+      "name": "connectWorkerToWorld",
+      "params": [
+        {
+          "name": "world",
+          "optional": false,
+          "type": "ParentDevelopmentWorkflowWorld"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function connectWorkerToWorld(world: ParentDevelopmentWorkflowWorld, appRoot: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:createWorkerQueueHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        339,
+        343
+      ],
+      "name": "createWorkerQueueHandler",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "(request: Request) => Promise<Response>",
+      "signature": "export function createWorkerQueueHandler() -> (request: Request) => Promise<Response>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:deliverToWorker",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        349,
+        365
+      ],
+      "name": "deliverToWorker",
+      "params": [
+        {
+          "name": "payload",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function deliverToWorker(payload: unknown) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:deliveryHeaders",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        367,
+        374
+      ],
+      "name": "deliveryHeaders",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly secret?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, string>",
+      "signature": "export function deliveryHeaders(input: { readonly secret?: string }) -> Record<string, string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:seedGeneration",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        376,
+        381
+      ],
+      "name": "seedGeneration",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "generationId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function seedGeneration(appRoot: string, generationId: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:readCreatedRunId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        383,
+        396
+      ],
+      "name": "readCreatedRunId",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function readCreatedRunId(value: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:createWorld",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        398,
+        408
+      ],
+      "name": "createWorld",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly activeGenerationId: () => string;\r\n  readonly appRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ParentDevelopmentWorkflowWorld",
+      "signature": "export function createWorld(input: {\r\n  readonly activeGenerationId: () => string;\r\n  readonly appRoot: string;\r\n}) -> ParentDevelopmentWorkflowWorld",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-server.integration.test.ts:callWorld",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        410,
+        426
+      ],
+      "name": "callWorld",
+      "params": [
+        {
+          "name": "world",
+          "optional": false,
+          "type": "ParentDevelopmentWorkflowWorld"
+        },
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function callWorld(world: ParentDevelopmentWorkflowWorld, operation: string, args: readonly unknown[]) -> Promise<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

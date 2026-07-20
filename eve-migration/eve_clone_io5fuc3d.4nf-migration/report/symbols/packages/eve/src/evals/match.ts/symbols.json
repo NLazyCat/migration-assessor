@@ -1,0 +1,542 @@
+{
+  "module": "packages/eve/src/evals/match.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:EveEvalValueMatcher",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "EveEvalValueMatcher",
+      "partial_analysis": false,
+      "value": "JsonValue | undefined> = EveEvalDeepMatcher<T>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:EveEvalCountMatcher",
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "EveEvalCountMatcher",
+      "partial_analysis": false,
+      "value": "number | ((count: number) => boolean);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:EveEvalDeepMatcher",
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        33
+      ],
+      "name": "EveEvalDeepMatcher",
+      "partial_analysis": false,
+      "value": "| RegExp\r\n  | ((value: T) => boolean)\r\n  | (T extends readonly (infer TEntry)[]\r\n      ? readonly EveEvalDeepMatcher<TEntry>[]\r\n      : T extends object\r\n        ? { readonly [K in keyof T]?: EveEvalDeepMatcher<T[K]> }\r\n        : T);",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalToolCallMatchOptions:input",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<JsonObject>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalToolCallMatchOptions:output",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalToolCallMatchOptions:status",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": EveEvalToolCall[\"status\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalToolCallMatchOptions:count",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "count",
+          "partial_analysis": false,
+          "return_type": ": EveEvalCountMatcher",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/match.ts:EveEvalToolCallMatchOptions",
+      "kind": "interface",
+      "line_range": [
+        39,
+        48
+      ],
+      "name": "EveEvalToolCallMatchOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:EveEvalSkillLoadMatchOptions",
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "EveEvalSkillLoadMatchOptions",
+      "partial_analysis": false,
+      "value": "Omit<EveEvalToolCallMatchOptions, \"input\">;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions:callId",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "callId",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<string | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions:childSessionId",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "childSessionId",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<string | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions:remoteUrl",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "remoteUrl",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<string | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions:output",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions:status",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": EveEvalSubagentCall[\"status\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions:count",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "count",
+          "partial_analysis": false,
+          "return_type": ": EveEvalCountMatcher",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/match.ts:EveEvalSubagentCallMatchOptions",
+      "kind": "interface",
+      "line_range": [
+        60,
+        73
+      ],
+      "name": "EveEvalSubagentCallMatchOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalInputRequestMatchOptions:display",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "display",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<InputRequest[\"display\"]>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalInputRequestMatchOptions:input",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<JsonObject>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalInputRequestMatchOptions:optionIds",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "optionIds",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<readonly string[]>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalInputRequestMatchOptions:prompt",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "prompt",
+          "partial_analysis": false,
+          "return_type": ": EveEvalValueMatcher<string>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/match.ts:EveEvalInputRequestMatchOptions:toolName",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "toolName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/match.ts:EveEvalInputRequestMatchOptions",
+      "kind": "interface",
+      "line_range": [
+        76,
+        87
+      ],
+      "name": "EveEvalInputRequestMatchOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:EveEvalEventMatch",
+      "kind": "type_alias",
+      "line_range": [
+        90,
+        105
+      ],
+      "name": "EveEvalEventMatch",
+      "partial_analysis": false,
+      "value": "HandleMessageStreamEvent[\"type\"],\r\n> = TType extends HandleMessageStreamEvent[\"type\"]\r\n  ? {\r\n      /** Stream-event type to match. */\r\n      readonly type: TType;\r\n      /** Partial-deep matcher over the event data. */\r\n      readonly data?: EveEvalDeepMatcher<\r\n        Extract<HandleMessageStreamEvent, { type: TType }> extends { data: infer TData }\r\n          ? TData\r\n          : never\r\n      >;\r\n      /** Constraint over the matching event count. Defaults to \"at least one\". */\r\n      readonly count?: EveEvalCountMatcher;\r\n    }\r\n  : never;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:matchesValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        111,
+        131
+      ],
+      "name": "matchesValue",
+      "params": [
+        {
+          "name": "matcher",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function matchesValue(matcher: unknown, value: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:toolCallMatches",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        147
+      ],
+      "name": "toolCallMatches",
+      "params": [
+        {
+          "name": "call",
+          "optional": false,
+          "type": "EveEvalToolCall"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveEvalToolCallMatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function toolCallMatches(call: EveEvalToolCall, options: EveEvalToolCallMatchOptions) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:subagentCallMatches",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        153,
+        174
+      ],
+      "name": "subagentCallMatches",
+      "params": [
+        {
+          "name": "call",
+          "optional": false,
+          "type": "EveEvalSubagentCall"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveEvalSubagentCallMatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function subagentCallMatches(call: EveEvalSubagentCall, options: EveEvalSubagentCallMatchOptions) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:inputRequestMatches",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        199
+      ],
+      "name": "inputRequestMatches",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "InputRequest"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EveEvalInputRequestMatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function inputRequestMatches(request: InputRequest, options: EveEvalInputRequestMatchOptions) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:eventMatches",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        202,
+        208
+      ],
+      "name": "eventMatches",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        },
+        {
+          "name": "matcher",
+          "optional": false,
+          "type": "EveEvalEventMatch"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function eventMatches(event: HandleMessageStreamEvent, matcher: EveEvalEventMatch) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:deepEquals",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        214,
+        230
+      ],
+      "name": "deepEquals",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function deepEquals(a: unknown, b: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:testRegExpAgainst",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        232,
+        237
+      ],
+      "name": "testRegExpAgainst",
+      "params": [
+        {
+          "name": "pattern",
+          "optional": false,
+          "type": "RegExp"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function testRegExpAgainst(pattern: RegExp, value: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:testRegExp",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        244,
+        247
+      ],
+      "name": "testRegExp",
+      "params": [
+        {
+          "name": "pattern",
+          "optional": false,
+          "type": "RegExp"
+        },
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function testRegExp(pattern: RegExp, text: string) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/match.ts:isPlainObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        249,
+        251
+      ],
+      "name": "isPlainObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isPlainObject(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

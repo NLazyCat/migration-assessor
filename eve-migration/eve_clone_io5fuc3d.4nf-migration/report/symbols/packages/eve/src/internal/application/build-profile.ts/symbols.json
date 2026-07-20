@@ -1,0 +1,778 @@
+{
+  "module": "packages/eve/src/internal/application/build-profile.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:APPLICATION_BUILD_PROFILE_SCHEMA_VERSION",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "APPLICATION_BUILD_PROFILE_SCHEMA_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileTarget",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "ApplicationBuildProfileTarget",
+      "partial_analysis": false,
+      "value": "\"local\" | \"vercel\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfilePhase:durationMs",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "durationMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfilePhase:name",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfilePhase",
+      "kind": "interface",
+      "line_range": [
+        13,
+        16
+      ],
+      "name": "ApplicationBuildProfilePhase",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileFunctionBundle:files",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileFunctionBundle:gzipBytes",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "gzipBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileFunctionBundle:path",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "path",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileFunctionBundle:rawBytes",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "rawBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileFunctionBundle",
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "ApplicationBuildProfileFunctionBundle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileOutput:files",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileOutput:functionBundles",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "functionBundles",
+          "partial_analysis": false,
+          "return_type": ": readonly ApplicationBuildProfileFunctionBundle[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileOutput:gzipBytes",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "gzipBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileOutput:rawBytes",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "rawBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileOutput",
+      "kind": "interface",
+      "line_range": [
+        27,
+        32
+      ],
+      "name": "ApplicationBuildProfileOutput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileTiming:durationMs",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "durationMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileTiming:phases",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "phases",
+          "partial_analysis": false,
+          "return_type": ": readonly ApplicationBuildProfilePhase[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfileTiming",
+      "kind": "interface",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "ApplicationBuildProfileTiming",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile:durationMs",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "durationMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile:kind",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"eve-build-profile\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile:output",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": ApplicationBuildProfileOutput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile:phases",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "phases",
+          "partial_analysis": false,
+          "return_type": ": readonly ApplicationBuildProfilePhase[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile:schemaVersion",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "schemaVersion",
+          "partial_analysis": false,
+          "return_type": ": typeof APPLICATION_BUILD_PROFILE_SCHEMA_VERSION",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile:target",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": ApplicationBuildProfileTarget",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfile",
+      "kind": "interface",
+      "line_range": [
+        41,
+        48
+      ],
+      "name": "ApplicationBuildProfile",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:MutableOutputSize:files",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "files",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:MutableOutputSize:gzipBytes",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "gzipBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:MutableOutputSize:rawBytes",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "rawBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:MutableOutputSize",
+      "kind": "interface",
+      "line_range": [
+        50,
+        54
+      ],
+      "name": "MutableOutputSize",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:FileSize:gzipBytes",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "gzipBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:FileSize:rawBytes",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "rawBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:FileSize",
+      "kind": "interface",
+      "line_range": [
+        56,
+        59
+      ],
+      "name": "FileSize",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfilerOptions:now",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "now",
+          "partial_analysis": false,
+          "return_type": ": () => number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfilerOptions",
+      "kind": "interface",
+      "line_range": [
+        61,
+        63
+      ],
+      "name": "ApplicationBuildProfilerOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:roundDuration",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "roundDuration",
+      "params": [
+        {
+          "name": "durationMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function roundDuration(durationMs: number) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:createMutableOutputSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "createMutableOutputSize",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "MutableOutputSize",
+      "signature": "export function createMutableOutputSize() -> MutableOutputSize",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:toOutputSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        73,
+        81
+      ],
+      "name": "toOutputSize",
+      "params": [
+        {
+          "name": "size",
+          "optional": false,
+          "type": "MutableOutputSize"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Omit<ApplicationBuildProfileOutput, \"functionBundles\">",
+      "signature": "export function toOutputSize(size: MutableOutputSize) -> Omit<ApplicationBuildProfileOutput, \"functionBundles\">",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:toProfilePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "toProfilePath",
+      "params": [
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toProfilePath(outputDirectory: string, directoryPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:measureFileSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        92
+      ],
+      "name": "measureFileSize",
+      "params": [
+        {
+          "name": "contents",
+          "optional": false,
+          "type": "Buffer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "FileSize",
+      "signature": "export function measureFileSize(contents: Buffer) -> FileSize",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:addFileSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        98
+      ],
+      "name": "addFileSize",
+      "params": [
+        {
+          "name": "size",
+          "optional": false,
+          "type": "MutableOutputSize"
+        },
+        {
+          "name": "fileSize",
+          "optional": false,
+          "type": "FileSize"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addFileSize(size: MutableOutputSize, fileSize: FileSize) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:#now",
+          "kind": "property",
+          "line_range": [
+            105,
+            105
+          ],
+          "name": "#now",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:#phases",
+          "kind": "property",
+          "line_range": [
+            106,
+            106
+          ],
+          "name": "#phases",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:#startedAt",
+          "kind": "property",
+          "line_range": [
+            107,
+            107
+          ],
+          "name": "#startedAt",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:#finished",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "#finished",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            110,
+            113
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "options",
+              "optional": false,
+              "type": "ApplicationBuildProfilerOptions"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:measure",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            115,
+            129
+          ],
+          "name": "measure",
+          "params": [
+            {
+              "name": "name",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "operation",
+              "optional": false,
+              "type": "() => T | Promise<T>"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<T>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler:finish",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            131,
+            141
+          ],
+          "name": "finish",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "ApplicationBuildProfileTiming",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/application/build-profile.ts:ApplicationBuildProfiler",
+      "kind": "class",
+      "line_range": [
+        104,
+        142
+      ],
+      "name": "ApplicationBuildProfiler",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:createApplicationBuildProfile",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        145,
+        158
+      ],
+      "name": "createApplicationBuildProfile",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly output: ApplicationBuildProfileOutput;\r\n  readonly target: ApplicationBuildProfileTarget;\r\n  readonly timing: ApplicationBuildProfileTiming;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ApplicationBuildProfile",
+      "signature": "export function createApplicationBuildProfile(input: {\r\n  readonly output: ApplicationBuildProfileOutput;\r\n  readonly target: ApplicationBuildProfileTarget;\r\n  readonly timing: ApplicationBuildProfileTiming;\r\n}) -> ApplicationBuildProfile",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:measureApplicationBuildOutput",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        164,
+        212
+      ],
+      "name": "measureApplicationBuildOutput",
+      "params": [
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ApplicationBuildProfileOutput>",
+      "signature": "export function measureApplicationBuildOutput(outputDirectory: string) -> Promise<ApplicationBuildProfileOutput>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/build-profile.ts:writeApplicationBuildProfile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        215,
+        221
+      ],
+      "name": "writeApplicationBuildProfile",
+      "params": [
+        {
+          "name": "outputPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "profile",
+          "optional": false,
+          "type": "ApplicationBuildProfile"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeApplicationBuildProfile(outputPath: string, profile: ApplicationBuildProfile) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

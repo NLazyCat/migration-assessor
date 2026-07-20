@@ -1,0 +1,520 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/build-application.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:trimTrailingSlash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        48
+      ],
+      "name": "trimTrailingSlash",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function trimTrailingSlash(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:measureBuildPhase",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        50,
+        56
+      ],
+      "name": "measureBuildPhase",
+      "params": [
+        {
+          "name": "profiler",
+          "optional": false,
+          "type": "ApplicationBuildProfiler | undefined"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "() => T | Promise<T>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function measureBuildPhase(profiler: ApplicationBuildProfiler | undefined, name: string, operation: () => T | Promise<T>) -> Promise<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:isPathInside",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        64
+      ],
+      "name": "isPathInside",
+      "params": [
+        {
+          "name": "directoryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "candidatePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathInside(directoryPath: string, candidatePath: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:assertProfileOutputOutsideBuildOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        66,
+        75
+      ],
+      "name": "assertProfileOutputOutsideBuildOutput",
+      "params": [
+        {
+          "name": "profileOutputPath",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertProfileOutputOutsideBuildOutput(profileOutputPath: string | undefined, outputDirectory: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:writeOptionalApplicationBuildProfile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        77,
+        99
+      ],
+      "name": "writeOptionalApplicationBuildProfile",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly outputDirectory: string;\r\n  readonly profileOutputPath: string;\r\n  readonly profiler: ApplicationBuildProfiler;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeOptionalApplicationBuildProfile(input: {\r\n  readonly outputDirectory: string;\r\n  readonly profileOutputPath: string;\r\n  readonly profiler: ApplicationBuildProfiler;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        103
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:normalizeEntrypoint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        105,
+        111
+      ],
+      "name": "normalizeEntrypoint",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "entrypoint",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function normalizeEntrypoint(rootDir: string, entrypoint: unknown) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:normalizeServiceRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        113,
+        119
+      ],
+      "name": "normalizeServiceRoot",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "service",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function normalizeServiceRoot(rootDir: string, service: Record<string, unknown>) -> string | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:normalizeServicePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        121,
+        139
+      ],
+      "name": "normalizeServicePrefix",
+      "params": [
+        {
+          "name": "service",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeServicePrefix(service: Record<string, unknown>) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:normalizeServiceCollection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        153
+      ],
+      "name": "normalizeServiceCollection",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly Record<string, unknown>[] | undefined",
+      "signature": "export function normalizeServiceCollection(value: unknown) -> readonly Record<string, unknown>[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:resolveCoDeployedEveServicePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        163,
+        204
+      ],
+      "name": "resolveCoDeployedEveServicePrefix",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoots: readonly string[];\r\n  configRoot: string;\r\n  config: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveCoDeployedEveServicePrefix(input: {\r\n  appRoots: readonly string[];\r\n  configRoot: string;\r\n  config: unknown;\r\n}) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:resolveCoDeployedEveServicePrefixForVercelFunctionOutput",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        206,
+        270
+      ],
+      "name": "resolveCoDeployedEveServicePrefixForVercelFunctionOutput",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function resolveCoDeployedEveServicePrefixForVercelFunctionOutput(appRoot: string, agentRoot: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:readVercelServerRuntime",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        272,
+        284
+      ],
+      "name": "readVercelServerRuntime",
+      "params": [
+        {
+          "name": "outputDir",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function readVercelServerRuntime(outputDir: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:resolveVercelOutputConfigRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        286,
+        309
+      ],
+      "name": "resolveVercelOutputConfigRoot",
+      "params": [
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveVercelOutputConfigRoot(outputDirectory: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:emitVercelWorkflowFunctions",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        311,
+        334
+      ],
+      "name": "emitVercelWorkflowFunctions",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  agentName: string;\r\n  appRoot: string;\r\n  compiledArtifactsBootstrapPath: string;\r\n  flowNitroOutputDir: string;\r\n  outputDir: string;\r\n  workflowBuildDir: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitVercelWorkflowFunctions(input: {\r\n  agentName: string;\r\n  appRoot: string;\r\n  compiledArtifactsBootstrapPath: string;\r\n  flowNitroOutputDir: string;\r\n  outputDir: string;\r\n  workflowBuildDir: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:buildNitroOutput",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        336,
+        355
+      ],
+      "name": "buildNitroOutput",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "Nitro"
+        },
+        {
+          "name": "profiler",
+          "optional": false,
+          "type": "ApplicationBuildProfiler | undefined"
+        },
+        {
+          "name": "phasePrefix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function buildNitroOutput(nitro: Nitro, profiler: ApplicationBuildProfiler | undefined, phasePrefix: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:buildVercelNitroSurface",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        357,
+        377
+      ],
+      "name": "buildVercelNitroSurface",
+      "params": [
+        {
+          "name": "preparedHost",
+          "optional": false,
+          "type": "PreparedApplicationHost"
+        },
+        {
+          "name": "workspace",
+          "optional": false,
+          "type": "ApplicationBuildWorkspace"
+        },
+        {
+          "name": "surface",
+          "optional": false,
+          "type": "Exclude<NitroBuildSurface, \"all\">"
+        },
+        {
+          "name": "profiler",
+          "optional": false,
+          "type": "ApplicationBuildProfiler | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function buildVercelNitroSurface(preparedHost: PreparedApplicationHost, workspace: ApplicationBuildWorkspace, surface: Exclude<NitroBuildSurface, \"all\">, profiler: ApplicationBuildProfiler | undefined) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:buildApplication",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        382,
+        438
+      ],
+      "name": "buildApplication",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ApplicationBuildOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function buildApplication(rootDir: string, options: ApplicationBuildOptions) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:buildApplicationInWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        440,
+        566
+      ],
+      "name": "buildApplicationInWorkspace",
+      "params": [
+        {
+          "name": "workspace",
+          "optional": false,
+          "type": "ApplicationBuildWorkspace"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ApplicationBuildOptions"
+        },
+        {
+          "name": "profiler",
+          "optional": false,
+          "type": "ApplicationBuildProfiler | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function buildApplicationInWorkspace(workspace: ApplicationBuildWorkspace, options: ApplicationBuildOptions, profiler: ApplicationBuildProfiler | undefined) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-application.ts:publishCompletedApplicationBuild",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        568,
+        579
+      ],
+      "name": "publishCompletedApplicationBuild",
+      "params": [
+        {
+          "name": "workspace",
+          "optional": false,
+          "type": "ApplicationBuildWorkspace"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function publishCompletedApplicationBuild(workspace: ApplicationBuildWorkspace) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

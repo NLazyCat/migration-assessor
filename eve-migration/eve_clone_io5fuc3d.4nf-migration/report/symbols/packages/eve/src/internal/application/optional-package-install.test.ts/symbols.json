@@ -1,0 +1,123 @@
+{
+  "module": "packages/eve/src/internal/application/optional-package-install.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:workerMockState",
+      "kind": "variable",
+      "line_range": [
+        34,
+        81
+      ],
+      "name": "workerMockState",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:mockedExistsSync",
+      "kind": "variable",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "mockedExistsSync",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:mockedReadFile",
+      "kind": "variable",
+      "line_range": [
+        89,
+        89
+      ],
+      "name": "mockedReadFile",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:mockedSpawn",
+      "kind": "variable",
+      "line_range": [
+        90,
+        90
+      ],
+      "name": "mockedSpawn",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:mockedWorker",
+      "kind": "variable",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "mockedWorker",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:createMockChildProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        98
+      ],
+      "name": "createMockChildProcess",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createMockChildProcess() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:mockProcessPlatform",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        100,
+        108
+      ],
+      "name": "mockProcessPlatform",
+      "params": [
+        {
+          "name": "platform",
+          "optional": false,
+          "type": "NodeJS.Platform"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "export function mockProcessPlatform(platform: NodeJS.Platform) -> () => void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/application/optional-package-install.test.ts:flushMicrotasks",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        310,
+        314
+      ],
+      "name": "flushMicrotasks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function flushMicrotasks() -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        38
+      ],
+      "name": "TokenUsageTotals",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TokenUsageTotals { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "cacheReadTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cacheReadTokens: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "cacheWriteTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cacheWriteTokens: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "costUsd",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "costUsd: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "inputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "inputTokens: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "outputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "outputTokens: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "sawCost",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "sawCost: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "TokenUsageDelta",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TokenUsageDelta = Partial<TokenUsageTotals>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "TurnUsageState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TurnUsageState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TokenUsageTotals",
+      "signature": "session: : TokenUsageTotals"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "turnId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "turnId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        64,
+        66
+      ],
+      "name": "getTurnUsageState",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnUsageState | undefined",
+      "signature": "export function getTurnUsageState(state: SessionStateMap | undefined) -> TurnUsageState | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        68,
+        78
+      ],
+      "name": "SessionTokenLimitViolation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SessionTokenLimitViolation = | {\r\n      readonly kind: \"input\";\r\n      readonly limit: number;\r\n      readonly usedTokens: number;\r\n    }\r\n  | {\r\n      readonly kind: \"output\";\r\n      readonly limit: number;\r\n      readonly usedTokens: number;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        80,
+        82
+      ],
+      "name": "getSessionTokenUsage",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "Pick<HarnessSession, \"state\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsageTotals",
+      "signature": "export function getSessionTokenUsage(session: Pick<HarnessSession, \"state\">) -> TokenUsageTotals"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        85,
+        92
+      ],
+      "name": "toUsage",
+      "params": [
+        {
+          "name": "totals",
+          "optional": false,
+          "type": "TokenUsageTotals"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsage",
+      "signature": "export function toUsage(totals: TokenUsageTotals) -> TokenUsage"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        127,
+        139
+      ],
+      "name": "extendSessionTokenBudget",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function extendSessionTokenBudget(session: HarnessSession) -> HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        141,
+        168
+      ],
+      "name": "getSessionTokenLimitViolation",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "Pick<HarnessSession, \"limits\" | \"state\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionTokenLimitViolation | null",
+      "signature": "export function getSessionTokenLimitViolation(session: Pick<HarnessSession, \"limits\" | \"state\">) -> SessionTokenLimitViolation | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        171,
+        179
+      ],
+      "name": "setTurnUsageState",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "TurnUsageState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setTurnUsageState(session: HarnessSession, next: TurnUsageState) -> HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        187,
+        204
+      ],
+      "name": "accumulateTurnUsage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly turnId: string;\r\n  readonly usage: TokenUsageDelta | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnUsageState",
+      "signature": "export function accumulateTurnUsage(input: {\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly turnId: string;\r\n  readonly usage: TokenUsageDelta | undefined;\r\n}) -> TurnUsageState"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        213,
+        228
+      ],
+      "name": "accumulateSessionUsage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly usage: TokenUsageDelta;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnUsageState",
+      "signature": "export function accumulateSessionUsage(input: {\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly usage: TokenUsageDelta;\r\n}) -> TurnUsageState"
+    }
+  ],
+  "module": "packages/eve/src/harness/turn-tag-state.ts"
+}

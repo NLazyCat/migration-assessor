@@ -1,0 +1,129 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts:DevRebuildPhase",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DevRebuildPhase",
+      "partial_analysis": false,
+      "value": "\"rebuilding\" | \"rebuilt\" | \"reloading\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts:MAX_SUMMARY_PATHS",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "MAX_SUMMARY_PATHS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts:summarizeChangedFiles",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        27
+      ],
+      "name": "summarizeChangedFiles",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly WatcherChangeEvent[]"
+        },
+        {
+          "name": "more",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function summarizeChangedFiles(events: readonly WatcherChangeEvent[], more: number) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts:formatDevRebuildStatus",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        33,
+        42
+      ],
+      "name": "formatDevRebuildStatus",
+      "params": [
+        {
+          "name": "summary",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "phase",
+          "optional": false,
+          "type": "DevRebuildPhase"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDevRebuildStatus(summary: string, phase: DevRebuildPhase) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts:changeVerb",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        49
+      ],
+      "name": "changeVerb",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly WatcherChangeEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function changeVerb(events: readonly WatcherChangeEvent[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/dev-rebuild-status.ts:lastPathComponents",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "lastPathComponents",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function lastPathComponents(path: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

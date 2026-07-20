@@ -1,0 +1,80 @@
+{
+  "module": "packages/eve/src/runtime/agent/bootstrap-model.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/bootstrap-model.ts:BOOTSTRAP_MODEL_PROVIDER",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "BOOTSTRAP_MODEL_PROVIDER",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/bootstrap-model.ts:bootstrapRuntimeModels",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "bootstrapRuntimeModels",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/bootstrap-model.ts:resolveBootstrapRuntimeModel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        49
+      ],
+      "name": "resolveBootstrapRuntimeModel",
+      "params": [
+        {
+          "name": "reference",
+          "optional": false,
+          "type": "RuntimeModelReference"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LanguageModel | null",
+      "signature": "export function resolveBootstrapRuntimeModel(reference: RuntimeModelReference) -> LanguageModel | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/bootstrap-model.ts:createBootstrapModelResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        64
+      ],
+      "name": "createBootstrapModelResult",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "BootstrapPrompt"
+        },
+        {
+          "name": "modelId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BootstrapGenerateResult",
+      "signature": "export function createBootstrapModelResult(prompt: BootstrapPrompt, modelId: string) -> BootstrapGenerateResult",
+      "visibility": "Private"
+    }
+  ]
+}

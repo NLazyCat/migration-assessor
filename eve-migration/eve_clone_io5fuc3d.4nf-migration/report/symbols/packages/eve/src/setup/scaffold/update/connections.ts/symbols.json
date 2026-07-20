@@ -1,0 +1,690 @@
+{
+  "module": "packages/eve/src/setup/scaffold/update/connections.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:DEFAULT_CONNECT_PACKAGE_VERSION",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DEFAULT_CONNECT_PACKAGE_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:CONNECT_PACKAGE_NAME",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "CONNECT_PACKAGE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:USER_AUTHORED_CONNECTION_DIR",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "USER_AUTHORED_CONNECTION_DIR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ENV_LOCAL_FILE",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "ENV_LOCAL_FILE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationAction",
+      "kind": "type_alias",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "ConnectionMutationAction",
+      "partial_analysis": false,
+      "value": "\"created\" | \"overwritten\" | \"skipped\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:slug",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:protocol",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "protocol",
+          "partial_analysis": false,
+          "return_type": ": ConnectionProtocol",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:action",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "action",
+          "partial_analysis": false,
+          "return_type": ": ConnectionMutationAction",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:filePath",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "filePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:filesWritten",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "filesWritten",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:filesOverwritten",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "filesOverwritten",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:filesSkipped",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "filesSkipped",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:packageJsonUpdated",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "packageJsonUpdated",
+          "partial_analysis": false,
+          "return_type": ": PackageJsonMutation[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:envKeysAdded",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "envKeysAdded",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult:envKeysRequired",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "envKeysRequired",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionMutationResult",
+      "kind": "interface",
+      "line_range": [
+        26,
+        40
+      ],
+      "name": "ConnectionMutationResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ConnectionInput",
+      "kind": "type_alias",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "ConnectionInput",
+      "partial_analysis": false,
+      "value": "ConnectionCatalogEntry | CustomConnectionInput;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions:projectRoot",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "projectRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions:slug",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions:protocol",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "protocol",
+          "partial_analysis": false,
+          "return_type": ": ConnectionProtocol",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions:entry",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "entry",
+          "partial_analysis": false,
+          "return_type": ": ConnectionInput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions:force",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "force",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions:connectPackageVersion",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "connectPackageVersion",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionOptions",
+      "kind": "interface",
+      "line_range": [
+        45,
+        54
+      ],
+      "name": "EnsureConnectionOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionDependenciesOptions:projectRoot",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "projectRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionDependenciesOptions:connectPackageVersion",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "connectPackageVersion",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:EnsureConnectionDependenciesOptions",
+      "kind": "interface",
+      "line_range": [
+        56,
+        59
+      ],
+      "name": "EnsureConnectionDependenciesOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:resolveAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        63
+      ],
+      "name": "resolveAuth",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "ConnectionInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionAuthSpec",
+      "signature": "export function resolveAuth(entry: ConnectionInput) -> ConnectionAuthSpec",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:envKeysForAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        75
+      ],
+      "name": "envKeysForAuth",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "ConnectionAuthSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function envKeysForAuth(auth: ConnectionAuthSpec) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:authBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        77,
+        92
+      ],
+      "name": "authBlock",
+      "params": [
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "ConnectionAuthSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function authBlock(auth: ConnectionAuthSpec) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:renderMcpTemplate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        105
+      ],
+      "name": "renderMcpTemplate",
+      "params": [
+        {
+          "name": "endpoint",
+          "optional": false,
+          "type": "McpEndpoint"
+        },
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "ConnectionAuthSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderMcpTemplate(endpoint: McpEndpoint, description: string, auth: ConnectionAuthSpec) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:renderOpenApiTemplate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        107,
+        123
+      ],
+      "name": "renderOpenApiTemplate",
+      "params": [
+        {
+          "name": "endpoint",
+          "optional": false,
+          "type": "OpenApiEndpoint"
+        },
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "ConnectionAuthSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function renderOpenApiTemplate(endpoint: OpenApiEndpoint, description: string, auth: ConnectionAuthSpec) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:renderTemplate",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        125,
+        135
+      ],
+      "name": "renderTemplate",
+      "params": [
+        {
+          "name": "protocol",
+          "optional": false,
+          "type": "ConnectionProtocol"
+        },
+        {
+          "name": "endpoint",
+          "optional": false,
+          "type": "McpEndpoint | OpenApiEndpoint"
+        },
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "auth",
+          "optional": false,
+          "type": "ConnectionAuthSpec"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function renderTemplate(protocol: ConnectionProtocol, endpoint: McpEndpoint | OpenApiEndpoint, description: string, auth: ConnectionAuthSpec) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:isJsonObject",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        139
+      ],
+      "name": "isJsonObject",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isJsonObject(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ensureConnectDependency",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        141,
+        164
+      ],
+      "name": "ensureConnectDependency",
+      "params": [
+        {
+          "name": "packageJsonPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dependencyVersion",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageJsonMutation[]>",
+      "signature": "export function ensureConnectDependency(packageJsonPath: string, dependencyVersion: string) -> Promise<PackageJsonMutation[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ensureConnectionDependencies",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        167,
+        175
+      ],
+      "name": "ensureConnectionDependencies",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EnsureConnectionDependenciesOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<PackageJsonMutation[]>",
+      "signature": "export function ensureConnectionDependencies(options: EnsureConnectionDependenciesOptions) -> Promise<PackageJsonMutation[]>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:envKeyPresent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        180
+      ],
+      "name": "envKeyPresent",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function envKeyPresent(source: string, key: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:seedEnvPlaceholders",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        182,
+        197
+      ],
+      "name": "seedEnvPlaceholders",
+      "params": [
+        {
+          "name": "envPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "keys",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function seedEnvPlaceholders(envPath: string, keys: readonly string[]) -> Promise<string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:ensureConnection",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        204,
+        276
+      ],
+      "name": "ensureConnection",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EnsureConnectionOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionMutationResult>",
+      "signature": "export function ensureConnection(options: EnsureConnectionOptions) -> Promise<ConnectionMutationResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/connections.ts:listAuthoredConnections",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        279,
+        309
+      ],
+      "name": "listAuthoredConnections",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function listAuthoredConnections(projectRoot: string) -> Promise<string[]>",
+      "visibility": "Public"
+    }
+  ]
+}

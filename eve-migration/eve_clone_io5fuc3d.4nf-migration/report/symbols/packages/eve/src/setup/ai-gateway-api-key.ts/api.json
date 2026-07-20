@@ -1,0 +1,99 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "AI_GATEWAY_API_KEY_ENV_VAR",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const AI_GATEWAY_API_KEY_ENV_VAR: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "AI_GATEWAY_API_KEY_ENV_FILE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const AI_GATEWAY_API_KEY_ENV_FILE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        13
+      ],
+      "name": "AiGatewayApiKeyLocation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AiGatewayApiKeyLocation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "envKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof AI_GATEWAY_API_KEY_ENV_VAR",
+      "signature": "envKey: : typeof AI_GATEWAY_API_KEY_ENV_VAR"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "envFile",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof AI_GATEWAY_API_KEY_ENV_FILE",
+      "signature": "envFile: : typeof AI_GATEWAY_API_KEY_ENV_FILE"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "envPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "envPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        16,
+        32
+      ],
+      "name": "writeAiGatewayApiKey",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  projectRoot: string;\r\n  apiKey: string;\r\n  appendEnv?: typeof appendEnv;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AiGatewayApiKeyLocation>",
+      "signature": "export function writeAiGatewayApiKey(input: {\r\n  projectRoot: string;\r\n  apiKey: string;\r\n  appendEnv?: typeof appendEnv;\r\n}) -> Promise<AiGatewayApiKeyLocation>"
+    }
+  ],
+  "module": "packages/eve/src/setup/ai-gateway-api-key.ts"
+}

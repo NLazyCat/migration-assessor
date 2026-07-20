@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        33,
+        107
+      ],
+      "name": "buildExtensionPackage",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "config",
+          "optional": false,
+          "type": "ExtensionBuildConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function buildExtensionPackage(rootDir: string, config: ExtensionBuildConfig) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/build-extension.ts"
+}

@@ -1,0 +1,43 @@
+{
+  "module": "packages/eve/src/evals/runner/reporters/console.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/console.test.ts:skippedResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        37
+      ],
+      "name": "skippedResult",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveEvalResult",
+      "signature": "export function skippedResult() -> EveEvalResult",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/reporters/console.test.ts:summary",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        51
+      ],
+      "name": "summary",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "EveEvalResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalRunSummary",
+      "signature": "export function summary(result: EveEvalResult) -> EveEvalRunSummary",
+      "visibility": "Private"
+    }
+  ]
+}

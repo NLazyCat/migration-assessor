@@ -1,0 +1,38 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "InstructionsDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstructionsDefinition = Readonly<PublicInstructionsDefinition>;"
+    },
+    {
+      "generics": [
+        "TInstructions"
+      ],
+      "kind": "function",
+      "line_range": [
+        18,
+        23
+      ],
+      "name": "defineInstructions",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<TInstructions, InstructionsDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TInstructions",
+      "signature": "export function defineInstructions(definition: ExactDefinition<TInstructions, InstructionsDefinition>) -> TInstructions"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/instructions.ts"
+}

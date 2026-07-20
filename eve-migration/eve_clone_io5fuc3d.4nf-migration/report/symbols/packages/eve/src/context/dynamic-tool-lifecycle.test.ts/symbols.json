@@ -1,0 +1,292 @@
+{
+  "module": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:qualifyDynamicToolNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        53
+      ],
+      "name": "qualifyDynamicToolNames",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "isSingle",
+          "optional": false,
+          "type": "boolean"
+        },
+        {
+          "name": "entries",
+          "optional": false,
+          "type": "Readonly<Record<string, DynamicToolEntry>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Map<string, DynamicToolEntry>",
+      "signature": "export function qualifyDynamicToolNames(slug: string, isSingle: boolean, entries: Readonly<Record<string, DynamicToolEntry>>) -> Map<string, DynamicToolEntry>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:executeOptions",
+      "kind": "variable",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "executeOptions",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:stubEntry",
+      "kind": "variable",
+      "line_range": [
+        57,
+        61
+      ],
+      "name": "stubEntry",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:safeSerialize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        102
+      ],
+      "name": "safeSerialize",
+      "params": [
+        {
+          "name": "obj",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function safeSerialize(obj: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:getOrCreateStepRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        193,
+        200
+      ],
+      "name": "getOrCreateStepRegistry",
+      "params": [
+        {
+          "name": "sym",
+          "optional": false,
+          "type": "symbol"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Map<string, Function>",
+      "signature": "export function getOrCreateStepRegistry(sym: symbol) -> Map<string, Function>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:createResolver",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        427,
+        444
+      ],
+      "name": "createResolver",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "eventNames",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "(event: unknown, ctx: unknown) => unknown | Promise<unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedDynamicToolResolver",
+      "signature": "export function createResolver(slug: string, eventNames: readonly string[], handler: (event: unknown, ctx: unknown) => unknown | Promise<unknown>) -> ResolvedDynamicToolResolver",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:createCtx",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        446,
+        450
+      ],
+      "name": "createCtx",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function createCtx() -> ContextContainer",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:createApprovalContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        452,
+        469
+      ],
+      "name": "createApprovalContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly toolInput?: Record<string, unknown>;\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ApprovalContext",
+      "signature": "export function createApprovalContext(input: {\r\n  readonly toolInput?: Record<string, unknown>;\r\n  readonly toolName: string;\r\n}) -> ApprovalContext",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:makeEvent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        471,
+        473
+      ],
+      "name": "makeEvent",
+      "params": [
+        {
+          "name": "type",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HandleMessageStreamEvent",
+      "signature": "export function makeEvent(type: string) -> HandleMessageStreamEvent",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:registrySym",
+      "kind": "variable",
+      "line_range": [
+        475,
+        475
+      ],
+      "name": "registrySym",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:testRegistry",
+      "kind": "variable",
+      "line_range": [
+        476,
+        476
+      ],
+      "name": "testRegistry",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:stepCounter",
+      "kind": "variable",
+      "line_range": [
+        477,
+        477
+      ],
+      "name": "stepCounter",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:createReplayableTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        483,
+        499
+      ],
+      "name": "createReplayableTool",
+      "params": [
+        {
+          "name": "description",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "executeFn",
+          "optional": false,
+          "type": "(...args: unknown[]) => unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DynamicToolEntry",
+      "signature": "export function createReplayableTool(description: unknown, executeFn: (...args: unknown[]) => unknown) -> DynamicToolEntry",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/context/dynamic-tool-lifecycle.test.ts:createFrameworkTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        841,
+        850
+      ],
+      "name": "createFrameworkTool",
+      "params": [
+        {
+          "name": "description",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "executeFn",
+          "optional": false,
+          "type": "(input: Record<string, unknown>) => unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DynamicToolEntry",
+      "signature": "export function createFrameworkTool(description: unknown, executeFn: (input: Record<string, unknown>) => unknown) -> DynamicToolEntry",
+      "visibility": "Private"
+    }
+  ]
+}

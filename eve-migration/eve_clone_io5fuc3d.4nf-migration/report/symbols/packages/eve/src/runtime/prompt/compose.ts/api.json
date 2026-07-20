@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        30,
+        38
+      ],
+      "name": "composeRuntimeBasePrompt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ComposeRuntimeBasePromptInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[]",
+      "signature": "export function composeRuntimeBasePrompt(input: ComposeRuntimeBasePromptInput) -> readonly string[]"
+    }
+  ],
+  "module": "packages/eve/src/runtime/prompt/compose.ts"
+}

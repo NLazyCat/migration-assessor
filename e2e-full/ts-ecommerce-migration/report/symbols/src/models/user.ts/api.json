@@ -1,0 +1,195 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        1,
+        6
+      ],
+      "name": "IAddress",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface IAddress { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": "street",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "street: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "city",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "city: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "zipCode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "zipCode: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "country",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "country: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        8,
+        15
+      ],
+      "name": "IUser",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface IUser { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "displayName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "displayName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "email",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "email: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "address",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": IAddress",
+      "signature": "address: : IAddress"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "createdAt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "createdAt: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "updatedAt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "updatedAt: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "UserRole",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type UserRole = 'admin' | 'user' | 'viewer';"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        19,
+        25
+      ],
+      "name": "createUser",
+      "params": [
+        {
+          "name": "displayName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Omit<IUser, 'id' | 'createdAt' | 'updatedAt'> & { address: IAddress }",
+      "signature": "export function createUser(displayName: string, email: string) -> Omit<IUser, 'id' | 'createdAt' | 'updatedAt'> & { address: IAddress }"
+    }
+  ],
+  "module": "src/models/user.ts"
+}

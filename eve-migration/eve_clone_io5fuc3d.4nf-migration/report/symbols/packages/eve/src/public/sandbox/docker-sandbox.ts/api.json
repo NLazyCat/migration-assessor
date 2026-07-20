@@ -1,0 +1,93 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DockerSandboxPullPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DockerSandboxPullPolicy = \"if-not-present\" | \"always\" | \"never\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DockerSandboxNetworkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DockerSandboxNetworkPolicy = \"allow-all\" | \"deny-all\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        47
+      ],
+      "name": "DockerSandboxCreateOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DockerSandboxCreateOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "image",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "image?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "env",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "env?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "pullPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerSandboxPullPolicy",
+      "signature": "pullPolicy?: : DockerSandboxPullPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "networkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DockerSandboxNetworkPolicy",
+      "signature": "networkPolicy?: : DockerSandboxNetworkPolicy"
+    }
+  ],
+  "module": "packages/eve/src/public/sandbox/docker-sandbox.ts"
+}

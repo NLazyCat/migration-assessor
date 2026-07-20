@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        37
+      ],
+      "name": "HeroRuntimeState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HeroRuntimeState = {\r\n  cancelled: boolean;\r\n  animationFrame: number;\r\n  cleanup: (() => void) | undefined;\r\n  mouseEnvYaw: number;\r\n  targetMouseEnvYaw: number;\r\n  mouseEnvPitch: number;\r\n  targetMouseEnvPitch: number;\r\n  asciiMouseX: number;\r\n  asciiMouseY: number;\r\n  targetAsciiMouseX: number;\r\n  targetAsciiMouseY: number;\r\n  brushCellX: number;\r\n  brushCellY: number;\r\n  previousRenderedBrushCellX: number;\r\n  previousRenderedBrushCellY: number;\r\n  hasBrushCell: boolean;\r\n  hasRenderedBrushCell: boolean;\r\n  brushActive: boolean;\r\n  paintGridScaleMultiplier: number;\r\n  targetBrushActive: boolean;\r\n  activeMesh: MeshData | undefined;\r\n  agentsEnvYawMix: number;\r\n  previousFrameTime: number;\r\n  autoRotateStartTime: number;\r\n  lastBrushMoveTime: number;\r\n  lastPointerClientX: number | undefined;\r\n  lastPointerClientY: number | undefined;\r\n  isCoarsePointer: boolean;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "ControlsRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ControlsRef = MutableRefObject<RenderControls>;"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/state.ts"
+}

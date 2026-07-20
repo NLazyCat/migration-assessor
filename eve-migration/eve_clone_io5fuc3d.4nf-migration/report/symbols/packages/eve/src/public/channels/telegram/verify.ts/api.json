@@ -1,0 +1,110 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "TelegramWebhookSecretToken",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TelegramWebhookSecretToken = string | (() => string | Promise<string>);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "TelegramWebhookVerifier",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type TelegramWebhookVerifier = (\r\n  request: Request,\r\n  body: string,\r\n) => unknown | Promise<unknown>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "TelegramVerifyOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramVerifyOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "secretToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TelegramWebhookSecretToken | undefined",
+      "signature": "secretToken: : TelegramWebhookSecretToken | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "webhookVerifier",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TelegramWebhookVerifier",
+      "signature": "webhookVerifier?: : TelegramWebhookVerifier"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        41,
+        47
+      ],
+      "name": "resolveTelegramWebhookSecretToken",
+      "params": [
+        {
+          "name": "secretToken",
+          "optional": true,
+          "type": "TelegramWebhookSecretToken"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveTelegramWebhookSecretToken(secretToken: TelegramWebhookSecretToken) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        55,
+        78
+      ],
+      "name": "verifyTelegramRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "TelegramVerifyOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function verifyTelegramRequest(request: Request, options: TelegramVerifyOptions) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/telegram/verify.ts"
+}

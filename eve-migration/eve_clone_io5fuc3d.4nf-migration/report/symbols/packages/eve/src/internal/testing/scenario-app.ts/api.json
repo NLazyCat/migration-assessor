@@ -1,0 +1,178 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        40,
+        88
+      ],
+      "name": "ScenarioAppDescriptor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScenarioAppDescriptor { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "files",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "files: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "directories",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "directories?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "dependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "dependencies?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "packageType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"module\" | \"commonjs\"",
+      "signature": "packageType?: : \"module\" | \"commonjs\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "installDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "installDependencies?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "packageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"bun\" | \"npm\" | \"pnpm\"",
+      "signature": "packageManager?: : \"bun\" | \"npm\" | \"pnpm\""
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        94,
+        99
+      ],
+      "name": "ScenarioApp",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScenarioApp { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        113,
+        160
+      ],
+      "name": "materializeScenarioApp",
+      "params": [
+        {
+          "name": "descriptor",
+          "optional": false,
+          "type": "ScenarioAppDescriptor"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ScenarioApp>",
+      "signature": "export function materializeScenarioApp(descriptor: ScenarioAppDescriptor) -> Promise<ScenarioApp>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        167,
+        187
+      ],
+      "name": "useScenarioApp",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "(descriptor: ScenarioAppDescriptor) => Promise<ScenarioApp>",
+      "signature": "export function useScenarioApp() -> (descriptor: ScenarioAppDescriptor) => Promise<ScenarioApp>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        355,
+        358
+      ],
+      "name": "ensureScenarioEveTarballPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function ensureScenarioEveTarballPath() -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/scenario-app.ts"
+}

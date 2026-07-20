@@ -1,0 +1,67 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        14
+      ],
+      "name": "GatewayCredentialPresence",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GatewayCredentialPresence { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "apiKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "apiKey: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "oidc",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "oidc: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        39
+      ],
+      "name": "resolveModelEndpointStatus",
+      "params": [
+        {
+          "name": "routing",
+          "optional": false,
+          "type": "ModelRouting"
+        },
+        {
+          "name": "credentials",
+          "optional": false,
+          "type": "GatewayCredentialPresence"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelEndpointStatus",
+      "signature": "export function resolveModelEndpointStatus(routing: ModelRouting, credentials: GatewayCredentialPresence) -> ModelEndpointStatus"
+    }
+  ],
+  "module": "packages/eve/src/internal/resolve-model-endpoint-status.ts"
+}

@@ -1,0 +1,335 @@
+{
+  "module": "packages/eve/src/internal/workflow/development-world-client.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:WORKFLOW_LOCAL_BASE_URL_ENV",
+      "kind": "variable",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "WORKFLOW_LOCAL_BASE_URL_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow/development-world-client.ts:MissingDevelopmentGenerationError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            47,
+            54
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "generationId",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "cause",
+              "optional": true,
+              "type": "unknown"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:MissingDevelopmentGenerationError",
+      "kind": "class",
+      "line_range": [
+        46,
+        55
+      ],
+      "name": "MissingDevelopmentGenerationError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:call",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        57,
+        69
+      ],
+      "name": "call",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "DevelopmentWorldOperation"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function call(operation: DevelopmentWorldOperation, args: readonly unknown[]) -> Promise<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:createDevelopmentWorkflowWorld",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        134
+      ],
+      "name": "createDevelopmentWorkflowWorld",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "World",
+      "signature": "export function createDevelopmentWorkflowWorld() -> World",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:ForwardedOperation",
+      "kind": "type_alias",
+      "line_range": [
+        136,
+        136
+      ],
+      "name": "ForwardedOperation",
+      "partial_analysis": false,
+      "value": "(...args: unknown[]) => Promise<unknown>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:buildForwardedOperations",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        142,
+        158
+      ],
+      "name": "buildForwardedOperations",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly groups: Readonly<Record<string, Readonly<Record<string, ForwardedOperation>>>>;\r\n  readonly topLevel: Readonly<Record<string, ForwardedOperation>>;\r\n}",
+      "signature": "export function buildForwardedOperations() -> {\r\n  readonly groups: Readonly<Record<string, Readonly<Record<string, ForwardedOperation>>>>;\r\n  readonly topLevel: Readonly<Record<string, ForwardedOperation>>;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:createQueueHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        160,
+        228
+      ],
+      "name": "createQueueHandler",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "QueuePrefix"
+        },
+        {
+          "name": "handler",
+          "optional": false,
+          "type": "(\r\n    message: unknown,\r\n    metadata: {\r\n      attempt: number;\r\n      queueName: ValidQueueName;\r\n      messageId: MessageId;\r\n      requestId?: string;\r\n    },\r\n  ) => Promise<void | { timeoutSeconds: number }>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(request: Request) => Promise<Response>",
+      "signature": "export function createQueueHandler(prefix: QueuePrefix, handler: (\r\n    message: unknown,\r\n    metadata: {\r\n      attempt: number;\r\n      queueName: ValidQueueName;\r\n      messageId: MessageId;\r\n      requestId?: string;\r\n    },\r\n  ) => Promise<void | { timeoutSeconds: number }>) -> (request: Request) => Promise<Response>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:resolveDeliveryGenerationId",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        239,
+        266
+      ],
+      "name": "resolveDeliveryGenerationId",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveDeliveryGenerationId(message: unknown) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:readGenerationRuntimeAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        268,
+        309
+      ],
+      "name": "readGenerationRuntimeAppRoot",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "generationId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readGenerationRuntimeAppRoot(appRoot: string, generationId: string) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:isFileNotFoundError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        311,
+        313
+      ],
+      "name": "isFileNotFoundError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isFileNotFoundError(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        315,
+        317
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:fetchDevelopmentWorld",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        319,
+        338
+      ],
+      "name": "fetchDevelopmentWorld",
+      "params": [
+        {
+          "name": "route",
+          "optional": false,
+          "type": "string | URL"
+        },
+        {
+          "name": "init",
+          "optional": false,
+          "type": "RequestInit"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Response>",
+      "signature": "export function fetchDevelopmentWorld(route: string | URL, init: RequestInit) -> Promise<Response>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:readDevelopmentWorldError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        340,
+        346
+      ],
+      "name": "readDevelopmentWorldError",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error | undefined",
+      "signature": "export function readDevelopmentWorldError(source: string) -> Error | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:resolveDevelopmentWorldBaseUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        348,
+        350
+      ],
+      "name": "resolveDevelopmentWorldBaseUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveDevelopmentWorldBaseUrl() -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow/development-world-client.ts:readRequiredEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        352,
+        358
+      ],
+      "name": "readRequiredEnvironment",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function readRequiredEnvironment(name: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

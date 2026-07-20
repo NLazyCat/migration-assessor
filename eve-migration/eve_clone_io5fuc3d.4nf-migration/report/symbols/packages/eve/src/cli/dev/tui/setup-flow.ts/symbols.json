@@ -1,0 +1,380 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/setup-flow.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupEditableSelectResult",
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "SetupEditableSelectResult",
+      "partial_analysis": false,
+      "value": "| { kind: \"selected\"; value: string }\r\n  | { kind: \"edited\"; value: string; text: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupFlowIndicator",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "SetupFlowIndicator",
+      "partial_analysis": false,
+      "value": "\"spinner\" | \"pulse\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupFlowStatus",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "SetupFlowStatus",
+      "partial_analysis": false,
+      "value": "string | { kind: \"external-action\"; text: string; emphasis: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSelectRequestBase:message",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSelectRequestBase:options",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": readonly SetupPanelOption[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSelectRequestBase:notices",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "notices",
+          "partial_analysis": false,
+          "return_type": ": readonly SelectNotice[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSelectRequestBase",
+      "kind": "interface",
+      "line_range": [
+        18,
+        22
+      ],
+      "name": "SetupSelectRequestBase",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSingleSelectRequest:kind",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"single\" | \"stacked\" | \"task-list\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSingleSelectRequest:initialValue",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "initialValue",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSingleSelectRequest",
+      "kind": "interface",
+      "line_range": [
+        24,
+        27
+      ],
+      "name": "SetupSingleSelectRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchAction",
+      "kind": "interface",
+      "line_range": [
+        29,
+        31
+      ],
+      "name": "SetupSearchAction",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchSelectRequest:kind",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"search\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchSelectRequest:layout",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "layout",
+          "partial_analysis": false,
+          "return_type": ": \"task-list\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchSelectRequest:initialValue",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "initialValue",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchSelectRequest:placeholder",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "placeholder",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchSelectRequest:searchAction",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "searchAction",
+          "partial_analysis": false,
+          "return_type": ": SetupSearchAction",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchSelectRequest",
+      "kind": "interface",
+      "line_range": [
+        33,
+        39
+      ],
+      "name": "SetupSearchSelectRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupMultiSelectRequest:kind",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"multi\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupMultiSelectRequest:initialValues",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "initialValues",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupMultiSelectRequest:required",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "required",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupMultiSelectRequest",
+      "kind": "interface",
+      "line_range": [
+        41,
+        45
+      ],
+      "name": "SetupMultiSelectRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchableMultiSelectRequest:kind",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"searchable-multi\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchableMultiSelectRequest:initialValues",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "initialValues",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchableMultiSelectRequest:placeholder",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "placeholder",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchableMultiSelectRequest:required",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "required",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSearchableMultiSelectRequest",
+      "kind": "interface",
+      "line_range": [
+        47,
+        52
+      ],
+      "name": "SetupSearchableMultiSelectRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupSelectRequest",
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        63
+      ],
+      "name": "SetupSelectRequest",
+      "partial_analysis": false,
+      "value": "| SetupSingleSelectRequest\r\n  | SetupSearchSelectRequest\r\n  | SetupMultiSelectRequest\r\n  | SetupSearchableMultiSelectRequest;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupFlowRenderer",
+      "kind": "interface",
+      "line_range": [
+        65,
+        111
+      ],
+      "name": "SetupFlowRenderer",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-flow.ts:SetupFlowPrompterRenderer",
+      "kind": "type_alias",
+      "line_range": [
+        113,
+        123
+      ],
+      "name": "SetupFlowPrompterRenderer",
+      "partial_analysis": false,
+      "value": "Pick<\r\n  SetupFlowRenderer,\r\n  | \"readSelect\"\r\n  | \"readEditableSelect\"\r\n  | \"readText\"\r\n  | \"readAcknowledge\"\r\n  | \"readChoice\"\r\n  | \"setStatus\"\r\n  | \"renderLine\"\r\n  | \"renderOutput\"\r\n>;",
+      "visibility": "Public"
+    }
+  ]
+}

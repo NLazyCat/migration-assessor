@@ -190,7 +190,9 @@ pub(crate) struct MatrixRegistry {
 impl MatrixRegistry {
     pub(crate) fn load(language: &str) -> Self {
         let data = match language {
-            "typescript" => include_str!(concat!(env!("OUT_DIR"), "/ts_libraries.toml")),
+            "typescript" | "javascript" => {
+                include_str!(concat!(env!("OUT_DIR"), "/ts_libraries.toml"))
+            }
             "rust" => include_str!(concat!(env!("OUT_DIR"), "/rust_libraries.toml")),
             _ => {
                 return Self {

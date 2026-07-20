@@ -1,0 +1,93 @@
+{
+  "module": "packages/eve/src/evals/runner/resolve-git-metadata.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/resolve-git-metadata.ts:GitMetadata:branch",
+          "kind": "property",
+          "line_range": [
+            4,
+            4
+          ],
+          "name": "branch",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/resolve-git-metadata.ts:GitMetadata:sha",
+          "kind": "property",
+          "line_range": [
+            5,
+            5
+          ],
+          "name": "sha",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/resolve-git-metadata.ts:GitMetadata",
+      "kind": "interface",
+      "line_range": [
+        3,
+        6
+      ],
+      "name": "GitMetadata",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/resolve-git-metadata.ts:resolveLocalGitMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        26
+      ],
+      "name": "resolveLocalGitMetadata",
+      "params": [
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitMetadata",
+      "signature": "export function resolveLocalGitMetadata(cwd: string) -> GitMetadata",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/resolve-git-metadata.ts:execGitCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        39
+      ],
+      "name": "execGitCommand",
+      "params": [
+        {
+          "name": "command",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function execGitCommand(command: string, cwd: string) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

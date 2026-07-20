@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/setup/primitives/open-url.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/open-url.ts:osOpenCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        4,
+        13
+      ],
+      "name": "osOpenCommand",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ command: string; args: string[] }",
+      "signature": "export function osOpenCommand(url: string) -> { command: string; args: string[] }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/open-url.ts:parseWebUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        26
+      ],
+      "name": "parseWebUrl",
+      "params": [
+        {
+          "name": "candidate",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function parseWebUrl(candidate: string) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/primitives/open-url.ts:openUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        47
+      ],
+      "name": "openUrl",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function openUrl(url: string) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

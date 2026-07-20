@@ -1,0 +1,64 @@
+{
+  "module": "packages/eve/src/runtime/resolve-hook.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-hook.ts:resolveHookDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        19,
+        74
+      ],
+      "name": "resolveHookDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledHookDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedHookDefinition>",
+      "signature": "export function resolveHookDefinition(definition: CompiledHookDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedHookDefinition>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-hook.ts:describe",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        78
+      ],
+      "name": "describe",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledHookDefinition"
+        },
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function describe(definition: CompiledHookDefinition, predicate: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

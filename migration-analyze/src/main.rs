@@ -27,6 +27,8 @@ enum Commands {
     Summary(commands::summary::SummaryArgs),
     /// Check source repo for updates since last analysis
     CheckUpdates(commands::check_updates::CheckUpdatesArgs),
+    /// Verify target project changes match source diff
+    Verify(commands::verify::VerifyArgs),
 }
 
 fn main() -> anyhow::Result<()> {
@@ -39,6 +41,7 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Boundaries(args)) => commands::boundaries::run(args)?,
         Some(Commands::CheckUpdates(args)) => commands::check_updates::run(args)?,
         Some(Commands::Summary(args)) => commands::summary::run(args)?,
+        Some(Commands::Verify(args)) => commands::verify::run(args)?,
         None => {
             print_usage_guide();
         }
@@ -53,31 +56,30 @@ fn print_usage_guide() {
     println!("╚══════════════════════════════════════════════════════════╝");
     println!();
     println!("USAGE:");
-    println!("  migration-analyze <COMMAND> [OPTIONS] [PATH]");
+    println!("  migration-analyze <COMMAND> [OPTIONS]");
     println!();
-    println!("QUICK START (in your source repo):");
-    println!("  migration-analyze analyze         Analyze current project");
-    println!("  migration-analyze summary         See results in terminal");
-    println!("  migration-analyze diff --auto     Check what changed since analysis");
+    println!("QUICK START:");
+    println!("  migration-analyze init my-project      Create new migration project");
+    println!("  cd my-project");
+    println!("  # Edit migration.toml, set source_repo / source_lang");
+    println!("  migration-analyze analyze              Analyze source repo");
+    println!("  migration-analyze summary              See results in terminal");
     println!();
     println!("COMMANDS:");
+    println!("  init <name>    Create a new migration project scaffold");
     println!("  analyze        Analyze source repo and generate migration report");
     println!("  summary        Show analysis results as a terminal summary");
     println!("  diff           Incremental diff analysis against a newer version");
+    println!("  verify         Verify target changes match source diff");
     println!("  boundaries     Generate interface boundary report (layering + cut planes)");
     println!("  check-updates  Check source repo for updates since last analysis");
-    println!("  init           Create a new migration project scaffold");
     println!();
     println!("EXAMPLES:");
-    println!("  migration-analyze analyze                            # analyze current directory");
-    println!("  migration-analyze analyze ../my-project               # analyze a project");
-    println!("  migration-analyze summary --format json               # output as JSON");
-    println!("  migration-analyze diff --new-version v2.0.0           # diff against a tag");
-    println!(
-        "  migration-analyze diff --auto                         # auto-detect latest version"
-    );
-    println!("  migration-analyze check-updates                       # check for source changes");
+    println!("  migration-analyze init my-app              # scaffold new project");
+    println!("  migration-analyze analyze                   # analyze source repo");
+    println!("  migration-analyze summary --format json     # output as JSON");
+    println!("  migration-analyze diff --auto               # auto-detect latest version");
+    println!("  migration-analyze check-updates             # check for source changes");
     println!();
-    println!("ALL COMMANDS accept a path argument (default = current directory).");
     println!("Run: migration-analyze <COMMAND> --help  for detailed options.");
 }

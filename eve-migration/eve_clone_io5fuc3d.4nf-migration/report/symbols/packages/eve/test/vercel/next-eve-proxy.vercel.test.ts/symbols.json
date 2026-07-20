@@ -1,0 +1,97 @@
+{
+  "module": "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts:REQUIRED_VERCEL_ENV_NAMES",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "REQUIRED_VERCEL_ENV_NAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts:missingEnvironmentVariables",
+      "kind": "variable",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "missingEnvironmentVariables",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts:hasEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        54
+      ],
+      "name": "hasEnvironmentVariable",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasEnvironmentVariable(name: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts:readOptionalEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        60
+      ],
+      "name": "readOptionalEnvironmentVariable",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readOptionalEnvironmentVariable(name: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/next-eve-proxy.vercel.test.ts:readRequiredEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        70
+      ],
+      "name": "readRequiredEnvironmentVariable",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function readRequiredEnvironmentVariable(name: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

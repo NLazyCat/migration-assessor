@@ -1,0 +1,659 @@
+{
+  "module": "apps/docs/lib/integrations/data.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:IntegrationType",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "IntegrationType",
+      "partial_analysis": false,
+      "value": "\"channel\" | \"connection\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:AuthMode",
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "AuthMode",
+      "partial_analysis": false,
+      "value": "\"user\" | \"app\" | \"jwtBearer\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec:connector",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "connector",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec:authModes",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "authModes",
+          "partial_analysis": false,
+          "return_type": ": AuthMode[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec:description",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec:mcp",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "mcp",
+          "partial_analysis": false,
+          "return_type": ": ConnectionIdentity[\"mcp\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec:openapi",
+          "kind": "property",
+          "line_range": [
+            47,
+            47
+          ],
+          "name": "openapi",
+          "partial_analysis": false,
+          "return_type": ": ConnectionIdentity[\"openapi\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec:configureNote",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "configureNote",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/integrations/data.ts:ConnectionSpec",
+      "kind": "interface",
+      "line_range": [
+        39,
+        50
+      ],
+      "name": "ConnectionSpec",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:slug",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:name",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:type",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "type",
+          "partial_analysis": false,
+          "return_type": ": IntegrationType",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:protocols",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "protocols",
+          "partial_analysis": false,
+          "return_type": ": ConnectionProtocol[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:tagline",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "tagline",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:logo",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "logo",
+          "partial_analysis": false,
+          "return_type": ": LogoKey",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:badge",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "badge",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:docsHref",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "docsHref",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:keywords",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "keywords",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:install",
+          "kind": "property",
+          "line_range": [
+            73,
+            73
+          ],
+          "name": "install",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:quickStart",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "quickStart",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:configure",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "configure",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Integration:connection",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "connection",
+          "partial_analysis": false,
+          "return_type": ": ConnectionSpec",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/integrations/data.ts:Integration",
+      "kind": "interface",
+      "line_range": [
+        52,
+        78
+      ],
+      "name": "Integration",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Presentation:logo",
+          "kind": "property",
+          "line_range": [
+            82,
+            82
+          ],
+          "name": "logo",
+          "partial_analysis": false,
+          "return_type": ": LogoKey",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Presentation:docsHref",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "docsHref",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Presentation:keywords",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "keywords",
+          "partial_analysis": false,
+          "return_type": ": string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:Presentation:badge",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "badge",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/integrations/data.ts:Presentation",
+      "kind": "interface",
+      "line_range": [
+        81,
+        87
+      ],
+      "name": "Presentation",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ChannelPresentation:install",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "install",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ChannelPresentation:quickStart",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "quickStart",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ChannelPresentation:configure",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "configure",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/integrations/data.ts:ChannelPresentation",
+      "kind": "interface",
+      "line_range": [
+        90,
+        94
+      ],
+      "name": "ChannelPresentation",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionPresentation:authModes",
+          "kind": "property",
+          "line_range": [
+            98,
+            98
+          ],
+          "name": "authModes",
+          "partial_analysis": false,
+          "return_type": ": AuthMode[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionPresentation:connector",
+          "kind": "property",
+          "line_range": [
+            99,
+            99
+          ],
+          "name": "connector",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "apps/docs/lib/integrations/data.ts:ConnectionPresentation:configureNote",
+          "kind": "property",
+          "line_range": [
+            100,
+            100
+          ],
+          "name": "configureNote",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "apps/docs/lib/integrations/data.ts:ConnectionPresentation",
+      "kind": "interface",
+      "line_range": [
+        97,
+        101
+      ],
+      "name": "ConnectionPresentation",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:channelPresentations",
+      "kind": "variable",
+      "line_range": [
+        103,
+        475
+      ],
+      "name": "channelPresentations",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:connectionPresentations",
+      "kind": "variable",
+      "line_range": [
+        483,
+        710
+      ],
+      "name": "connectionPresentations",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:buildChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        712,
+        732
+      ],
+      "name": "buildChannel",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "IntegrationEntry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Integration",
+      "signature": "export function buildChannel(entry: IntegrationEntry) -> Integration",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:buildConnection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        734,
+        764
+      ],
+      "name": "buildConnection",
+      "params": [
+        {
+          "name": "entry",
+          "optional": false,
+          "type": "IntegrationEntry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Integration",
+      "signature": "export function buildConnection(entry: IntegrationEntry) -> Integration",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:channels",
+      "kind": "variable",
+      "line_range": [
+        766,
+        768
+      ],
+      "name": "channels",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:connections",
+      "kind": "variable",
+      "line_range": [
+        770,
+        772
+      ],
+      "name": "connections",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:protocolLabel",
+      "kind": "variable",
+      "line_range": [
+        775,
+        778
+      ],
+      "name": "protocolLabel",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:protocolBadgeClassName",
+      "kind": "variable",
+      "line_range": [
+        781,
+        784
+      ],
+      "name": "protocolBadgeClassName",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:authModeLabel",
+      "kind": "variable",
+      "line_range": [
+        787,
+        791
+      ],
+      "name": "authModeLabel",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:integrations",
+      "kind": "variable",
+      "line_range": [
+        793,
+        793
+      ],
+      "name": "integrations",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:getIntegration",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        795,
+        796
+      ],
+      "name": "getIntegration",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Integration | undefined",
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/integrations/data.ts:integrationSlugs",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        798,
+        798
+      ],
+      "name": "integrationSlugs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

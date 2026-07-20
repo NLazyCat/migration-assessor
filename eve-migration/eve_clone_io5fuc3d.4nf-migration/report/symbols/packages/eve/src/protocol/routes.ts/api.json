@@ -1,0 +1,268 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "EVE_ROUTE_PREFIX",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_ROUTE_PREFIX: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "EVE_HEALTH_ROUTE_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_HEALTH_ROUTE_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "EVE_INFO_ROUTE_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_INFO_ROUTE_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "EVE_CREATE_SESSION_ROUTE_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_CREATE_SESSION_ROUTE_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "EVE_CONTINUE_SESSION_ROUTE_PATTERN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_CONTINUE_SESSION_ROUTE_PATTERN: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "EVE_MESSAGE_STREAM_ROUTE_PATTERN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_MESSAGE_STREAM_ROUTE_PATTERN: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "EVE_CANCEL_TURN_ROUTE_PATTERN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_CANCEL_TURN_ROUTE_PATTERN: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "EVE_DEV_DISPATCH_SCHEDULE_ROUTE_PATTERN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_DEV_DISPATCH_SCHEDULE_ROUTE_PATTERN: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "EVE_DEV_RUNTIME_ARTIFACTS_ROUTE_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_DEV_RUNTIME_ARTIFACTS_ROUTE_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "EVE_DEV_RUNTIME_ARTIFACTS_REBUILD_ROUTE_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_DEV_RUNTIME_ARTIFACTS_REBUILD_ROUTE_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        78,
+        80
+      ],
+      "name": "createEveDevDispatchSchedulePath",
+      "params": [
+        {
+          "name": "scheduleId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveDevDispatchSchedulePath(scheduleId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "EVE_CONNECTION_CALLBACK_ROUTE_PATTERN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_CONNECTION_CALLBACK_ROUTE_PATTERN: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        104,
+        104
+      ],
+      "name": "EVE_CALLBACK_ROUTE_PATTERN",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_CALLBACK_ROUTE_PATTERN: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        111
+      ],
+      "name": "createEveMessageStreamRoutePath",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveMessageStreamRoutePath(sessionId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        116,
+        118
+      ],
+      "name": "createEveContinueSessionRoutePath",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveContinueSessionRoutePath(sessionId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        123,
+        125
+      ],
+      "name": "createEveCancelTurnRoutePath",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveCancelTurnRoutePath(sessionId: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        137,
+        139
+      ],
+      "name": "createEveConnectionCallbackRoutePath",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveConnectionCallbackRoutePath(name: string, token: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        144,
+        146
+      ],
+      "name": "createEveCallbackRoutePath",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveCallbackRoutePath(token: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/protocol/routes.ts"
+}

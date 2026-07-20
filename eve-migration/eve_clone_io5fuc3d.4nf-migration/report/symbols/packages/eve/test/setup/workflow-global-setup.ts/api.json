@@ -1,0 +1,30 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "WORKFLOW_TEST_AGENT_NAME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const WORKFLOW_TEST_AGENT_NAME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        53
+      ],
+      "name": "setupWorkflowTests",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function setupWorkflowTests() -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/test/setup/workflow-global-setup.ts"
+}

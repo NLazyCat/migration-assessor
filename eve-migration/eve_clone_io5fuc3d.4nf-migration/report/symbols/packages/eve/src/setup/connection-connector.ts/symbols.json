@@ -1,0 +1,623 @@
+{
+  "module": "packages/eve/src/setup/connection-connector.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:log",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "log",
+          "partial_analysis": false,
+          "return_type": ": ChannelSetupLog",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:prompter",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "prompter",
+          "partial_analysis": false,
+          "return_type": ": Prompter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:projectRoot",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "projectRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:slug",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "slug",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:service",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "service",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:canonicalConnectorName",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "canonicalConnectorName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:project",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": VercelProjectReference",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions:signal",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorOptions",
+      "kind": "interface",
+      "line_range": [
+        8,
+        17
+      ],
+      "name": "SetupConnectionConnectorOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:ConnectConnectorRef:uid",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "uid",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:ConnectConnectorRef:id",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/connection-connector.ts:ConnectConnectorRef:name",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/connection-connector.ts:ConnectConnectorRef",
+      "kind": "interface",
+      "line_range": [
+        20,
+        24
+      ],
+      "name": "ConnectConnectorRef",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:SetupConnectionConnectorResult",
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "SetupConnectionConnectorResult",
+      "partial_analysis": false,
+      "value": "| { kind: \"existing\"; connectorUid: string }\r\n  | { kind: \"created\"; connectorUid: string; connectorId: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:ConnectorResolution",
+      "kind": "type_alias",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "ConnectorResolution",
+      "partial_analysis": false,
+      "value": "| { kind: \"existing\"; connector: ConnectConnectorRef }\r\n  | { kind: \"created\"; connector: ConnectConnectorRef };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:CREATED_CONNECTOR",
+      "kind": "variable",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "CREATED_CONNECTOR",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        38
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:parseJson",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        46
+      ],
+      "name": "parseJson",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function parseJson(source: string) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:parseConnectorRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        55
+      ],
+      "name": "parseConnectorRef",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectConnectorRef | undefined",
+      "signature": "export function parseConnectorRef(value: unknown) -> ConnectConnectorRef | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:parseCreatedConnector",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        64
+      ],
+      "name": "parseCreatedConnector",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectConnectorRef | undefined",
+      "signature": "export function parseCreatedConnector(stdout: string) -> ConnectConnectorRef | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:parseConnectorList",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        66,
+        78
+      ],
+      "name": "parseConnectorList",
+      "params": [
+        {
+          "name": "candidates",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "service",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectConnectorRef[]",
+      "signature": "export function parseConnectorList(candidates: readonly unknown[], service: string) -> ConnectConnectorRef[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:parseConnectorListPage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        89
+      ],
+      "name": "parseConnectorListPage",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "service",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ connectors: ConnectConnectorRef[]; cursor?: string } | undefined",
+      "signature": "export function parseConnectorListPage(value: unknown, service: string) -> { connectors: ConnectConnectorRef[]; cursor?: string } | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:listConnectors",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        91,
+        132
+      ],
+      "name": "listConnectors",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SetupConnectionConnectorOptions"
+        },
+        {
+          "name": "project",
+          "optional": false,
+          "type": "VercelProjectReference"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ProcessOutputHandler"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectConnectorRef[]>",
+      "signature": "export function listConnectors(options: SetupConnectionConnectorOptions, project: VercelProjectReference, onOutput: ProcessOutputHandler) -> Promise<ConnectConnectorRef[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:supportsUserAuthorization",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        134,
+        158
+      ],
+      "name": "supportsUserAuthorization",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SetupConnectionConnectorOptions"
+        },
+        {
+          "name": "project",
+          "optional": false,
+          "type": "VercelProjectReference"
+        },
+        {
+          "name": "connector",
+          "optional": false,
+          "type": "ConnectConnectorRef"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ProcessOutputHandler"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function supportsUserAuthorization(options: SetupConnectionConnectorOptions, project: VercelProjectReference, connector: ConnectConnectorRef, onOutput: ProcessOutputHandler) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:connectorNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        160,
+        168
+      ],
+      "name": "connectorNames",
+      "params": [
+        {
+          "name": "connectors",
+          "optional": false,
+          "type": "readonly ConnectConnectorRef[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Set<string>",
+      "signature": "export function connectorNames(connectors: readonly ConnectConnectorRef[]) -> Set<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:connectorMatchesCanonicalName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        175
+      ],
+      "name": "connectorMatchesCanonicalName",
+      "params": [
+        {
+          "name": "connector",
+          "optional": false,
+          "type": "ConnectConnectorRef"
+        },
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function connectorMatchesCanonicalName(connector: ConnectConnectorRef, name: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:nextConnectorName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        177,
+        182
+      ],
+      "name": "nextConnectorName",
+      "params": [
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "names",
+          "optional": false,
+          "type": "ReadonlySet<string>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function nextConnectorName(slug: string, names: ReadonlySet<string>) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:cleanupCreatedConnectionConnector",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        185,
+        204
+      ],
+      "name": "cleanupCreatedConnectionConnector",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  log: ChannelSetupLog;\r\n  projectRoot: string;\r\n  connectorId: string;\r\n  /** The linked Vercel owner; inferred from the project link when omitted. */\r\n  orgId?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function cleanupCreatedConnectionConnector(input: {\r\n  log: ChannelSetupLog;\r\n  projectRoot: string;\r\n  connectorId: string;\r\n  /** The linked Vercel owner; inferred from the project link when omitted. */\r\n  orgId?: string;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:attach",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        206,
+        217
+      ],
+      "name": "attach",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SetupConnectionConnectorOptions"
+        },
+        {
+          "name": "project",
+          "optional": false,
+          "type": "VercelProjectReference"
+        },
+        {
+          "name": "connectorUid",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ProcessOutputHandler"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function attach(options: SetupConnectionConnectorOptions, project: VercelProjectReference, connectorUid: string, onOutput: ProcessOutputHandler) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:resolveFallbackConnector",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        219,
+        325
+      ],
+      "name": "resolveFallbackConnector",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SetupConnectionConnectorOptions"
+        },
+        {
+          "name": "project",
+          "optional": false,
+          "type": "VercelProjectReference"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "ProcessOutputHandler"
+        },
+        {
+          "name": "connectors",
+          "optional": false,
+          "type": "readonly ConnectConnectorRef[]"
+        },
+        {
+          "name": "initialNotice",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectorResolution>",
+      "signature": "export function resolveFallbackConnector(options: SetupConnectionConnectorOptions, project: VercelProjectReference, onOutput: ProcessOutputHandler, connectors: readonly ConnectConnectorRef[], initialNotice: string) -> Promise<ConnectorResolution>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/connection-connector.ts:setupConnectionConnector",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        328,
+        380
+      ],
+      "name": "setupConnectionConnector",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SetupConnectionConnectorOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SetupConnectionConnectorResult>",
+      "signature": "export function setupConnectionConnector(options: SetupConnectionConnectorOptions) -> Promise<SetupConnectionConnectorResult>",
+      "visibility": "Public"
+    }
+  ]
+}

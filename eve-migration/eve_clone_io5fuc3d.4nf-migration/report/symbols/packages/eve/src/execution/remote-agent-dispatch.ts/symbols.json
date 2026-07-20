@@ -1,0 +1,280 @@
+{
+  "module": "packages/eve/src/execution/remote-agent-dispatch.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/remote-agent-dispatch.ts:RemoteAgentCancelRequestError:retryable",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "retryable",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/remote-agent-dispatch.ts:RemoteAgentCancelRequestError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            15,
+            19
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "optional": false,
+              "type": "{ readonly retryable: boolean }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:RemoteAgentCancelRequestError",
+      "kind": "class",
+      "line_range": [
+        12,
+        20
+      ],
+      "name": "RemoteAgentCancelRequestError",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:startRemoteAgentSession",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        22,
+        84
+      ],
+      "name": "startRemoteAgentSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly action: RuntimeRemoteAgentCallActionRequest;\r\n  readonly callbackBaseUrl: string | undefined;\r\n  readonly callbackToken?: string;\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly session: HarnessSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function startRemoteAgentSession(input: {\r\n  readonly action: RuntimeRemoteAgentCallActionRequest;\r\n  readonly callbackBaseUrl: string | undefined;\r\n  readonly callbackToken?: string;\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly session: HarnessSession;\r\n}) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:cancelRemoteAgentTurn",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        86,
+        122
+      ],
+      "name": "cancelRemoteAgentTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly sessionId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CancelTurnResult>",
+      "signature": "export function cancelRemoteAgentTurn(input: {\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n  readonly sessionId: string;\r\n}) -> Promise<CancelTurnResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:isRetryableRemoteAgentCancelError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        124,
+        126
+      ],
+      "name": "isRetryableRemoteAgentCancelError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRetryableRemoteAgentCancelError(error: unknown) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:resolveRemoteAgentForAction",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        128,
+        139
+      ],
+      "name": "resolveRemoteAgentForAction",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly nodeId: string;\r\n  readonly registry: RuntimeSubagentRegistry[\"subagentsByNodeId\"];\r\n  readonly remoteAgentName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedRuntimeRemoteAgentNode",
+      "signature": "export function resolveRemoteAgentForAction(input: {\r\n  readonly nodeId: string;\r\n  readonly registry: RuntimeSubagentRegistry[\"subagentsByNodeId\"];\r\n  readonly remoteAgentName: string;\r\n}) -> ResolvedRuntimeRemoteAgentNode",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:createRemoteAgentSessionUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        143
+      ],
+      "name": "createRemoteAgentSessionUrl",
+      "params": [
+        {
+          "name": "remote",
+          "optional": false,
+          "type": "ResolvedRuntimeRemoteAgentNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRemoteAgentSessionUrl(remote: ResolvedRuntimeRemoteAgentNode) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:createRemoteAgentCancelTurnUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        145,
+        153
+      ],
+      "name": "createRemoteAgentCancelTurnUrl",
+      "params": [
+        {
+          "name": "remote",
+          "optional": false,
+          "type": "ResolvedRuntimeRemoteAgentNode"
+        },
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRemoteAgentCancelTurnUrl(remote: ResolvedRuntimeRemoteAgentNode, sessionId: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:isRetryableRemoteCancelStatus",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        155,
+        157
+      ],
+      "name": "isRetryableRemoteCancelStatus",
+      "params": [
+        {
+          "name": "status",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRetryableRemoteCancelStatus(status: number) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:resolveRemoteAgentRequestHeaders",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        159,
+        173
+      ],
+      "name": "resolveRemoteAgentRequestHeaders",
+      "params": [
+        {
+          "name": "remote",
+          "optional": false,
+          "type": "ResolvedRuntimeRemoteAgentNode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, string>>",
+      "signature": "export function resolveRemoteAgentRequestHeaders(remote: ResolvedRuntimeRemoteAgentNode) -> Promise<Record<string, string>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:formatRemoteAgentCallInputMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        175,
+        186
+      ],
+      "name": "formatRemoteAgentCallInputMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly action: RuntimeRemoteAgentCallActionRequest;\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatRemoteAgentCallInputMessage(input: {\r\n  readonly action: RuntimeRemoteAgentCallActionRequest;\r\n  readonly remote: ResolvedRuntimeRemoteAgentNode;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/remote-agent-dispatch.ts:trimTrailingSlash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        188,
+        190
+      ],
+      "name": "trimTrailingSlash",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function trimTrailingSlash(value: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/builder.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#agentName",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "#agentName",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#compiledArtifactsBootstrapPath",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "#compiledArtifactsBootstrapPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#outDir",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "#outDir",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#queueNamespace",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "#queueNamespace",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:config",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "config",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#discoveredEntries",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "#discoveredEntries",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            59,
+            78
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "options",
+              "optional": false,
+              "type": "WorkflowBundleBuilderOptions"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:build",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            80,
+            84
+          ],
+          "name": "build",
+          "params": [
+            {
+              "name": "options",
+              "optional": false,
+              "type": "{ nitroStepOutfile?: string; nitroWorkflowOutfile?: string }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#performBuild",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            86,
+            175
+          ],
+          "name": "#performBuild",
+          "params": [
+            {
+              "name": "options",
+              "optional": false,
+              "type": "{\r\n    nitroStepOutfile?: string;\r\n    nitroWorkflowOutfile?: string;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:transformProjectRoot",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            177,
+            179
+          ],
+          "name": "transformProjectRoot",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:findTsConfigPath",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            181,
+            206
+          ],
+          "name": "findTsConfigPath",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<string | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:getInputFiles",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            208,
+            212
+          ],
+          "name": "getInputFiles",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<string[]>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:discoverEntries",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            214,
+            250
+          ],
+          "name": "discoverEntries",
+          "params": [
+            {
+              "name": "inputs",
+              "optional": false,
+              "type": "readonly string[]"
+            },
+            {
+              "name": "_outdir",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "_tsconfigPath",
+              "optional": true,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<WorkflowBundleDiscoveredEntries>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:createWorkflowsBundle",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            252,
+            335
+          ],
+          "name": "createWorkflowsBundle",
+          "params": [
+            {
+              "name": "_",
+              "optional": false,
+              "type": "WorkflowBundleCreateWorkflowsBundleOptions"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<WorkflowBundleCreateWorkflowsBundleResult>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:createManifest",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            337,
+            356
+          ],
+          "name": "createManifest",
+          "params": [
+            {
+              "name": "_",
+              "optional": false,
+              "type": "{\r\n    manifest: WorkflowManifest;\r\n    manifestDir: string;\r\n    workflowBundlePath: string;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<string | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:buildVercelOutput",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            358,
+            440
+          ],
+          "name": "buildVercelOutput",
+          "params": [
+            {
+              "name": "options",
+              "optional": false,
+              "type": "{\r\n    flowNitroOutputDir: string;\r\n    outputDir: string;\r\n    runtime?: string;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#getBuildInputFiles",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            442,
+            444
+          ],
+          "name": "#getBuildInputFiles",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<string[]>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#patchVercelFunctionConfig",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            446,
+            484
+          ],
+          "name": "#patchVercelFunctionConfig",
+          "params": [
+            {
+              "name": "directoryPath",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "patch",
+              "optional": false,
+              "type": "{\r\n      experimentalTriggers?: readonly unknown[];\r\n      maxDuration?: number | \"max\";\r\n      runtime?: string | null;\r\n      shouldAddHelpers?: boolean;\r\n      shouldAddSourcemapSupport?: boolean;\r\n    }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder:#readVercelFunctionConfig",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            486,
+            497
+          ],
+          "name": "#readVercelFunctionConfig",
+          "params": [
+            {
+              "name": "configPath",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<Record<string, unknown>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:WorkflowBundleBuilder",
+      "kind": "class",
+      "line_range": [
+        51,
+        498
+      ],
+      "name": "WorkflowBundleBuilder",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:addStepRegistrationsImport",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        500,
+        530
+      ],
+      "name": "addStepRegistrationsImport",
+      "params": [
+        {
+          "name": "workflowBundlePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "stepRegistrationsPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function addStepRegistrationsImport(workflowBundlePath: string, stepRegistrationsPath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:rewriteWorkflowRuntimeImports",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        532,
+        555
+      ],
+      "name": "rewriteWorkflowRuntimeImports",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function rewriteWorkflowRuntimeImports(filePath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:rewriteWorkflowCodeLiteral",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        557,
+        588
+      ],
+      "name": "rewriteWorkflowCodeLiteral",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "queueNamespace",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function rewriteWorkflowCodeLiteral(filePath: string, queueNamespace: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:encodeWorkflowCodeLiteral",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        590,
+        595
+      ],
+      "name": "encodeWorkflowCodeLiteral",
+      "params": [
+        {
+          "name": "workflowCode",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function encodeWorkflowCodeLiteral(workflowCode: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:decodeWorkflowCodeTemplateLiteral",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        597,
+        627
+      ],
+      "name": "decodeWorkflowCodeTemplateLiteral",
+      "params": [
+        {
+          "name": "expression",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function decodeWorkflowCodeTemplateLiteral(expression: string, filePath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:replaceStringLiteralSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        629,
+        633
+      ],
+      "name": "replaceStringLiteralSpecifier",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "from",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "to",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function replaceStringLiteralSpecifier(source: string, from: string, to: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:normalizeImportSpecifierPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        635,
+        637
+      ],
+      "name": "normalizeImportSpecifierPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeImportSpecifierPath(path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:createRelativeImportSpecifier",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        639,
+        647
+      ],
+      "name": "createRelativeImportSpecifier",
+      "params": [
+        {
+          "name": "fromDirectoryPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createRelativeImportSpecifier(fromDirectoryPath: string, targetPath: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:readTextFileIfPresent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        649,
+        659
+      ],
+      "name": "readTextFileIfPresent",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function readTextFileIfPresent(filePath: string) -> Promise<string | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:readBinaryFileIfPresent",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        661,
+        671
+      ],
+      "name": "readBinaryFileIfPresent",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Buffer | null>",
+      "signature": "export function readBinaryFileIfPresent(filePath: string) -> Promise<Buffer | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/builder.ts:mirrorFileBypassingUnlink",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        673,
+        682
+      ],
+      "name": "mirrorFileBypassingUnlink",
+      "params": [
+        {
+          "name": "sourcePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "targetPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function mirrorFileBypassingUnlink(sourcePath: string, targetPath: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

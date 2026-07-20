@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/harness/attachment-staging.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.test.ts:UTF8",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "UTF8",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.test.ts:ATTACHMENTS_PATH_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "ATTACHMENTS_PATH_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.test.ts:STUB_ADAPTER_CTX",
+      "kind": "variable",
+      "line_range": [
+        20,
+        29
+      ],
+      "name": "STUB_ADAPTER_CTX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/attachment-staging.test.ts:findWrite",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "findWrite",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "ReturnType<typeof mockSandbox>"
+        },
+        {
+          "name": "filenameSuffix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ path: string; content: string | Uint8Array } | undefined",
+      "signature": "export function findWrite(sandbox: ReturnType<typeof mockSandbox>, filenameSuffix: string) -> { path: string; content: string | Uint8Array } | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

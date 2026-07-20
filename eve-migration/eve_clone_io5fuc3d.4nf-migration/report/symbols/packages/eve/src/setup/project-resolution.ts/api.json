@@ -1,0 +1,402 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DeploymentState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DeploymentState = \"unlinked\" | \"linked\" | \"deployed\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        16,
+        21
+      ],
+      "name": "DeploymentInfo",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DeploymentInfo { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DeploymentState",
+      "signature": "state: : DeploymentState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "projectId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "orgId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "orgId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "productionUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "productionUrl?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "VercelProjectReference",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelProjectReference = VercelProjectLink;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "projectReferenceFromEnvironment",
+      "params": [
+        {
+          "name": "environment",
+          "optional": false,
+          "type": "Readonly<Record<string, string | undefined>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelProjectReference | undefined",
+      "signature": "export function projectReferenceFromEnvironment(environment: Readonly<Record<string, string | undefined>>) -> VercelProjectReference | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        44,
+        55
+      ],
+      "name": "assertNoLegacyProjectLinkDirectory",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function assertNoLegacyProjectLinkDirectory(projectRoot: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        63
+      ],
+      "name": "readProjectLink",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectReference | undefined>",
+      "signature": "export function readProjectLink(projectPath: string) -> Promise<VercelProjectReference | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        70,
+        72
+      ],
+      "name": "VercelProjectOperationOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VercelProjectOperationOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "signal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "signal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        110,
+        131
+      ],
+      "name": "detectDeployment",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DeploymentInfo>",
+      "signature": "export function detectDeployment(projectPath: string, options: VercelProjectOperationOptions) -> Promise<DeploymentInfo>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        134,
+        138
+      ],
+      "name": "ProjectIdentity",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProjectIdentity { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        135,
+        135
+      ],
+      "name": "projectName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        137,
+        137
+      ],
+      "name": "teamName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "teamName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        178,
+        201
+      ],
+      "name": "detectProjectIdentity",
+      "params": [
+        {
+          "name": "projectPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProjectIdentity | undefined>",
+      "signature": "export function detectProjectIdentity(projectPath: string, options: VercelProjectOperationOptions) -> Promise<ProjectIdentity | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        203,
+        206
+      ],
+      "name": "ProjectResolution",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProjectResolution = | { kind: \"unresolved\" }\r\n  | { kind: \"linked\"; projectId: string }\r\n  | { kind: \"deployed\"; projectId: string; productionUrl: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        208,
+        220
+      ],
+      "name": "projectResolutionFromDeployment",
+      "params": [
+        {
+          "name": "deployment",
+          "optional": false,
+          "type": "DeploymentInfo"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function projectResolutionFromDeployment(deployment: DeploymentInfo) -> ProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        226,
+        231
+      ],
+      "name": "detectProjectResolution",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProjectResolution>",
+      "signature": "export function detectProjectResolution(projectRoot: string, options: VercelProjectOperationOptions) -> Promise<ProjectResolution>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        233,
+        240
+      ],
+      "name": "mergeProjectResolution",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "ProjectResolution"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function mergeProjectResolution(current: ProjectResolution, next: ProjectResolution) -> ProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        242,
+        253
+      ],
+      "name": "projectResolutionFromDeployResult",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        },
+        {
+          "name": "deploy",
+          "optional": false,
+          "type": "{ deployed: boolean; productionUrl?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ProjectResolution",
+      "signature": "export function projectResolutionFromDeployResult(project: ProjectResolution, deploy: { deployed: boolean; productionUrl?: string }) -> ProjectResolution"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        255,
+        257
+      ],
+      "name": "isProjectResolved",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isProjectResolved(project: ProjectResolution) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        259,
+        261
+      ],
+      "name": "projectProductionUrlFromResolution",
+      "params": [
+        {
+          "name": "project",
+          "optional": false,
+          "type": "ProjectResolution"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function projectProductionUrlFromResolution(project: ProjectResolution) -> string | undefined"
+    }
+  ],
+  "module": "packages/eve/src/setup/project-resolution.ts"
+}

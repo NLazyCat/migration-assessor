@@ -1,0 +1,23 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        4,
+        18
+      ],
+      "name": "createEveVercelOptions",
+      "params": [
+        {
+          "name": "enabled",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createEveVercelOptions(enabled: boolean) -> void"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/vercel-build-output-config.ts"
+}

@@ -1,0 +1,191 @@
+{
+  "module": "packages/eve/src/runtime/loaders/compile-metadata.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:compileArtifactDigestSchema",
+      "kind": "variable",
+      "line_range": [
+        12,
+        17
+      ],
+      "name": "compileArtifactDigestSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:compileMetadataSchema",
+      "kind": "variable",
+      "line_range": [
+        19,
+        49
+      ],
+      "name": "compileMetadataSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:BUNDLED_COMPILE_METADATA_SOURCE",
+      "kind": "variable",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "BUNDLED_COMPILE_METADATA_SOURCE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:LoadCompileMetadataInput:compiledArtifactsSource",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "compiledArtifactsSource",
+          "partial_analysis": false,
+          "return_type": ": RuntimeCompiledArtifactsSource",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:LoadCompileMetadataInput",
+      "kind": "interface",
+      "line_range": [
+        56,
+        58
+      ],
+      "name": "LoadCompileMetadataInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:LoadCompileMetadataError:metadataPath",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "metadataPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:LoadCompileMetadataError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            66,
+            73
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "metadataPath",
+              "optional": true,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:LoadCompileMetadataError",
+      "kind": "class",
+      "line_range": [
+        63,
+        74
+      ],
+      "name": "LoadCompileMetadataError",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:loadCompileMetadata",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        80,
+        108
+      ],
+      "name": "loadCompileMetadata",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "LoadCompileMetadataInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileMetadata | null>",
+      "signature": "export function loadCompileMetadata(input: LoadCompileMetadataInput) -> Promise<CompileMetadata | null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:parseCompileMetadata",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        121
+      ],
+      "name": "parseCompileMetadata",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "metadataPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompileMetadata",
+      "signature": "export function parseCompileMetadata(value: unknown, metadataPath: string) -> CompileMetadata",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/compile-metadata.ts:formatLoadErrorMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        123,
+        125
+      ],
+      "name": "formatLoadErrorMessage",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatLoadErrorMessage(error: unknown) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        48
+      ],
+      "name": "defaultGitHubAuth",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "GitHubInboundContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext",
+      "signature": "export function defaultGitHubAuth(ctx: GitHubInboundContext) -> SessionAuthContext"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        53
+      ],
+      "name": "GitHubDefaultDispatchOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubDefaultDispatchOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "botName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "botName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        56,
+        71
+      ],
+      "name": "defaultOnComment",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "GitHubInboundContext"
+        },
+        {
+          "name": "comment",
+          "optional": false,
+          "type": "GitHubComment"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "GitHubDefaultDispatchOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitHubInboundResult",
+      "signature": "export function defaultOnComment(ctx: GitHubInboundContext, comment: GitHubComment, options: GitHubDefaultDispatchOptions) -> GitHubInboundResult"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        74,
+        78
+      ],
+      "name": "GitHubDefaultEventOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubDefaultEventOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "api",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubApiOptions",
+      "signature": "api?: : GitHubApiOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubChannelCredentials",
+      "signature": "credentials?: : GitHubChannelCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "progress",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubProgressConfig",
+      "signature": "progress?: : GitHubProgressConfig"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        124
+      ],
+      "name": "createDefaultEvents",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "GitHubDefaultEventOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "GitHubChannelEvents",
+      "signature": "export function createDefaultEvents(options: GitHubDefaultEventOptions) -> GitHubChannelEvents"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/defaults.ts"
+}

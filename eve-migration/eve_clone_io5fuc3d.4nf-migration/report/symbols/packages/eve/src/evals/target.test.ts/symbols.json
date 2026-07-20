@@ -1,0 +1,48 @@
+{
+  "module": "packages/eve/src/evals/target.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.test.ts:fetchUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        115,
+        119
+      ],
+      "name": "fetchUrl",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "string | URL | Request"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function fetchUrl(request: string | URL | Request) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/target.test.ts:infoPayload",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        121,
+        153
+      ],
+      "name": "infoPayload",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly name: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function infoPayload(input: { readonly name: string }) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/vercel-status.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusSnapshot:identity",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "identity",
+          "partial_analysis": false,
+          "return_type": ": ProjectIdentity",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusSnapshot:pendingDeploy",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "pendingDeploy",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusSnapshot",
+      "kind": "interface",
+      "line_range": [
+        4,
+        9
+      ],
+      "name": "VercelStatusSnapshot",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusEffect",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        19
+      ],
+      "name": "VercelStatusEffect",
+      "partial_analysis": false,
+      "value": "| { kind: \"channels-added\" }\r\n  | { kind: \"deployed\" }\r\n  | { kind: \"refresh-identity\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusTrackerOptions:appRoot",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusTrackerOptions:onChange",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "onChange",
+          "partial_analysis": false,
+          "return_type": ": (snapshot: VercelStatusSnapshot) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusTrackerOptions:detectIdentity",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "detectIdentity",
+          "partial_analysis": false,
+          "return_type": ": typeof detectProjectIdentity",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusTrackerOptions",
+      "kind": "interface",
+      "line_range": [
+        21,
+        28
+      ],
+      "name": "VercelStatusTrackerOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:VercelStatusTracker",
+      "kind": "interface",
+      "line_range": [
+        39,
+        46
+      ],
+      "name": "VercelStatusTracker",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/vercel-status.ts:createVercelStatusTracker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        49,
+        129
+      ],
+      "name": "createVercelStatusTracker",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelStatusTrackerOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelStatusTracker",
+      "signature": "export function createVercelStatusTracker(options: VercelStatusTrackerOptions) -> VercelStatusTracker",
+      "visibility": "Public"
+    }
+  ]
+}

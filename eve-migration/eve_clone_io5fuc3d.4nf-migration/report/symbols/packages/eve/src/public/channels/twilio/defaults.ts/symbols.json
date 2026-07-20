@@ -1,0 +1,121 @@
+{
+  "module": "packages/eve/src/public/channels/twilio/defaults.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/defaults.ts:defaultTwilioAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        17,
+        35
+      ],
+      "name": "defaultTwilioAuth",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly from: string;\r\n  readonly to?: string;\r\n  readonly channel: \"text\" | \"voice\";\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionAuthContext",
+      "signature": "export function defaultTwilioAuth(input: {\r\n  readonly from: string;\r\n  readonly to?: string;\r\n  readonly channel: \"text\" | \"voice\";\r\n}) -> SessionAuthContext",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/defaults.ts:defaultOnText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        49
+      ],
+      "name": "defaultOnText",
+      "params": [
+        {
+          "name": "_ctx",
+          "optional": false,
+          "type": "TwilioContext"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "TwilioTextMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioInboundResult",
+      "signature": "export function defaultOnText(_ctx: TwilioContext, message: TwilioTextMessage) -> TwilioInboundResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/defaults.ts:defaultOnVoice",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        54
+      ],
+      "name": "defaultOnVoice",
+      "params": [
+        {
+          "name": "_ctx",
+          "optional": false,
+          "type": "TwilioContext"
+        },
+        {
+          "name": "_call",
+          "optional": false,
+          "type": "TwilioVoiceCall"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioVoiceResult",
+      "signature": "export function defaultOnVoice(_ctx: TwilioContext, _call: TwilioVoiceCall) -> TwilioVoiceResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/defaults.ts:defaultOnVoiceTranscription",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        68
+      ],
+      "name": "defaultOnVoiceTranscription",
+      "params": [
+        {
+          "name": "_ctx",
+          "optional": false,
+          "type": "TwilioContext"
+        },
+        {
+          "name": "transcription",
+          "optional": false,
+          "type": "TwilioVoiceTranscription"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioInboundResult",
+      "signature": "export function defaultOnVoiceTranscription(_ctx: TwilioContext, transcription: TwilioVoiceTranscription) -> TwilioInboundResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/defaults.ts:defaultEvents",
+      "kind": "variable",
+      "line_range": [
+        71,
+        102
+      ],
+      "name": "defaultEvents",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

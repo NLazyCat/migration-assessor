@@ -220,6 +220,7 @@ fn resolve_relative_import(
     match source_language {
         SourceLanguage::TypeScript => resolve_typescript_import(file, import, root),
         SourceLanguage::Rust => resolve_rust_import(file, import, root),
+        SourceLanguage::JavaScript => resolve_javascript_import(file, import, root),
     }
 }
 
@@ -235,6 +236,37 @@ fn resolve_typescript_import(file: &Path, import: &str, root: &Path) -> Option<S
         resolved.join("index.ts"),
         resolved.join("index.tsx"),
         resolved.join("index.js"),
+    ];
+
+    for candidate in &candidates {
+        if candidate.exists() {
+            let relative = candidate.strip_prefix(root).unwrap_or(candidate);
+            let module = relative.to_string_lossy().replace('\\', "/");
+            return Some(
+                normalize_path_components(Path::new(&module))
+                    .to_string_lossy()
+                    .replace('\\', "/"),
+            );
+        }
+    }
+
+    None
+}
+
+fn resolve_javascript_import(file: &Path, import: &str, root: &Path) -> Option<String> {
+    let parent = file.parent()?;
+    let resolved = parent.join(import);
+
+    let candidates = [
+        resolved.clone(),
+        resolved.with_extension("js"),
+        resolved.with_extension("jsx"),
+        resolved.with_extension("mjs"),
+        resolved.with_extension("cjs"),
+        resolved.join("index.js"),
+        resolved.join("index.jsx"),
+        resolved.join("index.mjs"),
+        resolved.join("index.cjs"),
     ];
 
     for candidate in &candidates {

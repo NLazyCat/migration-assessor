@@ -1,0 +1,36 @@
+{
+  "module": "packages/eve/src/runtime/agent/mock-model-adapter.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-model-adapter.test.ts:generateWithPrompt",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        13,
+        30
+      ],
+      "name": "generateWithPrompt",
+      "params": [
+        {
+          "name": "prompt",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "tools",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function generateWithPrompt(prompt: unknown, tools: readonly unknown[], options: Record<string, unknown>) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

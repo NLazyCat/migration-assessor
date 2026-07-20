@@ -1,0 +1,239 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        47,
+        338
+      ],
+      "name": "ClientSession",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "SessionContext"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionState"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ClientSession { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "SessionContext"
+        },
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionState"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ClientSession::constructor(context: SessionContext, state: SessionState) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        62,
+        64
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SessionState",
+      "signature": "ClientSession::state() -> SessionState"
+    },
+    {
+      "generics": [
+        "TOutput"
+      ],
+      "kind": "method",
+      "line_range": [
+        73,
+        90
+      ],
+      "name": "send",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnInput<TOutput>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MessageResponse<TOutput>>",
+      "signature": "ClientSession::send(input: SendTurnInput<TOutput>) -> Promise<MessageResponse<TOutput>>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        104,
+        144
+      ],
+      "name": "cancel",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "{ turnId?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CancelSessionResult>",
+      "signature": "ClientSession::cancel(options: { turnId?: string }) -> Promise<CancelSessionResult>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        158,
+        166
+      ],
+      "name": "stream",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "StreamOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncIterable<HandleMessageStreamEvent>",
+      "signature": "ClientSession::stream(options: StreamOptions) -> AsyncIterable<HandleMessageStreamEvent>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        172,
+        217
+      ],
+      "name": "#postTurn",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnPayload"
+        },
+        {
+          "name": "session",
+          "optional": false,
+          "type": "SessionState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ continuationToken?: string; sessionId: string }>",
+      "signature": "ClientSession::#postTurn(input: SendTurnPayload, session: SessionState) -> Promise<{ continuationToken?: string; sessionId: string }>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        223,
+        287
+      ],
+      "name": "#createEventStream",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "initialState",
+          "optional": false,
+          "type": "SessionState"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncGenerator<HandleMessageStreamEvent>",
+      "signature": "ClientSession::#createEventStream(sessionId: string, continuationToken: string | undefined, initialState: SessionState, input: SendTurnPayload) -> AsyncGenerator<HandleMessageStreamEvent>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        289,
+        303
+      ],
+      "name": "#openStreamBody",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "startIndex",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        },
+        {
+          "name": "headers",
+          "optional": true,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ReadableStream<Uint8Array>>",
+      "signature": "ClientSession::#openStreamBody(sessionId: string, startIndex: number, signal: AbortSignal, headers: Readonly<Record<string, string>>) -> Promise<ReadableStream<Uint8Array>>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        305,
+        337
+      ],
+      "name": "#streamAndAdvance",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "StreamOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncGenerator<HandleMessageStreamEvent>",
+      "signature": "ClientSession::#streamAndAdvance(sessionId: string, options: StreamOptions) -> AsyncGenerator<HandleMessageStreamEvent>"
+    }
+  ],
+  "module": "packages/eve/src/client/session.ts"
+}

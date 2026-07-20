@@ -1,0 +1,274 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "VercelConnectListResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VercelConnectListResponse { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "connectors",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "connectors?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "clients",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "clients?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "SlackConnectorRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorRef = z.infer<typeof SlackConnectorRefSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "SlackWorkspaceConnection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackWorkspaceConnection { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "workspaceUrl",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workspaceUrl: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "workspaceName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workspaceName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        57,
+        60
+      ],
+      "name": "SlackConnectorDetails",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackConnectorDetails { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "ref",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackConnectorRef",
+      "signature": "ref: : SlackConnectorRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "workspace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackWorkspaceConnection",
+      "signature": "workspace?: : SlackWorkspaceConnection"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        85
+      ],
+      "name": "parseSlackConnectorDetails",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorDetails | undefined",
+      "signature": "export function parseSlackConnectorDetails(body: unknown) -> SlackConnectorDetails | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        102
+      ],
+      "name": "parseCreatedSlackConnector",
+      "params": [
+        {
+          "name": "stdout",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorRef | undefined",
+      "signature": "export function parseCreatedSlackConnector(stdout: string) -> SlackConnectorRef | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        107,
+        141
+      ],
+      "name": "pickSlackConnector",
+      "params": [
+        {
+          "name": "listJson",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "projectId",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "expectedUid",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorRef | undefined",
+      "signature": "export function pickSlackConnector(listJson: unknown, projectId: string | undefined, expectedUid: string | undefined) -> SlackConnectorRef | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        150,
+        162
+      ],
+      "name": "slackMessageDeepLink",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function slackMessageDeepLink(url: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        165,
+        168
+      ],
+      "name": "RawSlackConnector",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RawSlackConnector { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "uid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "uid: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "projectIds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "projectIds: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        171,
+        191
+      ],
+      "name": "parseSlackConnectors",
+      "params": [
+        {
+          "name": "listJson",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RawSlackConnector[]",
+      "signature": "export function parseSlackConnectors(listJson: unknown) -> RawSlackConnector[]"
+    }
+  ],
+  "module": "packages/eve/src/setup/slack-connect.ts"
+}

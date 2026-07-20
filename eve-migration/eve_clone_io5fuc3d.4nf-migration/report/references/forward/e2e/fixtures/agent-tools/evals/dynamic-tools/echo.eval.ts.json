@@ -1,0 +1,33 @@
+{
+  "DYNAMIC_ECHO_TOKEN": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 56,
+        "file": "e2e/fixtures/agent-tools/evals/dynamic-tools/echo.eval.ts",
+        "line": 16
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/dynamic-tools/shared.ts:DYNAMIC_ECHO_TOKEN"
+    }
+  ],
+  "ECHO_TOOL": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 27,
+        "file": "e2e/fixtures/agent-tools/evals/dynamic-tools/echo.eval.ts",
+        "line": 11
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/dynamic-tools/shared.ts:ECHO_TOOL"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "e2e/fixtures/agent-tools/evals/dynamic-tools/echo.eval.ts",
+        "line": 15
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/dynamic-tools/shared.ts:ECHO_TOOL"
+    }
+  ]
+}

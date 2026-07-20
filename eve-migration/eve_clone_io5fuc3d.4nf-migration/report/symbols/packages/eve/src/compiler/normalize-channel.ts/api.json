@@ -1,0 +1,34 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        24,
+        63
+      ],
+      "name": "compileChannelDefinition",
+      "params": [
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ChannelSourceRef"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ModuleBackedDefinitionLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledChannelEntry | readonly CompiledChannelEntry[]>",
+      "signature": "export function compileChannelDefinition(agentRoot: string, source: ChannelSourceRef, options: ModuleBackedDefinitionLoadOptions) -> Promise<CompiledChannelEntry | readonly CompiledChannelEntry[]>"
+    }
+  ],
+  "module": "packages/eve/src/compiler/normalize-channel.ts"
+}

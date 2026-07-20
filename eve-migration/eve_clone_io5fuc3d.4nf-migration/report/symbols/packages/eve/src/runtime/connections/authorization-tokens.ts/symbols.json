@@ -1,0 +1,154 @@
+{
+  "module": "packages/eve/src/runtime/connections/authorization-tokens.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/authorization-tokens.ts:PrincipalTokenCache",
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "PrincipalTokenCache",
+      "partial_analysis": false,
+      "value": "Readonly<Record<string, TokenResult>>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/authorization-tokens.ts:ConnectionAuthorizationTokensKey",
+      "kind": "variable",
+      "line_range": [
+        34,
+        36
+      ],
+      "name": "ConnectionAuthorizationTokensKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/authorization-tokens.ts:readCachedToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        44,
+        55
+      ],
+      "name": "readCachedToken",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "principalKey",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenResult | undefined",
+      "signature": "export function readCachedToken(ctx: AlsContext, connectionName: string, principalKey: string) -> TokenResult | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/authorization-tokens.ts:writeCachedToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        77
+      ],
+      "name": "writeCachedToken",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "principalKey",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "token",
+          "optional": false,
+          "type": "TokenResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function writeCachedToken(ctx: AlsContext, connectionName: string, principalKey: string, token: TokenResult) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/authorization-tokens.ts:evictCachedToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        101
+      ],
+      "name": "evictCachedToken",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "principalKey",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function evictCachedToken(ctx: AlsContext, connectionName: string, principalKey: string) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/authorization-tokens.ts:asContainer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        109,
+        111
+      ],
+      "name": "asContainer",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function asContainer(ctx: AlsContext) -> ContextContainer",
+      "visibility": "Private"
+    }
+  ]
+}

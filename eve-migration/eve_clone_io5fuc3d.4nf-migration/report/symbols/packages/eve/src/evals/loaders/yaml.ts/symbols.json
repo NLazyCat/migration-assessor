@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/evals/loaders/yaml.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/loaders/yaml.ts:loadYaml",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        21,
+        30
+      ],
+      "name": "loadYaml",
+      "params": [
+        {
+          "name": "filePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Record<string, unknown>>",
+      "signature": "export function loadYaml(filePath: string) -> Promise<Record<string, unknown>>",
+      "visibility": "Public"
+    }
+  ]
+}

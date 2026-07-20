@@ -1,0 +1,57 @@
+{
+  "ResolvedToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 41,
+        "file": "packages/eve/src/runtime/framework-tools/write-file.ts",
+        "line": 45
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedToolDefinition"
+    }
+  ],
+  "ToolExecuteOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 58,
+        "file": "packages/eve/src/runtime/framework-tools/write-file.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/shared/tool-definition.ts:ToolExecuteOptions"
+    }
+  ],
+  "WriteFileInput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/runtime/framework-tools/write-file.ts",
+        "line": 41
+      },
+      "symbol": "packages/eve/src/execution/sandbox/write-file-tool.ts:WriteFileInput"
+    }
+  ],
+  "executeWriteFileOnSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/runtime/framework-tools/write-file.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/execution/sandbox/write-file-tool.ts:executeWriteFileOnSandbox"
+    }
+  ],
+  "requireSandboxSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/runtime/framework-tools/write-file.ts",
+        "line": 40
+      },
+      "symbol": "packages/eve/src/execution/sandbox/require-sandbox.ts:requireSandboxSession"
+    }
+  ]
+}

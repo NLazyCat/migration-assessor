@@ -1,0 +1,137 @@
+{
+  "module": "packages/eve/src/runtime/agent/mock-structured-output.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-structured-output.ts:createJsonSchemaSample",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        5,
+        48
+      ],
+      "name": "createJsonSchemaSample",
+      "params": [
+        {
+          "name": "schema",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function createJsonSchemaSample(schema: unknown) -> unknown",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-structured-output.ts:createJsonSchemaObjectSample",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        63
+      ],
+      "name": "createJsonSchemaObjectSample",
+      "params": [
+        {
+          "name": "schema",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createJsonSchemaObjectSample(schema: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-structured-output.ts:createJsonSchemaStringSample",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        65,
+        78
+      ],
+      "name": "createJsonSchemaStringSample",
+      "params": [
+        {
+          "name": "schema",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createJsonSchemaStringSample(schema: Record<string, unknown>) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-structured-output.ts:getJsonSchemaType",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        92
+      ],
+      "name": "getJsonSchemaType",
+      "params": [
+        {
+          "name": "schema",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getJsonSchemaType(schema: Record<string, unknown>) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-structured-output.ts:getFirstSchema",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        100
+      ],
+      "name": "getFirstSchema",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown | undefined",
+      "signature": "export function getFirstSchema(value: unknown) -> unknown | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/agent/mock-structured-output.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        102,
+        104
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

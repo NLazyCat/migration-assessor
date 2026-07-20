@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        39
+      ],
+      "name": "vercel",
+      "params": [
+        {
+          "name": "opts",
+          "optional": true,
+          "type": "VercelSandboxCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend<VercelSandboxBootstrapUseOptions, VercelSandboxSessionUseOptions>",
+      "signature": "export function vercel(opts: VercelSandboxCreateOptions) -> SandboxBackend<VercelSandboxBootstrapUseOptions, VercelSandboxSessionUseOptions>"
+    }
+  ],
+  "module": "packages/eve/src/public/sandbox/backends/vercel.ts"
+}

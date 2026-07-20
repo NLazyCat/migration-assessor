@@ -1,0 +1,56 @@
+{
+  "module": "packages/eve/src/execution/session-callback-step.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.test.ts:USAGE",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "USAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.test.ts:parsePostedBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        301,
+        307
+      ],
+      "name": "parsePostedBody",
+      "params": [
+        {
+          "name": "fetchMock",
+          "optional": false,
+          "type": "ReturnType<typeof vi.fn>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ usage?: unknown }",
+      "signature": "export function parsePostedBody(fetchMock: ReturnType<typeof vi.fn>) -> { usage?: unknown }",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-callback-step.test.ts:createSerializedContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        309,
+        319
+      ],
+      "name": "createSerializedContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createSerializedContext() -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

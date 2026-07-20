@@ -153,7 +153,7 @@ fn default_true() -> bool {
     true
 }
 
-const VALID_LANGUAGES: &[&str] = &["typescript", "rust"];
+const VALID_LANGUAGES: &[&str] = &["typescript", "rust", "javascript"];
 
 impl Config {
     pub fn load(path: &PathBuf) -> anyhow::Result<Self> {

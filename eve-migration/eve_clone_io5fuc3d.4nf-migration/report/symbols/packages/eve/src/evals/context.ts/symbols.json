@@ -1,0 +1,140 @@
+{
+  "module": "packages/eve/src/evals/context.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/context.ts:createEvalContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        99
+      ],
+      "name": "createEvalContext",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "{\r\n  readonly manager: EvalSessionManager;\r\n  readonly collector: AssertionCollector;\r\n  readonly target: EveEvalTargetHandle;\r\n  readonly signal: AbortSignal;\r\n  readonly judge: EveEvalJudgeConfig | undefined;\r\n  readonly log: (message: string) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{ readonly context: EveEvalContext; readonly collector: AssertionCollector }",
+      "signature": "export function createEvalContext(deps: {\r\n  readonly manager: EvalSessionManager;\r\n  readonly collector: AssertionCollector;\r\n  readonly target: EveEvalTargetHandle;\r\n  readonly signal: AbortSignal;\r\n  readonly judge: EveEvalJudgeConfig | undefined;\r\n  readonly log: (message: string) => void;\r\n}) -> { readonly context: EveEvalContext; readonly collector: AssertionCollector }",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/context.ts:requireCheck",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        101,
+        116
+      ],
+      "name": "requireCheck",
+      "params": [
+        {
+          "name": "collector",
+          "optional": false,
+          "type": "AssertionCollector"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "T"
+        },
+        {
+          "name": "assertion",
+          "optional": false,
+          "type": "Assertion"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function requireCheck(collector: AssertionCollector, value: T, assertion: Assertion) -> Promise<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/context.ts:recordCheck",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        118,
+        129
+      ],
+      "name": "recordCheck",
+      "params": [
+        {
+          "name": "collector",
+          "optional": false,
+          "type": "AssertionCollector"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "assertion",
+          "optional": false,
+          "type": "Assertion"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AssertionHandle",
+      "signature": "export function recordCheck(collector: AssertionCollector, value: unknown, assertion: Assertion) -> AssertionHandle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/context.ts:promptText",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        131,
+        135
+      ],
+      "name": "promptText",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function promptText(input: SendTurnInput) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/context.ts:sleep",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        157
+      ],
+      "name": "sleep",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function sleep(ms: unknown, signal: AbortSignal) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

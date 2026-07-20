@@ -1,0 +1,140 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace:artifactsDir",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "artifactsDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace:compilerArtifactsDir",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "compilerArtifactsDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace:nitroBuildDir",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "nitroBuildDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace:nitroOutputDir",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "nitroOutputDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace:rootDir",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "rootDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace:workflowBuildDir",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "workflowBuildDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:DevelopmentHostWorkspace",
+      "kind": "interface",
+      "line_range": [
+        5,
+        12
+      ],
+      "name": "DevelopmentHostWorkspace",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:createDevelopmentHostWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        14,
+        29
+      ],
+      "name": "createDevelopmentHostWorkspace",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentHostWorkspace>",
+      "signature": "export function createDevelopmentHostWorkspace(appRoot: string) -> Promise<DevelopmentHostWorkspace>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-host-workspace.ts:removeDevelopmentHostWorkspace",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        31,
+        35
+      ],
+      "name": "removeDevelopmentHostWorkspace",
+      "params": [
+        {
+          "name": "workspace",
+          "optional": false,
+          "type": "DevelopmentHostWorkspace"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function removeDevelopmentHostWorkspace(workspace: DevelopmentHostWorkspace) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

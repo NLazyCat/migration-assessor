@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/internal/resolve-model-endpoint-status.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/resolve-model-endpoint-status.ts:GatewayCredentialPresence:apiKey",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "apiKey",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/resolve-model-endpoint-status.ts:GatewayCredentialPresence:oidc",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "oidc",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/resolve-model-endpoint-status.ts:GatewayCredentialPresence",
+      "kind": "interface",
+      "line_range": [
+        9,
+        14
+      ],
+      "name": "GatewayCredentialPresence",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/resolve-model-endpoint-status.ts:resolveModelEndpointStatus",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        39
+      ],
+      "name": "resolveModelEndpointStatus",
+      "params": [
+        {
+          "name": "routing",
+          "optional": false,
+          "type": "ModelRouting"
+        },
+        {
+          "name": "credentials",
+          "optional": false,
+          "type": "GatewayCredentialPresence"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelEndpointStatus",
+      "signature": "export function resolveModelEndpointStatus(routing: ModelRouting, credentials: GatewayCredentialPresence) -> ModelEndpointStatus",
+      "visibility": "Public"
+    }
+  ]
+}

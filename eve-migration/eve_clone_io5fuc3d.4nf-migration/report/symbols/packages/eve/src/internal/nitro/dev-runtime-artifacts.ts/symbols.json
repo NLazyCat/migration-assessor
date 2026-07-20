@@ -1,0 +1,837 @@
+{
+  "module": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DEV_RUNTIME_ARTIFACTS_DIRECTORY",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DEV_RUNTIME_ARTIFACTS_DIRECTORY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DEV_RUNTIME_ARTIFACTS_GENERATION_METADATA",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "DEV_RUNTIME_ARTIFACTS_GENERATION_METADATA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DEV_RUNTIME_ARTIFACTS_POINTER_VERSION",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "DEV_RUNTIME_ARTIFACTS_POINTER_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV1:appRoot",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV1:kind",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"eve-dev-runtime-artifacts-pointer\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV1:version",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": 1",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV1",
+      "kind": "interface",
+      "line_range": [
+        23,
+        27
+      ],
+      "name": "DevelopmentRuntimeArtifactsPointerV1",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV2:appRoot",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV2:kind",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"eve-dev-runtime-artifacts-pointer\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV2:runtimeAppRoot",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "runtimeAppRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV2:snapshotRoot",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "snapshotRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV2:version",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "version",
+          "partial_analysis": false,
+          "return_type": ": typeof DEV_RUNTIME_ARTIFACTS_POINTER_VERSION",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsPointerV2",
+      "kind": "interface",
+      "line_range": [
+        29,
+        35
+      ],
+      "name": "DevelopmentRuntimeArtifactsPointerV2",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsRevision:revision",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "revision",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsRevision",
+      "kind": "interface",
+      "line_range": [
+        37,
+        39
+      ],
+      "name": "DevelopmentRuntimeArtifactsRevision",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsSnapshot:runtimeAppRoot",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "runtimeAppRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsSnapshot:snapshotRoot",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "snapshotRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsSnapshot:snapshotSourceRoot",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "snapshotSourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsSnapshot:sourceRoot",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "sourceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsSnapshot",
+      "kind": "interface",
+      "line_range": [
+        41,
+        46
+      ],
+      "name": "DevelopmentRuntimeArtifactsSnapshot",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:ActiveDevelopmentRuntimeArtifactsSnapshot:runtimeAppRoot",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "runtimeAppRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:ActiveDevelopmentRuntimeArtifactsSnapshot:snapshotRoot",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "snapshotRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:ActiveDevelopmentRuntimeArtifactsSnapshot",
+      "kind": "interface",
+      "line_range": [
+        48,
+        51
+      ],
+      "name": "ActiveDevelopmentRuntimeArtifactsSnapshot",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:DevelopmentRuntimeArtifactsActivation",
+      "kind": "interface",
+      "line_range": [
+        53,
+        56
+      ],
+      "name": "DevelopmentRuntimeArtifactsActivation",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:resolveDevelopmentRuntimeArtifactsPointerPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        64
+      ],
+      "name": "resolveDevelopmentRuntimeArtifactsPointerPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveDevelopmentRuntimeArtifactsPointerPath(appRoot: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:resolveDevelopmentRuntimeArtifactsSnapshotsDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        66,
+        68
+      ],
+      "name": "resolveDevelopmentRuntimeArtifactsSnapshotsDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveDevelopmentRuntimeArtifactsSnapshotsDirectory(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:isDevelopmentRuntimeArtifactsSnapshotRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        70,
+        75
+      ],
+      "name": "isDevelopmentRuntimeArtifactsSnapshotRoot",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "snapshotRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isDevelopmentRuntimeArtifactsSnapshotRoot(appRoot: string, snapshotRoot: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:stageDevelopmentRuntimeArtifactsSnapshot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        80,
+        137
+      ],
+      "name": "stageDevelopmentRuntimeArtifactsSnapshot",
+      "params": [
+        {
+          "name": "compileResult",
+          "optional": false,
+          "type": "CompileAgentResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentRuntimeArtifactsSnapshot>",
+      "signature": "export function stageDevelopmentRuntimeArtifactsSnapshot(compileResult: CompileAgentResult) -> Promise<DevelopmentRuntimeArtifactsSnapshot>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:activateDevelopmentRuntimeArtifactsSnapshot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        142,
+        148
+      ],
+      "name": "activateDevelopmentRuntimeArtifactsSnapshot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly snapshot: DevelopmentRuntimeArtifactsSnapshot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function activateDevelopmentRuntimeArtifactsSnapshot(input: {\r\n  readonly appRoot: string;\r\n  readonly snapshot: DevelopmentRuntimeArtifactsSnapshot;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:activateDevelopmentRuntimeArtifactsSnapshotTransaction",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        150,
+        207
+      ],
+      "name": "activateDevelopmentRuntimeArtifactsSnapshotTransaction",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly snapshot: DevelopmentRuntimeArtifactsSnapshot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentRuntimeArtifactsActivation>",
+      "signature": "export function activateDevelopmentRuntimeArtifactsSnapshotTransaction(input: {\r\n  readonly appRoot: string;\r\n  readonly snapshot: DevelopmentRuntimeArtifactsSnapshot;\r\n}) -> Promise<DevelopmentRuntimeArtifactsActivation>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:readDevelopmentRuntimeArtifactsSnapshotRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        212,
+        226
+      ],
+      "name": "readDevelopmentRuntimeArtifactsSnapshotRoot",
+      "params": [
+        {
+          "name": "pointerPath",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readDevelopmentRuntimeArtifactsSnapshotRoot(pointerPath: string | undefined) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:readActiveDevelopmentRuntimeArtifactsSnapshot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        228,
+        241
+      ],
+      "name": "readActiveDevelopmentRuntimeArtifactsSnapshot",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ActiveDevelopmentRuntimeArtifactsSnapshot | undefined",
+      "signature": "export function readActiveDevelopmentRuntimeArtifactsSnapshot(appRoot: string) -> ActiveDevelopmentRuntimeArtifactsSnapshot | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:readDevelopmentRuntimeArtifactsRevision",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        246,
+        255
+      ],
+      "name": "readDevelopmentRuntimeArtifactsRevision",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRuntimeArtifactsRevision",
+      "signature": "export function readDevelopmentRuntimeArtifactsRevision(appRoot: string) -> DevelopmentRuntimeArtifactsRevision",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:pruneDevelopmentRuntimeArtifactsSnapshots",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        262,
+        280
+      ],
+      "name": "pruneDevelopmentRuntimeArtifactsSnapshots",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly gracePeriodMs?: number;\r\n  readonly now?: number;\r\n  readonly retainCount?: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function pruneDevelopmentRuntimeArtifactsSnapshots(input: {\r\n  readonly appRoot: string;\r\n  readonly gracePeriodMs?: number;\r\n  readonly now?: number;\r\n  readonly retainCount?: number;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:readDevelopmentRuntimeArtifactsPointer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        282,
+        334
+      ],
+      "name": "readDevelopmentRuntimeArtifactsPointer",
+      "params": [
+        {
+          "name": "pointerPath",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentRuntimeArtifactsPointerV1 | DevelopmentRuntimeArtifactsPointerV2 | undefined",
+      "signature": "export function readDevelopmentRuntimeArtifactsPointer(pointerPath: string | undefined) -> DevelopmentRuntimeArtifactsPointerV1 | DevelopmentRuntimeArtifactsPointerV2 | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:rewriteSnapshotCompiledManifest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        336,
+        353
+      ],
+      "name": "rewriteSnapshotCompiledManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly manifestPath: string;\r\n  readonly runtimeAppRoot: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function rewriteSnapshotCompiledManifest(input: {\r\n  readonly appRoot: string;\r\n  readonly manifestPath: string;\r\n  readonly runtimeAppRoot: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:rewriteManifestRoots",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        355,
+        400
+      ],
+      "name": "rewriteManifestRoots",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly runtimeAppRoot: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n  readonly value: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function rewriteManifestRoots(input: {\r\n  readonly appRoot: string;\r\n  readonly runtimeAppRoot: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n  readonly value: unknown;\r\n}) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:rewritePathWithinSourceRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        402,
+        416
+      ],
+      "name": "rewritePathWithinSourceRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly path: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function rewritePathWithinSourceRoot(input: {\r\n  readonly path: string;\r\n  readonly snapshotSourceRoot: string;\r\n  readonly sourceRoot: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:rewritePathWithinAppRoot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        418,
+        433
+      ],
+      "name": "rewritePathWithinAppRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly path: string;\r\n  readonly runtimeAppRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function rewritePathWithinAppRoot(input: {\r\n  readonly appRoot: string;\r\n  readonly path: string;\r\n  readonly runtimeAppRoot: string;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:writeDevelopmentRuntimeArtifactsPointer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        435,
+        452
+      ],
+      "name": "writeDevelopmentRuntimeArtifactsPointer",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly snapshot: DevelopmentRuntimeArtifactsSnapshot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeDevelopmentRuntimeArtifactsPointer(input: {\r\n  readonly appRoot: string;\r\n  readonly snapshot: DevelopmentRuntimeArtifactsSnapshot;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:writeDevelopmentRuntimeArtifactsPointerSource",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        454,
+        467
+      ],
+      "name": "writeDevelopmentRuntimeArtifactsPointerSource",
+      "params": [
+        {
+          "name": "pointerPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeDevelopmentRuntimeArtifactsPointerSource(pointerPath: string, source: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:readOptionalFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        469,
+        478
+      ],
+      "name": "readOptionalFile",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function readOptionalFile(path: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:rollbackFailedActivation",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        480,
+        495
+      ],
+      "name": "rollbackFailedActivation",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly cause: unknown;\r\n  readonly markerPath: string;\r\n  readonly pointerPath: string;\r\n  readonly previousPointerSource: string | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function rollbackFailedActivation(input: {\r\n  readonly cause: unknown;\r\n  readonly markerPath: string;\r\n  readonly pointerPath: string;\r\n  readonly previousPointerSource: string | undefined;\r\n}) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:restoreDevelopmentRuntimeArtifactsActivation",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        497,
+        518
+      ],
+      "name": "restoreDevelopmentRuntimeArtifactsActivation",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly markerPath: string;\r\n  readonly pointerPath: string;\r\n  readonly previousPointerSource: string | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AggregateError | undefined>",
+      "signature": "export function restoreDevelopmentRuntimeArtifactsActivation(input: {\r\n  readonly markerPath: string;\r\n  readonly pointerPath: string;\r\n  readonly previousPointerSource: string | undefined;\r\n}) -> Promise<AggregateError | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:validateSnapshotCompiledManifestRoots",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        520,
+        536
+      ],
+      "name": "validateSnapshotCompiledManifestRoots",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly manifestPath: string;\r\n  readonly runtimeAppRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function validateSnapshotCompiledManifestRoots(input: {\r\n  readonly manifestPath: string;\r\n  readonly runtimeAppRoot: string;\r\n}) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:collectManifestRootPaths",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        538,
+        559
+      ],
+      "name": "collectManifestRootPaths",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function collectManifestRootPaths(value: unknown) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/dev-runtime-artifacts.ts:isPathInsideOrEqual",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        561,
+        568
+      ],
+      "name": "isPathInsideOrEqual",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "directory",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isPathInsideOrEqual(path: string, directory: string) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

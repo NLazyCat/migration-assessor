@@ -1,0 +1,441 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "SlackBotToken",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackBotToken = SlackPrimitiveBotToken;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        54,
+        56
+      ],
+      "name": "slackContinuationToken",
+      "params": [
+        {
+          "name": "channelId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "threadTs",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function slackContinuationToken(channelId: string, threadTs: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        66
+      ],
+      "name": "resolveSlackBotToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": true,
+          "type": "SlackBotToken"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveSlackBotToken(token: SlackBotToken) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "SlackApiResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackApiResponse = SlackPrimitiveApiResponse;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        91
+      ],
+      "name": "callSlackApi",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly botToken: SlackBotToken | undefined;\r\n  readonly operation: string;\r\n  readonly body: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackApiResponse>",
+      "signature": "export function callSlackApi(input: {\r\n  readonly botToken: SlackBotToken | undefined;\r\n  readonly operation: string;\r\n  readonly body: unknown;\r\n}) -> Promise<SlackApiResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        109,
+        114
+      ],
+      "name": "SlackPostedMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackPostedMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        111,
+        111
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        113,
+        113
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackApiResponse",
+      "signature": "raw: : SlackApiResponse"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        153,
+        159
+      ],
+      "name": "SlackPostInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackPostInput = SlackPostWithFiles &\r\n  (\r\n    | { readonly markdown: string }\r\n    | { readonly text: string }\r\n    | { readonly blocks: readonly unknown[]; readonly text?: string }\r\n    | { readonly card: CardElement; readonly fallbackText?: string }\r\n  );"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        165,
+        175
+      ],
+      "name": "SlackUploadFilesOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackUploadFilesOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        167,
+        167
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        169,
+        169
+      ],
+      "name": "threadTs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "threadTs?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        174,
+        174
+      ],
+      "name": "initialComment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "initialComment?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        180,
+        185
+      ],
+      "name": "SlackUploadFilesResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackUploadFilesResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        182,
+        182
+      ],
+      "name": "fileIds",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "fileIds: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackApiResponse",
+      "signature": "raw: : SlackApiResponse"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        191,
+        200
+      ],
+      "name": "SlackThreadMessage",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackThreadMessage { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        192,
+        192
+      ],
+      "name": "text",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "text: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        193,
+        193
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        194,
+        194
+      ],
+      "name": "user",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "user: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "botId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "botId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        196,
+        196
+      ],
+      "name": "ts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ts: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        197,
+        197
+      ],
+      "name": "threadTs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "threadTs: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        198,
+        198
+      ],
+      "name": "isMe",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "isMe: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        199,
+        199
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "raw: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        208,
+        270
+      ],
+      "name": "SlackThread",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackThread { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        210,
+        210
+      ],
+      "name": "recentMessages",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SlackThreadMessage[]",
+      "signature": "recentMessages: : readonly SlackThreadMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        279,
+        308
+      ],
+      "name": "SlackHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        281,
+        281
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        283,
+        283
+      ],
+      "name": "threadTs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "threadTs: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        285,
+        285
+      ],
+      "name": "teamId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | undefined",
+      "signature": "teamId: : string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        329,
+        473
+      ],
+      "name": "buildSlackBinding",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly botToken: SlackBotToken | undefined;\r\n  readonly channelId: string;\r\n  readonly threadTs: string;\r\n  readonly teamId: string | undefined;\r\n  readonly onThreadTsChanged?: (ts: string) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackBinding",
+      "signature": "export function buildSlackBinding(input: {\r\n  readonly botToken: SlackBotToken | undefined;\r\n  readonly channelId: string;\r\n  readonly threadTs: string;\r\n  readonly teamId: string | undefined;\r\n  readonly onThreadTsChanged?: (ts: string) => void;\r\n}) -> SlackBinding"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/slack/api.ts"
+}

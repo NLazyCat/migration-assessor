@@ -1,0 +1,114 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "RunOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RunOptions = LocalTestTargetRequest;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "RunCallback",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RunCallback = (target: TestTarget) => Promise<void>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "RunCleanup",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RunCleanup = () => Promise<void> | void;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        25
+      ],
+      "name": "RunEnvironmentContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RunEnvironmentContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "environment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LocalTestEnvironment",
+      "signature": "environment: : LocalTestEnvironment"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        40,
+        44
+      ],
+      "name": "run",
+      "params": [
+        {
+          "name": "opts",
+          "optional": false,
+          "type": "RunOptions"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "RunCallback"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function run(opts: RunOptions, fn: RunCallback) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        127
+      ],
+      "name": "runEnvironment",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "(context: RunEnvironmentContext) => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function runEnvironment(name: string, fn: (context: RunEnvironmentContext) => Promise<void>) -> void"
+    }
+  ],
+  "module": "packages/eve/test/tui-client/lib/run.ts"
+}

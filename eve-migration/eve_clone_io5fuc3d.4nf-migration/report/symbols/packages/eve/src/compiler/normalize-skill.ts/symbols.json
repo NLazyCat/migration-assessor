@@ -1,0 +1,72 @@
+{
+  "module": "packages/eve/src/compiler/normalize-skill.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-skill.ts:CompiledSkillEntry",
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "CompiledSkillEntry",
+      "partial_analysis": false,
+      "value": "| { readonly kind: \"skill\"; readonly definition: CompiledSkillDefinition }\r\n  | { readonly kind: \"dynamic-skill\"; readonly definition: CompiledDynamicSkillDefinition };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-skill.ts:compileSkillSource",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        35,
+        121
+      ],
+      "name": "compileSkillSource",
+      "params": [
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "optional": false,
+          "type": "SkillSourceRef"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ModuleBackedDefinitionLoadOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledSkillEntry>",
+      "signature": "export function compileSkillSource(agentRoot: string, source: SkillSourceRef, options: ModuleBackedDefinitionLoadOptions) -> Promise<CompiledSkillEntry>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/normalize-skill.ts:compileSkillPackageSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        123,
+        147
+      ],
+      "name": "compileSkillPackageSource",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "NamedSkillDefinition & SkillPackageSourceRef"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledSkillDefinition",
+      "signature": "export function compileSkillPackageSource(source: NamedSkillDefinition & SkillPackageSourceRef) -> CompiledSkillDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

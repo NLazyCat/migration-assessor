@@ -1,0 +1,68 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        20,
+        153
+      ],
+      "name": "createResources",
+      "params": [
+        {
+          "name": "device",
+          "optional": false,
+          "type": "Device"
+        },
+        {
+          "name": "format",
+          "optional": false,
+          "type": "GPUTextureFormat"
+        },
+        {
+          "name": "mesh",
+          "optional": false,
+          "type": "MeshData"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    thicknessScale?: number;\r\n    theme?: \"light\" | \"dark\";\r\n    paddingRadius?: number;\r\n    bloom?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createResources(device: Device, format: GPUTextureFormat, mesh: MeshData, options: {\r\n    thicknessScale?: number;\r\n    theme?: \"light\" | \"dark\";\r\n    paddingRadius?: number;\r\n    bloom?: boolean;\r\n  }) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        155,
+        155
+      ],
+      "name": "RendererResources",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type RendererResources = ReturnType<typeof createResources>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        173,
+        190
+      ],
+      "name": "disposeResources",
+      "params": [
+        {
+          "name": "resources",
+          "optional": false,
+          "type": "RendererResources"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function disposeResources(resources: RendererResources) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/render/resources.ts"
+}

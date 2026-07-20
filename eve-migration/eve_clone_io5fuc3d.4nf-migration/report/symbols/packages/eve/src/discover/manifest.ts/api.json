@@ -1,0 +1,1452 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "AGENT_SOURCE_MANIFEST_KIND",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const AGENT_SOURCE_MANIFEST_KIND: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "AGENT_SOURCE_MANIFEST_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const AGENT_SOURCE_MANIFEST_VERSION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "ChannelSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelSourceRef = ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        36,
+        43
+      ],
+      "name": "ConnectionSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ConnectionSourceRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "connectionName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectionName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "HookSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HookSourceRef = ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "InstructionsSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstructionsSourceRef = MarkdownSourceRef<InstructionsDefinition> | ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        59,
+        62
+      ],
+      "name": "SkillSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SkillSourceRef = | MarkdownSourceRef<SkillDefinition>\r\n  | ModuleSourceRef\r\n  | (NamedSkillDefinition & SkillPackageSourceRef);"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "ToolSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolSourceRef = ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "LocalSubagentSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LocalSubagentSourceRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "entryPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "entryPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentSourceManifest",
+      "signature": "manifest: : AgentSourceManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "rootPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "subagentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "subagentId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "ScheduleSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ScheduleSourceRef = MarkdownSourceRef<ScheduleDefinition> | ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "SandboxSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SandboxSourceRef = ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        106,
+        126
+      ],
+      "name": "SandboxWorkspaceFolderSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SandboxWorkspaceFolderSourceRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        111,
+        111
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        117,
+        117
+      ],
+      "name": "rootEntries",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "rootEntries: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        121,
+        121
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        125,
+        125
+      ],
+      "name": "sourcePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourcePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        131,
+        131
+      ],
+      "name": "LibSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LibSourceRef = ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        138,
+        138
+      ],
+      "name": "ExtensionSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ExtensionSourceRef = ModuleSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        145,
+        165
+      ],
+      "name": "ResolvedExtensionMount",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedExtensionMount { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        147,
+        147
+      ],
+      "name": "namespace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "namespace: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "specifier",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "specifier: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        151,
+        151
+      ],
+      "name": "packageName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        153,
+        153
+      ],
+      "name": "packageRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        155,
+        155
+      ],
+      "name": "sourceRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        157,
+        157
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentSourceManifest",
+      "signature": "manifest: : AgentSourceManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        164,
+        164
+      ],
+      "name": "overrides",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentSourceManifest",
+      "signature": "overrides?: : AgentSourceManifest"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        170,
+        170
+      ],
+      "name": "SubagentSourceRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SubagentSourceRef = LocalSubagentSourceRef;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        175,
+        177
+      ],
+      "name": "CreateConnectionSourceRefInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateConnectionSourceRefInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        176,
+        176
+      ],
+      "name": "connectionName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectionName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        182,
+        233
+      ],
+      "name": "AgentSourceManifest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AgentSourceManifest { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        183,
+        183
+      ],
+      "name": "agentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        184,
+        184
+      ],
+      "name": "agentRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        185,
+        185
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        186,
+        186
+      ],
+      "name": "channels",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelSourceRef[]",
+      "signature": "channels: : ChannelSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        187,
+        187
+      ],
+      "name": "connections",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ConnectionSourceRef[]",
+      "signature": "connections: : ConnectionSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        188,
+        188
+      ],
+      "name": "configModule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ModuleSourceRef",
+      "signature": "configModule?: : ModuleSourceRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        189,
+        189
+      ],
+      "name": "diagnosticsSummary",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscoverDiagnosticsSummary",
+      "signature": "diagnosticsSummary: : DiscoverDiagnosticsSummary"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "extensions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ExtensionSourceRef[]",
+      "signature": "extensions: : ExtensionSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        201,
+        201
+      ],
+      "name": "resolvedExtensions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolvedExtensionMount[]",
+      "signature": "resolvedExtensions: : ResolvedExtensionMount[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        202,
+        202
+      ],
+      "name": "hooks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ModuleSourceRef[]",
+      "signature": "hooks: : ModuleSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        203,
+        203
+      ],
+      "name": "lib",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LibSourceRef[]",
+      "signature": "lib: : LibSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        204,
+        204
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof AGENT_SOURCE_MANIFEST_KIND",
+      "signature": "kind: : typeof AGENT_SOURCE_MANIFEST_KIND"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        215,
+        215
+      ],
+      "name": "instructions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": InstructionsSourceRef[]",
+      "signature": "instructions: : InstructionsSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        221,
+        221
+      ],
+      "name": "sandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSourceRef | null",
+      "signature": "sandbox: : SandboxSourceRef | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        227,
+        227
+      ],
+      "name": "sandboxWorkspaces",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxWorkspaceFolderSourceRef[]",
+      "signature": "sandboxWorkspaces: : SandboxWorkspaceFolderSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        228,
+        228
+      ],
+      "name": "schedules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ScheduleSourceRef[]",
+      "signature": "schedules: : ScheduleSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        229,
+        229
+      ],
+      "name": "skills",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SkillSourceRef[]",
+      "signature": "skills: : SkillSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        230,
+        230
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ModuleSourceRef[]",
+      "signature": "tools: : ModuleSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        231,
+        231
+      ],
+      "name": "version",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof AGENT_SOURCE_MANIFEST_VERSION",
+      "signature": "version: : typeof AGENT_SOURCE_MANIFEST_VERSION"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        232,
+        232
+      ],
+      "name": "subagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SubagentSourceRef[]",
+      "signature": "subagents: : SubagentSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        238,
+        264
+      ],
+      "name": "CreateAgentSourceManifestInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateAgentSourceManifestInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        239,
+        239
+      ],
+      "name": "agentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        240,
+        240
+      ],
+      "name": "agentRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        241,
+        241
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        242,
+        242
+      ],
+      "name": "channels",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ChannelSourceRef[]",
+      "signature": "channels?: : readonly ChannelSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        243,
+        243
+      ],
+      "name": "connections",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ConnectionSourceRef[]",
+      "signature": "connections?: : readonly ConnectionSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        244,
+        244
+      ],
+      "name": "configModule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ModuleSourceRef",
+      "signature": "configModule?: : ModuleSourceRef"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        245,
+        245
+      ],
+      "name": "diagnostics",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly DiscoverDiagnostic[]",
+      "signature": "diagnostics?: : readonly DiscoverDiagnostic[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        246,
+        246
+      ],
+      "name": "extensions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ExtensionSourceRef[]",
+      "signature": "extensions?: : readonly ExtensionSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        247,
+        247
+      ],
+      "name": "resolvedExtensions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ResolvedExtensionMount[]",
+      "signature": "resolvedExtensions?: : readonly ResolvedExtensionMount[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        248,
+        248
+      ],
+      "name": "hooks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ModuleSourceRef[]",
+      "signature": "hooks?: : readonly ModuleSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        249,
+        249
+      ],
+      "name": "lib",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly LibSourceRef[]",
+      "signature": "lib?: : readonly LibSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        256,
+        256
+      ],
+      "name": "packageName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "packageName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        257,
+        257
+      ],
+      "name": "instructions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly InstructionsSourceRef[]",
+      "signature": "instructions?: : readonly InstructionsSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        258,
+        258
+      ],
+      "name": "sandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxSourceRef | null",
+      "signature": "sandbox?: : SandboxSourceRef | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        259,
+        259
+      ],
+      "name": "sandboxWorkspaces",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SandboxWorkspaceFolderSourceRef[]",
+      "signature": "sandboxWorkspaces?: : readonly SandboxWorkspaceFolderSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        260,
+        260
+      ],
+      "name": "schedules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ScheduleSourceRef[]",
+      "signature": "schedules?: : readonly ScheduleSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        261,
+        261
+      ],
+      "name": "skills",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SkillSourceRef[]",
+      "signature": "skills?: : readonly SkillSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        262,
+        262
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ModuleSourceRef[]",
+      "signature": "tools?: : readonly ModuleSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        263,
+        263
+      ],
+      "name": "subagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SubagentSourceRef[]",
+      "signature": "subagents?: : readonly SubagentSourceRef[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        269,
+        283
+      ],
+      "name": "CreateSkillPackageSourceRefInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateSkillPackageSourceRefInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        270,
+        270
+      ],
+      "name": "assetsPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "assetsPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        271,
+        271
+      ],
+      "name": "description",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "description: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        272,
+        272
+      ],
+      "name": "license",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "license?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        273,
+        273
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        274,
+        274
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        275,
+        275
+      ],
+      "name": "metadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "metadata?: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        276,
+        276
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        277,
+        277
+      ],
+      "name": "referencesPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "referencesPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        278,
+        278
+      ],
+      "name": "rootPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        279,
+        279
+      ],
+      "name": "scriptsPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "scriptsPath?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        280,
+        280
+      ],
+      "name": "skillFilePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "skillFilePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        281,
+        281
+      ],
+      "name": "skillId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "skillId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        282,
+        282
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        288,
+        292
+      ],
+      "name": "CreateModuleSourceRefInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateModuleSourceRefInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        289,
+        289
+      ],
+      "name": "exportName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "exportName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        290,
+        290
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        291,
+        291
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        297,
+        304
+      ],
+      "name": "CreateLocalSubagentSourceRefInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CreateLocalSubagentSourceRefInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        298,
+        298
+      ],
+      "name": "entryPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "entryPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        299,
+        299
+      ],
+      "name": "logicalPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "logicalPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        300,
+        300
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentSourceManifest",
+      "signature": "manifest: : AgentSourceManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        301,
+        301
+      ],
+      "name": "rootPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootPath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        302,
+        302
+      ],
+      "name": "sourceId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sourceId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        303,
+        303
+      ],
+      "name": "subagentId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "subagentId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        309,
+        341
+      ],
+      "name": "createAgentSourceManifest",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateAgentSourceManifestInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentSourceManifest",
+      "signature": "export function createAgentSourceManifest(input: CreateAgentSourceManifestInput) -> AgentSourceManifest"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        350,
+        366
+      ],
+      "name": "deriveAgentIdFromRoots",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "packageName",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function deriveAgentIdFromRoots(appRoot: string, agentRoot: string, packageName: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        371,
+        373
+      ],
+      "name": "createPathDerivedSourceId",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createPathDerivedSourceId(logicalPath: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        378,
+        391
+      ],
+      "name": "createModuleSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateModuleSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModuleSourceRef",
+      "signature": "export function createModuleSourceRef(input: CreateModuleSourceRefInput) -> ModuleSourceRef"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        396,
+        403
+      ],
+      "name": "createConnectionSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateConnectionSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSourceRef",
+      "signature": "export function createConnectionSourceRef(input: CreateConnectionSourceRefInput) -> ConnectionSourceRef"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        408,
+        421
+      ],
+      "name": "createLocalSubagentSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateLocalSubagentSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LocalSubagentSourceRef",
+      "signature": "export function createLocalSubagentSourceRef(input: CreateLocalSubagentSourceRefInput) -> LocalSubagentSourceRef"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        426,
+        447
+      ],
+      "name": "createSkillPackageSourceRef",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateSkillPackageSourceRefInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NamedSkillDefinition & SkillPackageSourceRef",
+      "signature": "export function createSkillPackageSourceRef(input: CreateSkillPackageSourceRefInput) -> NamedSkillDefinition & SkillPackageSourceRef"
+    }
+  ],
+  "module": "packages/eve/src/discover/manifest.ts"
+}

@@ -1,0 +1,350 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "ToolStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolStatus = \"running\" | \"done\" | \"error\" | \"denied\" | \"approval\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        39
+      ],
+      "name": "BlockKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type BlockKind = | \"user\"\r\n  | \"assistant\"\r\n  | \"reasoning\"\r\n  | \"tool\"\r\n  | \"error\"\r\n  | \"notice\"\r\n  | \"warning\"\r\n  | \"result\"\r\n  | \"flow\"\r\n  | \"command\"\r\n  | \"question\"\r\n  | \"subagent\"\r\n  | \"subagent-step\"\r\n  | \"subagent-tool\"\r\n  | \"connection-auth\"\r\n  | \"sandbox\"\r\n  | \"log\"\r\n  | \"agent-header\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        45,
+        81
+      ],
+      "name": "Block",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface Block { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": BlockKind",
+      "signature": "kind: : BlockKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "depth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "depth?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "live",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "live?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "title",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "title?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "subtitle",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "subtitle?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "body",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "body?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "reasoning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reasoning?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "result",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "result?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "detail",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "detail?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ToolStatus",
+      "signature": "status?: : ToolStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "preformatted",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "preformatted?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "collapsed",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "collapsed?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "expanded",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "expanded?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "toolInput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "toolInput?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        80,
+        80
+      ],
+      "name": "toolOutput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "toolOutput?: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        83,
+        93
+      ],
+      "name": "RenderBlockContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RenderBlockContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "spinner",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "spinner: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        92,
+        92
+      ],
+      "name": "previous",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": { kind: BlockKind; title?: string }",
+      "signature": "previous?: : { kind: BlockKind; title?: string }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        99,
+        110
+      ],
+      "name": "renderBlockLines",
+      "params": [
+        {
+          "name": "block",
+          "optional": false,
+          "type": "Block"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        },
+        {
+          "name": "context",
+          "optional": false,
+          "type": "RenderBlockContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderBlockLines(block: Block, width: number, theme: Theme, context: RenderBlockContext) -> string[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        368,
+        372
+      ],
+      "name": "renderAttentionRows",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "theme",
+          "optional": false,
+          "type": "Theme"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function renderAttentionRows(body: string, width: number, theme: Theme) -> string[]"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/blocks.ts"
+}

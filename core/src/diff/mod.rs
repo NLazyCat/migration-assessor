@@ -55,6 +55,55 @@ pub struct SymbolChange {
     pub old_line_range: Option<[usize; 2]>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub new_line_range: Option<[usize; 2]>,
+    /// Source code snippet of the old version of this symbol
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub old_source: Option<String>,
+    /// Source code snippet of the new version of this symbol
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub new_source: Option<String>,
+    /// Target file path (from registry or default mapping)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub target_file: Option<String>,
+    /// Target symbol name (from registry or default mapping)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub target_symbol: Option<String>,
+    /// Target child/field/method name (context-aware match)
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub target_child: Option<String>,
+    /// Line range in target file for the matched symbol/child
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub target_line_range: Option<[usize; 2]>,
+}
+
+impl SymbolChange {
+    /// Construct a SymbolChange with all optional fields defaulted to None.
+    pub fn new(
+        symbol: String,
+        kind: String,
+        change_type: String,
+        severity: String,
+        old_line_range: Option<[usize; 2]>,
+        new_line_range: Option<[usize; 2]>,
+        details: Vec<ChangeDetail>,
+    ) -> Self {
+        Self {
+            symbol,
+            kind,
+            change_type,
+            severity,
+            old_name: None,
+            rename_confidence: None,
+            details,
+            old_line_range,
+            new_line_range,
+            old_source: None,
+            new_source: None,
+            target_file: None,
+            target_symbol: None,
+            target_child: None,
+            target_line_range: None,
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -1,0 +1,73 @@
+{
+  "VercelAuthStatus": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 119
+      },
+      "symbol": "packages/eve/src/setup/vercel-project.ts:VercelAuthStatus"
+    }
+  ],
+  "createPromptCommandOutput": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 66
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:createPromptCommandOutput"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 34
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:createPromptCommandOutput"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 117
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:createPromptCommandOutput"
+    }
+  ],
+  "getVercelAuthStatus": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 30,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/setup/vercel-project.ts:getVercelAuthStatus"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 40
+      },
+      "symbol": "packages/eve/src/setup/vercel-project.ts:getVercelAuthStatus"
+    }
+  ],
+  "runVercel": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/setup/flows/login.ts",
+        "line": 46
+      },
+      "symbol": "packages/eve/src/setup/primitives/run-vercel.ts:runVercel"
+    }
+  ]
+}

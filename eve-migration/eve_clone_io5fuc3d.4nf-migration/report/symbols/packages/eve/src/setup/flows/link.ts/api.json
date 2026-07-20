@@ -1,0 +1,113 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        30
+      ],
+      "name": "LinkFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface LinkFlowDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "detectProjectIdentity",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectProjectIdentity",
+      "signature": "detectProjectIdentity: : typeof detectProjectIdentity"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "findEnvFileWithKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof findEnvFileWithKey",
+      "signature": "findEnvFileWithKey: : typeof findEnvFileWithKey"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "resolveProvisioning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ResolveProvisioningDeps",
+      "signature": "resolveProvisioning?: : ResolveProvisioningDeps"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "linkProject",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": LinkProjectDeps",
+      "signature": "linkProject?: : LinkProjectDeps"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "applyAiGatewayCredential",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ApplyAiGatewayCredentialDeps",
+      "signature": "applyAiGatewayCredential?: : ApplyAiGatewayCredentialDeps"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        38
+      ],
+      "name": "LinkFlowResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type LinkFlowResult = | {\r\n      kind: \"done\";\r\n      /** The model credential verified in an env file, when one landed. */\r\n      credential?: \"VERCEL_OIDC_TOKEN\" | typeof AI_GATEWAY_API_KEY_ENV_VAR;\r\n    }\r\n  | { kind: \"cancelled\" };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        57,
+        174
+      ],
+      "name": "runLinkFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /**\r\n   * Whether the caller may only link an existing project (`eve link`, the\r\n   * default) or may also create one (the `/model` \"Connect via a project\"\r\n   * branch, where a fresh agent has no project yet).\r\n   */\r\n  projectSelection?: \"create-or-link\" | \"existing-only\";\r\n  teamSelectMessage?: (currentTeam: string) => string;\r\n  deps?: Partial<LinkFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<LinkFlowResult>",
+      "signature": "export function runLinkFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  /**\r\n   * Whether the caller may only link an existing project (`eve link`, the\r\n   * default) or may also create one (the `/model` \"Connect via a project\"\r\n   * branch, where a fresh agent has no project yet).\r\n   */\r\n  projectSelection?: \"create-or-link\" | \"existing-only\";\r\n  teamSelectMessage?: (currentTeam: string) => string;\r\n  deps?: Partial<LinkFlowDeps>;\r\n}) -> Promise<LinkFlowResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/flows/link.ts"
+}

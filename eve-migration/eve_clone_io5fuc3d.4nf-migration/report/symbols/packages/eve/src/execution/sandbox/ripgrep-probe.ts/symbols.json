@@ -1,0 +1,62 @@
+{
+  "module": "packages/eve/src/execution/sandbox/ripgrep-probe.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ripgrep-probe.ts:probes",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "probes",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ripgrep-probe.ts:ripgrepIsAvailable",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        17,
+        36
+      ],
+      "name": "ripgrepIsAvailable",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "SandboxSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function ripgrepIsAvailable(session: SandboxSession) -> Promise<boolean>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/ripgrep-probe.ts:runProbe",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        38,
+        41
+      ],
+      "name": "runProbe",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "SandboxSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function runProbe(session: SandboxSession) -> Promise<boolean>",
+      "visibility": "Private"
+    }
+  ]
+}

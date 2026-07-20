@@ -1,0 +1,206 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "MICROSANDBOX_DEFAULT_IMAGE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MICROSANDBOX_DEFAULT_IMAGE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "MICROSANDBOX_DEFAULT_CPUS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MICROSANDBOX_DEFAULT_CPUS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "MICROSANDBOX_DEFAULT_MEMORY_MIB",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MICROSANDBOX_DEFAULT_MEMORY_MIB: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "MICROSANDBOX_DEFAULT_PULL_POLICY",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MICROSANDBOX_DEFAULT_PULL_POLICY: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "MICROSANDBOX_USER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MICROSANDBOX_USER: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        26
+      ],
+      "name": "ResolvedMicrosandboxOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedMicrosandboxOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "cpus",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "cpus: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "env",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "env: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "image",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "image: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "memoryMiB",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "memoryMiB: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "networkPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxNetworkPolicy",
+      "signature": "networkPolicy?: : SandboxNetworkPolicy"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "pullPolicy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"always\" | \"if-missing\" | \"never\"",
+      "signature": "pullPolicy: : \"always\" | \"if-missing\" | \"never\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "setup",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly autoInstall: boolean;\r\n    readonly skipVerify: boolean;\r\n  }",
+      "signature": "setup: : {\r\n    readonly autoInstall: boolean;\r\n    readonly skipVerify: boolean;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        31,
+        46
+      ],
+      "name": "resolveMicrosandboxOptions",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "MicrosandboxSandboxCreateOptions | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedMicrosandboxOptions",
+      "signature": "export function resolveMicrosandboxOptions(options: MicrosandboxSandboxCreateOptions | undefined) -> ResolvedMicrosandboxOptions"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        63
+      ],
+      "name": "microsandboxOptionsForHash",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolvedMicrosandboxOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function microsandboxOptionsForHash(options: ResolvedMicrosandboxOptions) -> Record<string, unknown>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-options.ts"
+}

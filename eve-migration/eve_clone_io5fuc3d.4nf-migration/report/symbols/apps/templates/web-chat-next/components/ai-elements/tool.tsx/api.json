@@ -1,0 +1,185 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "ToolProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolProps = ComponentProps<typeof Collapsible>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        22,
+        27
+      ],
+      "name": "Tool",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "ToolProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const Tool: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "ToolPart",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolPart = ToolUIPart | DynamicToolUIPart;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        31,
+        41
+      ],
+      "name": "ToolHeaderProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolHeaderProps = {\r\n  title?: string;\r\n  className?: string;\r\n} & (\r\n  | { type: ToolUIPart[\"type\"]; state: ToolUIPart[\"state\"]; toolName?: never }\r\n  | {\r\n      type: DynamicToolUIPart[\"type\"];\r\n      state: DynamicToolUIPart[\"state\"];\r\n      toolName: string;\r\n    }\r\n);"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        63,
+        68
+      ],
+      "name": "getStatusBadge",
+      "params": [
+        {
+          "name": "status",
+          "optional": false,
+          "type": "ToolPart[\"state\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const getStatusBadge: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        70,
+        93
+      ],
+      "name": "ToolHeader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "ToolHeaderProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const ToolHeader: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "ToolContentProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolContentProps = ComponentProps<typeof CollapsibleContent>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        97,
+        105
+      ],
+      "name": "ToolContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "ToolContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const ToolContent: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        107,
+        109
+      ],
+      "name": "ToolInputProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolInputProps = ComponentProps<\"div\"> & {\r\n  input: ToolPart[\"input\"];\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        111,
+        120
+      ],
+      "name": "ToolInput",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "ToolInputProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const ToolInput: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        122,
+        125
+      ],
+      "name": "ToolOutputProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ToolOutputProps = ComponentProps<\"div\"> & {\r\n  output: ToolPart[\"output\"];\r\n  errorText: ToolPart[\"errorText\"];\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        127,
+        156
+      ],
+      "name": "ToolOutput",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "ToolOutputProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const ToolOutput: unknown"
+    }
+  ],
+  "module": "apps/templates/web-chat-next/components/ai-elements/tool.tsx"
+}

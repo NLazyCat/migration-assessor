@@ -1,0 +1,93 @@
+{
+  "module": "packages/eve/src/evals/cli/eval-client.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/cli/eval-client.ts:resolveEvalClientOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        33
+      ],
+      "name": "resolveEvalClientOptions",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "Pick<EveEvalTargetHandle, \"kind\" | \"url\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ClientOptions",
+      "signature": "export function resolveEvalClientOptions(target: Pick<EveEvalTargetHandle, \"kind\" | \"url\">) -> ClientOptions",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/cli/eval-client.ts:CreateEvalClientOptions:workspaceRoot",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "workspaceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/cli/eval-client.ts:CreateEvalClientOptions:deps",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "deps",
+          "partial_analysis": false,
+          "return_type": ": Partial<VerifiedRemoteDevelopmentClientDeps>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/cli/eval-client.ts:CreateEvalClientOptions",
+      "kind": "interface",
+      "line_range": [
+        35,
+        40
+      ],
+      "name": "CreateEvalClientOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/cli/eval-client.ts:createEvalClient",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        43,
+        61
+      ],
+      "name": "createEvalClient",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "Pick<EveEvalTargetHandle, \"kind\" | \"url\">"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "CreateEvalClientOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Client>",
+      "signature": "export function createEvalClient(target: Pick<EveEvalTargetHandle, \"kind\" | \"url\">, options: CreateEvalClientOptions) -> Promise<Client>",
+      "visibility": "Public"
+    }
+  ]
+}

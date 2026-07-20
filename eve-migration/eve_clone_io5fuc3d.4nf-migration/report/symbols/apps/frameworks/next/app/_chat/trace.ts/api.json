@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        359,
+        675
+      ],
+      "name": "buildTraceTurnsFromTranscript",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly TranscriptStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly TraceTurn[]",
+      "signature": "export function buildTraceTurnsFromTranscript(events: readonly TranscriptStreamEvent[]) -> readonly TraceTurn[]"
+    }
+  ],
+  "module": "apps/frameworks/next/app/_chat/trace.ts"
+}

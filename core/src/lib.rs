@@ -17,5 +17,8 @@ pub mod scores;
 pub mod symbols;
 pub mod util;
 
+pub mod align;
+pub mod verify;
+
 pub use config::Config;
 pub use project::Project;

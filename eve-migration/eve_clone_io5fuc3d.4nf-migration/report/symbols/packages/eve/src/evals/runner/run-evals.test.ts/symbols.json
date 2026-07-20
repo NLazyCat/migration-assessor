@@ -1,0 +1,201 @@
+{
+  "module": "packages/eve/src/evals/runner/run-evals.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:Deferred",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        19
+      ],
+      "name": "Deferred",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly promise: Promise<T>;\r\n  resolve(value: T): void;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:mockedRunnerDependencies",
+      "kind": "variable",
+      "line_range": [
+        21,
+        25
+      ],
+      "name": "mockedRunnerDependencies",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:TEST_CONFIG",
+      "kind": "variable",
+      "line_range": [
+        38,
+        41
+      ],
+      "name": "TEST_CONFIG",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:TaskOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "TaskOutcome",
+      "partial_analysis": false,
+      "value": "{ result: EveEvalTaskResult; assertions: readonly AssertionResult[] };",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:run",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        49
+      ],
+      "name": "run",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "Omit<RunEvalsOptions, \"config\"> & { config?: EveEvalConfig }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function run(options: Omit<RunEvalsOptions, \"config\"> & { config?: EveEvalConfig }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:createDeferred",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        58
+      ],
+      "name": "createDeferred",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Deferred<T>",
+      "signature": "export function createDeferred() -> Deferred<T>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:createTaskResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        71
+      ],
+      "name": "createTaskResult",
+      "params": [
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TaskOutcome",
+      "signature": "export function createTaskResult(label: string) -> TaskOutcome",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:createEval",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        73,
+        80
+      ],
+      "name": "createEval",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<EveEval>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEval",
+      "signature": "export function createEval(id: string, overrides: Partial<EveEval>) -> EveEval",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:mockArtifacts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        85
+      ],
+      "name": "mockArtifacts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function mockArtifacts() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:flushMicrotasks",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        87,
+        90
+      ],
+      "name": "flushMicrotasks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function flushMicrotasks() -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:unusedClient",
+      "kind": "variable",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "unusedClient",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/run-evals.test.ts:localTarget",
+      "kind": "variable",
+      "line_range": [
+        97,
+        102
+      ],
+      "name": "localTarget",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -41,6 +41,12 @@ pub(crate) fn convert_to_output_format(
                 details,
                 old_line_range: sc.old_line_range,
                 new_line_range: sc.new_line_range,
+                old_source: sc.old_source.clone(),
+                new_source: sc.new_source.clone(),
+                target_file: sc.target_file.clone(),
+                target_symbol: sc.target_symbol.clone(),
+                target_child: sc.target_child.clone(),
+                target_line_range: sc.target_line_range,
             });
         }
 

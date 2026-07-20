@@ -1,0 +1,87 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        17
+      ],
+      "name": "InstallVercelCliResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type InstallVercelCliResult = /** The CLI is already resolvable; nothing to do. */\r\n  | { kind: \"already\" }\r\n  /** The package manager installed it and it now resolves. */\r\n  | { kind: \"installed\" }\r\n  /** The install exited non-zero, or the CLI still isn't on PATH afterward. */\r\n  | { kind: \"failed\" }\r\n  /** The user interrupted (Ctrl-C / Esc) before the install finished. */\r\n  | { kind: \"cancelled\" };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        24
+      ],
+      "name": "InstallVercelCliDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface InstallVercelCliDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "getVercelAuthStatus",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof getVercelAuthStatus",
+      "signature": "getVercelAuthStatus: : typeof getVercelAuthStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "detectPackageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof detectPackageManager",
+      "signature": "detectPackageManager: : typeof detectPackageManager"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "spawnPackageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof spawnPackageManager",
+      "signature": "spawnPackageManager: : typeof spawnPackageManager"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        54,
+        91
+      ],
+      "name": "runInstallVercelCliFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<InstallVercelCliDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<InstallVercelCliResult>",
+      "signature": "export function runInstallVercelCliFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  deps?: Partial<InstallVercelCliDeps>;\r\n}) -> Promise<InstallVercelCliResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/flows/install-vercel-cli.ts"
+}

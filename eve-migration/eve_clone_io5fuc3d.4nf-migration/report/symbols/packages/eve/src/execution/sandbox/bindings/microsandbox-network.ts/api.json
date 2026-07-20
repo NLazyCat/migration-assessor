@@ -1,0 +1,137 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        66,
+        70
+      ],
+      "name": "MicrosandboxNetworkPlan",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MicrosandboxNetworkPlan { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "disabled",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "disabled: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "policy",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": MicrosandboxNetworkPolicy | null",
+      "signature": "policy: : MicrosandboxNetworkPolicy | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "transformHeaderRules",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly MicrosandboxTransformHeaderRule[]",
+      "signature": "transformHeaderRules: : readonly MicrosandboxTransformHeaderRule[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        126
+      ],
+      "name": "applyMicrosandboxNetwork",
+      "params": [
+        {
+          "name": "builder",
+          "optional": false,
+          "type": "MicrosandboxSandboxBuilder"
+        },
+        {
+          "name": "networkPolicy",
+          "optional": false,
+          "type": "SandboxNetworkPolicy | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MicrosandboxSandboxBuilder",
+      "signature": "export function applyMicrosandboxNetwork(builder: MicrosandboxSandboxBuilder, networkPolicy: SandboxNetworkPolicy | undefined) -> MicrosandboxSandboxBuilder"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        128,
+        142
+      ],
+      "name": "serializeMicrosandboxNetworkPolicyJson",
+      "params": [
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "MicrosandboxNetworkPolicy"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function serializeMicrosandboxNetworkPolicyJson(policy: MicrosandboxNetworkPolicy) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        144,
+        240
+      ],
+      "name": "createMicrosandboxNetworkPlan",
+      "params": [
+        {
+          "name": "policy",
+          "optional": false,
+          "type": "SandboxNetworkPolicy | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "MicrosandboxNetworkPlan",
+      "signature": "export function createMicrosandboxNetworkPlan(policy: SandboxNetworkPolicy | undefined) -> MicrosandboxNetworkPlan"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        242,
+        273
+      ],
+      "name": "createTransformBrokerEnvironment",
+      "params": [
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "MicrosandboxNetworkPlan"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Readonly<Record<string, string>>",
+      "signature": "export function createTransformBrokerEnvironment(plan: MicrosandboxNetworkPlan) -> Readonly<Record<string, string>>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-network.ts"
+}

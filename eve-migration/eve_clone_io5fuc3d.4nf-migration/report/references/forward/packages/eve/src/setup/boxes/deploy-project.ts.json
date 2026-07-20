@@ -1,0 +1,124 @@
+{
+  "ChannelSetupLog": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 34
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:ChannelSetupLog"
+    }
+  ],
+  "HumanActionRequiredError": [
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 121
+      },
+      "symbol": "packages/eve/src/setup/human-action.ts:HumanActionRequiredError"
+    }
+  ],
+  "createPromptCommandOutput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 116
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:createPromptCommandOutput"
+    }
+  ],
+  "detectPackageManager": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 26
+      },
+      "symbol": "packages/eve/src/setup/package-manager.ts:detectPackageManager"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 93
+      },
+      "symbol": "packages/eve/src/setup/package-manager.ts:detectPackageManager"
+    }
+  ],
+  "runPackageManagerInstall": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 35,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 27
+      },
+      "symbol": "packages/eve/src/setup/primitives/pm/run.ts:runPackageManagerInstall"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 94
+      },
+      "symbol": "packages/eve/src/setup/primitives/pm/run.ts:runPackageManagerInstall"
+    }
+  ],
+  "runVercel": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/setup/primitives/run-vercel.ts:runVercel"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 92
+      },
+      "symbol": "packages/eve/src/setup/primitives/run-vercel.ts:runVercel"
+    }
+  ],
+  "withPhase": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 32,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 158
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:withPhase"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 28,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 177
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:withPhase"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 38,
+        "file": "packages/eve/src/setup/boxes/deploy-project.ts",
+        "line": 197
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:withPhase"
+    }
+  ]
+}

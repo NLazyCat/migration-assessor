@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        40
+      ],
+      "name": "stopDevelopmentSandboxResources",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly devRunId: string;\r\n  readonly log?: (message: string) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function stopDevelopmentSandboxResources(input: {\r\n  readonly appRoot: string;\r\n  readonly devRunId: string;\r\n  readonly log?: (message: string) => void;\r\n}) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/development-cleanup.ts"
+}

@@ -1,0 +1,192 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        16,
+        20
+      ],
+      "name": "ReadFileStamp",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ReadFileStamp { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "byteLength",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "byteLength: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "contentHash",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "contentHash: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "filePath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "filePath: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "ReadFileState",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ReadFileState { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "byTarget",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, ReadFileStamp>>",
+      "signature": "byTarget: : Readonly<Record<string, ReadFileStamp>>"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "ReadFileStateKey",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const ReadFileStateKey: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        51
+      ],
+      "name": "normalizeModelPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeModelPath(path: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        59,
+        61
+      ],
+      "name": "buildReadFileTargetKey",
+      "params": [
+        {
+          "name": "normalizedPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function buildReadFileTargetKey(normalizedPath: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "createReadFileStamp",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ content: string; filePath: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReadFileStamp",
+      "signature": "export function createReadFileStamp(input: { content: string; filePath: string }) -> ReadFileStamp"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        87,
+        92
+      ],
+      "name": "setReadFileStamp",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "AlsContext"
+        },
+        {
+          "name": "targetKey",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "stamp",
+          "optional": false,
+          "type": "ReadFileStamp"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setReadFileStamp(ctx: AlsContext, targetKey: string, stamp: ReadFileStamp) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        103,
+        105
+      ],
+      "name": "clearReadFileState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function clearReadFileState() -> void"
+    }
+  ],
+  "module": "packages/eve/src/runtime/framework-tools/file-state.ts"
+}

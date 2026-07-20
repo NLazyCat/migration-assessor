@@ -1,0 +1,195 @@
+{
+  "module": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:REQUIRED_VERCEL_ENV_NAMES",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "REQUIRED_VERCEL_ENV_NAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:missingEnvironmentVariables",
+      "kind": "variable",
+      "line_range": [
+        12,
+        14
+      ],
+      "name": "missingEnvironmentVariables",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:sendToolMessageAndCollectResult",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        74,
+        108
+      ],
+      "name": "sendToolMessageAndCollectResult",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly deploymentFixture: TarballVercelDeploymentFixture | undefined;\r\n  readonly message: string;\r\n  readonly toolName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function sendToolMessageAndCollectResult(input: {\r\n  readonly deploymentFixture: TarballVercelDeploymentFixture | undefined;\r\n  readonly message: string;\r\n  readonly toolName: string;\r\n}) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:extractToolResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        110,
+        131
+      ],
+      "name": "extractToolResult",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        },
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeToolResultActionResult | undefined",
+      "signature": "export function extractToolResult(events: readonly HandleMessageStreamEvent[], toolName: string) -> RuntimeToolResultActionResult | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:expectToolOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        133,
+        141
+      ],
+      "name": "expectToolOutput",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "label",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function expectToolOutput(value: unknown, label: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:collectDeploymentEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        143,
+        155
+      ],
+      "name": "collectDeploymentEnvironment",
+      "params": [
+        {
+          "name": "names",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, string>",
+      "signature": "export function collectDeploymentEnvironment(names: readonly string[]) -> Record<string, string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:hasEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        157,
+        159
+      ],
+      "name": "hasEnvironmentVariable",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasEnvironmentVariable(name: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:readOptionalEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        161,
+        169
+      ],
+      "name": "readOptionalEnvironmentVariable",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readOptionalEnvironmentVariable(name: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/vercel/vercel-verbose-bundling.vercel.test.ts:readRequiredEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        179
+      ],
+      "name": "readRequiredEnvironmentVariable",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function readRequiredEnvironmentVariable(name: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

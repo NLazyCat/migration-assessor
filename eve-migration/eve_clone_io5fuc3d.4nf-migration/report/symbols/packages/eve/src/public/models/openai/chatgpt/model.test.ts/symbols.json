@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/src/public/models/openai/chatgpt/model.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/model.test.ts:CODEX_ENDPOINT",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "CODEX_ENDPOINT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/model.test.ts:RecordedRequest:body",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/models/openai/chatgpt/model.test.ts:RecordedRequest:url",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/models/openai/chatgpt/model.test.ts:RecordedRequest",
+      "kind": "interface",
+      "line_range": [
+        93,
+        96
+      ],
+      "name": "RecordedRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/models/openai/chatgpt/model.test.ts:createRecordingFetch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        98,
+        118
+      ],
+      "name": "createRecordingFetch",
+      "params": [
+        {
+          "name": "requests",
+          "optional": false,
+          "type": "RecordedRequest[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "typeof fetch",
+      "signature": "export function createRecordingFetch(requests: RecordedRequest[]) -> typeof fetch",
+      "visibility": "Private"
+    }
+  ]
+}

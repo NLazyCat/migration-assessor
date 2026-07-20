@@ -1,0 +1,259 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        7,
+        14
+      ],
+      "name": "SetupIssue",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SetupIssue { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"attention\"",
+      "signature": "kind: : \"attention\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "label",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "label: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "command",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "command: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "BootDetectionContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface BootDetectionContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "env",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, string | undefined>",
+      "signature": "env: : Record<string, string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "info",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentInfoResult",
+      "signature": "info?: : AgentInfoResult"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        34
+      ],
+      "name": "BootDetection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface BootDetection { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        58,
+        84
+      ],
+      "name": "resolveModelProviderState",
+      "params": [
+        {
+          "name": "info",
+          "optional": false,
+          "type": "AgentInfoResult | undefined"
+        },
+        {
+          "name": "env",
+          "optional": false,
+          "type": "Record<string, string | undefined>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentInfoResult | undefined",
+      "signature": "export function resolveModelProviderState(info: AgentInfoResult | undefined, env: Record<string, string | undefined>) -> AgentInfoResult | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        152,
+        152
+      ],
+      "name": "BOOT_DETECTIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const BOOT_DETECTIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        161,
+        165
+      ],
+      "name": "LOGIN_SETUP_ISSUE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LOGIN_SETUP_ISSUE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        173,
+        177
+      ],
+      "name": "CLI_MISSING_SETUP_ISSUE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CLI_MISSING_SETUP_ISSUE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        184,
+        198
+      ],
+      "name": "detectSetupIssues",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "BootDetectionContext"
+        },
+        {
+          "name": "detections",
+          "optional": false,
+          "type": "readonly BootDetection[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SetupIssue[]>",
+      "signature": "export function detectSetupIssues(context: BootDetectionContext, detections: readonly BootDetection[]) -> Promise<SetupIssue[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        201,
+        206
+      ],
+      "name": "orderedSetupIssues",
+      "params": [
+        {
+          "name": "bootIssues",
+          "optional": false,
+          "type": "readonly SetupIssue[]"
+        },
+        {
+          "name": "authIssue",
+          "optional": false,
+          "type": "SetupIssue | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupIssue[]",
+      "signature": "export function orderedSetupIssues(bootIssues: readonly SetupIssue[], authIssue: SetupIssue | undefined) -> SetupIssue[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        213,
+        217
+      ],
+      "name": "formatSetupIssuesLine",
+      "params": [
+        {
+          "name": "issues",
+          "optional": false,
+          "type": "readonly SetupIssue[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSetupIssuesLine(issues: readonly SetupIssue[]) -> string"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/setup-issues.ts"
+}

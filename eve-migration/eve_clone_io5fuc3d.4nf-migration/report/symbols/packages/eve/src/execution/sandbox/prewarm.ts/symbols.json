@@ -1,0 +1,528 @@
+{
+  "module": "packages/eve/src/execution/sandbox/prewarm.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmTarget:backend",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "backend",
+          "partial_analysis": false,
+          "return_type": ": SandboxBackend",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmTarget:label",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "label",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmTarget:input",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": SandboxBackendPrewarmInput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmTarget:signature",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "signature",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmTarget",
+      "kind": "interface",
+      "line_range": [
+        33,
+        38
+      ],
+      "name": "PrewarmTarget",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:NodeSandbox:nodeId",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "nodeId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:NodeSandbox",
+      "kind": "interface",
+      "line_range": [
+        40,
+        42
+      ],
+      "name": "NodeSandbox",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:SandboxBackendPrewarmDispatch",
+      "kind": "type_alias",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "SandboxBackendPrewarmDispatch",
+      "partial_analysis": false,
+      "value": "(input: {\r\n  readonly backend: SandboxBackend;\r\n  readonly input: SandboxBackendPrewarmInput;\r\n}) => Promise<SandboxBackendPrewarmResult>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:appRoot",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:compileDirectoryPath",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "compileDirectoryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:compiledArtifactsSource",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "compiledArtifactsSource",
+          "partial_analysis": false,
+          "return_type": ": RuntimeCompiledArtifactsSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:graph",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "graph",
+          "partial_analysis": false,
+          "return_type": ": ResolvedAgentGraphBundle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:log",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "log",
+          "partial_analysis": false,
+          "return_type": ": (message: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:dispatch",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "dispatch",
+          "partial_analysis": false,
+          "return_type": ": SandboxBackendPrewarmDispatch",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:onPrewarmSignature",
+          "kind": "property",
+          "line_range": [
+            63,
+            63
+          ],
+          "name": "onPrewarmSignature",
+          "partial_analysis": false,
+          "return_type": ": (signature: string) => void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput:shouldPrewarmSignature",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "shouldPrewarmSignature",
+          "partial_analysis": false,
+          "return_type": ": (signature: string) => boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:PrewarmSandboxesInput",
+      "kind": "interface",
+      "line_range": [
+        56,
+        65
+      ],
+      "name": "PrewarmSandboxesInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:prewarmSandboxes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        74,
+        140
+      ],
+      "name": "prewarmSandboxes",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "PrewarmSandboxesInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function prewarmSandboxes(input: PrewarmSandboxesInput) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:prewarmAppSandboxes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        151,
+        185
+      ],
+      "name": "prewarmAppSandboxes",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly compiledArtifactsSource?: RuntimeCompiledArtifactsSource;\r\n  readonly loadAgentGraph?: (\r\n    input: Readonly<{\r\n      compiledArtifactsSource: RuntimeDiskCompiledArtifactsSource;\r\n    }>,\r\n  ) => Promise<ResolvedAgentGraphBundle>;\r\n  readonly log?: (message: string) => void;\r\n  readonly dispatch?: SandboxBackendPrewarmDispatch;\r\n  readonly onPrewarmSignature?: (signature: string) => void;\r\n  readonly shouldPrewarmSignature?: (signature: string) => boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function prewarmAppSandboxes(input: {\r\n  readonly appRoot: string;\r\n  readonly compiledArtifactsSource?: RuntimeCompiledArtifactsSource;\r\n  readonly loadAgentGraph?: (\r\n    input: Readonly<{\r\n      compiledArtifactsSource: RuntimeDiskCompiledArtifactsSource;\r\n    }>,\r\n  ) => Promise<ResolvedAgentGraphBundle>;\r\n  readonly log?: (message: string) => void;\r\n  readonly dispatch?: SandboxBackendPrewarmDispatch;\r\n  readonly onPrewarmSignature?: (signature: string) => void;\r\n  readonly shouldPrewarmSignature?: (signature: string) => boolean;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:prewarmBuiltAppSandboxes",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        191,
+        238
+      ],
+      "name": "prewarmBuiltAppSandboxes",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly log?: (message: string) => void;\r\n  readonly dispatch?: SandboxBackendPrewarmDispatch;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function prewarmBuiltAppSandboxes(input: {\r\n  readonly appRoot: string;\r\n  readonly log?: (message: string) => void;\r\n  readonly dispatch?: SandboxBackendPrewarmDispatch;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:collectPrewarmTargets",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        240,
+        288
+      ],
+      "name": "collectPrewarmTargets",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly compileDirectoryPath: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly graph: ResolvedAgentGraphBundle;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly PrewarmTarget[]>",
+      "signature": "export function collectPrewarmTargets(input: {\r\n  readonly appRoot: string;\r\n  readonly compileDirectoryPath: string;\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n  readonly graph: ResolvedAgentGraphBundle;\r\n}) -> Promise<readonly PrewarmTarget[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:loadResourceRootSeedFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        298,
+        315
+      ],
+      "name": "loadResourceRootSeedFiles",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compileDirectoryPath: string;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly SandboxSeedFile[]>",
+      "signature": "export function loadResourceRootSeedFiles(input: {\r\n  readonly compileDirectoryPath: string;\r\n  readonly workspaceResourceRoot: CompiledWorkspaceResourceRoot;\r\n}) -> Promise<readonly SandboxSeedFile[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:loadGraphFromArtifacts",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        317,
+        333
+      ],
+      "name": "loadGraphFromArtifacts",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource: RuntimeDiskCompiledArtifactsSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedAgentGraphBundle>",
+      "signature": "export function loadGraphFromArtifacts(input: {\r\n  readonly compiledArtifactsSource: RuntimeDiskCompiledArtifactsSource;\r\n}) -> Promise<ResolvedAgentGraphBundle>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:collectNodeSandboxes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        335,
+        340
+      ],
+      "name": "collectNodeSandboxes",
+      "params": [
+        {
+          "name": "graph",
+          "optional": false,
+          "type": "ResolvedAgentGraphBundle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly NodeSandbox[]",
+      "signature": "export function collectNodeSandboxes(graph: ResolvedAgentGraphBundle) -> readonly NodeSandbox[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:formatLabel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        342,
+        344
+      ],
+      "name": "formatLabel",
+      "params": [
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatLabel(nodeId: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:createPrewarmSignature",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        346,
+        351
+      ],
+      "name": "createPrewarmSignature",
+      "params": [
+        {
+          "name": "targets",
+          "optional": false,
+          "type": "readonly PrewarmTarget[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createPrewarmSignature(targets: readonly PrewarmTarget[]) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:formatSandboxTemplateCount",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        353,
+        355
+      ],
+      "name": "formatSandboxTemplateCount",
+      "params": [
+        {
+          "name": "count",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSandboxTemplateCount(count: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:shouldLogSandboxPrewarmProgress",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        357,
+        364
+      ],
+      "name": "shouldLogSandboxPrewarmProgress",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function shouldLogSandboxPrewarmProgress(message: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:formatPrewarmFailureForEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        366,
+        382
+      ],
+      "name": "formatPrewarmFailureForEnvironment",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly error: unknown;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function formatPrewarmFailureForEnvironment(input: {\r\n  readonly backendName: string;\r\n  readonly error: unknown;\r\n}) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:isVercelEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        384,
+        386
+      ],
+      "name": "isVercelEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isVercelEnvironment() -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/prewarm.ts:isLocalSandboxBackend",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        388,
+        390
+      ],
+      "name": "isLocalSandboxBackend",
+      "params": [
+        {
+          "name": "backendName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLocalSandboxBackend(backendName: string) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        36
+      ],
+      "name": "AddAgentToProjectOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AddAgentToProjectOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "projectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "model",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "model: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "packageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PackageManagerKind",
+      "signature": "packageManager?: : PackageManagerKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "evePackage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EvePackageContract",
+      "signature": "evePackage?: : EvePackageContract"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "aiPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "aiPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "connectPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "zodPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "zodPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        38,
+        44
+      ],
+      "name": "AddAgentToProjectResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AddAgentToProjectResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "filesWritten",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "filesWritten: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "dependenciesAdded",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "dependenciesAdded: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "nodeEngineOverride",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": NodeEngineOverride",
+      "signature": "nodeEngineOverride?: : NodeEngineOverride"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        173
+      ],
+      "name": "addAgentToProject",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "AddAgentToProjectOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AddAgentToProjectResult>",
+      "signature": "export function addAgentToProject(options: AddAgentToProjectOptions) -> Promise<AddAgentToProjectResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/create/add-to-project.ts"
+}

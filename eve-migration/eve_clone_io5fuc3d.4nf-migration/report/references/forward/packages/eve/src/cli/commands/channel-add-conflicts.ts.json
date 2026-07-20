@@ -1,0 +1,84 @@
+{
+  "ChannelKind": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 73
+      },
+      "symbol": "packages/eve/src/setup/scaffold/index.ts:ChannelKind"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 47,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 51
+      },
+      "symbol": "packages/eve/src/setup/scaffold/index.ts:ChannelKind"
+    }
+  ],
+  "DisabledChannelReasons": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 35,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/setup/cli/index.ts:DisabledChannelReasons"
+    }
+  ],
+  "EVE_CREATE_SESSION_ROUTE_PATH": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 65,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 42
+      },
+      "symbol": "packages/eve/src/protocol/routes.ts:EVE_CREATE_SESSION_ROUTE_PATH"
+    },
+    {
+      "kind": "usage",
+      "location": {
+        "column": 41,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 55
+      },
+      "symbol": "packages/eve/src/protocol/routes.ts:EVE_CREATE_SESSION_ROUTE_PATH"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 91,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 82
+      },
+      "symbol": "packages/eve/src/protocol/routes.ts:EVE_CREATE_SESSION_ROUTE_PATH"
+    }
+  ],
+  "compileChannelDefinition": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 27,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 36
+      },
+      "symbol": "packages/eve/src/compiler/normalize-channel.ts:compileChannelDefinition"
+    }
+  ],
+  "discoverAgent": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 29,
+        "file": "packages/eve/src/cli/commands/channel-add-conflicts.ts",
+        "line": 31
+      },
+      "symbol": "packages/eve/src/discover/discover-agent.ts:discoverAgent"
+    }
+  ]
+}

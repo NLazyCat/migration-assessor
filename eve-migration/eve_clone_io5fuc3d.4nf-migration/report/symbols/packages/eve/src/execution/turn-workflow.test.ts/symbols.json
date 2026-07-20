@@ -1,0 +1,251 @@
+{
+  "module": "packages/eve/src/execution/turn-workflow.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:resumeHookMock",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "resumeHookMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:createHookMock",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "createHookMock",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-workflow.test.ts:InboxMock:createIterator",
+          "kind": "property",
+          "line_range": [
+            938,
+            938
+          ],
+          "name": "createIterator",
+          "partial_analysis": false,
+          "return_type": ": ReturnType<typeof vi.fn>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-workflow.test.ts:InboxMock:dispose",
+          "kind": "property",
+          "line_range": [
+            939,
+            939
+          ],
+          "name": "dispose",
+          "partial_analysis": false,
+          "return_type": ": ReturnType<typeof vi.fn>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-workflow.test.ts:InboxMock:hook",
+          "kind": "property",
+          "line_range": [
+            940,
+            940
+          ],
+          "name": "hook",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:InboxMock",
+      "kind": "interface",
+      "line_range": [
+        937,
+        941
+      ],
+      "name": "InboxMock",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:installInbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        943,
+        959
+      ],
+      "name": "installInbox",
+      "params": [
+        {
+          "name": "values",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly cancelConflict?: { readonly runId: string } | null;\r\n    readonly cancelPayloads?: readonly unknown[];\r\n    readonly claimError?: unknown;\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly stayOpen?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InboxMock",
+      "signature": "export function installInbox(values: readonly unknown[], options: {\r\n    readonly cancelConflict?: { readonly runId: string } | null;\r\n    readonly cancelPayloads?: readonly unknown[];\r\n    readonly claimError?: unknown;\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly stayOpen?: boolean;\r\n  }) -> InboxMock",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:installHookDispatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        967,
+        980
+      ],
+      "name": "installHookDispatch",
+      "params": [
+        {
+          "name": "inboxes",
+          "optional": false,
+          "type": "readonly InboxMock[]"
+        },
+        {
+          "name": "cancelOptions",
+          "optional": false,
+          "type": "{\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly payloads?: readonly unknown[];\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function installHookDispatch(inboxes: readonly InboxMock[], cancelOptions: {\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly payloads?: readonly unknown[];\r\n  }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:cancelHookTokens",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        982,
+        986
+      ],
+      "name": "cancelHookTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function cancelHookTokens() -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:createCancelHookMock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        988,
+        1012
+      ],
+      "name": "createCancelHookMock",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly payloads?: readonly unknown[];\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function createCancelHookMock(token: string, options: {\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly payloads?: readonly unknown[];\r\n  }) -> unknown",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:createInboxMock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1014,
+        1045
+      ],
+      "name": "createInboxMock",
+      "params": [
+        {
+          "name": "values",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    readonly claimError?: unknown;\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly stayOpen?: boolean;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InboxMock",
+      "signature": "export function createInboxMock(values: readonly unknown[], options: {\r\n    readonly claimError?: unknown;\r\n    readonly conflict?: { readonly runId: string } | null;\r\n    readonly stayOpen?: boolean;\r\n  }) -> InboxMock",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:createInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1047,
+        1073
+      ],
+      "name": "createInput",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<Omit<TurnWorkflowInput, \"stepInput\" | \"version\">> & {\r\n    readonly sessionState?: DurableSessionState;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly input: TurnWorkflowInput;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n}",
+      "signature": "export function createInput(overrides: Partial<Omit<TurnWorkflowInput, \"stepInput\" | \"version\">> & {\r\n    readonly sessionState?: DurableSessionState;\r\n  }) -> {\r\n  readonly input: TurnWorkflowInput;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-workflow.test.ts:createSessionState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        1075,
+        1084
+      ],
+      "name": "createSessionState",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<DurableSessionState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableSessionState",
+      "signature": "export function createSessionState(overrides: Partial<DurableSessionState>) -> DurableSessionState",
+      "visibility": "Private"
+    }
+  ]
+}

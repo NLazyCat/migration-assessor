@@ -1,0 +1,279 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/remote-auth.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlow",
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "RemoteAuthFlow",
+      "partial_analysis": false,
+      "value": "typeof runRemoteAuthFlow;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps:runLoginFlow",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "runLoginFlow",
+          "partial_analysis": false,
+          "return_type": ": typeof runLoginFlow",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps:pickTeam",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "pickTeam",
+          "partial_analysis": false,
+          "return_type": ": typeof pickTeam",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps:resolveVercelDeployment",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "resolveVercelDeployment",
+          "partial_analysis": false,
+          "return_type": ": typeof resolveVercelDeployment",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps:resolveOidcToken",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "resolveOidcToken",
+          "partial_analysis": false,
+          "return_type": ": typeof resolveDevelopmentOidcToken",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps:prepareVercelTrustedSourceAccess",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "prepareVercelTrustedSourceAccess",
+          "partial_analysis": false,
+          "return_type": ": typeof prepareVercelTrustedSourceAccess",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps:applyVercelTrustedSourceAccess",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "applyVercelTrustedSourceAccess",
+          "partial_analysis": false,
+          "return_type": ": typeof applyVercelTrustedSourceAccess",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:RemoteAuthFlowDeps",
+      "kind": "interface",
+      "line_range": [
+        28,
+        35
+      ],
+      "name": "RemoteAuthFlowDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:defaultDeps",
+      "kind": "variable",
+      "line_range": [
+        37,
+        44
+      ],
+      "name": "defaultDeps",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:failed",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        46,
+        55
+      ],
+      "name": "failed",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "completedMutations",
+          "optional": false,
+          "type": "readonly RemoteAuthCompletedMutation[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Extract<RemoteAuthPreparation, { kind: \"failed\" }>",
+      "signature": "export function failed(message: string, completedMutations: readonly RemoteAuthCompletedMutation[]) -> Extract<RemoteAuthPreparation, { kind: \"failed\" }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:cancelled",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        61
+      ],
+      "name": "cancelled",
+      "params": [
+        {
+          "name": "completedMutations",
+          "optional": false,
+          "type": "readonly RemoteAuthCompletedMutation[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Extract<RemoteAuthPreparation, { kind: \"cancelled\" }>",
+      "signature": "export function cancelled(completedMutations: readonly RemoteAuthCompletedMutation[]) -> Extract<RemoteAuthPreparation, { kind: \"cancelled\" }>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:loginFailure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        63,
+        81
+      ],
+      "name": "loginFailure",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "LoginFlowResult"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RemoteAuthPreparation | undefined",
+      "signature": "export function loginFailure(result: LoginFlowResult) -> RemoteAuthPreparation | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:deploymentFailureMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "deploymentFailureMessage",
+      "params": [
+        {
+          "name": "failure",
+          "optional": false,
+          "type": "VercelDeploymentResolutionFailure"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function deploymentFailureMessage(failure: VercelDeploymentResolutionFailure) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:selectVercelDeploymentScope",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        87,
+        100
+      ],
+      "name": "selectVercelDeploymentScope",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "Pick<RemoteAuthFlowDeps, \"pickTeam\">"
+        },
+        {
+          "name": "workspaceRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "host",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function selectVercelDeploymentScope(deps: Pick<RemoteAuthFlowDeps, \"pickTeam\">, workspaceRoot: string, host: string, prompter: Prompter, signal: AbortSignal | undefined) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/remote-auth.ts:runRemoteAuthFlow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        107,
+        252
+      ],
+      "name": "runRemoteAuthFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly workspaceRoot: string;\r\n  readonly serverUrl: string;\r\n  readonly configureTrustedSources?: boolean;\r\n  readonly prompter: Prompter;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<RemoteAuthFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RemoteAuthPreparation>",
+      "signature": "export function runRemoteAuthFlow(input: {\r\n  readonly workspaceRoot: string;\r\n  readonly serverUrl: string;\r\n  readonly configureTrustedSources?: boolean;\r\n  readonly prompter: Prompter;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<RemoteAuthFlowDeps>;\r\n}) -> Promise<RemoteAuthPreparation>",
+      "visibility": "Public"
+    }
+  ]
+}

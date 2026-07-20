@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/setup/vercel-api-failure.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-api-failure.test.ts:failure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        12,
+        20
+      ],
+      "name": "failure",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "Partial<VercelCaptureFailure>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureFailure",
+      "signature": "export function failure(input: Partial<VercelCaptureFailure>) -> VercelCaptureFailure",
+      "visibility": "Private"
+    }
+  ]
+}

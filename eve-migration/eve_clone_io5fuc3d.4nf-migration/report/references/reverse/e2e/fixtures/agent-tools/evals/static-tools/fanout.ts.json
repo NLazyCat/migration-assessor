@@ -1,0 +1,55 @@
+{
+  "FANOUT_SIZE": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 50,
+        "file": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts",
+        "line": 29
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts:FANOUT_SIZE"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 37,
+        "file": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts",
+        "line": 38
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts:FANOUT_SIZE"
+    }
+  ],
+  "authoredFanoutExecutionsOverlap": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts",
+        "line": 47
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts:authoredFanoutExecutionsOverlap"
+    }
+  ],
+  "fanoutRequestsPrecedeFirstResult": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts",
+        "line": 41
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts:fanoutRequestsPrecedeFirstResult"
+    }
+  ],
+  "fanoutRequestsUseExpectedLabels": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 6,
+        "file": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts",
+        "line": 44
+      },
+      "symbol": "e2e/fixtures/agent-tools/evals/static-tools/fanout-authored.eval.ts:fanoutRequestsUseExpectedLabels"
+    }
+  ]
+}

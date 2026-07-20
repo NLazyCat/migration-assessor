@@ -1,0 +1,69 @@
+{
+  "module": "packages/eve/src/setup/boxes/select-channels.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.test.ts:silentSink",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "silentSink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.test.ts:MultipleHandler",
+      "kind": "type_alias",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "MultipleHandler",
+      "partial_analysis": false,
+      "value": "(opts: MultiSelectOptions<PrompterValue>) => Promise<PrompterValue[]>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.test.ts:createAsker",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "createAsker",
+      "params": [
+        {
+          "name": "multiple",
+          "optional": true,
+          "type": "MultipleHandler"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Asker",
+      "signature": "export function createAsker(multiple: MultipleHandler) -> Asker",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-channels.test.ts:stateDeployingToVercel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        25
+      ],
+      "name": "stateDeployingToVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function stateDeployingToVercel() -> SetupState",
+      "visibility": "Private"
+    }
+  ]
+}

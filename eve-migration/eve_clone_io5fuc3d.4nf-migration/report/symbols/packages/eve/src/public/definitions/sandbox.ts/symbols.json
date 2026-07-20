@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/public/definitions/sandbox.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/sandbox.ts:SandboxDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        36,
+        38
+      ],
+      "name": "SandboxDefinition",
+      "partial_analysis": false,
+      "value": "Record<string, never>, SO = Record<string, never>> =\r\n  | Optional<SharedSandboxDefinitionWithBootstrap<BO, SO>, \"backend\">\r\n  | Optional<SharedSandboxDefinitionWithoutBootstrap<BO, SO>, \"backend\">;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/sandbox.ts:defineSandbox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        51,
+        55
+      ],
+      "name": "defineSandbox",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "SandboxDefinition<BO, SO>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxDefinition<BO, SO>",
+      "signature": "export function defineSandbox(definition: SandboxDefinition<BO, SO>) -> SandboxDefinition<BO, SO>",
+      "visibility": "Public"
+    }
+  ]
+}

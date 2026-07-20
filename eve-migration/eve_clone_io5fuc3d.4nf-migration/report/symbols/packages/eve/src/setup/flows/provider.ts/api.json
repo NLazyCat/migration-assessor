@@ -1,0 +1,223 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "ProviderConnection",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderConnection = \"project\" | \"own-key\" | \"external\";"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "PROVIDER_QUESTION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const PROVIDER_QUESTION: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "EXTERNAL_PROVIDER_INSTRUCTIONS_TITLE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTERNAL_PROVIDER_INSTRUCTIONS_TITLE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        26,
+        31
+      ],
+      "name": "EXTERNAL_PROVIDER_INSTRUCTIONS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EXTERNAL_PROVIDER_INSTRUCTIONS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        34,
+        39
+      ],
+      "name": "ProviderFlowDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProviderFlowDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "getVercelAuthStatus",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof getVercelAuthStatus",
+      "signature": "getVercelAuthStatus: : typeof getVercelAuthStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "runLinkFlow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof runLinkFlow",
+      "signature": "runLinkFlow: : typeof runLinkFlow"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "appendEnv",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof appendEnv",
+      "signature": "appendEnv: : typeof appendEnv"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "validateGatewayApiKey",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof validateGatewayApiKey",
+      "signature": "validateGatewayApiKey: : typeof validateGatewayApiKey"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        46
+      ],
+      "name": "ProviderFlowResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderFlowResult = | LinkFlowResult\r\n  | {\r\n      kind: \"external-provider\";\r\n      /** The user runs a non-gateway provider; nothing was linked or written. */\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        51,
+        58
+      ],
+      "name": "ProviderPickerChoice",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderPickerChoice = | { kind: \"project\" }\r\n  | { kind: \"external\" }\r\n  | {\r\n      kind: \"inline-key\";\r\n      key: string;\r\n      validation: AcceptedGatewayKeyValidation;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        61,
+        66
+      ],
+      "name": "ProviderPickerRequest",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProviderPickerRequest { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "message: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "options",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SelectOption<ProviderConnection>[]",
+      "signature": "options: : readonly SelectOption<ProviderConnection>[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "initialValue",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ProviderConnection",
+      "signature": "initialValue: : ProviderConnection"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        69,
+        71
+      ],
+      "name": "ProviderPicker",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProviderPicker = (\r\n  request: ProviderPickerRequest,\r\n) => Promise<ProviderPickerChoice | undefined>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        133,
+        229
+      ],
+      "name": "runProviderFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  picker?: ProviderPicker;\r\n  deps?: Partial<ProviderFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProviderFlowResult>",
+      "signature": "export function runProviderFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  signal?: AbortSignal;\r\n  picker?: ProviderPicker;\r\n  deps?: Partial<ProviderFlowDeps>;\r\n}) -> Promise<ProviderFlowResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/flows/provider.ts"
+}

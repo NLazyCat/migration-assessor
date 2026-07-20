@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        6,
+        13
+      ],
+      "name": "reconcileSessionContinuationToken",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ContextAccessor"
+        },
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function reconcileSessionContinuationToken(ctx: ContextAccessor, session: HarnessSession) -> HarnessSession"
+    }
+  ],
+  "module": "packages/eve/src/execution/reconcile-session-continuation-token.ts"
+}

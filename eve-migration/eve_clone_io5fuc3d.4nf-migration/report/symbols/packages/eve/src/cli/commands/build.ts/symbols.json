@@ -1,0 +1,91 @@
+{
+  "module": "packages/eve/src/cli/commands/build.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/build.ts:BuildHost",
+      "kind": "type_alias",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "BuildHost",
+      "partial_analysis": false,
+      "value": "(appRoot: string, options: ApplicationBuildOptions) => Promise<string>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/build.ts:BuildCommandLogger",
+      "kind": "interface",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "BuildCommandLogger",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/build.ts:BuildCliOptions:profile",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "profile",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/commands/build.ts:BuildCliOptions:skipSandboxPrewarm",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "skipSandboxPrewarm",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/commands/build.ts:BuildCliOptions",
+      "kind": "interface",
+      "line_range": [
+        14,
+        17
+      ],
+      "name": "BuildCliOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/commands/build.ts:registerBuildCommand",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        65
+      ],
+      "name": "registerBuildCommand",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly buildHost?: BuildHost;\r\n  readonly logger: BuildCommandLogger;\r\n  readonly program: Command;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerBuildCommand(input: {\r\n  readonly appRoot: string;\r\n  readonly buildHost?: BuildHost;\r\n  readonly logger: BuildCommandLogger;\r\n  readonly program: Command;\r\n}) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

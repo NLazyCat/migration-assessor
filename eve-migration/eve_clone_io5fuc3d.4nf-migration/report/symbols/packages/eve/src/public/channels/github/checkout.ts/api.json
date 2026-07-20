@@ -1,0 +1,325 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        20,
+        26
+      ],
+      "name": "GitHubCheckoutOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckoutOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "depth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "depth?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "includeBase",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "includeBase?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"full\" | \"shallow\"",
+      "signature": "mode?: : \"full\" | \"shallow\""
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "ref",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ref?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        34
+      ],
+      "name": "GitHubCheckout",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckout { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "baseRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseRef: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "ref",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ref: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "sha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sha: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        37,
+        49
+      ],
+      "name": "GitHubCheckoutInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubCheckoutInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "api",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubApiOptions",
+      "signature": "api?: : GitHubApiOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "baseRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseRef?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "baseSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseSha?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubChannelCredentials",
+      "signature": "credentials?: : GitHubChannelCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "defaultBranch",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "defaultBranch?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "headRef",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headRef?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "installationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "installationId?: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "owner",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "owner?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "pullRequestNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "pullRequestNumber?: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "repo",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "repo?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        66,
+        157
+      ],
+      "name": "checkoutGitHubRepository",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "SandboxSession"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubCheckoutInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GitHubCheckout>",
+      "signature": "export function checkoutGitHubRepository(sandbox: SandboxSession, input: GitHubCheckoutInput) -> Promise<GitHubCheckout>"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/checkout.ts"
+}

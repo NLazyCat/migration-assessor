@@ -1,0 +1,130 @@
+{
+  "module": "packages/eve/test/tui-client/tui-status-line.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-status-line.ts:UNREACHABLE_HOST",
+      "kind": "variable",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "UNREACHABLE_HOST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-status-line.ts:runPendingDeployCycle",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        41,
+        99
+      ],
+      "name": "runPendingDeployCycle",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runPendingDeployCycle() -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-status-line.ts:runUnlinkedShowsNoVercelSegment",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        101,
+        145
+      ],
+      "name": "runUnlinkedShowsNoVercelSegment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runUnlinkedShowsNoVercelSegment() -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-status-line.ts:makeAppRoot",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        147,
+        157
+      ],
+      "name": "makeAppRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function makeAppRoot() -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-status-line.ts:waitForGone",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        159,
+        169
+      ],
+      "name": "waitForGone",
+      "params": [
+        {
+          "name": "screen",
+          "optional": false,
+          "type": "MockScreen"
+        },
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForGone(screen: MockScreen, text: string, ms: number) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/tui-status-line.ts:withTimeout",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        171,
+        181
+      ],
+      "name": "withTimeout",
+      "params": [
+        {
+          "name": "promise",
+          "optional": false,
+          "type": "Promise<T>"
+        },
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withTimeout(promise: Promise<T>, ms: number, message: string) -> Promise<T>",
+      "visibility": "Private"
+    }
+  ]
+}

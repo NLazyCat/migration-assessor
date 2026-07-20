@@ -1,0 +1,309 @@
+{
+  "module": "packages/eve/src/compiler/compile-from-memory.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:name",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:appRoot",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:agentRoot",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:model",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:outputSchema",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:tools",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "tools",
+          "partial_analysis": false,
+          "return_type": ": readonly CompileFromMemoryToolInput[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput:skills",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "skills",
+          "partial_analysis": false,
+          "return_type": ": readonly CompileFromMemorySkillInput[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryInput",
+      "kind": "interface",
+      "line_range": [
+        17,
+        44
+      ],
+      "name": "CompileFromMemoryInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryToolInput:name",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryToolInput:description",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryToolInput:inputSchema",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "inputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryToolInput:outputSchema",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryToolInput",
+      "kind": "interface",
+      "line_range": [
+        49,
+        61
+      ],
+      "name": "CompileFromMemoryToolInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemorySkillInput:name",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemorySkillInput:description",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemorySkillInput:markdown",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "markdown",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemorySkillInput",
+      "kind": "interface",
+      "line_range": [
+        66,
+        70
+      ],
+      "name": "CompileFromMemorySkillInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryResult:manifest",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryResult:moduleMap",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "moduleMap",
+          "partial_analysis": false,
+          "return_type": ": CompiledModuleMap",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/compiler/compile-from-memory.ts:CompileFromMemoryResult",
+      "kind": "interface",
+      "line_range": [
+        76,
+        79
+      ],
+      "name": "CompileFromMemoryResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-from-memory.ts:compileFromMemory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        89,
+        143
+      ],
+      "name": "compileFromMemory",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CompileFromMemoryInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompileFromMemoryResult",
+      "signature": "export function compileFromMemory(input: CompileFromMemoryInput) -> CompileFromMemoryResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/compiler/compile-from-memory.ts:createMemorySourceId",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        145,
+        150
+      ],
+      "name": "createMemorySourceId",
+      "params": [
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createMemorySourceId(logicalPath: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

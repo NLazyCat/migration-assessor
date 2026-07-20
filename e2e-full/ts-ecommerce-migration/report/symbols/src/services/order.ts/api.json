@@ -1,0 +1,205 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        4,
+        11
+      ],
+      "name": "IOrder",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface IOrder { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "id: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "userId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "userId: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "items",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Array<{ product: Product; quantity: number }>",
+      "signature": "items: : Array<{ product: Product; quantity: number }>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "totalAmount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "totalAmount: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": OrderStatus",
+      "signature": "status: : OrderStatus"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "createdAt",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "createdAt: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "OrderStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type OrderStatus = 'pending' | 'confirmed' | 'shipped' | 'delivered' | 'cancelled';"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        15,
+        46
+      ],
+      "name": "OrderService",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class OrderService { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        18,
+        30
+      ],
+      "name": "createOrder",
+      "params": [
+        {
+          "name": "user",
+          "optional": false,
+          "type": "IUser"
+        },
+        {
+          "name": "items",
+          "optional": false,
+          "type": "Array<{ product: Product; quantity: number }>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<IOrder>",
+      "signature": "OrderService::createOrder(user: IUser, items: Array<{ product: Product; quantity: number }>) -> Promise<IOrder>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "getOrderById",
+      "params": [
+        {
+          "name": "orderId",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<IOrder | null>",
+      "signature": "OrderService::getOrderById(orderId: number) -> Promise<IOrder | null>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        36,
+        38
+      ],
+      "name": "listOrdersByUser",
+      "params": [
+        {
+          "name": "userId",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<IOrder[]>",
+      "signature": "OrderService::listOrdersByUser(userId: number) -> Promise<IOrder[]>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        40,
+        45
+      ],
+      "name": "updateOrderStatus",
+      "params": [
+        {
+          "name": "orderId",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "status",
+          "optional": false,
+          "type": "OrderStatus"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "OrderService::updateOrderStatus(orderId: number, status: OrderStatus) -> Promise<boolean>"
+    }
+  ],
+  "module": "src/services/order.ts"
+}

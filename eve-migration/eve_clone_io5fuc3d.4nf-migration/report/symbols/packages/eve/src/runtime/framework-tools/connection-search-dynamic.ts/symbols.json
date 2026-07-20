@@ -1,0 +1,453 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:logger",
+      "kind": "variable",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "logger",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:CONNECTION_SEARCH_INPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        41,
+        52
+      ],
+      "name": "CONNECTION_SEARCH_INPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:connectionSchema",
+      "kind": "variable",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "connectionSchema",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:CONNECTION_SEARCH_RESULT_ITEM_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        55,
+        64
+      ],
+      "name": "CONNECTION_SEARCH_RESULT_ITEM_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:CONNECTION_SEARCH_OUTPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "CONNECTION_SEARCH_OUTPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultsKey",
+      "kind": "variable",
+      "line_range": [
+        73,
+        75
+      ],
+      "name": "ConnectionSearchResultsKey",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:qualifiedConnectionToolName",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        82
+      ],
+      "name": "qualifiedConnectionToolName",
+      "params": [
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function qualifiedConnectionToolName(connectionName: string, toolName: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchInput:connection",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "connection",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchInput:keywords",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "keywords",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchInput:limit",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "limit",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchInput",
+      "kind": "interface",
+      "line_range": [
+        84,
+        88
+      ],
+      "name": "ConnectionSearchInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:connection",
+          "kind": "property",
+          "line_range": [
+            91,
+            91
+          ],
+          "name": "connection",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:description",
+          "kind": "property",
+          "line_range": [
+            92,
+            92
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:error",
+          "kind": "property",
+          "line_range": [
+            93,
+            93
+          ],
+          "name": "error",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:inputSchema",
+          "kind": "property",
+          "line_range": [
+            94,
+            94
+          ],
+          "name": "inputSchema",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:needsAuthorization",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "needsAuthorization",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:outputSchema",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": Record<string, unknown>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:tool",
+          "kind": "property",
+          "line_range": [
+            97,
+            97
+          ],
+          "name": "tool",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem:qualifiedName",
+          "kind": "property",
+          "line_range": [
+            98,
+            98
+          ],
+          "name": "qualifiedName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:ConnectionSearchResultItem",
+      "kind": "interface",
+      "line_range": [
+        90,
+        99
+      ],
+      "name": "ConnectionSearchResultItem",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:tokenize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        106
+      ],
+      "name": "tokenize",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function tokenize(text: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:scoreMatch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        108,
+        127
+      ],
+      "name": "scoreMatch",
+      "params": [
+        {
+          "name": "queryTokens",
+          "optional": false,
+          "type": "string[]"
+        },
+        {
+          "name": "tool",
+          "optional": false,
+          "type": "ConnectionToolMetadata"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function scoreMatch(queryTokens: string[], tool: ConnectionToolMetadata) -> number",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:resolveInteractiveAuth",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        129,
+        138
+      ],
+      "name": "resolveInteractiveAuth",
+      "params": [
+        {
+          "name": "registry",
+          "optional": false,
+          "type": "ConnectionRegistry"
+        },
+        {
+          "name": "connectionName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<InteractiveAuthorizationDefinition | undefined>",
+      "signature": "export function resolveInteractiveAuth(registry: ConnectionRegistry, connectionName: string) -> Promise<InteractiveAuthorizationDefinition | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:completePendingAuthorizations",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        149,
+        171
+      ],
+      "name": "completePendingAuthorizations",
+      "params": [
+        {
+          "name": "registry",
+          "optional": false,
+          "type": "ConnectionRegistry"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Set<string>>",
+      "signature": "export function completePendingAuthorizations(registry: ConnectionRegistry) -> Promise<Set<string>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:executeConnectionSearch",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        173,
+        330
+      ],
+      "name": "executeConnectionSearch",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ConnectionSearchInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ConnectionSearchResultItem[] | AuthorizationSignal>",
+      "signature": "export function executeConnectionSearch(input: ConnectionSearchInput) -> Promise<ConnectionSearchResultItem[] | AuthorizationSignal>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:extractDiscoveredTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        337,
+        368
+      ],
+      "name": "extractDiscoveredTools",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ConnectionSearchResultItem[]",
+      "signature": "export function extractDiscoveredTools(messages: readonly ModelMessage[]) -> ConnectionSearchResultItem[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:createConnectionSearchEvents",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        378,
+        501
+      ],
+      "name": "createConnectionSearchEvents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "DynamicToolEvents",
+      "signature": "export function createConnectionSearchEvents() -> DynamicToolEvents",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/connection-search-dynamic.ts:createConnectionSearchResolver",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        508,
+        518
+      ],
+      "name": "createConnectionSearchResolver",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ResolvedDynamicToolResolver",
+      "signature": "export function createConnectionSearchResolver() -> ResolvedDynamicToolResolver",
+      "visibility": "Public"
+    }
+  ]
+}

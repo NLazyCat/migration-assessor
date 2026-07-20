@@ -1,0 +1,56 @@
+{
+  "module": "packages/eve/src/channel/receive-target.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/receive-target.ts:receiveTargetMarker",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "receiveTargetMarker",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/receive-target.ts:TypedReceiveTarget:[expr]",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": TTarget",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/receive-target.ts:TypedReceiveTarget",
+      "kind": "interface",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "TypedReceiveTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/receive-target.ts:InferReceiveTarget",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        19
+      ],
+      "name": "InferReceiveTarget",
+      "partial_analysis": false,
+      "value": "TChannel extends TypedReceiveTarget<infer TTarget> ? TTarget : Record<string, unknown>;",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "module": "packages/eve/src/execution/sandbox/abort-bound-session.test.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/abort-bound-session.test.ts:RecordedCall:method",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/abort-bound-session.test.ts:RecordedCall:abortSignal",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "abortSignal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/abort-bound-session.test.ts:RecordedCall",
+      "kind": "interface",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "RecordedCall",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/abort-bound-session.test.ts:createRecordingSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        58
+      ],
+      "name": "createRecordingSession",
+      "params": [
+        {
+          "name": "calls",
+          "optional": false,
+          "type": "RecordedCall[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxSession",
+      "signature": "export function createRecordingSession(calls: RecordedCall[]) -> SandboxSession",
+      "visibility": "Private"
+    }
+  ]
+}

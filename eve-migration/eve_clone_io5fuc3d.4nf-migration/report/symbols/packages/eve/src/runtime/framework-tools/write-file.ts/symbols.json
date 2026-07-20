@@ -1,0 +1,71 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/write-file.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/write-file.ts:WRITE_FILE_INPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "WRITE_FILE_INPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/write-file.ts:WRITE_FILE_OUTPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        30,
+        33
+      ],
+      "name": "WRITE_FILE_OUTPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/write-file.ts:executeWriteFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        38,
+        43
+      ],
+      "name": "executeWriteFile",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "ToolExecuteOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function executeWriteFile(input: unknown, options: ToolExecuteOptions) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/write-file.ts:WRITE_FILE_TOOL_DEFINITION",
+      "kind": "variable",
+      "line_range": [
+        45,
+        63
+      ],
+      "name": "WRITE_FILE_TOOL_DEFINITION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

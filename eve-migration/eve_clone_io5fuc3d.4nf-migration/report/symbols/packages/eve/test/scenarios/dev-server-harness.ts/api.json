@@ -1,0 +1,401 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        23
+      ],
+      "name": "RunningEveDev",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RunningEveDev { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "stderr",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => string",
+      "signature": "stderr: : () => string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "stdout",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => string",
+      "signature": "stdout: : () => string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "url",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "url: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        25,
+        29
+      ],
+      "name": "StartEveDevOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface StartEveDevOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "env",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string | undefined>>",
+      "signature": "env?: : Readonly<Record<string, string | undefined>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "runtime",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": \"bun\" | \"node\"",
+      "signature": "runtime?: : \"bun\" | \"node\""
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        37,
+        86
+      ],
+      "name": "startEveDev",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "StartEveDevOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RunningEveDev>",
+      "signature": "export function startEveDev(appRoot: string, options: StartEveDevOptions) -> Promise<RunningEveDev>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        120,
+        150
+      ],
+      "name": "runEveDevToExit",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "StartEveDevOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly code: number | null; readonly output: string }>",
+      "signature": "export function runEveDevToExit(appRoot: string, options: StartEveDevOptions) -> Promise<{ readonly code: number | null; readonly output: string }>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        171,
+        177
+      ],
+      "name": "isBunAvailable",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isBunAvailable() -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        179,
+        185
+      ],
+      "name": "hasUnsupportedWindowsEsmImport",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasUnsupportedWindowsEsmImport(text: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        191,
+        202
+      ],
+      "name": "hasKnownDevServerFailure",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasKnownDevServerFailure(text: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        204,
+        208
+      ],
+      "name": "wait",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function wait(ms: number) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        210,
+        223
+      ],
+      "name": "waitForCondition",
+      "params": [
+        {
+          "name": "condition",
+          "optional": false,
+          "type": "() => boolean | Promise<boolean>"
+        },
+        {
+          "name": "failureMessage",
+          "optional": false,
+          "type": "string | (() => string)"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForCondition(condition: () => boolean | Promise<boolean>, failureMessage: string | (() => string), timeoutMs: number) -> Promise<void>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        225,
+        243
+      ],
+      "name": "withinDeadline",
+      "params": [
+        {
+          "name": "operation",
+          "optional": false,
+          "type": "Promise<T>"
+        },
+        {
+          "name": "failureMessage",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function withinDeadline(operation: Promise<T>, failureMessage: string, timeoutMs: number) -> Promise<T>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        245,
+        272
+      ],
+      "name": "waitForPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function waitForPath(path: string, timeoutMs: number) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        274,
+        280
+      ],
+      "name": "fetchText",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function fetchText(serverUrl: string, path: string) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        282,
+        288
+      ],
+      "name": "fetchAgentInfo",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoResponse>",
+      "signature": "export function fetchAgentInfo(serverUrl: string) -> Promise<AgentInfoResponse>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        290,
+        297
+      ],
+      "name": "forceDevelopmentRebuild",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function forceDevelopmentRebuild(serverUrl: string) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        299,
+        309
+      ],
+      "name": "readDevelopmentRevision",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function readDevelopmentRevision(serverUrl: string) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        430,
+        455
+      ],
+      "name": "requestWithAgent",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "agent",
+          "optional": false,
+          "type": "Agent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ readonly body: string; readonly localPort: number | undefined }>",
+      "signature": "export function requestWithAgent(url: string, agent: Agent) -> Promise<{ readonly body: string; readonly localPort: number | undefined }>"
+    }
+  ],
+  "module": "packages/eve/test/scenarios/dev-server-harness.ts"
+}

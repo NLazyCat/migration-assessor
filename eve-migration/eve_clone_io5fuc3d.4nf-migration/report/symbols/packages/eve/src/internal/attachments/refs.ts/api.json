@@ -1,0 +1,130 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "ATTACHMENT_REF_SCHEME",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const ATTACHMENT_REF_SCHEME: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "ATTACHMENT_REF_WIRE_VERSION",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const ATTACHMENT_REF_WIRE_VERSION: unknown"
+    },
+    {
+      "generics": [
+        "TParams"
+      ],
+      "kind": "interface",
+      "line_range": [
+        40,
+        43
+      ],
+      "name": "AttachmentRef",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AttachmentRef { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "params",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TParams",
+      "signature": "params: : TParams"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "size",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "size?: : number"
+    },
+    {
+      "generics": [
+        "TParams"
+      ],
+      "kind": "function",
+      "line_range": [
+        55,
+        70
+      ],
+      "name": "encodeAttachmentRef",
+      "params": [
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "AttachmentRef<TParams>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "URL",
+      "signature": "export function encodeAttachmentRef(ref: AttachmentRef<TParams>) -> URL"
+    },
+    {
+      "generics": [
+        "TParams"
+      ],
+      "kind": "function",
+      "line_range": [
+        75,
+        129
+      ],
+      "name": "parseAttachmentRef",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "URL"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AttachmentRef<TParams>",
+      "signature": "export function parseAttachmentRef(url: URL) -> AttachmentRef<TParams>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        139,
+        141
+      ],
+      "name": "isAttachmentRefUrl",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is URL",
+      "signature": "export function isAttachmentRefUrl(value: unknown) -> value is URL"
+    }
+  ],
+  "module": "packages/eve/src/internal/attachments/refs.ts"
+}

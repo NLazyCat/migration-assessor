@@ -1,0 +1,231 @@
+{
+  "module": "packages/eve/src/setup/runner.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/runner.ts:RunResult",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "RunResult",
+      "partial_analysis": false,
+      "value": "{ kind: \"done\"; state: State } | { kind: \"cancelled\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/runner.ts:isCancellation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "isCancellation",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "signal",
+          "optional": false,
+          "type": "AbortSignal | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isCancellation(error: unknown, signal: AbortSignal | undefined) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/runner.ts:RetryableSetupError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            20,
+            23
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "optional": true,
+              "type": "{ cause?: unknown }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/runner.ts:RetryableSetupError",
+      "kind": "class",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "RetryableSetupError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/runner.ts:isRetryable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        28
+      ],
+      "name": "isRetryable",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isRetryable(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/runner.ts:AnySetupBox",
+      "kind": "type_alias",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "AnySetupBox",
+      "partial_analysis": false,
+      "value": "SetupBox<State, unknown, unknown>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/runner.ts:RunnerOptions:snapshot",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "snapshot",
+          "partial_analysis": false,
+          "return_type": ": (state: State) => State",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/runner.ts:RunnerOptions:signal",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/runner.ts:RunnerOptions",
+      "kind": "interface",
+      "line_range": [
+        39,
+        49
+      ],
+      "name": "RunnerOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/runner.ts:runInteractive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        58,
+        106
+      ],
+      "name": "runInteractive",
+      "params": [
+        {
+          "name": "boxes",
+          "optional": false,
+          "type": "readonly AnySetupBox<State>[]"
+        },
+        {
+          "name": "initialState",
+          "optional": false,
+          "type": "State"
+        },
+        {
+          "name": "sink",
+          "optional": false,
+          "type": "OutputSink"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "RunnerOptions<State>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RunResult<State>>",
+      "signature": "export function runInteractive(boxes: readonly AnySetupBox<State>[], initialState: State, sink: OutputSink, options: RunnerOptions<State>) -> Promise<RunResult<State>>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/runner.ts:runHeadless",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        114,
+        134
+      ],
+      "name": "runHeadless",
+      "params": [
+        {
+          "name": "boxes",
+          "optional": false,
+          "type": "readonly AnySetupBox<State>[]"
+        },
+        {
+          "name": "initialState",
+          "optional": false,
+          "type": "State"
+        },
+        {
+          "name": "sink",
+          "optional": false,
+          "type": "OutputSink"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "RunnerOptions<State>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<State>",
+      "signature": "export function runHeadless(boxes: readonly AnySetupBox<State>[], initialState: State, sink: OutputSink, options: RunnerOptions<State>) -> Promise<State>",
+      "visibility": "Public"
+    }
+  ]
+}

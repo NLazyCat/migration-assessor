@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        80,
+        108
+      ],
+      "name": "loadCompileMetadata",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "LoadCompileMetadataInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompileMetadata | null>",
+      "signature": "export function loadCompileMetadata(input: LoadCompileMetadataInput) -> Promise<CompileMetadata | null>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/loaders/compile-metadata.ts"
+}

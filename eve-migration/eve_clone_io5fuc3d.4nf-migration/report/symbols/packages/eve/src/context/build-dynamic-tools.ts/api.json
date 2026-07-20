@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        92,
+        99
+      ],
+      "name": "buildDynamicTools",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{\r\n  get<T>(key: ContextKey<T>): T | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly HarnessToolDefinition[]",
+      "signature": "export function buildDynamicTools(ctx: {\r\n  get<T>(key: ContextKey<T>): T | undefined;\r\n}) -> readonly HarnessToolDefinition[]"
+    }
+  ],
+  "module": "packages/eve/src/context/build-dynamic-tools.ts"
+}

@@ -1,0 +1,274 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "DockerCommandResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DockerCommandResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "exitCode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "exitCode: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "stderr",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "stderr: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "stdout",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "stdout: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "stdoutBytes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Buffer",
+      "signature": "stdoutBytes: : Buffer"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        21,
+        24
+      ],
+      "name": "DockerRunOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DockerRunOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "signal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "signal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "stdin",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Uint8Array",
+      "signature": "stdin?: : Uint8Array"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "DockerProcess",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DockerProcess { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "stdout",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ReadableStream<Uint8Array>",
+      "signature": "stdout: : ReadableStream<Uint8Array>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "stderr",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ReadableStream<Uint8Array>",
+      "signature": "stderr: : ReadableStream<Uint8Array>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        43,
+        48
+      ],
+      "name": "DockerCli",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DockerCli { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        54,
+        66
+      ],
+      "name": "DockerUnavailableError",
+      "params": [
+        {
+          "name": "cause",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class DockerUnavailableError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        55,
+        65
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "cause",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "DockerUnavailableError::constructor(cause: unknown) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        71,
+        82
+      ],
+      "name": "DockerDaemonUnavailableError",
+      "params": [
+        {
+          "name": "detail",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class DockerDaemonUnavailableError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        72,
+        81
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "detail",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "DockerDaemonUnavailableError::constructor(detail: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        89,
+        94
+      ],
+      "name": "assertDockerDaemonAvailable",
+      "params": [
+        {
+          "name": "cli",
+          "optional": false,
+          "type": "DockerCli"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function assertDockerDaemonAvailable(cli: DockerCli) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        112
+      ],
+      "name": "isDockerDaemonAvailableSync",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isDockerDaemonAvailableSync() -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        131,
+        190
+      ],
+      "name": "createDockerCli",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "DockerCli",
+      "signature": "export function createDockerCli() -> DockerCli"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/docker-cli.ts"
+}

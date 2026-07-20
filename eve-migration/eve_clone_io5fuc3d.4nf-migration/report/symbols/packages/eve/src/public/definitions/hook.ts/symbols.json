@@ -1,0 +1,560 @@
+{
+  "module": "packages/eve/src/public/definitions/hook.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:ProtocolEvent",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        8
+      ],
+      "name": "ProtocolEvent",
+      "partial_analysis": false,
+      "value": "Extract<\r\n  HandleMessageStreamEvent,\r\n  { type: TType }\r\n>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"action.result\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"actions.requested\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"authorization.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"authorization.required\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"compaction.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"compaction.requested\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"input.requested\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"message.appended\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"message.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"message.received\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"reasoning.appended\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"reasoning.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"result.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"session.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"session.failed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"session.started\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"session.waiting\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"step.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"step.failed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"step.started\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"subagent.called\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"subagent.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"subagent.event\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"subagent.started\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"turn.cancelled\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"turn.completed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"turn.failed\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap:[expr]",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": ProtocolEvent<\"turn.started\">",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/hook.ts:HookEventMap",
+      "kind": "interface",
+      "line_range": [
+        17,
+        46
+      ],
+      "name": "HookEventMap",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:HookEventType",
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "HookEventType",
+      "partial_analysis": false,
+      "value": "keyof HookEventMap;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:HookEventKey",
+      "kind": "type_alias",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "HookEventKey",
+      "partial_analysis": false,
+      "value": "HookEventType | \"*\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:HookEvent",
+      "kind": "type_alias",
+      "line_range": [
+        55,
+        57
+      ],
+      "name": "HookEvent",
+      "partial_analysis": false,
+      "value": "HookEventType> = TKey extends HookEventType\r\n  ? HookEventMap[TKey]\r\n  : HookEventMap[HookEventType];",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookContext:agent",
+          "kind": "property",
+          "line_range": [
+            66,
+            69
+          ],
+          "name": "agent",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly name: string;\r\n    readonly nodeId?: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookContext:channel",
+          "kind": "property",
+          "line_range": [
+            70,
+            73
+          ],
+          "name": "channel",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly kind?: string;\r\n    readonly continuationToken?: string;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/hook.ts:HookContext",
+      "kind": "interface",
+      "line_range": [
+        65,
+        74
+      ],
+      "name": "HookContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:StreamEventHook",
+      "kind": "type_alias",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "StreamEventHook",
+      "partial_analysis": false,
+      "value": "(event: TEvent, ctx: HookContext) => void | Promise<void>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:StreamEventHooks",
+      "kind": "type_alias",
+      "line_range": [
+        91,
+        93
+      ],
+      "name": "StreamEventHooks",
+      "partial_analysis": false,
+      "value": "HookEventKey> = {\r\n  readonly [TKey_ in TKey]?: StreamEventHook<HookEvent<TKey_>>;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/hook.ts:HookDefinition:events",
+          "kind": "property",
+          "line_range": [
+            105,
+            105
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": StreamEventHooks<TKey>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/hook.ts:HookDefinition",
+      "kind": "interface",
+      "line_range": [
+        104,
+        106
+      ],
+      "name": "HookDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:DefinedHookEventKeys",
+      "kind": "type_alias",
+      "line_range": [
+        108,
+        111
+      ],
+      "name": "DefinedHookEventKeys",
+      "partial_analysis": false,
+      "value": "Extract<\r\n  keyof NonNullable<TDefinition[\"events\"]>,\r\n  HookEventKey\r\n>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/definitions/hook.ts:defineHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        120,
+        124
+      ],
+      "name": "defineHook",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<T, HookDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HookDefinition<DefinedHookEventKeys<T>>",
+      "signature": "export function defineHook(definition: ExactDefinition<T, HookDefinition>) -> HookDefinition<DefinedHookEventKeys<T>>",
+      "visibility": "Public"
+    }
+  ]
+}

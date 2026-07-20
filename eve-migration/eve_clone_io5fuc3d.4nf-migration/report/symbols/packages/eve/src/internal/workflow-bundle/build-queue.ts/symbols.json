@@ -1,0 +1,45 @@
+{
+  "module": "packages/eve/src/internal/workflow-bundle/build-queue.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/build-queue.ts:activeBuilds",
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "activeBuilds",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/workflow-bundle/build-queue.ts:runQueuedWorkflowBuild",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        3,
+        18
+      ],
+      "name": "runQueuedWorkflowBuild",
+      "params": [
+        {
+          "name": "outputDirectory",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "build",
+          "optional": false,
+          "type": "() => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runQueuedWorkflowBuild(outputDirectory: string, build: () => Promise<void>) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

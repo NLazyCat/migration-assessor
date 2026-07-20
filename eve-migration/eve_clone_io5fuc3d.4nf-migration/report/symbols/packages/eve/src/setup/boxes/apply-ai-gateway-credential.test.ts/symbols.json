@@ -1,0 +1,114 @@
+{
+  "module": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts:silentSink",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "silentSink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts:fakeDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        25
+      ],
+      "name": "fakeDeps",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<ApplyAiGatewayCredentialDeps>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ApplyAiGatewayCredentialDeps",
+      "signature": "export function fakeDeps(overrides: Partial<ApplyAiGatewayCredentialDeps>) -> ApplyAiGatewayCredentialDeps",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts:createPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createPrompter() -> Prompter",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts:stateWith",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        35
+      ],
+      "name": "stateWith",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<SetupState>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function stateWith(overrides: Partial<SetupState>) -> SetupState",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/apply-ai-gateway-credential.test.ts:performWith",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        50
+      ],
+      "name": "performWith",
+      "params": [
+        {
+          "name": "prompter",
+          "optional": false,
+          "type": "Prompter"
+        },
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "ApplyAiGatewayCredentialDeps"
+        },
+        {
+          "name": "plan",
+          "optional": false,
+          "type": "ResolvedAiGateway"
+        },
+        {
+          "name": "linked",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function performWith(prompter: Prompter, deps: ApplyAiGatewayCredentialDeps, plan: ResolvedAiGateway, linked: boolean) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

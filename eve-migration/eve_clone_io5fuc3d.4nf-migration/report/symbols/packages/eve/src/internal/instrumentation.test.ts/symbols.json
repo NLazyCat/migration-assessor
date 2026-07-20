@@ -1,0 +1,21 @@
+{
+  "module": "packages/eve/src/internal/instrumentation.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/instrumentation.test.ts:fakeLogger",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "fakeLogger",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Logger & { warn: ReturnType<typeof vi.fn> }",
+      "signature": "export function fakeLogger() -> Logger & { warn: ReturnType<typeof vi.fn> }",
+      "visibility": "Private"
+    }
+  ]
+}

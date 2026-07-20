@@ -1,0 +1,947 @@
+{
+  "module": "packages/eve/src/public/next/server.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:EVE_BASE_URL_ENV",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "EVE_BASE_URL_ENV",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:DEFAULT_SERVER_READY_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DEFAULT_SERVER_READY_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:DEV_SERVER_REGISTRY_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "DEV_SERVER_REGISTRY_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:DEV_SERVER_REGISTRY_POLL_MS",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "DEV_SERVER_REGISTRY_POLL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:DEV_SERVER_STALE_LOCK_MS",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DEV_SERVER_STALE_LOCK_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:EVE_CACHE_DIRECTORY_NAME",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "EVE_CACHE_DIRECTORY_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:EVE_NEXT_DEV_SERVER_FILE_NAME",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "EVE_NEXT_DEV_SERVER_FILE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:EVE_NEXT_DEV_SERVER_LOCK_FILE_NAME",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "EVE_NEXT_DEV_SERVER_LOCK_FILE_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:ANSI_ESCAPE",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "ANSI_ESCAPE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:ANSI_ESCAPE_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "ANSI_ESCAPE_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:SERVER_URL_CANDIDATE_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "SERVER_URL_CANDIDATE_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:NEXT_PHASE_PRODUCTION_BUILD",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "NEXT_PHASE_PRODUCTION_BUILD",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveProcessHandle:origin",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "origin",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveProcessHandle:process",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "process",
+          "partial_analysis": false,
+          "return_type": ": ChildProcess",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/server.ts:EveProcessHandle",
+      "kind": "interface",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "EveProcessHandle",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveNextGlobalState:servers",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "servers",
+          "partial_analysis": false,
+          "return_type": ": Map<string, Promise<EveProcessHandle>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/server.ts:EveNextGlobalState",
+      "kind": "interface",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "EveNextGlobalState",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveDevServerRegistry:appRoot",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveDevServerRegistry:origin",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "origin",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveDevServerRegistry:pid",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "pid",
+          "partial_analysis": false,
+          "return_type": ": number | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/next/server.ts:EveDevServerRegistry:updatedAt",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "updatedAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/next/server.ts:EveDevServerRegistry",
+      "kind": "interface",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "EveDevServerRegistry",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:globalStateSymbol",
+      "kind": "variable",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "globalStateSymbol",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:getGlobalState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        50
+      ],
+      "name": "getGlobalState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveNextGlobalState",
+      "signature": "export function getGlobalState() -> EveNextGlobalState",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:joinRoutePrefix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        54
+      ],
+      "name": "joinRoutePrefix",
+      "params": [
+        {
+          "name": "prefix",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function joinRoutePrefix(prefix: string, path: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:normalizeOrigin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        58
+      ],
+      "name": "normalizeOrigin",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeOrigin(origin: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:readEveBaseUrlEnvironment",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        60,
+        68
+      ],
+      "name": "readEveBaseUrlEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readEveBaseUrlEnvironment() -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:isNodeErrorWithCode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        70,
+        72
+      ],
+      "name": "isNodeErrorWithCode",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "code",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNodeErrorWithCode(error: unknown, code: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:delay",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        74,
+        76
+      ],
+      "name": "delay",
+      "params": [
+        {
+          "name": "ms",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function delay(ms: number) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        78,
+        80
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:resolveEveCacheDirectory",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        82,
+        84
+      ],
+      "name": "resolveEveCacheDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveCacheDirectory(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:resolveEveDevServerRegistryPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        88
+      ],
+      "name": "resolveEveDevServerRegistryPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveDevServerRegistryPath(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:resolveEveDevServerLockPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        90,
+        92
+      ],
+      "name": "resolveEveDevServerLockPath",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveEveDevServerLockPath(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:normalizeDevServerRegistry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        94,
+        121
+      ],
+      "name": "normalizeDevServerRegistry",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveDevServerRegistry | undefined",
+      "signature": "export function normalizeDevServerRegistry(value: unknown) -> EveDevServerRegistry | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:isEveServerHealthy",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        123,
+        140
+      ],
+      "name": "isEveServerHealthy",
+      "params": [
+        {
+          "name": "origin",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isEveServerHealthy(origin: string) -> Promise<boolean>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:readUsableEveDevServerRegistry",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        142,
+        164
+      ],
+      "name": "readUsableEveDevServerRegistry",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function readUsableEveDevServerRegistry(appRoot: string) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:writeEveDevServerRegistry",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        166,
+        183
+      ],
+      "name": "writeEveDevServerRegistry",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handle",
+          "optional": false,
+          "type": "EveProcessHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeEveDevServerRegistry(appRoot: string, handle: EveProcessHandle) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:removeStaleEveDevServerLock",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        185,
+        198
+      ],
+      "name": "removeStaleEveDevServerLock",
+      "params": [
+        {
+          "name": "lockPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function removeStaleEveDevServerLock(lockPath: string) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:acquireEveDevServerLock",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        200,
+        244
+      ],
+      "name": "acquireEveDevServerLock",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<() => Promise<void>>",
+      "signature": "export function acquireEveDevServerLock(appRoot: string, timeoutMs: number) -> Promise<() => Promise<void>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:createEveBinaryPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        246,
+        248
+      ],
+      "name": "createEveBinaryPath",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createEveBinaryPath() -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:isLoopbackHostname",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        250,
+        257
+      ],
+      "name": "isLoopbackHostname",
+      "params": [
+        {
+          "name": "hostname",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isLoopbackHostname(hostname: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:parseLocalServerOrigin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        259,
+        274
+      ],
+      "name": "parseLocalServerOrigin",
+      "params": [
+        {
+          "name": "urlText",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function parseLocalServerOrigin(urlText: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:findLocalServerOrigin",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        276,
+        286
+      ],
+      "name": "findLocalServerOrigin",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function findLocalServerOrigin(output: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:formatEveDevOutputLine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        288,
+        308
+      ],
+      "name": "formatEveDevOutputLine",
+      "params": [
+        {
+          "name": "line",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "logLabel",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatEveDevOutputLine(line: string, logLabel: string | undefined) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:createEveDevOutputWriter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        310,
+        345
+      ],
+      "name": "createEveDevOutputWriter",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly logLabel?: string;\r\n  readonly stream: NodeJS.WriteStream;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly flush: () => void;\r\n  readonly write: (chunk: Buffer) => void;\r\n}",
+      "signature": "export function createEveDevOutputWriter(input: {\r\n  readonly logLabel?: string;\r\n  readonly stream: NodeJS.WriteStream;\r\n}) -> {\r\n  readonly flush: () => void;\r\n  readonly write: (chunk: Buffer) => void;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:startServerProcess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        347,
+        431
+      ],
+      "name": "startServerProcess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly args: readonly string[];\r\n  readonly command: string;\r\n  readonly cwd: string;\r\n  readonly env?: Record<string, string>;\r\n  readonly logLabel?: string;\r\n  readonly timeoutMs?: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function startServerProcess(input: {\r\n  readonly args: readonly string[];\r\n  readonly command: string;\r\n  readonly cwd: string;\r\n  readonly env?: Record<string, string>;\r\n  readonly logLabel?: string;\r\n  readonly timeoutMs?: number;\r\n}) -> Promise<EveProcessHandle>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:installProcessShutdown",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        433,
+        450
+      ],
+      "name": "installProcessShutdown",
+      "params": [
+        {
+          "name": "handle",
+          "optional": false,
+          "type": "EveProcessHandle"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveProcessHandle",
+      "signature": "export function installProcessShutdown(handle: EveProcessHandle) -> EveProcessHandle",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:startEveDevServer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        452,
+        466
+      ],
+      "name": "startEveDevServer",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "logLabel",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function startEveDevServer(appRoot: string, timeoutMs: number, logLabel: string | undefined) -> Promise<EveProcessHandle>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:startEveProductionServer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        468,
+        491
+      ],
+      "name": "startEveProductionServer",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly origin: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle> | undefined",
+      "signature": "export function startEveProductionServer(input: {\r\n  readonly appRoot: string;\r\n  readonly origin: string;\r\n}) -> Promise<EveProcessHandle> | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:resolveSharedEveDevServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        493,
+        521
+      ],
+      "name": "resolveSharedEveDevServer",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "timeoutMs",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "logLabel",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<EveProcessHandle>",
+      "signature": "export function resolveSharedEveDevServer(appRoot: string, timeoutMs: number, logLabel: string | undefined) -> Promise<EveProcessHandle>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/next/server.ts:resolveEveDestinationPrefix",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        523,
+        589
+      ],
+      "name": "resolveEveDestinationPrefix",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly devServerTimeoutMs?: number;\r\n  readonly logLabel?: string;\r\n  readonly phase: string;\r\n  readonly productionDestinationPrefix: string;\r\n  readonly productionServerOrigin?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveEveDestinationPrefix(input: {\r\n  readonly appRoot: string;\r\n  readonly devServerTimeoutMs?: number;\r\n  readonly logLabel?: string;\r\n  readonly phase: string;\r\n  readonly productionDestinationPrefix: string;\r\n  readonly productionServerOrigin?: string;\r\n}) -> Promise<string>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:EVE_SCHEDULE_TASK_VIRTUAL_ID_PREFIX",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "EVE_SCHEDULE_TASK_VIRTUAL_ID_PREFIX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:ScheduleTaskNitro:options",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": Pick<Nitro[\"options\"], \"experimental\" | \"scheduledTasks\" | \"tasks\" | \"virtual\">",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:ScheduleTaskNitro",
+      "kind": "interface",
+      "line_range": [
+        18,
+        20
+      ],
+      "name": "ScheduleTaskNitro",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:RegisterScheduleTaskHandlersInput:artifactsConfig",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "artifactsConfig",
+          "partial_analysis": false,
+          "return_type": ": NitroArtifactsConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:RegisterScheduleTaskHandlersInput:dispatchModulePath",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "dispatchModulePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:RegisterScheduleTaskHandlersInput:registrations",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "registrations",
+          "partial_analysis": false,
+          "return_type": ": readonly ScheduleRegistration[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:RegisterScheduleTaskHandlersInput",
+      "kind": "interface",
+      "line_range": [
+        30,
+        34
+      ],
+      "name": "RegisterScheduleTaskHandlersInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:SyncScheduleTaskHandlersInput:artifactsConfig",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "artifactsConfig",
+          "partial_analysis": false,
+          "return_type": ": NitroArtifactsConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:SyncScheduleTaskHandlersInput:dispatchModulePath",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "dispatchModulePath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:SyncScheduleTaskHandlersInput:next",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "next",
+          "partial_analysis": false,
+          "return_type": ": readonly ScheduleRegistration[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:SyncScheduleTaskHandlersInput:previous",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "previous",
+          "partial_analysis": false,
+          "return_type": ": readonly ScheduleRegistration[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:SyncScheduleTaskHandlersInput",
+      "kind": "interface",
+      "line_range": [
+        40,
+        45
+      ],
+      "name": "SyncScheduleTaskHandlersInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:registerScheduleTaskHandlers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        79
+      ],
+      "name": "registerScheduleTaskHandlers",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "ScheduleTaskNitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "RegisterScheduleTaskHandlersInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function registerScheduleTaskHandlers(nitro: ScheduleTaskNitro, input: RegisterScheduleTaskHandlersInput) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:syncScheduleTaskHandlers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        88,
+        102
+      ],
+      "name": "syncScheduleTaskHandlers",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "ScheduleTaskNitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SyncScheduleTaskHandlersInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function syncScheduleTaskHandlers(nitro: ScheduleTaskNitro, input: SyncScheduleTaskHandlersInput) -> boolean",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:removeScheduleTaskHandlers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        109,
+        144
+      ],
+      "name": "removeScheduleTaskHandlers",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "ScheduleTaskNitro"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function removeScheduleTaskHandlers(nitro: ScheduleTaskNitro) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:addScheduleTaskVirtualHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        146,
+        179
+      ],
+      "name": "addScheduleTaskVirtualHandler",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "ScheduleTaskNitro"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    artifactsConfig: NitroArtifactsConfig;\r\n    dispatchModulePath: string;\r\n    registration: ScheduleRegistration;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function addScheduleTaskVirtualHandler(nitro: ScheduleTaskNitro, input: {\r\n    artifactsConfig: NitroArtifactsConfig;\r\n    dispatchModulePath: string;\r\n    registration: ScheduleRegistration;\r\n  }) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:appendScheduledTask",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        181,
+        197
+      ],
+      "name": "appendScheduledTask",
+      "params": [
+        {
+          "name": "nitro",
+          "optional": false,
+          "type": "ScheduleTaskNitro"
+        },
+        {
+          "name": "cron",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "taskName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function appendScheduledTask(nitro: ScheduleTaskNitro, cron: string, taskName: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:normalizeScheduledTasks",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        199,
+        201
+      ],
+      "name": "normalizeScheduledTasks",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string | string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function normalizeScheduledTasks(value: string | string[]) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/schedule-task-routes.ts:areScheduleRegistrationsEqual",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        203,
+        232
+      ],
+      "name": "areScheduleRegistrationsEqual",
+      "params": [
+        {
+          "name": "left",
+          "optional": false,
+          "type": "readonly ScheduleRegistration[]"
+        },
+        {
+          "name": "right",
+          "optional": false,
+          "type": "readonly ScheduleRegistration[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function areScheduleRegistrationsEqual(left: readonly ScheduleRegistration[], right: readonly ScheduleRegistration[]) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

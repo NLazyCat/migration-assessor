@@ -1,0 +1,153 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/target.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/target.ts:DevelopmentTargetBase:serverUrl",
+          "kind": "property",
+          "line_range": [
+            4,
+            4
+          ],
+          "name": "serverUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/target.ts:DevelopmentTargetBase:workspaceRoot",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "workspaceRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/target.ts:DevelopmentTargetBase",
+      "kind": "interface",
+      "line_range": [
+        3,
+        7
+      ],
+      "name": "DevelopmentTargetBase",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/target.ts:LocalDevelopmentTarget:kind",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"local\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/target.ts:LocalDevelopmentTarget",
+      "kind": "interface",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "LocalDevelopmentTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/cli/dev/tui/target.ts:RemoteDevelopmentTarget:kind",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"remote\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/cli/dev/tui/target.ts:RemoteDevelopmentTarget",
+      "kind": "interface",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "RemoteDevelopmentTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/target.ts:DevelopmentTuiTarget",
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "DevelopmentTuiTarget",
+      "partial_analysis": false,
+      "value": "LocalDevelopmentTarget | RemoteDevelopmentTarget;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/target.ts:resolveTuiTitle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        45
+      ],
+      "name": "resolveTuiTitle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string | undefined;\r\n  readonly target: DevelopmentTuiTarget;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveTuiTitle(input: {\r\n  readonly name: string | undefined;\r\n  readonly target: DevelopmentTuiTarget;\r\n}) -> string | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/target.ts:remoteHost",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        50
+      ],
+      "name": "remoteHost",
+      "params": [
+        {
+          "name": "target",
+          "optional": false,
+          "type": "RemoteDevelopmentTarget"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function remoteHost(target: RemoteDevelopmentTarget) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

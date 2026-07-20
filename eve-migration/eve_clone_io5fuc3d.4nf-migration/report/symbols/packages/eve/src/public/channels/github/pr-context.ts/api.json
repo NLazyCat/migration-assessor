@@ -1,0 +1,233 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        23,
+        40
+      ],
+      "name": "GITHUB_DEFAULT_EXCLUDED_DIFF_FILES",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const GITHUB_DEFAULT_EXCLUDED_DIFF_FILES: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        43,
+        51
+      ],
+      "name": "GitHubPullRequestContextConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestContextConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "excludedFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "excludedFiles?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        54,
+        72
+      ],
+      "name": "GitHubPullRequestContextInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubPullRequestContextInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "api",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubApiOptions",
+      "signature": "api?: : GitHubApiOptions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "baseSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "baseSha?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "config",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubPullRequestContextConfig",
+      "signature": "config?: : GitHubPullRequestContextConfig"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "credentials",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubChannelCredentials",
+      "signature": "credentials?: : GitHubChannelCredentials"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "headSha",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "headSha?: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "installationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "installationId?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "owner",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "owner: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "pullRequestNumber",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number | null",
+      "signature": "pullRequestNumber: : number | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "repo",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "repo: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        81,
+        136
+      ],
+      "name": "buildGitHubPullRequestContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "GitHubPullRequestContextInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly string[] | undefined>",
+      "signature": "export function buildGitHubPullRequestContext(input: GitHubPullRequestContextInput) -> Promise<readonly string[] | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        139,
+        147
+      ],
+      "name": "mergeGitHubContext",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly github?: readonly string[];\r\n  readonly hook?: readonly string[];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly string[] | undefined",
+      "signature": "export function mergeGitHubContext(input: {\r\n  readonly github?: readonly string[];\r\n  readonly hook?: readonly string[];\r\n}) -> readonly string[] | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        242,
+        244
+      ],
+      "name": "fileMatchesAnyGlob",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "patterns",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function fileMatchesAnyGlob(filename: string, patterns: readonly string[]) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/pr-context.ts"
+}

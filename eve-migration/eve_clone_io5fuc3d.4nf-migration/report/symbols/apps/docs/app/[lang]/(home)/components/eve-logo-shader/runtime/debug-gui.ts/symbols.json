@@ -1,0 +1,73 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/debug-gui.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/debug-gui.ts:EveTransitionDebugGui",
+      "kind": "type_alias",
+      "line_range": [
+        5,
+        7
+      ],
+      "name": "EveTransitionDebugGui",
+      "partial_analysis": false,
+      "value": "{\r\n  destroy(): void;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/debug-gui.ts:EveTransitionDebugState",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        21
+      ],
+      "name": "EveTransitionDebugState",
+      "partial_analysis": false,
+      "value": "{\r\n  overrideEnabled: boolean;\r\n  progress: number;\r\n  gridScaleMultiplier: number;\r\n  glyphScale: number;\r\n  durationSeconds: number;\r\n  paintDecayPerFrame120: number;\r\n  diffusionAmount: number;\r\n  diffusionJitter: number;\r\n  brushRadius: number;\r\n  brushStrength: number;\r\n  visualizePaintBuffer: boolean;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/debug-gui.ts:destroyTransitionDebugGui",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        35
+      ],
+      "name": "destroyTransitionDebugGui",
+      "params": [
+        {
+          "name": "gui",
+          "optional": false,
+          "type": "EveTransitionDebugGui | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function destroyTransitionDebugGui(gui: EveTransitionDebugGui | undefined) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/debug-gui.ts:setupTransitionDebugGui",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        37,
+        80
+      ],
+      "name": "setupTransitionDebugGui",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  transitionDebug: EveTransitionDebugState;\r\n  isCancelled: () => boolean;\r\n  isDisposed: () => boolean;\r\n  onReady: (gui: EveTransitionDebugGui) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function setupTransitionDebugGui(_: {\r\n  transitionDebug: EveTransitionDebugState;\r\n  isCancelled: () => boolean;\r\n  isDisposed: () => boolean;\r\n  onReady: (gui: EveTransitionDebugGui) => void;\r\n}) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

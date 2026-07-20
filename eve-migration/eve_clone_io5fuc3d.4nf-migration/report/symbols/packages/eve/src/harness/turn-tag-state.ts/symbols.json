@@ -1,0 +1,504 @@
+{
+  "module": "packages/eve/src/harness/turn-tag-state.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:HARNESS_TURN_USAGE_STATE_KEY",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "HARNESS_TURN_USAGE_STATE_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:SESSION_TOKEN_BUDGET_BASELINE_KEY",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "SESSION_TOKEN_BUDGET_BASELINE_KEY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals:cacheReadTokens",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "cacheReadTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals:cacheWriteTokens",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "cacheWriteTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals:costUsd",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "costUsd",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals:inputTokens",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "inputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals:outputTokens",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "outputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals:sawCost",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "sawCost",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageTotals",
+      "kind": "interface",
+      "line_range": [
+        31,
+        38
+      ],
+      "name": "TokenUsageTotals",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:TokenUsageDelta",
+      "kind": "type_alias",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "TokenUsageDelta",
+      "partial_analysis": false,
+      "value": "Partial<TokenUsageTotals>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TurnUsageState:session",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": TokenUsageTotals",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:TurnUsageState:turnId",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "turnId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:TurnUsageState",
+      "kind": "interface",
+      "line_range": [
+        49,
+        52
+      ],
+      "name": "TurnUsageState",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:ZERO_TOKEN_USAGE",
+      "kind": "variable",
+      "line_range": [
+        54,
+        61
+      ],
+      "name": "ZERO_TOKEN_USAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:getTurnUsageState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        64,
+        66
+      ],
+      "name": "getTurnUsageState",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnUsageState | undefined",
+      "signature": "export function getTurnUsageState(state: SessionStateMap | undefined) -> TurnUsageState | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:SessionTokenLimitViolation",
+      "kind": "type_alias",
+      "line_range": [
+        68,
+        78
+      ],
+      "name": "SessionTokenLimitViolation",
+      "partial_analysis": false,
+      "value": "| {\r\n      readonly kind: \"input\";\r\n      readonly limit: number;\r\n      readonly usedTokens: number;\r\n    }\r\n  | {\r\n      readonly kind: \"output\";\r\n      readonly limit: number;\r\n      readonly usedTokens: number;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:getSessionTokenUsage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        82
+      ],
+      "name": "getSessionTokenUsage",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "Pick<HarnessSession, \"state\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsageTotals",
+      "signature": "export function getSessionTokenUsage(session: Pick<HarnessSession, \"state\">) -> TokenUsageTotals",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:toUsage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        85,
+        92
+      ],
+      "name": "toUsage",
+      "params": [
+        {
+          "name": "totals",
+          "optional": false,
+          "type": "TokenUsageTotals"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsage",
+      "signature": "export function toUsage(totals: TokenUsageTotals) -> TokenUsage",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:SessionTokenBudgetBaseline:inputTokens",
+          "kind": "property",
+          "line_range": [
+            100,
+            100
+          ],
+          "name": "inputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/harness/turn-tag-state.ts:SessionTokenBudgetBaseline:outputTokens",
+          "kind": "property",
+          "line_range": [
+            101,
+            101
+          ],
+          "name": "outputTokens",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:SessionTokenBudgetBaseline",
+      "kind": "interface",
+      "line_range": [
+        99,
+        102
+      ],
+      "name": "SessionTokenBudgetBaseline",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:ZERO_BUDGET_BASELINE",
+      "kind": "variable",
+      "line_range": [
+        104,
+        107
+      ],
+      "name": "ZERO_BUDGET_BASELINE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:getSessionTokenBudgetBaseline",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        109,
+        116
+      ],
+      "name": "getSessionTokenBudgetBaseline",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "SessionStateMap | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionTokenBudgetBaseline",
+      "signature": "export function getSessionTokenBudgetBaseline(state: SessionStateMap | undefined) -> SessionTokenBudgetBaseline",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:extendSessionTokenBudget",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        139
+      ],
+      "name": "extendSessionTokenBudget",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function extendSessionTokenBudget(session: HarnessSession) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:getSessionTokenLimitViolation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        168
+      ],
+      "name": "getSessionTokenLimitViolation",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "Pick<HarnessSession, \"limits\" | \"state\">"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionTokenLimitViolation | null",
+      "signature": "export function getSessionTokenLimitViolation(session: Pick<HarnessSession, \"limits\" | \"state\">) -> SessionTokenLimitViolation | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:setTurnUsageState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        179
+      ],
+      "name": "setTurnUsageState",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        },
+        {
+          "name": "next",
+          "optional": false,
+          "type": "TurnUsageState"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function setTurnUsageState(session: HarnessSession, next: TurnUsageState) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:accumulateTurnUsage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        187,
+        204
+      ],
+      "name": "accumulateTurnUsage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly turnId: string;\r\n  readonly usage: TokenUsageDelta | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnUsageState",
+      "signature": "export function accumulateTurnUsage(input: {\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly turnId: string;\r\n  readonly usage: TokenUsageDelta | undefined;\r\n}) -> TurnUsageState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:accumulateSessionUsage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        213,
+        228
+      ],
+      "name": "accumulateSessionUsage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly usage: TokenUsageDelta;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TurnUsageState",
+      "signature": "export function accumulateSessionUsage(input: {\r\n  readonly previous: TurnUsageState | undefined;\r\n  readonly usage: TokenUsageDelta;\r\n}) -> TurnUsageState",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:addTokenUsage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        230,
+        239
+      ],
+      "name": "addTokenUsage",
+      "params": [
+        {
+          "name": "base",
+          "optional": false,
+          "type": "TokenUsageTotals"
+        },
+        {
+          "name": "delta",
+          "optional": false,
+          "type": "TokenUsageTotals"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsageTotals",
+      "signature": "export function addTokenUsage(base: TokenUsageTotals, delta: TokenUsageTotals) -> TokenUsageTotals",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/turn-tag-state.ts:toTokenUsageDelta",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        241,
+        256
+      ],
+      "name": "toTokenUsageDelta",
+      "params": [
+        {
+          "name": "usage",
+          "optional": false,
+          "type": "TokenUsageDelta | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TokenUsageTotals",
+      "signature": "export function toTokenUsageDelta(usage: TokenUsageDelta | undefined) -> TokenUsageTotals",
+      "visibility": "Private"
+    }
+  ]
+}

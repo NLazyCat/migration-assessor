@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/runtime/cache-key.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/cache-key.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/cache-key.scenario.test.ts:writeCompileMetadata",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        87,
+        136
+      ],
+      "name": "writeCompileMetadata",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  sourceGraphHash: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function writeCompileMetadata(input: {\r\n  appRoot: string;\r\n  sourceGraphHash: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

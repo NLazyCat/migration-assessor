@@ -1,0 +1,62 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        62
+      ],
+      "name": "normalizeEsmImportSpecifier",
+      "params": [
+        {
+          "name": "specifier",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeEsmImportSpecifier(specifier: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        67,
+        69
+      ],
+      "name": "stringifyEsmImportSpecifier",
+      "params": [
+        {
+          "name": "specifier",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stringifyEsmImportSpecifier(specifier: string) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        74,
+        80
+      ],
+      "name": "normalizeGeneratedEsmImportSpecifiers",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeGeneratedEsmImportSpecifiers(source: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/import-specifier.ts"
+}

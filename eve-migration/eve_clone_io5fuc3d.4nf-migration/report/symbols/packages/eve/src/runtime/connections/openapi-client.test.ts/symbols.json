@@ -1,0 +1,75 @@
+{
+  "module": "packages/eve/src/runtime/connections/openapi-client.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-client.test.ts:SPEC",
+      "kind": "variable",
+      "line_range": [
+        9,
+        56
+      ],
+      "name": "SPEC",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-client.test.ts:SWAGGER_SPEC",
+      "kind": "variable",
+      "line_range": [
+        58,
+        99
+      ],
+      "name": "SWAGGER_SPEC",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-client.test.ts:makeConnection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        101,
+        115
+      ],
+      "name": "makeConnection",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<ResolvedConnectionDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedConnectionDefinition",
+      "signature": "export function makeConnection(overrides: Partial<ResolvedConnectionDefinition>) -> ResolvedConnectionDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/openapi-client.test.ts:securitySpec",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        872,
+        885
+      ],
+      "name": "securitySpec",
+      "params": [
+        {
+          "name": "scheme",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function securitySpec(scheme: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

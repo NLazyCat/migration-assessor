@@ -1,0 +1,57 @@
+{
+  "buildExtensionPackage": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/cli/commands/extension-build.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/build-extension.ts:buildExtensionPackage"
+    }
+  ],
+  "createCliTheme": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/cli/commands/extension-build.ts",
+        "line": 38
+      },
+      "symbol": "packages/eve/src/cli/ui/output.ts:createCliTheme"
+    }
+  ],
+  "createLogger": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/cli/commands/extension-build.ts",
+        "line": 15
+      },
+      "symbol": "packages/eve/src/internal/logging.ts:createLogger"
+    }
+  ],
+  "renderCliTaggedLine": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 4,
+        "file": "packages/eve/src/cli/commands/extension-build.ts",
+        "line": 40
+      },
+      "symbol": "packages/eve/src/cli/ui/output.ts:renderCliTaggedLine"
+    }
+  ],
+  "tryReadExtensionBuildConfig": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 23,
+        "file": "packages/eve/src/cli/commands/extension-build.ts",
+        "line": 25
+      },
+      "symbol": "packages/eve/src/internal/nitro/host/build-extension.ts:tryReadExtensionBuildConfig"
+    }
+  ]
+}

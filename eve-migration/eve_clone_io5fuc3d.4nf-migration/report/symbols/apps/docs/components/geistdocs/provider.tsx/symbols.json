@@ -1,0 +1,39 @@
+{
+  "module": "apps/docs/components/geistdocs/provider.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/components/geistdocs/provider.tsx:GeistdocsProviderProps",
+      "kind": "type_alias",
+      "line_range": [
+        9,
+        13
+      ],
+      "name": "GeistdocsProviderProps",
+      "partial_analysis": false,
+      "value": "Omit<ComponentProps<typeof PackageProvider>, \"config\"> & {\r\n  basePath: string | undefined;\r\n  className?: string;\r\n  lang?: string;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/components/geistdocs/provider.tsx:GeistdocsProvider",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        15,
+        28
+      ],
+      "name": "GeistdocsProvider",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "GeistdocsProviderProps"
+        }
+      ],
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

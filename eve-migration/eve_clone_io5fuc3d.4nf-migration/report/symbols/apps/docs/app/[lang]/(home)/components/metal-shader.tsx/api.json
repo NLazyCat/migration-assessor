@@ -1,0 +1,41 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        101,
+        517
+      ],
+      "name": "MetalShader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MetalShaderProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function MetalShader(_: MetalShaderProps) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        519,
+        542
+      ],
+      "name": "HeroMetalShader",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ className?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function HeroMetalShader(_: { className?: string }) -> void"
+    }
+  ],
+  "module": "apps/docs/app/[lang]/(home)/components/metal-shader.tsx"
+}

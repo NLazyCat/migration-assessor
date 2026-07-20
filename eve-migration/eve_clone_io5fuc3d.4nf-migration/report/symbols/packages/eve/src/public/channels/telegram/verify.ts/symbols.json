@@ -1,0 +1,159 @@
+{
+  "module": "packages/eve/src/public/channels/telegram/verify.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:log",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:TelegramWebhookSecretToken",
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "TelegramWebhookSecretToken",
+      "partial_analysis": false,
+      "value": "string | (() => string | Promise<string>);",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:TelegramWebhookVerifier",
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "TelegramWebhookVerifier",
+      "partial_analysis": false,
+      "value": "(\r\n  request: Request,\r\n  body: string,\r\n) => unknown | Promise<unknown>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/telegram/verify.ts:TelegramVerifyOptions:secretToken",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "secretToken",
+          "partial_analysis": false,
+          "return_type": ": TelegramWebhookSecretToken | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/telegram/verify.ts:TelegramVerifyOptions:webhookVerifier",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "webhookVerifier",
+          "partial_analysis": false,
+          "return_type": ": TelegramWebhookVerifier",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:TelegramVerifyOptions",
+      "kind": "interface",
+      "line_range": [
+        35,
+        38
+      ],
+      "name": "TelegramVerifyOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:resolveTelegramWebhookSecretToken",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        41,
+        47
+      ],
+      "name": "resolveTelegramWebhookSecretToken",
+      "params": [
+        {
+          "name": "secretToken",
+          "optional": true,
+          "type": "TelegramWebhookSecretToken"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveTelegramWebhookSecretToken(secretToken: TelegramWebhookSecretToken) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:verifyTelegramRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        55,
+        78
+      ],
+      "name": "verifyTelegramRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "TelegramVerifyOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function verifyTelegramRequest(request: Request, options: TelegramVerifyOptions) -> Promise<string>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/telegram/verify.ts:constantTimeCompare",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        80,
+        88
+      ],
+      "name": "constantTimeCompare",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function constantTimeCompare(a: string, b: string) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

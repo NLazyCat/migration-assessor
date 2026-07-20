@@ -10,25 +10,27 @@ version = "0.1.0"
 edition = "2024"
 
 [workspace.dependencies]
-anyhow = "1.0.103"
+anyhow = "1.0.104"
 cargo_metadata = "0.23.1"
 chrono = { version = "0.4.45", features = ["serde"] }
 clap = { version = "4.6.2", features = ["derive"] }
+dirs = "6.0"
+encoding_rs = "0.8"
 git2 = "0.21.0"
 glob = "0.3.3"
-oxc_allocator = "0.120.0"
-oxc_ast = "0.120.0"
-oxc_parser = "0.120.0"
-oxc_semantic = "0.120.0"
-oxc_span = "0.120.0"
-oxc_syntax = "0.120.0"
-proc-macro2 = { version = "1.0.106", features = ["span-locations"] }
-quote = "1.0.46"
+oxc_allocator = "0.140.0"
+oxc_ast = "0.140.0"
+oxc_parser = "0.140.0"
+oxc_semantic = "0.140.0"
+oxc_span = "0.140.0"
+oxc_syntax = "0.140.0"
+proc-macro2 = { version = "1.0.107", features = ["span-locations"] }
+quote = "1.0.47"
 rayon = "1.12"
-serde = { version = "1.0.228", features = ["derive"] }
-serde_json = "1.0.150"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
 syn = { version = "2.0.119", features = ["full", "visit"] }
-thiserror = "2.0.18"
+thiserror = "2.0.19"
 toml = "1.1.3"
-tempfile = "3.19.1"
+tempfile = "3.27.0"
 walkdir = "2.5.0"

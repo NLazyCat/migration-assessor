@@ -1,0 +1,32 @@
+{
+  "module": "packages/eve/src/runtime/channels/registry.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/channels/registry.test.ts:makeChannelDefinition",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        30
+      ],
+      "name": "makeChannelDefinition",
+      "params": [
+        {
+          "name": "adapter",
+          "optional": false,
+          "type": "ChannelAdapter | undefined"
+        },
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<ResolvedChannelDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedChannelDefinition",
+      "signature": "export function makeChannelDefinition(adapter: ChannelAdapter | undefined, overrides: Partial<ResolvedChannelDefinition>) -> ResolvedChannelDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

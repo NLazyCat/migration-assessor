@@ -1,0 +1,112 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const WORKFLOW_RUNTIME_ACTION_INTERRUPT_KIND: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        9,
+        15
+      ],
+      "name": "isWorkflowRuntimeActionInterrupt",
+      "params": [
+        {
+          "name": "interrupt",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isWorkflowRuntimeActionInterrupt(interrupt: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        48
+      ],
+      "name": "buildRuntimeActionFromWorkflowInterrupt",
+      "params": [
+        {
+          "name": "interrupt",
+          "optional": false,
+          "type": "WorkflowSandboxInterrupt"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionRequest",
+      "signature": "export function buildRuntimeActionFromWorkflowInterrupt(interrupt: WorkflowSandboxInterrupt) -> RuntimeActionRequest"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        51,
+        76
+      ],
+      "name": "getWorkflowRuntimeActionInterrupts",
+      "params": [
+        {
+          "name": "interrupt",
+          "optional": false,
+          "type": "WorkflowSandboxInterrupt"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowSandboxInterrupt[]",
+      "signature": "export function getWorkflowRuntimeActionInterrupts(interrupt: WorkflowSandboxInterrupt) -> WorkflowSandboxInterrupt[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        78,
+        84
+      ],
+      "name": "buildRuntimeActionsFromWorkflowInterrupt",
+      "params": [
+        {
+          "name": "interrupt",
+          "optional": false,
+          "type": "WorkflowSandboxInterrupt"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionRequest[]",
+      "signature": "export function buildRuntimeActionsFromWorkflowInterrupt(interrupt: WorkflowSandboxInterrupt) -> RuntimeActionRequest[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        90
+      ],
+      "name": "getRuntimeActionKeysFromWorkflowInterrupt",
+      "params": [
+        {
+          "name": "interrupt",
+          "optional": false,
+          "type": "WorkflowSandboxInterrupt"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function getRuntimeActionKeysFromWorkflowInterrupt(interrupt: WorkflowSandboxInterrupt) -> string[]"
+    }
+  ],
+  "module": "packages/eve/src/harness/workflow-runtime-action-state.ts"
+}

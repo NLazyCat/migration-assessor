@@ -1,0 +1,64 @@
+{
+  "module": "packages/eve/src/runtime/resolve-sandbox.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-sandbox.ts:resolveSandboxDefinition",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        20,
+        68
+      ],
+      "name": "resolveSandboxDefinition",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "CompiledSandboxDefinition"
+        },
+        {
+          "name": "moduleMap",
+          "optional": false,
+          "type": "CompiledModuleMap"
+        },
+        {
+          "name": "nodeId",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedSandboxDefinition>",
+      "signature": "export function resolveSandboxDefinition(definition: CompiledSandboxDefinition, moduleMap: CompiledModuleMap, nodeId: string | undefined) -> Promise<ResolvedSandboxDefinition>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-sandbox.ts:resolveBackend",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        70,
+        103
+      ],
+      "name": "resolveBackend",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackend",
+      "signature": "export function resolveBackend(value: unknown, logicalPath: string) -> SandboxBackend",
+      "visibility": "Private"
+    }
+  ]
+}

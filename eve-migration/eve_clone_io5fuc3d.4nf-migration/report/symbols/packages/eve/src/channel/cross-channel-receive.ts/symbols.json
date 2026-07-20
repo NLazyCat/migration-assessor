@@ -1,0 +1,360 @@
+{
+  "module": "packages/eve/src/channel/cross-channel-receive.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelReceiveOptions:message",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string | UserContent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelReceiveOptions:target",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": TTarget",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelReceiveOptions:auth",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "auth",
+          "partial_analysis": false,
+          "return_type": ": SessionAuthContext | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelReceiveOptions",
+      "kind": "interface",
+      "line_range": [
+        17,
+        21
+      ],
+      "name": "CrossChannelReceiveOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelReceiveFn",
+      "kind": "type_alias",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "CrossChannelReceiveFn",
+      "partial_analysis": false,
+      "value": "<TChannel>(\r\n  channel: TChannel,\r\n  options: CrossChannelReceiveOptions<InferReceiveTarget<TChannel>>,\r\n) => Promise<Session>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelTarget:name",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelTarget:definition",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "definition",
+          "partial_analysis": false,
+          "return_type": ": CompiledChannel",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelTarget:receive",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "receive",
+          "partial_analysis": false,
+          "return_type": ": CompiledChannel[\"receive\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelTarget:adapter",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "adapter",
+          "partial_analysis": false,
+          "return_type": ": ChannelAdapter",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:CrossChannelTarget",
+      "kind": "interface",
+      "line_range": [
+        39,
+        44
+      ],
+      "name": "CrossChannelTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:toCrossChannelTargets",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        68
+      ],
+      "name": "toCrossChannelTargets",
+      "params": [
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly ResolvedChannelDefinition[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly CrossChannelTarget[]",
+      "signature": "export function toCrossChannelTargets(channels: readonly ResolvedChannelDefinition[]) -> readonly CrossChannelTarget[]",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:createCrossChannelReceiveFn",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        76,
+        97
+      ],
+      "name": "createCrossChannelReceiveFn",
+      "params": [
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "Runtime"
+        },
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly CrossChannelTarget[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CrossChannelReceiveFn",
+      "signature": "export function createCrossChannelReceiveFn(runtime: Runtime, channels: readonly CrossChannelTarget[]) -> CrossChannelReceiveFn",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:InvokeChannelReceiveInput:runtime",
+          "kind": "property",
+          "line_range": [
+            100,
+            100
+          ],
+          "name": "runtime",
+          "partial_analysis": false,
+          "return_type": ": Runtime",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:InvokeChannelReceiveInput:target",
+          "kind": "property",
+          "line_range": [
+            101,
+            101
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": Pick<CrossChannelTarget, \"name\" | \"receive\" | \"adapter\">",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:InvokeChannelReceiveInput:input",
+          "kind": "property",
+          "line_range": [
+            102,
+            106
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly message: string;\r\n    readonly target: Readonly<Record<string, unknown>>;\r\n    readonly auth: SessionAuthContext | null;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:InvokeChannelReceiveInput:describeMissingReceive",
+          "kind": "property",
+          "line_range": [
+            107,
+            107
+          ],
+          "name": "describeMissingReceive",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/channel/cross-channel-receive.ts:InvokeChannelReceiveInput:describeMissingAdapter",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "describeMissingAdapter",
+          "partial_analysis": false,
+          "return_type": ": () => string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:InvokeChannelReceiveInput",
+      "kind": "interface",
+      "line_range": [
+        99,
+        109
+      ],
+      "name": "InvokeChannelReceiveInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:invokeChannelReceive",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        117,
+        126
+      ],
+      "name": "invokeChannelReceive",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "InvokeChannelReceiveInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Session>",
+      "signature": "export function invokeChannelReceive(args: InvokeChannelReceiveInput) -> Promise<Session>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:resolveTargetByReference",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        128,
+        146
+      ],
+      "name": "resolveTargetByReference",
+      "params": [
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly CrossChannelTarget[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CrossChannelTarget",
+      "signature": "export function resolveTargetByReference(ref: unknown, channels: readonly CrossChannelTarget[]) -> CrossChannelTarget",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:resolveTargetByRouteFingerprint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        148,
+        182
+      ],
+      "name": "resolveTargetByRouteFingerprint",
+      "params": [
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "channels",
+          "optional": false,
+          "type": "readonly CrossChannelTarget[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CrossChannelTarget | null",
+      "signature": "export function resolveTargetByRouteFingerprint(ref: unknown, channels: readonly CrossChannelTarget[]) -> CrossChannelTarget | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/channel/cross-channel-receive.ts:createRouteFingerprint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        184,
+        193
+      ],
+      "name": "createRouteFingerprint",
+      "params": [
+        {
+          "name": "channel",
+          "optional": false,
+          "type": "CompiledChannel"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function createRouteFingerprint(channel: CompiledChannel) -> string | null",
+      "visibility": "Private"
+    }
+  ]
+}

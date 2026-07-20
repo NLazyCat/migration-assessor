@@ -1,0 +1,191 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:activeMicrosandboxSessionHandles",
+      "kind": "variable",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "activeMicrosandboxSessionHandles",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:prewarmMicrosandboxTemplate",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        57,
+        165
+      ],
+      "name": "prewarmMicrosandboxTemplate",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly options: ResolvedMicrosandboxOptions;\r\n  readonly optionsHash: string;\r\n  readonly prewarmInput: SandboxBackendPrewarmInput<MicrosandboxBootstrapUseOptions>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SandboxBackendPrewarmResult>",
+      "signature": "export function prewarmMicrosandboxTemplate(input: {\r\n  readonly backendName: string;\r\n  readonly options: ResolvedMicrosandboxOptions;\r\n  readonly optionsHash: string;\r\n  readonly prewarmInput: SandboxBackendPrewarmInput<MicrosandboxBootstrapUseOptions>;\r\n}) -> Promise<SandboxBackendPrewarmResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:createMicrosandboxHandle",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        167,
+        279
+      ],
+      "name": "createMicrosandboxHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly createInput: SandboxBackendCreateInput;\r\n  readonly options: ResolvedMicrosandboxOptions;\r\n  readonly optionsHash: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SandboxBackendHandle<MicrosandboxSessionUseOptions>>",
+      "signature": "export function createMicrosandboxHandle(input: {\r\n  readonly backendName: string;\r\n  readonly createInput: SandboxBackendCreateInput;\r\n  readonly options: ResolvedMicrosandboxOptions;\r\n  readonly optionsHash: string;\r\n}) -> Promise<SandboxBackendHandle<MicrosandboxSessionUseOptions>>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:createHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        281,
+        316
+      ],
+      "name": "createHandle",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "MicrosandboxVm"
+        },
+        {
+          "name": "backendName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "optionsHash",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "onShutdown",
+          "optional": true,
+          "type": "() => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackendHandle<MicrosandboxSessionUseOptions>",
+      "signature": "export function createHandle(sandbox: MicrosandboxVm, backendName: string, optionsHash: string, onShutdown: () => void) -> SandboxBackendHandle<MicrosandboxSessionUseOptions>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:createMicrosandboxInternalSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        318,
+        320
+      ],
+      "name": "createMicrosandboxInternalSession",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "MicrosandboxVm"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "InternalSandboxSession",
+      "signature": "export function createMicrosandboxInternalSession(sandbox: MicrosandboxVm) -> InternalSandboxSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:createActiveMicrosandboxSessionKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        322,
+        324
+      ],
+      "name": "createActiveMicrosandboxSessionKey",
+      "params": [
+        {
+          "name": "sessionRootPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "optionsHash",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createActiveMicrosandboxSessionKey(sessionRootPath: string, optionsHash: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:cacheHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        326,
+        332
+      ],
+      "name": "cacheHandle",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "handle",
+          "optional": false,
+          "type": "SandboxBackendHandle<MicrosandboxSessionUseOptions>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackendHandle<MicrosandboxSessionUseOptions>",
+      "signature": "export function cacheHandle(key: string, handle: SandboxBackendHandle<MicrosandboxSessionUseOptions>) -> SandboxBackendHandle<MicrosandboxSessionUseOptions>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/microsandbox-lifecycle.ts:clearActiveMicrosandboxSessionHandlesForTest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        334,
+        336
+      ],
+      "name": "clearActiveMicrosandboxSessionHandlesForTest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function clearActiveMicrosandboxSessionHandlesForTest() -> void",
+      "visibility": "Public"
+    }
+  ]
+}

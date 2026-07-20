@@ -1,0 +1,128 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DiscoveryProjectLayout",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscoveryProjectLayout = \"flat\" | \"nested\";"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        24,
+        28
+      ],
+      "name": "ResolvedDiscoveryProject",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ResolvedDiscoveryProject { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "agentRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "agentRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "appRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "appRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "layout",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscoveryProjectLayout",
+      "signature": "layout: : DiscoveryProjectLayout"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        34,
+        42
+      ],
+      "name": "DiscoveryProjectResolutionError",
+      "params": [
+        {
+          "name": "diagnostic",
+          "optional": false,
+          "type": "DiscoverDiagnostic"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class DiscoveryProjectResolutionError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        37,
+        41
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "diagnostic",
+          "optional": false,
+          "type": "DiscoverDiagnostic"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "DiscoveryProjectResolutionError::constructor(diagnostic: DiscoverDiagnostic) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        103
+      ],
+      "name": "resolveDiscoveryProject",
+      "params": [
+        {
+          "name": "startPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ source?: ProjectSource }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ResolvedDiscoveryProject>",
+      "signature": "export function resolveDiscoveryProject(startPath: string, options: { source?: ProjectSource }) -> Promise<ResolvedDiscoveryProject>"
+    }
+  ],
+  "module": "packages/eve/src/discover/project.ts"
+}

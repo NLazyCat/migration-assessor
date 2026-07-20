@@ -1,0 +1,182 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:DEFAULT_LOGO_ASPECT",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "DEFAULT_LOGO_ASPECT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:LOGO_RENDER_HEIGHT",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "LOGO_RENDER_HEIGHT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:MAX_DEVICE_PIXEL_RATIO",
+      "kind": "variable",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "MAX_DEVICE_PIXEL_RATIO",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:CanvasLayout",
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        15
+      ],
+      "name": "CanvasLayout",
+      "partial_analysis": false,
+      "value": "{\r\n  width: number;\r\n  height: number;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:CanvasLayoutRef",
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "CanvasLayoutRef",
+      "partial_analysis": false,
+      "value": "MutableRefObject<CanvasLayout>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:DevicePixelRatioRef",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "DevicePixelRatioRef",
+      "partial_analysis": false,
+      "value": "MutableRefObject<number>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:getLogicalRenderSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        25
+      ],
+      "name": "getLogicalRenderSize",
+      "params": [
+        {
+          "name": "aspect",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getLogicalRenderSize(aspect: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:getBrowserDevicePixelRatio",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "getBrowserDevicePixelRatio",
+      "params": [
+        {
+          "name": "devicePixelRatio",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getBrowserDevicePixelRatio(devicePixelRatio: number) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:resizeCanvas",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        46
+      ],
+      "name": "resizeCanvas",
+      "params": [
+        {
+          "name": "canvas",
+          "optional": false,
+          "type": "HTMLCanvasElement | null"
+        },
+        {
+          "name": "canvasLayoutRef",
+          "optional": false,
+          "type": "CanvasLayoutRef"
+        },
+        {
+          "name": "devicePixelRatioRef",
+          "optional": false,
+          "type": "DevicePixelRatioRef"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function resizeCanvas(canvas: HTMLCanvasElement | null, canvasLayoutRef: CanvasLayoutRef, devicePixelRatioRef: DevicePixelRatioRef) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/canvas-sizing.ts:getCanvasLogicalSize",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        58
+      ],
+      "name": "getCanvasLogicalSize",
+      "params": [
+        {
+          "name": "canvas",
+          "optional": false,
+          "type": "HTMLCanvasElement"
+        },
+        {
+          "name": "devicePixelRatio",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function getCanvasLogicalSize(canvas: HTMLCanvasElement, devicePixelRatio: number) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

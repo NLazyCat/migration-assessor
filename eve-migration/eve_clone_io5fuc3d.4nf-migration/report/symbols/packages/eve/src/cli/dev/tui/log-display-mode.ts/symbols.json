@@ -1,0 +1,88 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/log-display-mode.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/log-display-mode.ts:LOG_DISPLAY_MODES",
+      "kind": "variable",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": "LOG_DISPLAY_MODES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/log-display-mode.ts:LogDisplayMode",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "LogDisplayMode",
+      "partial_analysis": false,
+      "value": "(typeof LOG_DISPLAY_MODES)[number];",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/log-display-mode.ts:LOG_DISPLAY_MODE_CYCLE",
+      "kind": "variable",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "LOG_DISPLAY_MODE_CYCLE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/log-display-mode.ts:parseLogDisplayMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "parseLogDisplayMode",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LogDisplayMode | undefined",
+      "signature": "export function parseLogDisplayMode(value: string) -> LogDisplayMode | undefined",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/log-display-mode.ts:nextLogDisplayMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        27
+      ],
+      "name": "nextLogDisplayMode",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "LogDisplayMode"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "LogDisplayMode",
+      "signature": "export function nextLogDisplayMode(current: LogDisplayMode) -> LogDisplayMode",
+      "visibility": "Public"
+    }
+  ]
+}

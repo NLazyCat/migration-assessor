@@ -1,0 +1,59 @@
+{
+  "module": "e2e/fixtures/compaction-regression-shared/src/evals.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/evals.ts:testRedundantToolCalls",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        6,
+        33
+      ],
+      "name": "testRedundantToolCalls",
+      "params": [
+        {
+          "name": "t",
+          "optional": false,
+          "type": "EveEvalContext"
+        },
+        {
+          "name": "modelFamily",
+          "optional": false,
+          "type": "ModelFamily"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function testRedundantToolCalls(t: EveEvalContext, modelFamily: ModelFamily) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/compaction-regression-shared/src/evals.ts:testStaleTodoWork",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        35,
+        62
+      ],
+      "name": "testStaleTodoWork",
+      "params": [
+        {
+          "name": "t",
+          "optional": false,
+          "type": "EveEvalContext"
+        },
+        {
+          "name": "modelFamily",
+          "optional": false,
+          "type": "ModelFamily"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function testStaleTodoWork(t: EveEvalContext, modelFamily: ModelFamily) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

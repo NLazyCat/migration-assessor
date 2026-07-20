@@ -1,0 +1,94 @@
+{
+  "module": "packages/eve/src/cli/dev/url.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url.ts:DEVELOPMENT_SERVER_PROTOCOLS",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "DEVELOPMENT_SERVER_PROTOCOLS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url.ts:assertDevelopmentServerProtocol",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        10
+      ],
+      "name": "assertDevelopmentServerProtocol",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "URL"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertDevelopmentServerProtocol(url: URL, value: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url.ts:assertSecureRemoteProtocol",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        17,
+        23
+      ],
+      "name": "assertSecureRemoteProtocol",
+      "params": [
+        {
+          "name": "url",
+          "optional": false,
+          "type": "URL"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function assertSecureRemoteProtocol(url: URL, value: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/url.ts:parseDevelopmentServerUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        46
+      ],
+      "name": "parseDevelopmentServerUrl",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function parseDevelopmentServerUrl(value: string) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "module": "e2e/fixtures/agent-openapi-swagger/evals/tfl-swagger-approval.eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-openapi-swagger/evals/tfl-swagger-approval.eval.ts:SEARCH_TOOL",
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "SEARCH_TOOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-openapi-swagger/evals/tfl-swagger-approval.eval.ts:TFL_APPROVAL_JOURNEY_MODES_TOOL",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "TFL_APPROVAL_JOURNEY_MODES_TOOL",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-openapi-swagger/evals/tfl-swagger-approval.eval.ts:hasBusAndTube",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        50,
+        54
+      ],
+      "name": "hasBusAndTube",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasBusAndTube(value: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-openapi-swagger/evals/tfl-swagger-approval.eval.ts:extractModeNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        71
+      ],
+      "name": "extractModeNames",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Set<string>",
+      "signature": "export function extractModeNames(body: unknown) -> Set<string>",
+      "visibility": "Private"
+    }
+  ]
+}

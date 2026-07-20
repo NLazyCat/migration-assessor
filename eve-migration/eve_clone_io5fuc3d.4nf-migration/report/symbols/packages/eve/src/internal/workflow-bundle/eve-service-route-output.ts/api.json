@@ -1,0 +1,60 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "EVE_SHARED_SERVER_FUNCTION_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_SHARED_SERVER_FUNCTION_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "isEveVercelFunctionPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isEveVercelFunctionPath(path: string) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        19
+      ],
+      "name": "normalizeEveVercelRoutes",
+      "params": [
+        {
+          "name": "routes",
+          "optional": false,
+          "type": "readonly unknown[]"
+        },
+        {
+          "name": "_servicePrefix",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown[]",
+      "signature": "export function normalizeEveVercelRoutes(routes: readonly unknown[], _servicePrefix: string | undefined) -> unknown[]"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/eve-service-route-output.ts"
+}

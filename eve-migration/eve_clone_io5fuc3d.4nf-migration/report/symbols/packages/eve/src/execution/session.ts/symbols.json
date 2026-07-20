@@ -1,0 +1,458 @@
+{
+  "module": "packages/eve/src/execution/session.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:DEFAULT_COMPACTION_RECENT_WINDOW_SIZE",
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "DEFAULT_COMPACTION_RECENT_WINDOW_SIZE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:DEFAULT_COMPACTION_THRESHOLD_PERCENT",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "DEFAULT_COMPACTION_THRESHOLD_PERCENT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:FALLBACK_COMPACTION_THRESHOLD",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "FALLBACK_COMPACTION_THRESHOLD",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:DEFAULT_ROOT_MAX_INPUT_TOKENS_PER_SESSION",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "DEFAULT_ROOT_MAX_INPUT_TOKENS_PER_SESSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:AuthoredSessionLimits:maxInputTokensPerSession",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "maxInputTokensPerSession",
+          "partial_analysis": false,
+          "return_type": ": number | false",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:AuthoredSessionLimits:maxOutputTokensPerSession",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "maxOutputTokensPerSession",
+          "partial_analysis": false,
+          "return_type": ": number | false",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/session.ts:AuthoredSessionLimits",
+      "kind": "interface",
+      "line_range": [
+        16,
+        19
+      ],
+      "name": "AuthoredSessionLimits",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:createCompactionConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        52
+      ],
+      "name": "createCompactionConfig",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly contextWindowTokens?: number;\r\n    readonly lastKnownInputTokens?: number;\r\n    readonly lastKnownPromptMessageCount?: number;\r\n    readonly thresholdPercent?: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createCompactionConfig(input: {\r\n    readonly contextWindowTokens?: number;\r\n    readonly lastKnownInputTokens?: number;\r\n    readonly lastKnownPromptMessageCount?: number;\r\n    readonly thresholdPercent?: number;\r\n  }) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:continuationToken",
+          "kind": "property",
+          "line_range": [
+            55,
+            55
+          ],
+          "name": "continuationToken",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:compactionOverrides",
+          "kind": "property",
+          "line_range": [
+            56,
+            58
+          ],
+          "name": "compactionOverrides",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly thresholdPercent?: number;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:rootSessionId",
+          "kind": "property",
+          "line_range": [
+            64,
+            64
+          ],
+          "name": "rootSessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:sessionId",
+          "kind": "property",
+          "line_range": [
+            65,
+            65
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:turnAgent",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "turnAgent",
+          "partial_analysis": false,
+          "return_type": ": RuntimeTurnAgent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:limits",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "limits",
+          "partial_analysis": false,
+          "return_type": ": AuthoredSessionLimits",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:outputSchema",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "outputSchema",
+          "partial_analysis": false,
+          "return_type": ": HarnessSession[\"outputSchema\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:skillRoot",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "skillRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:subagentDepth",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "subagentDepth",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session.ts:CreateSessionInput:workflowMaxSubagents",
+          "kind": "property",
+          "line_range": [
+            71,
+            71
+          ],
+          "name": "workflowMaxSubagents",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/session.ts:CreateSessionInput",
+      "kind": "interface",
+      "line_range": [
+        54,
+        72
+      ],
+      "name": "CreateSessionInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:createSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        118
+      ],
+      "name": "createSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "CreateSessionInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createSession(input: CreateSessionInput) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:refreshSessionFromTurnAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        125,
+        154
+      ],
+      "name": "refreshSessionFromTurnAgent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly session: HarnessSession;\r\n  readonly turnAgent: RuntimeTurnAgent;\r\n  readonly compactionOverrides?: {\r\n    readonly thresholdPercent?: number;\r\n  };\r\n  readonly skillRoot?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function refreshSessionFromTurnAgent(input: {\r\n  readonly session: HarnessSession;\r\n  readonly turnAgent: RuntimeTurnAgent;\r\n  readonly compactionOverrides?: {\r\n    readonly thresholdPercent?: number;\r\n  };\r\n  readonly skillRoot?: string;\r\n}) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:createSessionSystemPrompt",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        156,
+        168
+      ],
+      "name": "createSessionSystemPrompt",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly skillRoot?: string;\r\n  readonly turnAgent: RuntimeTurnAgent;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createSessionSystemPrompt(input: {\r\n  readonly skillRoot?: string;\r\n  readonly turnAgent: RuntimeTurnAgent;\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:mintSubagentContinuationToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        175,
+        177
+      ],
+      "name": "mintSubagentContinuationToken",
+      "params": [
+        {
+          "name": "suffix",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function mintSubagentContinuationToken(suffix: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:projectToDurableSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        186,
+        241
+      ],
+      "name": "projectToDurableSession",
+      "params": [
+        {
+          "name": "session",
+          "optional": false,
+          "type": "HarnessSession"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DurableSession",
+      "signature": "export function projectToDurableSession(session: HarnessSession) -> DurableSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:hydrateDurableSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        248,
+        306
+      ],
+      "name": "hydrateDurableSession",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly durable: DurableSession;\r\n  readonly turnAgent: RuntimeTurnAgent;\r\n  readonly compactionOverrides?: {\r\n    readonly thresholdPercent?: number;\r\n  };\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function hydrateDurableSession(input: {\r\n  readonly durable: DurableSession;\r\n  readonly turnAgent: RuntimeTurnAgent;\r\n  readonly compactionOverrides?: {\r\n    readonly thresholdPercent?: number;\r\n  };\r\n}) -> HarnessSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:createSessionToolDefinitions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        308,
+        315
+      ],
+      "name": "createSessionToolDefinitions",
+      "params": [
+        {
+          "name": "turnAgent",
+          "optional": false,
+          "type": "RuntimeTurnAgent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionToolDefinition[]",
+      "signature": "export function createSessionToolDefinitions(turnAgent: RuntimeTurnAgent) -> SessionToolDefinition[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:resolveSessionLimits",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        317,
+        342
+      ],
+      "name": "resolveSessionLimits",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly limits?: AuthoredSessionLimits;\r\n  readonly subagentDepth?: number;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionLimits",
+      "signature": "export function resolveSessionLimits(input: {\r\n  readonly limits?: AuthoredSessionLimits;\r\n  readonly subagentDepth?: number;\r\n}) -> SessionLimits",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session.ts:resolveSessionTokenLimit",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        344,
+        349
+      ],
+      "name": "resolveSessionTokenLimit",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authored: number | false | undefined;\r\n  readonly fallback: number | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function resolveSessionTokenLimit(input: {\r\n  readonly authored: number | false | undefined;\r\n  readonly fallback: number | undefined;\r\n}) -> number | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

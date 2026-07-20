@@ -1,0 +1,433 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:NitroBuildSurface",
+      "kind": "type_alias",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "NitroBuildSurface",
+      "partial_analysis": false,
+      "value": "\"all\" | \"app\" | \"flow\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ApplicationBuildOptions:profileOutputPath",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "profileOutputPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ApplicationBuildOptions:skipVercelSandboxPrewarm",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "skipVercelSandboxPrewarm",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ApplicationBuildOptions:vercelServiceOutput",
+          "kind": "property",
+          "line_range": [
+            20,
+            23
+          ],
+          "name": "vercelServiceOutput",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly hostOutputDirectory: string;\r\n    readonly serviceOutputDirectory: string;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:ApplicationBuildOptions",
+      "kind": "interface",
+      "line_range": [
+        16,
+        24
+      ],
+      "name": "ApplicationBuildOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:StartedDevelopmentServer:kind",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"started\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:StartedDevelopmentServer:appRoot",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:StartedDevelopmentServer:url",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:StartedDevelopmentServer",
+      "kind": "interface",
+      "line_range": [
+        27,
+        31
+      ],
+      "name": "StartedDevelopmentServer",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ExistingDevelopmentServer:kind",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"existing\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ExistingDevelopmentServer:appRoot",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ExistingDevelopmentServer:url",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:ExistingDevelopmentServer",
+      "kind": "interface",
+      "line_range": [
+        34,
+        38
+      ],
+      "name": "ExistingDevelopmentServer",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServerHandle",
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "DevelopmentServerHandle",
+      "partial_analysis": false,
+      "value": "StartedDevelopmentServer | ExistingDevelopmentServer;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServer",
+      "kind": "interface",
+      "line_range": [
+        53,
+        56
+      ],
+      "name": "DevelopmentServer",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServerOptions:existing",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "existing",
+          "partial_analysis": false,
+          "return_type": ": \"attach-if-unconfigured\" | \"reject\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServerOptions:host",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServerOptions:onBootProgress",
+          "kind": "property",
+          "line_range": [
+            61,
+            61
+          ],
+          "name": "onBootProgress",
+          "partial_analysis": false,
+          "return_type": ": DevBootProgressReporter",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServerOptions:port",
+          "kind": "property",
+          "line_range": [
+            62,
+            62
+          ],
+          "name": "port",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:DevelopmentServerOptions",
+      "kind": "interface",
+      "line_range": [
+        58,
+        63
+      ],
+      "name": "DevelopmentServerOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:ProductionServerHandle:url",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:ProductionServerHandle",
+      "kind": "interface",
+      "line_range": [
+        68,
+        72
+      ],
+      "name": "ProductionServerHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost:appRoot",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost:compileResult",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "compileResult",
+          "partial_analysis": false,
+          "return_type": ": CompileAgentResult",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost:compiledArtifacts",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "compiledArtifacts",
+          "partial_analysis": false,
+          "return_type": ": GeneratedCompiledArtifactsFiles",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost:scheduleRegistrations",
+          "kind": "property",
+          "line_range": [
+            78,
+            78
+          ],
+          "name": "scheduleRegistrations",
+          "partial_analysis": false,
+          "return_type": ": readonly ScheduleRegistration[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost:schedules",
+          "kind": "property",
+          "line_range": [
+            79,
+            79
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": readonly ResolvedScheduleDefinition[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost:workflowBuildDir",
+          "kind": "property",
+          "line_range": [
+            80,
+            80
+          ],
+          "name": "workflowBuildDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedApplicationHost",
+      "kind": "interface",
+      "line_range": [
+        74,
+        81
+      ],
+      "name": "PreparedApplicationHost",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedDevelopmentApplicationHost:generation",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "generation",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentGeneration",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedDevelopmentApplicationHost:workspaceExtensions",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "workspaceExtensions",
+          "partial_analysis": false,
+          "return_type": ": readonly DevelopmentWorkspaceExtension[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedDevelopmentApplicationHost:workspace",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "workspace",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentHostWorkspace",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/types.ts:PreparedDevelopmentApplicationHost",
+      "kind": "interface",
+      "line_range": [
+        83,
+        87
+      ],
+      "name": "PreparedDevelopmentApplicationHost",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

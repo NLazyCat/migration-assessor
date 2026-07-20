@@ -1,0 +1,179 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        40,
+        47
+      ],
+      "name": "SlackbotProvisionDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackbotProvisionDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "readProjectLink",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof readProjectLink",
+      "signature": "readProjectLink?: : typeof readProjectLink"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "delay",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (ms: number, signal?: AbortSignal) => Promise<void>",
+      "signature": "delay?: : (ms: number, signal?: AbortSignal) => Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "now",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => number",
+      "signature": "now?: : () => number"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        73,
+        89
+      ],
+      "name": "ProvisionSlackbotResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ProvisionSlackbotResult = | { state: \"connector-lookup-failed\" }\r\n  | { state: \"create-failed\" }\r\n  | { state: \"cancelled\" }\r\n  | { state: \"existing-not-installed\"; connectorUid: string }\r\n  | { state: \"cleanup-failed\"; connectorUids: readonly string[] }\r\n  | { state: \"detach-failed\"; connectorUid: string }\r\n  | { state: \"attach-failed\"; connectorUid: string }\r\n  | { state: \"not-installed\" }\r\n  | { state: \"installation-check-failed\"; connectorUid: string }\r\n  | {\r\n      state: \"attached\";\r\n      connectorUid: string;\r\n      /** Deep link that opens a DM compose with the bot (\"chat with your agent\"). */\r\n      chatUrl?: string;\r\n      workspaceName?: string;\r\n    };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        316,
+        324
+      ],
+      "name": "ProvisionSlackbotOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ProvisionSlackbotOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        321,
+        321
+      ],
+      "name": "signal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "signal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        323,
+        323
+      ],
+      "name": "awaitChoice",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelSetupAwaitChoice",
+      "signature": "awaitChoice?: : ChannelSetupAwaitChoice"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        326,
+        626
+      ],
+      "name": "provisionSlackbot",
+      "params": [
+        {
+          "name": "log",
+          "optional": false,
+          "type": "ChannelSetupLog"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "SlackbotProvisionDeps"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ProvisionSlackbotOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProvisionSlackbotResult>",
+      "signature": "export function provisionSlackbot(log: ChannelSetupLog, projectRoot: string, slug: string, deps: SlackbotProvisionDeps, options: ProvisionSlackbotOptions) -> Promise<ProvisionSlackbotResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        631,
+        647
+      ],
+      "name": "reconcileSlackUid",
+      "params": [
+        {
+          "name": "log",
+          "optional": false,
+          "type": "ChannelSetupLog"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "slackbot",
+          "optional": false,
+          "type": "ProvisionSlackbotResult"
+        },
+        {
+          "name": "expectedUid",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function reconcileSlackUid(log: ChannelSetupLog, projectRoot: string, slackbot: ProvisionSlackbotResult, expectedUid: string) -> Promise<boolean>"
+    }
+  ],
+  "module": "packages/eve/src/setup/slackbot.ts"
+}

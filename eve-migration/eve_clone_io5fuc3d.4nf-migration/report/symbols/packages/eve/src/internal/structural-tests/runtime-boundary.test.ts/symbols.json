@@ -1,0 +1,371 @@
+{
+  "module": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SOURCE_ROOT",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "SOURCE_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:DISALLOWED_ENTRYPOINT_PREFIXES",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "DISALLOWED_ENTRYPOINT_PREFIXES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:WORKFLOW_PRIMITIVE_SPECIFIERS",
+      "kind": "variable",
+      "line_range": [
+        10,
+        13
+      ],
+      "name": "WORKFLOW_PRIMITIVE_SPECIFIERS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:WORKFLOW_REACHABILITY_ALLOWLIST",
+      "kind": "variable",
+      "line_range": [
+        15,
+        18
+      ],
+      "name": "WORKFLOW_REACHABILITY_ALLOWLIST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SKIP_DIRS",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "SKIP_DIRS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SOURCE_EXTENSIONS",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "SOURCE_EXTENSIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SourceModule:file",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "file",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SourceModule:imports",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "imports",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SourceModule:importsWorkflowPrimitive",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "importsWorkflowPrimitive",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:SourceModule",
+      "kind": "interface",
+      "line_range": [
+        22,
+        26
+      ],
+      "name": "SourceModule",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:buildSourceGraph",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        39,
+        67
+      ],
+      "name": "buildSourceGraph",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<Map<string, SourceModule>>",
+      "signature": "export function buildSourceGraph() -> Promise<Map<string, SourceModule>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:listSourceFiles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        69,
+        90
+      ],
+      "name": "listSourceFiles",
+      "params": [
+        {
+          "name": "root",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function listSourceFiles(root: string) -> Promise<string[]>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:isProductionSourceFile",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        92,
+        98
+      ],
+      "name": "isProductionSourceFile",
+      "params": [
+        {
+          "name": "fileName",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isProductionSourceFile(fileName: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:parseValueImportSpecifiers",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        100,
+        116
+      ],
+      "name": "parseValueImportSpecifiers",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function parseValueImportSpecifiers(content: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:resolveSourceImport",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        118,
+        138
+      ],
+      "name": "resolveSourceImport",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  importer: string;\r\n  knownFiles: Set<string>;\r\n  specifier: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveSourceImport(_: {\r\n  importer: string;\r\n  knownFiles: Set<string>;\r\n  specifier: string;\r\n}) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:resolveKnownSourcePath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        140,
+        154
+      ],
+      "name": "resolveKnownSourcePath",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  knownFiles: Set<string>;\r\n  sourcePath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function resolveKnownSourcePath(_: {\r\n  knownFiles: Set<string>;\r\n  sourcePath: string;\r\n}) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:moduleResolutionCandidates",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        156,
+        169
+      ],
+      "name": "moduleResolutionCandidates",
+      "params": [
+        {
+          "name": "importRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function moduleResolutionCandidates(importRoot: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:findWorkflowReachabilityViolations",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        171,
+        196
+      ],
+      "name": "findWorkflowReachabilityViolations",
+      "params": [
+        {
+          "name": "modules",
+          "optional": false,
+          "type": "Map<string, SourceModule>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  staleAllowlist: string[];\r\n  violations: string[][];\r\n}",
+      "signature": "export function findWorkflowReachabilityViolations(modules: Map<string, SourceModule>) -> {\r\n  staleAllowlist: string[];\r\n  violations: string[][];\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:findPathToWorkflowPrimitive",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        198,
+        225
+      ],
+      "name": "findPathToWorkflowPrimitive",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  file: string;\r\n  modules: Map<string, SourceModule>;\r\n  seen: Set<string>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[] | undefined",
+      "signature": "export function findPathToWorkflowPrimitive(_: {\r\n  file: string;\r\n  modules: Map<string, SourceModule>;\r\n  seen: Set<string>;\r\n}) -> string[] | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:formatReachabilityFailure",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        227,
+        257
+      ],
+      "name": "formatReachabilityFailure",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  staleAllowlist: string[];\r\n  violations: string[][];\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatReachabilityFailure(_: {\r\n  staleAllowlist: string[];\r\n  violations: string[][];\r\n}) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/structural-tests/runtime-boundary.test.ts:toPosix",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        259,
+        261
+      ],
+      "name": "toPosix",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function toPosix(path: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:getVercelSandboxFetch",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "getVercelSandboxFetch",
+      "params": [
+        {
+          "name": "createOptions",
+          "optional": false,
+          "type": "VercelCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "typeof globalThis.fetch",
+      "signature": "export function getVercelSandboxFetch(createOptions: VercelCreateOptions) -> typeof globalThis.fetch",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:getVercelSandboxCredentials",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        11,
+        35
+      ],
+      "name": "getVercelSandboxCredentials",
+      "params": [
+        {
+          "name": "createOptions",
+          "optional": false,
+          "type": "VercelCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelSandboxCredentials>",
+      "signature": "export function getVercelSandboxCredentials(createOptions: VercelCreateOptions) -> Promise<VercelSandboxCredentials>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:readNonEmptyString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        40
+      ],
+      "name": "readNonEmptyString",
+      "params": [
+        {
+          "name": "object",
+          "optional": false,
+          "type": "object"
+        },
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readNonEmptyString(object: object, key: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:readNonEmptyEnvironmentVariable",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        45
+      ],
+      "name": "readNonEmptyEnvironmentVariable",
+      "params": [
+        {
+          "name": "key",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readNonEmptyEnvironmentVariable(key: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:getVercelSandboxCredentialsFromOidcToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        54
+      ],
+      "name": "getVercelSandboxCredentialsFromOidcToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelSandboxCredentials",
+      "signature": "export function getVercelSandboxCredentialsFromOidcToken(token: string) -> VercelSandboxCredentials",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:VercelSandboxCredentials:projectId",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "projectId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:VercelSandboxCredentials:teamId",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "teamId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:VercelSandboxCredentials:token",
+          "kind": "property",
+          "line_range": [
+            59,
+            59
+          ],
+          "name": "token",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/bindings/vercel-credentials.ts:VercelSandboxCredentials",
+      "kind": "interface",
+      "line_range": [
+        56,
+        60
+      ],
+      "name": "VercelSandboxCredentials",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

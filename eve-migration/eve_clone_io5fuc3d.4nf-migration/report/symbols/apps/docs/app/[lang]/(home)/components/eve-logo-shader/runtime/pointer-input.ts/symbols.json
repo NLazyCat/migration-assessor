@@ -1,0 +1,91 @@
+{
+  "module": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts:MAX_ENV_YAW",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "MAX_ENV_YAW",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts:MAX_ENV_PITCH",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "MAX_ENV_PITCH",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts:PAINT_POINTER_MOVE_EPSILON_PX",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "PAINT_POINTER_MOVE_EPSILON_PX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts:syncPointerInteractionMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        28
+      ],
+      "name": "syncPointerInteractionMode",
+      "params": [
+        {
+          "name": "state",
+          "optional": false,
+          "type": "HeroRuntimeState"
+        },
+        {
+          "name": "isCoarsePointer",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function syncPointerInteractionMode(state: HeroRuntimeState, isCoarsePointer: boolean) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/app/[lang]/(home)/components/eve-logo-shader/runtime/pointer-input.ts:createPointerController",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        178
+      ],
+      "name": "createPointerController",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{\r\n  state: HeroRuntimeState;\r\n  controlsRef: ControlsRef;\r\n  canvasRef: RefObject<HTMLCanvasElement | null>;\r\n  coarsePointerRef: RefObject<boolean>;\r\n  canvasLayoutRef: CanvasLayoutRef;\r\n  devicePixelRatioRef: DevicePixelRatioRef;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function createPointerController(_: {\r\n  state: HeroRuntimeState;\r\n  controlsRef: ControlsRef;\r\n  canvasRef: RefObject<HTMLCanvasElement | null>;\r\n  coarsePointerRef: RefObject<boolean>;\r\n  canvasLayoutRef: CanvasLayoutRef;\r\n  devicePixelRatioRef: DevicePixelRatioRef;\r\n}) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

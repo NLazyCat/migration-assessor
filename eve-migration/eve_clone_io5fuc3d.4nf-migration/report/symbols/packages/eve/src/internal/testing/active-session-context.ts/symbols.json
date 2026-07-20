@@ -1,0 +1,154 @@
+{
+  "module": "packages/eve/src/internal/testing/active-session-context.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/active-session-context.ts:ActiveSessionInit:sessionId",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/active-session-context.ts:ActiveSessionInit:turn",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "turn",
+          "partial_analysis": false,
+          "return_type": ": SessionTurn",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/active-session-context.ts:ActiveSessionInit:parent",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "parent",
+          "partial_analysis": false,
+          "return_type": ": SessionParent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/active-session-context.ts:ActiveSessionInit:sandbox",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "sandbox",
+          "partial_analysis": false,
+          "return_type": ": SandboxAccess",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/testing/active-session-context.ts:ActiveSessionInit:channel",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "channel",
+          "partial_analysis": false,
+          "return_type": ": ChannelAdapter",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/testing/active-session-context.ts:ActiveSessionInit",
+      "kind": "interface",
+      "line_range": [
+        21,
+        34
+      ],
+      "name": "ActiveSessionInit",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/active-session-context.ts:buildActiveSessionContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        55
+      ],
+      "name": "buildActiveSessionContext",
+      "params": [
+        {
+          "name": "init",
+          "optional": false,
+          "type": "ActiveSessionInit"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function buildActiveSessionContext(init: ActiveSessionInit) -> ContextContainer",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/active-session-context.ts:buildSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        72
+      ],
+      "name": "buildSession",
+      "params": [
+        {
+          "name": "init",
+          "optional": false,
+          "type": "ActiveSessionInit"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Session",
+      "signature": "export function buildSession(init: ActiveSessionInit) -> Session",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/testing/active-session-context.ts:runWithActiveSessionContext",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        78,
+        84
+      ],
+      "name": "runWithActiveSessionContext",
+      "params": [
+        {
+          "name": "init",
+          "optional": false,
+          "type": "ActiveSessionInit"
+        },
+        {
+          "name": "fn",
+          "optional": false,
+          "type": "() => Promise<T> | T"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<T>",
+      "signature": "export function runWithActiveSessionContext(init: ActiveSessionInit, fn: () => Promise<T> | T) -> Promise<T>",
+      "visibility": "Public"
+    }
+  ]
+}

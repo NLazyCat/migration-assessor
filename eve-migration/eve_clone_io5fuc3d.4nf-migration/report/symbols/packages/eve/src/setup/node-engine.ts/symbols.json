@@ -1,0 +1,204 @@
+{
+  "module": "packages/eve/src/setup/node-engine.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/node-engine.ts:NodeEngineOverride:previous",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "previous",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/node-engine.ts:NodeEngineOverride:next",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "next",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/node-engine.ts:NodeEngineOverride",
+      "kind": "interface",
+      "line_range": [
+        6,
+        9
+      ],
+      "name": "NodeEngineOverride",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:NodeEngineReconciliation",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "NodeEngineReconciliation",
+      "partial_analysis": false,
+      "value": "| { kind: \"added\"; next: string }\r\n  | ({ kind: \"overridden\" } & NodeEngineOverride)\r\n  | { kind: \"unchanged\" };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:isNonEmptySubset",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        23
+      ],
+      "name": "isNonEmptySubset",
+      "params": [
+        {
+          "name": "candidateRange",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "requiredRange",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isNonEmptySubset(candidateRange: string, requiredRange: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:nextAllowedMajor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        25,
+        41
+      ],
+      "name": "nextAllowedMajor",
+      "params": [
+        {
+          "name": "requiredRange",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "currentMajor",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function nextAllowedMajor(requiredRange: string, currentMajor: number) -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:pinnedNodeEngineMajor",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        52,
+        74
+      ],
+      "name": "pinnedNodeEngineMajor",
+      "params": [
+        {
+          "name": "requiredRange",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function pinnedNodeEngineMajor(requiredRange: string) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:reconcileNodeEngine",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        97
+      ],
+      "name": "reconcileNodeEngine",
+      "params": [
+        {
+          "name": "existingValue",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "requiredRange",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "NodeEngineReconciliation",
+      "signature": "export function reconcileNodeEngine(existingValue: unknown, requiredRange: string) -> NodeEngineReconciliation",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:formatPackageJsonValue",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "formatPackageJsonValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatPackageJsonValue(value: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/node-engine.ts:formatNodeEngineOverrideWarning",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        104,
+        109
+      ],
+      "name": "formatNodeEngineOverrideWarning",
+      "params": [
+        {
+          "name": "override",
+          "optional": false,
+          "type": "NodeEngineOverride"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatNodeEngineOverrideWarning(override: NodeEngineOverride) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

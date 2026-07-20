@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/setup/cli/select-option-codec.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/cli/select-option-codec.ts:SelectOptionCodec:options",
+          "kind": "property",
+          "line_range": [
+            4,
+            4
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": PromptOption<string>[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/cli/select-option-codec.ts:SelectOptionCodec",
+      "kind": "interface",
+      "line_range": [
+        3,
+        8
+      ],
+      "name": "SelectOptionCodec",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/cli/select-option-codec.ts:createSelectOptionCodec",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        15,
+        61
+      ],
+      "name": "createSelectOptionCodec",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "readonly PromptOption<T>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOptionCodec<T>",
+      "signature": "export function createSelectOptionCodec(options: readonly PromptOption<T>[]) -> SelectOptionCodec<T>",
+      "visibility": "Public"
+    }
+  ]
+}

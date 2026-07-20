@@ -1,0 +1,489 @@
+{
+  "module": "packages/eve/src/setup/flows/model.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:CurrentAgentModel:id",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:CurrentAgentModel:routing",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "routing",
+          "partial_analysis": false,
+          "return_type": ": ModelRouting | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:CurrentAgentModel:editable",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "editable",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/model.ts:CurrentAgentModel",
+      "kind": "interface",
+      "line_range": [
+        35,
+        44
+      ],
+      "name": "CurrentAgentModel",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelFlowDeps:readCurrentModel",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "readCurrentModel",
+          "partial_analysis": false,
+          "return_type": ": (appRoot: string) => Promise<CurrentAgentModel>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelFlowDeps:applyModel",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "applyModel",
+          "partial_analysis": false,
+          "return_type": ": (input: { appRoot: string; slug: string }) => Promise<ApplyModelOutcome>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelFlowDeps:selectModel",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "selectModel",
+          "partial_analysis": false,
+          "return_type": ": SelectModelDeps",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelFlowDeps:detectProviderStatus",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "detectProviderStatus",
+          "partial_analysis": false,
+          "return_type": ": typeof detectModelProviderStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelFlowDeps:runProviderFlow",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "runProviderFlow",
+          "partial_analysis": false,
+          "return_type": ": typeof runProviderFlow",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/model.ts:ModelFlowDeps",
+      "kind": "interface",
+      "line_range": [
+        47,
+        61
+      ],
+      "name": "ModelFlowDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:ModelProviderStatus",
+      "kind": "type_alias",
+      "line_range": [
+        69,
+        76
+      ],
+      "name": "ModelProviderStatus",
+      "partial_analysis": false,
+      "value": "| { kind: \"unset\" }\r\n  | { kind: \"gateway-project\"; projectName: string; teamName?: string }\r\n  | {\r\n      kind: \"gateway-key\";\r\n      envKey: typeof AI_GATEWAY_API_KEY_ENV_VAR | \"VERCEL_OIDC_TOKEN\";\r\n      envFile: string;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelProviderOutcome:credential",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "credential",
+          "partial_analysis": false,
+          "return_type": ": \"VERCEL_OIDC_TOKEN\" | typeof AI_GATEWAY_API_KEY_ENV_VAR",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/flows/model.ts:ModelProviderOutcome:status",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": ModelProviderStatus",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/flows/model.ts:ModelProviderOutcome",
+      "kind": "interface",
+      "line_range": [
+        86,
+        89
+      ],
+      "name": "ModelProviderOutcome",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:ModelFlowResult",
+      "kind": "type_alias",
+      "line_range": [
+        91,
+        99
+      ],
+      "name": "ModelFlowResult",
+      "partial_analysis": false,
+      "value": "| { kind: \"cancelled\" }\r\n  | {\r\n      kind: \"done\";\r\n      /** The last apply line, when the model was changed this session. */\r\n      modelMessage?: string;\r\n      /** The last provider sub-flow outcome, when one ran to completion. */\r\n      providerOutcome?: ModelProviderOutcome;\r\n    };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:MODEL_MENU_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        103,
+        103
+      ],
+      "name": "MODEL_MENU_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:ModelMenuRow",
+      "kind": "type_alias",
+      "line_range": [
+        105,
+        105
+      ],
+      "name": "ModelMenuRow",
+      "partial_analysis": false,
+      "value": "\"model\" | \"provider\" | \"done\";",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:providerStatusHint",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        112,
+        124
+      ],
+      "name": "providerStatusHint",
+      "params": [
+        {
+          "name": "provider",
+          "optional": false,
+          "type": "Exclude<ModelProviderStatus, { kind: \"unset\" }>"
+        },
+        {
+          "name": "emphasis",
+          "optional": false,
+          "type": "(text: string) => string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function providerStatusHint(provider: Exclude<ModelProviderStatus, { kind: \"unset\" }>, emphasis: (text: string) => string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:modelMenuRows",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        137,
+        192
+      ],
+      "name": "modelMenuRows",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "string | null"
+        },
+        {
+          "name": "provider",
+          "optional": false,
+          "type": "ModelProviderStatus"
+        },
+        {
+          "name": "routing",
+          "optional": false,
+          "type": "ModelRouting | null"
+        },
+        {
+          "name": "editable",
+          "optional": false,
+          "type": "boolean"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SelectOption<ModelMenuRow>[]",
+      "signature": "export function modelMenuRows(current: string | null, provider: ModelProviderStatus, routing: ModelRouting | null, editable: boolean) -> SelectOption<ModelMenuRow>[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:detectModelProviderStatus",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        200,
+        224
+      ],
+      "name": "detectModelProviderStatus",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelProjectOperationOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ModelProviderStatus>",
+      "signature": "export function detectModelProviderStatus(appRoot: string, options: VercelProjectOperationOptions) -> Promise<ModelProviderStatus>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:runModelFlow",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        238,
+        363
+      ],
+      "name": "runModelFlow",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  /** Opens provider setup before the root menu when runtime evidence requires it. */\r\n  initialStep?: \"provider\";\r\n  signal?: AbortSignal;\r\n  deps?: Partial<ModelFlowDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ModelFlowResult>",
+      "signature": "export function runModelFlow(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  /** Opens provider setup before the root menu when runtime evidence requires it. */\r\n  initialStep?: \"provider\";\r\n  signal?: AbortSignal;\r\n  deps?: Partial<ModelFlowDeps>;\r\n}) -> Promise<ModelFlowResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:pickModelFromCatalog",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        370,
+        397
+      ],
+      "name": "pickModelFromCatalog",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  current: string | null;\r\n  signal?: AbortSignal;\r\n  deps?: SelectModelDeps;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function pickModelFromCatalog(input: {\r\n  appRoot: string;\r\n  prompter: Prompter;\r\n  current: string | null;\r\n  signal?: AbortSignal;\r\n  deps?: SelectModelDeps;\r\n}) -> Promise<string | undefined>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:ApplyModelOutcome",
+      "kind": "type_alias",
+      "line_range": [
+        400,
+        404
+      ],
+      "name": "ApplyModelOutcome",
+      "partial_analysis": false,
+      "value": "| { kind: \"changed\"; to: string }\r\n  | { kind: \"unchanged\"; model: string }\r\n  /** Invalid slug or an uneditable source — `message` says which and why. */\r\n  | { kind: \"rejected\"; message: string };",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:formatApplyModelOutcome",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        407,
+        416
+      ],
+      "name": "formatApplyModelOutcome",
+      "params": [
+        {
+          "name": "outcome",
+          "optional": false,
+          "type": "ApplyModelOutcome"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatApplyModelOutcome(outcome: ApplyModelOutcome) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:changeAgentModel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        427,
+        452
+      ],
+      "name": "changeAgentModel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appRoot: string;\r\n  readonly slug: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ApplyModelOutcome>",
+      "signature": "export function changeAgentModel(input: {\r\n  readonly appRoot: string;\r\n  readonly slug: string;\r\n}) -> Promise<ApplyModelOutcome>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:validateModelSlug",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        462,
+        478
+      ],
+      "name": "validateModelSlug",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "slug",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function validateModelSlug(appRoot: string, slug: string) -> Promise<string | null>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:readCurrentAgentModel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        485,
+        499
+      ],
+      "name": "readCurrentAgentModel",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CurrentAgentModel>",
+      "signature": "export function readCurrentAgentModel(appRoot: string) -> Promise<CurrentAgentModel>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/flows/model.ts:modelChangeRefusalForUneditableModel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        507,
+        519
+      ],
+      "name": "modelChangeRefusalForUneditableModel",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | null>",
+      "signature": "export function modelChangeRefusalForUneditableModel(appRoot: string) -> Promise<string | null>",
+      "visibility": "Public"
+    }
+  ]
+}

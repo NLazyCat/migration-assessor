@@ -1,0 +1,171 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/docker-options.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:DEFAULT_DOCKER_SANDBOX_IMAGE",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DEFAULT_DOCKER_SANDBOX_IMAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:ResolvedDockerSandboxOptions:env",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "env",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:ResolvedDockerSandboxOptions:image",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "image",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:ResolvedDockerSandboxOptions:networkPolicy",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "networkPolicy",
+          "partial_analysis": false,
+          "return_type": ": DockerSandboxNetworkPolicy",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:ResolvedDockerSandboxOptions:pullPolicy",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "pullPolicy",
+          "partial_analysis": false,
+          "return_type": ": DockerSandboxPullPolicy",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:ResolvedDockerSandboxOptions",
+      "kind": "interface",
+      "line_range": [
+        19,
+        24
+      ],
+      "name": "ResolvedDockerSandboxOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:resolveDockerSandboxOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        29,
+        38
+      ],
+      "name": "resolveDockerSandboxOptions",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "DockerSandboxCreateOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedDockerSandboxOptions",
+      "signature": "export function resolveDockerSandboxOptions(options: DockerSandboxCreateOptions) -> ResolvedDockerSandboxOptions",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:createDockerSandboxOptionsHash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        45
+      ],
+      "name": "createDockerSandboxOptionsHash",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolvedDockerSandboxOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createDockerSandboxOptionsHash(options: ResolvedDockerSandboxOptions) -> string",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:dockerOptionsForHash",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        54
+      ],
+      "name": "dockerOptionsForHash",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ResolvedDockerSandboxOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function dockerOptionsForHash(options: ResolvedDockerSandboxOptions) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-options.ts:sortStringRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        56,
+        62
+      ],
+      "name": "sortStringRecord",
+      "params": [
+        {
+          "name": "record",
+          "optional": false,
+          "type": "Readonly<Record<string, string>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Readonly<Record<string, string>>",
+      "signature": "export function sortStringRecord(record: Readonly<Record<string, string>>) -> Readonly<Record<string, string>>",
+      "visibility": "Private"
+    }
+  ]
+}

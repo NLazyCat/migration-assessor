@@ -1,0 +1,184 @@
+{
+  "module": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoData:agent",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "agent",
+          "partial_analysis": false,
+          "return_type": ": ResolvedAgent",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoData:manifest",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoData:schedules",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": readonly ResolvedScheduleDefinition[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoData",
+      "kind": "interface",
+      "line_range": [
+        23,
+        27
+      ],
+      "name": "AgentInfoData",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoManifestData:manifest",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "manifest",
+          "partial_analysis": false,
+          "return_type": ": CompiledAgentManifest",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoManifestData:schedules",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": readonly ResolvedScheduleDefinition[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:AgentInfoManifestData",
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "AgentInfoManifestData",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:loadAgentInfoData",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        37,
+        41
+      ],
+      "name": "loadAgentInfoData",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoData>",
+      "signature": "export function loadAgentInfoData(input: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}) -> Promise<AgentInfoData>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:loadAgentInfoManifestData",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        47,
+        61
+      ],
+      "name": "loadAgentInfoManifestData",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoManifestData>",
+      "signature": "export function loadAgentInfoManifestData(input: {\r\n  readonly compiledArtifactsSource: RuntimeCompiledArtifactsSource;\r\n}) -> Promise<AgentInfoManifestData>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:resolveAgentInfoCompiledArtifactsSource",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        71
+      ],
+      "name": "resolveAgentInfoCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "NitroArtifactsConfig"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeCompiledArtifactsSource",
+      "signature": "export function resolveAgentInfoCompiledArtifactsSource(input: NitroArtifactsConfig) -> RuntimeCompiledArtifactsSource",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/routes/agent-info/load-agent-info-data.ts:loadAgentInfoDataFromArtifacts",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        73,
+        96
+      ],
+      "name": "loadAgentInfoDataFromArtifacts",
+      "params": [
+        {
+          "name": "compiledArtifactsSource",
+          "optional": false,
+          "type": "RuntimeCompiledArtifactsSource"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoData>",
+      "signature": "export function loadAgentInfoDataFromArtifacts(compiledArtifactsSource: RuntimeCompiledArtifactsSource) -> Promise<AgentInfoData>",
+      "visibility": "Private"
+    }
+  ]
+}

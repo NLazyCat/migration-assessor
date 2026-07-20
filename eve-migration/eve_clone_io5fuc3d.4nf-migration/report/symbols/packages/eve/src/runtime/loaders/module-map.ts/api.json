@@ -1,0 +1,70 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        20,
+        31
+      ],
+      "name": "LoadCompiledModuleMapError",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "moduleMapPath",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class LoadCompiledModuleMapError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        23,
+        30
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "moduleMapPath",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "LoadCompiledModuleMapError::constructor(message: string, moduleMapPath: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        72
+      ],
+      "name": "loadCompiledModuleMap",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "LoadCompiledModuleMapInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledModuleMap>",
+      "signature": "export function loadCompiledModuleMap(input: LoadCompiledModuleMapInput) -> Promise<CompiledModuleMap>"
+    }
+  ],
+  "module": "packages/eve/src/runtime/loaders/module-map.ts"
+}

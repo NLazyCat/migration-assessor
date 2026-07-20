@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        26
+      ],
+      "name": "formatConnectionsSection",
+      "params": [
+        {
+          "name": "connections",
+          "optional": false,
+          "type": "readonly ResolvedConnectionDefinition[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatConnectionsSection(connections: readonly ResolvedConnectionDefinition[]) -> string"
+    }
+  ],
+  "module": "packages/eve/src/runtime/prompt/connections.ts"
+}

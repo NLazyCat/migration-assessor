@@ -1,0 +1,101 @@
+{
+  "module": "packages/eve/src/runtime/framework-tools/skill.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/skill.ts:LoadSkillInput",
+      "kind": "type_alias",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "LoadSkillInput",
+      "partial_analysis": false,
+      "value": "z.infer<typeof SKILL_INPUT_SCHEMA>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/skill.ts:executeLoadSkillTool",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        20,
+        49
+      ],
+      "name": "executeLoadSkillTool",
+      "params": [
+        {
+          "name": "args",
+          "optional": false,
+          "type": "LoadSkillInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function executeLoadSkillTool(args: LoadSkillInput) -> Promise<unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/skill.ts:availableSkillNames",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        59
+      ],
+      "name": "availableSkillNames",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ReturnType<typeof loadContext>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function availableSkillNames(ctx: ReturnType<typeof loadContext>) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/skill.ts:SKILL_INPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        65,
+        67
+      ],
+      "name": "SKILL_INPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/skill.ts:SKILL_OUTPUT_SCHEMA",
+      "kind": "variable",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "SKILL_OUTPUT_SCHEMA",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/framework-tools/skill.ts:SKILL_TOOL_DEFINITION",
+      "kind": "variable",
+      "line_range": [
+        70,
+        85
+      ],
+      "name": "SKILL_TOOL_DEFINITION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

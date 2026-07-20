@@ -1,0 +1,504 @@
+{
+  "module": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:createScratchDirectory",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "createScratchDirectory",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportMetricDelta:baseline",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "baseline",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportMetricDelta:current",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "current",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportMetricDelta:delta",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "delta",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportMetricDelta",
+      "kind": "interface",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "ReportMetricDelta",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:BundledDependencyFixture:name",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:BundledDependencyFixture:size",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "size",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:BundledDependencyFixture",
+      "kind": "interface",
+      "line_range": [
+        16,
+        19
+      ],
+      "name": "BundledDependencyFixture",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:appLabel",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "appLabel",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:comparison",
+          "kind": "property",
+          "line_range": [
+            23,
+            73
+          ],
+          "name": "comparison",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    app: {\r\n      functionAliasCount: ReportMetricDelta;\r\n      functions: Array<{\r\n        changed: boolean;\r\n        internalRoutesAdded: string[];\r\n        publicRoutesAdded: string[];\r\n        relativePath: string;\r\n        status: \"added\" | \"changed\" | \"removed\" | \"unchanged\";\r\n        totalBytes: ReportMetricDelta;\r\n      }>;\r\n      internalRouteCount: ReportMetricDelta;\r\n      publicRouteCount: ReportMetricDelta;\r\n      staticAssetBytes: ReportMetricDelta;\r\n      uniqueFunctionBytes: ReportMetricDelta;\r\n      uniqueFunctionCount: ReportMetricDelta;\r\n    };\r\n    baselineLabel: string;\r\n    package: null | {\r\n      installedDependencyBytes: ReportMetricDelta;\r\n      installedSizeBytes: ReportMetricDelta;\r\n      packedSizeBytes: ReportMetricDelta;\r\n      peerDependenciesAdded: string[];\r\n      peerDependenciesChanged: Array<{\r\n        baseline: string;\r\n        current: string;\r\n        name: string;\r\n      }>;\r\n      peerDependenciesRemoved: string[];\r\n      runtimeDependenciesAdded: string[];\r\n      runtimeDependenciesChanged: Array<{\r\n        baseline: string;\r\n        current: string;\r\n        name: string;\r\n      }>;\r\n      runtimeDependenciesRemoved: string[];\r\n      unpackedSizeBytes: ReportMetricDelta;\r\n    };\r\n    sizeBudget: {\r\n      checks: Array<{\r\n        area: string;\r\n        dependency?: string;\r\n        failed: boolean;\r\n        kind: string;\r\n        metric: string;\r\n        summary: string;\r\n      }>;\r\n      failed: boolean;\r\n      thresholdRatio: number;\r\n    };\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:functionAliasCount",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "functionAliasCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:functions",
+          "kind": "property",
+          "line_range": [
+            75,
+            85
+          ],
+          "name": "functions",
+          "partial_analysis": false,
+          "return_type": ": Array<{\r\n    internalRoutes: string[];\r\n    publicRoutes: string[];\r\n    relativePath: string;\r\n    topTracedPackages: Array<{\r\n      bytes: number;\r\n      name: string;\r\n    }>;\r\n    totalBytes: number;\r\n    vcConfig: Record<string, unknown>;\r\n  }>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:internalRouteCount",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "internalRouteCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:publishedPackage",
+          "kind": "property",
+          "line_range": [
+            87,
+            115
+          ],
+          "name": "publishedPackage",
+          "partial_analysis": false,
+          "return_type": ": null | {\r\n    installedDependencyBytes: number;\r\n    installedFileCount: number;\r\n    installedPackageBytes: number;\r\n    installedSizeBytes: number;\r\n    packageLabel: string;\r\n    packageName: string;\r\n    packedSizeBytes: number;\r\n    peerDependencies: Array<{\r\n      name: string;\r\n      optional: boolean;\r\n      range: string;\r\n    }>;\r\n    publishedFileCount: number;\r\n    runtimeDependencies: Array<{\r\n      name: string;\r\n      range: string;\r\n    }>;\r\n    topInstalledPackages: Array<{\r\n      bytes: number;\r\n      name: string;\r\n    }>;\r\n    topPublishedFiles: Array<{\r\n      bytes: number;\r\n      path: string;\r\n    }>;\r\n    unpackedSizeBytes: number;\r\n    version: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:publicRouteCount",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "publicRouteCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:sizeBudgetAcknowledged",
+          "kind": "property",
+          "line_range": [
+            117,
+            117
+          ],
+          "name": "sizeBudgetAcknowledged",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:staticAssetBytes",
+          "kind": "property",
+          "line_range": [
+            118,
+            118
+          ],
+          "name": "staticAssetBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:uniqueFunctionBytes",
+          "kind": "property",
+          "line_range": [
+            119,
+            119
+          ],
+          "name": "uniqueFunctionBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport:uniqueFunctionCount",
+          "kind": "property",
+          "line_range": [
+            120,
+            120
+          ],
+          "name": "uniqueFunctionCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReport",
+      "kind": "interface",
+      "line_range": [
+        21,
+        121
+      ],
+      "name": "NitroBundleReport",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:NitroBundleReportModule",
+      "kind": "interface",
+      "line_range": [
+        123,
+        138
+      ],
+      "name": "NitroBundleReportModule",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions:additionalFunctionBytes",
+          "kind": "property",
+          "line_range": [
+            141,
+            141
+          ],
+          "name": "additionalFunctionBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions:bundledDependencies",
+          "kind": "property",
+          "line_range": [
+            142,
+            142
+          ],
+          "name": "bundledDependencies",
+          "partial_analysis": false,
+          "return_type": ": BundledDependencyFixture[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions:packageIndexBytes",
+          "kind": "property",
+          "line_range": [
+            143,
+            143
+          ],
+          "name": "packageIndexBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions:packageRuntimeBytes",
+          "kind": "property",
+          "line_range": [
+            144,
+            144
+          ],
+          "name": "packageRuntimeBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions:serverEntryBytes",
+          "kind": "property",
+          "line_range": [
+            145,
+            145
+          ],
+          "name": "serverEntryBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions:staticAssetBytes",
+          "kind": "property",
+          "line_range": [
+            146,
+            146
+          ],
+          "name": "staticAssetBytes",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:ReportFixtureOptions",
+      "kind": "interface",
+      "line_range": [
+        140,
+        147
+      ],
+      "name": "ReportFixtureOptions",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:loadBundleReportModule",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        149,
+        153
+      ],
+      "name": "loadBundleReportModule",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<NitroBundleReportModule>",
+      "signature": "export function loadBundleReportModule() -> Promise<NitroBundleReportModule>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:writeSizedFile",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        155,
+        160
+      ],
+      "name": "writeSizedFile",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeSizedFile(path: string, size: number) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:writeBundledDependency",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        162,
+        184
+      ],
+      "name": "writeBundledDependency",
+      "params": [
+        {
+          "name": "packageRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "dependency",
+          "optional": false,
+          "type": "BundledDependencyFixture"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writeBundledDependency(packageRoot: string, dependency: BundledDependencyFixture) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:formatReportBytes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        186,
+        196
+      ],
+      "name": "formatReportBytes",
+      "params": [
+        {
+          "name": "bytes",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatReportBytes(bytes: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:formatReportSizeDelta",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        198,
+        206
+      ],
+      "name": "formatReportSizeDelta",
+      "params": [
+        {
+          "name": "bytes",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatReportSizeDelta(bytes: number) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/scenarios/nitro-bundle-report.scenario.test.ts:createReportFixture",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        208,
+        367
+      ],
+      "name": "createReportFixture",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ReportFixtureOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ appRoot: string; packageRoot: string }>",
+      "signature": "export function createReportFixture(options: ReportFixtureOptions) -> Promise<{ appRoot: string; packageRoot: string }>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/start-production-server.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:DEFAULT_PRODUCTION_SERVER_HOST",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "DEFAULT_PRODUCTION_SERVER_HOST",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:DEFAULT_PRODUCTION_SERVER_PORT",
+      "kind": "variable",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "DEFAULT_PRODUCTION_SERVER_PORT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:HEALTH_POLL_INTERVAL_MS",
+      "kind": "variable",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": "HEALTH_POLL_INTERVAL_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:HEALTH_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "HEALTH_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:LOCAL_SERVER_URL_PATTERN",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "LOCAL_SERVER_URL_PATTERN",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:TERMINATE_GRACE_MS",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "TERMINATE_GRACE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:WILDCARD_LISTEN_HOSTNAMES",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "WILDCARD_LISTEN_HOSTNAMES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:isRecord",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "isRecord",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "value is Record<string, unknown>",
+      "signature": "export function isRecord(value: unknown) -> value is Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:isAddressInUseError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        27,
+        29
+      ],
+      "name": "isAddressInUseError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAddressInUseError(error: unknown) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:resolveOutputServerEntry",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        31,
+        33
+      ],
+      "name": "resolveOutputServerEntry",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveOutputServerEntry(appRoot: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:readEnvironmentPort",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        51
+      ],
+      "name": "readEnvironmentPort",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number | undefined",
+      "signature": "export function readEnvironmentPort() -> number | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:normalizeServerClientUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        61
+      ],
+      "name": "normalizeServerClientUrl",
+      "params": [
+        {
+          "name": "serverUrl",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeServerClientUrl(serverUrl: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:formatClientHost",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        63,
+        73
+      ],
+      "name": "formatClientHost",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatClientHost(host: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:createKnownPortUrl",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        77
+      ],
+      "name": "createKnownPortUrl",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ host: string; port: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function createKnownPortUrl(input: { host: string; port: number }) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:resolveListenPort",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        79,
+        106
+      ],
+      "name": "resolveListenPort",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ host: string; port: number }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<number>",
+      "signature": "export function resolveListenPort(input: { host: string; port: number }) -> Promise<number>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:parseServerUrlFromOutput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        108,
+        116
+      ],
+      "name": "parseServerUrlFromOutput",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function parseServerUrlFromOutput(output: string) -> string | undefined",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:waitForHealth",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        118,
+        154
+      ],
+      "name": "waitForHealth",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  child: ChildProcess;\r\n  getStartError(): unknown;\r\n  url: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function waitForHealth(input: {\r\n  child: ChildProcess;\r\n  getStartError(): unknown;\r\n  url: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:waitForReady",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        156,
+        197
+      ],
+      "name": "waitForReady",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  child: ChildProcess;\r\n  getStartError(): unknown;\r\n  getOutput(): string;\r\n  knownUrl?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function waitForReady(input: {\r\n  child: ChildProcess;\r\n  getStartError(): unknown;\r\n  getOutput(): string;\r\n  knownUrl?: string;\r\n}) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:terminate",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        199,
+        216
+      ],
+      "name": "terminate",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "ChildProcess"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function terminate(child: ChildProcess) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:once",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        218,
+        222
+      ],
+      "name": "once",
+      "params": [
+        {
+          "name": "child",
+          "optional": false,
+          "type": "ChildProcess"
+        },
+        {
+          "name": "event",
+          "optional": false,
+          "type": "\"exit\""
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function once(child: ChildProcess, event: \"exit\") -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/start-production-server.ts:startProductionServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        227,
+        334
+      ],
+      "name": "startProductionServer",
+      "params": [
+        {
+          "name": "rootDir",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    host?: string;\r\n    port?: number;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ProductionServerHandle>",
+      "signature": "export function startProductionServer(rootDir: string, options: {\r\n    host?: string;\r\n    port?: number;\r\n  }) -> Promise<ProductionServerHandle>",
+      "visibility": "Public"
+    }
+  ]
+}

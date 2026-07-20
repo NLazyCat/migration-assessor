@@ -1,0 +1,221 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "SCHEDULE_ADAPTER_KIND",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SCHEDULE_ADAPTER_KIND: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        29,
+        31
+      ],
+      "name": "SCHEDULE_ADAPTER",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SCHEDULE_ADAPTER: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        37,
+        41
+      ],
+      "name": "ScheduleDispatchInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScheduleDispatchInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "scheduleId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "scheduleId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "run",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ScheduleRunHandler",
+      "signature": "run?: : ScheduleRunHandler"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        40,
+        40
+      ],
+      "name": "markdown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "markdown?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        60,
+        63
+      ],
+      "name": "ScheduleDispatchResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScheduleDispatchResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "sessions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly Session[]",
+      "signature": "sessions: : readonly Session[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "waitUntilTasks",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly Promise<unknown>[]",
+      "signature": "waitUntilTasks: : readonly Promise<unknown>[]"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        65,
+        117
+      ],
+      "name": "ScheduleDispatcher",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "{\r\n    readonly runtime: Runtime;\r\n    readonly channels: readonly ResolvedChannelDefinition[];\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class ScheduleDispatcher { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        69,
+        75
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "config",
+          "optional": false,
+          "type": "{\r\n    readonly runtime: Runtime;\r\n    readonly channels: readonly ResolvedChannelDefinition[];\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "ScheduleDispatcher::constructor(config: {\r\n    readonly runtime: Runtime;\r\n    readonly channels: readonly ResolvedChannelDefinition[];\r\n  }) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        77,
+        106
+      ],
+      "name": "trigger",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "ScheduleDispatchInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ScheduleDispatchResult>",
+      "signature": "ScheduleDispatcher::trigger(input: ScheduleDispatchInput) -> Promise<ScheduleDispatchResult>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        108,
+        116
+      ],
+      "name": "runMarkdown",
+      "params": [
+        {
+          "name": "markdown",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<Session>",
+      "signature": "ScheduleDispatcher::runMarkdown(markdown: string) -> Promise<Session>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        124,
+        139
+      ],
+      "name": "expectScheduleRun",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "logicalPath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "exportName",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ScheduleRunHandler",
+      "signature": "export function expectScheduleRun(value: unknown, logicalPath: string, exportName: string | undefined) -> ScheduleRunHandler"
+    }
+  ],
+  "module": "packages/eve/src/channel/schedule.ts"
+}

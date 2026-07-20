@@ -1,0 +1,107 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        18,
+        23
+      ],
+      "name": "MaterializedAuthoredModuleIndex",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface MaterializedAuthoredModuleIndex { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "fingerprint",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "fingerprint: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "instrumentation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "instrumentation?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "moduleMap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "moduleMap: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "version",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": 2",
+      "signature": "version: : 2"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        25,
+        95
+      ],
+      "name": "materializeAuthoredModules",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly runtimeAppRoot: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MaterializedAuthoredModuleIndex>",
+      "signature": "export function materializeAuthoredModules(input: {\r\n  readonly runtimeAppRoot: string;\r\n}) -> Promise<MaterializedAuthoredModuleIndex>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        97,
+        120
+      ],
+      "name": "readMaterializedAuthoredModuleIndex",
+      "params": [
+        {
+          "name": "runtimeAppRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<MaterializedAuthoredModuleIndex | undefined>",
+      "signature": "export function readMaterializedAuthoredModuleIndex(runtimeAppRoot: string) -> Promise<MaterializedAuthoredModuleIndex | undefined>"
+    }
+  ],
+  "module": "packages/eve/src/internal/materialized-authored-modules.ts"
+}

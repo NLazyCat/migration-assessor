@@ -1,0 +1,72 @@
+{
+  "module": "packages/eve/src/setup/scaffold/extension-peer-compatibility.scenario.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/extension-peer-compatibility.scenario.test.ts:roots",
+      "kind": "variable",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "roots",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/extension-peer-compatibility.scenario.test.ts:writePackageJson",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        59,
+        61
+      ],
+      "name": "writePackageJson",
+      "params": [
+        {
+          "name": "root",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function writePackageJson(root: string, value: Record<string, unknown>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/extension-peer-compatibility.scenario.test.ts:runNpm",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        63,
+        67
+      ],
+      "name": "runNpm",
+      "params": [
+        {
+          "name": "arguments_",
+          "optional": false,
+          "type": "readonly string[]"
+        },
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runNpm(arguments_: readonly string[], cwd: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

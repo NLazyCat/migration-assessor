@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        59
+      ],
+      "name": "materializeWorkspaceResources",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly compileDirectoryPath: string;\r\n  readonly manifest: CompiledAgentManifest;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<CompiledAgentManifest>",
+      "signature": "export function materializeWorkspaceResources(input: {\r\n  readonly compileDirectoryPath: string;\r\n  readonly manifest: CompiledAgentManifest;\r\n}) -> Promise<CompiledAgentManifest>"
+    }
+  ],
+  "module": "packages/eve/src/compiler/workspace-resources.ts"
+}

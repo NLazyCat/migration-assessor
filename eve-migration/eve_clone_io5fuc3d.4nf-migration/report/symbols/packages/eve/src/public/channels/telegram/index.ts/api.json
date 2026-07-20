@@ -1,0 +1,56 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        9,
+        13
+      ],
+      "name": "TelegramInstrumentationMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TelegramInstrumentationMetadata { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "chatId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "chatId: : string | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "chatType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": import(\"#public/channels/telegram/inbound.js\").TelegramChatType | null",
+      "signature": "chatType: : import(\"#public/channels/telegram/inbound.js\").TelegramChatType | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "triggeringUserId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | null",
+      "signature": "triggeringUserId: : string | null"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/telegram/index.ts"
+}

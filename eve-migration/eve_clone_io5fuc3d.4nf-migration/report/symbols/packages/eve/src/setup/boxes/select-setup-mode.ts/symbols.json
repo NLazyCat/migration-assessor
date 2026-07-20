@@ -1,0 +1,131 @@
+{
+  "module": "packages/eve/src/setup/boxes/select-setup-mode.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:MODE_PROMPT_MESSAGE",
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "MODE_PROMPT_MESSAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModeOptions:asker",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "asker",
+          "partial_analysis": false,
+          "return_type": ": Asker",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModeOptions:presetMode",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "presetMode",
+          "partial_analysis": false,
+          "return_type": ": SetupMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModeOptions:presetModel",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "presetModel",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModeOptions",
+      "kind": "interface",
+      "line_range": [
+        9,
+        24
+      ],
+      "name": "SelectSetupModeOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModePayload:mode",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "mode",
+          "partial_analysis": false,
+          "return_type": ": SetupMode",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModePayload:modelId",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "modelId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:SelectSetupModePayload",
+      "kind": "interface",
+      "line_range": [
+        27,
+        30
+      ],
+      "name": "SelectSetupModePayload",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/select-setup-mode.ts:selectSetupMode",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        90
+      ],
+      "name": "selectSetupMode",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SelectSetupModeOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, SetupMode, SelectSetupModePayload>",
+      "signature": "export function selectSetupMode(options: SelectSetupModeOptions) -> SetupBox<SetupState, SetupMode, SelectSetupModePayload>",
+      "visibility": "Public"
+    }
+  ]
+}

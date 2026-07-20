@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        15
+      ],
+      "name": "ensureVercelSandboxBaseRuntime",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "VercelSandbox"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function ensureVercelSandboxBaseRuntime(sandbox: VercelSandbox) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "applyInitialVercelNetworkPolicy",
+      "params": [
+        {
+          "name": "sandbox",
+          "optional": false,
+          "type": "VercelSandbox"
+        },
+        {
+          "name": "networkPolicy",
+          "optional": false,
+          "type": "VercelCreateOptions[\"networkPolicy\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function applyInitialVercelNetworkPolicy(sandbox: VercelSandbox, networkPolicy: VercelCreateOptions[\"networkPolicy\"]) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/bindings/vercel-base-runtime.ts"
+}

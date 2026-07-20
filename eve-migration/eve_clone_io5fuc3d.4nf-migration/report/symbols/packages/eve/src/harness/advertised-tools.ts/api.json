@@ -1,0 +1,81 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "getAdvertisedTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "AdvertisedModelToolsInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AdvertisedModelTools>",
+      "signature": "export function getAdvertisedTools(input: AdvertisedModelToolsInput) -> Promise<AdvertisedModelTools>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "getAdvertisedTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "AdvertisedToolMapInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolMap",
+      "signature": "export function getAdvertisedTools(input: AdvertisedToolMapInput) -> HarnessToolMap"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        55
+      ],
+      "name": "getAdvertisedTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "AdvertisedToolDefinitionsInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "readonly HarnessToolDefinition[]",
+      "signature": "export function getAdvertisedTools(input: AdvertisedToolDefinitionsInput) -> readonly HarnessToolDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        56,
+        68
+      ],
+      "name": "getAdvertisedTools",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "AdvertisedToolsInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessToolMap | Promise<AdvertisedModelTools> | readonly HarnessToolDefinition[]",
+      "signature": "export function getAdvertisedTools(input: AdvertisedToolsInput) -> HarnessToolMap | Promise<AdvertisedModelTools> | readonly HarnessToolDefinition[]"
+    }
+  ],
+  "module": "packages/eve/src/harness/advertised-tools.ts"
+}

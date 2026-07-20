@@ -1,0 +1,46 @@
+{
+  "ContextContainer": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/execution/workflow-skill-root.ts",
+        "line": 7
+      },
+      "symbol": "packages/eve/src/context/container.ts:ContextContainer"
+    }
+  ],
+  "RuntimeTurnAgent": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 22,
+        "file": "packages/eve/src/execution/workflow-skill-root.ts",
+        "line": 8
+      },
+      "symbol": "packages/eve/src/runtime/agent/bootstrap.ts:RuntimeTurnAgent"
+    }
+  ],
+  "SandboxKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/src/execution/workflow-skill-root.ts",
+        "line": 14
+      },
+      "symbol": "packages/eve/src/context/keys.ts:SandboxKey"
+    }
+  ],
+  "resolveSandboxSkillRoot": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/execution/workflow-skill-root.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/shared/skill-paths.ts:resolveSandboxSkillRoot"
+    }
+  ]
+}

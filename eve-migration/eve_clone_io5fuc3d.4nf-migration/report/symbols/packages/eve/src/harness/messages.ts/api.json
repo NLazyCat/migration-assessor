@@ -1,0 +1,93 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        14,
+        53
+      ],
+      "name": "coalesceTurnInputs",
+      "params": [
+        {
+          "name": "a",
+          "optional": false,
+          "type": "StepInput"
+        },
+        {
+          "name": "b",
+          "optional": false,
+          "type": "StepInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "StepInput",
+      "signature": "export function coalesceTurnInputs(a: StepInput, b: StepInput) -> StepInput"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        63,
+        84
+      ],
+      "name": "resolveAssistantStepText",
+      "params": [
+        {
+          "name": "messages",
+          "optional": false,
+          "type": "readonly ModelMessage[]"
+        },
+        {
+          "name": "fallback",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | null",
+      "signature": "export function resolveAssistantStepText(messages: readonly ModelMessage[], fallback: string | undefined) -> string | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        162,
+        175
+      ],
+      "name": "appendUserContent",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly appended: string | UserContent;\r\n  readonly existing: string | UserContent;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent",
+      "signature": "export function appendUserContent(input: {\r\n  readonly appended: string | UserContent;\r\n  readonly existing: string | UserContent;\r\n}) -> string | UserContent"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        209,
+        227
+      ],
+      "name": "coalesceDeliveries",
+      "params": [
+        {
+          "name": "items",
+          "optional": false,
+          "type": "readonly T[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function coalesceDeliveries(items: readonly T[]) -> T"
+    }
+  ],
+  "module": "packages/eve/src/harness/messages.ts"
+}

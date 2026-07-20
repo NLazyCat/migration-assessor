@@ -1,0 +1,44 @@
+{
+  "buildWithNitroRolldown": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 8,
+        "file": "packages/eve/test/scenarios/bundle-module-evaluation.scenario.test.ts",
+        "line": 37
+      },
+      "symbol": "packages/eve/src/internal/bundler/nitro-rolldown.ts:buildWithNitroRolldown"
+    }
+  ],
+  "resolvePackageSourceFilePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 24,
+        "file": "packages/eve/test/scenarios/bundle-module-evaluation.scenario.test.ts",
+        "line": 81
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceFilePath"
+    },
+    {
+      "kind": "call",
+      "location": {
+        "column": 21,
+        "file": "packages/eve/test/scenarios/bundle-module-evaluation.scenario.test.ts",
+        "line": 105
+      },
+      "symbol": "packages/eve/src/internal/application/package.ts:resolvePackageSourceFilePath"
+    }
+  ],
+  "useTemporaryDirectories": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 31,
+        "file": "packages/eve/test/scenarios/bundle-module-evaluation.scenario.test.ts",
+        "line": 11
+      },
+      "symbol": "packages/eve/src/internal/testing/use-temporary-app-roots.ts:useTemporaryDirectories"
+    }
+  ]
+}

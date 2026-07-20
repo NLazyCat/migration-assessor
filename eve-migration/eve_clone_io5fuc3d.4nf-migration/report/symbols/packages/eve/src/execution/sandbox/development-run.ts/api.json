@@ -1,0 +1,110 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "EVE_DEVELOPMENT_SANDBOX_RUN_ID_ENV",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_DEVELOPMENT_SANDBOX_RUN_ID_ENV: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "EVE_DEVELOPMENT_SANDBOX_METADATA_PATH_TAG",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_DEVELOPMENT_SANDBOX_METADATA_PATH_TAG: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "EVE_DEVELOPMENT_SANDBOX_RUN_ID_TAG",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const EVE_DEVELOPMENT_SANDBOX_RUN_ID_TAG: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        9,
+        11
+      ],
+      "name": "createDevelopmentSandboxRunId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createDevelopmentSandboxRunId() -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        13,
+        16
+      ],
+      "name": "getDevelopmentSandboxRunId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function getDevelopmentSandboxRunId() -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        18,
+        29
+      ],
+      "name": "withDevelopmentSandboxTags",
+      "params": [
+        {
+          "name": "tags",
+          "optional": false,
+          "type": "SandboxBackendTags | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackendTags | undefined",
+      "signature": "export function withDevelopmentSandboxTags(tags: SandboxBackendTags | undefined) -> SandboxBackendTags | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        31,
+        42
+      ],
+      "name": "withDevelopmentSandboxMetadataPathTag",
+      "params": [
+        {
+          "name": "tags",
+          "optional": false,
+          "type": "SandboxBackendTags | undefined"
+        },
+        {
+          "name": "metadataPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxBackendTags | undefined",
+      "signature": "export function withDevelopmentSandboxMetadataPathTag(tags: SandboxBackendTags | undefined, metadataPath: string) -> SandboxBackendTags | undefined"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/development-run.ts"
+}

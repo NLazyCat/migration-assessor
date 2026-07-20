@@ -1,0 +1,317 @@
+{
+  "module": "packages/eve/src/evals/runner/derive-run-facts.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall:name",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall:input",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall:output",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": JsonValue | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall:status",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": EveEvalToolCall[\"status\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall:turnIndex",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "turnIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall:sessionId",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableToolCall",
+      "kind": "interface",
+      "line_range": [
+        6,
+        13
+      ],
+      "name": "MutableToolCall",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:callId",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "callId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:childSessionId",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "childSessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:name",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:remoteUrl",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "remoteUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:output",
+          "kind": "property",
+          "line_range": [
+            20,
+            20
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": JsonValue",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:status",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": EveEvalSubagentCall[\"status\"]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:turnIndex",
+          "kind": "property",
+          "line_range": [
+            22,
+            22
+          ],
+          "name": "turnIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall:sessionId",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:MutableSubagentCall",
+      "kind": "interface",
+      "line_range": [
+        15,
+        24
+      ],
+      "name": "MutableSubagentCall",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/runner/derive-run-facts.ts:DeriveRunFactsOptions:sessionId",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:DeriveRunFactsOptions",
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "DeriveRunFactsOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:TURN_EPILOGUE_EVENT_TYPES",
+      "kind": "variable",
+      "line_range": [
+        39,
+        43
+      ],
+      "name": "TURN_EPILOGUE_EVENT_TYPES",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:deriveRunFacts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        53,
+        189
+      ],
+      "name": "deriveRunFacts",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        },
+        {
+          "name": "options",
+          "optional": true,
+          "type": "DeriveRunFactsOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "EveEvalDerivedFacts",
+      "signature": "export function deriveRunFacts(events: readonly HandleMessageStreamEvent[], options: DeriveRunFactsOptions) -> EveEvalDerivedFacts",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:createEmptyDerivedFacts",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        195,
+        206
+      ],
+      "name": "createEmptyDerivedFacts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveEvalDerivedFacts",
+      "signature": "export function createEmptyDerivedFacts() -> EveEvalDerivedFacts",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/runner/derive-run-facts.ts:endedParkedOnInput",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        213,
+        220
+      ],
+      "name": "endedParkedOnInput",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function endedParkedOnInput(events: readonly HandleMessageStreamEvent[]) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

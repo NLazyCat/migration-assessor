@@ -1,0 +1,465 @@
+{
+  "module": "packages/eve/test/tui-client/lib/mcp-stub-server.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:STOP_FORCE_CLOSE_GRACE_MS",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "STOP_FORCE_CLOSE_GRACE_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:STOP_TIMEOUT_MS",
+      "kind": "variable",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "STOP_TIMEOUT_MS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:PROTOCOL_VERSION",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "PROTOCOL_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:McpStubServerHandle:url",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:McpStubServerHandle",
+      "kind": "interface",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "McpStubServerHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcRequest:jsonrpc",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "jsonrpc",
+          "partial_analysis": false,
+          "return_type": ": \"2.0\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcRequest:id",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number | string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcRequest:method",
+          "kind": "property",
+          "line_range": [
+            30,
+            30
+          ],
+          "name": "method",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcRequest:params",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "params",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcRequest",
+      "kind": "interface",
+      "line_range": [
+        27,
+        32
+      ],
+      "name": "JsonRpcRequest",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcSuccess:jsonrpc",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "jsonrpc",
+          "partial_analysis": false,
+          "return_type": ": \"2.0\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcSuccess:id",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number | string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcSuccess:result",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcSuccess",
+      "kind": "interface",
+      "line_range": [
+        34,
+        38
+      ],
+      "name": "JsonRpcSuccess",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcError:jsonrpc",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "jsonrpc",
+          "partial_analysis": false,
+          "return_type": ": \"2.0\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcError:id",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": number | string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcError:error",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "error",
+          "partial_analysis": false,
+          "return_type": ": { code: number; message: string }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:JsonRpcError",
+      "kind": "interface",
+      "line_range": [
+        40,
+        44
+      ],
+      "name": "JsonRpcError",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:startMcpStubServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        46,
+        86
+      ],
+      "name": "startMcpStubServer",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  marker: string;\r\n  /**\r\n   * When true, every HTTP request must include a non-empty\r\n   * `Authorization: Bearer <token>` header. Unauth'd requests get a\r\n   * `401 Unauthorized`. Used by smokes that exercise OAuth-backed MCP\r\n   * connections; without this gate the smoke can't prove the access\r\n   * token actually reached MCP. Defaults to false to keep the legacy\r\n   * non-auth smoke path available.\r\n   */\r\n  requireBearer?: boolean;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<McpStubServerHandle>",
+      "signature": "export function startMcpStubServer(input: {\r\n  marker: string;\r\n  /**\r\n   * When true, every HTTP request must include a non-empty\r\n   * `Authorization: Bearer <token>` header. Unauth'd requests get a\r\n   * `401 Unauthorized`. Used by smokes that exercise OAuth-backed MCP\r\n   * connections; without this gate the smoke can't prove the access\r\n   * token actually reached MCP. Defaults to false to keep the legacy\r\n   * non-auth smoke path available.\r\n   */\r\n  requireBearer?: boolean;\r\n}) -> Promise<McpStubServerHandle>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:forceCloseMcpStubServer",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        88,
+        126
+      ],
+      "name": "forceCloseMcpStubServer",
+      "params": [
+        {
+          "name": "server",
+          "optional": false,
+          "type": "Server"
+        },
+        {
+          "name": "sockets",
+          "optional": false,
+          "type": "Set<Socket>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function forceCloseMcpStubServer(server: Server, sockets: Set<Socket>) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:handleRequest",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        128,
+        172
+      ],
+      "name": "handleRequest",
+      "params": [
+        {
+          "name": "req",
+          "optional": false,
+          "type": "IncomingMessage"
+        },
+        {
+          "name": "res",
+          "optional": false,
+          "type": "ServerResponse"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{ readonly marker: string; readonly requireBearer: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function handleRequest(req: IncomingMessage, res: ServerResponse, ctx: { readonly marker: string; readonly requireBearer: boolean }) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:handleOne",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        174,
+        233
+      ],
+      "name": "handleOne",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "JsonRpcRequest"
+        },
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "{ readonly marker: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonRpcSuccess | JsonRpcError | null",
+      "signature": "export function handleOne(message: JsonRpcRequest, ctx: { readonly marker: string }) -> JsonRpcSuccess | JsonRpcError | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:success",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        235,
+        237
+      ],
+      "name": "success",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "number | string"
+        },
+        {
+          "name": "result",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonRpcSuccess",
+      "signature": "export function success(id: number | string, result: unknown) -> JsonRpcSuccess",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:errorResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        239,
+        241
+      ],
+      "name": "errorResponse",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "number | string"
+        },
+        {
+          "name": "code",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "errMessage",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JsonRpcError",
+      "signature": "export function errorResponse(id: number | string, code: number, errMessage: string) -> JsonRpcError",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:respondError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        243,
+        252
+      ],
+      "name": "respondError",
+      "params": [
+        {
+          "name": "res",
+          "optional": false,
+          "type": "ServerResponse"
+        },
+        {
+          "name": "id",
+          "optional": false,
+          "type": "number | string | null"
+        },
+        {
+          "name": "code",
+          "optional": false,
+          "type": "number"
+        },
+        {
+          "name": "errMessage",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function respondError(res: ServerResponse, id: number | string | null, code: number, errMessage: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/tui-client/lib/mcp-stub-server.ts:readJsonBody",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        254,
+        272
+      ],
+      "name": "readJsonBody",
+      "params": [
+        {
+          "name": "req",
+          "optional": false,
+          "type": "IncomingMessage"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function readJsonBody(req: IncomingMessage) -> Promise<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "GitHubWebhookVerifier",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GitHubWebhookVerifier = (request: Request, body: string) => unknown | Promise<unknown>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        34
+      ],
+      "name": "GitHubVerifyOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface GitHubVerifyOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "webhookSecret",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubWebhookSecret",
+      "signature": "webhookSecret?: : GitHubWebhookSecret"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "webhookVerifier",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": GitHubWebhookVerifier",
+      "signature": "webhookVerifier?: : GitHubWebhookVerifier"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        44,
+        68
+      ],
+      "name": "verifyGitHubRequest",
+      "params": [
+        {
+          "name": "request",
+          "optional": false,
+          "type": "Request"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "GitHubVerifyOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function verifyGitHubRequest(request: Request, options: GitHubVerifyOptions) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "signGitHubWebhookBody",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "secret",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function signGitHubWebhookBody(body: string, secret: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/github/verify.ts"
+}

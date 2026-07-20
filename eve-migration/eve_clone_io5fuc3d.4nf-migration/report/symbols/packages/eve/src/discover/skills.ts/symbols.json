@@ -1,0 +1,360 @@
+{
+  "module": "packages/eve/src/discover/skills.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:DISCOVER_SKILLS_DIRECTORY_INVALID",
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "DISCOVER_SKILLS_DIRECTORY_INVALID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:DISCOVER_SKILL_COLLISION",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "DISCOVER_SKILL_COLLISION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:DISCOVER_SKILL_ENTRY_NOT_DIRECTORY",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "DISCOVER_SKILL_ENTRY_NOT_DIRECTORY",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:DISCOVER_SKILL_FRONTMATTER_INVALID",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "DISCOVER_SKILL_FRONTMATTER_INVALID",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:DISCOVER_SKILL_MARKDOWN_MISSING",
+      "kind": "variable",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "DISCOVER_SKILL_MARKDOWN_MISSING",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsInput:agentRoot",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "agentRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsInput:source",
+          "kind": "property",
+          "line_range": [
+            40,
+            40
+          ],
+          "name": "source",
+          "partial_analysis": false,
+          "return_type": ": ProjectSource",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsInput:skillsDirectoryPath",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "skillsDirectoryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsInput:skillsLogicalPath",
+          "kind": "property",
+          "line_range": [
+            42,
+            42
+          ],
+          "name": "skillsLogicalPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsInput",
+      "kind": "interface",
+      "line_range": [
+        34,
+        43
+      ],
+      "name": "DiscoverSkillsInput",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsResult:diagnostics",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "diagnostics",
+          "partial_analysis": false,
+          "return_type": ": DiscoverDiagnostic[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsResult:skills",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "skills",
+          "partial_analysis": false,
+          "return_type": ": SkillSourceRef[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/discover/skills.ts:DiscoverSkillsResult",
+      "kind": "interface",
+      "line_range": [
+        48,
+        51
+      ],
+      "name": "DiscoverSkillsResult",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:discoverSkills",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        58,
+        142
+      ],
+      "name": "discoverSkills",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverSkillsInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoverSkillsResult>",
+      "signature": "export function discoverSkills(input: DiscoverSkillsInput) -> Promise<DiscoverSkillsResult>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:discoverOneSkill",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        144,
+        199
+      ],
+      "name": "discoverOneSkill",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  entryName: string;\r\n  entryType: \"directory\" | \"file\" | \"other\";\r\n  skillsDirectoryPath: string;\r\n  skillsLogicalPath: string;\r\n  source: ProjectSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "signature": "export function discoverOneSkill(input: {\r\n  entryName: string;\r\n  entryType: \"directory\" | \"file\" | \"other\";\r\n  skillsDirectoryPath: string;\r\n  skillsLogicalPath: string;\r\n  source: ProjectSource;\r\n}) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:discoverPackagedSkill",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        201,
+        307
+      ],
+      "name": "discoverPackagedSkill",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  logicalSkillsPath: string;\r\n  skillId: string;\r\n  skillRootPath: string;\r\n  source: ProjectSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "signature": "export function discoverPackagedSkill(input: {\r\n  logicalSkillsPath: string;\r\n  skillId: string;\r\n  skillRootPath: string;\r\n  source: ProjectSource;\r\n}) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:discoverFlatMarkdownSkill",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        309,
+        354
+      ],
+      "name": "discoverFlatMarkdownSkill",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  logicalSkillsPath: string;\r\n  skillFileName: string;\r\n  skillFilePath: string;\r\n  source: ProjectSource;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "signature": "export function discoverFlatMarkdownSkill(input: {\r\n  logicalSkillsPath: string;\r\n  skillFileName: string;\r\n  skillFilePath: string;\r\n  source: ProjectSource;\r\n}) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:discoverFlatModuleSkill",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        356,
+        385
+      ],
+      "name": "discoverFlatModuleSkill",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  logicalSkillsPath: string;\r\n  skillFileName: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "signature": "export function discoverFlatModuleSkill(input: {\r\n  logicalSkillsPath: string;\r\n  skillFileName: string;\r\n}) -> Promise<{\r\n  diagnostics: DiscoverDiagnostic[];\r\n  logicalPath: string;\r\n  skill: SkillSourceRef | null;\r\n  skillId: string | null;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:discoverSkillPackagePaths",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        387,
+        423
+      ],
+      "name": "discoverSkillPackagePaths",
+      "params": [
+        {
+          "name": "source",
+          "optional": false,
+          "type": "ProjectSource"
+        },
+        {
+          "name": "skillRootPath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{\r\n  assetsPath?: string;\r\n  referencesPath?: string;\r\n  scriptsPath?: string;\r\n}>",
+      "signature": "export function discoverSkillPackagePaths(source: ProjectSource, skillRootPath: string) -> Promise<{\r\n  assetsPath?: string;\r\n  referencesPath?: string;\r\n  scriptsPath?: string;\r\n}>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:formatSkillDiscoveryError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        425,
+        427
+      ],
+      "name": "formatSkillDiscoveryError",
+      "params": [
+        {
+          "name": "skillFilePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSkillDiscoveryError(skillFilePath: string, error: unknown) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/discover/skills.ts:stripMarkdownExtension",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        429,
+        431
+      ],
+      "name": "stripMarkdownExtension",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function stripMarkdownExtension(input: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

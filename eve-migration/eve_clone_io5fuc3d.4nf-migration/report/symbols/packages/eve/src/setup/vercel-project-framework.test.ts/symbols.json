@@ -1,0 +1,145 @@
+{
+  "module": "packages/eve/src/setup/vercel-project-framework.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:mockedCaptureVercel",
+      "kind": "variable",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "mockedCaptureVercel",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:mockedReadProjectLink",
+      "kind": "variable",
+      "line_range": [
+        27,
+        27
+      ],
+      "name": "mockedReadProjectLink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:mockedResolvePreset",
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "mockedResolvePreset",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:captured",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        30,
+        33
+      ],
+      "name": "captured",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureResult",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:LINK",
+      "kind": "variable",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "LINK",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:patchedFrameworkTo",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        38,
+        46
+      ],
+      "name": "patchedFrameworkTo",
+      "params": [
+        {
+          "name": "framework",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function patchedFrameworkTo(framework: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:failed",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        48,
+        51
+      ],
+      "name": "failed",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelCaptureResult",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/vercel-project-framework.test.ts:stubCurrentFramework",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        54,
+        59
+      ],
+      "name": "stubCurrentFramework",
+      "params": [
+        {
+          "name": "current",
+          "optional": false,
+          "type": "string | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function stubCurrentFramework(current: string | undefined) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

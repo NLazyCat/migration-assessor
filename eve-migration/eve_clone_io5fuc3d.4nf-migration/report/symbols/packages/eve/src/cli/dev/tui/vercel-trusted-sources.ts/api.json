@@ -1,0 +1,132 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        36
+      ],
+      "name": "VercelTrustedSourceGrant",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VercelTrustedSourceGrant { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "ownerId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "ownerId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "projectId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "projectName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "targetEnvironment",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "targetEnvironment: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        38,
+        40
+      ],
+      "name": "VercelTrustedSourceDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface VercelTrustedSourceDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "captureVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof captureVercel",
+      "signature": "captureVercel: : typeof captureVercel"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        131,
+        198
+      ],
+      "name": "prepareVercelTrustedSourceAccess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly workspaceRoot: string;\r\n  readonly target: VerifiedVercelTarget;\r\n  readonly prompter: Prompter;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<VercelTrustedSourceDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelTrustedSourcePreparation>",
+      "signature": "export function prepareVercelTrustedSourceAccess(input: {\r\n  readonly workspaceRoot: string;\r\n  readonly target: VerifiedVercelTarget;\r\n  readonly prompter: Prompter;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<VercelTrustedSourceDeps>;\r\n}) -> Promise<VercelTrustedSourcePreparation>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        201,
+        265
+      ],
+      "name": "applyVercelTrustedSourceAccess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly workspaceRoot: string;\r\n  readonly grant: VercelTrustedSourceGrant;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<VercelTrustedSourceDeps>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelTrustedSourceApplication>",
+      "signature": "export function applyVercelTrustedSourceAccess(input: {\r\n  readonly workspaceRoot: string;\r\n  readonly grant: VercelTrustedSourceGrant;\r\n  readonly signal?: AbortSignal;\r\n  readonly deps?: Partial<VercelTrustedSourceDeps>;\r\n}) -> Promise<VercelTrustedSourceApplication>"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/vercel-trusted-sources.ts"
+}

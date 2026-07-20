@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        11,
+        17
+      ],
+      "name": "createAuthoredSourceRuntimeCompiledArtifactsSource",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeDiskCompiledArtifactsSource",
+      "signature": "export function createAuthoredSourceRuntimeCompiledArtifactsSource(appRoot: string) -> RuntimeDiskCompiledArtifactsSource"
+    }
+  ],
+  "module": "packages/eve/src/internal/application/runtime-compiled-artifacts-source.ts"
+}

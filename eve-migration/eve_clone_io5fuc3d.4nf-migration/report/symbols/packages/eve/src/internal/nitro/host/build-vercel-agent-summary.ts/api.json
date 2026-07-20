@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        36,
+        69
+      ],
+      "name": "buildVercelAgentSummary",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  manifest: CompiledAgentManifest;\r\n  generatorVersion?: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "VercelEveAgentSummary",
+      "signature": "export function buildVercelAgentSummary(input: {\r\n  manifest: CompiledAgentManifest;\r\n  generatorVersion?: string;\r\n}) -> VercelEveAgentSummary"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        88,
+        101
+      ],
+      "name": "emitVercelAgentSummary",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  manifest: CompiledAgentManifest;\r\n  generatorVersion?: string;\r\n  outputPath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function emitVercelAgentSummary(input: {\r\n  manifest: CompiledAgentManifest;\r\n  generatorVersion?: string;\r\n  outputPath: string;\r\n}) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.ts"
+}

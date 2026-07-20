@@ -1,0 +1,97 @@
+{
+  "module": "packages/eve/test/dev-send-message.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/dev-send-message.test.ts:createControlledStreamResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        28,
+        55
+      ],
+      "name": "createControlledStreamResponse",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  close(): void;\r\n  error(error: Error): void;\r\n  pushEvent(event: unknown): void;\r\n  response: Response;\r\n}",
+      "signature": "export function createControlledStreamResponse() -> {\r\n  close(): void;\r\n  error(error: Error): void;\r\n  pushEvent(event: unknown): void;\r\n  response: Response;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/dev-send-message.test.ts:createStartedMessageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        70
+      ],
+      "name": "createStartedMessageResponse",
+      "params": [
+        {
+          "name": "sessionId",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "location",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createStartedMessageResponse(sessionId: string, continuationToken: string, location: string) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/dev-send-message.test.ts:createResumedMessageResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "createResumedMessageResponse",
+      "params": [
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createResumedMessageResponse(continuationToken: string) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/dev-send-message.test.ts:createOpenStreamResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        81,
+        93
+      ],
+      "name": "createOpenStreamResponse",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly unknown[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function createOpenStreamResponse(events: readonly unknown[]) -> Response",
+      "visibility": "Private"
+    }
+  ]
+}

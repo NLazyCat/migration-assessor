@@ -1,0 +1,187 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "FailureStreamEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type FailureStreamEvent = | StepFailedStreamEvent\r\n  | TurnFailedStreamEvent\r\n  | SessionFailedStreamEvent;"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        32,
+        37
+      ],
+      "name": "InterruptedError",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class InterruptedError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        33,
+        36
+      ],
+      "name": "constructor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "InterruptedError::constructor() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        39,
+        41
+      ],
+      "name": "interruptedError",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "InterruptedError",
+      "signature": "export function interruptedError() -> InterruptedError"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        43,
+        45
+      ],
+      "name": "isInterruptedError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isInterruptedError(error: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "isAbortLikeError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isAbortLikeError(error: unknown) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        63,
+        65
+      ],
+      "name": "failureKey",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "FailureStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function failureKey(event: FailureStreamEvent) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        73,
+        80
+      ],
+      "name": "formatFailureMessage",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "FailureStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatFailureMessage(event: FailureStreamEvent) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        91,
+        99
+      ],
+      "name": "formatFailureDetail",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "FailureStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function formatFailureDetail(event: FailureStreamEvent) -> string | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        109,
+        118
+      ],
+      "name": "formatGatewayAuthFailureNotice",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "FailureStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatGatewayAuthFailureNotice(event: FailureStreamEvent) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        128,
+        136
+      ],
+      "name": "isGatewayAuthFailure",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "FailureStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isGatewayAuthFailure(event: FailureStreamEvent) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/errors.ts"
+}

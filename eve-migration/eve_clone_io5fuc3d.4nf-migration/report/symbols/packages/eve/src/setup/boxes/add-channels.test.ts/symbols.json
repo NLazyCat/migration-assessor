@@ -1,0 +1,135 @@
+{
+  "module": "packages/eve/src/setup/boxes/add-channels.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:silentSink",
+      "kind": "variable",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "silentSink",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:snapshot",
+      "kind": "variable",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "snapshot",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:TEST_EVE_PACKAGE",
+      "kind": "variable",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "TEST_EVE_PACKAGE",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:createPrompter",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createPrompter() -> Prompter",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:makeBox",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        30,
+        39
+      ],
+      "name": "makeBox",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "Omit<AddChannelsOptions, \"asker\" | \"headless\"> & { headless?: boolean }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ReturnType<typeof addChannels>",
+      "signature": "export function makeBox(options: Omit<AddChannelsOptions, \"asker\" | \"headless\"> & { headless?: boolean }) -> ReturnType<typeof addChannels>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:createDeps",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        83
+      ],
+      "name": "createDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function createDeps() -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:resolvedState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        85,
+        94
+      ],
+      "name": "resolvedState",
+      "params": [
+        {
+          "name": "channelSelection",
+          "optional": false,
+          "type": "SetupState[\"channelSelection\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function resolvedState(channelSelection: SetupState[\"channelSelection\"]) -> SetupState",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/add-channels.test.ts:noVercelState",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        104
+      ],
+      "name": "noVercelState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "SetupState",
+      "signature": "export function noVercelState() -> SetupState",
+      "visibility": "Private"
+    }
+  ]
+}

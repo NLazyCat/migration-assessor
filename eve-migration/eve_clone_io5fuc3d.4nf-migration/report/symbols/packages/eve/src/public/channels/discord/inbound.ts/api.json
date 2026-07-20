@@ -1,0 +1,713 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "DISCORD_INTERACTION_TYPE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_INTERACTION_TYPE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        19,
+        25
+      ],
+      "name": "DISCORD_INTERACTION_RESPONSE_TYPE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_INTERACTION_RESPONSE_TYPE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "DISCORD_EPHEMERAL_MESSAGE_FLAG",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCORD_EPHEMERAL_MESSAGE_FLAG: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        31,
+        38
+      ],
+      "name": "DiscordUser",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordUser { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "avatar",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "avatar?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "discriminator",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "discriminator?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "globalName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "globalName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "isBot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "isBot: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "username",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "username: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        45
+      ],
+      "name": "DiscordMember",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordMember { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "nick",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nick?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "roles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "roles: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "user",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordUser",
+      "signature": "user: : DiscordUser"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        48,
+        57
+      ],
+      "name": "DiscordInteractionBase",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordInteractionBase { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "applicationId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "applicationId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "guildId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "guildId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "member",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordMember",
+      "signature": "member?: : DiscordMember"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        54,
+        54
+      ],
+      "name": "token",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "token: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        55,
+        55
+      ],
+      "name": "user",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DiscordUser",
+      "signature": "user: : DiscordUser"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        56,
+        56
+      ],
+      "name": "raw",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Record<string, unknown>",
+      "signature": "raw: : Record<string, unknown>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        64,
+        68
+      ],
+      "name": "DiscordCommandOption",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordCommandOption { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "name",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "name: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "value",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | number | boolean",
+      "signature": "value?: : string | number | boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "options",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly DiscordCommandOption[]",
+      "signature": "options: : readonly DiscordCommandOption[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        71,
+        76
+      ],
+      "name": "DiscordCommandInteraction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordCommandInteraction { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "commandId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "commandId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "commandName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "commandName: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "options",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly DiscordCommandOption[]",
+      "signature": "options: : readonly DiscordCommandOption[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof DISCORD_INTERACTION_TYPE.APPLICATION_COMMAND",
+      "signature": "type: : typeof DISCORD_INTERACTION_TYPE.APPLICATION_COMMAND"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        83,
+        89
+      ],
+      "name": "DiscordComponentInteraction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordComponentInteraction { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "componentType",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "componentType: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "customId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "customId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        86,
+        86
+      ],
+      "name": "messageId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "messageId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof DISCORD_INTERACTION_TYPE.MESSAGE_COMPONENT",
+      "signature": "type: : typeof DISCORD_INTERACTION_TYPE.MESSAGE_COMPONENT"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        88,
+        88
+      ],
+      "name": "values",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "values: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        92,
+        97
+      ],
+      "name": "DiscordModalSubmitInteraction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordModalSubmitInteraction { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "customId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "customId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        94,
+        94
+      ],
+      "name": "messageId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "messageId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        95,
+        95
+      ],
+      "name": "textInputs",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "textInputs: : Readonly<Record<string, string>>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        96,
+        96
+      ],
+      "name": "type",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof DISCORD_INTERACTION_TYPE.MODAL_SUBMIT",
+      "signature": "type: : typeof DISCORD_INTERACTION_TYPE.MODAL_SUBMIT"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        100,
+        103
+      ],
+      "name": "DiscordInteraction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type DiscordInteraction = | DiscordCommandInteraction\r\n  | DiscordComponentInteraction\r\n  | DiscordModalSubmitInteraction;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        114,
+        121
+      ],
+      "name": "DiscordInboundContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface DiscordInboundContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        115,
+        115
+      ],
+      "name": "channelId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "channelId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        116,
+        116
+      ],
+      "name": "commandName",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "commandName?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        117,
+        117
+      ],
+      "name": "guildId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "guildId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        118,
+        118
+      ],
+      "name": "interactionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "interactionId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        119,
+        119
+      ],
+      "name": "userId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "userId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        120,
+        120
+      ],
+      "name": "username",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "username?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        124,
+        137
+      ],
+      "name": "parseDiscordInteraction",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DiscordInteraction | null",
+      "signature": "export function parseDiscordInteraction(value: unknown) -> DiscordInteraction | null"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        140,
+        146
+      ],
+      "name": "commandInteractionMessage",
+      "params": [
+        {
+          "name": "interaction",
+          "optional": false,
+          "type": "DiscordCommandInteraction"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function commandInteractionMessage(interaction: DiscordCommandInteraction) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        149,
+        163
+      ],
+      "name": "formatDiscordContextBlock",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "DiscordInboundContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatDiscordContextBlock(context: DiscordInboundContext) -> string"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/discord/inbound.ts"
+}

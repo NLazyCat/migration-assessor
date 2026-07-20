@@ -1,0 +1,96 @@
+{
+  "module": "packages/eve/src/public/sandbox/docker-sandbox.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxPullPolicy",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "DockerSandboxPullPolicy",
+      "partial_analysis": false,
+      "value": "\"if-not-present\" | \"always\" | \"never\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxNetworkPolicy",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "DockerSandboxNetworkPolicy",
+      "partial_analysis": false,
+      "value": "\"allow-all\" | \"deny-all\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxCreateOptions:image",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "image",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxCreateOptions:env",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "env",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, string>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxCreateOptions:pullPolicy",
+          "kind": "property",
+          "line_range": [
+            41,
+            41
+          ],
+          "name": "pullPolicy",
+          "partial_analysis": false,
+          "return_type": ": DockerSandboxPullPolicy",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxCreateOptions:networkPolicy",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "networkPolicy",
+          "partial_analysis": false,
+          "return_type": ": DockerSandboxNetworkPolicy",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/sandbox/docker-sandbox.ts:DockerSandboxCreateOptions",
+      "kind": "interface",
+      "line_range": [
+        24,
+        47
+      ],
+      "name": "DockerSandboxCreateOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

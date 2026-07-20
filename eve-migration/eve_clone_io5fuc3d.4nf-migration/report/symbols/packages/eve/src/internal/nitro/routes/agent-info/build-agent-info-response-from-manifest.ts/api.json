@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        29,
+        224
+      ],
+      "name": "buildAgentInfoResponseFromManifest",
+      "params": [
+        {
+          "name": "data",
+          "optional": false,
+          "type": "AgentInfoManifestData"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    readonly mode: AgentInfoResponse[\"mode\"];\r\n    readonly gatewayCredentials: GatewayCredentialPresence;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentInfoResponse",
+      "signature": "export function buildAgentInfoResponseFromManifest(data: AgentInfoManifestData, input: {\r\n    readonly mode: AgentInfoResponse[\"mode\"];\r\n    readonly gatewayCredentials: GatewayCredentialPresence;\r\n  }) -> AgentInfoResponse"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/routes/agent-info/build-agent-info-response-from-manifest.ts"
+}

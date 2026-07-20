@@ -1,0 +1,695 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        15,
+        15
+      ],
+      "name": "EveAgentStoreStatus",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type EveAgentStoreStatus = \"error\" | \"ready\" | \"streaming\" | \"submitted\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "PrepareSend",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type PrepareSend = (input: SendTurnPayload) => SendTurnPayload | Promise<SendTurnPayload>;"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "interface",
+      "line_range": [
+        30,
+        36
+      ],
+      "name": "EveAgentStoreSnapshot",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveAgentStoreSnapshot { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "data",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": TData",
+      "signature": "data: : TData"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "error",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Error | undefined",
+      "signature": "error: : Error | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "events",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly HandleMessageStreamEvent[]",
+      "signature": "events: : readonly HandleMessageStreamEvent[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionState",
+      "signature": "session: : SessionState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        35,
+        35
+      ],
+      "name": "status",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveAgentStoreStatus",
+      "signature": "status: : EveAgentStoreStatus"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "interface",
+      "line_range": [
+        45,
+        51
+      ],
+      "name": "EveAgentStoreCallbacks",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveAgentStoreCallbacks { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "onError",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (error: Error) => void",
+      "signature": "onError?: : (error: Error) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "onEvent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (event: HandleMessageStreamEvent) => void",
+      "signature": "onEvent?: : (event: HandleMessageStreamEvent) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "onFinish",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (snapshot: EveAgentStoreSnapshot<TData>) => void",
+      "signature": "onFinish?: : (snapshot: EveAgentStoreSnapshot<TData>) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "onSessionChange",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (session: SessionState) => void",
+      "signature": "onSessionChange?: : (session: SessionState) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "prepareSend",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PrepareSend",
+      "signature": "prepareSend?: : PrepareSend"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "interface",
+      "line_range": [
+        65,
+        75
+      ],
+      "name": "EveAgentStoreInit",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EveAgentStoreInit { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ClientAuth",
+      "signature": "auth?: : ClientAuth"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "headers",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HeadersValue",
+      "signature": "headers?: : HeadersValue"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "host",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "host?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "initialEvents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly HandleMessageStreamEvent[]",
+      "signature": "initialEvents?: : readonly HandleMessageStreamEvent[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        70,
+        70
+      ],
+      "name": "initialSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionState",
+      "signature": "initialSession?: : SessionState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "maxReconnectAttempts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "maxReconnectAttempts?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        72,
+        72
+      ],
+      "name": "optimistic",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "optimistic?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        73,
+        73
+      ],
+      "name": "reducer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveAgentReducer<TData>",
+      "signature": "reducer: : EveAgentReducer<TData>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        74,
+        74
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ClientSession",
+      "signature": "session?: : ClientSession"
+    },
+    {
+      "generics": [
+        "TData"
+      ],
+      "kind": "class",
+      "line_range": [
+        95,
+        402
+      ],
+      "name": "EveAgentStore",
+      "params": [
+        {
+          "name": "init",
+          "optional": false,
+          "type": "EveAgentStoreInit<TData>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class EveAgentStore { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        113,
+        131
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "init",
+          "optional": false,
+          "type": "EveAgentStoreInit<TData>"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "EveAgentStore::constructor(init: EveAgentStoreInit<TData>) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        133,
+        135
+      ],
+      "name": "snapshot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveAgentStoreSnapshot<TData>",
+      "signature": "EveAgentStore::snapshot() -> EveAgentStoreSnapshot<TData>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        137,
+        139
+      ],
+      "name": "setCallbacks",
+      "params": [
+        {
+          "name": "callbacks",
+          "optional": false,
+          "type": "EveAgentStoreCallbacks<TData>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::setCallbacks(callbacks: EveAgentStoreCallbacks<TData>) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        141,
+        146
+      ],
+      "name": "subscribe",
+      "params": [
+        {
+          "name": "callback",
+          "optional": false,
+          "type": "() => void"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "() => void",
+      "signature": "EveAgentStore::subscribe(callback: () => void) -> () => void"
+    },
+    {
+      "generics": [
+        "TOutput"
+      ],
+      "kind": "method",
+      "line_range": [
+        148,
+        221
+      ],
+      "name": "send",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnPayload<TOutput>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "EveAgentStore::send(input: SendTurnPayload<TOutput>) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        223,
+        225
+      ],
+      "name": "stop",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::stop() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        227,
+        240
+      ],
+      "name": "reset",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::reset() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        242,
+        247
+      ],
+      "name": "#createOwnedSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ClientSession",
+      "signature": "EveAgentStore::#createOwnedSession() -> ClientSession"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        249,
+        252
+      ],
+      "name": "#startOperation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "EveAgentStore::#startOperation() -> number"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        254,
+        256
+      ],
+      "name": "#invalidateOperation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#invalidateOperation() -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        258,
+        260
+      ],
+      "name": "#isCurrentOperation",
+      "params": [
+        {
+          "name": "operationId",
+          "optional": false,
+          "type": "number"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "EveAgentStore::#isCurrentOperation(operationId: number) -> boolean"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        262,
+        282
+      ],
+      "name": "#projectOptimisticMessage",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#projectOptimisticMessage(input: SendTurnPayload) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        284,
+        296
+      ],
+      "name": "#projectInputResponses",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "SendTurnPayload"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#projectInputResponses(input: SendTurnPayload) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        298,
+        312
+      ],
+      "name": "#applyServerEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#applyServerEvent(event: HandleMessageStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        314,
+        327
+      ],
+      "name": "#applyTerminalStreamFailure",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HandleMessageStreamEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#applyTerminalStreamFailure(event: HandleMessageStreamEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        329,
+        351
+      ],
+      "name": "#failPendingMessageSubmission",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "Error"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#failPendingMessageSubmission(error: Error) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        353,
+        356
+      ],
+      "name": "#appendProjectionEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "EveAgentReducerEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#appendProjectionEvent(event: EveAgentReducerEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        358,
+        376
+      ],
+      "name": "#replaceProjectionEvent",
+      "params": [
+        {
+          "name": "predicate",
+          "optional": false,
+          "type": "(event: EveAgentReducerEvent) => boolean"
+        },
+        {
+          "name": "replacement",
+          "optional": false,
+          "type": "EveAgentReducerEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#replaceProjectionEvent(predicate: (event: EveAgentReducerEvent) => boolean, replacement: EveAgentReducerEvent) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        378,
+        384
+      ],
+      "name": "#reduceProjectionEvents",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly EveAgentReducerEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TData",
+      "signature": "EveAgentStore::#reduceProjectionEvents(events: readonly EveAgentReducerEvent[]) -> TData"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        386,
+        394
+      ],
+      "name": "#createSnapshot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "EveAgentStoreSnapshot<TData>",
+      "signature": "EveAgentStore::#createSnapshot() -> EveAgentStoreSnapshot<TData>"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        396,
+        401
+      ],
+      "name": "#publish",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "EveAgentStore::#publish() -> void"
+    }
+  ],
+  "module": "packages/eve/src/client/eve-agent-store.ts"
+}

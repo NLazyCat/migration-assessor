@@ -1,0 +1,127 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        27,
+        35
+      ],
+      "name": "EnsureSandboxAccessInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EnsureSandboxAccessInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "compiledArtifactsSource",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeCompiledArtifactsSource",
+      "signature": "compiledArtifactsSource: : RuntimeCompiledArtifactsSource"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "nodeId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nodeId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "registry",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeSandboxRegistry",
+      "signature": "registry: : RuntimeSandboxRegistry"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "runOnSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (callback: () => Promise<void>) => Promise<void>",
+      "signature": "runOnSession?: : (callback: () => Promise<void>) => Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxState | null",
+      "signature": "state: : SandboxState | null"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "tags",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxBackendTags",
+      "signature": "tags?: : SandboxBackendTags"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        47,
+        184
+      ],
+      "name": "ensureSandboxAccess",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "EnsureSandboxAccessInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SandboxAccess>",
+      "signature": "export function ensureSandboxAccess(input: EnsureSandboxAccessInput) -> Promise<SandboxAccess>"
+    }
+  ],
+  "module": "packages/eve/src/execution/sandbox/ensure.ts"
+}

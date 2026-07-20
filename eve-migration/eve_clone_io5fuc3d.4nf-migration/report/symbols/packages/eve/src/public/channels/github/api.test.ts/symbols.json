@@ -1,0 +1,67 @@
+{
+  "module": "packages/eve/src/public/channels/github/api.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/api.test.ts:credentials",
+      "kind": "variable",
+      "line_range": [
+        19,
+        21
+      ],
+      "name": "credentials",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/api.test.ts:jsonResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        37
+      ],
+      "name": "jsonResponse",
+      "params": [
+        {
+          "name": "body",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "init",
+          "optional": true,
+          "type": "ResponseInit"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function jsonResponse(body: unknown, init: ResponseInit) -> Response",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/github/api.test.ts:requestBody",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        39,
+        41
+      ],
+      "name": "requestBody",
+      "params": [
+        {
+          "name": "init",
+          "optional": false,
+          "type": "RequestInit | undefined"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function requestBody(init: RequestInit | undefined) -> Record<string, unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

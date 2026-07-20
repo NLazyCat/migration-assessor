@@ -1,0 +1,770 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "SessionToolDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SessionToolDefinition = Readonly<InternalToolDefinition>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "SessionStateMap",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SessionStateMap = Readonly<Record<string, unknown>>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        30,
+        35
+      ],
+      "name": "CompactionConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CompactionConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "lastKnownInputTokens",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "lastKnownInputTokens?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "lastKnownPromptMessageCount",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "lastKnownPromptMessageCount?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        33,
+        33
+      ],
+      "name": "recentWindowSize",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "recentWindowSize: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "threshold",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "threshold: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        40,
+        53
+      ],
+      "name": "SessionAgent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionAgent { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "compactionModelReference",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeModelReference",
+      "signature": "compactionModelReference?: : RuntimeModelReference"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "dynamicModelDefaultReference",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeModelReference",
+      "signature": "dynamicModelDefaultReference?: : RuntimeModelReference"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "modelReference",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeModelReference",
+      "signature": "modelReference: : RuntimeModelReference"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        50,
+        50
+      ],
+      "name": "reasoning",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AgentReasoningDefinition",
+      "signature": "reasoning?: : AgentReasoningDefinition"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "system",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "system: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        52,
+        52
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly SessionToolDefinition[]",
+      "signature": "tools: : readonly SessionToolDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        61,
+        91
+      ],
+      "name": "HarnessSession",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HarnessSession { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "agent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionAgent",
+      "signature": "agent: : SessionAgent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "compaction",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompactionConfig",
+      "signature": "compaction: : CompactionConfig"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        65,
+        65
+      ],
+      "name": "history",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ModelMessage[]",
+      "signature": "history: : ModelMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "limits",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionLimits",
+      "signature": "limits?: : SessionLimits"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "outputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "outputSchema?: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        76,
+        76
+      ],
+      "name": "rootSessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "rootSessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        78,
+        78
+      ],
+      "name": "sandboxState",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxState",
+      "signature": "sandboxState?: : SandboxState"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        79,
+        79
+      ],
+      "name": "state",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionStateMap",
+      "signature": "state?: : SessionStateMap"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        84,
+        84
+      ],
+      "name": "subagentDepth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "subagentDepth?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        90,
+        90
+      ],
+      "name": "workflowMaxSubagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "workflowMaxSubagents?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        96,
+        110
+      ],
+      "name": "SessionLimits",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionLimits { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        104,
+        104
+      ],
+      "name": "maxInputTokensPerSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "maxInputTokensPerSession?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        109,
+        109
+      ],
+      "name": "maxOutputTokensPerSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "maxOutputTokensPerSession?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        122,
+        143
+      ],
+      "name": "StepInput",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface StepInput { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        123,
+        123
+      ],
+      "name": "inputResponses",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly InputResponse[]",
+      "signature": "inputResponses?: : readonly InputResponse[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        124,
+        124
+      ],
+      "name": "message",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string | UserContent",
+      "signature": "message?: : string | UserContent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        130,
+        130
+      ],
+      "name": "context",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "context?: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        135,
+        135
+      ],
+      "name": "outputSchema",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": JsonObject",
+      "signature": "outputSchema?: : JsonObject"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        142,
+        142
+      ],
+      "name": "runtimeActionResults",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly RuntimeActionResult[]",
+      "signature": "runtimeActionResults?: : readonly RuntimeActionResult[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        148,
+        157
+      ],
+      "name": "StepDone",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface StepDone { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        149,
+        149
+      ],
+      "name": "done",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": true",
+      "signature": "done: : true"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        150,
+        150
+      ],
+      "name": "output",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": unknown",
+      "signature": "output: : unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        156,
+        156
+      ],
+      "name": "isError",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "isError?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        166,
+        166
+      ],
+      "name": "StepNext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type StepNext = StepDone | StepFn | null;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        171,
+        174
+      ],
+      "name": "StepResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface StepResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        172,
+        172
+      ],
+      "name": "next",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": StepNext",
+      "signature": "next: : StepNext"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        173,
+        173
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HarnessSession",
+      "signature": "session: : HarnessSession"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        180,
+        180
+      ],
+      "name": "StepFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type StepFn = (session: HarnessSession, input?: StepInput) => Promise<StepResult>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        188,
+        188
+      ],
+      "name": "HarnessToolMap",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HarnessToolMap = ReadonlyMap<string, HarnessToolDefinition>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        197,
+        200
+      ],
+      "name": "HarnessEmitFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HarnessEmitFn = (\r\n  event: HandleMessageStreamEvent,\r\n  messages?: readonly import(\"ai\").ModelMessage[],\r\n) => Promise<void>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        210,
+        213
+      ],
+      "name": "HandleEventFn",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HandleEventFn = (\r\n  event: HandleMessageStreamEvent,\r\n  messages?: readonly import(\"ai\").ModelMessage[],\r\n) => Promise<void>;"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        218,
+        282
+      ],
+      "name": "ToolLoopHarnessConfig",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ToolLoopHarnessConfig { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        220,
+        220
+      ],
+      "name": "abortSignal",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AbortSignal",
+      "signature": "abortSignal?: : AbortSignal"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        226,
+        226
+      ],
+      "name": "capabilities",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionCapabilities",
+      "signature": "capabilities?: : SessionCapabilities"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        234,
+        234
+      ],
+      "name": "workflow",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "workflow?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        241,
+        241
+      ],
+      "name": "workflowMaxSubagents",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": number",
+      "signature": "workflowMaxSubagents?: : number"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        242,
+        242
+      ],
+      "name": "handleEvent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HandleEventFn",
+      "signature": "handleEvent?: : HandleEventFn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        250,
+        250
+      ],
+      "name": "mode",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RunMode",
+      "signature": "mode: : RunMode"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        257,
+        257
+      ],
+      "name": "onCompaction",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => readonly ModelMessage[]",
+      "signature": "onCompaction?: : () => readonly ModelMessage[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        258,
+        263
+      ],
+      "name": "dispatchDynamicModelEvent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (input: {\r\n    readonly ctx: AlsContext;\r\n    readonly event: HandleMessageStreamEvent;\r\n    readonly fallback: RuntimeModelReference;\r\n    readonly messages: readonly ModelMessage[];\r\n  }) => Promise<void>",
+      "signature": "dispatchDynamicModelEvent?: : (input: {\r\n    readonly ctx: AlsContext;\r\n    readonly event: HandleMessageStreamEvent;\r\n    readonly fallback: RuntimeModelReference;\r\n    readonly messages: readonly ModelMessage[];\r\n  }) => Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        264,
+        264
+      ],
+      "name": "resolveModel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (reference: RuntimeModelReference) => Promise<LanguageModel>",
+      "signature": "resolveModel: : (reference: RuntimeModelReference) => Promise<LanguageModel>"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        272,
+        272
+      ],
+      "name": "runtimeIdentity",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeIdentity",
+      "signature": "runtimeIdentity?: : RuntimeIdentity"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        281,
+        281
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": HarnessToolMap",
+      "signature": "tools: : HarnessToolMap"
+    }
+  ],
+  "module": "packages/eve/src/harness/types.ts"
+}

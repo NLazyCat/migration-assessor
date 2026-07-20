@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/public/channels/twilio/twiml.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/twiml.ts:TwilioGatherTwimlOptions",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "TwilioGatherTwimlOptions",
+      "partial_analysis": false,
+      "value": "TwilioGatherSpeechResponseOptions;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/twiml.ts:twimlResponse",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "twimlResponse",
+      "params": [
+        {
+          "name": "twiml",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Response",
+      "signature": "export function twimlResponse(twiml: string) -> Response",
+      "visibility": "Public"
+    }
+  ]
+}

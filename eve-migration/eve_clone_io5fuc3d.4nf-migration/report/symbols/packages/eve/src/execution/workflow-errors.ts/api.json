@@ -1,0 +1,43 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        24
+      ],
+      "name": "normalizeSerializableError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "unknown",
+      "signature": "export function normalizeSerializableError(error: unknown) -> unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        30,
+        61
+      ],
+      "name": "rebuildSerializableError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function rebuildSerializableError(error: unknown) -> Error"
+    }
+  ],
+  "module": "packages/eve/src/execution/workflow-errors.ts"
+}

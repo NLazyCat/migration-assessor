@@ -1,0 +1,253 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:NitroStub:hookHandlers",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "hookHandlers",
+          "partial_analysis": false,
+          "return_type": ": Map<string, Array<() => unknown>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:NitroStub:hooks",
+          "kind": "property",
+          "line_range": [
+            8,
+            10
+          ],
+          "name": "hooks",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    hook(name: string, handler: () => unknown): void;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:NitroStub:options",
+          "kind": "property",
+          "line_range": [
+            11,
+            17
+          ],
+          "name": "options",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    buildDir: string;\r\n    dev: boolean;\r\n    handlers: Nitro[\"options\"][\"handlers\"];\r\n    rootDir: string;\r\n    virtual: Nitro[\"options\"][\"virtual\"];\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:NitroStub:routing",
+          "kind": "property",
+          "line_range": [
+            18,
+            20
+          ],
+          "name": "routing",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    sync(): void;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:NitroStub",
+      "kind": "interface",
+      "line_range": [
+        6,
+        21
+      ],
+      "name": "NitroStub",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub:appRoot",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub:compileResult",
+          "kind": "property",
+          "line_range": [
+            25,
+            38
+          ],
+          "name": "compileResult",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    manifest: {\r\n      channels: [];\r\n      config: {\r\n        name: string;\r\n        experimental?: { workflow?: { world?: string } };\r\n      };\r\n    };\r\n    project: {\r\n      agentRoot: string;\r\n      appRoot: string;\r\n      layout: \"nested\";\r\n    };\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub:compiledArtifacts",
+          "kind": "property",
+          "line_range": [
+            39,
+            42
+          ],
+          "name": "compiledArtifacts",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    bootstrapPath: string;\r\n    workflowWorldPluginPath: string;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub:scheduleRegistrations",
+          "kind": "property",
+          "line_range": [
+            43,
+            43
+          ],
+          "name": "scheduleRegistrations",
+          "partial_analysis": false,
+          "return_type": ": []",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub:schedules",
+          "kind": "property",
+          "line_range": [
+            44,
+            44
+          ],
+          "name": "schedules",
+          "partial_analysis": false,
+          "return_type": ": []",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub:workflowBuildDir",
+          "kind": "property",
+          "line_range": [
+            45,
+            45
+          ],
+          "name": "workflowBuildDir",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:PreparedApplicationHostStub",
+      "kind": "interface",
+      "line_range": [
+        23,
+        46
+      ],
+      "name": "PreparedApplicationHostStub",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:workflowBuilderMocks",
+      "kind": "variable",
+      "line_range": [
+        48,
+        50
+      ],
+      "name": "workflowBuilderMocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:fsMocks",
+      "kind": "variable",
+      "line_range": [
+        52,
+        55
+      ],
+      "name": "fsMocks",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:createNitroStub",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        93,
+        117
+      ],
+      "name": "createNitroStub",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ buildDir?: string; dev?: boolean; rootDir?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Nitro & Pick<NitroStub, \"hookHandlers\">",
+      "signature": "export function createNitroStub(input: { buildDir?: string; dev?: boolean; rootDir?: string }) -> Nitro & Pick<NitroStub, \"hookHandlers\">",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:createPreparedHost",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        119,
+        159
+      ],
+      "name": "createPreparedHost",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    agentName?: string;\r\n    appRoot?: string;\r\n    workflowWorld?: string;\r\n    workflowBuildDir?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PreparedApplicationHost",
+      "signature": "export function createPreparedHost(input: {\r\n    agentName?: string;\r\n    appRoot?: string;\r\n    workflowWorld?: string;\r\n    workflowBuildDir?: string;\r\n  }) -> PreparedApplicationHost",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/configure-nitro-routes.test.ts:readWriteFileSourceMatching",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        449,
+        462
+      ],
+      "name": "readWriteFileSourceMatching",
+      "params": [
+        {
+          "name": "suffix",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | undefined",
+      "signature": "export function readWriteFileSourceMatching(suffix: string) -> string | undefined",
+      "visibility": "Private"
+    }
+  ]
+}

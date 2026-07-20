@@ -1,0 +1,98 @@
+{
+  "module": "packages/eve/src/runtime/governance/auth/http-basic.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/http-basic.ts:authenticateHttpBasicStrategy",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        11,
+        45
+      ],
+      "name": "authenticateHttpBasicStrategy",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly authorization: string;\r\n  readonly strategy: ResolvedHttpBasicAuthStrategy;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RouteStrategyAuthenticationResult",
+      "signature": "export function authenticateHttpBasicStrategy(input: {\r\n  readonly authorization: string;\r\n  readonly strategy: ResolvedHttpBasicAuthStrategy;\r\n}) -> RouteStrategyAuthenticationResult",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/http-basic.ts:parseBasicAuthorizationHeader",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        47,
+        81
+      ],
+      "name": "parseBasicAuthorizationHeader",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly password: string;\r\n  readonly username: string;\r\n} | null",
+      "signature": "export function parseBasicAuthorizationHeader(value: string) -> {\r\n  readonly password: string;\r\n  readonly username: string;\r\n} | null",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/http-basic.ts:timingSafeStringEquals",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        83,
+        85
+      ],
+      "name": "timingSafeStringEquals",
+      "params": [
+        {
+          "name": "left",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "right",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function timingSafeStringEquals(left: string, right: string) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/governance/auth/http-basic.ts:hashString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        87,
+        89
+      ],
+      "name": "hashString",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Buffer<ArrayBuffer>",
+      "signature": "export function hashString(value: string) -> Buffer<ArrayBuffer>",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:APP_ROOT",
+      "kind": "variable",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "APP_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:AGENT_ROOT",
+      "kind": "variable",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "AGENT_ROOT",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:GENERATOR_VERSION",
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "GENERATOR_VERSION",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makeTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        26,
+        35
+      ],
+      "name": "makeTool",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledToolDefinition",
+      "signature": "export function makeTool(name: string) -> CompiledToolDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makeConnection",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        37,
+        59
+      ],
+      "name": "makeConnection",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{\r\n    vercelConnect?: { connector: string };\r\n    protocol?: CompiledConnectionDefinition[\"protocol\"];\r\n    url?: string;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledConnectionDefinition",
+      "signature": "export function makeConnection(name: string, options: {\r\n    vercelConnect?: { connector: string };\r\n    protocol?: CompiledConnectionDefinition[\"protocol\"];\r\n    url?: string;\r\n  }) -> CompiledConnectionDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makeSchedule",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        61,
+        71
+      ],
+      "name": "makeSchedule",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "cron",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledScheduleDefinition",
+      "signature": "export function makeSchedule(name: string, cron: string) -> CompiledScheduleDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makeChannel",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        73,
+        84
+      ],
+      "name": "makeChannel",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ name: string; adapterKind?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledChannelDefinition",
+      "signature": "export function makeChannel(input: { name: string; adapterKind?: string }) -> CompiledChannelDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makeFlatSkill",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        86,
+        95
+      ],
+      "name": "makeFlatSkill",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledSkillDefinition",
+      "signature": "export function makeFlatSkill(name: string) -> CompiledSkillDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makePackagedSkill",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        97,
+        109
+      ],
+      "name": "makePackagedSkill",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledSkillDefinition",
+      "signature": "export function makePackagedSkill(name: string) -> CompiledSkillDefinition",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/build-vercel-agent-summary.test.ts:makeSubagent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        111,
+        131
+      ],
+      "name": "makeSubagent",
+      "params": [
+        {
+          "name": "name",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "CompiledSubagentNode",
+      "signature": "export function makeSubagent(name: string) -> CompiledSubagentNode",
+      "visibility": "Private"
+    }
+  ]
+}

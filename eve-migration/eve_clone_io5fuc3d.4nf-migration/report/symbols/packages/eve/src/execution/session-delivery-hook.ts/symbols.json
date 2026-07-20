@@ -1,0 +1,207 @@
+{
+  "module": "packages/eve/src/execution/session-delivery-hook.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:HookRead:order",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "order",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:HookRead:result",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": IteratorResult<HookPayload>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:HookRead:state",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "state",
+          "partial_analysis": false,
+          "return_type": ": SessionDeliveryHookState",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/session-delivery-hook.ts:HookRead",
+      "kind": "interface",
+      "line_range": [
+        6,
+        10
+      ],
+      "name": "HookRead",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:hook",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "hook",
+          "partial_analysis": false,
+          "return_type": ": Hook<HookPayload>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:iterator",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "iterator",
+          "partial_analysis": false,
+          "return_type": ": AsyncIterator<HookPayload>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:closed",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "closed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:enabled",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "enabled",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:pending",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "pending",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:retired",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "retired",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState:resolved",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "resolved",
+          "partial_analysis": false,
+          "return_type": ": HookRead",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookState",
+      "kind": "interface",
+      "line_range": [
+        12,
+        20
+      ],
+      "name": "SessionDeliveryHookState",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHook",
+      "kind": "interface",
+      "line_range": [
+        23,
+        27
+      ],
+      "name": "SessionDeliveryHook",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-delivery-hook.ts:SessionDeliveryHookHandle",
+      "kind": "interface",
+      "line_range": [
+        30,
+        32
+      ],
+      "name": "SessionDeliveryHookHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/session-delivery-hook.ts:createSessionDeliveryHook",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        224
+      ],
+      "name": "createSessionDeliveryHook",
+      "params": [
+        {
+          "name": "bufferedDeliveries",
+          "optional": false,
+          "type": "DeliverHookPayload[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionDeliveryHookHandle",
+      "signature": "export function createSessionDeliveryHook(bufferedDeliveries: DeliverHookPayload[]) -> SessionDeliveryHookHandle",
+      "visibility": "Public"
+    }
+  ]
+}

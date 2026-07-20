@@ -1,0 +1,101 @@
+{
+  "MAX_OUTPUT_BYTES": [
+    {
+      "kind": "usage",
+      "location": {
+        "column": 34,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 151
+      },
+      "symbol": "packages/eve/src/execution/sandbox/truncate-output.ts:MAX_OUTPUT_BYTES"
+    }
+  ],
+  "SandboxSession": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 56
+      },
+      "symbol": "packages/eve/src/shared/sandbox-session.ts:SandboxSession"
+    }
+  ],
+  "buildReadFileTargetKey": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 20,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 122
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/file-state.ts:buildReadFileTargetKey"
+    }
+  ],
+  "capLineLength": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 17,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 147
+      },
+      "symbol": "packages/eve/src/execution/sandbox/truncate-output.ts:capLineLength"
+    }
+  ],
+  "createReadFileStamp": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 16,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 117
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/file-state.ts:createReadFileStamp"
+    }
+  ],
+  "loadContext": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 19,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 123
+      },
+      "symbol": "packages/eve/src/context/container.ts:loadContext"
+    }
+  ],
+  "normalizeModelPath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 25,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 62
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/file-state.ts:normalizeModelPath"
+    }
+  ],
+  "setReadFileStamp": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 123
+      },
+      "symbol": "packages/eve/src/runtime/framework-tools/file-state.ts:setReadFileStamp"
+    }
+  ],
+  "validateAbsoluteFilePath": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 2,
+        "file": "packages/eve/src/execution/sandbox/read-file-tool.ts",
+        "line": 61
+      },
+      "symbol": "packages/eve/src/execution/sandbox/require-sandbox.ts:validateAbsoluteFilePath"
+    }
+  ]
+}

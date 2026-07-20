@@ -1,0 +1,430 @@
+{
+  "module": "packages/eve/src/public/instrumentation/index.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationSetupContext:agentName",
+          "kind": "property",
+          "line_range": [
+            32,
+            32
+          ],
+          "name": "agentName",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationSetupContext",
+      "kind": "interface",
+      "line_range": [
+        27,
+        33
+      ],
+      "name": "InstrumentationSetupContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationRuntimeContext",
+      "kind": "type_alias",
+      "line_range": [
+        41,
+        41
+      ],
+      "name": "InstrumentationRuntimeContext",
+      "partial_analysis": false,
+      "value": "JsonObject;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationSession:auth",
+          "kind": "property",
+          "line_range": [
+            52,
+            55
+          ],
+          "name": "auth",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly current: SessionAuthContext | null;\r\n    readonly initiator: SessionAuthContext | null;\r\n  }",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationSession:id",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationSession:parent",
+          "kind": "property",
+          "line_range": [
+            57,
+            57
+          ],
+          "name": "parent",
+          "partial_analysis": false,
+          "return_type": ": SessionParent",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationSession",
+      "kind": "interface",
+      "line_range": [
+        51,
+        58
+      ],
+      "name": "InstrumentationSession",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationTurn:id",
+          "kind": "property",
+          "line_range": [
+            66,
+            66
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationTurn:sequence",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "sequence",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationTurn",
+      "kind": "interface",
+      "line_range": [
+        65,
+        68
+      ],
+      "name": "InstrumentationTurn",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStep:index",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "index",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStep",
+      "kind": "interface",
+      "line_range": [
+        74,
+        76
+      ],
+      "name": "InstrumentationStep",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationModelInput:instructions",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "instructions",
+          "partial_analysis": false,
+          "return_type": ": string | SystemModelMessage | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationModelInput:messages",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "messages",
+          "partial_analysis": false,
+          "return_type": ": readonly ModelMessage[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationModelInput",
+      "kind": "interface",
+      "line_range": [
+        84,
+        87
+      ],
+      "name": "InstrumentationModelInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventInput:channel",
+          "kind": "property",
+          "line_range": [
+            95,
+            95
+          ],
+          "name": "channel",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationChannel",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventInput:modelInput",
+          "kind": "property",
+          "line_range": [
+            96,
+            96
+          ],
+          "name": "modelInput",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationModelInput",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventInput:session",
+          "kind": "property",
+          "line_range": [
+            97,
+            97
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationSession",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventInput:step",
+          "kind": "property",
+          "line_range": [
+            98,
+            98
+          ],
+          "name": "step",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationStep",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventInput:turn",
+          "kind": "property",
+          "line_range": [
+            99,
+            99
+          ],
+          "name": "turn",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationTurn",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventInput",
+      "kind": "interface",
+      "line_range": [
+        94,
+        100
+      ],
+      "name": "InstrumentationStepStartedEventInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventResult:runtimeContext",
+          "kind": "property",
+          "line_range": [
+            112,
+            112
+          ],
+          "name": "runtimeContext",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationRuntimeContext",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationStepStartedEventResult",
+      "kind": "interface",
+      "line_range": [
+        108,
+        113
+      ],
+      "name": "InstrumentationStepStartedEventResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationEvents:[expr]",
+          "kind": "property",
+          "line_range": [
+            123,
+            125
+          ],
+          "name": "[expr]",
+          "partial_analysis": false,
+          "return_type": ": (\r\n    input: InstrumentationStepStartedEventInput,\r\n  ) => InstrumentationStepStartedEventResult | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationEvents",
+      "kind": "interface",
+      "line_range": [
+        118,
+        126
+      ],
+      "name": "InstrumentationEvents",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationDefinition:functionId",
+          "kind": "property",
+          "line_range": [
+            140,
+            140
+          ],
+          "name": "functionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationDefinition:events",
+          "kind": "property",
+          "line_range": [
+            144,
+            144
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": InstrumentationEvents",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationDefinition:recordInputs",
+          "kind": "property",
+          "line_range": [
+            150,
+            150
+          ],
+          "name": "recordInputs",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationDefinition:recordOutputs",
+          "kind": "property",
+          "line_range": [
+            155,
+            155
+          ],
+          "name": "recordOutputs",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationDefinition:setup",
+          "kind": "property",
+          "line_range": [
+            161,
+            161
+          ],
+          "name": "setup",
+          "partial_analysis": false,
+          "return_type": ": (context: InstrumentationSetupContext) => void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/instrumentation/index.ts:InstrumentationDefinition",
+      "kind": "interface",
+      "line_range": [
+        134,
+        162
+      ],
+      "name": "InstrumentationDefinition",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/instrumentation/index.ts:defineInstrumentation",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        170,
+        174
+      ],
+      "name": "defineInstrumentation",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<T, InstrumentationDefinition>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "T",
+      "signature": "export function defineInstrumentation(definition: ExactDefinition<T, InstrumentationDefinition>) -> T",
+      "visibility": "Public"
+    }
+  ]
+}

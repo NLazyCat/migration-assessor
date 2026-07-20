@@ -1,0 +1,56 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        37,
+        40
+      ],
+      "name": "WebSocketUpgradeServerBridge",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebSocketUpgradeServerBridge { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        38,
+        38
+      ],
+      "name": "route",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WebSocketRouteHandler",
+      "signature": "route: : WebSocketRouteHandler"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        39,
+        39
+      ],
+      "name": "server",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Server",
+      "signature": "server: : Server"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        51,
+        58
+      ],
+      "name": "createWebSocketUpgradeServer",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "WebSocketUpgradeServerBridge",
+      "signature": "export function createWebSocketUpgradeServer() -> WebSocketUpgradeServerBridge"
+    }
+  ],
+  "module": "packages/eve/src/channel/websocket-upgrade-server.ts"
+}

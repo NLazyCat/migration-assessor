@@ -1,0 +1,67 @@
+{
+  "module": "apps/templates/web-chat-next/app/_components/agent-chat.tsx",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/app/_components/agent-chat.tsx:AGENT_NAME",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "AGENT_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/app/_components/agent-chat.tsx:AgentStatus",
+      "kind": "type_alias",
+      "line_range": [
+        22,
+        22
+      ],
+      "name": "AgentStatus",
+      "partial_analysis": false,
+      "value": "ReturnType<typeof useEveAgent>[\"status\"];",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/app/_components/agent-chat.tsx:AgentChat",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        120
+      ],
+      "name": "AgentChat",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function AgentChat() -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "apps/templates/web-chat-next/app/_components/agent-chat.tsx:StatusDot",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        122,
+        146
+      ],
+      "name": "StatusDot",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "{ readonly status: AgentStatus }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function StatusDot(_: { readonly status: AgentStatus }) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        17,
+        37
+      ],
+      "name": "messageToUserContent",
+      "params": [
+        {
+          "name": "message",
+          "optional": false,
+          "type": "Message"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string | UserContent",
+      "signature": "export function messageToUserContent(message: Message) -> string | UserContent"
+    }
+  ],
+  "module": "packages/eve/src/public/channels/chat-sdk/messageToUserContent.ts"
+}

@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "LOCAL_WORKFLOW_WORLD_DATA_DIRECTORY_RELATIVE_PATH",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const LOCAL_WORKFLOW_WORLD_DATA_DIRECTORY_RELATIVE_PATH: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        5,
+        7
+      ],
+      "name": "resolveLocalWorkflowWorldDataDirectory",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function resolveLocalWorkflowWorldDataDirectory(appRoot: string) -> string"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow/local-world-data-directory.ts"
+}

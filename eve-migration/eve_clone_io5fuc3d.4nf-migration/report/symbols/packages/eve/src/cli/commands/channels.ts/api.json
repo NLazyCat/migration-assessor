@@ -1,0 +1,194 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        23,
+        26
+      ],
+      "name": "CliLogger",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface CliLogger { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        45
+      ],
+      "name": "AddChannelCommandOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface AddChannelCommandOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "force",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "force?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "yes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "yes?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        47,
+        54
+      ],
+      "name": "ChannelsAddDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ChannelsAddDependencies { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "createPrompter",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => Prompter",
+      "signature": "createPrompter?: : () => Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "addChannelsDeps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AddChannelsDeps",
+      "signature": "addChannelsDeps?: : AddChannelsDeps"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        53,
+        53
+      ],
+      "name": "deployProjectDeps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": DeployProjectDeps",
+      "signature": "deployProjectDeps?: : DeployProjectDeps"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        147,
+        166
+      ],
+      "name": "runChannelsAddCommand",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliLogger"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "args",
+          "optional": false,
+          "type": "{ kind?: string; options: AddChannelCommandOptions }"
+        },
+        {
+          "name": "dependencies",
+          "optional": false,
+          "type": "ChannelsAddDependencies"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runChannelsAddCommand(logger: CliLogger, appRoot: string, args: { kind?: string; options: AddChannelCommandOptions }, dependencies: ChannelsAddDependencies) -> Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        168,
+        170
+      ],
+      "name": "ListChannelsCommandOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ListChannelsCommandOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        169,
+        169
+      ],
+      "name": "json",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "json?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        172,
+        198
+      ],
+      "name": "runChannelsListCommand",
+      "params": [
+        {
+          "name": "logger",
+          "optional": false,
+          "type": "CliLogger"
+        },
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ListChannelsCommandOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function runChannelsListCommand(logger: CliLogger, appRoot: string, options: ListChannelsCommandOptions) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/cli/commands/channels.ts"
+}

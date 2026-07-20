@@ -1,0 +1,55 @@
+{
+  "module": "packages/eve/src/harness/workflow-lifecycle.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-lifecycle.test.ts:emissionState",
+      "kind": "variable",
+      "line_range": [
+        11,
+        16
+      ],
+      "name": "emissionState",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-lifecycle.test.ts:createTools",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        18,
+        34
+      ],
+      "name": "createTools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessToolMap",
+      "signature": "export function createTools() -> HarnessToolMap",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/workflow-lifecycle.test.ts:nestedCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        48
+      ],
+      "name": "nestedCall",
+      "params": [
+        {
+          "name": "replayed",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function nestedCall(replayed: unknown) -> void",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/setup-issues.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-issues.test.ts:context",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        14,
+        16
+      ],
+      "name": "context",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<BootDetectionContext>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "BootDetectionContext",
+      "signature": "export function context(overrides: Partial<BootDetectionContext>) -> BootDetectionContext",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-issues.test.ts:AgentInfo",
+      "kind": "type_alias",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "AgentInfo",
+      "partial_analysis": false,
+      "value": "NonNullable<BootDetectionContext[\"info\"]>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/setup-issues.test.ts:infoWithRouting",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        21,
+        59
+      ],
+      "name": "infoWithRouting",
+      "params": [
+        {
+          "name": "routing",
+          "optional": false,
+          "type": "AgentInfo[\"agent\"][\"model\"][\"routing\"]"
+        },
+        {
+          "name": "endpoint",
+          "optional": true,
+          "type": "AgentInfo[\"agent\"][\"model\"][\"endpoint\"]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AgentInfo",
+      "signature": "export function infoWithRouting(routing: AgentInfo[\"agent\"][\"model\"][\"routing\"], endpoint: AgentInfo[\"agent\"][\"model\"][\"endpoint\"]) -> AgentInfo",
+      "visibility": "Private"
+    }
+  ]
+}

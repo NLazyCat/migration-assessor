@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        7,
+        17
+      ],
+      "name": "isInlineAuthorizationToolResult",
+      "params": [
+        {
+          "name": "toolResult",
+          "optional": false,
+          "type": "TypedToolResult<ToolSet>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function isInlineAuthorizationToolResult(toolResult: TypedToolResult<ToolSet>) -> boolean"
+    }
+  ],
+  "module": "packages/eve/src/harness/inline-tool-authorization.ts"
+}

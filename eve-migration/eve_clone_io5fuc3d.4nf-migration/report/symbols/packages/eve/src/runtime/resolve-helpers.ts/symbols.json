@@ -1,0 +1,111 @@
+{
+  "module": "packages/eve/src/runtime/resolve-helpers.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/resolve-helpers.ts:ResolveAgentError:logicalPath",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "logicalPath",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/resolve-helpers.ts:ResolveAgentError:sourceId",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "sourceId",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/resolve-helpers.ts:ResolveAgentError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            18,
+            35
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "message",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n      logicalPath?: string;\r\n      sourceId?: string;\r\n    }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/resolve-helpers.ts:ResolveAgentError",
+      "kind": "class",
+      "line_range": [
+        14,
+        36
+      ],
+      "name": "ResolveAgentError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-helpers.ts:createResolvedModuleSourceRef",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        42,
+        53
+      ],
+      "name": "createResolvedModuleSourceRef",
+      "params": [
+        {
+          "name": "sourceRef",
+          "optional": false,
+          "type": "{\r\n  readonly exportName?: string;\r\n  readonly logicalPath: string;\r\n  readonly sourceId: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ResolvedModuleSourceRef",
+      "signature": "export function createResolvedModuleSourceRef(sourceRef: {\r\n  readonly exportName?: string;\r\n  readonly logicalPath: string;\r\n  readonly sourceId: string;\r\n}) -> ResolvedModuleSourceRef",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/resolve-helpers.ts:loadResolvedModuleExport",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        65,
+        98
+      ],
+      "name": "loadResolvedModuleExport",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly definition: {\r\n    readonly exportName?: string;\r\n    readonly logicalPath: string;\r\n    readonly sourceId: string;\r\n  };\r\n  readonly kindLabel: string;\r\n  readonly moduleMap: CompiledModuleMap;\r\n  readonly nodeId: string | undefined;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function loadResolvedModuleExport(input: {\r\n  readonly definition: {\r\n    readonly exportName?: string;\r\n    readonly logicalPath: string;\r\n    readonly sourceId: string;\r\n  };\r\n  readonly kindLabel: string;\r\n  readonly moduleMap: CompiledModuleMap;\r\n  readonly nodeId: string | undefined;\r\n}) -> Promise<unknown>",
+      "visibility": "Public"
+    }
+  ]
+}

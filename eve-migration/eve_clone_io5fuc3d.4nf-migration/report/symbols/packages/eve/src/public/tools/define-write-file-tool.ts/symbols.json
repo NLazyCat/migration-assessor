@@ -1,0 +1,53 @@
+{
+  "module": "packages/eve/src/public/tools/define-write-file-tool.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/tools/define-write-file-tool.ts:DefineWriteFileToolInput:description",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/tools/define-write-file-tool.ts:DefineWriteFileToolInput",
+      "kind": "interface",
+      "line_range": [
+        14,
+        20
+      ],
+      "name": "DefineWriteFileToolInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/tools/define-write-file-tool.ts:defineWriteFileTool",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "defineWriteFileTool",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DefineWriteFileToolInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolDefinition",
+      "signature": "export function defineWriteFileTool(input: DefineWriteFileToolInput) -> ToolDefinition",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "module": "packages/eve/src/execution/sandbox/bindings/docker-utils.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/bindings/docker-utils.ts:expectDockerSuccess",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        3,
+        8
+      ],
+      "name": "expectDockerSuccess",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "DockerCommandResult"
+        },
+        {
+          "name": "action",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function expectDockerSuccess(result: DockerCommandResult, action: string) -> void",
+      "visibility": "Public"
+    }
+  ]
+}

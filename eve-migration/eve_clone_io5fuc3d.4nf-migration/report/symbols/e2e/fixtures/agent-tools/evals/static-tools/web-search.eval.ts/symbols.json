@@ -1,0 +1,40 @@
+{
+  "module": "e2e/fixtures/agent-tools/evals/static-tools/web-search.eval.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search.eval.ts:TOOL_NAME",
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "TOOL_NAME",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "e2e/fixtures/agent-tools/evals/static-tools/web-search.eval.ts:providerRequestsPrecedeResults",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        6,
+        41
+      ],
+      "name": "providerRequestsPrecedeResults",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function providerRequestsPrecedeResults(events: readonly HandleMessageStreamEvent[]) -> boolean",
+      "visibility": "Private"
+    }
+  ]
+}

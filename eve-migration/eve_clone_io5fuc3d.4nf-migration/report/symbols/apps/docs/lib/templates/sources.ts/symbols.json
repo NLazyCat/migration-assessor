@@ -1,0 +1,50 @@
+{
+  "module": "apps/docs/lib/templates/sources.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/sources.ts:file",
+      "is_async": false,
+      "kind": "variable",
+      "line_range": [
+        3,
+        7
+      ],
+      "name": "file",
+      "params": [
+        {
+          "name": "relativePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "optional": false,
+          "type": "TemplateFile[\"language\"]"
+        },
+        {
+          "name": "contents",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TemplateFile",
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "apps/docs/lib/templates/sources.ts:templateSourceFiles",
+      "kind": "variable",
+      "line_range": [
+        9,
+        297
+      ],
+      "name": "templateSourceFiles",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Public"
+    }
+  ]
+}

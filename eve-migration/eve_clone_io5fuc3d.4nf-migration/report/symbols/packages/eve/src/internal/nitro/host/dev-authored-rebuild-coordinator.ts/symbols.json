@@ -1,0 +1,447 @@
+{
+  "module": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentRebuildKind",
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "DevelopmentRebuildKind",
+      "partial_analysis": false,
+      "value": "\"structural\" | \"unchanged\" | \"runtime\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:PostCommitDevelopmentRebuildError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            28,
+            34
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "cause",
+              "optional": false,
+              "type": "unknown"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:PostCommitDevelopmentRebuildError",
+      "kind": "class",
+      "line_range": [
+        27,
+        35
+      ],
+      "name": "PostCommitDevelopmentRebuildError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentWorkflowWorldChangeRequiresRestartError:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            43,
+            48
+          ],
+          "name": "constructor",
+          "params": [],
+          "partial_analysis": false,
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentWorkflowWorldChangeRequiresRestartError",
+      "kind": "class",
+      "line_range": [
+        42,
+        49
+      ],
+      "name": "DevelopmentWorkflowWorldChangeRequiresRestartError",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentRebuildResult:host",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "host",
+          "partial_analysis": false,
+          "return_type": ": PreparedDevelopmentApplicationHost",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentRebuildResult:kind",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": DevelopmentRebuildKind",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentRebuildResult",
+      "kind": "interface",
+      "line_range": [
+        51,
+        54
+      ],
+      "name": "DevelopmentRebuildResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:DevelopmentAuthoredRebuildCoordinator",
+      "kind": "interface",
+      "line_range": [
+        56,
+        58
+      ],
+      "name": "DevelopmentAuthoredRebuildCoordinator",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:createDevelopmentAuthoredRebuildCoordinator",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        60,
+        70
+      ],
+      "name": "createDevelopmentAuthoredRebuildCoordinator",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly devServer: DrainedNitroDevServer;\r\n  readonly initialHost: PreparedDevelopmentApplicationHost;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DevelopmentAuthoredRebuildCoordinator>",
+      "signature": "export function createDevelopmentAuthoredRebuildCoordinator(input: {\r\n  readonly devServer: DrainedNitroDevServer;\r\n  readonly initialHost: PreparedDevelopmentApplicationHost;\r\n}) -> Promise<DevelopmentAuthoredRebuildCoordinator>",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#currentHost",
+          "kind": "property",
+          "line_range": [
+            83,
+            83
+          ],
+          "name": "#currentHost",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#currentHostFingerprint",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "#currentHostFingerprint",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#currentRuntimeFingerprint",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "#currentRuntimeFingerprint",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#devServer",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "#devServer",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#usesParentWorkflowWorld",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "#usesParentWorkflowWorld",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            89,
+            102
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly currentHostFingerprint: string;\r\n    readonly currentRuntimeFingerprint: string;\r\n    readonly devServer: DrainedNitroDevServer;\r\n    readonly initialHost: PreparedDevelopmentApplicationHost;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:rebuild",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            104,
+            185
+          ],
+          "name": "rebuild",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly changedPaths: readonly string[];\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<DevelopmentRebuildResult>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#commitStructuralHost",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            187,
+            244
+          ],
+          "name": "#commitStructuralHost",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly hasRuntimeChange: boolean;\r\n    readonly nextHost: PreparedDevelopmentApplicationHost;\r\n    readonly nextHostFingerprint: string;\r\n    readonly nextRuntimeFingerprint: string;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<DevelopmentRebuildResult>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator:#commitState",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            246,
+            254
+          ],
+          "name": "#commitState",
+          "params": [
+            {
+              "name": "host",
+              "optional": false,
+              "type": "PreparedDevelopmentApplicationHost"
+            },
+            {
+              "name": "hostFingerprint",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "runtimeFingerprint",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:TransactionalDevelopmentAuthoredRebuildCoordinator",
+      "kind": "class",
+      "line_range": [
+        82,
+        255
+      ],
+      "name": "TransactionalDevelopmentAuthoredRebuildCoordinator",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:retainActiveHostWorkspace",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        257,
+        267
+      ],
+      "name": "retainActiveHostWorkspace",
+      "params": [
+        {
+          "name": "activeHost",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        },
+        {
+          "name": "nextHost",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PreparedDevelopmentApplicationHost",
+      "signature": "export function retainActiveHostWorkspace(activeHost: PreparedDevelopmentApplicationHost, nextHost: PreparedDevelopmentApplicationHost) -> PreparedDevelopmentApplicationHost",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:startSandboxPrewarmAfterCommit",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        269,
+        285
+      ],
+      "name": "startSandboxPrewarmAfterCommit",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        },
+        {
+          "name": "changedPaths",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function startSandboxPrewarmAfterCommit(host: PreparedDevelopmentApplicationHost, changedPaths: readonly string[]) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:hasSandboxRelatedChange",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        287,
+        301
+      ],
+      "name": "hasSandboxRelatedChange",
+      "params": [
+        {
+          "name": "agentRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "changedPaths",
+          "optional": false,
+          "type": "readonly string[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "boolean",
+      "signature": "export function hasSandboxRelatedChange(agentRoot: string, changedPaths: readonly string[]) -> boolean",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:discardPreparedHost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        303,
+        315
+      ],
+      "name": "discardPreparedHost",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function discardPreparedHost(host: PreparedDevelopmentApplicationHost) -> Promise<void>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/nitro/host/dev-authored-rebuild-coordinator.ts:discardFailedHost",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        317,
+        329
+      ],
+      "name": "discardFailedHost",
+      "params": [
+        {
+          "name": "cause",
+          "optional": false,
+          "type": "unknown"
+        },
+        {
+          "name": "host",
+          "optional": false,
+          "type": "PreparedDevelopmentApplicationHost"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function discardFailedHost(cause: unknown, host: PreparedDevelopmentApplicationHost) -> Promise<unknown>",
+      "visibility": "Private"
+    }
+  ]
+}

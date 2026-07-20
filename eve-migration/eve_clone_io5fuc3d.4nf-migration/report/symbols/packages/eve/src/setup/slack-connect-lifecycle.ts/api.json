@@ -1,0 +1,413 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "CONNECT_LOOKUP_TIMEOUT_MS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CONNECT_LOOKUP_TIMEOUT_MS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "CONNECT_MUTATION_TIMEOUT_MS",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const CONNECT_MUTATION_TIMEOUT_MS: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        29,
+        32
+      ],
+      "name": "SlackConnectLifecycleDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackConnectLifecycleDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "captureVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof captureVercel",
+      "signature": "captureVercel: : typeof captureVercel"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        31,
+        31
+      ],
+      "name": "runVercel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": typeof runVercel",
+      "signature": "runVercel: : typeof runVercel"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        34,
+        36
+      ],
+      "name": "SlackConnectorInventory",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorInventory = | { state: \"ok\"; body: unknown; connectors: readonly RawSlackConnector[] }\r\n  | { state: \"failed\"; message: string };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        38,
+        40
+      ],
+      "name": "SlackConnectorCleanupResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorCleanupResult = | { state: \"clean\" }\r\n  | { state: \"failed\"; connectorUids: readonly string[] };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        45,
+        50
+      ],
+      "name": "SlackConnectorCleanupContext",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SlackConnectorCleanupContext { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        46,
+        46
+      ],
+      "name": "log",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelSetupLog",
+      "signature": "log: : ChannelSetupLog"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        47,
+        47
+      ],
+      "name": "deps",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackConnectLifecycleDeps",
+      "signature": "deps: : SlackConnectLifecycleDeps"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        48,
+        48
+      ],
+      "name": "projectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "onOutput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CommandOutput",
+      "signature": "onOutput: : CommandOutput"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        53,
+        80
+      ],
+      "name": "listSlackConnectors",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "SlackConnectLifecycleDeps"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "CommandOutput"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorInventory>",
+      "signature": "export function listSlackConnectors(deps: SlackConnectLifecycleDeps, projectRoot: string, onOutput: CommandOutput, signal: AbortSignal) -> Promise<SlackConnectorInventory>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        83,
+        83
+      ],
+      "name": "VercelProjectLink",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type VercelProjectLink = z.infer<typeof VercelProjectLinkSchema>;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        94
+      ],
+      "name": "readProjectLink",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<VercelProjectLink | undefined>",
+      "signature": "export function readProjectLink(projectRoot: string) -> Promise<VercelProjectLink | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        96,
+        99
+      ],
+      "name": "SlackConnectorLookup",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorLookup = | { state: \"found\"; connector: SlackConnectorRef; connectorUids: ReadonlySet<string> }\r\n  | { state: \"not-found\"; connectorUids: ReadonlySet<string> }\r\n  | { state: \"failed\"; message: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        102,
+        117
+      ],
+      "name": "findSlackConnector",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "SlackConnectLifecycleDeps"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectId",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "expectedUid",
+          "optional": false,
+          "type": "string | undefined"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "CommandOutput"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorLookup>",
+      "signature": "export function findSlackConnector(deps: SlackConnectLifecycleDeps, projectRoot: string, projectId: string | undefined, expectedUid: string | undefined, onOutput: CommandOutput, signal: AbortSignal) -> Promise<SlackConnectorLookup>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        125,
+        128
+      ],
+      "name": "SlackConnectorAttachmentResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorAttachmentResult = | { state: \"attached\" }\r\n  | { state: \"detach-failed\" }\r\n  | { state: \"attach-failed\" };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        136,
+        170
+      ],
+      "name": "attachSlackConnector",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "SlackConnectLifecycleDeps"
+        },
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "ref",
+          "optional": false,
+          "type": "SlackConnectorRef"
+        },
+        {
+          "name": "onOutput",
+          "optional": false,
+          "type": "CommandOutput"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorAttachmentResult>",
+      "signature": "export function attachSlackConnector(deps: SlackConnectLifecycleDeps, projectRoot: string, ref: SlackConnectorRef, onOutput: CommandOutput, signal: AbortSignal) -> Promise<SlackConnectorAttachmentResult>"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        172,
+        175
+      ],
+      "name": "SlackWorkspaceLookup",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackWorkspaceLookup = | { state: \"connected\"; workspace: SlackWorkspaceConnection }\r\n  | { state: \"pending\" }\r\n  | { state: \"failed\"; message: string };"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        177,
+        179
+      ],
+      "name": "SlackConnectorDetailsLookup",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorDetailsLookup = | { state: \"found\"; details: SlackConnectorDetails }\r\n  | { state: \"failed\"; message: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        182,
+        210
+      ],
+      "name": "fetchSlackConnectorDetails",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  deps: Pick<SlackConnectLifecycleDeps, \"captureVercel\">;\r\n  projectRoot: string;\r\n  connectorId: string;\r\n  orgId: string | undefined;\r\n  onOutput: CommandOutput;\r\n  timeoutMs: number;\r\n  signal?: AbortSignal;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorDetailsLookup>",
+      "signature": "export function fetchSlackConnectorDetails(input: {\r\n  deps: Pick<SlackConnectLifecycleDeps, \"captureVercel\">;\r\n  projectRoot: string;\r\n  connectorId: string;\r\n  orgId: string | undefined;\r\n  onOutput: CommandOutput;\r\n  timeoutMs: number;\r\n  signal?: AbortSignal;\r\n}) -> Promise<SlackConnectorDetailsLookup>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        213,
+        227
+      ],
+      "name": "fetchSlackWorkspace",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  deps: Pick<SlackConnectLifecycleDeps, \"captureVercel\">;\r\n  projectRoot: string;\r\n  connectorId: string;\r\n  orgId: string | undefined;\r\n  onOutput: CommandOutput;\r\n  timeoutMs: number;\r\n  signal?: AbortSignal;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackWorkspaceLookup>",
+      "signature": "export function fetchSlackWorkspace(input: {\r\n  deps: Pick<SlackConnectLifecycleDeps, \"captureVercel\">;\r\n  projectRoot: string;\r\n  connectorId: string;\r\n  orgId: string | undefined;\r\n  onOutput: CommandOutput;\r\n  timeoutMs: number;\r\n  signal?: AbortSignal;\r\n}) -> Promise<SlackWorkspaceLookup>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        269,
+        295
+      ],
+      "name": "cleanupCreatedAttempt",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "SlackConnectorCleanupContext"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n    expectedUid: string;\r\n    baselineConnectorUids: ReadonlySet<string>;\r\n    createdRef: SlackConnectorRef | undefined;\r\n  }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorCleanupResult>",
+      "signature": "export function cleanupCreatedAttempt(context: SlackConnectorCleanupContext, input: {\r\n    expectedUid: string;\r\n    baselineConnectorUids: ReadonlySet<string>;\r\n    createdRef: SlackConnectorRef | undefined;\r\n  }) -> Promise<SlackConnectorCleanupResult>"
+    }
+  ],
+  "module": "packages/eve/src/setup/slack-connect-lifecycle.ts"
+}

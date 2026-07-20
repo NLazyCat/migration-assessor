@@ -1,0 +1,143 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": "MODEL_SKILL_ROOT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MODEL_SKILL_ROOT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": "FALLBACK_SKILL_ROOT",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const FALLBACK_SKILL_ROOT: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        10,
+        19
+      ],
+      "name": "formatSkillModelPath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatSkillModelPath(input: {\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        21,
+        30
+      ],
+      "name": "formatFallbackSkillPath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatFallbackSkillPath(input: {\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n}) -> string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        32,
+        43
+      ],
+      "name": "resolveSandboxSkillRoot",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly sandbox: SandboxSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveSandboxSkillRoot(input: {\r\n  readonly sandbox: SandboxSession;\r\n}) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        45,
+        57
+      ],
+      "name": "resolveSandboxSkillReadPaths",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n  readonly sandbox: SandboxSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<readonly string[]>",
+      "signature": "export function resolveSandboxSkillReadPaths(input: {\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n  readonly sandbox: SandboxSession;\r\n}) -> Promise<readonly string[]>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        59,
+        69
+      ],
+      "name": "resolveSandboxSkillWritePath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n  readonly sandbox: SandboxSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveSandboxSkillWritePath(input: {\r\n  readonly name: string;\r\n  readonly relativePath: string;\r\n  readonly sandbox: SandboxSession;\r\n}) -> Promise<string>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        71,
+        81
+      ],
+      "name": "resolveSandboxSeedFilePath",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly path: string;\r\n  readonly sandbox: SandboxSession;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveSandboxSeedFilePath(input: {\r\n  readonly path: string;\r\n  readonly sandbox: SandboxSession;\r\n}) -> Promise<string>"
+    }
+  ],
+  "module": "packages/eve/src/shared/skill-paths.ts"
+}

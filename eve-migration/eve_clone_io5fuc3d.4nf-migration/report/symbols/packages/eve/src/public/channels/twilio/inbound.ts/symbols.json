@@ -1,0 +1,470 @@
+{
+  "module": "packages/eve/src/public/channels/twilio/inbound.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:from",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "from",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:to",
+          "kind": "property",
+          "line_range": [
+            13,
+            13
+          ],
+          "name": "to",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:body",
+          "kind": "property",
+          "line_range": [
+            14,
+            14
+          ],
+          "name": "body",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:messageSid",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "messageSid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:accountSid",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "accountSid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:media",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "media",
+          "partial_analysis": false,
+          "return_type": ": readonly TwilioMediaPayload[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage:raw",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": URLSearchParams",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioTextMessage",
+      "kind": "interface",
+      "line_range": [
+        11,
+        20
+      ],
+      "name": "TwilioTextMessage",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceCall:from",
+          "kind": "property",
+          "line_range": [
+            24,
+            24
+          ],
+          "name": "from",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceCall:to",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "to",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceCall:callSid",
+          "kind": "property",
+          "line_range": [
+            26,
+            26
+          ],
+          "name": "callSid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceCall:accountSid",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "accountSid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceCall:raw",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": URLSearchParams",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceCall",
+      "kind": "interface",
+      "line_range": [
+        23,
+        29
+      ],
+      "name": "TwilioVoiceCall",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:from",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "from",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:to",
+          "kind": "property",
+          "line_range": [
+            34,
+            34
+          ],
+          "name": "to",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:callSid",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "callSid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:text",
+          "kind": "property",
+          "line_range": [
+            36,
+            36
+          ],
+          "name": "text",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:confidence",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "confidence",
+          "partial_analysis": false,
+          "return_type": ": number | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:transcriptionSid",
+          "kind": "property",
+          "line_range": [
+            38,
+            38
+          ],
+          "name": "transcriptionSid",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription:raw",
+          "kind": "property",
+          "line_range": [
+            39,
+            39
+          ],
+          "name": "raw",
+          "partial_analysis": false,
+          "return_type": ": URLSearchParams",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioVoiceTranscription",
+      "kind": "interface",
+      "line_range": [
+        32,
+        40
+      ],
+      "name": "TwilioVoiceTranscription",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:TWILIO_SMS_RESPONSE_INSTRUCTIONS",
+      "kind": "variable",
+      "line_range": [
+        42,
+        45
+      ],
+      "name": "TWILIO_SMS_RESPONSE_INSTRUCTIONS",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioInboundContext:from",
+          "kind": "property",
+          "line_range": [
+            49,
+            49
+          ],
+          "name": "from",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioInboundContext:to",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "to",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioInboundContext:messageSid",
+          "kind": "property",
+          "line_range": [
+            51,
+            51
+          ],
+          "name": "messageSid",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioInboundContext:callSid",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "callSid",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioInboundContext:channel",
+          "kind": "property",
+          "line_range": [
+            53,
+            53
+          ],
+          "name": "channel",
+          "partial_analysis": false,
+          "return_type": ": \"text\" | \"voice\"",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:TwilioInboundContext",
+      "kind": "interface",
+      "line_range": [
+        48,
+        54
+      ],
+      "name": "TwilioInboundContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:parseTwilioTextMessage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        57,
+        72
+      ],
+      "name": "parseTwilioTextMessage",
+      "params": [
+        {
+          "name": "params",
+          "optional": false,
+          "type": "URLSearchParams"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioTextMessage | null",
+      "signature": "export function parseTwilioTextMessage(params: URLSearchParams) -> TwilioTextMessage | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:parseTwilioVoiceCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        75,
+        88
+      ],
+      "name": "parseTwilioVoiceCall",
+      "params": [
+        {
+          "name": "params",
+          "optional": false,
+          "type": "URLSearchParams"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioVoiceCall | null",
+      "signature": "export function parseTwilioVoiceCall(params: URLSearchParams) -> TwilioVoiceCall | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:parseTwilioVoiceTranscription",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        96,
+        113
+      ],
+      "name": "parseTwilioVoiceTranscription",
+      "params": [
+        {
+          "name": "params",
+          "optional": false,
+          "type": "URLSearchParams"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TwilioVoiceTranscription | null",
+      "signature": "export function parseTwilioVoiceTranscription(params: URLSearchParams) -> TwilioVoiceTranscription | null",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/twilio/inbound.ts:formatTwilioContextBlock",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        116,
+        129
+      ],
+      "name": "formatTwilioContextBlock",
+      "params": [
+        {
+          "name": "context",
+          "optional": false,
+          "type": "TwilioInboundContext"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatTwilioContextBlock(context: TwilioInboundContext) -> string",
+      "visibility": "Public"
+    }
+  ]
+}

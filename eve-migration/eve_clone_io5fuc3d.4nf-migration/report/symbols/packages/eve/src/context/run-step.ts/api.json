@@ -1,0 +1,65 @@
+{
+  "exports": [
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        33,
+        66
+      ],
+      "name": "withContextScope",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ContextContainer"
+        },
+        {
+          "name": "harnessSession",
+          "optional": false,
+          "type": "HarnessSession"
+        },
+        {
+          "name": "callback",
+          "optional": false,
+          "type": "(session: HarnessSession) => Promise<ContextScopeResult<T>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ContextScopeResult<T>>",
+      "signature": "export function withContextScope(ctx: ContextContainer, harnessSession: HarnessSession, callback: (session: HarnessSession) => Promise<ContextScopeResult<T>>) -> Promise<ContextScopeResult<T>>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        74,
+        85
+      ],
+      "name": "runStep",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ContextContainer"
+        },
+        {
+          "name": "harnessSession",
+          "optional": false,
+          "type": "HarnessSession"
+        },
+        {
+          "name": "callback",
+          "optional": false,
+          "type": "(session: HarnessSession) => Promise<StepResult>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<StepResult>",
+      "signature": "export function runStep(ctx: ContextContainer, harnessSession: HarnessSession, callback: (session: HarnessSession) => Promise<StepResult>) -> Promise<StepResult>"
+    }
+  ],
+  "module": "packages/eve/src/context/run-step.ts"
+}

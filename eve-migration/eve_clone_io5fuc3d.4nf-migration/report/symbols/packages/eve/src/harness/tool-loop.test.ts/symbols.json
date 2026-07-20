@@ -1,0 +1,473 @@
+{
+  "module": "packages/eve/src/harness/tool-loop.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:mockGetInstrumentationConfig",
+      "kind": "variable",
+      "line_range": [
+        75,
+        75
+      ],
+      "name": "mockGetInstrumentationConfig",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createTestSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        102,
+        115
+      ],
+      "name": "createTestSession",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Partial<HarnessSession>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createTestSession(overrides: Partial<HarnessSession>) -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createTestConfig",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        117,
+        139
+      ],
+      "name": "createTestConfig",
+      "params": [
+        {
+          "name": "mode",
+          "optional": false,
+          "type": "RunMode"
+        },
+        {
+          "name": "emit",
+          "optional": true,
+          "type": "HarnessEmitFn"
+        },
+        {
+          "name": "overrides",
+          "optional": true,
+          "type": "Partial<ToolLoopHarnessConfig>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ToolLoopHarnessConfig",
+      "signature": "export function createTestConfig(mode: RunMode, emit: HarnessEmitFn, overrides: Partial<ToolLoopHarnessConfig>) -> ToolLoopHarnessConfig",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createDelegationToolMap",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        141,
+        166
+      ],
+      "name": "createDelegationToolMap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ToolLoopHarnessConfig[\"tools\"]",
+      "signature": "export function createDelegationToolMap() -> ToolLoopHarnessConfig[\"tools\"]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createScheduleContext",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        168,
+        173
+      ],
+      "name": "createScheduleContext",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "ContextContainer",
+      "signature": "export function createScheduleContext() -> ContextContainer",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:setDelegatedParent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        175,
+        182
+      ],
+      "name": "setDelegatedParent",
+      "params": [
+        {
+          "name": "ctx",
+          "optional": false,
+          "type": "ContextContainer"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setDelegatedParent(ctx: ContextContainer) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createEventCollector",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        184,
+        193
+      ],
+      "name": "createEventCollector",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  emit: HarnessEmitFn;\r\n  events: HandleMessageStreamEvent[];\r\n}",
+      "signature": "export function createEventCollector() -> {\r\n  emit: HarnessEmitFn;\r\n  events: HandleMessageStreamEvent[];\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:getCompatibilityEventTypes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        195,
+        199
+      ],
+      "name": "getCompatibilityEventTypes",
+      "params": [
+        {
+          "name": "events",
+          "optional": false,
+          "type": "readonly HandleMessageStreamEvent[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function getCompatibilityEventTypes(events: readonly HandleMessageStreamEvent[]) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:PrepareStepProbe",
+      "kind": "type_alias",
+      "line_range": [
+        201,
+        207
+      ],
+      "name": "PrepareStepProbe",
+      "partial_analysis": false,
+      "value": "(input: {\r\n  context: unknown;\r\n  messages: TMessages;\r\n  model: unknown;\r\n  stepNumber: number;\r\n  steps: [];\r\n}) => Promise<TResult>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:getPrepareStep",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        209,
+        212
+      ],
+      "name": "getPrepareStep",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "PrepareStepProbe<TMessages, TResult>",
+      "signature": "export function getPrepareStep(value: unknown) -> PrepareStepProbe<TMessages, TResult>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createMockStreamResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        214,
+        231
+      ],
+      "name": "createMockStreamResult",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "{\r\n  fullStream: AsyncIterable<Record<string, unknown>>;\r\n  responseMessages: Promise<Record<string, unknown>[]>;\r\n  steps: Promise<Record<string, unknown>[]>;\r\n}",
+      "signature": "export function createMockStreamResult(result: Record<string, unknown>) -> {\r\n  fullStream: AsyncIterable<Record<string, unknown>>;\r\n  responseMessages: Promise<Record<string, unknown>[]>;\r\n  steps: Promise<Record<string, unknown>[]>;\r\n}",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:getMockResponseMessages",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        233,
+        242
+      ],
+      "name": "getMockResponseMessages",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>[]",
+      "signature": "export function getMockResponseMessages(result: Record<string, unknown>) -> Record<string, unknown>[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createMockGenerateResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        244,
+        246
+      ],
+      "name": "createMockGenerateResult",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function createMockGenerateResult(result: Record<string, unknown>) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createExplicitMockFullStream",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        248,
+        254
+      ],
+      "name": "createExplicitMockFullStream",
+      "params": [
+        {
+          "name": "parts",
+          "optional": false,
+          "type": "readonly Record<string, unknown>[]"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncIterable<Record<string, unknown>>",
+      "signature": "export function createExplicitMockFullStream(parts: readonly Record<string, unknown>[]) -> AsyncIterable<Record<string, unknown>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createMockFullStream",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        256,
+        346
+      ],
+      "name": "createMockFullStream",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AsyncIterable<Record<string, unknown>>",
+      "signature": "export function createMockFullStream(result: Record<string, unknown>) -> AsyncIterable<Record<string, unknown>>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:MockAgentSettings",
+      "kind": "type_alias",
+      "line_range": [
+        348,
+        352
+      ],
+      "name": "MockAgentSettings",
+      "partial_analysis": false,
+      "value": "{\r\n  onStepFinish?: (step: unknown) => Promise<void> | void;\r\n  output?: unknown;\r\n  prepareStep?: (input: unknown) => Promise<unknown> | unknown;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:MockAgentConstructor",
+      "kind": "type_alias",
+      "line_range": [
+        354,
+        357
+      ],
+      "name": "MockAgentConstructor",
+      "partial_analysis": false,
+      "value": "ConstructorParameters<typeof ToolLoopAgent> extends [infer S]\r\n    ? (settings: S) => ToolLoopAgent\r\n    : never;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:MockAgentInstance",
+      "kind": "type_alias",
+      "line_range": [
+        358,
+        358
+      ],
+      "name": "MockAgentInstance",
+      "partial_analysis": false,
+      "value": "ToolLoopAgent & Record<string, unknown>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:setupMockAgent",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        360,
+        402
+      ],
+      "name": "setupMockAgent",
+      "params": [
+        {
+          "name": "result",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setupMockAgent(result: Record<string, unknown>) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:finalOutputResult",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        408,
+        416
+      ],
+      "name": "finalOutputResult",
+      "params": [
+        {
+          "name": "text",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "structured",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function finalOutputResult(text: string, structured: unknown) -> Record<string, unknown>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createPendingBashApprovalSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        418,
+        466
+      ],
+      "name": "createPendingBashApprovalSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createPendingBashApprovalSession() -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createPendingProtectedActionApprovalSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        468,
+        520
+      ],
+      "name": "createPendingProtectedActionApprovalSession",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "HarnessSession",
+      "signature": "export function createPendingProtectedActionApprovalSession() -> HarnessSession",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:setupMockAgentError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        522,
+        531
+      ],
+      "name": "setupMockAgentError",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "Error"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function setupMockAgentError(error: Error) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/harness/tool-loop.test.ts:createGatewayModelCallError",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        533,
+        568
+      ],
+      "name": "createGatewayModelCallError",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly gatewayName: string;\r\n  readonly gatewayType: string;\r\n  readonly upstreamType: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Error",
+      "signature": "export function createGatewayModelCallError(input: {\r\n  readonly gatewayName: string;\r\n  readonly gatewayType: string;\r\n  readonly upstreamType: string;\r\n}) -> Error",
+      "visibility": "Private"
+    }
+  ]
+}

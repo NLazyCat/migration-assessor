@@ -1,0 +1,17 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        27,
+        33
+      ],
+      "name": "JsonValue",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type JsonValue = | string\r\n  | number\r\n  | boolean\r\n  | null\r\n  | readonly JsonValue[]\r\n  | { readonly [key: string]: JsonValue };"
+    }
+  ],
+  "module": "packages/eve/src/public/types/json.ts"
+}

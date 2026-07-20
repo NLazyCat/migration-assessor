@@ -1,0 +1,29 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        28,
+        55
+      ],
+      "name": "classifyModelRouting",
+      "params": [
+        {
+          "name": "model",
+          "optional": false,
+          "type": "string | LanguageModel"
+        },
+        {
+          "name": "providerOptions",
+          "optional": true,
+          "type": "Record<string, JsonObject>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "ModelRouting",
+      "signature": "export function classifyModelRouting(model: string | LanguageModel, providerOptions: Record<string, JsonObject>) -> ModelRouting"
+    }
+  ],
+  "module": "packages/eve/src/internal/classify-model-routing.ts"
+}

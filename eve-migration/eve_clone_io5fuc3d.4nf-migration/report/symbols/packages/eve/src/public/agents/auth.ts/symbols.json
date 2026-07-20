@@ -1,0 +1,158 @@
+{
+  "module": "packages/eve/src/public/agents/auth.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/agents/auth.ts:OutboundAuthFn",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        13
+      ],
+      "name": "OutboundAuthFn",
+      "partial_analysis": false,
+      "value": "() => Promise<{\r\n  readonly headers: Readonly<Record<string, string>>;\r\n}>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/agents/auth.ts:VercelOidcOptions:expirationBufferMs",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "expirationBufferMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/agents/auth.ts:VercelOidcOptions:project",
+          "kind": "property",
+          "line_range": [
+            23,
+            23
+          ],
+          "name": "project",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/public/agents/auth.ts:VercelOidcOptions:team",
+          "kind": "property",
+          "line_range": [
+            25,
+            25
+          ],
+          "name": "team",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/agents/auth.ts:VercelOidcOptions",
+      "kind": "interface",
+      "line_range": [
+        19,
+        26
+      ],
+      "name": "VercelOidcOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/agents/auth.ts:vercelOidc",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        35,
+        41
+      ],
+      "name": "vercelOidc",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "VercelOidcOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OutboundAuthFn",
+      "signature": "export function vercelOidc(options: VercelOidcOptions) -> OutboundAuthFn",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/agents/auth.ts:bearer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        48,
+        54
+      ],
+      "name": "bearer",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "TokenValue"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OutboundAuthFn",
+      "signature": "export function bearer(token: TokenValue) -> OutboundAuthFn",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/agents/auth.ts:basic",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        62,
+        75
+      ],
+      "name": "basic",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly password: TokenValue;\r\n  readonly username: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "OutboundAuthFn",
+      "signature": "export function basic(input: {\r\n  readonly password: TokenValue;\r\n  readonly username: string;\r\n}) -> OutboundAuthFn",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/public/agents/auth.ts:resolveTokenValue",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        77,
+        79
+      ],
+      "name": "resolveTokenValue",
+      "params": [
+        {
+          "name": "value",
+          "optional": false,
+          "type": "TokenValue"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function resolveTokenValue(value: TokenValue) -> Promise<string>",
+      "visibility": "Private"
+    }
+  ]
+}

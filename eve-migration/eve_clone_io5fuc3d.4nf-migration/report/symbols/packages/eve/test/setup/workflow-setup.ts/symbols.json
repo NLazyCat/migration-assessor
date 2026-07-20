@@ -1,0 +1,79 @@
+{
+  "module": "packages/eve/test/setup/workflow-setup.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/test/setup/workflow-setup.ts:packageRoot",
+      "kind": "variable",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "packageRoot",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/setup/workflow-setup.ts:outDir",
+      "kind": "variable",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "outDir",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/setup/workflow-setup.ts:poolId",
+      "kind": "variable",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "poolId",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/setup/workflow-setup.ts:world",
+      "kind": "variable",
+      "line_range": [
+        22,
+        25
+      ],
+      "name": "world",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/test/setup/workflow-setup.ts:createLazyHandler",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        40,
+        51
+      ],
+      "name": "createLazyHandler",
+      "params": [
+        {
+          "name": "bundlePath",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(request: Request) => Promise<Response>",
+      "signature": "export function createLazyHandler(bundlePath: string) -> (request: Request) => Promise<Response>",
+      "visibility": "Private"
+    }
+  ]
+}

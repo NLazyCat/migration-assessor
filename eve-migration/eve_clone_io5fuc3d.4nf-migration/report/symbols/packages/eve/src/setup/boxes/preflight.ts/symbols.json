@@ -1,0 +1,163 @@
+{
+  "module": "packages/eve/src/setup/boxes/preflight.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightInput:model",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightInput",
+      "kind": "interface",
+      "line_range": [
+        9,
+        12
+      ],
+      "name": "PreflightInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightDeps:fetchGatewayModelIds",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "fetchGatewayModelIds",
+          "partial_analysis": false,
+          "return_type": ": typeof fetchGatewayModelIds",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightDeps",
+      "kind": "interface",
+      "line_range": [
+        15,
+        17
+      ],
+      "name": "PreflightDeps",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightOptions:cwd",
+          "kind": "property",
+          "line_range": [
+            21,
+            21
+          ],
+          "name": "cwd",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightOptions:headless",
+          "kind": "property",
+          "line_range": [
+            28,
+            28
+          ],
+          "name": "headless",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightOptions:deps",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "deps",
+          "partial_analysis": false,
+          "return_type": ": PreflightDeps",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/setup/boxes/preflight.ts:PreflightOptions",
+      "kind": "interface",
+      "line_range": [
+        19,
+        30
+      ],
+      "name": "PreflightOptions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/preflight.ts:preflight",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        41,
+        65
+      ],
+      "name": "preflight",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "PreflightOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SetupBox<SetupState, PreflightInput, null>",
+      "signature": "export function preflight(options: PreflightOptions) -> SetupBox<SetupState, PreflightInput, null>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/boxes/preflight.ts:validateModel",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        67,
+        75
+      ],
+      "name": "validateModel",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "PreflightDeps"
+        },
+        {
+          "name": "model",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "cwd",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function validateModel(deps: PreflightDeps, model: string, cwd: string) -> Promise<void>",
+      "visibility": "Private"
+    }
+  ]
+}

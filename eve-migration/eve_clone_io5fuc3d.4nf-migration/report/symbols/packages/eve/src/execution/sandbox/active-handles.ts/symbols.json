@@ -1,0 +1,133 @@
+{
+  "module": "packages/eve/src/execution/sandbox/active-handles.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:ShutdownCapableSandboxHandle",
+      "kind": "interface",
+      "line_range": [
+        8,
+        10
+      ],
+      "name": "ShutdownCapableSandboxHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:activeSandboxHandles",
+      "kind": "variable",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "activeSandboxHandles",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:createActiveSandboxHandleKey",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        23,
+        25
+      ],
+      "name": "createActiveSandboxHandleKey",
+      "params": [
+        {
+          "name": "backendName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "sessionKey",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function createActiveSandboxHandleKey(backendName: string, sessionKey: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:trackActiveSandboxHandle",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        32,
+        41
+      ],
+      "name": "trackActiveSandboxHandle",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly backendName: string;\r\n  readonly handle: ShutdownCapableSandboxHandle;\r\n  readonly sessionKey: string;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function trackActiveSandboxHandle(input: {\r\n  readonly backendName: string;\r\n  readonly handle: ShutdownCapableSandboxHandle;\r\n  readonly sessionKey: string;\r\n}) -> void",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:shutdownActiveSandboxHandles",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        48,
+        64
+      ],
+      "name": "shutdownActiveSandboxHandles",
+      "params": [
+        {
+          "name": "input",
+          "optional": true,
+          "type": "{\r\n  readonly log?: (message: string) => void;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function shutdownActiveSandboxHandles(input: {\r\n  readonly log?: (message: string) => void;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:countActiveSandboxHandles",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        67,
+        69
+      ],
+      "name": "countActiveSandboxHandles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "number",
+      "signature": "export function countActiveSandboxHandles() -> number",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/active-handles.ts:clearActiveSandboxHandlesForTest",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        71,
+        73
+      ],
+      "name": "clearActiveSandboxHandlesForTest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function clearActiveSandboxHandlesForTest() -> void",
+      "visibility": "Public"
+    }
+  ]
+}

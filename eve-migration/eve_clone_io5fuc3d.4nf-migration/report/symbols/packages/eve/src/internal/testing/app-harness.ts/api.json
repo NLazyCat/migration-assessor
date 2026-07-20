@@ -1,0 +1,254 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        35,
+        52
+      ],
+      "name": "TestAppDescriptor",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TestAppDescriptor { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        36,
+        40
+      ],
+      "name": "agent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": {\r\n    readonly model?: string;\r\n    readonly name?: string;\r\n    readonly outputSchema?: JsonObject;\r\n  }",
+      "signature": "agent?: : {\r\n    readonly model?: string;\r\n    readonly name?: string;\r\n    readonly outputSchema?: JsonObject;\r\n  }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ResolvedToolDefinition[]",
+      "signature": "tools?: : readonly ResolvedToolDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        51,
+        51
+      ],
+      "name": "skills",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly CompiledSkillDefinition[]",
+      "signature": "skills?: : readonly CompiledSkillDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        58,
+        78
+      ],
+      "name": "RunAsSessionInit",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface RunAsSessionInit { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        59,
+        59
+      ],
+      "name": "sessionId",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "sessionId?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        60,
+        60
+      ],
+      "name": "turn",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionTurn",
+      "signature": "turn?: : SessionTurn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "parent",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionParent",
+      "signature": "parent?: : SessionParent"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        66,
+        66
+      ],
+      "name": "sandbox",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": MockSandbox",
+      "signature": "sandbox?: : MockSandbox"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        71,
+        71
+      ],
+      "name": "sandboxAccess",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SandboxAccess",
+      "signature": "sandboxAccess?: : SandboxAccess"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        77,
+        77
+      ],
+      "name": "channel",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelAdapter<any>",
+      "signature": "channel?: : ChannelAdapter<any>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        83,
+        117
+      ],
+      "name": "TestRuntime",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface TestRuntime { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        85,
+        85
+      ],
+      "name": "session",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": RuntimeSession",
+      "signature": "session: : RuntimeSession"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        87,
+        87
+      ],
+      "name": "manifest",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledAgentManifest",
+      "signature": "manifest: : CompiledAgentManifest"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        89,
+        89
+      ],
+      "name": "moduleMap",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CompiledModuleMap",
+      "signature": "moduleMap: : CompiledModuleMap"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        91,
+        91
+      ],
+      "name": "tools",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly ResolvedToolDefinition[]",
+      "signature": "tools: : readonly ResolvedToolDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        93,
+        93
+      ],
+      "name": "skills",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly CompiledSkillDefinition[]",
+      "signature": "skills: : readonly CompiledSkillDefinition[]"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        129,
+        129
+      ],
+      "name": "TEST_DEFAULT_MODEL_ID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const TEST_DEFAULT_MODEL_ID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        131,
+        242
+      ],
+      "name": "createTestRuntime",
+      "params": [
+        {
+          "name": "descriptor",
+          "optional": false,
+          "type": "TestAppDescriptor"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TestRuntime",
+      "signature": "export function createTestRuntime(descriptor: TestAppDescriptor) -> TestRuntime"
+    }
+  ],
+  "module": "packages/eve/src/internal/testing/app-harness.ts"
+}

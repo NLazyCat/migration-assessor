@@ -1,0 +1,45 @@
+{
+  "module": "packages/eve/src/setup/scaffold/update/update-connection-connector.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/update-connection-connector.ts:CONNECT_CONNECTOR_REGEX",
+      "kind": "variable",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "CONNECT_CONNECTOR_REGEX",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/setup/scaffold/update/update-connection-connector.ts:updateConnectionConnectorUid",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        15,
+        36
+      ],
+      "name": "updateConnectionConnectorUid",
+      "params": [
+        {
+          "name": "connectionFilePath",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "connectorUid",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<{ patched: boolean }>",
+      "signature": "export function updateConnectionConnectorUid(connectionFilePath: string, connectorUid: string) -> Promise<{ patched: boolean }>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "ReadFileInput": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/runtime/framework-tools/read-file.ts",
+        "line": 50
+      },
+      "symbol": "packages/eve/src/execution/sandbox/read-file-tool.ts:ReadFileInput"
+    }
+  ],
+  "ResolvedToolDefinition": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 40,
+        "file": "packages/eve/src/runtime/framework-tools/read-file.ts",
+        "line": 54
+      },
+      "symbol": "packages/eve/src/runtime/types.ts:ResolvedToolDefinition"
+    }
+  ],
+  "ToolExecuteOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 57,
+        "file": "packages/eve/src/runtime/framework-tools/read-file.ts",
+        "line": 47
+      },
+      "symbol": "packages/eve/src/shared/tool-definition.ts:ToolExecuteOptions"
+    }
+  ],
+  "executeReadFileOnSandbox": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 9,
+        "file": "packages/eve/src/runtime/framework-tools/read-file.ts",
+        "line": 48
+      },
+      "symbol": "packages/eve/src/execution/sandbox/read-file-tool.ts:executeReadFileOnSandbox"
+    }
+  ],
+  "requireSandboxSession": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 10,
+        "file": "packages/eve/src/runtime/framework-tools/read-file.ts",
+        "line": 49
+      },
+      "symbol": "packages/eve/src/execution/sandbox/require-sandbox.ts:requireSandboxSession"
+    }
+  ]
+}

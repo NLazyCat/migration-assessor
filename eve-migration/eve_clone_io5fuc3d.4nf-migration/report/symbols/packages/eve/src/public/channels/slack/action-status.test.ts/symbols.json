@@ -1,0 +1,32 @@
+{
+  "module": "packages/eve/src/public/channels/slack/action-status.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/public/channels/slack/action-status.test.ts:toolCall",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "toolCall",
+      "params": [
+        {
+          "name": "toolName",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "input",
+          "optional": false,
+          "type": "JsonObject"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeActionRequest",
+      "signature": "export function toolCall(toolName: string, input: JsonObject) -> RuntimeActionRequest",
+      "visibility": "Private"
+    }
+  ]
+}

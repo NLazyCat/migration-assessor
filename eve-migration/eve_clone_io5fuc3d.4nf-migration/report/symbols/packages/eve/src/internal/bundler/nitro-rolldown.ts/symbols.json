@@ -1,0 +1,290 @@
+{
+  "module": "packages/eve/src/internal/bundler/nitro-rolldown.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownOutputChunk",
+      "kind": "type_alias",
+      "line_range": [
+        4,
+        8
+      ],
+      "name": "RolldownOutputChunk",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly type: \"chunk\";\r\n  readonly code: string;\r\n  readonly fileName: string;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownOutputAsset",
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        14
+      ],
+      "name": "RolldownOutputAsset",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly type: \"asset\";\r\n  readonly fileName: string;\r\n  readonly source: string | Uint8Array;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownOutput",
+      "kind": "type_alias",
+      "line_range": [
+        16,
+        18
+      ],
+      "name": "RolldownOutput",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly output: readonly [RolldownOutputChunk, ...(RolldownOutputChunk | RolldownOutputAsset)[]];\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownBuild",
+      "kind": "type_alias",
+      "line_range": [
+        20,
+        20
+      ],
+      "name": "RolldownBuild",
+      "partial_analysis": false,
+      "value": "(options: Record<string, unknown>) => Promise<RolldownOutput>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownParseAst",
+      "kind": "type_alias",
+      "line_range": [
+        21,
+        25
+      ],
+      "name": "RolldownParseAst",
+      "partial_analysis": false,
+      "value": "(\r\n  sourceText: string,\r\n  options?: Record<string, unknown> | null,\r\n  filename?: string,\r\n) => unknown;",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownParserLanguage",
+      "kind": "type_alias",
+      "line_range": [
+        26,
+        26
+      ],
+      "name": "RolldownParserLanguage",
+      "partial_analysis": false,
+      "value": "\"js\" | \"jsx\" | \"ts\" | \"tsx\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownModule",
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        30
+      ],
+      "name": "RolldownModule",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly build: RolldownBuild;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:RolldownParseAstModule",
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        34
+      ],
+      "name": "RolldownParseAstModule",
+      "partial_analysis": false,
+      "value": "{\r\n  readonly parseAst: RolldownParseAst;\r\n};",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:rolldownPromise",
+      "kind": "variable",
+      "line_range": [
+        36,
+        36
+      ],
+      "name": "rolldownPromise",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:rolldownParseAstPromise",
+      "kind": "variable",
+      "line_range": [
+        37,
+        37
+      ],
+      "name": "rolldownParseAstPromise",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:loadNitroRolldown",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        43,
+        52
+      ],
+      "name": "loadNitroRolldown",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<RolldownModule>",
+      "signature": "export function loadNitroRolldown() -> Promise<RolldownModule>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:loadNitroRolldownParseAst",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        58,
+        67
+      ],
+      "name": "loadNitroRolldownParseAst",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Promise<RolldownParseAstModule>",
+      "signature": "export function loadNitroRolldownParseAst() -> Promise<RolldownParseAstModule>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:inferRolldownParserLanguage",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        69,
+        74
+      ],
+      "name": "inferRolldownParserLanguage",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RolldownParserLanguage",
+      "signature": "export function inferRolldownParserLanguage(filename: string) -> RolldownParserLanguage",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:parseWithNitroRolldownAst",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        76,
+        91
+      ],
+      "name": "parseWithNitroRolldownAst",
+      "params": [
+        {
+          "name": "filename",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "sourceText",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<unknown>",
+      "signature": "export function parseWithNitroRolldownAst(filename: string, sourceText: string) -> Promise<unknown>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:buildWithNitroRolldown",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        98,
+        103
+      ],
+      "name": "buildWithNitroRolldown",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RolldownOutput>",
+      "signature": "export function buildWithNitroRolldown(options: Record<string, unknown>) -> Promise<RolldownOutput>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:buildSingleRolldownChunk",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        115,
+        125
+      ],
+      "name": "buildSingleRolldownChunk",
+      "params": [
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "Record<string, unknown> & { readonly output?: Record<string, unknown> }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<RolldownOutputChunk>",
+      "signature": "export function buildSingleRolldownChunk(description: string, options: Record<string, unknown> & { readonly output?: Record<string, unknown> }) -> Promise<RolldownOutputChunk>",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/internal/bundler/nitro-rolldown.ts:getSingleRolldownChunk",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        127,
+        136
+      ],
+      "name": "getSingleRolldownChunk",
+      "params": [
+        {
+          "name": "output",
+          "optional": false,
+          "type": "RolldownOutput"
+        },
+        {
+          "name": "description",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RolldownOutputChunk",
+      "signature": "export function getSingleRolldownChunk(output: RolldownOutput, description: string) -> RolldownOutputChunk",
+      "visibility": "Private"
+    }
+  ]
+}

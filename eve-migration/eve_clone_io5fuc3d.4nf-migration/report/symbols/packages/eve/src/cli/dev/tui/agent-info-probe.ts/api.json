@@ -1,0 +1,36 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        10,
+        12
+      ],
+      "name": "AgentInfoProbeResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type AgentInfoProbeResult = | { readonly kind: \"ready\"; readonly info: AgentInfoResult }\r\n  | { readonly kind: \"unavailable\"; readonly error: unknown };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        29,
+        45
+      ],
+      "name": "probeAgentInfo",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly client: Pick<Client, \"info\">;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<AgentInfoProbeResult>",
+      "signature": "export function probeAgentInfo(input: {\r\n  readonly client: Pick<Client, \"info\">;\r\n}) -> Promise<AgentInfoProbeResult>"
+    }
+  ],
+  "module": "packages/eve/src/cli/dev/tui/agent-info-probe.ts"
+}

@@ -1,0 +1,41 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        33,
+        36
+      ],
+      "name": "GatewayKeyValidation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type GatewayKeyValidation = | { kind: \"valid\" }\r\n  | { kind: \"invalid\"; message: string }\r\n  | { kind: \"inconclusive\"; message: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        48,
+        71
+      ],
+      "name": "validateGatewayApiKey",
+      "params": [
+        {
+          "name": "apiKey",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "signal",
+          "optional": true,
+          "type": "AbortSignal"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<GatewayKeyValidation>",
+      "signature": "export function validateGatewayApiKey(apiKey: string, signal: AbortSignal) -> Promise<GatewayKeyValidation>"
+    }
+  ],
+  "module": "packages/eve/src/setup/validate-gateway-key.ts"
+}

@@ -1,0 +1,101 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        18,
+        35
+      ],
+      "name": "ScheduleHandlerArgs",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ScheduleHandlerArgs { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "receive",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": CrossChannelReceiveFn",
+      "signature": "receive: : CrossChannelReceiveFn"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        29,
+        29
+      ],
+      "name": "waitUntil",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (task: Promise<unknown>) => void",
+      "signature": "waitUntil: : (task: Promise<unknown>) => void"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        34,
+        34
+      ],
+      "name": "appAuth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionAuthContext",
+      "signature": "appAuth: : SessionAuthContext"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        42,
+        42
+      ],
+      "name": "ScheduleRunHandler",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ScheduleRunHandler = GenericScheduleRunHandler<ScheduleHandlerArgs>;"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "ScheduleDefinition",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ScheduleDefinition = GenericScheduleDefinition<ScheduleHandlerArgs>;"
+    },
+    {
+      "generics": [
+        "TSchedule"
+      ],
+      "kind": "function",
+      "line_range": [
+        92,
+        96
+      ],
+      "name": "defineSchedule",
+      "params": [
+        {
+          "name": "definition",
+          "optional": false,
+          "type": "ExactDefinition<TSchedule, GenericScheduleDefinitionFields<ScheduleHandlerArgs>>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TSchedule",
+      "signature": "export function defineSchedule(definition: ExactDefinition<TSchedule, GenericScheduleDefinitionFields<ScheduleHandlerArgs>>) -> TSchedule"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/schedule.ts"
+}

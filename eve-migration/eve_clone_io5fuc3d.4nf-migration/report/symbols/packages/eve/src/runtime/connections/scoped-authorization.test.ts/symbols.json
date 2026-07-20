@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/runtime/connections/scoped-authorization.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/connections/scoped-authorization.test.ts:interactiveAuth",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        9,
+        36
+      ],
+      "name": "interactiveAuth",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ displayName?: string; connector?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "AuthorizationDefinition",
+      "signature": "export function interactiveAuth(input: { displayName?: string; connector?: string }) -> AuthorizationDefinition",
+      "visibility": "Private"
+    }
+  ]
+}

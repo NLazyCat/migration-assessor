@@ -1,0 +1,208 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "RetryableError",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class RetryableError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "FatalError",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export class FatalError { ... }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        20,
+        30
+      ],
+      "name": "createHook",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowHook<T>",
+      "signature": "export function createHook(options: unknown) -> WorkflowHook<T>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        35,
+        45
+      ],
+      "name": "getWorkflowMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "Record<string, unknown>",
+      "signature": "export function getWorkflowMetadata() -> Record<string, unknown>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        50,
+        67
+      ],
+      "name": "getWritable",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "{ namespace?: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WritableStream<T>",
+      "signature": "export function getWritable(options: { namespace?: string }) -> WritableStream<T>"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        72,
+        79
+      ],
+      "name": "createWebhook",
+      "params": [
+        {
+          "name": "options",
+          "optional": true,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "WorkflowHook<T> & { url?: string }",
+      "signature": "export function createWebhook(options: unknown) -> WorkflowHook<T> & { url?: string }"
+    },
+    {
+      "generics": [
+        "T"
+      ],
+      "kind": "function",
+      "line_range": [
+        84,
+        94
+      ],
+      "name": "defineHook",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "{\r\n  readonly create: (options?: unknown) => WorkflowHook<T>;\r\n  readonly resume: () => never;\r\n}",
+      "signature": "export function defineHook() -> {\r\n  readonly create: (options?: unknown) => WorkflowHook<T>;\r\n  readonly resume: () => never;\r\n}"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        99,
+        101
+      ],
+      "name": "sleep",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function sleep() -> never"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        106,
+        108
+      ],
+      "name": "resumeHook",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function resumeHook() -> never"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        113,
+        115
+      ],
+      "name": "getStepMetadata",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": "never",
+      "signature": "export function getStepMetadata() -> never"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        123,
+        130
+      ],
+      "name": "ExperimentalSetAttributesOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface ExperimentalSetAttributesOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        129,
+        129
+      ],
+      "name": "allowReservedAttributes",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "allowReservedAttributes?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        151,
+        181
+      ],
+      "name": "experimental_setAttributes",
+      "params": [
+        {
+          "name": "attrs",
+          "optional": false,
+          "type": "Record<string, string | undefined>"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "ExperimentalSetAttributesOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function experimental_setAttributes(attrs: Record<string, string | undefined>, options: ExperimentalSetAttributesOptions) -> Promise<void>"
+    }
+  ],
+  "module": "packages/eve/src/internal/workflow-bundle/workflow-core-shim.ts"
+}

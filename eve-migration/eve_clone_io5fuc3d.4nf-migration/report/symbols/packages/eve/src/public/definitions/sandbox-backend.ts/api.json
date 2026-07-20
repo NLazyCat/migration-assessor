@@ -1,0 +1,60 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        19,
+        43
+      ],
+      "name": "SandboxTemplateNotProvisionedError",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly backendName: string; readonly templateKey: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class SandboxTemplateNotProvisionedError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        23,
+        30
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{ readonly backendName: string; readonly templateKey: string }"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "SandboxTemplateNotProvisionedError::constructor(input: { readonly backendName: string; readonly templateKey: string }) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        33,
+        42
+      ],
+      "name": "is",
+      "params": [
+        {
+          "name": "error",
+          "optional": false,
+          "type": "unknown"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "error is SandboxTemplateNotProvisionedError",
+      "signature": "SandboxTemplateNotProvisionedError::is(error: unknown) -> error is SandboxTemplateNotProvisionedError"
+    }
+  ],
+  "module": "packages/eve/src/public/definitions/sandbox-backend.ts"
+}

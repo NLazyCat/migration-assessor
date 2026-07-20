@@ -1,0 +1,63 @@
+{
+  "module": "packages/eve/src/services/dev-client/credential-gate.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/credential-gate.test.ts:verifiedTarget",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        12,
+        18
+      ],
+      "name": "verifiedTarget",
+      "params": [
+        {
+          "name": "host",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export function verifiedTarget(host: string) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/credential-gate.test.ts:resolvedToken",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        20,
+        22
+      ],
+      "name": "resolvedToken",
+      "params": [
+        {
+          "name": "token",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "DevelopmentOidcTokenResolution",
+      "signature": "export function resolvedToken(token: string) -> DevelopmentOidcTokenResolution",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/services/dev-client/credential-gate.test.ts:deferred",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        24,
+        36
+      ],
+      "name": "deferred",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export function deferred() -> void",
+      "visibility": "Private"
+    }
+  ]
+}

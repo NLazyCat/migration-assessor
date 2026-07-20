@@ -1,0 +1,1844 @@
+{
+  "module": "packages/eve/src/evals/types.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalActionStatus",
+      "kind": "type_alias",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "EveEvalActionStatus",
+      "partial_analysis": false,
+      "value": "\"pending\" | \"completed\" | \"failed\" | \"rejected\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalToolCall:name",
+          "kind": "property",
+          "line_range": [
+            27,
+            27
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalToolCall:input",
+          "kind": "property",
+          "line_range": [
+            29,
+            29
+          ],
+          "name": "input",
+          "partial_analysis": false,
+          "return_type": ": JsonObject",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalToolCall:output",
+          "kind": "property",
+          "line_range": [
+            31,
+            31
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": JsonValue | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalToolCall:status",
+          "kind": "property",
+          "line_range": [
+            33,
+            33
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": EveEvalActionStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalToolCall:turnIndex",
+          "kind": "property",
+          "line_range": [
+            35,
+            35
+          ],
+          "name": "turnIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalToolCall:sessionId",
+          "kind": "property",
+          "line_range": [
+            37,
+            37
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalToolCall",
+      "kind": "interface",
+      "line_range": [
+        25,
+        38
+      ],
+      "name": "EveEvalToolCall",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:callId",
+          "kind": "property",
+          "line_range": [
+            46,
+            46
+          ],
+          "name": "callId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:childSessionId",
+          "kind": "property",
+          "line_range": [
+            48,
+            48
+          ],
+          "name": "childSessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:name",
+          "kind": "property",
+          "line_range": [
+            50,
+            50
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:remoteUrl",
+          "kind": "property",
+          "line_range": [
+            52,
+            52
+          ],
+          "name": "remoteUrl",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:output",
+          "kind": "property",
+          "line_range": [
+            54,
+            54
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": JsonValue",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:status",
+          "kind": "property",
+          "line_range": [
+            56,
+            56
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": EveEvalActionStatus",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:turnIndex",
+          "kind": "property",
+          "line_range": [
+            58,
+            58
+          ],
+          "name": "turnIndex",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall:sessionId",
+          "kind": "property",
+          "line_range": [
+            60,
+            60
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalSubagentCall",
+      "kind": "interface",
+      "line_range": [
+        44,
+        61
+      ],
+      "name": "EveEvalSubagentCall",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:toolCalls",
+          "kind": "property",
+          "line_range": [
+            67,
+            67
+          ],
+          "name": "toolCalls",
+          "partial_analysis": false,
+          "return_type": ": readonly EveEvalToolCall[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:toolCallCount",
+          "kind": "property",
+          "line_range": [
+            68,
+            68
+          ],
+          "name": "toolCallCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:subagentCalls",
+          "kind": "property",
+          "line_range": [
+            69,
+            69
+          ],
+          "name": "subagentCalls",
+          "partial_analysis": false,
+          "return_type": ": readonly EveEvalSubagentCall[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:subagentCallCount",
+          "kind": "property",
+          "line_range": [
+            70,
+            70
+          ],
+          "name": "subagentCallCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:inputRequests",
+          "kind": "property",
+          "line_range": [
+            72,
+            72
+          ],
+          "name": "inputRequests",
+          "partial_analysis": false,
+          "return_type": ": readonly InputRequest[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:parked",
+          "kind": "property",
+          "line_range": [
+            74,
+            74
+          ],
+          "name": "parked",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:messageCount",
+          "kind": "property",
+          "line_range": [
+            75,
+            75
+          ],
+          "name": "messageCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:reasoningBlockCount",
+          "kind": "property",
+          "line_range": [
+            76,
+            76
+          ],
+          "name": "reasoningBlockCount",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts:failureCode",
+          "kind": "property",
+          "line_range": [
+            77,
+            77
+          ],
+          "name": "failureCode",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalDerivedFacts",
+      "kind": "interface",
+      "line_range": [
+        66,
+        78
+      ],
+      "name": "EveEvalDerivedFacts",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionResult:derived",
+          "kind": "property",
+          "line_range": [
+            84,
+            84
+          ],
+          "name": "derived",
+          "partial_analysis": false,
+          "return_type": ": EveEvalDerivedFacts",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionResult:events",
+          "kind": "property",
+          "line_range": [
+            85,
+            85
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionResult:primary",
+          "kind": "property",
+          "line_range": [
+            86,
+            86
+          ],
+          "name": "primary",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionResult:sessionId",
+          "kind": "property",
+          "line_range": [
+            87,
+            87
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionResult:state",
+          "kind": "property",
+          "line_range": [
+            88,
+            88
+          ],
+          "name": "state",
+          "partial_analysis": false,
+          "return_type": ": SessionState",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalSessionResult",
+      "kind": "interface",
+      "line_range": [
+        83,
+        89
+      ],
+      "name": "EveEvalSessionResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:output",
+          "kind": "property",
+          "line_range": [
+            99,
+            99
+          ],
+          "name": "output",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:finalMessage",
+          "kind": "property",
+          "line_range": [
+            101,
+            101
+          ],
+          "name": "finalMessage",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:sessionId",
+          "kind": "property",
+          "line_range": [
+            102,
+            102
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:status",
+          "kind": "property",
+          "line_range": [
+            108,
+            108
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": \"completed\" | \"failed\" | \"waiting\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:events",
+          "kind": "property",
+          "line_range": [
+            110,
+            110
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:logs",
+          "kind": "property",
+          "line_range": [
+            112,
+            112
+          ],
+          "name": "logs",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:derived",
+          "kind": "property",
+          "line_range": [
+            114,
+            114
+          ],
+          "name": "derived",
+          "partial_analysis": false,
+          "return_type": ": EveEvalDerivedFacts",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:sessions",
+          "kind": "property",
+          "line_range": [
+            116,
+            116
+          ],
+          "name": "sessions",
+          "partial_analysis": false,
+          "return_type": ": readonly EveEvalSessionResult[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult:runtimeIdentity",
+          "kind": "property",
+          "line_range": [
+            121,
+            121
+          ],
+          "name": "runtimeIdentity",
+          "partial_analysis": false,
+          "return_type": ": RuntimeIdentity",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalTaskResult",
+      "kind": "interface",
+      "line_range": [
+        94,
+        122
+      ],
+      "name": "EveEvalTaskResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:AssertionSeverity",
+      "kind": "type_alias",
+      "line_range": [
+        134,
+        134
+      ],
+      "name": "AssertionSeverity",
+      "partial_analysis": false,
+      "value": "\"gate\" | \"soft\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:Assertion:name",
+          "kind": "property",
+          "line_range": [
+            146,
+            146
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:Assertion:severity",
+          "kind": "property",
+          "line_range": [
+            147,
+            147
+          ],
+          "name": "severity",
+          "partial_analysis": false,
+          "return_type": ": AssertionSeverity",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:Assertion:threshold",
+          "kind": "property",
+          "line_range": [
+            149,
+            149
+          ],
+          "name": "threshold",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:Assertion",
+      "kind": "interface",
+      "line_range": [
+        145,
+        154
+      ],
+      "name": "Assertion",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:AssertionHandle",
+      "kind": "interface",
+      "line_range": [
+        162,
+        166
+      ],
+      "name": "AssertionHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:name",
+          "kind": "property",
+          "line_range": [
+            173,
+            173
+          ],
+          "name": "name",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:score",
+          "kind": "property",
+          "line_range": [
+            174,
+            174
+          ],
+          "name": "score",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:severity",
+          "kind": "property",
+          "line_range": [
+            175,
+            175
+          ],
+          "name": "severity",
+          "partial_analysis": false,
+          "return_type": ": AssertionSeverity",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:threshold",
+          "kind": "property",
+          "line_range": [
+            176,
+            176
+          ],
+          "name": "threshold",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:passed",
+          "kind": "property",
+          "line_range": [
+            177,
+            177
+          ],
+          "name": "passed",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:message",
+          "kind": "property",
+          "line_range": [
+            179,
+            179
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:AssertionResult:metadata",
+          "kind": "property",
+          "line_range": [
+            180,
+            180
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, unknown>>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:AssertionResult",
+      "kind": "interface",
+      "line_range": [
+        172,
+        181
+      ],
+      "name": "AssertionResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalAssertions",
+      "kind": "interface",
+      "line_range": [
+        184,
+        211
+      ],
+      "name": "EveEvalAssertions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalOutputAssertions",
+      "kind": "interface",
+      "line_range": [
+        214,
+        217
+      ],
+      "name": "EveEvalOutputAssertions",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalStreamEvent",
+      "kind": "type_alias",
+      "line_range": [
+        220,
+        222
+      ],
+      "name": "EveEvalStreamEvent",
+      "partial_analysis": false,
+      "value": "HandleMessageStreamEvent[\"type\"],\r\n> = Extract<HandleMessageStreamEvent, { type: TType }>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalWaitForEventOptions",
+      "kind": "type_alias",
+      "line_range": [
+        225,
+        228
+      ],
+      "name": "EveEvalWaitForEventOptions",
+      "partial_analysis": false,
+      "value": "Omit<\r\n  Extract<EveEvalEventMatch, { type: TType }>,\r\n  \"count\" | \"type\"\r\n>;",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalLiveTurn:events",
+          "kind": "property",
+          "line_range": [
+            238,
+            238
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalLiveTurn:session",
+          "kind": "property",
+          "line_range": [
+            240,
+            240
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": EveEvalSession",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalLiveTurn:sessionId",
+          "kind": "property",
+          "line_range": [
+            242,
+            242
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalLiveTurn",
+      "kind": "interface",
+      "line_range": [
+        236,
+        252
+      ],
+      "name": "EveEvalLiveTurn",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionDriver:events",
+          "kind": "property",
+          "line_range": [
+            257,
+            257
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionDriver:pendingInputRequests",
+          "kind": "property",
+          "line_range": [
+            259,
+            259
+          ],
+          "name": "pendingInputRequests",
+          "partial_analysis": false,
+          "return_type": ": readonly InputRequest[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionDriver:state",
+          "kind": "property",
+          "line_range": [
+            261,
+            261
+          ],
+          "name": "state",
+          "partial_analysis": false,
+          "return_type": ": SessionState",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalSessionDriver:sessionId",
+          "kind": "property",
+          "line_range": [
+            263,
+            263
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalSessionDriver",
+      "kind": "interface",
+      "line_range": [
+        255,
+        278
+      ],
+      "name": "EveEvalSessionDriver",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalSession",
+      "kind": "interface",
+      "line_range": [
+        281,
+        282
+      ],
+      "name": "EveEvalSession",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:data",
+          "kind": "property",
+          "line_range": [
+            288,
+            288
+          ],
+          "name": "data",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:events",
+          "kind": "property",
+          "line_range": [
+            289,
+            289
+          ],
+          "name": "events",
+          "partial_analysis": false,
+          "return_type": ": readonly HandleMessageStreamEvent[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:inputRequests",
+          "kind": "property",
+          "line_range": [
+            290,
+            290
+          ],
+          "name": "inputRequests",
+          "partial_analysis": false,
+          "return_type": ": readonly InputRequest[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:message",
+          "kind": "property",
+          "line_range": [
+            291,
+            291
+          ],
+          "name": "message",
+          "partial_analysis": false,
+          "return_type": ": string | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:sessionId",
+          "kind": "property",
+          "line_range": [
+            292,
+            292
+          ],
+          "name": "sessionId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:status",
+          "kind": "property",
+          "line_range": [
+            293,
+            293
+          ],
+          "name": "status",
+          "partial_analysis": false,
+          "return_type": ": \"completed\" | \"failed\" | \"waiting\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTurn:toolCalls",
+          "kind": "property",
+          "line_range": [
+            294,
+            294
+          ],
+          "name": "toolCalls",
+          "partial_analysis": false,
+          "return_type": ": readonly EveEvalToolCall[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalTurn",
+      "kind": "interface",
+      "line_range": [
+        287,
+        301
+      ],
+      "name": "EveEvalTurn",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalJudgeConfig:model",
+          "kind": "property",
+          "line_range": [
+            314,
+            314
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": LanguageModel",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalJudgeConfig:modelOptions",
+          "kind": "property",
+          "line_range": [
+            315,
+            315
+          ],
+          "name": "modelOptions",
+          "partial_analysis": false,
+          "return_type": ": AgentModelOptionsDefinition",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalJudgeConfig",
+      "kind": "interface",
+      "line_range": [
+        313,
+        316
+      ],
+      "name": "EveEvalJudgeConfig",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:JudgeOpts:on",
+          "kind": "property",
+          "line_range": [
+            323,
+            323
+          ],
+          "name": "on",
+          "partial_analysis": false,
+          "return_type": ": unknown",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:JudgeOpts:model",
+          "kind": "property",
+          "line_range": [
+            325,
+            325
+          ],
+          "name": "model",
+          "partial_analysis": false,
+          "return_type": ": LanguageModel",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:JudgeOpts:modelOptions",
+          "kind": "property",
+          "line_range": [
+            326,
+            326
+          ],
+          "name": "modelOptions",
+          "partial_analysis": false,
+          "return_type": ": AgentModelOptionsDefinition",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:JudgeOpts",
+      "kind": "interface",
+      "line_range": [
+        321,
+        327
+      ],
+      "name": "JudgeOpts",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:AutoevalsJudges",
+      "kind": "interface",
+      "line_range": [
+        335,
+        340
+      ],
+      "name": "AutoevalsJudges",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:JudgeContext:autoevals",
+          "kind": "property",
+          "line_range": [
+            347,
+            347
+          ],
+          "name": "autoevals",
+          "partial_analysis": false,
+          "return_type": ": AutoevalsJudges",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:JudgeContext",
+      "kind": "interface",
+      "line_range": [
+        346,
+        348
+      ],
+      "name": "JudgeContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalContext:signal",
+          "kind": "property",
+          "line_range": [
+            360,
+            360
+          ],
+          "name": "signal",
+          "partial_analysis": false,
+          "return_type": ": AbortSignal",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalContext:target",
+          "kind": "property",
+          "line_range": [
+            362,
+            362
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTargetHandle",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalContext:reply",
+          "kind": "property",
+          "line_range": [
+            364,
+            364
+          ],
+          "name": "reply",
+          "partial_analysis": false,
+          "return_type": ": string | null",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalContext:judge",
+          "kind": "property",
+          "line_range": [
+            380,
+            380
+          ],
+          "name": "judge",
+          "partial_analysis": false,
+          "return_type": ": JudgeContext",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalContext",
+      "kind": "interface",
+      "line_range": [
+        358,
+        381
+      ],
+      "name": "EveEvalContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTarget:kind",
+          "kind": "property",
+          "line_range": [
+            391,
+            391
+          ],
+          "name": "kind",
+          "partial_analysis": false,
+          "return_type": ": \"local\" | \"remote\"",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTarget:url",
+          "kind": "property",
+          "line_range": [
+            393,
+            393
+          ],
+          "name": "url",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTarget:capabilities",
+          "kind": "property",
+          "line_range": [
+            395,
+            395
+          ],
+          "name": "capabilities",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTargetCapabilities",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalTarget",
+      "kind": "interface",
+      "line_range": [
+        386,
+        396
+      ],
+      "name": "EveEvalTarget",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalTargetCapabilities:devRoutes",
+          "kind": "property",
+          "line_range": [
+            399,
+            399
+          ],
+          "name": "devRoutes",
+          "partial_analysis": false,
+          "return_type": ": boolean",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalTargetCapabilities",
+      "kind": "interface",
+      "line_range": [
+        398,
+        400
+      ],
+      "name": "EveEvalTargetCapabilities",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalScheduleDispatchResult:scheduleId",
+          "kind": "property",
+          "line_range": [
+            403,
+            403
+          ],
+          "name": "scheduleId",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalScheduleDispatchResult:sessionIds",
+          "kind": "property",
+          "line_range": [
+            404,
+            404
+          ],
+          "name": "sessionIds",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalScheduleDispatchResult",
+      "kind": "interface",
+      "line_range": [
+        402,
+        405
+      ],
+      "name": "EveEvalScheduleDispatchResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalTargetHandle",
+      "kind": "interface",
+      "line_range": [
+        410,
+        432
+      ],
+      "name": "EveEvalTargetHandle",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalBase:description",
+          "kind": "property",
+          "line_range": [
+            445,
+            445
+          ],
+          "name": "description",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalBase:judge",
+          "kind": "property",
+          "line_range": [
+            452,
+            452
+          ],
+          "name": "judge",
+          "partial_analysis": false,
+          "return_type": ": EveEvalJudgeConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalBase:timeoutMs",
+          "kind": "property",
+          "line_range": [
+            453,
+            453
+          ],
+          "name": "timeoutMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalBase:tags",
+          "kind": "property",
+          "line_range": [
+            455,
+            455
+          ],
+          "name": "tags",
+          "partial_analysis": false,
+          "return_type": ": readonly string[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalBase:metadata",
+          "kind": "property",
+          "line_range": [
+            456,
+            456
+          ],
+          "name": "metadata",
+          "partial_analysis": false,
+          "return_type": ": Readonly<Record<string, unknown>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalBase:reporters",
+          "kind": "property",
+          "line_range": [
+            457,
+            457
+          ],
+          "name": "reporters",
+          "partial_analysis": false,
+          "return_type": ": readonly EvalReporter[]",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalBase",
+      "kind": "interface",
+      "line_range": [
+        444,
+        458
+      ],
+      "name": "EveEvalBase",
+      "partial_analysis": false,
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalInputFields:test",
+          "kind": "property",
+          "line_range": [
+            465,
+            465
+          ],
+          "name": "test",
+          "partial_analysis": false,
+          "return_type": ": (t: EveEvalContext) => void | Promise<void>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalInputFields",
+      "kind": "interface",
+      "line_range": [
+        464,
+        466
+      ],
+      "name": "EveEvalInputFields",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalInput",
+      "kind": "interface",
+      "line_range": [
+        475,
+        478
+      ],
+      "name": "EveEvalInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalDefinition",
+      "kind": "type_alias",
+      "line_range": [
+        486,
+        488
+      ],
+      "name": "EveEvalDefinition",
+      "partial_analysis": false,
+      "value": "EveEvalInput & {\r\n  readonly _tag: \"EveEval\";\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEval",
+      "kind": "type_alias",
+      "line_range": [
+        497,
+        499
+      ],
+      "name": "EveEval",
+      "partial_analysis": false,
+      "value": "EveEvalDefinition & {\r\n  readonly id: string;\r\n};",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalVerdict",
+      "kind": "type_alias",
+      "line_range": [
+        509,
+        509
+      ],
+      "name": "EveEvalVerdict",
+      "partial_analysis": false,
+      "value": "\"passed\" | \"failed\" | \"scored\" | \"skipped\";",
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:id",
+          "kind": "property",
+          "line_range": [
+            518,
+            518
+          ],
+          "name": "id",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:result",
+          "kind": "property",
+          "line_range": [
+            519,
+            519
+          ],
+          "name": "result",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTaskResult",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:assertions",
+          "kind": "property",
+          "line_range": [
+            521,
+            521
+          ],
+          "name": "assertions",
+          "partial_analysis": false,
+          "return_type": ": readonly AssertionResult[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:verdict",
+          "kind": "property",
+          "line_range": [
+            523,
+            523
+          ],
+          "name": "verdict",
+          "partial_analysis": false,
+          "return_type": ": EveEvalVerdict",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:error",
+          "kind": "property",
+          "line_range": [
+            524,
+            524
+          ],
+          "name": "error",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:skipReason",
+          "kind": "property",
+          "line_range": [
+            526,
+            526
+          ],
+          "name": "skipReason",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:startedAt",
+          "kind": "property",
+          "line_range": [
+            527,
+            527
+          ],
+          "name": "startedAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalResult:completedAt",
+          "kind": "property",
+          "line_range": [
+            528,
+            528
+          ],
+          "name": "completedAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalResult",
+      "kind": "interface",
+      "line_range": [
+        517,
+        529
+      ],
+      "name": "EveEvalResult",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:target",
+          "kind": "property",
+          "line_range": [
+            535,
+            535
+          ],
+          "name": "target",
+          "partial_analysis": false,
+          "return_type": ": EveEvalTarget",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:results",
+          "kind": "property",
+          "line_range": [
+            536,
+            536
+          ],
+          "name": "results",
+          "partial_analysis": false,
+          "return_type": ": readonly EveEvalResult[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:startedAt",
+          "kind": "property",
+          "line_range": [
+            537,
+            537
+          ],
+          "name": "startedAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:completedAt",
+          "kind": "property",
+          "line_range": [
+            538,
+            538
+          ],
+          "name": "completedAt",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:passed",
+          "kind": "property",
+          "line_range": [
+            540,
+            540
+          ],
+          "name": "passed",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:failed",
+          "kind": "property",
+          "line_range": [
+            542,
+            542
+          ],
+          "name": "failed",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:scored",
+          "kind": "property",
+          "line_range": [
+            544,
+            544
+          ],
+          "name": "scored",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:skipped",
+          "kind": "property",
+          "line_range": [
+            546,
+            546
+          ],
+          "name": "skipped",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary:errored",
+          "kind": "property",
+          "line_range": [
+            548,
+            548
+          ],
+          "name": "errored",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalRunSummary",
+      "kind": "interface",
+      "line_range": [
+        534,
+        549
+      ],
+      "name": "EveEvalRunSummary",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalConfigInput:judge",
+          "kind": "property",
+          "line_range": [
+            567,
+            567
+          ],
+          "name": "judge",
+          "partial_analysis": false,
+          "return_type": ": EveEvalJudgeConfig",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalConfigInput:reporters",
+          "kind": "property",
+          "line_range": [
+            572,
+            572
+          ],
+          "name": "reporters",
+          "partial_analysis": false,
+          "return_type": ": readonly EvalReporter[]",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalConfigInput:maxConcurrency",
+          "kind": "property",
+          "line_range": [
+            578,
+            578
+          ],
+          "name": "maxConcurrency",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/evals/types.ts:EveEvalConfigInput:timeoutMs",
+          "kind": "property",
+          "line_range": [
+            583,
+            583
+          ],
+          "name": "timeoutMs",
+          "partial_analysis": false,
+          "return_type": ": number",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/evals/types.ts:EveEvalConfigInput",
+      "kind": "interface",
+      "line_range": [
+        561,
+        584
+      ],
+      "name": "EveEvalConfigInput",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/evals/types.ts:EveEvalConfig",
+      "kind": "type_alias",
+      "line_range": [
+        590,
+        592
+      ],
+      "name": "EveEvalConfig",
+      "partial_analysis": false,
+      "value": "EveEvalConfigInput & {\r\n  readonly _tag: \"EveEvalConfig\";\r\n};",
+      "visibility": "Public"
+    }
+  ]
+}

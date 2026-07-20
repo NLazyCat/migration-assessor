@@ -1,0 +1,27 @@
+{
+  "module": "packages/eve/src/cli/dev/tui/tui-prompter.test.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/cli/dev/tui/tui-prompter.test.ts:fakeRenderer",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        8,
+        20
+      ],
+      "name": "fakeRenderer",
+      "params": [
+        {
+          "name": "overrides",
+          "optional": false,
+          "type": "Partial<TuiPrompterRenderer>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "TuiPrompterRenderer",
+      "signature": "export function fakeRenderer(overrides: Partial<TuiPrompterRenderer>) -> TuiPrompterRenderer",
+      "visibility": "Private"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        16,
+        33
+      ],
+      "name": "Session",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface Session { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        42,
+        47
+      ],
+      "name": "SessionHandle",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface SessionHandle { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "id",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "id: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        44,
+        44
+      ],
+      "name": "continuationToken",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "continuationToken: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "auth",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SessionAuth",
+      "signature": "auth: : SessionAuth"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        49,
+        60
+      ],
+      "name": "createSession",
+      "params": [
+        {
+          "name": "id",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "continuationToken",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "Runtime"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Session",
+      "signature": "export function createSession(id: string, continuationToken: string, runtime: Runtime) -> Session"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        62,
+        64
+      ],
+      "name": "createGetSessionFn",
+      "params": [
+        {
+          "name": "runtime",
+          "optional": false,
+          "type": "Runtime"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "(sessionId: string) => Session",
+      "signature": "export function createGetSessionFn(runtime: Runtime) -> (sessionId: string) => Session"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        76,
+        102
+      ],
+      "name": "buildSessionHandle",
+      "params": [
+        {
+          "name": "accessor",
+          "optional": false,
+          "type": "ContextAccessor"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SessionHandle",
+      "signature": "export function buildSessionHandle(accessor: ContextAccessor) -> SessionHandle"
+    }
+  ],
+  "module": "packages/eve/src/channel/session.ts"
+}

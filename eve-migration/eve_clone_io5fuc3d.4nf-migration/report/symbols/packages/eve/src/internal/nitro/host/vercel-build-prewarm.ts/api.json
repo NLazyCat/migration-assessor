@@ -1,0 +1,24 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        18,
+        35
+      ],
+      "name": "runVercelBuildPrewarm",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "PrewarmAppSandboxesInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function runVercelBuildPrewarm(input: PrewarmAppSandboxesInput) -> Promise<boolean>"
+    }
+  ],
+  "module": "packages/eve/src/internal/nitro/host/vercel-build-prewarm.ts"
+}

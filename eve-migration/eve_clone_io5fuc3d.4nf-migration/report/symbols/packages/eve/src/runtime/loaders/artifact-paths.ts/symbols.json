@@ -1,0 +1,166 @@
+{
+  "module": "packages/eve/src/runtime/loaders/artifact-paths.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:appRoot",
+          "kind": "property",
+          "line_range": [
+            5,
+            5
+          ],
+          "name": "appRoot",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:compiledManifestPath",
+          "kind": "property",
+          "line_range": [
+            6,
+            6
+          ],
+          "name": "compiledManifestPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:compileDirectoryPath",
+          "kind": "property",
+          "line_range": [
+            7,
+            7
+          ],
+          "name": "compileDirectoryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:compileMetadataPath",
+          "kind": "property",
+          "line_range": [
+            8,
+            8
+          ],
+          "name": "compileMetadataPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:diagnosticsPath",
+          "kind": "property",
+          "line_range": [
+            9,
+            9
+          ],
+          "name": "diagnosticsPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:discoveryManifestPath",
+          "kind": "property",
+          "line_range": [
+            10,
+            10
+          ],
+          "name": "discoveryManifestPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:discoveryDirectoryPath",
+          "kind": "property",
+          "line_range": [
+            11,
+            11
+          ],
+          "name": "discoveryDirectoryPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths:moduleMapPath",
+          "kind": "property",
+          "line_range": [
+            12,
+            12
+          ],
+          "name": "moduleMapPath",
+          "partial_analysis": false,
+          "return_type": ": string",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:RuntimeCompilerArtifactPaths",
+      "kind": "interface",
+      "line_range": [
+        4,
+        13
+      ],
+      "name": "RuntimeCompilerArtifactPaths",
+      "partial_analysis": false,
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:resolveRuntimeCompilerArtifactPaths",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        19,
+        34
+      ],
+      "name": "resolveRuntimeCompilerArtifactPaths",
+      "params": [
+        {
+          "name": "appRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "RuntimeCompilerArtifactPaths",
+      "signature": "export function resolveRuntimeCompilerArtifactPaths(appRoot: string) -> RuntimeCompilerArtifactPaths",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/runtime/loaders/artifact-paths.ts:normalizeFilesystemPath",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        36,
+        44
+      ],
+      "name": "normalizeFilesystemPath",
+      "params": [
+        {
+          "name": "path",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function normalizeFilesystemPath(path: string) -> string",
+      "visibility": "Private"
+    }
+  ]
+}

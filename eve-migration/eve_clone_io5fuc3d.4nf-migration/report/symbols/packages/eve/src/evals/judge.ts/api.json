@@ -1,0 +1,88 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        15,
+        20
+      ],
+      "name": "JudgeDeps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface JudgeDeps { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        16,
+        16
+      ],
+      "name": "collector",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": AssertionCollector",
+      "signature": "collector: : AssertionCollector"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": "getReply",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => unknown",
+      "signature": "getReply: : () => unknown"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        18,
+        18
+      ],
+      "name": "getInput",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": () => string",
+      "signature": "getInput: : () => string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        19,
+        19
+      ],
+      "name": "judge",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EveEvalJudgeConfig | undefined",
+      "signature": "judge: : EveEvalJudgeConfig | undefined"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        34,
+        87
+      ],
+      "name": "buildJudgeContext",
+      "params": [
+        {
+          "name": "deps",
+          "optional": false,
+          "type": "JudgeDeps"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "JudgeContext",
+      "signature": "export function buildJudgeContext(deps: JudgeDeps) -> JudgeContext"
+    }
+  ],
+  "module": "packages/eve/src/evals/judge.ts"
+}

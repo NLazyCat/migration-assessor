@@ -1,0 +1,95 @@
+{
+  "Client": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 11,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 46
+      },
+      "symbol": "packages/eve/src/client/client.ts:Client"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 49
+      },
+      "symbol": "packages/eve/src/client/client.ts:Client"
+    },
+    {
+      "kind": "instantiation",
+      "location": {
+        "column": 13,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 57
+      },
+      "symbol": "packages/eve/src/client/client.ts:Client"
+    }
+  ],
+  "ClientOptions": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 3,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 18
+      },
+      "symbol": "packages/eve/src/client/types.ts:ClientOptions"
+    }
+  ],
+  "EveEvalTargetHandle": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 17
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalTargetHandle"
+    },
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 15,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 44
+      },
+      "symbol": "packages/eve/src/evals/types.ts:EveEvalTargetHandle"
+    }
+  ],
+  "VerifiedRemoteDevelopmentClientDeps": [
+    {
+      "kind": "type_reference",
+      "location": {
+        "column": 26,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 39
+      },
+      "symbol": "packages/eve/src/setup/verified-remote-client.ts:VerifiedRemoteDevelopmentClientDeps"
+    }
+  ],
+  "resolveDevelopmentClientOptions": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 7,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 24
+      },
+      "symbol": "packages/eve/src/services/dev-client/client-options.ts:resolveDevelopmentClientOptions"
+    }
+  ],
+  "resolveVerifiedRemoteDevelopmentClient": [
+    {
+      "kind": "call",
+      "location": {
+        "column": 38,
+        "file": "packages/eve/src/evals/cli/eval-client.ts",
+        "line": 52
+      },
+      "symbol": "packages/eve/src/setup/verified-remote-client.ts:resolveVerifiedRemoteDevelopmentClient"
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        24,
+        24
+      ],
+      "name": "SLACK_CHANNEL_DEFAULT_ROUTE",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const SLACK_CHANNEL_DEFAULT_ROUTE: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        25,
+        25
+      ],
+      "name": "DEFAULT_SLACK_CONNECTOR_SLUG",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DEFAULT_SLACK_CONNECTOR_SLUG: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        57,
+        57
+      ],
+      "name": "ChannelKind",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelKind = \"slack\" | \"web\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        58,
+        58
+      ],
+      "name": "SlackConnectorSlug",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type SlackConnectorSlug = string & { readonly [slackConnectorSlugBrand]: true };"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        60,
+        65
+      ],
+      "name": "PackageJsonMutation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageJsonMutation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        61,
+        61
+      ],
+      "name": "path",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "path: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        62,
+        62
+      ],
+      "name": "dependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "dependencies: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        63,
+        63
+      ],
+      "name": "devDependencies",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "devDependencies: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        64,
+        64
+      ],
+      "name": "scripts",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string[]",
+      "signature": "scripts: : string[]"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        67,
+        67
+      ],
+      "name": "ChannelMutationAction",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelMutationAction = \"created\" | \"overwritten\" | \"skipped\";"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        69,
+        69
+      ],
+      "name": "ChannelMutationResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type ChannelMutationResult = SlackChannelMutationResult | WebChannelMutationResult;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        176,
+        178
+      ],
+      "name": "isNextJsProject",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function isNextJsProject(projectRoot: string) -> Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        199,
+        209
+      ],
+      "name": "resolveVercelHostFrameworkPreset",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string | undefined>",
+      "signature": "export function resolveVercelHostFrameworkPreset(projectRoot: string) -> Promise<string | undefined>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        217,
+        219
+      ],
+      "name": "hasVercelHostFramework",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<boolean>",
+      "signature": "export function hasVercelHostFramework(projectRoot: string) -> Promise<boolean>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        345,
+        356
+      ],
+      "name": "normalizeSlackConnectorSlug",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SlackConnectorSlug",
+      "signature": "export function normalizeSlackConnectorSlug(input: string) -> SlackConnectorSlug"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        358,
+        380
+      ],
+      "name": "deriveSlackConnectorSlug",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "projectNameHint",
+          "optional": true,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<SlackConnectorSlug>",
+      "signature": "export function deriveSlackConnectorSlug(projectRoot: string, projectNameHint: string) -> Promise<SlackConnectorSlug>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        438,
+        458
+      ],
+      "name": "EnsureChannelOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface EnsureChannelOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        439,
+        439
+      ],
+      "name": "projectRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "projectRoot: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        440,
+        440
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": ChannelKind",
+      "signature": "kind: : ChannelKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        442,
+        442
+      ],
+      "name": "packageManager",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PackageManagerKind",
+      "signature": "packageManager?: : PackageManagerKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        448,
+        448
+      ],
+      "name": "workspaceProbeDirectory",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workspaceProbeDirectory?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        449,
+        449
+      ],
+      "name": "force",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "force?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        451,
+        451
+      ],
+      "name": "slackConnectorUid",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "slackConnectorUid?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        452,
+        452
+      ],
+      "name": "slackConnectorSlug",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": SlackConnectorSlug",
+      "signature": "slackConnectorSlug?: : SlackConnectorSlug"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        453,
+        453
+      ],
+      "name": "connectPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "connectPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        454,
+        454
+      ],
+      "name": "webPackageVersions",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": WebPackageVersions",
+      "signature": "webPackageVersions?: : WebPackageVersions"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        456,
+        456
+      ],
+      "name": "configureVercelServices",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "configureVercelServices?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        457,
+        457
+      ],
+      "name": "onWorkspaceRootMutation",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": (mutation: WorkspaceRootMutation) => void | Promise<void>",
+      "signature": "onWorkspaceRootMutation?: : (mutation: WorkspaceRootMutation) => void | Promise<void>"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        460,
+        470
+      ],
+      "name": "WebPackageVersions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface WebPackageVersions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        461,
+        461
+      ],
+      "name": "evePackage",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": EvePackageContract",
+      "signature": "evePackage?: : EvePackageContract"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        462,
+        462
+      ],
+      "name": "aiPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "aiPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        463,
+        463
+      ],
+      "name": "nextPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "nextPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        464,
+        464
+      ],
+      "name": "reactPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reactPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        465,
+        465
+      ],
+      "name": "reactDomPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "reactDomPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        466,
+        466
+      ],
+      "name": "streamdownPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "streamdownPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        467,
+        467
+      ],
+      "name": "zodPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "zodPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        468,
+        468
+      ],
+      "name": "typesReactPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "typesReactPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        469,
+        469
+      ],
+      "name": "typesReactDomPackageVersion",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "typesReactDomPackageVersion?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        472,
+        479
+      ],
+      "name": "ensureChannel",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "EnsureChannelOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<ChannelMutationResult>",
+      "signature": "export function ensureChannel(options: EnsureChannelOptions) -> Promise<ChannelMutationResult>"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        618,
+        648
+      ],
+      "name": "listAuthoredChannels",
+      "params": [
+        {
+          "name": "projectRoot",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string[]>",
+      "signature": "export function listAuthoredChannels(projectRoot: string) -> Promise<string[]>"
+    }
+  ],
+  "module": "packages/eve/src/setup/scaffold/update/channels.ts"
+}

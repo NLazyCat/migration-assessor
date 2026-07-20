@@ -1,0 +1,60 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        41,
+        42
+      ],
+      "name": "DISCOVER_LOCAL_SUBAGENT_SCHEDULES_INVALID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_LOCAL_SUBAGENT_SCHEDULES_INVALID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        43,
+        44
+      ],
+      "name": "DISCOVER_REQUIRED_SUBAGENT_CONFIG_MODULE_MISSING",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_REQUIRED_SUBAGENT_CONFIG_MODULE_MISSING: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "DISCOVER_SUBAGENTS_DIRECTORY_INVALID",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const DISCOVER_SUBAGENTS_DIRECTORY_INVALID: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        74,
+        151
+      ],
+      "name": "discoverSubagents",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "DiscoverSubagentsInput"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<DiscoverSubagentsResult>",
+      "signature": "export function discoverSubagents(input: DiscoverSubagentsInput) -> Promise<DiscoverSubagentsResult>"
+    }
+  ],
+  "module": "packages/eve/src/discover/discover-subagent.ts"
+}

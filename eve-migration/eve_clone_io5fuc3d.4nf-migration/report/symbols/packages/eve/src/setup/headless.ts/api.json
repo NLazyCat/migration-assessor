@@ -1,0 +1,128 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "class",
+      "line_range": [
+        13,
+        25
+      ],
+      "name": "HeadlessPromptError",
+      "params": [
+        {
+          "name": "promptMessage",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export class HeadlessPromptError { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "method",
+      "line_range": [
+        16,
+        24
+      ],
+      "name": "constructor",
+      "params": [
+        {
+          "name": "promptMessage",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "HeadlessPromptError::constructor(promptMessage: string) -> void"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "HeadlessLogSink",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HeadlessLogSink = (text: string) => void;"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        37,
+        65
+      ],
+      "name": "createHeadlessPrompter",
+      "params": [
+        {
+          "name": "sink",
+          "optional": false,
+          "type": "HeadlessLogSink"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Prompter",
+      "signature": "export function createHeadlessPrompter(sink: HeadlessLogSink) -> Prompter"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        67,
+        69
+      ],
+      "name": "HeadlessNextStep",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface HeadlessNextStep { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        68,
+        68
+      ],
+      "name": "command",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "command: : string"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        72,
+        83
+      ],
+      "name": "HeadlessEvent",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type HeadlessEvent = | { type: \"done\"; projectPath: string; channels: string[]; model: string }\r\n  | {\r\n      type: \"action-required\";\r\n      status: \"action_required\";\r\n      kind: string;\r\n      reason: string;\r\n      message: string;\r\n      command: string;\r\n      next: HeadlessNextStep[];\r\n    }\r\n  | { type: \"error\"; status: \"error\"; reason: string; message: string; hint?: string };"
+    },
+    {
+      "generics": [],
+      "kind": "function",
+      "line_range": [
+        86,
+        88
+      ],
+      "name": "formatHeadlessEvent",
+      "params": [
+        {
+          "name": "event",
+          "optional": false,
+          "type": "HeadlessEvent"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function formatHeadlessEvent(event: HeadlessEvent) -> string"
+    }
+  ],
+  "module": "packages/eve/src/setup/headless.ts"
+}

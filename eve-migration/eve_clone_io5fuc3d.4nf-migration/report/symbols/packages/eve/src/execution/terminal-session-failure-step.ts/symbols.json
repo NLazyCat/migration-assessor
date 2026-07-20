@@ -1,0 +1,40 @@
+{
+  "module": "packages/eve/src/execution/terminal-session-failure-step.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/terminal-session-failure-step.ts:log",
+      "kind": "variable",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "log",
+      "partial_analysis": false,
+      "value": "",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/terminal-session-failure-step.ts:emitTerminalSessionFailureStep",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        15,
+        72
+      ],
+      "name": "emitTerminalSessionFailureStep",
+      "params": [
+        {
+          "name": "input",
+          "optional": false,
+          "type": "{\r\n  readonly error: unknown;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n}"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<void>",
+      "signature": "export function emitTerminalSessionFailureStep(input: {\r\n  readonly error: unknown;\r\n  readonly parentWritable: WritableStream<Uint8Array>;\r\n  readonly serializedContext: Record<string, unknown>;\r\n}) -> Promise<void>",
+      "visibility": "Public"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "module": "packages/eve/src/execution/sandbox/session.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:buildSandboxSession",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        33,
+        116
+      ],
+      "name": "buildSandboxSession",
+      "params": [
+        {
+          "name": "primitives",
+          "optional": false,
+          "type": "InternalSandboxSession"
+        },
+        {
+          "name": "setNetworkPolicy",
+          "optional": false,
+          "type": "(policy: SandboxNetworkPolicy) => Promise<void>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "SandboxSession",
+      "signature": "export function buildSandboxSession(primitives: InternalSandboxSession, setNetworkPolicy: (policy: SandboxNetworkPolicy) => Promise<void>) -> SandboxSession",
+      "visibility": "Public"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:collectStreamToString",
+      "is_async": true,
+      "kind": "function",
+      "line_range": [
+        124,
+        127
+      ],
+      "name": "collectStreamToString",
+      "params": [
+        {
+          "name": "stream",
+          "optional": false,
+          "type": "ReadableStream<Uint8Array>"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Promise<string>",
+      "signature": "export function collectStreamToString(stream: ReadableStream<Uint8Array>) -> Promise<string>",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:validateReadTextFileOptions",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        136,
+        147
+      ],
+      "name": "validateReadTextFileOptions",
+      "params": [
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SandboxReadTextFileOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "void",
+      "signature": "export function validateReadTextFileOptions(options: SandboxReadTextFileOptions) -> void",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:splitLinesPreservingEndings",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        152,
+        174
+      ],
+      "name": "splitLinesPreservingEndings",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string[]",
+      "signature": "export function splitLinesPreservingEndings(content: string) -> string[]",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:applyLineRange",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        180,
+        192
+      ],
+      "name": "applyLineRange",
+      "params": [
+        {
+          "name": "content",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "optional": false,
+          "type": "SandboxReadTextFileOptions"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function applyLineRange(content: string, options: SandboxReadTextFileOptions) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:decodeBytes",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        200,
+        207
+      ],
+      "name": "decodeBytes",
+      "params": [
+        {
+          "name": "buf",
+          "optional": false,
+          "type": "Uint8Array"
+        },
+        {
+          "name": "encoding",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "string",
+      "signature": "export function decodeBytes(buf: Uint8Array, encoding: string) -> string",
+      "visibility": "Private"
+    },
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/sandbox/session.ts:encodeString",
+      "is_async": false,
+      "kind": "function",
+      "line_range": [
+        215,
+        220
+      ],
+      "name": "encodeString",
+      "params": [
+        {
+          "name": "str",
+          "optional": false,
+          "type": "string"
+        },
+        {
+          "name": "encoding",
+          "optional": false,
+          "type": "string"
+        }
+      ],
+      "partial_analysis": false,
+      "return_type": "Uint8Array",
+      "signature": "export function encodeString(str: string, encoding: string) -> Uint8Array",
+      "visibility": "Private"
+    }
+  ]
+}

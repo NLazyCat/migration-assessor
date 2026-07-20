@@ -1,0 +1,359 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        17,
+        19
+      ],
+      "name": "MessageProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageProps = HTMLAttributes<HTMLDivElement> & {\r\n  from: UIMessage[\"role\"];\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        21,
+        30
+      ],
+      "name": "Message",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const Message: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "MessageContentProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageContentProps = HTMLAttributes<HTMLDivElement>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        34,
+        47
+      ],
+      "name": "MessageContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageContent: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        49,
+        49
+      ],
+      "name": "MessageActionsProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageActionsProps = ComponentProps<\"div\">;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        51,
+        55
+      ],
+      "name": "MessageActions",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageActionsProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageActions: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        57,
+        60
+      ],
+      "name": "MessageActionProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageActionProps = ComponentProps<typeof Button> & {\r\n  tooltip?: string;\r\n  label?: string;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        62,
+        91
+      ],
+      "name": "MessageAction",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageActionProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageAction: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        114,
+        117
+      ],
+      "name": "MessageBranchProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageBranchProps = HTMLAttributes<HTMLDivElement> & {\r\n  defaultBranch?: number;\r\n  onBranchChange?: (branchIndex: number) => void;\r\n};"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        119,
+        163
+      ],
+      "name": "MessageBranch",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageBranchProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageBranch: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        165,
+        165
+      ],
+      "name": "MessageBranchContentProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageBranchContentProps = HTMLAttributes<HTMLDivElement>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        167,
+        193
+      ],
+      "name": "MessageBranchContent",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageBranchContentProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageBranchContent: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        195,
+        195
+      ],
+      "name": "MessageBranchSelectorProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageBranchSelectorProps = ComponentProps<typeof ButtonGroup>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        197,
+        215
+      ],
+      "name": "MessageBranchSelector",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageBranchSelectorProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageBranchSelector: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        217,
+        217
+      ],
+      "name": "MessageBranchPreviousProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageBranchPreviousProps = ComponentProps<typeof Button>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        219,
+        235
+      ],
+      "name": "MessageBranchPrevious",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageBranchPreviousProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageBranchPrevious: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        237,
+        237
+      ],
+      "name": "MessageBranchNextProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageBranchNextProps = ComponentProps<typeof Button>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        239,
+        255
+      ],
+      "name": "MessageBranchNext",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageBranchNextProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageBranchNext: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        257,
+        257
+      ],
+      "name": "MessageBranchPageProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageBranchPageProps = HTMLAttributes<HTMLSpanElement>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        259,
+        270
+      ],
+      "name": "MessageBranchPage",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageBranchPageProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageBranchPage: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        272,
+        272
+      ],
+      "name": "MessageResponseProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageResponseProps = ComponentProps<typeof Streamdown>;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        276,
+        286
+      ],
+      "name": "MessageResponse",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export const MessageResponse: unknown"
+    },
+    {
+      "generics": [],
+      "kind": "type_alias",
+      "line_range": [
+        290,
+        290
+      ],
+      "name": "MessageToolbarProps",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export type MessageToolbarProps = ComponentProps<\"div\">;"
+    },
+    {
+      "generics": [],
+      "kind": "variable",
+      "line_range": [
+        292,
+        296
+      ],
+      "name": "MessageToolbar",
+      "params": [
+        {
+          "name": "_",
+          "optional": false,
+          "type": "MessageToolbarProps"
+        }
+      ],
+      "partial_analysis": false,
+      "signature": "export const MessageToolbar: unknown"
+    }
+  ],
+  "module": "apps/templates/web-chat-next/components/ai-elements/message.tsx"
+}

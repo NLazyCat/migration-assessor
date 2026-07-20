@@ -1,0 +1,31 @@
+{
+  "module": "packages/eve/src/public/definitions/callback-context.ts",
+  "symbols": [
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/public/definitions/callback-context.ts:SessionContext:session",
+          "kind": "property",
+          "line_range": [
+            20,
+            25
+          ],
+          "name": "session",
+          "partial_analysis": false,
+          "return_type": ": {\r\n    readonly id: string;\r\n    readonly auth: SessionAuth;\r\n    readonly turn: SessionTurn;\r\n    readonly parent?: SessionParent;\r\n  }",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/public/definitions/callback-context.ts:SessionContext",
+      "kind": "interface",
+      "line_range": [
+        15,
+        37
+      ],
+      "name": "SessionContext",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}

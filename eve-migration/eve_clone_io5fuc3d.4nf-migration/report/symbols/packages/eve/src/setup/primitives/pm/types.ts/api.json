@@ -1,0 +1,208 @@
+{
+  "exports": [
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        4,
+        8
+      ],
+      "name": "PackageManagerInvocation",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageManagerInvocation { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": "args",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "args: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "command",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "command: : string"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "shell",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "shell?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        11,
+        14
+      ],
+      "name": "PackageManagerConfigurationResult",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageManagerConfigurationResult { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        12,
+        12
+      ],
+      "name": "filesSkipped",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "filesSkipped: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        13,
+        13
+      ],
+      "name": "filesWritten",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": readonly string[]",
+      "signature": "filesWritten: : readonly string[]"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        17,
+        24
+      ],
+      "name": "PackageManagerConfigurationOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageManagerConfigurationOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        23,
+        23
+      ],
+      "name": "workspaceProbeRoot",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": string",
+      "signature": "workspaceProbeRoot?: : string"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        26,
+        33
+      ],
+      "name": "PackageManagerInstallOptions",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageManagerInstallOptions { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        28,
+        28
+      ],
+      "name": "bypassMinimumReleaseAge",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "bypassMinimumReleaseAge?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        30,
+        30
+      ],
+      "name": "ignoreWorkspace",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "ignoreWorkspace?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        32,
+        32
+      ],
+      "name": "progressDetails",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": boolean",
+      "signature": "progressDetails?: : boolean"
+    },
+    {
+      "generics": [],
+      "kind": "interface",
+      "line_range": [
+        41,
+        59
+      ],
+      "name": "PackageManagerStrategy",
+      "params": [],
+      "partial_analysis": false,
+      "signature": "export interface PackageManagerStrategy { ... }"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        43,
+        43
+      ],
+      "name": "kind",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": PackageManagerKind",
+      "signature": "kind: : PackageManagerKind"
+    },
+    {
+      "generics": [],
+      "kind": "property",
+      "line_range": [
+        45,
+        45
+      ],
+      "name": "scaffoldFiles",
+      "params": [],
+      "partial_analysis": false,
+      "return_type": ": Readonly<Record<string, string>>",
+      "signature": "scaffoldFiles: : Readonly<Record<string, string>>"
+    }
+  ],
+  "module": "packages/eve/src/setup/primitives/pm/types.ts"
+}

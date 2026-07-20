@@ -1,0 +1,297 @@
+{
+  "module": "packages/eve/src/execution/turn-control-receiver.ts",
+  "symbols": [
+    {
+      "children": [],
+      "id": "packages/eve/src/execution/turn-control-receiver.ts:DeliveryRequest",
+      "kind": "type_alias",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "DeliveryRequest",
+      "partial_analysis": false,
+      "value": "Extract<TurnControlPayload, { readonly kind: \"turn-delivery-request\" }>;",
+      "visibility": "Private"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:bufferedDeliveries",
+          "kind": "property",
+          "line_range": [
+            15,
+            15
+          ],
+          "name": "bufferedDeliveries",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:control",
+          "kind": "property",
+          "line_range": [
+            16,
+            16
+          ],
+          "name": "control",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:controlIterator",
+          "kind": "property",
+          "line_range": [
+            17,
+            17
+          ],
+          "name": "controlIterator",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:deliveryHook",
+          "kind": "property",
+          "line_range": [
+            18,
+            18
+          ],
+          "name": "deliveryHook",
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:pendingControl",
+          "kind": "property",
+          "line_range": [
+            19,
+            19
+          ],
+          "name": "pendingControl",
+          "partial_analysis": false,
+          "value": "",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:constructor",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            21,
+            30
+          ],
+          "name": "constructor",
+          "params": [
+            {
+              "name": "input",
+              "optional": false,
+              "type": "{\r\n    readonly bufferedDeliveries: DeliverHookPayload[];\r\n    readonly deliveryHook: SessionDeliveryHook;\r\n    readonly token: string;\r\n  }"
+            }
+          ],
+          "partial_analysis": false,
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:token",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            33,
+            35
+          ],
+          "name": "token",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "string",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:dispose",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            38,
+            41
+          ],
+          "name": "dispose",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<void>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:waitForAction",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            44,
+            58
+          ],
+          "name": "waitForAction",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<NextDriverAction>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:bufferTurnDeliveries",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            60,
+            66
+          ],
+          "name": "bufferTurnDeliveries",
+          "params": [
+            {
+              "name": "payload",
+              "optional": false,
+              "type": "Extract<TurnControlPayload, { readonly kind: \"turn-result\" }>"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:consumeControl",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            68,
+            70
+          ],
+          "name": "consumeControl",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "void",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:getControlPromise",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            72,
+            75
+          ],
+          "name": "getControlPromise",
+          "params": [],
+          "partial_analysis": false,
+          "return_type": "Promise<IteratorResult<TurnControlPayload>>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:nextControl",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            77,
+            94
+          ],
+          "name": "nextControl",
+          "params": [
+            {
+              "name": "onClosed",
+              "optional": false,
+              "type": "string"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<\r\n    Exclude<TurnControlPayload, { readonly kind: \"turn-error\" | \"turn-continuation-token\" }>\r\n  >",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:readTerminalControl",
+          "is_async": false,
+          "kind": "method",
+          "line_range": [
+            96,
+            101
+          ],
+          "name": "readTerminalControl",
+          "params": [
+            {
+              "name": "payload",
+              "optional": false,
+              "type": "TurnControlPayload"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "NextDriverAction | undefined",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:serviceDeliveryRequest",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            103,
+            161
+          ],
+          "name": "serviceDeliveryRequest",
+          "params": [
+            {
+              "name": "request",
+              "optional": false,
+              "type": "DeliveryRequest"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<NextDriverAction | undefined>",
+          "visibility": "Public"
+        },
+        {
+          "children": [],
+          "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver:awaitForwardedDelivery",
+          "is_async": true,
+          "kind": "method",
+          "line_range": [
+            169,
+            195
+          ],
+          "name": "awaitForwardedDelivery",
+          "params": [
+            {
+              "name": "requestId",
+              "optional": false,
+              "type": "string"
+            },
+            {
+              "name": "outstanding",
+              "optional": false,
+              "type": "DeliverHookPayload"
+            }
+          ],
+          "partial_analysis": false,
+          "return_type": "Promise<NextDriverAction | undefined>",
+          "visibility": "Public"
+        }
+      ],
+      "id": "packages/eve/src/execution/turn-control-receiver.ts:TurnControlReceiver",
+      "kind": "class",
+      "line_range": [
+        14,
+        196
+      ],
+      "name": "TurnControlReceiver",
+      "partial_analysis": false,
+      "visibility": "Public"
+    }
+  ]
+}
