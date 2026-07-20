@@ -729,10 +729,9 @@ fn detect_project_language(
         } else {
             project_root.join(src)
         };
-        if candidate.exists() {
-            if let Some(lang) = lang_registry.detect_language(&candidate) {
+        if candidate.exists()
+            && let Some(lang) = lang_registry.detect_language(&candidate) {
                 return Some(lang);
-            }
         }
     }
     lang_registry.detect_language(project_root)

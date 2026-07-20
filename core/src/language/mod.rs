@@ -64,7 +64,7 @@ pub trait Language: Send + Sync + 'static {
 
     fn file_extensions(&self) -> &[&str];
 
-    fn parse(&self, source: &str, file_path: &str) -> anyhow::Result<ParsedFile>;
+    fn parse(&self, source: &str, file_path: &str) -> anyhow::Result<ParsedFile<'_>>;
 
     fn extract_symbols(&self, parsed: &ParsedFile) -> anyhow::Result<(SymbolIndex, ApiContract)>;
 

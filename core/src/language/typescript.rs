@@ -1,12 +1,8 @@
-use super::{AstNode, Diagnostic, DiagnosticSeverity, DiffAnalyzer, Language, ParsedFile};
+use super::{AstNode, Diagnostic, DiffAnalyzer, Language, ParsedFile};
 use crate::deps::typescript as deps_ts;
 use crate::parser::typescript as parser_ts;
-use crate::references::typescript as refs_ts;
 use crate::symbols::typescript as symbols_ts;
-use crate::util;
-use oxc_allocator::Allocator;
 use oxc_ast::ast::{Expression, Statement};
-use oxc_parser::{ParseOptions, Parser};
 use std::path::Path;
 
 pub struct TypeScriptLanguage;
@@ -20,7 +16,7 @@ impl Language for TypeScriptLanguage {
         &["ts", "tsx", "js", "jsx"]
     }
 
-    fn parse(&self, source: &str, file_path: &str) -> anyhow::Result<ParsedFile> {
+    fn parse(&self, source: &str, file_path: &str) -> anyhow::Result<ParsedFile<'_>> {
         let diagnostics: Vec<Diagnostic> = Vec::new();
 
         Ok(ParsedFile {
@@ -44,7 +40,7 @@ impl Language for TypeScriptLanguage {
         parsed: &ParsedFile,
     ) -> anyhow::Result<(crate::references::ForwardIndex, crate::references::ReverseIndex)> {
         let bindings = parser_ts::parse_references(&parsed.source, Some(Path::new(&parsed.file_path)))?;
-        let file = Path::new(&parsed.file_path);
+        let _file = Path::new(&parsed.file_path);
         
         let mut forward: crate::references::ForwardIndex = Default::default();
         let mut reverse: crate::references::ReverseIndex = Default::default();
@@ -280,10 +276,9 @@ impl TypeScriptDiffAnalyzer {
     fn visit_statement(&self, stmt: &Statement, calls: &mut Vec<(String, String)>) {
         match stmt {
             Statement::FunctionDeclaration(func) => {
-                if let Some(id) = &func.id {
-                    if let Some(body) = &func.body {
+                if let Some(id) = &func.id
+                    && let Some(body) = &func.body {
                         self.visit_function_body(body, id.name.to_string(), calls);
-                    }
                 }
             }
             Statement::VariableDeclaration(var_decl) => {
@@ -344,6 +339,6 @@ impl TypeScriptDiffAnalyzer {
         }
     }
 
-    fn visit_function_body(&self, body: &oxc_ast::ast::FunctionBody, context: String, calls: &mut Vec<(String, String)>) {
+    fn visit_function_body(&self, _body: &oxc_ast::ast::FunctionBody, _context: String, _calls: &mut Vec<(String, String)>) {
     }
 }

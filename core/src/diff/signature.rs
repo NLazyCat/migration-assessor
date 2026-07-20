@@ -1,5 +1,5 @@
 use crate::diff::{ChangeDetail, SymbolChange};
-use crate::symbols::{Symbol, SymbolParam};
+use crate::symbols::Symbol;
 
 pub fn diff(old: &Symbol, new: &Symbol) -> Option<Vec<SymbolChange>> {
     let mut changes = Vec::new();

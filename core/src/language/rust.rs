@@ -1,9 +1,8 @@
-use super::{AstNode, Diagnostic, DiagnosticSeverity, DiffAnalyzer, Language, ParsedFile};
+use super::{AstNode, DiffAnalyzer, Language, ParsedFile};
 use crate::deps::rust as deps_rust;
-use crate::references::rust as refs_rust;
 use crate::symbols::rust as symbols_rust;
 use std::path::Path;
-use syn::{spanned::Spanned, visit::Visit, FnArg, Item, Pat, Stmt};
+use syn::visit::Visit;
 
 pub struct RustLanguage;
 
@@ -16,7 +15,7 @@ impl Language for RustLanguage {
         &["rs"]
     }
 
-    fn parse(&self, source: &str, file_path: &str) -> anyhow::Result<ParsedFile> {
+    fn parse(&self, source: &str, file_path: &str) -> anyhow::Result<ParsedFile<'_>> {
         let file: syn::File = syn::parse_file(source)?;
 
         Ok(ParsedFile {
@@ -78,10 +77,7 @@ impl<'ast> Visit<'ast> for UseVisitor {
     }
 }
 
-impl UseVisitor {
-    fn collect_use_path(&mut self, _path: &syn::UsePath) {
-    }
-}
+
 
 pub struct RustDiffAnalyzer;
 

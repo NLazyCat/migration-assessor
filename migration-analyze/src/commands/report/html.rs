@@ -1,5 +1,4 @@
 use migration_core::graph::CycleDetectionResult;
-use serde_json::Value;
 
 pub fn get_bilingual_js() -> &'static str {
     r#"<script>
@@ -77,6 +76,7 @@ pub fn html_escape(s: &str) -> String {
         .replace('"', "&quot;")
 }
 
+#[expect(clippy::too_many_arguments)]
 pub fn build_html(
     source_repo: &str,
     source_lang: &str,

@@ -26,7 +26,6 @@ pub fn extract(
         source,
         symbols: Vec::new(),
         exports: Vec::new(),
-        has_errors: false,
     };
 
     
@@ -52,7 +51,6 @@ struct SymbolExtractor<'a> {
     source: &'a str,
     symbols: Vec<Symbol>,
     exports: Vec<ApiExport>,
-    has_errors: bool,
 }
 
 impl<'a> SymbolExtractor<'a> {
@@ -66,6 +64,7 @@ impl<'a> SymbolExtractor<'a> {
         [start_line, end_line]
     }
 
+    #[expect(clippy::too_many_arguments)]
     fn add_symbol(
         &mut self,
         name: String,
@@ -322,7 +321,7 @@ impl<'a> SymbolExtractor<'a> {
                 }
                 ClassElement::PropertyDefinition(prop) => {
                     let prop_name = prop_key_to_string(&prop.key);
-                    let value = prop.value.as_ref().map(|e| "".to_string());
+                    let value = prop.value.as_ref().map(|_e| "".to_string());
                     children.push(Symbol {
                         id: format!("{}:{}", self.symbol_id(&name), prop_name),
                         name: prop_name,
@@ -403,7 +402,7 @@ impl<'a> SymbolExtractor<'a> {
         let ty = "unknown".to_string();
         let sig = format!("export const {}: {}", name, ty);
 
-        let value = decl.init.as_ref().map(|e| "".to_string());
+        let value = decl.init.as_ref().map(|_e| "".to_string());
 
         let mut params = vec![];
         let mut return_type = None;

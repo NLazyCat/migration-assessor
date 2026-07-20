@@ -2,7 +2,7 @@ use std::collections::{HashMap, HashSet};
 
 use super::types::LibraryEntry;
 
-pub fn find_best_match(
+pub(crate) fn find_best_match(
     src: &LibraryEntry,
     target_registry: &HashMap<String, LibraryEntry>,
 ) -> Option<(String, f64)> {
@@ -13,7 +13,7 @@ pub fn find_best_match(
         .filter(|(_, score)| *score > 0.0)
 }
 
-pub fn compute_similarity(src: &LibraryEntry, tgt: &LibraryEntry) -> f64 {
+pub(crate) fn compute_similarity(src: &LibraryEntry, tgt: &LibraryEntry) -> f64 {
     let tag_sim = jaccard_similarity(&src.tags, &tgt.tags);
     let type_bonus = if src.lib_type == tgt.lib_type {
         1.0
@@ -23,7 +23,7 @@ pub fn compute_similarity(src: &LibraryEntry, tgt: &LibraryEntry) -> f64 {
     tag_sim * 0.8 + type_bonus * 0.2
 }
 
-pub fn jaccard_similarity(a: &[String], b: &[String]) -> f64 {
+pub(crate) fn jaccard_similarity(a: &[String], b: &[String]) -> f64 {
     let a_set: HashSet<&str> = a.iter().map(|s| s.as_str()).collect();
     let b_set: HashSet<&str> = b.iter().map(|s| s.as_str()).collect();
     let intersection = a_set.intersection(&b_set).count();
@@ -35,7 +35,7 @@ pub fn jaccard_similarity(a: &[String], b: &[String]) -> f64 {
     }
 }
 
-pub fn score_to_compatibility(score: f64) -> super::types::CompatibilityLevel {
+pub(crate) fn score_to_compatibility(score: f64) -> super::types::CompatibilityLevel {
     if score >= 0.5 {
         super::types::CompatibilityLevel::Full
     } else if score >= 0.25 {

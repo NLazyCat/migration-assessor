@@ -7,7 +7,7 @@ use crate::deps::ResolvedDependency;
 use super::matching::{find_best_match, score_to_compatibility};
 use super::types::{
     CompatibilityEntry, CompatibilityLevel, DepChangeInfo, DependencyImpact, GuidanceOverride,
-    LanguageRegistry, MigrationEffort, OverrideEntry, derive_risk_tags, parse_effort_str,
+    LanguageRegistry, MigrationEffort, derive_risk_tags, parse_effort_str,
     parse_compatibility_str,
 };
 
