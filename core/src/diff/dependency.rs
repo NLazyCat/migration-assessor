@@ -103,3 +103,67 @@ fn parse_minor_version(version: &str) -> u32 {
 fn is_major_bump(old: &str, new: &str) -> bool {
     parse_major_version(new) > parse_major_version(old)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_compare_versions_same() {
+        assert_eq!(compare_versions("1.2.3", "1.2.3"), "patch");
+    }
+
+    #[test]
+    fn test_compare_versions_major_upgrade() {
+        assert_eq!(compare_versions("1.2.3", "2.0.0"), "upgraded");
+    }
+
+    #[test]
+    fn test_compare_versions_minor_upgrade() {
+        assert_eq!(compare_versions("1.2.3", "1.3.0"), "upgraded");
+    }
+
+    #[test]
+    fn test_compare_versions_major_downgrade() {
+        assert_eq!(compare_versions("2.0.0", "1.2.3"), "downgraded");
+    }
+
+    #[test]
+    fn test_is_major_bump_true() {
+        assert!(is_major_bump("1.0.0", "2.0.0"));
+    }
+
+    #[test]
+    fn test_is_major_bump_false() {
+        assert!(!is_major_bump("1.0.0", "1.1.0"));
+    }
+
+    #[test]
+    fn test_parse_major_version_with_v_prefix() {
+        assert_eq!(parse_major_version("v2.0.0"), 2);
+    }
+
+    #[test]
+    fn test_version_added_and_removed() {
+        let old = vec![ResolvedDependency {
+            name: "foo".into(),
+            version: "1.0.0".into(),
+            resolved: None,
+            dependencies: vec![],
+            children: vec![],
+            dep_type: "prod".into(),
+        }];
+        let new = vec![ResolvedDependency {
+            name: "bar".into(),
+            version: "2.0.0".into(),
+            resolved: None,
+            dependencies: vec![],
+            children: vec![],
+            dep_type: "prod".into(),
+        }];
+        let changes = diff_dependencies(&old, &new);
+        assert_eq!(changes.len(), 2);
+        assert!(changes.iter().any(|c| c.package == "foo" && c.change_type == "removed"));
+        assert!(changes.iter().any(|c| c.package == "bar" && c.change_type == "added"));
+    }
+}
