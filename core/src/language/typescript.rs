@@ -191,3 +191,91 @@ impl TypeScriptDiffAnalyzer {
     fn visit_function_body(&self, _body: &oxc_ast::ast::FunctionBody, _context: String, _calls: &mut Vec<(String, String)>) {
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_ts_language_name() {
+        assert_eq!(TypeScriptLanguage.name(), "typescript");
+    }
+
+    #[test]
+    fn test_ts_file_extensions() {
+        let exts = TypeScriptLanguage.file_extensions();
+        assert!(exts.contains(&"ts"));
+        assert!(exts.contains(&"tsx"));
+    }
+
+    #[test]
+    fn test_ts_parse_returns_source() {
+        let source = "const x: number = 1;";
+        let parsed = TypeScriptLanguage.parse(source, "test.ts").unwrap();
+        assert_eq!(parsed.source, source);
+        assert_eq!(parsed.file_path, "test.ts");
+        assert_eq!(parsed.language, "typescript");
+    }
+
+    #[test]
+    fn test_ts_detect_project_type_with_package_json() {
+        let dir = tempfile::TempDir::new().unwrap();
+        std::fs::write(dir.path().join("package.json"), "{}").unwrap();
+        assert!(TypeScriptLanguage.detect_project_type(dir.path()));
+    }
+
+    #[test]
+    fn test_ts_detect_project_type_with_tsconfig() {
+        let dir = tempfile::TempDir::new().unwrap();
+        std::fs::write(dir.path().join("tsconfig.json"), "{}").unwrap();
+        assert!(TypeScriptLanguage.detect_project_type(dir.path()));
+    }
+
+    #[test]
+    fn test_ts_detect_project_type_no_match() {
+        let dir = tempfile::TempDir::new().unwrap();
+        assert!(!TypeScriptLanguage.detect_project_type(dir.path()));
+    }
+
+    #[test]
+    fn test_ts_diff_analyzer_extract_imports() {
+        let source = r#"
+import { foo } from 'lodash';
+import './local';
+export { bar } from 'express';
+export * from 'fs';
+"#;
+        let parsed = ParsedFile {
+            source: source.to_string(),
+            file_path: "test.ts".to_string(),
+            language: "typescript".to_string(),
+            ast: AstNode::Other(serde_json::json!({})),
+            diagnostics: vec![],
+        };
+        let imports = TypeScriptDiffAnalyzer.extract_imports(&parsed);
+        assert!(imports.contains(&"lodash".to_string()));
+        assert!(imports.contains(&"express".to_string()));
+        assert!(imports.contains(&"fs".to_string()));
+        assert!(!imports.contains(&"./local".to_string()));
+    }
+
+    #[test]
+    fn test_ts_diff_analyzer_extract_call_graph() {
+        let source = r#"
+console.log('init');
+const x = foo();
+if (x) {
+  bar();
+}
+"#;
+        let parsed = ParsedFile {
+            source: source.to_string(),
+            file_path: "test.ts".to_string(),
+            language: "typescript".to_string(),
+            ast: AstNode::Other(serde_json::json!({})),
+            diagnostics: vec![],
+        };
+        let calls = TypeScriptDiffAnalyzer.extract_call_graph(&parsed);
+        assert!(!calls.is_empty());
+    }
+}

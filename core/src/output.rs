@@ -65,3 +65,82 @@ impl OutputWriter {
         Ok(())
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde::Serialize;
+    use tempfile::TempDir;
+
+    #[derive(Serialize)]
+    struct TestData {
+        name: String,
+        value: i32,
+    }
+
+    #[test]
+    fn test_output_format_from_cli_json() {
+        assert_eq!(OutputFormat::from_cli("json").unwrap(), OutputFormat::Json);
+        assert_eq!(OutputFormat::from_cli("JSON").unwrap(), OutputFormat::Json);
+    }
+
+    #[test]
+    fn test_output_format_from_cli_ndjson() {
+        assert_eq!(OutputFormat::from_cli("ndjson").unwrap(), OutputFormat::Ndjson);
+    }
+
+    #[test]
+    fn test_output_format_from_cli_invalid() {
+        let err = OutputFormat::from_cli("xml").unwrap_err();
+        assert!(err.to_string().contains("unsupported"));
+    }
+
+    #[test]
+    fn test_output_writer_init_creates_dir() {
+        let dir = TempDir::new().unwrap();
+        let sub = dir.path().join("nested/output");
+        let writer = OutputWriter::init(&sub, OutputFormat::Json).unwrap();
+        assert!(sub.exists());
+        drop(writer);
+    }
+
+    #[test]
+    fn test_output_writer_write_json() {
+        let dir = TempDir::new().unwrap();
+        let writer = OutputWriter::init(dir.path(), OutputFormat::Json).unwrap();
+        let data = TestData {
+            name: "test".into(),
+            value: 42,
+        };
+        writer.write(dir.path(), "output.json", &data).unwrap();
+        let content = std::fs::read_to_string(dir.path().join("output.json")).unwrap();
+        assert!(content.contains("\"name\": \"test\""));
+        assert!(content.contains("\"value\": 42"));
+    }
+
+    #[test]
+    fn test_output_writer_write_ndjson() {
+        let dir = TempDir::new().unwrap();
+        let writer = OutputWriter::init(dir.path(), OutputFormat::Ndjson).unwrap();
+        let data = vec![
+            TestData {
+                name: "a".into(),
+                value: 1,
+            },
+            TestData {
+                name: "b".into(),
+                value: 2,
+            },
+        ];
+        writer.write(dir.path(), "data.json", &data).unwrap();
+        let content = std::fs::read_to_string(dir.path().join("data.ndjson")).unwrap();
+        let lines: Vec<&str> = content.trim().lines().collect();
+        assert_eq!(lines.len(), 2);
+    }
+
+    #[test]
+    fn test_output_writer_default_format() {
+        let format = OutputFormat::default();
+        assert_eq!(format, OutputFormat::Json);
+    }
+}

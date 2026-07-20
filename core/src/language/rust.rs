@@ -165,3 +165,92 @@ impl CallVisitor {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_rust_language_name() {
+        assert_eq!(RustLanguage.name(), "rust");
+    }
+
+    #[test]
+    fn test_rust_file_extensions() {
+        let exts = RustLanguage.file_extensions();
+        assert_eq!(exts, &["rs"]);
+    }
+
+    #[test]
+    fn test_rust_parse_valid_source() {
+        let source = "fn main() { println!(\"hello\"); }";
+        let parsed = RustLanguage.parse(source, "main.rs").unwrap();
+        assert_eq!(parsed.source, source);
+        assert_eq!(parsed.file_path, "main.rs");
+        assert!(matches!(parsed.ast, AstNode::Rust(_)));
+    }
+
+    #[test]
+    fn test_rust_parse_invalid_source() {
+        let source = "fn main( { }";
+        let result = RustLanguage.parse(source, "main.rs");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_rust_detect_project_type() {
+        let dir = tempfile::TempDir::new().unwrap();
+        std::fs::write(dir.path().join("Cargo.toml"), "[package]\nname=\"test\"\n").unwrap();
+        assert!(RustLanguage.detect_project_type(dir.path()));
+    }
+
+    #[test]
+    fn test_rust_detect_project_type_no_match() {
+        let dir = tempfile::TempDir::new().unwrap();
+        assert!(!RustLanguage.detect_project_type(dir.path()));
+    }
+
+    #[test]
+    fn test_rust_diff_analyzer_extract_imports() {
+        let source = "use std::collections::HashMap;\nuse serde::{Serialize, Deserialize};\nmod foo;";
+        let file: syn::File = syn::parse_file(source).unwrap();
+        let parsed = ParsedFile {
+            source: source.to_string(),
+            file_path: "lib.rs".to_string(),
+            language: "rust".to_string(),
+            ast: AstNode::Rust(file),
+            diagnostics: vec![],
+        };
+        let imports = RustDiffAnalyzer.extract_imports(&parsed);
+        assert!(imports.iter().any(|i| i.contains("HashMap")));
+        assert!(imports.iter().any(|i| i.contains("Serialize")));
+    }
+
+    #[test]
+    fn test_rust_diff_analyzer_extract_call_graph() {
+        let source = "fn foo() { bar(); baz::qux(); }";
+        let file: syn::File = syn::parse_file(source).unwrap();
+        let parsed = ParsedFile {
+            source: source.to_string(),
+            file_path: "lib.rs".to_string(),
+            language: "rust".to_string(),
+            ast: AstNode::Rust(file),
+            diagnostics: vec![],
+        };
+        let calls = RustDiffAnalyzer.extract_call_graph(&parsed);
+        assert!(calls.contains(&("foo".to_string(), "bar".to_string())));
+    }
+
+    #[test]
+    fn test_rust_no_imports_when_not_rust_ast() {
+        let parsed = ParsedFile {
+            source: String::new(),
+            file_path: "test.ts".to_string(),
+            language: "typescript".to_string(),
+            ast: AstNode::Other(serde_json::json!({})),
+            diagnostics: vec![],
+        };
+        let imports = RustDiffAnalyzer.extract_imports(&parsed);
+        assert!(imports.is_empty());
+    }
+}

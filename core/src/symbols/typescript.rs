@@ -787,3 +787,109 @@ fn extract_type_source(source: &str, alias_span: oxc_span::Span) -> String {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::path::Path;
+
+    #[test]
+    fn test_extract_exported_function() {
+        let source = "export function greet(name: string): string { return \"hello\"; }";
+        let (index, contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "greet");
+        assert_eq!(index.symbols[0].kind, "function");
+        assert_eq!(contract.exports.len(), 1);
+        assert_eq!(contract.exports[0].name, "greet");
+    }
+
+    #[test]
+    fn test_extract_private_function() {
+        let source = "function hidden() { return 42; }";
+        let (index, contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert!(contract.exports.is_empty());
+    }
+
+    #[test]
+    fn test_extract_exported_class() {
+        let source = "export class MyClass { constructor() {} greet(): void {} }";
+        let (index, _contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "MyClass");
+        assert_eq!(index.symbols[0].kind, "class");
+    }
+
+    #[test]
+    fn test_extract_exported_interface() {
+        let source = "export interface User { name: string; age: number; }";
+        let (index, _contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "User");
+        assert_eq!(index.symbols[0].kind, "interface");
+    }
+
+    #[test]
+    fn test_extract_type_alias() {
+        let source = "export type Callback = (x: number) => void;";
+        let (index, _contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "Callback");
+        assert_eq!(index.symbols[0].kind, "type_alias");
+    }
+
+    #[test]
+    fn test_extract_enum() {
+        let source = "export enum Color { Red, Green, Blue }";
+        let (index, _contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "Color");
+        assert_eq!(index.symbols[0].kind, "enum");
+    }
+
+    #[test]
+    fn test_extract_exported_variable() {
+        let source = "export const VERSION = \"1.0.0\";";
+        let (index, _contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "VERSION");
+        assert_eq!(index.symbols[0].kind, "variable");
+    }
+
+    #[test]
+    fn test_extract_arrow_function() {
+        let source = "export const add = (a: number, b: number): number => a + b;";
+        let (index, contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "add");
+        assert_eq!(index.symbols[0].kind, "variable");
+        assert!(contract.exports[0].params.len() == 2);
+    }
+
+    #[test]
+    fn test_extract_export_default_function() {
+        let source = "export default function() { return true; }";
+        let (index, contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 1);
+        assert_eq!(index.symbols[0].name, "default");
+        assert_eq!(contract.exports.len(), 1);
+        assert_eq!(contract.exports[0].name, "default");
+    }
+
+    #[test]
+    fn test_extract_empty_source() {
+        let source = "";
+        let (index, contract) = extract("empty.ts", source, Some(Path::new("empty.ts"))).unwrap();
+        assert!(index.symbols.is_empty());
+        assert!(contract.exports.is_empty());
+    }
+
+    #[test]
+    fn test_extract_multiple_symbols() {
+        let source = "export function foo() {} export function bar() {}";
+        let (index, contract) = extract("test.ts", source, Some(Path::new("test.ts"))).unwrap();
+        assert_eq!(index.symbols.len(), 2);
+        assert_eq!(contract.exports.len(), 2);
+    }
+}
+

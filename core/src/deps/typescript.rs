@@ -286,3 +286,133 @@ fn merge_dependencies(
         );
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_resolve_no_deps() {
+        let dir = tempfile::TempDir::new().unwrap();
+        std::fs::write(dir.path().join("package.json"), r#"{"name": "test"}"#).unwrap();
+        let deps = resolve(dir.path()).unwrap();
+        assert!(deps.is_empty());
+    }
+
+    #[test]
+    fn test_resolve_with_deps() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let pkg = r#"{"dependencies": {"react": "^18.0", "lodash": "^4.17"}}"#;
+        std::fs::write(dir.path().join("package.json"), pkg).unwrap();
+        let deps = resolve(dir.path()).unwrap();
+        assert_eq!(deps.len(), 2);
+        let react = deps.iter().find(|d| d.name == "react").unwrap();
+        assert_eq!(react.version, "^18.0");
+        assert_eq!(react.dep_type, "prod");
+    }
+
+    #[test]
+    fn test_resolve_with_dev_deps() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let pkg = r#"{"devDependencies": {"typescript": "^5.0"}}"#;
+        std::fs::write(dir.path().join("package.json"), pkg).unwrap();
+        let deps = resolve(dir.path()).unwrap();
+        assert_eq!(deps.len(), 1);
+        assert_eq!(deps[0].dep_type, "dev");
+    }
+
+    #[test]
+    fn test_resolve_sorted_by_name() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let pkg = r#"{"dependencies": {"zoo": "1.0", "abc": "2.0"}}"#;
+        std::fs::write(dir.path().join("package.json"), pkg).unwrap();
+        let deps = resolve(dir.path()).unwrap();
+        assert_eq!(deps[0].name, "abc");
+        assert_eq!(deps[1].name, "zoo");
+    }
+
+    #[test]
+    fn test_read_empty_package_json() {
+        let dir = tempfile::TempDir::new().unwrap();
+        std::fs::write(dir.path().join("package.json"), "{}").unwrap();
+        let pkg = read_package_json(&dir.path().join("package.json")).unwrap();
+        assert!(pkg.dependencies.is_empty());
+        assert!(pkg.dev_dependencies.is_empty());
+        assert!(pkg.workspaces.is_empty());
+    }
+
+    #[test]
+    fn test_extract_dependency_map() {
+        let json: Value = serde_json::from_str(r#"{"react": "^18.0", "lodash": "^4.0"}"#).unwrap();
+        let map = extract_dependency_map(Some(&json));
+        assert_eq!(map.len(), 2);
+        assert_eq!(map.get("react").unwrap(), "^18.0");
+    }
+
+    #[test]
+    fn test_extract_workspaces_array() {
+        let json: Value = serde_json::from_str(r#"{"workspaces": ["packages/*"]}"#).unwrap();
+        let workspaces = extract_workspaces(&json);
+        assert_eq!(workspaces, vec!["packages/*"]);
+    }
+
+    #[test]
+    fn test_extract_workspaces_nested() {
+        let json: Value =
+            serde_json::from_str(r#"{"workspaces": {"packages": ["apps/*", "libs/*"]}}"#).unwrap();
+        let workspaces = extract_workspaces(&json);
+        assert_eq!(workspaces.len(), 2);
+    }
+
+    #[test]
+    fn test_extract_package_name_from_path() {
+        let json: Value = serde_json::from_str("{}").unwrap();
+        let name = extract_package_name("node_modules/lodash", &json);
+        assert_eq!(name, "lodash");
+
+        let name = extract_package_name("node_modules/@scope/pkg", &json);
+        assert_eq!(name, "@scope/pkg");
+    }
+
+    #[test]
+    fn test_extract_package_name_empty_path() {
+        let json: Value = serde_json::from_str("{}").unwrap();
+        let name = extract_package_name("", &json);
+        assert_eq!(name, "");
+    }
+
+    #[test]
+    fn test_try_parse_lock_file_nonexistent() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let result = try_parse_lock_file(dir.path());
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_parse_package_lock_invalid() {
+        let dir = tempfile::TempDir::new().unwrap();
+        let path = dir.path().join("package-lock.json");
+        std::fs::write(&path, "not valid json").unwrap();
+        let result = parse_package_lock(&path);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_merge_dependencies_adds_prod() {
+        let mut merged = HashMap::new();
+        let mut deps = HashMap::new();
+        deps.insert("react".into(), "^18.0".into());
+        merge_dependencies(&mut merged, &deps, "prod");
+        assert_eq!(merged.len(), 1);
+        assert_eq!(merged["react"].dep_type, "prod");
+    }
+
+    #[test]
+    fn test_merge_dependencies_overwrites_type() {
+        let mut merged = HashMap::new();
+        let mut deps = HashMap::new();
+        deps.insert("react".into(), "^18.0".into());
+        merge_dependencies(&mut merged, &deps, "dev");
+        assert_eq!(merged["react"].dep_type, "dev");
+    }
+}

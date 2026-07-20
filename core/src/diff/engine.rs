@@ -109,3 +109,96 @@ fn compute_summary(file_changes: &[FileDiffResult]) -> DiffSummary {
 
     summary
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::diff::SymbolChange;
+    use crate::diff::ImportChange;
+
+    fn mock_language() -> &'static dyn Language {
+        LanguageRegistry::get().get_language("typescript").unwrap()
+    }
+
+    #[test]
+    fn test_diff_files_no_changes() {
+        let source = "const x = 1;\nexport function foo() { return x; }";
+        let result = DiffEngine::diff_files(source, source, "test.ts", mock_language()).unwrap();
+        assert_eq!(result.file, "test.ts");
+        assert_eq!(result.status, "modified");
+    }
+
+    #[test]
+    fn test_diff_files_with_added_symbol() {
+        let old = "const x = 1;";
+        let new = "const x = 1;\nexport function added() { return 42; }";
+        let result = DiffEngine::diff_files(old, new, "test.ts", mock_language()).unwrap();
+        let added: Vec<&SymbolChange> = result.symbol_changes.iter().filter(|s| s.change_type == "added").collect();
+        assert!(!added.is_empty(), "should detect added symbols");
+    }
+
+    #[test]
+    fn test_diff_files_with_removed_symbol() {
+        let old = "const x = 1;\nexport function removed() { return 42; }";
+        let new = "const x = 1;";
+        let result = DiffEngine::diff_files(old, new, "test.ts", mock_language()).unwrap();
+        let removed: Vec<&SymbolChange> = result.symbol_changes.iter().filter(|s| s.change_type == "removed").collect();
+        assert!(!removed.is_empty(), "should detect removed symbols");
+    }
+
+    #[test]
+    fn test_compute_summary_empty() {
+        let summary = compute_summary(&[]);
+        assert_eq!(summary.total_files_changed, 0);
+        assert_eq!(summary.symbols_added, 0);
+    }
+
+    #[test]
+    fn test_compute_summary_counts() {
+        let changes = vec![FileDiffResult {
+            file: "test.ts".into(),
+            status: "modified".into(),
+            symbol_changes: vec![
+                SymbolChange {
+                    symbol: "foo".into(),
+                    kind: "function".into(),
+                    change_type: "added".into(),
+                    severity: "low".into(),
+                    old_name: None,
+                    rename_confidence: None,
+                    details: vec![],
+                    old_line_range: None,
+                    new_line_range: None,
+                },
+                SymbolChange {
+                    symbol: "bar".into(),
+                    kind: "function".into(),
+                    change_type: "removed".into(),
+                    severity: "breaking".into(),
+                    old_name: None,
+                    rename_confidence: None,
+                    details: vec![],
+                    old_line_range: None,
+                    new_line_range: None,
+                },
+            ],
+            import_changes: vec![
+                ImportChange {
+                    change_type: "added".into(),
+                    package: "lodash".into(),
+                    old_path: None,
+                    new_path: Some("lodash".into()),
+                    is_external: true,
+                    compatibility: None,
+                },
+            ],
+            doc_changes: vec![],
+        }];
+        let summary = compute_summary(&changes);
+        assert_eq!(summary.total_files_changed, 1);
+        assert_eq!(summary.symbols_added, 1);
+        assert_eq!(summary.symbols_removed, 1);
+        assert_eq!(summary.breaking_changes, 1);
+        assert_eq!(summary.new_dependencies, 1);
+    }
+}
