@@ -2,7 +2,9 @@ use super::{AstNode, Diagnostic, DiffAnalyzer, Language, ParsedFile};
 use crate::deps::typescript as deps_ts;
 use crate::parser::typescript as parser_ts;
 use crate::symbols::typescript as symbols_ts;
+use oxc_allocator::Allocator;
 use oxc_ast::ast::{Expression, Statement};
+use oxc_parser::Parser;
 use std::path::Path;
 
 pub struct TypeScriptLanguage;
@@ -222,53 +224,51 @@ impl DiffAnalyzer for TypeScriptDiffAnalyzer {
     }
 
     fn extract_imports(&self, parsed: &ParsedFile) -> Vec<String> {
-        if let AstNode::TypeScript(program) = &parsed.ast {
-            let mut imports = Vec::new();
-            for stmt in &program.body {
-                match stmt {
-                    Statement::ImportDeclaration(import) => {
-                        let src = import.source.value.to_string();
-                        if !src.starts_with('.') && !src.starts_with('/') {
-                            imports.push(src);
-                        }
+        let source_type = crate::util::detect_source_type(Some(Path::new(&parsed.file_path)));
+        let allocator = Allocator::default();
+        let ret = Parser::new(&allocator, &parsed.source, source_type).parse();
+        let mut imports = Vec::new();
+        for stmt in &ret.program.body {
+            match stmt {
+                Statement::ImportDeclaration(import) => {
+                    let src = import.source.value.to_string();
+                    if !src.starts_with('.') && !src.starts_with('/') {
+                        imports.push(src);
                     }
-                    Statement::ExportNamedDeclaration(export) => {
-                        if let Some(source) = &export.source {
-                            let src = source.value.to_string();
-                            if !src.starts_with('.') && !src.starts_with('/') {
-                                imports.push(src);
-                            }
-                        }
-                    }
-                    Statement::ExportAllDeclaration(export) => {
-                        let src = export.source.value.to_string();
-                        if !src.starts_with('.') && !src.starts_with('/') {
-                            imports.push(src);
-                        }
-                    }
-                    _ => {}
                 }
+                Statement::ExportNamedDeclaration(export) => {
+                    if let Some(source) = &export.source {
+                        let src = source.value.to_string();
+                        if !src.starts_with('.') && !src.starts_with('/') {
+                            imports.push(src);
+                        }
+                    }
+                }
+                Statement::ExportAllDeclaration(export) => {
+                    let src = export.source.value.to_string();
+                    if !src.starts_with('.') && !src.starts_with('/') {
+                        imports.push(src);
+                    }
+                }
+                _ => {}
             }
-            imports.sort();
-            imports.dedup();
-            imports
-        } else {
-            Vec::new()
         }
+        imports.sort();
+        imports.dedup();
+        imports
     }
 
     fn extract_call_graph(&self, parsed: &ParsedFile) -> Vec<(String, String)> {
-        if let AstNode::TypeScript(program) = &parsed.ast {
-            let mut calls = Vec::new();
-            for stmt in &program.body {
-                self.visit_statement(stmt, &mut calls);
-            }
-            calls.sort();
-            calls.dedup();
-            calls
-        } else {
-            Vec::new()
+        let source_type = crate::util::detect_source_type(Some(Path::new(&parsed.file_path)));
+        let allocator = Allocator::default();
+        let ret = Parser::new(&allocator, &parsed.source, source_type).parse();
+        let mut calls = Vec::new();
+        for stmt in &ret.program.body {
+            self.visit_statement(stmt, &mut calls);
         }
+        calls.sort();
+        calls.dedup();
+        calls
     }
 }
 

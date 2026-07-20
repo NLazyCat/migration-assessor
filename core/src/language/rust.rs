@@ -73,11 +73,30 @@ struct UseVisitor {
 }
 
 impl<'ast> Visit<'ast> for UseVisitor {
-    fn visit_item_use(&mut self, _node: &'ast syn::ItemUse) {
+    fn visit_item_use(&mut self, node: &'ast syn::ItemUse) {
+        let path_str = use_tree_to_string(&node.tree);
+        if !path_str.is_empty() {
+            self.imports.push(path_str);
+        }
     }
 }
 
-
+fn use_tree_to_string(tree: &syn::UseTree) -> String {
+    match tree {
+        syn::UseTree::Path(path) => {
+            let prefix = path.ident.to_string();
+            let rest = use_tree_to_string(&path.tree);
+            if rest.is_empty() { prefix } else { format!("{}::{}", prefix, rest) }
+        }
+        syn::UseTree::Name(name) => name.ident.to_string(),
+        syn::UseTree::Rename(rename) => rename.ident.to_string(),
+        syn::UseTree::Glob(_) => "*".to_string(),
+        syn::UseTree::Group(group) => {
+            let items: Vec<String> = group.items.iter().map(use_tree_to_string).collect();
+            items.join(", ")
+        }
+    }
+}
 
 pub struct RustDiffAnalyzer;
 
