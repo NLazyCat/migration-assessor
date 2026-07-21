@@ -1,5 +1,6 @@
 pub mod compatibility;
 pub mod config;
+pub mod db;
 pub mod deps;
 pub mod diff;
 pub mod discovery;
@@ -7,6 +8,7 @@ pub mod git;
 pub mod error;
 pub mod graph;
 pub mod language;
+pub mod manifest;
 pub mod output;
 pub mod output_paths;
 pub mod parser;
@@ -14,10 +16,13 @@ pub mod project;
 pub mod recommendation;
 pub mod references;
 pub mod scores;
+pub mod spec_writer;
 pub mod symbols;
+pub mod task_queue;
 pub mod util;
 
 pub mod align;
+pub mod ast;
 pub mod verify;
 
 pub use config::Config;
