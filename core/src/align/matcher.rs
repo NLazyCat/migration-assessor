@@ -130,7 +130,7 @@ fn find_candidate_files<'a>(
     }
 
     // Fallback: all target files
-    target_symbols.iter().copied().collect()
+    target_symbols.to_vec()
 }
 
 /// Default extension swap for file-level target

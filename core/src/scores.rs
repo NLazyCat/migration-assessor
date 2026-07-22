@@ -24,7 +24,7 @@ pub struct ModuleReadiness {
     pub breakdown: ScoreBreakdown,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ScoreBreakdown {
     /// Normalized in_degree contribution (0–30)
     pub in_degree_score: f64,

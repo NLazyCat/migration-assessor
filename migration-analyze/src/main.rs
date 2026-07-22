@@ -1,6 +1,7 @@
 use clap::{Parser, Subcommand};
 
 mod commands;
+mod progress;
 
 #[derive(Parser)]
 #[command(
@@ -29,6 +30,8 @@ enum Commands {
     CheckUpdates(commands::check_updates::CheckUpdatesArgs),
     /// Verify target project changes match source diff
     Verify(commands::verify::VerifyArgs),
+    /// Start MCP JSON-RPC server for AI-driven migration workflow
+    Mcp(commands::mcp::McpArgs),
 }
 
 fn main() -> anyhow::Result<()> {
@@ -42,6 +45,7 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::CheckUpdates(args)) => commands::check_updates::run(args)?,
         Some(Commands::Summary(args)) => commands::summary::run(args)?,
         Some(Commands::Verify(args)) => commands::verify::run(args)?,
+        Some(Commands::Mcp(args)) => commands::mcp::run(args)?,
         None => {
             print_usage_guide();
         }

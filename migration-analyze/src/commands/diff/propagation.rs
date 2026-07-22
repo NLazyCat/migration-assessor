@@ -102,6 +102,7 @@ pub(crate) fn propagate_changes(
     let mut queue: VecDeque<String> = VecDeque::new();
     let mut affected_files: HashSet<String> = HashSet::new();
 
+    // Seed queue with triggered symbols
     for sym in triggered_symbols {
         visited.insert(sym.clone());
         queue.push_back(sym.clone());
@@ -115,8 +116,13 @@ pub(crate) fn propagate_changes(
                     visited.insert(dependent_symbol.clone());
                     queue.push_back(dependent_symbol.clone());
 
-                    if let Some(file) = dependent_symbol.rsplit_once(':').map(|x| x.0) {
-                        affected_files.insert(file.to_string());
+                    // Extract file from dependent_symbol (format: "file:symbol" or just "symbol")
+                    if let Some((dep_file, _)) = dependent_symbol.rsplit_once(':') {
+                        affected_files.insert(dep_file.to_string());
+                    } else if let Some((_, _)) = current.rsplit_once(':') {
+                        // The dependent_symbol may be just a symbol name; try extracting
+                        // the file from the r.location.file field
+                        affected_files.insert(r.location.file.clone());
                     }
 
                     chain.push(PropagationLink {
@@ -126,6 +132,13 @@ pub(crate) fn propagate_changes(
                     });
                 }
             }
+        }
+    }
+
+    // Add defining files as affected (they contain the symbols that broke)
+    for sym in triggered_symbols {
+        if let Some((file, _)) = sym.rsplit_once(':') {
+            affected_files.insert(file.to_string());
         }
     }
 

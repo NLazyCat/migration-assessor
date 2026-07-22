@@ -8,12 +8,54 @@ pub fn diff(old: &Symbol, new: &Symbol) -> Option<Vec<SymbolChange>> {
         let old_names: std::collections::HashSet<String> = old_params.iter().map(|p| p.name.clone()).collect();
         let new_names: std::collections::HashSet<String> = new_params.iter().map(|p| p.name.clone()).collect();
 
+        // Build a map: position -> (old_name, new_name) for same-position renames
+        // where the type is unchanged (pure renames are compatible)
+        let zipped: Vec<(Option<&str>, Option<&str>)> = (0..old_params.len().max(new_params.len()))
+            .map(|i| {
+                let old_n = old_params.get(i).map(|p| p.name.as_str());
+                let new_n = new_params.get(i).map(|p| p.name.as_str());
+                (old_n, new_n)
+            })
+            .collect();
+        let mut pure_renames: std::collections::HashSet<String> = std::collections::HashSet::new();
+        for (i, (old_n, new_n)) in zipped.iter().enumerate() {
+            if let (Some(on), Some(nn)) = (old_n, new_n) {
+                if on != nn
+                    && old_params.get(i).map(|p| &p.ty) == new_params.get(i).map(|p| &p.ty)
+                {
+                    pure_renames.insert(on.to_string());
+                    // Emit a single compatible rename entry instead of removed+added
+                    let sc = SymbolChange::new(
+                        new.name.clone(),
+                        new.kind.clone(),
+                        "modified".to_string(),
+                        "compatible".to_string(),
+                        Some(old.line_range),
+                        Some(new.line_range),
+                        vec![ChangeDetail {
+                            aspect: "signature".to_string(),
+                            change_type: "renamed".to_string(),
+                            description: format!("parameter '{}' renamed to '{}'", on, nn),
+                            old_value: Some(on.to_string()),
+                            new_value: Some(nn.to_string()),
+                            migration_note: None,
+                        }],
+                    );
+                    changes.push(sc);
+                }
+            }
+        }
+
         for name in &old_names - &new_names {
+            // Skip pure renames already handled above
+            if pure_renames.contains(&name) {
+                continue;
+            }
             let sc = SymbolChange::new(
                 new.name.clone(),
                 new.kind.clone(),
                 "modified".to_string(),
-                "breaking".to_string(),
+                "compatible".to_string(),
                 Some(old.line_range),
                 Some(new.line_range),
                 vec![ChangeDetail {
@@ -29,11 +71,14 @@ pub fn diff(old: &Symbol, new: &Symbol) -> Option<Vec<SymbolChange>> {
         }
 
         for name in &new_names - &old_names {
+            if pure_renames.contains(&name) {
+                continue;
+            }
             let sc = SymbolChange::new(
                 new.name.clone(),
                 new.kind.clone(),
                 "modified".to_string(),
-                "breaking".to_string(),
+                "compatible".to_string(),
                 Some(old.line_range),
                 Some(new.line_range),
                 vec![ChangeDetail {

@@ -1,4 +1,5 @@
 use clap::Args;
+use migration_core::db;
 use migration_core::graph::Node;
 use migration_core::output_paths;
 use serde::{Deserialize, Serialize};
@@ -7,6 +8,7 @@ use std::path::Path;
 
 use crate::commands::context::ProjectContext;
 use crate::commands::resolve_project_path;
+use crate::progress::ProgressDisplay;
 
 #[derive(Args)]
 pub struct BoundariesArgs {
@@ -121,6 +123,7 @@ struct ReverseLocation {
 }
 
 pub fn run(args: &BoundariesArgs) -> anyhow::Result<()> {
+    let progress = ProgressDisplay::new();
     let project_root = resolve_project_path(&args.path);
 
     if !project_root.join("migration.toml").exists() {
@@ -140,25 +143,24 @@ pub fn run(args: &BoundariesArgs) -> anyhow::Result<()> {
         );
     }
 
-    // Load all report data
-    let meta: ProjectMeta = read_json_or_default(&ctx.report_path(output_paths::PROJECT));
-    let dag: DagNode = ctx
-        .dag()
-        .ok()
-        .and_then(|v| serde_json::from_value(v).ok())
-        .unwrap_or_default();
-    let scores: Vec<ScoreEntry> = read_json_or_default(&ctx.report_path(output_paths::SCORES));
+    let load_spinner = progress.add_spinner("Loading data from analysis...");
+    // Prefer SQLite for data loading; fall back to JSON files
+    let (source_language, target_language) = load_languages(&ctx);
+    let (dag, scores) = load_dag_and_scores(&ctx);
     let reverse_index: ReverseIndex = ctx.load_reverse_index().unwrap_or_default();
     let api_contracts = load_all_api_contracts(&report_dir)?;
 
+    load_spinner.finish_with_message("Data loaded");
+    let compute_spinner = progress.add_spinner("Computing layers and uncut surfaces...");
     let layer_map = compute_layers(&dag);
     let layers = build_layer_groups(&dag, &layer_map, &scores, &api_contracts, &reverse_index);
     let uncut = find_uncut_surfaces(&reverse_index, &layer_map);
+    compute_spinner.finish_with_message(format!("{} layers, {} uncut surfaces", layers.len(), uncut.len()));
 
     let report = BoundariesReport {
         generated_at: chrono::Utc::now().to_rfc3339(),
-        source_language: meta.source_language,
-        target_language: meta.target_language,
+        source_language,
+        target_language,
         total_layers: layers.len(),
         layers,
         uncut_surface: uncut,
@@ -579,4 +581,92 @@ fn read_json_or_default<T: serde::de::DeserializeOwned + Default>(path: &Path) -
     }
     let content = std::fs::read_to_string(path).unwrap_or_default();
     serde_json::from_str(&content).unwrap_or_default()
+}
+
+// ── SQLite-based data loading (preferred) ───────────────────────────────────
+
+/// Load source/target language from SQLite metadata, falling back to project.json.
+fn load_languages(ctx: &ProjectContext) -> (String, String) {
+    if let Ok(guard) = ctx.db()
+        && let Some(ref conn) = *guard
+        && let Ok(Some(src)) = db::read_metadata(conn, "source_language")
+    {
+        let target = db::read_metadata(conn, "target_language")
+            .ok()
+            .flatten()
+            .unwrap_or_else(|| "rust".to_string());
+        return (src, target);
+    }
+    let meta: ProjectMeta = read_json_or_default(&ctx.report_path(output_paths::PROJECT));
+    (meta.source_language, meta.target_language)
+}
+
+/// Load DAG and scores from SQLite, falling back to JSON files.
+fn load_dag_and_scores(ctx: &ProjectContext) -> (DagNode, Vec<ScoreEntry>) {
+    // Try SQLite first
+    if let Ok(guard) = ctx.db()
+        && let Some(ref conn) = *guard
+        && let Ok(edges) = db::read_edges(conn)
+    {
+        let modules = db::read_modules(conn).unwrap_or_default();
+        let dag = build_dag_from_edges(&edges);
+        let scores: Vec<ScoreEntry> = modules
+            .iter()
+            .map(|m| ScoreEntry {
+                module: m.module.clone(),
+                score: m.score,
+                rank: m.rank as u32,
+                in_degree: m.in_degree as u32,
+            })
+            .collect();
+        return (if dag.nodes.is_empty() && dag.edges.is_empty() {
+            read_json_dag(ctx)
+        } else {
+            dag
+        }, if scores.is_empty() {
+            read_json_scores(ctx)
+        } else {
+            scores
+        });
+    }
+    (read_json_dag(ctx), read_json_scores(ctx))
+}
+
+fn read_json_dag(ctx: &ProjectContext) -> DagNode {
+    ctx.dag()
+        .ok()
+        .and_then(|v| serde_json::from_value(v).ok())
+        .unwrap_or_default()
+}
+
+fn read_json_scores(ctx: &ProjectContext) -> Vec<ScoreEntry> {
+    read_json_or_default(&ctx.report_path(output_paths::SCORES))
+}
+
+fn build_dag_from_edges(edges: &[migration_core::graph::Edge]) -> DagNode {
+    let mut node_set = HashSet::new();
+    for edge in edges {
+        node_set.insert(edge.from.clone());
+        node_set.insert(edge.to.clone());
+    }
+    DagNode {
+        nodes: node_set
+            .into_iter()
+            .map(|id| Node {
+                id,
+                in_degree: 0,
+                out_degree: 0,
+                in_cycle: false,
+                top_dir: String::new(),
+                dir_path: String::new(),
+            })
+            .collect(),
+        edges: edges
+            .iter()
+            .map(|e| DagEdge {
+                from: e.from.clone(),
+                to: e.to.clone(),
+            })
+            .collect(),
+    }
 }

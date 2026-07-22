@@ -7,6 +7,40 @@ pub use typescript::PathAliasResolver;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::path::Path;
+use std::fs;
+
+/// Write the reverse index as per-file JSON shards under `output_dir/references/reverse/`.
+///
+/// Each shard file uses symbol-only top-level keys; the reader
+/// (`ProjectContext::load_reverse_index`) reconstructs the full `file:symbol` keys.
+pub fn write_reverse_shards(reverse: &ReverseIndex, output_dir: &Path) -> anyhow::Result<()> {
+    let reverse_dir = output_dir.join("references").join("reverse");
+
+    // Group entries by file from the full key "file:symbol"
+    let mut by_file: HashMap<String, serde_json::Map<String, serde_json::Value>> = HashMap::new();
+    for (full_key, refs) in reverse {
+        if let Some((file, symbol)) = full_key.rsplit_once(':') {
+            let entry = by_file.entry(file.to_string()).or_default();
+            entry.insert(symbol.to_string(), serde_json::to_value(refs)?);
+        } else {
+            // Keys without a ':' go into a "misc" shard
+            let entry = by_file.entry("_misc".to_string()).or_default();
+            entry.insert(full_key.clone(), serde_json::to_value(refs)?);
+        }
+    }
+
+    // Write per-file shards
+    for (file, entries) in &by_file {
+        let shard_path = reverse_dir.join(format!("{}.json", file));
+        if let Some(parent) = shard_path.parent() {
+            fs::create_dir_all(parent)?;
+        }
+        let value = serde_json::Value::Object(entries.clone());
+        fs::write(&shard_path, serde_json::to_string_pretty(&value)?)?;
+    }
+
+    Ok(())
+}
 
 /// A single cross-file symbol reference.
 #[derive(Debug, Clone, Serialize, Deserialize)]

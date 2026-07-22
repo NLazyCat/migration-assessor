@@ -12,6 +12,7 @@ use std::process::Command;
 
 use crate::commands::context::ProjectContext;
 use crate::commands::{resolve_project_path, run_git_cmd};
+use crate::progress::ProgressDisplay;
 
 #[derive(Args)]
 pub struct CheckUpdatesArgs {
@@ -61,6 +62,7 @@ struct FileChangeSummary {
 }
 
 pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
+    let progress = ProgressDisplay::new();
     let project_root = resolve_project_path(&args.path);
     let ctx = ProjectContext::load(&project_root)?;
 
@@ -72,6 +74,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
     }
 
     // ── 1. Read manifest to get analyzed commit ──────────────────────────
+    let spinner = progress.add_spinner("Reading analysis manifest...");
     let manifest: serde_json::Value = ctx.load_json(output_paths::MANIFEST)?;
     let analyzed_commit = manifest["sourceRepo"]["analyzedCommit"]
         .as_str()
@@ -104,29 +107,31 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
 
     // ── 3. Optionally fetch remote ───────────────────────────────────────
     if args.fetch {
-        println!("  Fetching latest from remote...");
+        spinner.set_message("Fetching latest from remote...");
         let fetch_result = Command::new("git")
             .args(["fetch", "origin"])
             .current_dir(&source_dir)
             .output();
         match fetch_result {
             Ok(out) if out.status.success() => {
-                println!("    Fetch complete.");
+                spinner.set_message("Fetch complete.");
             }
             Ok(out) => {
                 let stderr = String::from_utf8_lossy(&out.stderr);
-                eprintln!("    Warning: git fetch failed: {}", stderr);
+                spinner.set_message(format!("Warning: git fetch failed: {}", stderr));
             }
             Err(e) => {
-                eprintln!("    Warning: could not fetch: {}", e);
+                spinner.set_message(format!("Warning: could not fetch: {}", e));
             }
         }
     }
 
     // ── 4. Get HEAD commit hash ──────────────────────────────────────────
+    spinner.set_message("Getting HEAD commit...");
     let head_commit = run_git_cmd(&source_dir, &["rev-parse", "--short", "HEAD"]);
 
     // ── 5. Check if analyzed commit matches HEAD ─────────────────────────
+    spinner.finish_with_message("Checking for updates...");
     if head_commit.as_deref() == Some(&analyzed_commit) {
         let commit_clone = analyzed_commit.clone();
         let head_clone = head_commit.clone();
@@ -174,6 +179,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         return Ok(());
     }
 
+    let compare_spinner = progress.add_spinner("Comparing commits...");
     // ── 6. Get diff stat ─────────────────────────────────────────────────
     let diff_stat = run_git_cmd(
         &source_dir,
@@ -271,6 +277,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         diff_stat,
     };
 
+    compare_spinner.finish_with_message(format!("Diff: {} changes", changed_files.len()));
     // ── 9. Build report ─────────────────────────────────────────────────
     let report = UpdateReport {
         generated_at: chrono::Utc::now().to_rfc3339(),
@@ -282,6 +289,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         summary,
     };
 
+    let write_spinner = progress.add_spinner("Writing update reports...");
     // ── 10. Write reports to updates/ dir ────────────────────────────────
     let report_dir = ctx.report_dir.clone();
     let updates_dir = report_dir.join("updates");
@@ -373,6 +381,7 @@ pub fn run(args: &CheckUpdatesArgs) -> anyhow::Result<()> {
         serde_json::to_string_pretty(&summary_json)?,
     )?;
 
+    write_spinner.finish_with_message("Update reports written");
     // ── 13. Print output ────────────────────────────────────────────────
     match args.format.as_str() {
         "json" => {

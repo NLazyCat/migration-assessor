@@ -1,6 +1,8 @@
 use migration_core::config::Config;
+use migration_core::db;
 use migration_core::output_paths;
 use migration_core::util;
+use rusqlite::Connection;
 use std::path::{Path, PathBuf};
 use std::sync::Mutex;
 
@@ -15,6 +17,8 @@ pub struct ProjectContext {
     index: Mutex<Option<serde_json::Value>>,
     scores: Mutex<Option<serde_json::Value>>,
     dag: Mutex<Option<serde_json::Value>>,
+    // SQLite connection (lazily opened)
+    db: Mutex<Option<Connection>>,
 }
 
 impl ProjectContext {
@@ -41,6 +45,7 @@ impl ProjectContext {
             index: Mutex::new(None),
             scores: Mutex::new(None),
             dag: Mutex::new(None),
+            db: Mutex::new(None),
         })
     }
 
@@ -66,6 +71,20 @@ impl ProjectContext {
     fn find_config(project_root: &Path) -> Option<PathBuf> {
         let p = project_root.join("migration.toml");
         if p.exists() { Some(p) } else { None }
+    }
+
+    /// Open or retrieve the cached SQLite database connection.
+    pub fn db(&self) -> anyhow::Result<std::sync::MutexGuard<'_, Option<Connection>>> {
+        let mut guard = self.db.lock().unwrap();
+        if guard.is_some() {
+            return Ok(guard);
+        }
+        let db_path = self.report_dir.join(output_paths::DB);
+        if db_path.exists() {
+            let conn = db::open_or_create(&db_path)?;
+            *guard = Some(conn);
+        }
+        Ok(guard)
     }
 
     pub fn project_meta(&self) -> anyhow::Result<serde_json::Value> {

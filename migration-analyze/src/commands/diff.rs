@@ -7,6 +7,7 @@ use std::path::Path;
 
 use crate::commands::context::ProjectContext;
 use crate::commands::resolve_project_path;
+use crate::progress::ProgressDisplay;
 
 use self::git_utils::{fetch_latest_version};
 use self::types::DiffReportOutput;
@@ -29,6 +30,8 @@ pub struct DiffArgs {
 }
 
 pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
+    let progress = ProgressDisplay::new();
+
     let project_root = resolve_project_path(&args.path);
     let config_path = project_root.join("migration.toml");
 
@@ -57,15 +60,17 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
     let source_path = config.project.source.clone();
     let from_version = config.project.source_version.clone();
     let new_version = if args.auto {
+        let spinner = progress.add_spinner("Auto-detecting latest version...");
         let repo = source_repo.as_deref().or(source_path.as_deref());
         match repo {
             Some(r) if r.contains("://") || r.starts_with("git@") => {
+                spinner.set_message("Fetching latest version from remote...");
                 let latest = fetch_latest_version(r)?;
-                println!("  Auto-detected latest version: {}", latest);
+                spinner.finish_with_message(format!("Auto-detected: {}", latest));
                 latest
             }
             Some(r) => {
-                // Local git repo — find latest tag
+                spinner.set_message("Searching local tags...");
                 let candidate = if Path::new(r).is_absolute() {
                     std::path::PathBuf::from(r)
                 } else {
@@ -84,7 +89,7 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
                         candidate.display()
                     )
                 })?;
-                println!("  Auto-detected latest tag: {}", latest);
+                spinner.finish_with_message(format!("Auto-detected: {}", latest));
                 latest
             }
             None => anyhow::bail!(
@@ -97,14 +102,14 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
             .ok_or_else(|| anyhow::anyhow!("Either --new-version or --auto is required"))?
     };
 
-    println!("Running AST-based diff analysis...");
+    let diff_spinner = progress.add_spinner("Running AST-based diff analysis...");
     if let Some(r) = &source_repo {
-        println!("  Source repo: {}", r);
+        diff_spinner.set_message(format!("Source repo: {}", r));
     }
     if let Some(f) = &from_version {
-        println!("  From: {}", f);
+        diff_spinner.set_message(format!("From: {}", f));
     }
-    println!("  To:   {}", new_version);
+    diff_spinner.set_message(format!("To: {}", new_version));
 
     let lang_registry = LanguageRegistry::get();
     let lang_name = logic::detect_project_language(lang_registry, &project_root, source_path.as_deref())
@@ -119,6 +124,7 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         source_path.as_deref(),
         language,
     )?;
+    diff_spinner.finish_with_message("AST diff analysis complete");
 
     // Resolve target-side symbols via alignment (real-time, no DB needed)
     let target_path = config.project.target.as_deref().map(Path::new);
@@ -134,23 +140,35 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         return Ok(());
     }
 
-    println!("\nChanged files ({}):", diff_result.file_changes.len());
+    let file_count = diff_result.file_changes.len();
+    let changed_bar = progress.add_bar(file_count as u64, "Changed files");
     for fc in &diff_result.file_changes {
-        println!("  {}  {}", fc.status, fc.file);
+        changed_bar.set_message(format!("{}  {}", fc.status, fc.file));
+        changed_bar.inc(1);
     }
+    changed_bar.finish_and_clear();
+    println!("  Changed files: {}", file_count);
 
+    let propagation_spinner = progress.add_spinner("Running propagation analysis...");
     let reverse_index = propagation::load_reverse_index(&ctx);
     let file_recs = propagation::load_file_recommendations(&report_dir);
 
     let all_file_changes = propagation::convert_to_output_format(&diff_result.file_changes, &file_recs);
     let all_files: Vec<String> = diff_result.file_changes.iter().map(|fc| fc.file.clone()).collect();
 
-    let all_triggered_symbols: Vec<String> = all_file_changes
+    // Deduplicate triggered_symbols to avoid redundant propagation entries
+    let all_triggered_symbols_raw: Vec<String> = all_file_changes
         .iter()
         .flat_map(|fc| fc.changes.iter().map(|ch| format!("{}:{}", fc.file, ch.symbol)))
         .collect();
+    let mut seen = std::collections::HashSet::new();
+    let all_triggered_symbols: Vec<String> = all_triggered_symbols_raw
+        .into_iter()
+        .filter(|k| seen.insert(k.clone()))
+        .collect();
 
     let propagation_result = propagation::propagate_changes(&all_triggered_symbols, &reverse_index);
+    propagation_spinner.finish_with_message("Propagation analysis complete");
 
     let summary = diff_result.summary;
 
@@ -172,6 +190,7 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         },
     };
 
+    let write_spinner = progress.add_spinner("Writing diff report...");
     let diff_dir = migration_dir.join("diffs");
     std::fs::create_dir_all(&diff_dir)?;
 
@@ -196,6 +215,7 @@ pub fn run(args: &DiffArgs) -> anyhow::Result<()> {
         &affected_path,
         serde_json::to_string_pretty(&affected_summary)?,
     )?;
+    write_spinner.finish_with_message("Diff report written");
 
     println!(
         "  Affected files: {}",

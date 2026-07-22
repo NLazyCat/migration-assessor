@@ -326,48 +326,45 @@ impl<'a> SymbolExtractor<'a> {
 
     fn handle_class(&mut self, class: &Class<'a>) {
         for element in &class.body.body {
-            match element {
-                ClassElement::MethodDefinition(method) => {
-                    let name = property_key_name(&method.key);
-                    let static_flag = if method.r#static { "static " } else { "" };
-                    let kind = match method.kind {
-                        MethodDefinitionKind::Method | MethodDefinitionKind::Get | MethodDefinitionKind::Set => "method",
-                        MethodDefinitionKind::Constructor => "constructor",
-                    };
+            if let ClassElement::MethodDefinition(method) = element {
+                let name = property_key_name(&method.key);
+                let static_flag = if method.r#static { "static " } else { "" };
+                let kind = match method.kind {
+                    MethodDefinitionKind::Method | MethodDefinitionKind::Get | MethodDefinitionKind::Set => "method",
+                    MethodDefinitionKind::Constructor => "constructor",
+                };
 
-                    let sig = format!("{}{} {}()", static_flag, kind, name);
-                    let params: Vec<SymbolParam> = method
-                        .value
-                        .params
-                        .items
-                        .iter()
-                        .map(|p| SymbolParam {
-                            name: bind_name(&p.pattern),
-                            ty: "any".to_string(),
-                            optional: p.optional,
-                            default_value: None,
-                        })
-                        .collect();
+                let sig = format!("{}{} {}()", static_flag, kind, name);
+                let params: Vec<SymbolParam> = method
+                    .value
+                    .params
+                    .items
+                    .iter()
+                    .map(|p| SymbolParam {
+                        name: bind_name(&p.pattern),
+                        ty: "any".to_string(),
+                        optional: p.optional,
+                        default_value: None,
+                    })
+                    .collect();
 
-                    self.symbols.push(Symbol {
-                        id: self.symbol_id(&name),
-                        name: name.clone(),
-                        kind: kind.to_string(),
-                        line_range: line_range_of_span(self.source, method.span),
-                        children: vec![],
-                        partial_analysis: false,
-                        partial_reason: None,
-                        visibility: Some(Visibility::Public),
-                        value: None,
-                        signature: Some(sig),
-                        doc_comment: None,
-                        attributes: vec![],
-                        is_async: Some(method.value.r#async),
-                        return_type: None,
-                        params: Some(params),
-                    });
-                }
-                _ => {}
+                self.symbols.push(Symbol {
+                    id: self.symbol_id(&name),
+                    name: name.clone(),
+                    kind: kind.to_string(),
+                    line_range: line_range_of_span(self.source, method.span),
+                    children: vec![],
+                    partial_analysis: false,
+                    partial_reason: None,
+                    visibility: Some(Visibility::Public),
+                    value: None,
+                    signature: Some(sig),
+                    doc_comment: None,
+                    attributes: vec![],
+                    is_async: Some(method.value.r#async),
+                    return_type: None,
+                    params: Some(params),
+                });
             }
         }
     }

@@ -192,7 +192,7 @@ impl SymbolExtractor {
             _ => anyhow::bail!("Unsupported target language: {}", language),
         };
         let discovery = crate::discovery::FileDiscovery::new(
-            source_lang.clone(),
+            source_lang,
             vec![],
             vec![],
             false,

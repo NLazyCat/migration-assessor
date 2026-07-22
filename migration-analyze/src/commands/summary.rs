@@ -1,4 +1,5 @@
 use clap::Args;
+use migration_core::db;
 use migration_core::output_paths;
 use serde_json::Value;
 
@@ -27,7 +28,7 @@ pub fn run(args: &SummaryArgs) -> anyhow::Result<()> {
         );
     }
 
-    let project_meta = ctx.project_meta().ok();
+    let project_meta = load_project_meta(&ctx);
     let scores = load_scores(&ctx);
     let deps = ctx
         .load_json::<Value>(output_paths::external::PACKAGES)
@@ -36,7 +37,7 @@ pub fn run(args: &SummaryArgs) -> anyhow::Result<()> {
         .load_json::<Value>(output_paths::external::COMPATIBILITY)
         .ok();
     let symbols = collect_symbols(&ctx);
-    let dag = ctx.dag().ok();
+    let dag = load_dag(&ctx);
     let boundaries_layers = ctx
         .load_json::<Value>(output_paths::boundaries::LAYERS)
         .ok();
@@ -55,13 +56,6 @@ pub fn run(args: &SummaryArgs) -> anyhow::Result<()> {
     }
 
     Ok(())
-}
-
-fn load_scores(ctx: &ProjectContext) -> Vec<Value> {
-    ctx.scores()
-        .ok()
-        .and_then(|v| v.as_array().cloned())
-        .unwrap_or_default()
 }
 
 fn collect_symbols(ctx: &ProjectContext) -> Vec<(String, Value)> {
@@ -303,4 +297,89 @@ fn print_json_summary(
         "{}",
         serde_json::to_string_pretty(&summary).unwrap_or_default()
     );
+}
+
+// ── SQLite-based data loading (preferred) ───────────────────────────────────
+
+/// Load project metadata from SQLite first, falling back to project.json.
+fn load_project_meta(ctx: &ProjectContext) -> Option<Value> {
+    // Try SQLite metadata
+    if let Ok(guard) = ctx.db()
+        && let Some(ref conn) = *guard
+    {
+        let src_lang = db::read_metadata(conn, "source_language").ok().flatten();
+        let tgt_lang = db::read_metadata(conn, "target_language").ok().flatten();
+
+        if let (Some(src), Some(tgt)) = (&src_lang, &tgt_lang) {
+            let repo = db::read_metadata(conn, "source_repo").ok().flatten();
+            let files = db::read_metadata(conn, "files_analyzed").ok().flatten();
+            let deps_count = db::read_metadata(conn, "dependency_count").ok().flatten();
+            return Some(serde_json::json!({
+                "sourceLanguage": src,
+                "targetLanguage": tgt,
+                "sourceRepo": repo,
+                "filesAnalyzed": files.and_then(|f| f.parse().ok()).unwrap_or(0u64),
+                "dependencyCount": deps_count.and_then(|d| d.parse().ok()).unwrap_or(0u64),
+            }));
+        }
+    }
+    ctx.project_meta().ok()
+}
+
+/// Load scores from SQLite first, falling back to scores.json.
+fn load_scores(ctx: &ProjectContext) -> Vec<Value> {
+    if let Ok(guard) = ctx.db()
+        && let Some(ref conn) = *guard
+        && let Ok(modules) = db::read_modules(conn)
+    {
+        let scores: Vec<Value> = modules
+            .iter()
+            .map(|m| {
+                serde_json::json!({
+                    "module": m.module,
+                    "score": m.score,
+                    "rank": m.rank,
+                    "in_degree": m.in_degree,
+                    "cycle_count": m.cycle_count,
+                    "migration_effort": m.migration_effort,
+                })
+            })
+            .collect();
+        if !scores.is_empty() {
+            return scores;
+        }
+    }
+    ctx.scores()
+        .ok()
+        .and_then(|v| v.as_array().cloned())
+        .unwrap_or_default()
+}
+
+/// Load DAG from SQLite first, falling back to JSON graph files.
+fn load_dag(ctx: &ProjectContext) -> Option<Value> {
+    if let Ok(guard) = ctx.db()
+        && let Some(ref conn) = *guard
+        && let Ok(edges) = db::read_edges(conn)
+    {
+        let mut node_set = std::collections::HashSet::new();
+        for e in &edges {
+            node_set.insert(e.from.clone());
+            node_set.insert(e.to.clone());
+        }
+        let nodes: Vec<Value> = node_set
+            .into_iter()
+            .map(|id| serde_json::json!({ "id": id }))
+            .collect();
+        let edge_list: Vec<Value> = edges
+            .iter()
+            .map(|e| serde_json::json!({ "from": e.from, "to": e.to }))
+            .collect();
+        if !nodes.is_empty() || !edge_list.is_empty() {
+            return Some(serde_json::json!({
+                "nodes": nodes,
+                "edges": edge_list,
+            }));
+        }
+    }
+    ctx.dag().ok()
 }

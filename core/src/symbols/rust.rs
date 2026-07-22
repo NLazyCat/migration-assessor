@@ -484,7 +484,7 @@ fn extract_doc_comment(attrs: &[syn::Attribute]) -> Option<String> {
     }
 }
 
-fn extract_params(sig: &Signature) -> Vec<Param> {
+pub(crate) fn extract_params(sig: &Signature) -> Vec<Param> {
     sig.inputs
         .iter()
         .map(|arg| match arg {
@@ -508,7 +508,7 @@ fn extract_params(sig: &Signature) -> Vec<Param> {
         .collect()
 }
 
-fn extract_return_type(return_type: &ReturnType) -> Option<String> {
+pub(crate) fn extract_return_type(return_type: &ReturnType) -> Option<String> {
     match return_type {
         ReturnType::Default => None,
         ReturnType::Type(_, ty) => Some(type_to_string(ty)),
@@ -525,7 +525,7 @@ fn type_to_string(ty: &Type) -> String {
     quote!(#ty).to_string()
 }
 
-fn format_function_signature(sig: &Signature) -> String {
+pub(crate) fn format_function_signature(sig: &Signature) -> String {
     let name = &sig.ident;
     let generics = if sig.generics.params.is_empty() {
         String::new()

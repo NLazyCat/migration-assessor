@@ -113,10 +113,8 @@ impl NamingRegistry {
 
     fn strip_prefix(&self, name: &str) -> String {
         for prefix in &self.strip_prefixes {
-            if let Some(rest) = name.strip_prefix(prefix) {
-                if !rest.is_empty() && rest.chars().next().map_or(false, |c| c.is_uppercase()) {
-                    return rest.to_string();
-                }
+            if let Some(rest) = name.strip_prefix(prefix) && !rest.is_empty() && rest.chars().next().is_some_and(|c| c.is_uppercase()) {
+                return rest.to_string();
             }
         }
         name.to_string()
@@ -125,17 +123,62 @@ impl NamingRegistry {
     fn apply_case(&self, name: &str) -> String {
         match self.case {
             CaseTransform::CamelToSnake => {
+                // Convert to snake_case, handling uppercase runs (acronyms):
+                //   "getUserById"  → "get_user_by_id"
+                //   "XMLParser"    → "xml_parser"
+                //   "APP_NAME"     → "app_name"
                 let mut result = String::new();
-                for (i, c) in name.chars().enumerate() {
+                let chars: Vec<char> = name.chars().collect();
+                let n = chars.len();
+                let mut i = 0;
+
+                while i < n {
+                    let c = chars[i];
+
+                    if c == '_' {
+                        result.push('_');
+                        i += 1;
+                        continue;
+                    }
+
                     if c.is_uppercase() {
-                        if i > 0 {
+                        let run_start = i;
+                        while i < n && chars[i].is_uppercase() {
+                            i += 1;
+                        }
+                        let run_end = i;
+                        let run_len = run_end - run_start;
+
+                        if run_start > 0 && chars[run_start - 1] != '_' {
                             result.push('_');
                         }
-                        result.push(c.to_ascii_lowercase());
+
+                        if run_len == 1 {
+                            result.push(c.to_ascii_lowercase());
+                        } else {
+                            let next_is_lower = run_end < n && chars[run_end].is_lowercase();
+                            if next_is_lower {
+                                // Acronym before lowercase: "XMLParser"
+                                for j in run_start..(run_end - 1) {
+                                    result.push(chars[j].to_ascii_lowercase());
+                                }
+                                if !result.is_empty() && !result.ends_with('_') {
+                                    result.push('_');
+                                }
+                                result.push(chars[run_end - 1].to_ascii_lowercase());
+                            } else {
+                                // Full uppercase run: "APP_NAME" or "PARSE_XML"
+                                for j in run_start..run_end {
+                                    result.push(chars[j].to_ascii_lowercase());
+                                }
+                            }
+                        }
                     } else {
                         result.push(c);
+                        i += 1;
                     }
                 }
+
                 result
             }
             CaseTransform::SnakeToCamel => {
@@ -257,5 +300,20 @@ mod tests {
     fn test_snake_to_camel() {
         let reg = NamingRegistry::new("rust", "typescript");
         assert_eq!(reg.translate_name("display_name"), "displayName");
+    }
+
+    #[test]
+    fn test_translate_name_acronym() {
+        let reg = NamingRegistry::new("typescript", "rust");
+        assert_eq!(reg.translate_name("XMLParser"), "xml_parser");
+        assert_eq!(reg.translate_name("DBConnection"), "db_connection");
+    }
+
+    #[test]
+    fn test_translate_screaming_snake_case() {
+        let reg = NamingRegistry::new("typescript", "rust");
+        assert_eq!(reg.translate_name("APP_NAME"), "app_name");
+        assert_eq!(reg.translate_name("HTTP_STATUS"), "http_status");
+        assert_eq!(reg.translate_name("API_PREFIX"), "api_prefix");
     }
 }

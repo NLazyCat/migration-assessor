@@ -4,6 +4,7 @@ pub mod check_updates;
 pub mod context;
 pub mod diff;
 pub mod init;
+pub mod mcp;
 pub mod report;
 pub mod summary;
 pub mod verify;

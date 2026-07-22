@@ -39,10 +39,8 @@ impl LanguageRegistry {
 
     pub fn detect_language(&self, project_root: &std::path::Path) -> Option<String> {
         for name in &self.order {
-            if let Some(lang) = self.languages.get(name) {
-                if lang.detect_project_type(project_root) {
-                    return Some(name.clone());
-                }
+            if let Some(lang) = self.languages.get(name) && lang.detect_project_type(project_root) {
+                return Some(name.clone());
             }
         }
         None

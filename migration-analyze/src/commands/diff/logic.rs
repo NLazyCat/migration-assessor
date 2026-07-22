@@ -57,7 +57,20 @@ pub(crate) fn run_ast_diff(
             get_file_at_version(&candidate, to_version, file),
         ) {
             (Ok(old_source), Ok(new_source)) => {
-                let diff = DiffEngine::diff_files(&old_source, &new_source, file, language)?;
+                let mut diff = DiffEngine::diff_files(&old_source, &new_source, file, language)?;
+                // Populate old_source/new_source snippets for each symbol change
+                for sc in &mut diff.symbol_changes {
+                    if sc.old_source.is_none() {
+                        if let Some(range) = sc.old_line_range {
+                            sc.old_source = Some(migration_core::util::extract_source_snippet(&old_source, range));
+                        }
+                    }
+                    if sc.new_source.is_none() {
+                        if let Some(range) = sc.new_line_range {
+                            sc.new_source = Some(migration_core::util::extract_source_snippet(&new_source, range));
+                        }
+                    }
+                }
                 file_changes.push(diff);
             }
             (Err(_), Ok(new_source)) => {
@@ -200,7 +213,20 @@ fn fetch_repo_and_diff(
             get_file_at_version(tmp_dir, to_version, file),
         ) {
             (Ok(old_source), Ok(new_source)) => {
-                let diff = DiffEngine::diff_files(&old_source, &new_source, file, language)?;
+                let mut diff = DiffEngine::diff_files(&old_source, &new_source, file, language)?;
+                // Populate old_source/new_source snippets for each symbol change
+                for sc in &mut diff.symbol_changes {
+                    if sc.old_source.is_none() {
+                        if let Some(range) = sc.old_line_range {
+                            sc.old_source = Some(migration_core::util::extract_source_snippet(&old_source, range));
+                        }
+                    }
+                    if sc.new_source.is_none() {
+                        if let Some(range) = sc.new_line_range {
+                            sc.new_source = Some(migration_core::util::extract_source_snippet(&new_source, range));
+                        }
+                    }
+                }
                 file_changes.push(diff);
             }
             (Err(_), Ok(new_source)) => {

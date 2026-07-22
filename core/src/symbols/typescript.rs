@@ -657,7 +657,7 @@ fn bind_name(pattern: &BindingPattern) -> String {
     }
 }
 
-fn extract_generics_option<'a>(
+pub(crate) fn extract_generics_option<'a>(
     type_params: &Option<oxc_allocator::Box<'a, oxc_ast::ast::TSTypeParameterDeclaration<'a>>>,
 ) -> Vec<String> {
     type_params
@@ -666,7 +666,7 @@ fn extract_generics_option<'a>(
         .unwrap_or_default()
 }
 
-fn extract_params<'a>(source: &str, func: &Function<'a>) -> Vec<Param> {
+pub(crate) fn extract_params<'a>(source: &str, func: &Function<'a>) -> Vec<Param> {
     func.params
         .items
         .iter()
@@ -686,7 +686,7 @@ fn extract_params<'a>(source: &str, func: &Function<'a>) -> Vec<Param> {
         .collect()
 }
 
-fn extract_from_arrow_params(source: &str, arrow: &ArrowFunctionExpression) -> Vec<Param> {
+pub(crate) fn extract_from_arrow_params(source: &str, arrow: &ArrowFunctionExpression) -> Vec<Param> {
     arrow
         .params
         .items
@@ -708,12 +708,12 @@ fn extract_from_arrow_params(source: &str, arrow: &ArrowFunctionExpression) -> V
 }
 
 /// Extract type text from a TSTypeAnnotation span, stripping the leading `: ` prefix.
-fn trim_type_annotation(source: &str, span: oxc_span::Span) -> String {
+pub(crate) fn trim_type_annotation(source: &str, span: oxc_span::Span) -> String {
     let text = &source[span.start as usize..span.end as usize];
     text.trim_start_matches(':').trim().to_string()
 }
 
-fn prop_key_to_string(key: &PropertyKey) -> String {
+pub(crate) fn prop_key_to_string(key: &PropertyKey) -> String {
     match key {
         PropertyKey::StaticIdentifier(id) => id.name.to_string(),
         PropertyKey::PrivateIdentifier(id) => format!("#{}", id.name),
@@ -721,7 +721,7 @@ fn prop_key_to_string(key: &PropertyKey) -> String {
     }
 }
 
-fn format_function_signature(source: &str, name: &str, func: &Function) -> String {
+pub(crate) fn format_function_signature(source: &str, name: &str, func: &Function) -> String {
     let ps = func
         .params
         .items
@@ -747,7 +747,7 @@ fn format_function_signature(source: &str, name: &str, func: &Function) -> Strin
     format!("export function {}({}) -> {}", name, ps, rt)
 }
 
-fn format_method_signature(
+pub(crate) fn format_method_signature(
     source: &str,
     class_name: &str,
     key: &PropertyKey,
@@ -780,7 +780,7 @@ fn format_method_signature(
 }
 
 /// Extract the type expression text from a TSTypeAliasDeclaration.
-fn extract_type_source(source: &str, alias_span: oxc_span::Span) -> String {
+pub(crate) fn extract_type_source(source: &str, alias_span: oxc_span::Span) -> String {
     let text = &source[alias_span.start as usize..alias_span.end as usize];
     // Find '=' and return everything after it (trimmed)
     if let Some(eq_pos) = text.find('=') {

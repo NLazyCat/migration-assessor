@@ -1,3 +1,20 @@
+// ── NEW: Migration spec paths ─────────────────────────────────────
+pub mod spec {
+    /// Path to the migration spec JSON for a given source file.
+    /// Example: spec/src/utils/format.ts.json
+    pub fn for_file(file: &str) -> String {
+        format!("spec/{}.json", file)
+    }
+
+    /// Index of all spec files in topological migration order.
+    pub const MIGRATION_ORDER: &str = "spec/migration_order.json";
+}
+
+// ── NEW: SQLite database ──────────────────────────────────────────
+pub const DB: &str = "migration.db";
+
+// ── OLD PATHS (kept for backwards compat) ─────────────────────────
+
 pub const MANIFEST: &str = "manifest.json";
 pub const PROJECT: &str = "project.json";
 pub const OVERVIEW: &str = "overview.json";
@@ -33,6 +50,16 @@ pub mod references {
     pub fn reverse_for(file: &str) -> String {
         format!("references/reverse/{}.json", file)
     }
+}
+
+// ── Migration manifests (AI-facing checklists) ────────────────────
+pub mod manifest {
+    /// Full exported-symbols checklist per module.
+    pub const SYMBOLS_CHECKLIST: &str = "manifest/symbols-checklist.json";
+    /// AI todo list (only remaining modules).
+    pub const TODO_LIST: &str = "manifest/todo-list.json";
+    /// Quick numeric progress snapshot.
+    pub const MODULE_PROGRESS: &str = "manifest/module-progress.json";
 }
 
 pub mod boundaries {
